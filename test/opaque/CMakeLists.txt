@@ -11,7 +11,3 @@ target_link_libraries(
   PRIVATE QtFit
   PRIVATE Qt${QT_VERSION_MAJOR}::Test
 )
-
-# @todo This should not be necessary, since its supposed to be No
-# by default. Yet, for some reason CMake is setting it to Yes.
-set(CMAKE_SKIP_RPATH No)
