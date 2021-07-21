@@ -22,6 +22,9 @@ jobs:
       run: |
         cmake -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP"
+    - name: Test
+      run: ctest --verbose
+      working-directory: ${{ runner.temp }}
 
   linux-qts:
     runs-on: ${{ matrix.os }}
@@ -47,6 +50,9 @@ jobs:
       run: |
         cmake -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP"
+    - name: Test
+      run: ctest --verbose
+      working-directory: ${{ runner.temp }}
 
   mac:
     runs-on: ${{ matrix.os }}
@@ -70,6 +76,9 @@ jobs:
       run: |
         cmake -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP"
+    - name: Test
+      run: ctest --verbose
+      working-directory: ${{ runner.temp }}
 
   win:
     runs-on: ${{ matrix.os }}
@@ -104,3 +113,6 @@ jobs:
       run: |
         cmake -D CMAKE_BUILD_TYPE=Release -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%" -B "%RUNNER_TEMP%"
         cmake --build "%RUNNER_TEMP%"
+    - name: Test
+      run: ctest --verbose
+      working-directory: ${{ runner.temp }}

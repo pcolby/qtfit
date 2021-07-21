@@ -30,6 +30,7 @@ find_package(QT REQUIRED COMPONENTS Core Network NAMES Qt6 Qt5)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Network)
 message("-- Found Qt ${Qt${QT_VERSION_MAJOR}_VERSION}")
 
+include(CTest)
 add_subdirectory(doc)
 add_subdirectory(src)
 add_subdirectory(test)

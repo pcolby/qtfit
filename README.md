@@ -11,4 +11,5 @@
 cmake -E make_directory <tmp-build-dir>
 cmake -D CMAKE_BUILD_TYPE=Release -S <path-to-cloned-repo> -B <tmp-build-dir>
 cmake --build <tmp-build-dir>
+ctest --test-dir <tmp-build-dir> --verbose
 ~~~
