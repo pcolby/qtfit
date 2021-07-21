@@ -22,10 +22,14 @@
 
 #include "QtFit_global.h"
 
+#include <QByteArray>
+
 class QTFIT_EXPORT QtFit
 {
 public:
     QtFit();
+    bool parse(const QByteArray &data); /// @todo Just a hacky start; not an API ;)
+
 };
 
 #endif // QTFIT_H

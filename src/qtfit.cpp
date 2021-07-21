@@ -19,6 +19,15 @@
 
 #include "qtfit.h"
 
+#include <QDebug>
+
 QtFit::QtFit()
 {
+}
+
+bool QtFit::parse(const QByteArray &data)
+{
+    /// @todo
+    qDebug() << data.mid(0,5);
+    return true;
 }

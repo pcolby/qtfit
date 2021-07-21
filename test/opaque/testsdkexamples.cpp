@@ -19,6 +19,8 @@
 
 #include "testsdkexamples.h"
 
+#include <qtfit.h>
+
 void TestSdkExamples::parseFitFile_data()
 {
     QTest::addColumn<QByteArray>("fitData");
@@ -58,7 +60,8 @@ void TestSdkExamples::parseFitFile()
     QFETCH(QByteArray, csvData);
 
     /// @todo Parse fitData and convert to CSV.
-    Q_UNUSED(fitData);
+    QtFit fit;
+    QVERIFY(fit.parse(fitData));
     const QByteArray result(csvData);
 
     QCOMPARE(result, csvData);
