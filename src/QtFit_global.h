@@ -35,4 +35,16 @@
 #    define QTFIT_EXPORT
 #endif
 
+#ifndef QTFIT_NAMESPACE
+#define QTFIT_NAMESPACE fit ///< @todo Consider moving this to a CMake option.
+#endif
+
+#ifdef QTFIT_NAMESPACE
+  #define QTFIT_BEGIN_NAMESPACE namespace QTFIT_NAMESPACE {
+  #define QTFIT_END_NAMESPACE }
+#else
+  #define QTFIT_BEGIN_NAMESPACE
+  #define QTFIT_END_NAMESPACE
+#endif
+
 #endif // QTFIT_GLOBAL_H

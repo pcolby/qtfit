@@ -22,14 +22,15 @@
 
 #include "QtFit_global.h"
 
-#include <QByteArray>
+//#include <QByteArray>
 
-class QTFIT_EXPORT QtFit
-{
-public:
-    QtFit();
-    bool parse(const QByteArray &data); /// @todo Just a hacky start; not an API ;)
+QTFIT_BEGIN_NAMESPACE
 
+enum class Architecture : quint8 {
+    LittleEndian = 0,
+    BigEndian = 1,
 };
+
+QTFIT_END_NAMESPACE
 
 #endif // QTFIT_H

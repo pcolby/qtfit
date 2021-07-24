@@ -64,6 +64,8 @@ void TestSdkExamples::parseFitFile()
     QVERIFY(fit.parse(fitData));
     const QByteArray result(csvData);
 
+    QtFitPrivate p;
+
     QCOMPARE(result, csvData);
 }
 

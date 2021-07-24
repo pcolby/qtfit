@@ -64,14 +64,6 @@ quint16 fitChecksum(const QByteArray &data) {
 
 bool QtFit::parse(const QByteArray &data)
 {
-    FitStreamReader reader;
-    while (!reader.atEnd) {
-        if (reader.readNext()) {
-
-        }
-    }
-
-
     const quint8 headerSize = data.at(0);
 
     // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
@@ -106,22 +98,6 @@ bool QtFit::parse(const QByteArray &data)
     qDebug() << "Data size:" << dataSize << "bytes";
     qDebug() << "Data type:" << dataType;
 //    qDebug() << "CRC:" << crc;
-
-    FitRecordList list;
-
-    if (dfn) {
-        saveDfn;
-        return false;
-    }
-
-    lookup defn;
-    AbstractMessage * m = nullptr;
-
-    switch (type) {
-        case FileId: m = new FileIdMessage(); break;
-    }
-
-    m.setFields(fields, dfn);
     return true;
 }
 

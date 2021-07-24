@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 
 add_library(QtFit SHARED
+  fitstreamreader.cpp
+  fitstreamreader.h
+  fitstreamreader_p.h
   QtFit_global.h
   qtfit.cpp
   qtfit.h
