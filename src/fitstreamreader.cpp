@@ -17,13 +17,20 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "qtfit.h"
+#include "fitstreamreader.h"
+#include "fitstreamreader_p.h"
 
 #include <QtEndian>
 
 #include <QDebug>
 
-QtFit::QtFit()
+QTFIT_BEGIN_NAMESPACE
+
+FitStreamReader::FitStreamReader()
+{
+}
+
+FitStreamReader::~FitStreamReader()
 {
 }
 
@@ -61,8 +68,7 @@ quint16 fitChecksum(const QByteArray &data) {
     return checksum;
 }
 
-
-bool QtFit::parse(const QByteArray &data)
+bool FitStreamReader::parse(const QByteArray &data) const
 {
     const quint8 headerSize = data.at(0);
 
@@ -101,6 +107,8 @@ bool QtFit::parse(const QByteArray &data)
     return true;
 }
 
-QtFitPrivate::QtFitPrivate() {
-    qDebug() << __FUNCTION__;
-}
+//FitStreamReaderPrivate::FitStreamReaderPrivate() {
+//    qDebug() << __FUNCTION__;
+//}
+
+QTFIT_END_NAMESPACE

@@ -21,12 +21,28 @@
 #define FITSTREAMREADER_H
 
 #include "QtFit_global.h"
+#include "types.h"
 
 #include <QByteArray>
+#include <QIODevice>
+#include <QHash>
 #include <QList>
 #include <QVersionNumber>
 
 QTFIT_BEGIN_NAMESPACE
+
+enum class Architecture : quint8 {
+    LitteEndian = 0,
+    BigEndian = 1,
+};
+
+struct FieldDefinition {
+
+};
+
+struct DeveloperFieldDefinition {
+
+};
 
 typedef QList<FieldDefinition> FieldDefinitionList;
 
@@ -34,7 +50,7 @@ struct MessageDefintion {
     quint8 globalType;
     Architecture arch;
     FieldDefinitionList defns;
-}
+};
 
 class QTFIT_EXPORT FitStreamReader {
 public:
@@ -45,8 +61,8 @@ public:
     };
 
     struct DataDefintion {
-        quint8 arch; // aka endianness; make enum.
-        quint16 globalMessageNumber; // make enum; // cpp sdk uses MessageIndex.
+        Architecture architecture;
+        MesgNum globalMessageNumber;
         QList<FieldDefinition> fieldDefinitions;
         QList<DeveloperFieldDefinition> developerFieldDefinitions;
     };
@@ -71,7 +87,7 @@ public:
     quint32 expectedChecksum() const;
 
     // move to private
-    QHash<int, DataDefinitin> DataDefintions;
+    QHash<int, DataDefintion> DataDefintions;
     QHash<int, int> RecordSizes; // Hash of local message types to record sizes.
 
     struct DataMessage {
@@ -83,6 +99,8 @@ public:
     DataDefintion getDefinition(const quint8 localMessageType) const;
 
     DataMessage readNext(); // Will consume the file header, defn records, and data message headers.
+
+    bool parse(const QByteArray &data) const; /// @todo Remove this (just for experimentation for now).
 };
 
 QTFIT_END_NAMESPACE
@@ -127,7 +145,7 @@ QTFIT_END_NAMESPACE
 //    }
 
 //    bool setField(const int fieldId, const QByteArray data, baseType) override {
-//        #define SET_FIELD(id,name,type) \
+//        #define SET_FIELD(id,name,type)
 //          case id: name = fromFitValue<type>(data, baseType)
 
 //        switch fieldId {

@@ -19,7 +19,8 @@
 
 #include "testsdkexamples.h"
 
-#include <qtfit.h>
+#include "fitstreamreader.h"
+#include "fitstreamreader_p.h"
 
 void TestSdkExamples::parseFitFile_data()
 {
@@ -60,11 +61,11 @@ void TestSdkExamples::parseFitFile()
     QFETCH(QByteArray, csvData);
 
     /// @todo Parse fitData and convert to CSV.
-    QtFit fit;
-    QVERIFY(fit.parse(fitData));
+    fit::FitStreamReader reader;
+    QVERIFY(reader.parse(fitData));
     const QByteArray result(csvData);
 
-    QtFitPrivate p;
+//    fit::FitStreamReaderPrivate p;
 
     QCOMPARE(result, csvData);
 }

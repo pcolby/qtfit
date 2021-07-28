@@ -5,8 +5,7 @@ add_library(QtFit SHARED
   fitstreamreader.h
   fitstreamreader_p.h
   QtFit_global.h
-  qtfit.cpp
-  qtfit.h
+  types.h
 )
 
 target_link_libraries(QtFit PRIVATE Qt${QT_VERSION_MAJOR}::Core)
