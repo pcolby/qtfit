@@ -17,34 +17,34 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTFIT_GLOBAL_H
-#define QTFIT_GLOBAL_H
+#ifndef ABSTRACTDATAMESSAGE_H
+#define ABSTRACTDATAMESSAGE_H
 
-#include <QtGlobal>
+#include "QtFit_global.h"
+#include "types.h"
 
-#if defined(QTFIT_SHARED) || !defined(QTFIT_STATIC)
-#  ifdef QTFIT_STATIC
-#    error "Both QTFIT_SHARED and QTFIT_STATIC defined."
-#  endif
-#  if defined(QTFIT_LIBRARY)
-#    define QTFIT_EXPORT Q_DECL_EXPORT
-#  else
-#    define QTFIT_EXPORT Q_DECL_IMPORT
-#  endif
-#else
-#    define QTFIT_EXPORT
-#endif
+QTFIT_BEGIN_NAMESPACE
 
-#ifndef QTFIT_NAMESPACE
-#define QTFIT_NAMESPACE fit ///< @todo Consider moving this to a CMake option.
-#endif
+class AbstractDataMessagePrivate;
 
-#ifdef QTFIT_NAMESPACE
-  #define QTFIT_BEGIN_NAMESPACE namespace QTFIT_NAMESPACE {
-  #define QTFIT_END_NAMESPACE }
-#else
-  #define QTFIT_BEGIN_NAMESPACE
-  #define QTFIT_END_NAMESPACE
-#endif
+class QTFIT_EXPORT AbstractDataMessage {
 
-#endif // QTFIT_GLOBAL_H
+public:
+    AbstractDataMessage() = delete;
+    ~AbstractDataMessage();
+    MesgNum globalMessageNumber() const;
+
+protected:
+    /// @cond internal
+    AbstractDataMessagePrivate * const d_ptr; ///< Internal d-pointer.
+    explicit AbstractDataMessage(AbstractDataMessagePrivate * const d);
+    /// @endcond
+
+private:
+    Q_DECLARE_PRIVATE(AbstractDataMessage)
+
+};
+
+QTFIT_END_NAMESPACE
+
+#endif // ABSTRACTDATAMESSAGE_H

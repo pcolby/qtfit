@@ -18,11 +18,9 @@
 */
 
 #ifndef QTFIT_TYPES_H
-#define QTFIT_TYPE_H
+#define QTFIT_TYPES_H
 
 #include "QtFit_global.h"
-
-#include <QtGlobal>
 
 QTFIT_BEGIN_NAMESPACE
 

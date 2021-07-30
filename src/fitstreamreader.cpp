@@ -26,12 +26,14 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-FitStreamReader::FitStreamReader()
+FitStreamReader::FitStreamReader() : d_ptr(new FitStreamReaderPrivate(this))
 {
+
 }
 
 FitStreamReader::~FitStreamReader()
 {
+    delete d_ptr;
 }
 
 QString protocolVersionString(const quint8 major, const quint8 minor)
@@ -66,6 +68,17 @@ quint16 fitChecksum(const QByteArray &data) {
         }
     }
     return checksum;
+}
+
+AbstractDataMessage FitStreamReader::readNext()
+{
+    // If not header, then reader.
+
+    // Read next FIT Data Record.
+
+    // If record is a FIT Definition Message, process it.
+
+    // Else records is a FIT Data Message.
 }
 
 bool FitStreamReader::parse(const QByteArray &data) const
@@ -107,8 +120,44 @@ bool FitStreamReader::parse(const QByteArray &data) const
     return true;
 }
 
-//FitStreamReaderPrivate::FitStreamReaderPrivate() {
-//    qDebug() << __FUNCTION__;
-//}
+FitStreamReaderPrivate::FitStreamReaderPrivate(FitStreamReader * const q) : q_ptr(q)
+{
+
+}
+
+FitStreamReaderPrivate::~FitStreamReaderPrivate()
+{
+
+}
+
+FitStreamReaderPrivate::parseFileHeader()
+{
+    Q_ASSERT(headerSize = 0);
+    headerSize = data.at(0);
+
+    // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
+    Q_ASSERT(protocolVersion.isNull());
+    protocolVersion = QVersionNumber(data.at(1) >> 4, data.at(1) & 0x0F);
+
+    {   // Profile version is major*100 + minor (ie minor could not be more than 99).
+        const quint16 version = qFromLittleEndian<quint16>(data.mid(2,2).data());
+        profileVersion = QVersionNumber(version/100, version%100);
+    }
+
+    const quint32 dataSize = qFromLittleEndian<quint32>(data.mid(4,4).data());
+    const QString dataType = QString::fromLocal8Bit(data.mid(8,4)); // ".FIT"
+
+//    qDebug() << headerSize << protocolVersion << protocolVersionMajor << protocolVersionMinor
+//             << profileVersion<< profileVersionMajor << profileVersionMinor << data.mid(0,headerSize);
+
+//    if (headerSize >= 14) {
+//        const quint16 crc = qFromLittleEndian<quint16>(data.mid(12,2).data());
+//        const quint16 calculated = (crc == 0) ? 0 : fitChecksum(data.mid(0,12));
+//        qDebug() << "CRC:" << crc << calculated;
+//        if (crc != calculated) {
+//            qWarning() << "Checksum failure:" << crc << "!=" << calculated;
+//        }
+//    }
+}
 
 QTFIT_END_NAMESPACE

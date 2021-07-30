@@ -17,20 +17,45 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTFIT_H
-#define QTFIT_H
+#ifndef FITSTREAMREADER_P_H
+#define FITSTREAMREADER_P_H
 
-#include "QtFit_global.h"
+#include "types_p.h"
 
-#include <QByteArray>
+#include <QHash>
+#include <QVersionNumber>
 
 QTFIT_BEGIN_NAMESPACE
 
-class QTFIT_EXPORT FitStreamReaderPrivate
-{
-    /// @todo
+class FitStreamReader;
+
+/// @todo do we need to QTFIT_EXPORT this?
+class FitStreamReaderPrivate {
+
+public:
+    explicit FitStreamReaderPrivate(FitStreamReader * const q);
+    virtual ~FitStreamReaderPrivate();
+
+    bool parseFileHeader();
+
+protected:
+    FitStreamReader * const q_ptr; ///< Internal q-pointer.
+
+private:
+    quint8 headerSize;
+    QVersionNumber protocolVersion;
+    QVersionNumber profileVersion;
+    quint32 expectedDataSize;
+    quint32 expectedChecksum;
+
+    QHash<int, DataDefintion> DataDefintions; ///< Local message types to current data definitions.
+    QHash<int, int> RecordSizes; ///< Local message types to current record sizes.
+
+    Q_DECLARE_PUBLIC(FitStreamReader)
+    Q_DISABLE_COPY(FitStreamReaderPrivate)
+
 };
 
 QTFIT_END_NAMESPACE
 
-#endif // QTFIT_H
+#endif // FITSTREAMREADER_P_H
