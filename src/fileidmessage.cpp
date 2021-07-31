@@ -24,17 +24,18 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : q_ptr(q)
+FileIdMessage(const QByteArray dataRecord, const FieldDefinitionList &fieldDefs, arch)
+    : AbstractFitMessage(0, data, defn)
 {
 
 }
 
 
-//    FitFileIdMessage(const QByteArray data, const FieldDefinitionList &fieldDefs, arch)
-//        : AbstractFitMessage(0, data, defn)
-//    {
+FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : q_ptr(q)
+{
 
-//    }
+}
+
 
 /// @todo Generate implementation.
 //    bool setField(const int fieldId, const QByteArray data, baseType) override {

@@ -31,9 +31,81 @@ FitStreamReader::FitStreamReader() : d_ptr(new FitStreamReaderPrivate(this))
 
 }
 
+FitStreamReader::FitStreamReader(QByteArray &data) : d_ptr(new FitStreamReaderPrivate(this))
+{
+    Q_D(FitStreamReader);
+    d->data = data;
+    d->parseFileHeader();
+}
+
+FitStreamReader::FitStreamReader(const char *data, const qsizetype length)
+    : d_ptr(new FitStreamReaderPrivate(this))
+{
+    Q_D(FitStreamReader);
+    d->data = QByteArray(data, length);
+    d->parseFileHeader();
+}
+
+FitStreamReader::FitStreamReader(QIODevice *device) : d_ptr(new FitStreamReaderPrivate(this))
+{
+    Q_D(FitStreamReader);
+    d->device = device;
+    d->parseFileHeader();
+}
+
 FitStreamReader::~FitStreamReader()
 {
     delete d_ptr;
+}
+
+void FitStreamReader::addData(const QByteArray &data)
+{
+    Q_D(FitStreamReader);
+    if (d->device != nullptr) {
+        qWarning("FitStreamReader: addData() with device()");
+        Q_ASSERT(d->device != nullptr);
+        return;
+    }
+    d->data += data;
+}
+
+void FitStreamReader::addData(const char *data, const qsizetype length)
+{
+    addData(QByteArray(data, length));
+}
+
+bool FitStreamReader::atEnd() const
+{
+    return false; ///< @todo
+}
+
+void FitStreamReader::clear()
+{
+    Q_D(FitStreamReader);
+    d->data.clear();
+    d->device = nullptr;
+//    d->headerSize = 0;
+//    d->expectedChecksum = 0;
+    d->expectedDataSize = 0;
+    d->protocolVersion = QVersionNumber();
+    d->profileVersion = QVersionNumber();
+    d->dataDefintions.clear();
+    d->recordSizes.clear();
+}
+
+QIODevice * FitStreamReader::device() const
+{
+    Q_D(const FitStreamReader);
+    return d->device;
+}
+
+// [enum] Error error() const; or lastError?
+// QString errorString() const;
+
+void FitStreamReader::setDevice(QIODevice *device)
+{
+    Q_D(FitStreamReader);
+    d->device = device;
 }
 
 QString protocolVersionString(const quint8 major, const quint8 minor)
@@ -72,7 +144,12 @@ quint16 fitChecksum(const QByteArray &data) {
 
 AbstractDataMessage FitStreamReader::readNext()
 {
-    // If not header, then reader.
+    Q_D(FitStreamReader);
+
+    // If we haven't parsed the FIT File Header yet, (try to) parse it now.
+    if ((d->protocolVersion.isNull() && (!d->parseFileHeader()))) {
+        return AbstractDataMessage();
+    }
 
     // Read next FIT Data Record.
 
@@ -120,7 +197,8 @@ bool FitStreamReader::parse(const QByteArray &data) const
     return true;
 }
 
-FitStreamReaderPrivate::FitStreamReaderPrivate(FitStreamReader * const q) : q_ptr(q)
+FitStreamReaderPrivate::FitStreamReaderPrivate(FitStreamReader * const q)
+    : device(nullptr), q_ptr(q)
 {
 
 }
@@ -130,34 +208,59 @@ FitStreamReaderPrivate::~FitStreamReaderPrivate()
 
 }
 
-FitStreamReaderPrivate::parseFileHeader()
+bool FitStreamReaderPrivate::parseFileHeader()
 {
-    Q_ASSERT(headerSize = 0);
-    headerSize = data.at(0);
+    Q_ASSERT(protocolVersion.isNull());
+    Q_ASSERT(profileVersion.isNull());
+
+    // Read the header bytes.
+    const QByteArray header = (device == nullptr) ? readHeader(data) : readHeader(device);
+    if (header.isEmpty()) {
+        /// @todo set not-enough-bytes
+        return false;
+    }
 
     // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
     Q_ASSERT(protocolVersion.isNull());
-    protocolVersion = QVersionNumber(data.at(1) >> 4, data.at(1) & 0x0F);
+    protocolVersion = QVersionNumber(header.at(1) >> 4, header.at(1) & 0x0F);
 
     {   // Profile version is major*100 + minor (ie minor could not be more than 99).
-        const quint16 version = qFromLittleEndian<quint16>(data.mid(2,2).data());
+        const quint16 version = qFromLittleEndian<quint16>(header.mid(2,2).data());
         profileVersion = QVersionNumber(version/100, version%100);
     }
 
-    const quint32 dataSize = qFromLittleEndian<quint32>(data.mid(4,4).data());
-    const QString dataType = QString::fromLocal8Bit(data.mid(8,4)); // ".FIT"
+    expectedDataSize = qFromLittleEndian<quint32>(header.mid(4,4).data());
+    const QString dataType = QString::fromLocal8Bit(header.mid(8,4)); // ".FIT"
 
 //    qDebug() << headerSize << protocolVersion << protocolVersionMajor << protocolVersionMinor
 //             << profileVersion<< profileVersionMajor << profileVersionMinor << data.mid(0,headerSize);
 
-//    if (headerSize >= 14) {
-//        const quint16 crc = qFromLittleEndian<quint16>(data.mid(12,2).data());
-//        const quint16 calculated = (crc == 0) ? 0 : fitChecksum(data.mid(0,12));
-//        qDebug() << "CRC:" << crc << calculated;
-//        if (crc != calculated) {
-//            qWarning() << "Checksum failure:" << crc << "!=" << calculated;
-//        }
-//    }
+    if (header.size() >= 14) {
+        const quint16 expectedChecksum = qFromLittleEndian<quint16>(data.mid(12,2).data());
+        if (expectedChecksum == 0x0000) {
+            qDebug() << "FIT file has (optional) checksum 0x0000";
+        } else {
+            const quint16 calculatedChecksum = fitChecksum(header.mid(0,12));
+            qDebug() << "CRC:" << expectedChecksum << calculatedChecksum;
+            if (calculatedChecksum != expectedChecksum) {
+                qWarning() << "Checksum failure:" << calculatedChecksum << "!=" << expectedChecksum;
+            }
+        }
+    }
+}
+
+QByteArray FitStreamReaderPrivate::readHeader(QIODevice * device)
+{
+    if (device->bytesAvailable() < 1) return QByteArray();
+    const quint8 size = device->peek(1).at(0);
+    return (device->bytesAvailable() < size) ? QByteArray() : device->read(size);
+}
+
+QByteArray FitStreamReaderPrivate::readHeader(const QByteArray &data)
+{
+    if (data.isEmpty()) return QByteArray();
+    const quint8 size = data.at(0);
+    return (data.size() < size) ? QByteArray() : data.mid(0, size);
 }
 
 QTFIT_END_NAMESPACE

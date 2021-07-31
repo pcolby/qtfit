@@ -22,17 +22,21 @@
 
 #include "types_p.h"
 
+#include <QByteArray>
 #include <QHash>
+#include <QIODevice>
 #include <QVersionNumber>
 
 QTFIT_BEGIN_NAMESPACE
 
 class FitStreamReader;
 
-/// @todo do we need to QTFIT_EXPORT this?
 class FitStreamReaderPrivate {
 
 public:
+    QByteArray data;
+    QIODevice *device;
+
     explicit FitStreamReaderPrivate(FitStreamReader * const q);
     virtual ~FitStreamReaderPrivate();
 
@@ -41,15 +45,18 @@ public:
 protected:
     FitStreamReader * const q_ptr; ///< Internal q-pointer.
 
+    static QByteArray readHeader(QIODevice * device);
+    static QByteArray readHeader(const QByteArray &data);
+
 private:
-    quint8 headerSize;
+//    quint8 headerSize;
     QVersionNumber protocolVersion;
     QVersionNumber profileVersion;
     quint32 expectedDataSize;
-    quint32 expectedChecksum;
+//    quint32 expectedChecksum;
 
-    QHash<int, DataDefintion> DataDefintions; ///< Local message types to current data definitions.
-    QHash<int, int> RecordSizes; ///< Local message types to current record sizes.
+    QHash<int, DataDefintion> dataDefintions; ///< Local message types to current data definitions.
+    QHash<int, int> recordSizes; ///< Local message types to current record sizes.
 
     Q_DECLARE_PUBLIC(FitStreamReader)
     Q_DISABLE_COPY(FitStreamReaderPrivate)

@@ -40,17 +40,29 @@ MesgNum AbstractDataMessage::globalMessageNumber() const
     return d->globalMessageNumber;
 }
 
-AbstractDataMessagePrivate::AbstractDataMessagePrivate(AbstractDataMessage * const q) : q_ptr(q)
+bool AbstractDataMessage::isNull() const
+{
+    Q_D(const AbstractDataMessage);
+    return d->isNull;
+}
+
+AbstractDataMessagePrivate::AbstractDataMessagePrivate(AbstractDataMessage * const q)
+    : globalMessageNumber(static_cast<MesgNum>(0xFFFF)), isNull(true), q_ptr(q)
 {
 
 }
 
-bool AbstractDataMessagePrivate::setFields(const QByteArray dataRecord, const MessageDefintion &defn)
+bool AbstractDataMessagePrivate::setFields(
+    const QByteArray &dataRecord, const MessageDefintion &messageDefinition)
 {
-    Q_ASSERT(defn.globalType == this.globalMessageNumber);
-    for (field in dfn) {
-        setField(id, data, type);
+    Q_ASSERT(messageDefinition.globalType == this->globalMessageNumber);
+    int dataOffset=0; // Next field's offset within dataRecord.
+    for (const FieldDefinition &field: messageDefinition.defns) {
+        if (!setField(field.number, dataRecord.mid(dataOffset,field.size), field.type))
+            return false;
+        dataOffset += field.size;
     }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

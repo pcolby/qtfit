@@ -22,6 +22,7 @@
 
 #include "QtFit_global.h"
 #include "types.h"
+#include "types_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
@@ -30,11 +31,14 @@ class AbstractDataMessage;
 class AbstractDataMessagePrivate {
 
 public:
+    MesgNum globalMessageNumber;
+    bool isNull;
+
     AbstractDataMessagePrivate() = delete;
     explicit AbstractDataMessagePrivate(AbstractDataMessage * const q);
     virtual ~AbstractDataMessagePrivate();
 
-    bool setFields(const QByteArray dataRecord, const MessageDefintion &defn);
+    bool setFields(const QByteArray &dataRecord, const MessageDefintion &messageDefinition);
 
 protected:
     AbstractFitMessage * const q_ptr; ///< Internal q-pointer.
@@ -42,8 +46,6 @@ protected:
     virtual bool setField(const int fieldId, const QByteArray data, baseType) = 0;
 
 private:
-    MesgNum globalMessageNumber;
-
     Q_DECLARE_PUBLIC(AbstractDataMessage)
     Q_DISABLE_COPY(AbstractDataMessagePrivate)
 

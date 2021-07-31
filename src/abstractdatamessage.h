@@ -33,6 +33,8 @@ public:
     AbstractDataMessage() = delete;
     ~AbstractDataMessage();
     MesgNum globalMessageNumber() const;
+    bool isNull() const;
+//    bool isValid() const; ///< @todo?
 
 protected:
     /// @cond internal

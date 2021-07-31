@@ -59,7 +59,7 @@ struct DataMessage {
 DataDefintion getDefinition(const quint8 localMessageType) const;
 
 struct MessageDefintion {
-    quint8 globalType;
+    MesgNum globalType;
     Architecture arch;
     FieldDefinitionList defns;
 };
