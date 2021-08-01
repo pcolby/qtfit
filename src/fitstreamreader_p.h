@@ -20,8 +20,8 @@
 #ifndef FITSTREAMREADER_P_H
 #define FITSTREAMREADER_P_H
 
-#include "abstractdatamessage.h"
-//#include "types_p.h"
+#include "fitdatamessage.h"
+#include "types_p.h"
 
 #include <QByteArray>
 #include <QHash>
@@ -48,11 +48,11 @@ protected:
     template<class T> qsizetype bytesAvailable() const;
     template<class T> bool parseFileHeader();
     template<class T> bool parseDefinitionMessage();
-    template<class T> AbstractDataMessage parseDataMessage();
+    template<class T> FitDataMessage parseDataMessage();
     template<class T> quint8 peekByte() const;
     template<class T> QByteArray readBytes(const qsizetype size);
     template<class T> QByteArray readFileHeader();
-    template<class T> AbstractDataMessage readNextDataMessage();
+    template<class T> FitDataMessage readNextDataMessage();
 
 private:
 //    quint8 headerSize;

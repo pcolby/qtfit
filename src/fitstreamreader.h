@@ -20,7 +20,7 @@
 #ifndef FITSTREAMREADER_H
 #define FITSTREAMREADER_H
 
-#include "abstractdatamessage.h"
+#include "fitdatamessage.h"
 
 #include <QIODevice>
 #include <QVersionNumber>
@@ -53,7 +53,7 @@ public:
 //    quint32 expectedDataSize() const;
 //    quint32 expectedChecksum() const;
 
-    AbstractDataMessage readNext(); // Will consume the file header, defn records, and data message headers.
+    FitDataMessage readNext(); // Will consume the file header, defn records, and data message headers.
 
     bool parse(const QByteArray &data) const; /// @todo Remove this (just for experimentation for now).
 

@@ -35,7 +35,7 @@ FitStreamReader::FitStreamReader(QByteArray &data) : d_ptr(new FitStreamReaderPr
 {
     Q_D(FitStreamReader);
     d->data = data;
-    d->parseFileHeader();
+    d->parseFileHeader<QByteArray>();
 }
 
 FitStreamReader::FitStreamReader(const char *data, const qsizetype length)
@@ -43,14 +43,14 @@ FitStreamReader::FitStreamReader(const char *data, const qsizetype length)
 {
     Q_D(FitStreamReader);
     d->data = QByteArray(data, length);
-    d->parseFileHeader();
+    d->parseFileHeader<QByteArray>();
 }
 
 FitStreamReader::FitStreamReader(QIODevice *device) : d_ptr(new FitStreamReaderPrivate(this))
 {
     Q_D(FitStreamReader);
     d->device = device;
-    d->parseFileHeader();
+    d->parseFileHeader<QIODevice>();
 }
 
 FitStreamReader::~FitStreamReader()
@@ -143,7 +143,7 @@ quint16 fitChecksum(const QByteArray &data) {
     return checksum;
 }
 
-AbstractDataMessage FitStreamReader::readNext()
+FitDataMessage FitStreamReader::readNext()
 {
     Q_D(FitStreamReader);
     return (d->device == nullptr)
@@ -271,10 +271,10 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     return false; /// @todo Implement!
 }
 
-template<class T> AbstractDataMessage FitStreamReaderPrivate::parseDataMessage()
+template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
 {
     Q_ASSERT(bytesAvailable<T>());
-    return false; /// @todo Implement!
+    return FitDataMessage(); /// @todo Implement!
 }
 
 template<> quint8 FitStreamReaderPrivate::peekByte<QByteArray>() const
@@ -308,20 +308,20 @@ template<class T> QByteArray FitStreamReaderPrivate::readFileHeader()
     return (bytesAvailable<T>()) ? readBytes<T>(peekByte<T>()) : QByteArray();
 }
 
-template<class T> AbstractDataMessage FitStreamReaderPrivate::readNextDataMessage()
+template<class T> FitDataMessage FitStreamReaderPrivate::readNextDataMessage()
 {
     // If we haven't parsed the FIT File Header yet, do so now.
     if ((protocolVersion.isNull() && (!parseFileHeader<T>()))) {
-        return AbstractDataMessage(); // Need a way to return a null message.
+        return FitDataMessage(); // Need a way to return a null message.
     }
 
     // Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).
     while (bytesAvailable<T>()) { // At least one byte, for the next data record header byte.
         const quint8 recordHeader = peekByte<T>();
         if (recordHeader & (1 << 6)) { // Bit 6 indicates a Definition Message.
-            if (!parseDefinitionMessage()) return AbstractDataMessage();
+            if (!parseDefinitionMessage<T>()) return FitDataMessage();
             // Not returning here; we'll continue processing until we get a FIT Data Message.
-        } else return parseDataMessage();
+        } else return parseDataMessage<T>();
     }
 }
 

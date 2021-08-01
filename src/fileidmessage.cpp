@@ -24,8 +24,8 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-FileIdMessage(const QByteArray dataRecord, const FieldDefinitionList &fieldDefs, arch)
-    : AbstractFitMessage(0, data, defn)
+FileIdMessage::FileIdMessage(const QByteArray dataRecord, const FieldDefinitions &fieldDefs, arch)
+    : FitDataMessage(0, data, defn)
 {
 
 }

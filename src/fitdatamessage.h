@@ -17,36 +17,36 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ABSTRACTDATAMESSAGE_H
-#define ABSTRACTDATAMESSAGE_H
+#ifndef FITDATAMESSAGE_H
+#define FITDATAMESSAGE_H
 
 #include "QtFit_global.h"
 #include "types.h"
 
 QTFIT_BEGIN_NAMESPACE
 
-class AbstractDataMessagePrivate;
+class FitDataMessagePrivate;
 
-class QTFIT_EXPORT AbstractDataMessage {
+class QTFIT_EXPORT FitDataMessage {
 
 public:
-    AbstractDataMessage() = delete;
-    ~AbstractDataMessage();
+    FitDataMessage();
+    ~FitDataMessage();
     MesgNum globalMessageNumber() const;
     bool isNull() const;
 //    bool isValid() const; ///< @todo?
 
 protected:
     /// @cond internal
-    AbstractDataMessagePrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AbstractDataMessage(AbstractDataMessagePrivate * const d);
+    FitDataMessagePrivate * const d_ptr; ///< Internal d-pointer.
+    explicit FitDataMessage(FitDataMessagePrivate * const d);
     /// @endcond
 
 private:
-    Q_DECLARE_PRIVATE(AbstractDataMessage)
+    Q_DECLARE_PRIVATE(FitDataMessage)
 
 };
 
 QTFIT_END_NAMESPACE
 
-#endif // ABSTRACTDATAMESSAGE_H
+#endif // FITDATAMESSAGE_H

@@ -17,42 +17,47 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "abstractdatamessage.h"
-#include "abstractdatamessage_p.h"
+#include "fitdatamessage.h"
+#include "fitdatamessage_p.h"
 
 #include <QDebug>
 
 QTFIT_BEGIN_NAMESPACE
 
-AbstractDataMessage::AbstractDataMessage(AbstractDataMessagePrivate * const d) : d_ptr(d)
+FitDataMessage::FitDataMessage() : d_ptr(new FitDataMessagePrivate(this))
 {
 
 }
 
-AbstractDataMessage::~AbstractDataMessage()
+FitDataMessage::FitDataMessage(FitDataMessagePrivate * const d) : d_ptr(d)
+{
+
+}
+
+FitDataMessage::~FitDataMessage()
 {
     delete d_ptr;
 }
 
-MesgNum AbstractDataMessage::globalMessageNumber() const
+MesgNum FitDataMessage::globalMessageNumber() const
 {
-    Q_D(const AbstractDataMessage);
+    Q_D(const FitDataMessage);
     return d->globalMessageNumber;
 }
 
-bool AbstractDataMessage::isNull() const
+bool FitDataMessage::isNull() const
 {
-    Q_D(const AbstractDataMessage);
+    Q_D(const FitDataMessage);
     return d->isNull;
 }
 
-AbstractDataMessagePrivate::AbstractDataMessagePrivate(AbstractDataMessage * const q)
+FitDataMessagePrivate::FitDataMessagePrivate(FitDataMessage * const q)
     : globalMessageNumber(static_cast<MesgNum>(0xFFFF)), isNull(true), q_ptr(q)
 {
 
 }
 
-bool AbstractDataMessagePrivate::setFields(
+bool FitDataMessagePrivate::setFields(
     const QByteArray &dataRecord, const MessageDefintion &messageDefinition)
 {
     Q_ASSERT(messageDefinition.globalType == this->globalMessageNumber);
@@ -63,6 +68,11 @@ bool AbstractDataMessagePrivate::setFields(
         dataOffset += field.size;
     }
     return true;
+}
+
+bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray data, baseType)
+{
+    Q_ASSERT_X()
 }
 
 QTFIT_END_NAMESPACE

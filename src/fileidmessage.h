@@ -20,14 +20,13 @@
 #ifndef FILEIDMESSAGE_H
 #define FILEIDMESSAGE_H
 
-#include "QtFit_global.h"
-#include "types.h"
+#include "fitdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class FileIdMessagePrivate;
 
-class QTFIT_EXPORT FileIdMessage {
+class QTFIT_EXPORT FileIdMessage : public FitDataMessage {
 
 public:
     FileIdMessage();
