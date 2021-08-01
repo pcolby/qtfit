@@ -36,21 +36,23 @@ class FitStreamReaderPrivate {
 
 public:
     QByteArray data;
+    qsizetype dataOffset;
     QIODevice *device;
 
     explicit FitStreamReaderPrivate(FitStreamReader * const q);
     virtual ~FitStreamReaderPrivate();
 
-    qsizetype bytesAvailable() const;
-    bool parseFileHeader();
-    bool parseDefinitionMessage();
-    AbstractDataMessage parseDataMessage();
-
 protected:
     FitStreamReader * const q_ptr; ///< Internal q-pointer.
 
-    static QByteArray readHeader(QIODevice * device);
-    static QByteArray readHeader(const QByteArray &data);
+    template<class T> qsizetype bytesAvailable() const;
+    template<class T> bool parseFileHeader();
+    template<class T> bool parseDefinitionMessage();
+    template<class T> AbstractDataMessage parseDataMessage();
+    template<class T> quint8 peekByte() const;
+    template<class T> QByteArray readBytes(const qsizetype size);
+    template<class T> QByteArray readFileHeader();
+    template<class T> AbstractDataMessage readNextDataMessage();
 
 private:
 //    quint8 headerSize;

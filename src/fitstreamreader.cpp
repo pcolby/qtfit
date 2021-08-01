@@ -83,6 +83,7 @@ void FitStreamReader::clear()
 {
     Q_D(FitStreamReader);
     d->data.clear();
+    d->dataOffset = 0;
     d->device = nullptr;
 //    d->headerSize = 0;
 //    d->expectedChecksum = 0;
@@ -145,22 +146,11 @@ quint16 fitChecksum(const QByteArray &data) {
 AbstractDataMessage FitStreamReader::readNext()
 {
     Q_D(FitStreamReader);
-
-    // If we haven't parsed the FIT File Header yet, do so now.
-    if ((d->protocolVersion.isNull() && (!d->parseFileHeader()))) {
-        return AbstractDataMessage(); // Need a way to return a null message.
-    }
-
-    // Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).
-    while (d->bytesAvailable()) { // At least one byte, for the next data record header.
-        const quint8 recordHeader = (d->device == nullptr) ? d->data.at(0) : device()->peek(1).at(0);
-        if (recordHeader & (1 << 6)) { // Bit 6 indicates a Definition Message.
-            if (!d->parseDefinitionMessage()) return AbstractDataMessage();
-            // Not returning here; we'll continue processing until we get a FIT Data Message.
-        } else return d->parseDataMessage();
-    }
+    return (d->device == nullptr)
+        ? d->readNextDataMessage<QByteArray>() : d->readNextDataMessage<QIODevice>();
 }
 
+/// @todo Delete this soon-ish (once opaque tests have been updated to use readNext instead).
 bool FitStreamReader::parse(const QByteArray &data) const
 {
     const quint8 headerSize = data.at(0);
@@ -211,26 +201,35 @@ FitStreamReaderPrivate::~FitStreamReaderPrivate()
 
 }
 
-qsizetype FitStreamReaderPrivate::bytesAvailable() const
+template<> qsizetype FitStreamReaderPrivate::bytesAvailable<QByteArray>() const
 {
-    /// @todo Apply dataOffset.
-    return (device == nullptr) ? data.size() : device->bytesAvailable();
+    Q_ASSERT(device == nullptr);
+    return data.size() - dataOffset;
 }
 
-bool FitStreamReaderPrivate::parseFileHeader()
+template<> qsizetype FitStreamReaderPrivate::bytesAvailable<QIODevice>() const
+{
+    Q_ASSERT(device != nullptr);
+    return device->bytesAvailable();
+}
+
+template<class T> bool FitStreamReaderPrivate::parseFileHeader()
 {
     Q_ASSERT(protocolVersion.isNull());
     Q_ASSERT(profileVersion.isNull());
 
     // Read the header bytes.
-    const QByteArray header = (device == nullptr) ? readHeader(data) : readHeader(device);
+    const QByteArray header = readFileHeader<T>();
     if (header.isEmpty()) {
-        /// @todo set not-enough-bytes
+        /// @todo set not-enough-bytes; ie might need to wait for more bytes.
+        return false;
+    }
+    if (header.size() < 12) {
+        /// @todo set invalid header size error; ie FIT stream is corrupt / invalid.
         return false;
     }
 
     // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
-    Q_ASSERT(protocolVersion.isNull());
     protocolVersion = QVersionNumber(header.at(1) >> 4, header.at(1) & 0x0F);
 
     {   // Profile version is major*100 + minor (ie minor could not be more than 99).
@@ -239,49 +238,91 @@ bool FitStreamReaderPrivate::parseFileHeader()
     }
 
     expectedDataSize = qFromLittleEndian<quint32>(header.mid(4,4).data());
-    const QString dataType = QString::fromLocal8Bit(header.mid(8,4)); // ".FIT"
+
+    const QByteArray dataType = header.mid(8,4);
+    if (dataType != QByteArray(".FIT")) {
+        /// @todo set invalid header data type (must be ".FIT").
+        return false;
+    }
 
 //    qDebug() << headerSize << protocolVersion << protocolVersionMajor << protocolVersionMinor
 //             << profileVersion<< profileVersionMajor << profileVersionMinor << data.mid(0,headerSize);
 
+    // Check the header's checksum (only present in 14+ byte headers, and even then may be 0x0000).
     if (header.size() >= 14) {
         const quint16 expectedChecksum = qFromLittleEndian<quint16>(data.mid(12,2).data());
         if (expectedChecksum == 0x0000) {
-            qDebug() << "FIT file has (optional) checksum 0x0000";
+            qDebug() << "FIT file has (optional) checksum 0x0000; ignoring.";
         } else {
             const quint16 calculatedChecksum = fitChecksum(header.mid(0,12));
             qDebug() << "CRC:" << expectedChecksum << calculatedChecksum;
             if (calculatedChecksum != expectedChecksum) {
                 qWarning() << "Checksum failure:" << calculatedChecksum << "!=" << expectedChecksum;
+                /// @todo set error, and return false here?
             }
         }
     }
+    return true;
 }
 
-bool FitStreamReaderPrivate::parseDefinitionMessage()
+template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
 {
-    Q_ASSERT(bytesAvailable());
+    Q_ASSERT(bytesAvailable<T>());
     return false; /// @todo Implement!
 }
 
-AbstractDataMessage FitStreamReaderPrivate::parseDataMessage()
+template<class T> AbstractDataMessage FitStreamReaderPrivate::parseDataMessage()
 {
-    Q_ASSERT(bytesAvailable());
+    Q_ASSERT(bytesAvailable<T>());
     return false; /// @todo Implement!
 }
 
-QByteArray FitStreamReaderPrivate::readHeader(QIODevice * device)
+template<> quint8 FitStreamReaderPrivate::peekByte<QByteArray>() const
 {
-    if (device->bytesAvailable() < 1) return QByteArray();
-    const quint8 size = device->peek(1).at(0);
+    Q_ASSERT(device == nullptr);
+    return (data.size() > dataOffset) ? data.at(dataOffset) : 0;
+}
+
+template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>() const
+{
+    Q_ASSERT(device != nullptr);
+    const QByteArray byte = device->peek(1);
+    return byte.isEmpty() ? 0 : byte.front();
+}
+
+template<> QByteArray FitStreamReaderPrivate::readBytes<QByteArray>(const qsizetype size)
+{
+    Q_ASSERT(device == nullptr);
+    return ((data.size() - dataOffset) < size) ? QByteArray() : data.mid(dataOffset, size);
+}
+
+template<> QByteArray FitStreamReaderPrivate::readBytes<QIODevice>(const qsizetype size)
+{
+    Q_ASSERT(device != nullptr);
     return (device->bytesAvailable() < size) ? QByteArray() : device->read(size);
 }
 
-QByteArray FitStreamReaderPrivate::readHeader(const QByteArray &data)
+template<class T> QByteArray FitStreamReaderPrivate::readFileHeader()
 {
-    if (data.isEmpty()) return QByteArray();
-    const quint8 size = data.at(0);
-    return (data.size() < size) ? QByteArray() : data.mid(0, size);
+    // Return `n` bytes, where `n` is given by the first byte (ie a length-prefixed buffer).
+    return (bytesAvailable<T>()) ? readBytes<T>(peekByte<T>()) : QByteArray();
+}
+
+template<class T> AbstractDataMessage FitStreamReaderPrivate::readNextDataMessage()
+{
+    // If we haven't parsed the FIT File Header yet, do so now.
+    if ((protocolVersion.isNull() && (!parseFileHeader<T>()))) {
+        return AbstractDataMessage(); // Need a way to return a null message.
+    }
+
+    // Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).
+    while (bytesAvailable<T>()) { // At least one byte, for the next data record header byte.
+        const quint8 recordHeader = peekByte<T>();
+        if (recordHeader & (1 << 6)) { // Bit 6 indicates a Definition Message.
+            if (!parseDefinitionMessage()) return AbstractDataMessage();
+            // Not returning here; we'll continue processing until we get a FIT Data Message.
+        } else return parseDataMessage();
+    }
 }
 
 QTFIT_END_NAMESPACE
