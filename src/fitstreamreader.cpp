@@ -20,9 +20,9 @@
 #include "fitstreamreader.h"
 #include "fitstreamreader_p.h"
 
-#include <QtEndian>
-
 #include <QDebug>
+#include <QBitArray>
+#include <QtEndian>
 
 QTFIT_BEGIN_NAMESPACE
 
@@ -146,16 +146,19 @@ AbstractDataMessage FitStreamReader::readNext()
 {
     Q_D(FitStreamReader);
 
-    // If we haven't parsed the FIT File Header yet, (try to) parse it now.
+    // If we haven't parsed the FIT File Header yet, do so now.
     if ((d->protocolVersion.isNull() && (!d->parseFileHeader()))) {
-        return AbstractDataMessage();
+        return AbstractDataMessage(); // Need a way to return a null message.
     }
 
-    // Read next FIT Data Record.
-
-    // If record is a FIT Definition Message, process it.
-
-    // Else records is a FIT Data Message.
+    // Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).
+    while (d->bytesAvailable()) { // At least one byte, for the next data record header.
+        const quint8 recordHeader = (d->device == nullptr) ? d->data.at(0) : device()->peek(1).at(0);
+        if (recordHeader & (1 << 6)) { // Bit 6 indicates a Definition Message.
+            if (!d->parseDefinitionMessage()) return AbstractDataMessage();
+            // Not returning here; we'll continue processing until we get a FIT Data Message.
+        } else return d->parseDataMessage();
+    }
 }
 
 bool FitStreamReader::parse(const QByteArray &data) const
@@ -208,6 +211,12 @@ FitStreamReaderPrivate::~FitStreamReaderPrivate()
 
 }
 
+qsizetype FitStreamReaderPrivate::bytesAvailable() const
+{
+    /// @todo Apply dataOffset.
+    return (device == nullptr) ? data.size() : device->bytesAvailable();
+}
+
 bool FitStreamReaderPrivate::parseFileHeader()
 {
     Q_ASSERT(protocolVersion.isNull());
@@ -247,6 +256,18 @@ bool FitStreamReaderPrivate::parseFileHeader()
             }
         }
     }
+}
+
+bool FitStreamReaderPrivate::parseDefinitionMessage()
+{
+    Q_ASSERT(bytesAvailable());
+    return false; /// @todo Implement!
+}
+
+AbstractDataMessage FitStreamReaderPrivate::parseDataMessage()
+{
+    Q_ASSERT(bytesAvailable());
+    return false; /// @todo Implement!
 }
 
 QByteArray FitStreamReaderPrivate::readHeader(QIODevice * device)

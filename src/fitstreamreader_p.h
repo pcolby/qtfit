@@ -20,7 +20,8 @@
 #ifndef FITSTREAMREADER_P_H
 #define FITSTREAMREADER_P_H
 
-#include "types_p.h"
+#include "abstractdatamessage.h"
+//#include "types_p.h"
 
 #include <QByteArray>
 #include <QHash>
@@ -40,7 +41,10 @@ public:
     explicit FitStreamReaderPrivate(FitStreamReader * const q);
     virtual ~FitStreamReaderPrivate();
 
+    qsizetype bytesAvailable() const;
     bool parseFileHeader();
+    bool parseDefinitionMessage();
+    AbstractDataMessage parseDataMessage();
 
 protected:
     FitStreamReader * const q_ptr; ///< Internal q-pointer.
