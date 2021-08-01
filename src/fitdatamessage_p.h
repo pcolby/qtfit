@@ -38,12 +38,13 @@ public:
     explicit FitDataMessagePrivate(FitDataMessage * const q);
     virtual ~FitDataMessagePrivate();
 
-    bool setFields(const QByteArray &dataRecord, const MessageDefintion &messageDefinition);
+    bool setFields(const QByteArray &dataRecord, const DataDefinition &definition);
 
 protected:
-    AbstractFitMessage * const q_ptr; ///< Internal q-pointer.
+    FitDataMessage * const q_ptr; ///< Internal q-pointer.
 
-    virtual bool setField(const int fieldId, const QByteArray data, baseType);
+    /// @todo Make base type enum.
+    virtual bool setField(const int fieldId, const QByteArray data, int baseType);
 
 private:
     Q_DECLARE_PUBLIC(FitDataMessage)

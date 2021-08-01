@@ -57,12 +57,16 @@ FitDataMessagePrivate::FitDataMessagePrivate(FitDataMessage * const q)
 
 }
 
-bool FitDataMessagePrivate::setFields(
-    const QByteArray &dataRecord, const MessageDefintion &messageDefinition)
+FitDataMessagePrivate::~FitDataMessagePrivate()
 {
-    Q_ASSERT(messageDefinition.globalType == this->globalMessageNumber);
+
+}
+
+bool FitDataMessagePrivate::setFields(const QByteArray &dataRecord, const DataDefinition &definition)
+{
+    Q_ASSERT(definition.globalMessageNumber == this->globalMessageNumber);
     int dataOffset=0; // Next field's offset within dataRecord.
-    for (const FieldDefinition &field: messageDefinition.defns) {
+    for (const FieldDefinition &field: definition.fieldDefinitions) {
         if (!setField(field.number, dataRecord.mid(dataOffset,field.size), field.type))
             return false;
         dataOffset += field.size;
@@ -70,9 +74,12 @@ bool FitDataMessagePrivate::setFields(
     return true;
 }
 
-bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray data, baseType)
+bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
 {
-    Q_ASSERT_X()
+    Q_UNUSED(fieldId)
+    Q_UNUSED(data)
+    Q_UNUSED(baseType)
+    return false;
 }
 
 QTFIT_END_NAMESPACE

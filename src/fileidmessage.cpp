@@ -24,36 +24,40 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-FileIdMessage::FileIdMessage(const QByteArray dataRecord, const FieldDefinitions &fieldDefs, arch)
-    : FitDataMessage(0, data, defn)
+//FileIdMessage::FileIdMessage(const QByteArray dataRecord, const FieldDefinitions &fieldDefs, arch)
+//    //: FitDataMessage(0, data, defn) ///< @todo
+//{
+
+//}
+
+
+FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : FitDataMessagePrivate(q)
 {
 
 }
 
-
-FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : q_ptr(q)
+FileIdMessagePrivate::~FileIdMessagePrivate()
 {
 
 }
-
 
 /// @todo Generate implementation.
-//    bool setField(const int fieldId, const QByteArray data, baseType) override {
-//        #define SET_FIELD(id,name,type)
-//          case id: name = fromFitValue<type>(data, baseType)
+bool FileIdMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+{
+//    #define SET_FIELD(id,name,type)
+//      case id: name = fromFitValue<type>(data, baseType)
 
-//        switch fieldId {
-//            case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//            case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//            SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//            SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//            default:
-//                qWarning() << "Unknown field definition number" << fieldId
-//                           << "for" << messageName();
-//                return false;
-//        }
-//        return true;
+//    switch fieldId {
+//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
+//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
+//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
+//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
+//        default:
+//            qWarning() << "Unknown field definition number" << fieldId
+//                       << "for" << messageName();
+//            return false;
 //    }
-//}
+    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+}
 
 QTFIT_END_NAMESPACE

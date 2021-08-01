@@ -20,13 +20,13 @@
 #ifndef FILEIDMESSAGE_P_H
 #define FILEIDMESSAGE_P_H
 
-#include "QtFit_global.h"
+#include "fitdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class FileIdMessage;
 
-class FileIdMessagePrivate {
+class FileIdMessagePrivate : public FitDataMessagePrivate {
 
 public:
     /// @todo Generate members.
@@ -45,9 +45,8 @@ public:
     virtual ~FileIdMessagePrivate();
 
 protected:
-    FileIdMessage * const q_ptr; ///< Internal q-pointer.
-
-    bool setField(const int fieldId, const QByteArray data, baseType) override;
+    /// @todo Make base type enum.
+    bool setField(const int fieldId, const QByteArray data, int baseType) override;
 
 private:
     Q_DECLARE_PUBLIC(FileIdMessage)

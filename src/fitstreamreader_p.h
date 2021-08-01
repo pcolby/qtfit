@@ -61,7 +61,7 @@ private:
     quint32 expectedDataSize;
 //    quint32 expectedChecksum;
 
-    QHash<int, DataDefintion> dataDefintions; ///< Local message types to current data definitions.
+    QHash<int, DataDefinition> dataDefinitions; ///< Local message types to current data definitions.
     QHash<int, int> recordSizes; ///< Local message types to current record sizes.
 
     Q_DECLARE_PUBLIC(FitStreamReader)

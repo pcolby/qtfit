@@ -90,7 +90,7 @@ void FitStreamReader::clear()
     d->expectedDataSize = 0;
     d->protocolVersion = QVersionNumber();
     d->profileVersion = QVersionNumber();
-    d->dataDefintions.clear();
+    d->dataDefinitions.clear();
     d->recordSizes.clear();
 }
 
@@ -323,6 +323,7 @@ template<class T> FitDataMessage FitStreamReaderPrivate::readNextDataMessage()
             // Not returning here; we'll continue processing until we get a FIT Data Message.
         } else return parseDataMessage<T>();
     }
+    return FitDataMessage();
 }
 
 QTFIT_END_NAMESPACE

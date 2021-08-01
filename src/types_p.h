@@ -22,6 +22,8 @@
 
 #include "types.h"
 
+#include <QList>
+
 QTFIT_BEGIN_NAMESPACE
 
 enum class Architecture : quint8 {
@@ -41,14 +43,14 @@ struct FieldDefinition {
     quint8 type; // make enum
 };
 
-struct DataDefintion {
+struct DataDefinition {
     Architecture architecture;
     MesgNum globalMessageNumber;
     QList<FieldDefinition> fieldDefinitions;
     QList<DeveloperFieldDefinition> developerFieldDefinitions;
 };
 
-typedef QList<FieldDefinition> FieldDefinitionList;
+//typedef QList<FieldDefinition> FieldDefinitionList;
 
 struct DataMessage {
     quint8 localMessageType; // 0xFF == invalid
@@ -56,13 +58,11 @@ struct DataMessage {
     QByteArray recordContent; // empty -> invalid.
 };
 
-DataDefintion getDefinition(const quint8 localMessageType) const;
-
-struct MessageDefintion {
-    MesgNum globalType;
-    Architecture arch;
-    FieldDefinitionList defns;
-};
+//struct MessageDefintion {
+//    MesgNum globalType;
+//    Architecture arch;
+//    FieldDefinitionList defns;
+//};
 
 QTFIT_END_NAMESPACE
 

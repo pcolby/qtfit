@@ -31,7 +31,7 @@ class QTFIT_EXPORT FileIdMessage : public FitDataMessage {
 public:
     FileIdMessage();
     FileIdMessage(const QByteArray &data);
-//    ~FileIdMessage();
+    ~FileIdMessage();
 
     /// @todo Generate getters/setters.
 //    static int qMetaTypeId;
