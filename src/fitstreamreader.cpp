@@ -143,6 +143,18 @@ quint16 fitChecksum(const QByteArray &data) {
     return checksum;
 }
 
+QVersionNumber FitStreamReader::profileVersion() const
+{
+    Q_D(const FitStreamReader);
+    return d->profileVersion;
+}
+
+QVersionNumber FitStreamReader::protocolVersion() const
+{
+    Q_D(const FitStreamReader);
+    return d->protocolVersion;
+}
+
 FitDataMessage FitStreamReader::readNext()
 {
     Q_D(FitStreamReader);
@@ -150,48 +162,8 @@ FitDataMessage FitStreamReader::readNext()
         ? d->readNextDataMessage<QByteArray>() : d->readNextDataMessage<QIODevice>();
 }
 
-/// @todo Delete this soon-ish (once opaque tests have been updated to use readNext instead).
-bool FitStreamReader::parse(const QByteArray &data) const
-{
-    const quint8 headerSize = data.at(0);
-
-    // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
-    const quint8 protocolVersion = data.at(1);
-    const quint8 protocolVersionMajor = protocolVersion >> 4;
-    const quint8 protocolVersionMinor = protocolVersion & 0x0F;
-
-    // Profile version is major*100 + minor (ie minor could not be more than 99).
-    const quint16 profileVersion = qFromLittleEndian<quint16>(data.mid(2,2).data());
-    const quint16 profileVersionMajor = profileVersion/100;
-    const quint8 profileVersionMinor = profileVersion%100;
-
-    const quint32 dataSize = qFromLittleEndian<quint32>(data.mid(4,4).data());
-    const QString dataType = QString::fromLocal8Bit(data.mid(8,4)); // ".FIT"
-
-    qDebug() << headerSize << protocolVersion << protocolVersionMajor << protocolVersionMinor
-             << profileVersion<< profileVersionMajor << profileVersionMinor << data.mid(0,headerSize);
-
-    if (headerSize >= 14) {
-        const quint16 crc = qFromLittleEndian<quint16>(data.mid(12,2).data());
-        const quint16 calculated = (crc == 0) ? 0 : fitChecksum(data.mid(0,12));
-        qDebug() << "CRC:" << crc << calculated;
-        if (crc != calculated) {
-            qWarning() << "Checksum failure:" << crc << "!=" << calculated;
-        }
-    }
-
-    /// @todo
-    qDebug() << "Header size:" << headerSize << "bytes";
-    qDebug() << "Protocol version:" << protocolVersionString(protocolVersion);
-    qDebug() << "Profile version:" << profileVersionString(profileVersion);
-    qDebug() << "Data size:" << dataSize << "bytes";
-    qDebug() << "Data type:" << dataType;
-//    qDebug() << "CRC:" << crc;
-    return true;
-}
-
 FitStreamReaderPrivate::FitStreamReaderPrivate(FitStreamReader * const q)
-    : device(nullptr), q_ptr(q)
+    : dataOffset(0), device(nullptr), q_ptr(q)
 {
 
 }
@@ -220,33 +192,37 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
 
     // Read the header bytes.
     const QByteArray header = readFileHeader<T>();
+    qDebug() << "Header size" << header.size() << "bytes";
     if (header.isEmpty()) {
         /// @todo set not-enough-bytes; ie might need to wait for more bytes.
+        qDebug() << "not enough bytes for header";
         return false;
     }
     if (header.size() < 12) {
         /// @todo set invalid header size error; ie FIT stream is corrupt / invalid.
+        qDebug() << "invalid header size";
         return false;
     }
 
     // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
     protocolVersion = QVersionNumber(header.at(1) >> 4, header.at(1) & 0x0F);
+    qDebug() << "Protocol version" << protocolVersion;
 
     {   // Profile version is major*100 + minor (ie minor could not be more than 99).
         const quint16 version = qFromLittleEndian<quint16>(header.mid(2,2).data());
         profileVersion = QVersionNumber(version/100, version%100);
+        qDebug() << "Profile version" << profileVersion;
     }
 
     expectedDataSize = qFromLittleEndian<quint32>(header.mid(4,4).data());
+    qDebug() << "Data size" << expectedDataSize << "bytes";
 
     const QByteArray dataType = header.mid(8,4);
+    qDebug() << "Data type" << dataType;
     if (dataType != QByteArray(".FIT")) {
         /// @todo set invalid header data type (must be ".FIT").
         return false;
     }
-
-//    qDebug() << headerSize << protocolVersion << protocolVersionMajor << protocolVersionMinor
-//             << profileVersion<< profileVersionMajor << profileVersionMinor << data.mid(0,headerSize);
 
     // Check the header's checksum (only present in 14+ byte headers, and even then may be 0x0000).
     if (header.size() >= 14) {
@@ -255,10 +231,12 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
             qDebug() << "FIT file has (optional) checksum 0x0000; ignoring.";
         } else {
             const quint16 calculatedChecksum = fitChecksum(header.mid(0,12));
-            qDebug() << "CRC:" << expectedChecksum << calculatedChecksum;
+            qDebug() << "Header checksum" << expectedChecksum << calculatedChecksum;
             if (calculatedChecksum != expectedChecksum) {
                 qWarning() << "Checksum failure:" << calculatedChecksum << "!=" << expectedChecksum;
                 /// @todo set error, and return false here?
+            } else {
+                qDebug() << "Checkums match";
             }
         }
     }

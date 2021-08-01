@@ -60,13 +60,12 @@ void TestSdkExamples::parseFitFile()
     QFETCH(QByteArray, fitData);
     QFETCH(QByteArray, csvData);
 
-    /// @todo Parse fitData and convert to CSV.
-    fit::FitStreamReader reader;
-    QVERIFY(reader.parse(fitData));
+    fit::FitStreamReader reader(fitData);
+    QVERIFY(!reader.protocolVersion().isNull());
+    QVERIFY(!reader.profileVersion().isNull());
+
+    /// @todo Convert to CSV, and compare.
     const QByteArray result(csvData);
-
-//    fit::FitStreamReaderPrivate p;
-
     QCOMPARE(result, csvData);
 }
 
