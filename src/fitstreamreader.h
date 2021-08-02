@@ -55,8 +55,6 @@ public:
 
     FitDataMessage readNext(); // Will consume the file header, defn records, and data message headers.
 
-    bool parse(const QByteArray &data) const; /// @todo Remove this (just for experimentation for now).
-
 protected:
     /// @cond internal
     FitStreamReaderPrivate * const d_ptr; ///< Internal d-pointer.

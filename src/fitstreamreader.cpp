@@ -106,7 +106,9 @@ QIODevice * FitStreamReader::device() const
 void FitStreamReader::setDevice(QIODevice *device)
 {
     Q_D(FitStreamReader);
+    if (device) clear();
     d->device = device;
+    if (device) d->parseFileHeader<QIODevice>();
 }
 
 QString protocolVersionString(const quint8 major, const quint8 minor)
@@ -204,9 +206,11 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
         return false;
     }
 
-    // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
-    protocolVersion = QVersionNumber(header.at(1) >> 4, header.at(1) & 0x0F);
-    qDebug() << "Protocol version" << protocolVersion;
+    {   // Protocol version is split into two parts: high 4 bits major, a low 4 bits minor.
+        const quint8 version = header.at(1);
+        protocolVersion = QVersionNumber(version >> 4, version & 0x0F);
+        qDebug() << "Protocol version" << protocolVersion;
+    }
 
     {   // Profile version is major*100 + minor (ie minor could not be more than 99).
         const quint16 version = qFromLittleEndian<quint16>(header.mid(2,2).data());
