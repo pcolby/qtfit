@@ -51,7 +51,7 @@
 
 void TestFitStreamReader::addData()
 {
-
+    /// @todo
 }
 
 //void TestFitStreamReader::atEnd_data()
@@ -61,7 +61,7 @@ void TestFitStreamReader::addData()
 
 void TestFitStreamReader::atEnd()
 {
-
+    /// @todo
 }
 
 void TestFitStreamReader::clear_data()

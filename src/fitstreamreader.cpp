@@ -111,24 +111,6 @@ void FitStreamReader::setDevice(QIODevice *device)
     if (device) d->parseFileHeader<QIODevice>();
 }
 
-QString protocolVersionString(const quint8 major, const quint8 minor)
-{
-    return QStringLiteral("%1.%2").arg(major).arg(minor);
-}
-
-QString protocolVersionString(const quint8 version)
-{
-    return protocolVersionString(version >> 4, version & 0x0F);
-}
-
-QString profileVersionString(const quint16 major, const quint8 minor) {
-    return QStringLiteral("%1.%2").arg(major).arg(minor);
-}
-
-QString profileVersionString(const quint16 version) {
-    return profileVersionString(version/100, version%100);
-}
-
 quint16 fitChecksum(const QByteArray &data) {
     quint16 checksum=0;
     for (const auto &byte: data) {
