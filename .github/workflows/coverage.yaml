@@ -1,0 +1,36 @@
+name: Test Coverage
+
+on: [push]
+
+jobs:
+  linux:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        env:
+        - { cc: gcc, cxx: g++ }
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      env:
+        CC:  ${{ matrix.env.cc }}
+        CXX: ${{ matrix.env.cxx }}
+      run: |
+        cmake -D CMAKE_BUILD_TYPE=Release -D ENABLE_COVERAGE=ON -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP"
+    - name: Test
+      run: ctest --verbose
+      working-directory: ${{ runner.temp }}
+    - name: Collate Coverage
+      run: make coverage
+      working-directory: ${{ runner.temp }}
+    - name: Generate HTML Report
+      run: make coverage-html
+      working-directory: ${{ runner.temp }}
+    - name: Upload Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: Test Coverage HTML Report
+        path: "${{ runner.temp }}/coverage"
+# @todo Report to codecov and coveralls 

@@ -13,8 +13,6 @@ jobs:
         - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v2
-    - name: Install Grantlee
-      run: sudo apt install libgrantlee5-dev
     - name: Build
       env:
         CC:  ${{ matrix.env.cc }}
