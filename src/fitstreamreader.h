@@ -34,12 +34,10 @@ class QTFIT_EXPORT FitStreamReader {
 public:
     FitStreamReader();
     FitStreamReader(QByteArray &data);
-    FitStreamReader(const char *data, const qsizetype length);
     FitStreamReader(QIODevice *device);
     ~FitStreamReader();
 
     void addData(const QByteArray &data);
-    void addData(const char *data, const qsizetype length);
     bool atEnd() const;
     void clear();
     QIODevice *device() const;

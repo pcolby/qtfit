@@ -35,8 +35,14 @@ class FitStreamReader;
 class FitStreamReaderPrivate {
 
 public:
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    typedef qsizetype size_t;
+#else
+    typedef int size_t;
+#endif
+
     QByteArray data;
-    qsizetype dataOffset;
+    size_t dataOffset;
     QIODevice *device;
 
     explicit FitStreamReaderPrivate(FitStreamReader * const q);
@@ -45,12 +51,12 @@ public:
 protected:
     FitStreamReader * const q_ptr; ///< Internal q-pointer.
 
-    template<class T> qsizetype bytesAvailable() const;
+    template<class T> size_t bytesAvailable() const;
     template<class T> bool parseFileHeader();
     template<class T> bool parseDefinitionMessage();
     template<class T> FitDataMessage parseDataMessage();
     template<class T> quint8 peekByte() const;
-    template<class T> QByteArray readBytes(const qsizetype size);
+    template<class T> QByteArray readBytes(const size_t size);
     template<class T> QByteArray readFileHeader();
     template<class T> FitDataMessage readNextDataMessage();
 

@@ -38,14 +38,6 @@ FitStreamReader::FitStreamReader(QByteArray &data) : d_ptr(new FitStreamReaderPr
     d->parseFileHeader<QByteArray>();
 }
 
-FitStreamReader::FitStreamReader(const char *data, const qsizetype length)
-    : d_ptr(new FitStreamReaderPrivate(this))
-{
-    Q_D(FitStreamReader);
-    d->data = QByteArray(data, length);
-    d->parseFileHeader<QByteArray>();
-}
-
 FitStreamReader::FitStreamReader(QIODevice *device) : d_ptr(new FitStreamReaderPrivate(this))
 {
     Q_D(FitStreamReader);
@@ -67,11 +59,6 @@ void FitStreamReader::addData(const QByteArray &data)
         return;
     }
     d->data += data;
-}
-
-void FitStreamReader::addData(const char *data, const qsizetype length)
-{
-    addData(QByteArray(data, length));
 }
 
 bool FitStreamReader::atEnd() const
@@ -157,13 +144,13 @@ FitStreamReaderPrivate::~FitStreamReaderPrivate()
 
 }
 
-template<> qsizetype FitStreamReaderPrivate::bytesAvailable<QByteArray>() const
+template<> FitStreamReaderPrivate::size_t FitStreamReaderPrivate::bytesAvailable<QByteArray>() const
 {
     Q_ASSERT(device == nullptr);
     return data.size() - dataOffset;
 }
 
-template<> qsizetype FitStreamReaderPrivate::bytesAvailable<QIODevice>() const
+template<> FitStreamReaderPrivate::size_t FitStreamReaderPrivate::bytesAvailable<QIODevice>() const
 {
     Q_ASSERT(device != nullptr);
     return device->bytesAvailable();
@@ -254,13 +241,13 @@ template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>() const
     return byte.isEmpty() ? 0 : byte.front();
 }
 
-template<> QByteArray FitStreamReaderPrivate::readBytes<QByteArray>(const qsizetype size)
+template<> QByteArray FitStreamReaderPrivate::readBytes<QByteArray>(const size_t size)
 {
     Q_ASSERT(device == nullptr);
     return ((data.size() - dataOffset) < size) ? QByteArray() : data.mid(dataOffset, size);
 }
 
-template<> QByteArray FitStreamReaderPrivate::readBytes<QIODevice>(const qsizetype size)
+template<> QByteArray FitStreamReaderPrivate::readBytes<QIODevice>(const size_t size)
 {
     Q_ASSERT(device != nullptr);
     return (device->bytesAvailable() < size) ? QByteArray() : device->read(size);
