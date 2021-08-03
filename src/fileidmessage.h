@@ -30,7 +30,7 @@ class QTFIT_EXPORT FileIdMessage : public FitDataMessage {
 
 public:
     FileIdMessage();
-    FileIdMessage(const QByteArray &data);
+    explicit FileIdMessage(const QByteArray &data);
     ~FileIdMessage();
 
     /// @todo Generate getters/setters.
@@ -45,7 +45,6 @@ public:
 
 protected:
     /// @cond internal
-    FileIdMessagePrivate * const d_ptr; ///< Internal d-pointer.
     explicit FileIdMessage(FileIdMessagePrivate * const d);
     /// @endcond
 
