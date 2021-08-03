@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install Qt
-      run: sudo apt install qtbase5-dev
+      run: sudo apt install lcov qtbase5-dev
     - name: Build
       env:
         CC:  ${{ matrix.env.cc }}
