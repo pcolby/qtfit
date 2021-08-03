@@ -23,6 +23,18 @@ else()
   add_compile_options(-Wall -Wextra -Werror)
 endif()
 
+# Optional test coverage reporting (off by default, and gcc only for now).
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+  option(ENABLE_COVERAGE "Enable test coverage reporting" OFF)
+else()
+  set(ENABLE_COVERAGE OFF)
+endif()
+if (ENABLE_COVERAGE)
+  message("-- Enabling test coverage reporting")
+  add_compile_options(-coverage)
+  add_link_options(--coverage)
+endif()
+
 # Default to Qt6 where available, otherwise Qt5.
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
