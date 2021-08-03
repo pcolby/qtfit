@@ -36,6 +36,7 @@ jobs:
         name: Test Coverage HTML Report
         path: "${{ runner.temp }}/coverage"
     - name: Submit to Codecov
+      if: false
       uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
