@@ -238,7 +238,7 @@ template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>() const
 {
     Q_ASSERT(device != nullptr);
     const QByteArray byte = device->peek(1);
-    return byte.isEmpty() ? 0 : byte.front();
+    return byte.isEmpty() ? 0 : byte.at(0);
 }
 
 template<> QByteArray FitStreamReaderPrivate::readBytes<QByteArray>(const size_t size)
