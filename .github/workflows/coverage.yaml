@@ -45,5 +45,5 @@ jobs:
     - name: Submit to Coveralls
       uses: coverallsapp/github-action@master
       with:
-        github-token: ${{ secrets.COVERALLS_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         path-to-lcov: "${{ runner.temp }}/coverage.info"
