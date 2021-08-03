@@ -12,6 +12,8 @@ jobs:
         - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v2
+    - name: Install Qt
+      run: sudo apt install qtbase5-dev
     - name: Build
       env:
         CC:  ${{ matrix.env.cc }}
