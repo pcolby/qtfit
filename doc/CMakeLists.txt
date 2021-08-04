@@ -31,8 +31,8 @@ if (QDOC)
   message("-- Found qdoc ${QDOC}")
   add_custom_target(
     doc
-    COMMAND ${QDOC} --outputdir html/api config.qdocconf)
+    COMMAND ${QDOC} --outputdir html config.qdocconf)
   add_custom_target(
     doc-internal
-    COMMAND ${QDOC} --outputdir html/internal --showinternal config.qdocconf)
+    COMMAND ${QDOC} --outputdir internal --showinternal config.qdocconf)
 endif()

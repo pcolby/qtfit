@@ -9,7 +9,10 @@ version = "${CMAKE_PROJECT_VERSION}"
 
 headerdirs  = ${PROJECT_SOURCE_DIR}/src
 sourcedirs  = ${PROJECT_SOURCE_DIR}/src ${PROJECT_SOURCE_DIR}/doc/src
-includepaths = ${QDOC_INCLUDE_PATHS}
+includepaths = ${QDOC_INCLUDE_PATHS} /usr/include /usr/include/linux ${PROJECT_SOURCE_DIR}/src
+
+#moduleheader = QtFit
+#${PROJECT_SOURCE_DIR}/src/QtFit
 
 #indexes = ${QDOC_INDEX_DIR}/qtcore/qtcore.index
 
@@ -17,3 +20,6 @@ navigation.homepage = main.html
 navigation.hometitle = "QtFit"
 
 syntaxhighlighting = true
+
+# Add a red "[internal]" indicator to items marked with \internal.
+macro.internal.HTML = "<span style="color:red">[internal]</span>"
