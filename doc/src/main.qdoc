@@ -1,0 +1,20 @@
+/*!
+
+  \page main.html
+  \title QtFit
+
+  \brief If you know the name of the class you want, find it here.
+
+  \section1 To do...
+
+  \list
+  \li \l{All Functions}
+  \li \l{All Namespaces}
+  \li \l{Obsolete Classes}
+  \endlist
+
+  \generatelist classes
+
+  \annotatedlist classlists
+
+*/

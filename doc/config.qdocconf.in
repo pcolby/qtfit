@@ -1,0 +1,19 @@
+include(${QDOC_GLOBAL_DIR}/fileextensions.qdocconf)
+include(${QDOC_GLOBAL_DIR}/qt-html-templates-online.qdocconf)
+include(${PROJECT_SOURCE_DIR}/doc/html-header.qdocconf)
+include(${PROJECT_SOURCE_DIR}/doc/html-footer.qdocconf)
+
+project = QtFit
+description = "Native Qt library for Garmin FIT"
+version = "${CMAKE_PROJECT_VERSION}"
+
+headerdirs  = ${PROJECT_SOURCE_DIR}/src
+sourcedirs  = ${PROJECT_SOURCE_DIR}/src ${PROJECT_SOURCE_DIR}/doc/src
+includepaths = ${QDOC_INCLUDE_PATHS}
+
+#indexes = ${QDOC_INDEX_DIR}/qtcore/qtcore.index
+
+navigation.homepage = main.html
+navigation.hometitle = "QtFit"
+
+syntaxhighlighting = true
