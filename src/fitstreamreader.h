@@ -33,7 +33,7 @@ class QTFIT_EXPORT FitStreamReader {
 
 public:
     FitStreamReader();
-    explicit FitStreamReader(QByteArray &data);
+    explicit FitStreamReader(const QByteArray &data);
     explicit FitStreamReader(QIODevice *device);
     ~FitStreamReader();
 

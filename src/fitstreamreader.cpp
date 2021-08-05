@@ -31,7 +31,7 @@ FitStreamReader::FitStreamReader() : d_ptr(new FitStreamReaderPrivate(this))
 
 }
 
-FitStreamReader::FitStreamReader(QByteArray &data) : d_ptr(new FitStreamReaderPrivate(this))
+FitStreamReader::FitStreamReader(const QByteArray &data) : d_ptr(new FitStreamReaderPrivate(this))
 {
     Q_D(FitStreamReader);
     d->data = data;
