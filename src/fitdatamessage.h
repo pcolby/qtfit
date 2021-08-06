@@ -32,7 +32,7 @@ class QTFIT_EXPORT FitDataMessage {
 public:
     FitDataMessage();
     FitDataMessage(const FitDataMessage &other);
-    FitDataMessage operator=(const FitDataMessage &other);
+    FitDataMessage &operator=(const FitDataMessage &other);
     ~FitDataMessage();
     MesgNum globalMessageNumber() const;
     bool isNull() const;

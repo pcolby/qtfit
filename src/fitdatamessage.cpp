@@ -41,7 +41,7 @@ FitDataMessage::FitDataMessage(const FitDataMessage &other) : d_ptr(new FitDataM
     d->isNull = other.isNull();
 }
 
-FitDataMessage FitDataMessage::operator=(const FitDataMessage &other)
+FitDataMessage &FitDataMessage::operator=(const FitDataMessage &other)
 {
     Q_D(FitDataMessage);
     d->globalMessageNumber = other.globalMessageNumber();
