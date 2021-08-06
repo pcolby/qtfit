@@ -9,10 +9,16 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -48,6 +54,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -70,53 +92,22 @@ $(function() {
 <div class="textblock">
 <p><a href="hierarchy.html">Go to the textual class hierarchy</a></p>
 </div><table border="0" cellspacing="10" cellpadding="0">
-<tr><td><img src="inherit_graph_0.png" border="0" usemap="#aDataDefinition" alt=""/>
-<map name="aDataDefinition" id="aDataDefinition">
-<area shape="rect" href="structDataDefinition.html" title=" " alt="" coords="5,5,121,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" usemap="#aDataMessage" alt=""/>
-<map name="aDataMessage" id="aDataMessage">
-<area shape="rect" href="structDataMessage.html" title=" " alt="" coords="5,5,116,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" usemap="#aDeveloperFieldDefinition" alt=""/>
-<map name="aDeveloperFieldDefinition" id="aDeveloperFieldDefinition">
-<area shape="rect" href="structDeveloperFieldDefinition.html" title=" " alt="" coords="5,5,188,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#aFieldDefinition" alt=""/>
-<map name="aFieldDefinition" id="aFieldDefinition">
-<area shape="rect" href="structFieldDefinition.html" title=" " alt="" coords="5,5,121,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#aFitDataMessage" alt=""/>
-<map name="aFitDataMessage" id="aFitDataMessage">
-<area shape="rect" href="classFitDataMessage.html" title=" " alt="" coords="5,5,132,32"/>
-<area shape="rect" href="classFileIdMessage.html" title=" " alt="" coords="180,5,295,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#aFitDataMessagePrivate" alt=""/>
-<map name="aFitDataMessagePrivate" id="aFitDataMessagePrivate">
-<area shape="rect" href="classFitDataMessagePrivate.html" title=" " alt="" coords="5,5,179,32"/>
-<area shape="rect" href="classFileIdMessagePrivate.html" title=" " alt="" coords="227,5,388,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#aFitStreamReader" alt=""/>
-<map name="aFitStreamReader" id="aFitStreamReader">
-<area shape="rect" href="classFitStreamReader.html" title=" " alt="" coords="5,5,136,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#aFitStreamReaderPrivate" alt=""/>
-<map name="aFitStreamReaderPrivate" id="aFitStreamReaderPrivate">
-<area shape="rect" href="classFitStreamReaderPrivate.html" title=" " alt="" coords="5,5,183,32"/>
-</map>
-</td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_0.svg" width="127" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_1.svg" width="122" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_2.svg" width="194" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_3.svg" width="127" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_4.svg" width="300" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_5.svg" width="394" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_6.svg" width="142" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
+<tr><td><iframe scrolling="no" frameborder="0" src="inherit_graph_7.svg" width="188" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

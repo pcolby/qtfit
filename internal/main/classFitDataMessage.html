@@ -9,10 +9,16 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classFitDataMessage.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -75,12 +97,8 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for FitDataMessage:</div>
 <div class="dyncontent">
-<div class="center"><img src="classFitDataMessage__inherit__graph.png" border="0" usemap="#aFitDataMessage_inherit__map" alt="Inheritance graph"/></div>
-<map name="aFitDataMessage_inherit__map" id="aFitDataMessage_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,132,32"/>
-<area shape="rect" href="classFileIdMessage.html" title=" " alt="" coords="11,80,126,107"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitDataMessage__inherit__graph.svg" width="138" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,12 +174,7 @@ Public Member Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classFitDataMessage_a46dd90c4c2605fe62601279c92779d99_cgraph.png" border="0" usemap="#aclassFitDataMessage_a46dd90c4c2605fe62601279c92779d99_cgraph" alt=""/></div>
-<map name="aclassFitDataMessage_a46dd90c4c2605fe62601279c92779d99_cgraph" id="aclassFitDataMessage_a46dd90c4c2605fe62601279c92779d99_cgraph">
-<area shape="rect" title=" " alt="" coords="5,42,245,69"/>
-<area shape="rect" href="classFitDataMessage.html#aec43e441e41b6b1a4d05199844440515" title=" " alt="" coords="293,5,527,47"/>
-<area shape="rect" href="classFitDataMessage.html#a2e5d9335c615e5d806546a02d68a6646" title=" " alt="" coords="324,71,496,98"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitDataMessage_a46dd90c4c2605fe62601279c92779d99_cgraph.svg" width="532" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -214,12 +227,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classFitDataMessage_aec43e441e41b6b1a4d05199844440515_icgraph.png" border="0" usemap="#aclassFitDataMessage_aec43e441e41b6b1a4d05199844440515_icgraph" alt=""/></div>
-<map name="aclassFitDataMessage_aec43e441e41b6b1a4d05199844440515_icgraph" id="aclassFitDataMessage_aec43e441e41b6b1a4d05199844440515_icgraph">
-<area shape="rect" title=" " alt="" coords="293,23,527,65"/>
-<area shape="rect" href="classFitDataMessage.html#a46dd90c4c2605fe62601279c92779d99" title=" " alt="" coords="5,5,245,32"/>
-<area shape="rect" href="classFitDataMessage.html#a7546b9d7d9696f6095592380afd9c680" title=" " alt="" coords="25,56,226,83"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitDataMessage_aec43e441e41b6b1a4d05199844440515_icgraph.svg" width="532" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -249,12 +257,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classFitDataMessage_a2e5d9335c615e5d806546a02d68a6646_icgraph.png" border="0" usemap="#aclassFitDataMessage_a2e5d9335c615e5d806546a02d68a6646_icgraph" alt=""/></div>
-<map name="aclassFitDataMessage_a2e5d9335c615e5d806546a02d68a6646_icgraph" id="aclassFitDataMessage_a2e5d9335c615e5d806546a02d68a6646_icgraph">
-<area shape="rect" title=" " alt="" coords="293,31,465,57"/>
-<area shape="rect" href="classFitDataMessage.html#a46dd90c4c2605fe62601279c92779d99" title=" " alt="" coords="5,5,245,32"/>
-<area shape="rect" href="classFitDataMessage.html#a7546b9d7d9696f6095592380afd9c680" title=" " alt="" coords="25,56,226,83"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitDataMessage_a2e5d9335c615e5d806546a02d68a6646_icgraph.svg" width="471" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -287,12 +290,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classFitDataMessage_a7546b9d7d9696f6095592380afd9c680_cgraph.png" border="0" usemap="#aclassFitDataMessage_a7546b9d7d9696f6095592380afd9c680_cgraph" alt=""/></div>
-<map name="aclassFitDataMessage_a7546b9d7d9696f6095592380afd9c680_cgraph" id="aclassFitDataMessage_a7546b9d7d9696f6095592380afd9c680_cgraph">
-<area shape="rect" title=" " alt="" coords="5,42,207,69"/>
-<area shape="rect" href="classFitDataMessage.html#aec43e441e41b6b1a4d05199844440515" title=" " alt="" coords="255,5,488,47"/>
-<area shape="rect" href="classFitDataMessage.html#a2e5d9335c615e5d806546a02d68a6646" title=" " alt="" coords="285,71,457,98"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitDataMessage_a7546b9d7d9696f6095592380afd9c680_cgraph.svg" width="494" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -302,9 +300,13 @@ Here is the call graph for this function:</div>
 <li><a class="el" href="fitdatamessage_8cpp_source.html">fitdatamessage.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classFitDataMessage.html">FitDataMessage</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>
