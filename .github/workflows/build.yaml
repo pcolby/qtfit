@@ -115,6 +115,11 @@ jobs:
         cmake --build "%RUNNER_TEMP%"
     - name: Test
       run: |
+        dir
+        dir src
+        dir test
+        dir .\src
+        dir .\test
         copy /v /b src\QtFit.dll /b test\opaque
         copy /v /b src\QtFit.dll /b test\unit
         ctest --verbose
