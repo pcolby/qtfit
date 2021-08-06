@@ -30,6 +30,7 @@ jobs:
         cppcheck \
            --enable=all --error-exitcode=1 -Isrc --std={c++03,c++11} \
            --suppress={missingIncludeSystem,unusedFunction} \
+           --suppress={noCopyConstructor,noOperatorEq}:src/fitstreamreader.cpp \
            --xml --xml-version=2 src test 2> "$RUNNER_TEMP/cppcheck.xml"
     - name: Generate Report
       if: ${{ failure() }}

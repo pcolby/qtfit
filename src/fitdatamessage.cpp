@@ -34,6 +34,21 @@ FitDataMessage::FitDataMessage(FitDataMessagePrivate * const d) : d_ptr(d)
 
 }
 
+FitDataMessage::FitDataMessage(const FitDataMessage &other) : d_ptr(new FitDataMessagePrivate(this))
+{
+    Q_D(FitDataMessage);
+    d->globalMessageNumber = other.globalMessageNumber();
+    d->isNull = other.isNull();
+}
+
+FitDataMessage FitDataMessage::operator=(const FitDataMessage &other)
+{
+    Q_D(FitDataMessage);
+    d->globalMessageNumber = other.globalMessageNumber();
+    d->isNull = other.isNull();
+    return *this;
+}
+
 FitDataMessage::~FitDataMessage()
 {
     delete d_ptr;
