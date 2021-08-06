@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QtFit: Main Page</title>
+<title>QtFit: QtFit</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,11 +84,19 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">QtFit Documentation</div>  </div>
+<div class="title">QtFit </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__home_paul_src_fit_README"></a> <a href="https://github.com/pcolby/qtfit/actions/workflows/build.yaml"><img src="https://github.com/pcolby/qtfit/actions/workflows/build.yaml/badge.svg" alt="Build Status" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/pcolby/qtfit/actions/workflows/static.yaml"><img src="https://github.com/pcolby/qtfit/actions/workflows/static.yaml/badge.svg" alt="Static Analysis" style="pointer-events: none;" class="inline"/></a> <a href="https://app.codecov.io/gh/pcolby/qtfit"><img src="https://img.shields.io/codecov/c/github/pcolby/qtfit?label=Codecov&amp;logo=Codecov" alt="Coverage Status" class="inline"/></a> <a href="https://coveralls.io/github/pcolby/qtfit"><img src="https://img.shields.io/coveralls/github/pcolby/qtfit?label=Coveralls&amp;logo=Coveralls" alt="Coverage Status" class="inline"/></a> <a href="https://github.com/pcolby/qtfit/releases/latest"><img src="https://img.shields.io/github/v/release/pcolby/qtfit?include_prereleases&amp;label=Release" alt="GitHub Release" class="inline"/></a> <a href="https://www.gnu.org/licenses/lgpl-3.0.html"><img src="https://img.shields.io/badge/License-LGPLv3-informational.svg" alt="LGPLv3 License" style="pointer-events: none;" class="inline"/></a></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Building</h1>
+<div class="fragment"><div class="line">cmake -E make_directory &lt;tmp-build-dir&gt;</div>
+<div class="line">cmake -D CMAKE_BUILD_TYPE=Release -S &lt;path-to-cloned-repo&gt; -B &lt;tmp-build-dir&gt;</div>
+<div class="line">cmake --build &lt;tmp-build-dir&gt;</div>
+<div class="line">ctest --test-dir &lt;tmp-build-dir&gt; --verbose</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

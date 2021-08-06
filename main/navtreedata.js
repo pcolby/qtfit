@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "QtFit", "index.html", [
+    [ "Building", "index.html#autotoc_md1", null ],
     [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

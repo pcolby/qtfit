@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "QtFit", "index.html", [
+    [ "Building", "index.html#autotoc_md1", null ],
     [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -54,20 +55,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "QtFit__global_8h.html",
-"types_8h.html#a00eecc1db747a403407ee496ccd56103a4e2bbaf0d1a8744276828323a4019e2b",
-"types_8h.html#a024199a3d93e059de66ed7ae51a7bea5acb9f2a81582d80a94ad2ec89d0040c4c",
-"types_8h.html#a216296365fafce4b06c5502ce5e4015fabe293dd33b2071ddc812a583a39ec6f1",
-"types_8h.html#a38acee02a784337701422a3b72f8e64fa58b258e66a89835737f740afd872703c",
-"types_8h.html#a417088b0068504866b23a691abf7b868a8af0d7b20e4eece90a47f4ce6c24a84e",
-"types_8h.html#a4cea131c826b8a26b33b1492369e389caccc371f90f0041c0ca20e0ad55671241",
-"types_8h.html#a6bcab4d1253aab7bdcda26065230c9dcaf753b53e79184345954978e8e410ae6e",
-"types_8h.html#a803a056523ef23ec9a27655e28a9fbaaa14943f54ebfea38049fe16972c96772e",
-"types_8h.html#a98a6372ff77b602f3529528997c3c9a3ad14b97b34249bc2db07f42d6e70dc761",
-"types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca83cae5dc89641510fa3681fe596e34f7",
-"types_8h.html#abff0cc6077b6b352288453cfaef93f80a0a0c345b534a97c0a9194d8ae10eb5f1",
-"types_8h.html#ac14ed27e944a877602a6fc652c894104a9cd1499f86efc444f5c02e0ccbbbfc50",
-"types_8h.html#ace79a863b12f1e06d9a4aa7ef63bdd83",
-"types_8h.html#af2cd074060f7058969263ee0cfaaffc4afe8965a9748c1bc48af1711be837124e"
+"types_8h.html#a00eecc1db747a403407ee496ccd56103a4d31aa0ff0e93a03a80c389eae52dafa",
+"types_8h.html#a024199a3d93e059de66ed7ae51a7bea5a9c8967ace92fffb8e1fef835ecadda3e",
+"types_8h.html#a216296365fafce4b06c5502ce5e4015fab1916b8854b80b348ff98bbaed173f23",
+"types_8h.html#a38acee02a784337701422a3b72f8e64fa243d553384b0b796323f5ce7d7af2018",
+"types_8h.html#a417088b0068504866b23a691abf7b868a88bd791f9d4d136ee6be713fd1bbae9f",
+"types_8h.html#a4cea131c826b8a26b33b1492369e389cabbc464ed109d830324aea35858992716",
+"types_8h.html#a6bcab4d1253aab7bdcda26065230c9dcaf43f6bd7f02f2a43fd8ecf1b6f4dd084",
+"types_8h.html#a803a056523ef23ec9a27655e28a9fbaa",
+"types_8h.html#a98a6372ff77b602f3529528997c3c9a3a90589c47f06eb971d548591f23c285af",
+"types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca83965e23c3fd923a8962c4cbc0e26d38",
+"types_8h.html#abff0cc6077b6b352288453cfaef93f80a04da7d5cb6c26a65e2e498d8fb284f7a",
+"types_8h.html#ac14ed27e944a877602a6fc652c894104a7d6958dd860a7b4e477916594b1c9af5",
+"types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77af5a6a925d4084ae58bd71a8a95a84ba7",
+"types_8h.html#af2cd074060f7058969263ee0cfaaffc4aaf334c7b6ef89b42a94f7932a1ee9ffe"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
