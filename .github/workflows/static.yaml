@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install Qt
+      run: sudo apt install qtbase5-dev
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
