@@ -11,15 +11,15 @@ jobs:
     steps:
     - name: Checkout main Branch
       with: actions/checkout@v2
-        - ref: main
-        - path: main
-        - submodules: true
+        ref: main
+        path: main
+        submodules: true
     - name: Checkout doc Branch
       uses: actions/checkout@v2
       with:
-        - ref: doc
-        - path: doc
-        - submodules: true
+        ref: doc
+        path: doc
+        submodules: true
     - name: Install Doxygen
       run: sudo apt install doxygen graphviz
     - name: Build Docs
