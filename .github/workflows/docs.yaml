@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout main Branch
-      with: actions/checkout@v2
+      uses: actions/checkout@v2
+      with:
         ref: main
         path: main
         submodules: true
