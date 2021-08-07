@@ -9,15 +9,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: Checkout main Branch
-      actions/checkout@v2
-      uses:
+    - name: Checkout main Branch
+      with: actions/checkout@v2
         - ref: main
         - path: main
         - submodules: true
-    - uses: Checkout doc Branch
-      actions/checkout@v2
-      uses:
+    - name: Checkout doc Branch
+      uses: actions/checkout@v2
+      with:
         - ref: doc
         - path: doc
         - submodules: true
