@@ -26,11 +26,39 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class FitStreamReader
+ *
+ * The FitStreamReader class provides a streaming parser for reading Garmin FIT files.
+ *
+ * \todo Mention that this is a lower-level class, a users should probably use some yet-to-be
+ * FitFile class, that wraps up the calls to this one.
+ *
+ * \sa https://developer.garmin.com/fit/protocol/
+ */
+
+/*!
+ * Constructs a FIT stream reader with no initial data.
+ *
+ * Use addData() or setDevice() to provide data when ready.
+ *
+ * \sa addData
+ * \sa setDevice
+ */
 FitStreamReader::FitStreamReader() : d_ptr(new FitStreamReaderPrivate(this))
 {
 
 }
 
+/*!
+ * Constructs a FIT stream reader that reads from \a data.
+ *
+ * \c data may be empty or incomplete, in which case more data can be added later via addData().
+ *
+ * \param data FIT data to begin reading.
+ *
+ * \sa addData
+ */
 FitStreamReader::FitStreamReader(const QByteArray &data) : d_ptr(new FitStreamReaderPrivate(this))
 {
     Q_D(FitStreamReader);
@@ -38,6 +66,19 @@ FitStreamReader::FitStreamReader(const QByteArray &data) : d_ptr(new FitStreamRe
     d->parseFileHeader<QByteArray>();
 }
 
+/*!
+ * Constructs a FIT stream reader that reads from \c device.
+ *
+ * \c device must be open for reading, but does not need to have any bytes available yet.
+ *
+ * \note The caller is responsible for ensuring that \c device remains valid for the lifetime of the
+ * constructed reader, or until clear() or setDevice() is used to clear or replace the device.
+ *
+ * \param device Device to to begin reading.
+ *
+ * \sa clear
+ * \sa setDevice
+ */
 FitStreamReader::FitStreamReader(QIODevice *device) : d_ptr(new FitStreamReaderPrivate(this))
 {
     Q_D(FitStreamReader);
@@ -45,11 +86,22 @@ FitStreamReader::FitStreamReader(QIODevice *device) : d_ptr(new FitStreamReaderP
     d->parseFileHeader<QIODevice>();
 }
 
+/*!
+ * Destroys the FIT stream reader.
+ */
 FitStreamReader::~FitStreamReader()
 {
     delete d_ptr;
 }
 
+/*!
+ * Adds more data to read.
+ *
+ * \note It is not valid to use this function if a device has been assigned, ie via either the
+ * FitStreamReader(QIODevice *device) constructor, or setDevice().
+ *
+ * \param data Additonal data to read.
+ */
 void FitStreamReader::addData(const QByteArray &data)
 {
     Q_D(FitStreamReader);
@@ -61,11 +113,26 @@ void FitStreamReader::addData(const QByteArray &data)
     d->data += data;
 }
 
+/*!
+ * Returns \c true if the reader has reached the end of the underlying data or device, or an error
+ * has occurred.
+ *
+ * \todo Implement this method.
+ *
+ * \return \c true if the reader has reached the end of the underlying data or device.
+ */
 bool FitStreamReader::atEnd() const
 {
-    return false; ///< @todo
+    return false; /// @todo Implement this method.
 }
 
+/*!
+ * Clears the FIT stream reader.
+ *
+ * This returns the reader to a state equivalent to having just been default-constructed.
+ *
+ * \sa FitStreamReader()
+ */
 void FitStreamReader::clear()
 {
     Q_D(FitStreamReader);
@@ -81,6 +148,13 @@ void FitStreamReader::clear()
     d->recordSizes.clear();
 }
 
+/*!
+ * Returns the current device associated with the reader, or \c nullptr if no device is assigned.
+ *
+ * \return the current device associated with the reader, or \c nullptr if no device is assigned.
+ *
+ * \sa setDevice
+ */
 QIODevice * FitStreamReader::device() const
 {
     Q_D(const FitStreamReader);
@@ -90,6 +164,18 @@ QIODevice * FitStreamReader::device() const
 // [enum] Error error() const; or lastError?
 // QString errorString() const;
 
+/*!
+ * Sets the current device to \c device, and resets the stream to its initial state.
+ *
+ * \c device must be open for reading, but does not need to have any bytes available yet.
+ *
+ * \note The caller is responsible for ensuring that \c device remains valid for the lifetime of the
+ * constructed reader, or until clear() or setDevice() is used to clear or replace the device.
+ *
+ * \param device IO device to read from.
+ *
+ * \sa device
+ */
 void FitStreamReader::setDevice(QIODevice *device)
 {
     Q_D(FitStreamReader);
@@ -98,6 +184,17 @@ void FitStreamReader::setDevice(QIODevice *device)
     if (device) d->parseFileHeader<QIODevice>();
 }
 
+/*!
+ * \internal
+ *
+ * Calculates a checksum, as per the algorithm used by FIT file headers.
+ *
+ * \todo Move this somewhere appropriate (probably FitStreamReaderPrivate).
+ *
+ * \param data FIT file header to calculate the checksum for.
+ *
+ * \return 16-bit checksum for \a data.
+ */
 quint16 fitChecksum(const QByteArray &data) {
     quint16 checksum=0;
     for (const auto &byte: data) {
@@ -114,18 +211,49 @@ quint16 fitChecksum(const QByteArray &data) {
     return checksum;
 }
 
+/*!
+ * Returns the profile version read from the FIT file header, otherwise a null QVersionNumber.
+ *
+ * FIT profile versions have only two components - major and minor. Both have a maximum value of
+ * 15, as the underlying format uses 4-bits for each component.
+ *
+ * \return the profile version read from the FIT file header, otherwise a null QVersionNumber.
+ */
 QVersionNumber FitStreamReader::profileVersion() const
 {
     Q_D(const FitStreamReader);
     return d->profileVersion;
 }
 
+/*!
+ * Returns the protocol version read from the FIT file header, otherwise a null QVersionNumber.
+ *
+ * FIT protocol versions have only two components - major and minor. The minor component is limited
+ * to the range 0 to 100, whereas the major component may be (theoreticlly) 0 to 655.
+ *
+ * \return the protocol version read from the FIT file header, otherwise a null QVersionNumber.
+ */
 QVersionNumber FitStreamReader::protocolVersion() const
 {
     Q_D(const FitStreamReader);
     return d->protocolVersion;
 }
 
+/*!
+ * Returns the next FIT data message from the underlying stream, or a null data message if none
+ * could be read.
+ *
+ * If FIT header has not been read yet, it will be read first. If any FIT definition messages are
+ * found, they will be parsed, and kept in a dictionary, to used for interpretation of subsequent
+ * data messages. Reading will continue until the next FIT data message is found, or no more bytes
+ * are available for reading.
+ *
+ * \todo Document how the caller should distinguish errors, from more-data-needed.
+ *
+ * \return the next FIT data message, or a null data message.
+ *
+ * \sa addData
+ */
 FitDataMessage FitStreamReader::readNext()
 {
     Q_D(FitStreamReader);
