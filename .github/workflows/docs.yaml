@@ -1,4 +1,4 @@
-name: Export Documentation
+name: Documentation
 
 on:
   push:
@@ -22,7 +22,11 @@ jobs:
         path: doc
         submodules: true
     - name: Install Doxygen
-      run: sudo apt install doxygen graphviz qtbase5-dev
+      run: |
+        sudo apt install graphviz qtbase5-dev
+        wget https://doxygen.nl/files/doxygen-1.9.1.linux.bin.tar.gz --output-document "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz"
+        tar --extract --file "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz" --verbose "$RUNNER_TEMP"
+        "$RUNNER_TEMP/oxygen-1.9.1/bin/doxygen" --version
     - name: Build Docs
       run: |
         cmake -S "$GITHUB_WORKSPACE/main" -B "$RUNNER_TEMP"
