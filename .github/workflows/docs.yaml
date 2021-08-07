@@ -26,7 +26,7 @@ jobs:
     - name: Build Docs
       run: |
         cmake -S "$GITHUB_WORKSPACE/main" -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" doc doc-internal
+        cmake --build "$RUNNER_TEMP" --target doc doc-internal
     - name: Install Docs
       run: |
         rm -rf "$GITHUB_WORKSPACE/doc/main/"{doc,int}
