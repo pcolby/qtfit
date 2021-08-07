@@ -91,12 +91,42 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__home_runner_work_qtfit_qtfit_main_README"></a> <a href="https://github.com/pcolby/qtfit/actions/workflows/build.yaml"><img src="https://github.com/pcolby/qtfit/actions/workflows/build.yaml/badge.svg" alt="Build Status" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/pcolby/qtfit/actions/workflows/static.yaml"><img src="https://github.com/pcolby/qtfit/actions/workflows/static.yaml/badge.svg" alt="Static Analysis" style="pointer-events: none;" class="inline"/></a> <a href="https://app.codecov.io/gh/pcolby/qtfit"><img src="https://img.shields.io/codecov/c/github/pcolby/qtfit?label=Codecov&amp;logo=Codecov" alt="Coverage Status" class="inline"/></a> <a href="https://coveralls.io/github/pcolby/qtfit"><img src="https://img.shields.io/coveralls/github/pcolby/qtfit?label=Coveralls&amp;logo=Coveralls" alt="Coverage Status" class="inline"/></a> <a href="https://github.com/pcolby/qtfit/releases/latest"><img src="https://img.shields.io/github/v/release/pcolby/qtfit?include_prereleases&amp;label=Release" alt="GitHub Release" class="inline"/></a> <a href="https://www.gnu.org/licenses/lgpl-3.0.html"><img src="https://img.shields.io/badge/License-LGPLv3-informational.svg" alt="LGPLv3 License" style="pointer-events: none;" class="inline"/></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Building</h1>
+Requirements</h1>
+<ul>
+<li>Qt5 or Qt6</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Building from Source</h1>
 <div class="fragment"><div class="line">cmake -E make_directory &lt;tmp-build-dir&gt;</div>
 <div class="line">cmake -D CMAKE_BUILD_TYPE=Release -S &lt;path-to-cloned-repo&gt; -B &lt;tmp-build-dir&gt;</div>
 <div class="line">cmake --build &lt;tmp-build-dir&gt;</div>
 <div class="line">ctest --test-dir &lt;tmp-build-dir&gt; --verbose</div>
-</div><!-- fragment --> </div></div><!-- PageDoc -->
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+Test Coverage</h2>
+<p>Similar to above, but specify <code>ENABLE_COVERAGE=YES</code> for <code>cmake</code>, which will add dependencies on <a href="https://gcc.gnu.org/onlinedocs/gcc/Gcov.html" title="gcov — a Test Coverage Program">gcov</a> and <a href="http://ltp.sourceforge.net/coverage/lcov.php" title="LCOV — the LTP GCOV extension">LCOV</a>.</p>
+<div class="fragment"><div class="line">cmake -E make_directory &lt;tmp-build-dir&gt;</div>
+<div class="line">cmake -D CMAKE_BUILD_TYPE=Release -D ENABLE_COVERAGE=YES -S &lt;path-to-cloned-repo&gt; -B &lt;tmp-build-dir&gt;</div>
+<div class="line">cmake --build &lt;tmp-build-dir&gt;</div>
+<div class="line">ctest --test-dir &lt;tmp-build-dir&gt; --verbose</div>
+<div class="line">cmake --build &lt;tmp-build-dir&gt; --target coverage coverage-html</div>
+<div class="line"># ls &lt;tmp-build-dir&gt;/test/coverage.info # Coverage summary data.</div>
+<div class="line"># ls &lt;tmp-build-dir&gt;/test/coverage/ # HTML view.</div>
+</div><!-- fragment --><p>The first target (<code>coverage</code>) uses <code>lcov</code> to generate <code>coverage.info</code> summary. And the second target (<code>coverage-html</code>) used LCOV's <code>genhtml</code> to generate an HTML view of <code>coverage.info</code>.</p>
+<p>Also available via <a href="https://coveralls.io/github/pcolby/qtfit">Coveralls</a>.</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Documentation</h2>
+<p>Configure the same as above, but build the <code>doc</code> and (optionally) <code>doc-internal</code> targets.</p>
+<div class="fragment"><div class="line">cmake -E make_directory &lt;tmp-build-dir&gt;</div>
+<div class="line">cmake -S &lt;path-to-cloned-repo&gt; -B &lt;tmp-build-dir&gt;</div>
+<div class="line">cmake --build &lt;tmp-build-dir&gt; --target doc doc-internal</div>
+<div class="line"># ls &lt;tmp-build-dir&gt;/doc/public # Library end-user documentation</div>
+<div class="line"># ls &lt;tmp-build-dir&gt;/doc/internal # Internal library developer documentation</div>
+</div><!-- fragment --><p>These are regularly published to Github Pages via Github Actions:</p>
+<ul>
+<li><a href="https://pcolby.github.io/qtfit/main/doc/index.html">public end-user docs</a></li>
+<li><a href="https://pcolby.github.io/qtfit/main/int/index.html">internal dev docs</a> </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
