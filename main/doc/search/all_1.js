@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['fileidmessage_1',['FileIdMessage',['../classFileIdMessage.html',1,'']]],
-  ['fitdatamessage_2',['FitDataMessage',['../classFitDataMessage.html',1,'']]],
-  ['fitstreamreader_3',['FitStreamReader',['../classFitStreamReader.html',1,'']]]
+  ['clear_2',['clear',['../classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3',1,'FitStreamReader']]]
 ];

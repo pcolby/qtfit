@@ -93,47 +93,65 @@ $(document).ready(function(){initNavTree('classFitStreamReader.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="classFitStreamReader.html" title="The FitStreamReader class provides a streaming parser for reading Garmin FIT files.">FitStreamReader</a> class provides a streaming parser for reading Garmin FIT files.  
+ <a href="classFitStreamReader.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="fitstreamreader_8h_source.html">fitstreamreader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7d1777739c683050c213e13874dd595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#aa7d1777739c683050c213e13874dd595">FitStreamReader</a> ()</td></tr>
-<tr class="separator:aa7d1777739c683050c213e13874dd595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800d071652f0d6e7a806f63a4514d620"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a800d071652f0d6e7a806f63a4514d620">FitStreamReader</a> ()</td></tr>
+<tr class="memdesc:a800d071652f0d6e7a806f63a4514d620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a FIT stream reader with no initial data.  <a href="classFitStreamReader.html#a800d071652f0d6e7a806f63a4514d620">More...</a><br /></td></tr>
+<tr class="separator:a800d071652f0d6e7a806f63a4514d620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf08907e2d7128911fe805bc67664291"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#acf08907e2d7128911fe805bc67664291">FitStreamReader</a> (const QByteArray &amp;data)</td></tr>
+<tr class="memdesc:acf08907e2d7128911fe805bc67664291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a FIT stream reader that reads from <em>data</em>.  <a href="classFitStreamReader.html#acf08907e2d7128911fe805bc67664291">More...</a><br /></td></tr>
 <tr class="separator:acf08907e2d7128911fe805bc67664291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb791a8907403a4cb9cdc5b4b339878"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a3eb791a8907403a4cb9cdc5b4b339878">FitStreamReader</a> (QIODevice *<a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>)</td></tr>
+<tr class="memdesc:a3eb791a8907403a4cb9cdc5b4b339878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a FIT stream reader that reads from <code>device</code>.  <a href="classFitStreamReader.html#a3eb791a8907403a4cb9cdc5b4b339878">More...</a><br /></td></tr>
 <tr class="separator:a3eb791a8907403a4cb9cdc5b4b339878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e848ed37d37d7f2a9a3a734dc484524"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a8e848ed37d37d7f2a9a3a734dc484524">~FitStreamReader</a> ()</td></tr>
+<tr class="memdesc:a8e848ed37d37d7f2a9a3a734dc484524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the FIT stream reader.  <a href="classFitStreamReader.html#a8e848ed37d37d7f2a9a3a734dc484524">More...</a><br /></td></tr>
 <tr class="separator:a8e848ed37d37d7f2a9a3a734dc484524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa76d454b0121334118da9ddc16d550fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe">addData</a> (const QByteArray &amp;data)</td></tr>
+<tr class="memdesc:aa76d454b0121334118da9ddc16d550fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds more data to read.  <a href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe">More...</a><br /></td></tr>
 <tr class="separator:aa76d454b0121334118da9ddc16d550fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e49e5000efcac282f81c962ad9b60b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a82e49e5000efcac282f81c962ad9b60b">atEnd</a> () const</td></tr>
+<tr class="memdesc:a82e49e5000efcac282f81c962ad9b60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the reader has reached the end of the underlying data or device, or an error has occurred.  <a href="classFitStreamReader.html#a82e49e5000efcac282f81c962ad9b60b">More...</a><br /></td></tr>
 <tr class="separator:a82e49e5000efcac282f81c962ad9b60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd70d1e90b4c90d0bba7ac3e7337dec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">clear</a> ()</td></tr>
+<tr class="memdesc:abd70d1e90b4c90d0bba7ac3e7337dec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the FIT stream reader.  <a href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">More...</a><br /></td></tr>
 <tr class="separator:abd70d1e90b4c90d0bba7ac3e7337dec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b8b07fb63033dfdd9a118b24a67291"><td class="memItemLeft" align="right" valign="top">QIODevice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a> () const</td></tr>
+<tr class="memdesc:ab5b8b07fb63033dfdd9a118b24a67291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current device associated with the reader, or <code>nullptr</code> if no device is assigned.  <a href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">More...</a><br /></td></tr>
 <tr class="separator:ab5b8b07fb63033dfdd9a118b24a67291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5922537088dfa514ee1013d08ee59be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be">setDevice</a> (QIODevice *<a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>)</td></tr>
+<tr class="memdesc:ac5922537088dfa514ee1013d08ee59be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current device to <code>device</code>, and resets the stream to its initial state.  <a href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be">More...</a><br /></td></tr>
 <tr class="separator:ac5922537088dfa514ee1013d08ee59be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe4e2c157a4a15b436ca8f0a9d07b88"><td class="memItemLeft" align="right" valign="top">QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#affe4e2c157a4a15b436ca8f0a9d07b88">protocolVersion</a> () const</td></tr>
+<tr class="memdesc:affe4e2c157a4a15b436ca8f0a9d07b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the protocol version read from the FIT file header, otherwise a null QVersionNumber.  <a href="classFitStreamReader.html#affe4e2c157a4a15b436ca8f0a9d07b88">More...</a><br /></td></tr>
 <tr class="separator:affe4e2c157a4a15b436ca8f0a9d07b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf4325a94cfd534e2752fc06317e98c"><td class="memItemLeft" align="right" valign="top">QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c">profileVersion</a> () const</td></tr>
+<tr class="memdesc:a5bf4325a94cfd534e2752fc06317e98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the profile version read from the FIT file header, otherwise a null QVersionNumber.  <a href="classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c">More...</a><br /></td></tr>
 <tr class="separator:a5bf4325a94cfd534e2752fc06317e98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afed6132918de0394f6def37faeeb0f70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFitDataMessage.html">FitDataMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70">readNext</a> ()</td></tr>
+<tr class="memdesc:afed6132918de0394f6def37faeeb0f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next FIT data message from the underlying stream, or a null data message if none could be read.  <a href="classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70">More...</a><br /></td></tr>
 <tr class="separator:afed6132918de0394f6def37faeeb0f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>The <a class="el" href="classFitStreamReader.html" title="The FitStreamReader class provides a streaming parser for reading Garmin FIT files.">FitStreamReader</a> class provides a streaming parser for reading Garmin FIT files. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Mention that this is a lower-level class, a users should probably use some yet-to-be FitFile class, that wraps up the calls to this one.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://developer.garmin.com/fit/protocol/">https://developer.garmin.com/fit/protocol/</a> </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="fitstreamreader_8h_source.html#l00032">32</a> of file <a class="el" href="fitstreamreader_8h_source.html">fitstreamreader.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa7d1777739c683050c213e13874dd595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7d1777739c683050c213e13874dd595">&#9670;&nbsp;</a></span>FitStreamReader() <span class="overload">[1/3]</span></h2>
+<a id="a800d071652f0d6e7a806f63a4514d620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800d071652f0d6e7a806f63a4514d620">&#9670;&nbsp;</a></span>FitStreamReader() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a> FitStreamReader::FitStreamReader </td>
+          <td class="memname">FitStreamReader::FitStreamReader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -141,11 +159,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00029">29</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                 : d_ptr(<span class="keyword">new</span> <a class="code" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<p>Constructs a FIT stream reader with no initial data. </p>
+<p>Use <a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData()</a> or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a> to provide data when ready.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd>
+<dd>
+<a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00048">48</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                 : d_ptr(<span class="keyword">new</span> <a class="code" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="ttc" id="aclassFitStreamReaderPrivate_html"><div class="ttname"><a href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00035">fitstreamreader_p.h:35</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -174,14 +198,24 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00034">34</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                       : d_ptr(<span class="keyword">new</span> <a class="code" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    d-&gt;data = data;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    d-&gt;parseFileHeader&lt;QByteArray&gt;();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="ttc" id="aclassFitStreamReader_html"><div class="ttname"><a href="classFitStreamReader.html">FitStreamReader</a></div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8h_source.html#l00032">fitstreamreader.h:32</a></div></div>
+<p>Constructs a FIT stream reader that reads from <em>data</em>. </p>
+<p><code>data</code> may be empty or incomplete, in which case more data can be added later via <a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>FIT data to begin reading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00062">62</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                                       : d_ptr(<span class="keyword">new</span> <a class="code" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    d-&gt;data = data;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    d-&gt;parseFileHeader&lt;QByteArray&gt;();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="ttc" id="aclassFitStreamReader_html"><div class="ttname"><a href="classFitStreamReader.html">FitStreamReader</a></div><div class="ttdoc">The FitStreamReader class provides a streaming parser for reading Garmin FIT files.</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8h_source.html#l00032">fitstreamreader.h:32</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -209,16 +243,29 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00041">41</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                                  : d_ptr(<span class="keyword">new</span> <a class="code" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    d-&gt;device = <a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    d-&gt;parseFileHeader&lt;QIODevice&gt;();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="ttc" id="aclassFitStreamReader_html_ab5b8b07fb63033dfdd9a118b24a67291"><div class="ttname"><a href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">FitStreamReader::device</a></div><div class="ttdeci">QIODevice * device() const</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8cpp_source.html#l00084">fitstreamreader.cpp:84</a></div></div>
+<p>Constructs a FIT stream reader that reads from <code>device</code>. </p>
+<p><code>device</code> must be open for reading, but does not need to have any bytes available yet.</p>
+<dl class="section note"><dt>Note</dt><dd>The caller is responsible for ensuring that <code>device</code> remains valid for the lifetime of the constructed reader, or until <a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3" title="Clears the FIT stream reader.">clear()</a> or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a> is used to clear or replace the device.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>Device to to begin reading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3" title="Clears the FIT stream reader.">clear</a> </dd>
+<dd>
+<a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00082">82</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                                  : d_ptr(<span class="keyword">new</span> <a class="code" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    d-&gt;device = <a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    d-&gt;parseFileHeader&lt;QIODevice&gt;();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="ttc" id="aclassFitStreamReader_html_ab5b8b07fb63033dfdd9a118b24a67291"><div class="ttname"><a href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">FitStreamReader::device</a></div><div class="ttdeci">QIODevice * device() const</div><div class="ttdoc">Returns the current device associated with the reader, or nullptr if no device is assigned.</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8cpp_source.html#l00158">fitstreamreader.cpp:158</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitstreamreader_8cpp_source.html#l00084">device()</a>.</p>
+<p class="reference">References <a class="el" href="fitstreamreader_8cpp_source.html#l00158">device()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -243,10 +290,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00048">48</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">delete</span> d_ptr;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<p>Destroys the FIT stream reader. </p>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00092">92</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">delete</span> d_ptr;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -267,16 +316,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00053">53</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (d-&gt;device != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        qWarning(<span class="stringliteral">&quot;FitStreamReader: addData() with device()&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        Q_ASSERT(d-&gt;device != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    d-&gt;data += data;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p>Adds more data to read. </p>
+<dl class="section note"><dt>Note</dt><dd>It is not valid to use this function if a device has been assigned, ie via either the <a class="el" href="classFitStreamReader.html#a3eb791a8907403a4cb9cdc5b4b339878" title="Constructs a FIT stream reader that reads from device.">FitStreamReader(QIODevice *device)</a> constructor, or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a>.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Additonal data to read. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00105">105</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (d-&gt;device != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        qWarning(<span class="stringliteral">&quot;FitStreamReader: addData() with device()&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        Q_ASSERT(d-&gt;device != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    d-&gt;data += data;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -294,12 +352,16 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>&lt; </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00064">64</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">///&lt; @todo</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<p>Returns <code>true</code> if the reader has reached the end of the underlying data or device, or an error has occurred. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Implement this method.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the reader has reached the end of the underlying data or device. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Implement this method. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00124">124</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">/// @todo Implement this method.</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -318,22 +380,26 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00069">69</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    d-&gt;data.clear();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    d-&gt;dataOffset = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    d-&gt;device = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//    d-&gt;headerSize = 0;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//    d-&gt;expectedChecksum = 0;</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    d-&gt;expectedDataSize = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    d-&gt;protocolVersion = QVersionNumber();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    d-&gt;profileVersion = QVersionNumber();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    d-&gt;dataDefinitions.clear();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    d-&gt;recordSizes.clear();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<p>Clears the FIT stream reader. </p>
+<p>This returns the reader to a state equivalent to having just been default-constructed.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#a800d071652f0d6e7a806f63a4514d620" title="Constructs a FIT stream reader with no initial data.">FitStreamReader()</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00136">136</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    d-&gt;data.clear();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    d-&gt;dataOffset = 0;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    d-&gt;device = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">//    d-&gt;headerSize = 0;</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">//    d-&gt;expectedChecksum = 0;</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    d-&gt;expectedDataSize = 0;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    d-&gt;protocolVersion = QVersionNumber();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    d-&gt;profileVersion = QVersionNumber();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    d-&gt;dataDefinitions.clear();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    d-&gt;recordSizes.clear();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00093">setDevice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00179">setDevice()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -358,13 +424,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00084">84</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;device;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<p>Returns the current device associated with the reader, or <code>nullptr</code> if no device is assigned. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current device associated with the reader, or <code>nullptr</code> if no device is assigned.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00158">158</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> d-&gt;device;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00041">FitStreamReader()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00093">setDevice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00082">FitStreamReader()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00179">setDevice()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -389,11 +459,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00117">117</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> d-&gt;profileVersion;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<p>Returns the profile version read from the FIT file header, otherwise a null QVersionNumber. </p>
+<p>FIT profile versions have only two components - major and minor. Both have a maximum value of 15, as the underlying format uses 4-bits for each component.</p>
+<dl class="section return"><dt>Returns</dt><dd>the profile version read from the FIT file header, otherwise a null QVersionNumber. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00222">222</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> d-&gt;profileVersion;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -412,11 +486,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00123">123</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> d-&gt;protocolVersion;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<p>Returns the protocol version read from the FIT file header, otherwise a null QVersionNumber. </p>
+<p>FIT protocol versions have only two components - major and minor. The minor component is limited to the range 0 to 100, whereas the major component may be (theoreticlly) 0 to 655.</p>
+<dl class="section return"><dt>Returns</dt><dd>the protocol version read from the FIT file header, otherwise a null QVersionNumber. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00236">236</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">return</span> d-&gt;protocolVersion;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -435,12 +513,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00129">129</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> (d-&gt;device == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        ? d-&gt;readNextDataMessage&lt;QByteArray&gt;() : d-&gt;readNextDataMessage&lt;QIODevice&gt;();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<p>Returns the next FIT data message from the underlying stream, or a null data message if none could be read. </p>
+<p>If FIT header has not been read yet, it will be read first. If any FIT definition messages are found, they will be parsed, and kept in a dictionary, to used for interpretation of subsequent data messages. Reading will continue until the next FIT data message is found, or no more bytes are available for reading.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Document how the caller should distinguish errors, from more-data-needed.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the next FIT data message, or a null data message.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00257">257</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> (d-&gt;device == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        ? d-&gt;readNextDataMessage&lt;QByteArray&gt;() : d-&gt;readNextDataMessage&lt;QIODevice&gt;();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -460,16 +544,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00093">93</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>) <a class="code" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">clear</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    d-&gt;device = <a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>) d-&gt;parseFileHeader&lt;QIODevice&gt;();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="ttc" id="aclassFitStreamReader_html_abd70d1e90b4c90d0bba7ac3e7337dec3"><div class="ttname"><a href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">FitStreamReader::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8cpp_source.html#l00069">fitstreamreader.cpp:69</a></div></div>
+<p>Sets the current device to <code>device</code>, and resets the stream to its initial state. </p>
+<p><code>device</code> must be open for reading, but does not need to have any bytes available yet.</p>
+<dl class="section note"><dt>Note</dt><dd>The caller is responsible for ensuring that <code>device</code> remains valid for the lifetime of the constructed reader, or until <a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3" title="Clears the FIT stream reader.">clear()</a> or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a> is used to clear or replace the device.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>IO device to read from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291" title="Returns the current device associated with the reader, or nullptr if no device is assigned.">device</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00179">179</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    Q_D(<a class="code" href="classFitStreamReader.html">FitStreamReader</a>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>) <a class="code" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">clear</a>();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    d-&gt;device = <a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>) d-&gt;parseFileHeader&lt;QIODevice&gt;();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<div class="ttc" id="aclassFitStreamReader_html_abd70d1e90b4c90d0bba7ac3e7337dec3"><div class="ttname"><a href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">FitStreamReader::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clears the FIT stream reader.</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8cpp_source.html#l00136">fitstreamreader.cpp:136</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitstreamreader_8cpp_source.html#l00069">clear()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00084">device()</a>.</p>
+<p class="reference">References <a class="el" href="fitstreamreader_8cpp_source.html#l00136">clear()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00158">device()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

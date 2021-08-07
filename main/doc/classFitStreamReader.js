@@ -1,6 +1,6 @@
 var classFitStreamReader =
 [
-    [ "FitStreamReader", "classFitStreamReader.html#aa7d1777739c683050c213e13874dd595", null ],
+    [ "FitStreamReader", "classFitStreamReader.html#a800d071652f0d6e7a806f63a4514d620", null ],
     [ "FitStreamReader", "classFitStreamReader.html#acf08907e2d7128911fe805bc67664291", null ],
     [ "FitStreamReader", "classFitStreamReader.html#a3eb791a8907403a4cb9cdc5b4b339878", null ],
     [ "~FitStreamReader", "classFitStreamReader.html#a8e848ed37d37d7f2a9a3a734dc484524", null ],

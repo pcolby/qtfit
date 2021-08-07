@@ -92,40 +92,187 @@ $(document).ready(function(){initNavTree('classFitStreamReader.html',''); initRe
 <div class="title">FitStreamReader Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classFitStreamReader.html" title="The FitStreamReader class provides a streaming parser for reading Garmin FIT files.">FitStreamReader</a> class provides a streaming parser for reading Garmin FIT files.  
+ <a href="classFitStreamReader.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acf08907e2d7128911fe805bc67664291"><td class="memItemLeft" align="right" valign="top"><a id="acf08907e2d7128911fe805bc67664291"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FitStreamReader</b> (const QByteArray &amp;data)</td></tr>
+<tr class="memitem:a800d071652f0d6e7a806f63a4514d620"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a800d071652f0d6e7a806f63a4514d620">FitStreamReader</a> ()</td></tr>
+<tr class="memdesc:a800d071652f0d6e7a806f63a4514d620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a FIT stream reader with no initial data.  <a href="classFitStreamReader.html#a800d071652f0d6e7a806f63a4514d620">More...</a><br /></td></tr>
+<tr class="separator:a800d071652f0d6e7a806f63a4514d620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf08907e2d7128911fe805bc67664291"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#acf08907e2d7128911fe805bc67664291">FitStreamReader</a> (const QByteArray &amp;data)</td></tr>
+<tr class="memdesc:acf08907e2d7128911fe805bc67664291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a FIT stream reader that reads from <em>data</em>.  <a href="classFitStreamReader.html#acf08907e2d7128911fe805bc67664291">More...</a><br /></td></tr>
 <tr class="separator:acf08907e2d7128911fe805bc67664291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eb791a8907403a4cb9cdc5b4b339878"><td class="memItemLeft" align="right" valign="top"><a id="a3eb791a8907403a4cb9cdc5b4b339878"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FitStreamReader</b> (QIODevice *device)</td></tr>
+<tr class="memitem:a3eb791a8907403a4cb9cdc5b4b339878"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a3eb791a8907403a4cb9cdc5b4b339878">FitStreamReader</a> (QIODevice *<a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>)</td></tr>
+<tr class="memdesc:a3eb791a8907403a4cb9cdc5b4b339878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a FIT stream reader that reads from <code>device</code>.  <a href="classFitStreamReader.html#a3eb791a8907403a4cb9cdc5b4b339878">More...</a><br /></td></tr>
 <tr class="separator:a3eb791a8907403a4cb9cdc5b4b339878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa76d454b0121334118da9ddc16d550fe"><td class="memItemLeft" align="right" valign="top"><a id="aa76d454b0121334118da9ddc16d550fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addData</b> (const QByteArray &amp;data)</td></tr>
+<tr class="memitem:a8e848ed37d37d7f2a9a3a734dc484524"><td class="memItemLeft" align="right" valign="top"><a id="a8e848ed37d37d7f2a9a3a734dc484524"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a8e848ed37d37d7f2a9a3a734dc484524">~FitStreamReader</a> ()</td></tr>
+<tr class="memdesc:a8e848ed37d37d7f2a9a3a734dc484524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the FIT stream reader. <br /></td></tr>
+<tr class="separator:a8e848ed37d37d7f2a9a3a734dc484524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76d454b0121334118da9ddc16d550fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe">addData</a> (const QByteArray &amp;data)</td></tr>
+<tr class="memdesc:aa76d454b0121334118da9ddc16d550fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds more data to read.  <a href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe">More...</a><br /></td></tr>
 <tr class="separator:aa76d454b0121334118da9ddc16d550fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e49e5000efcac282f81c962ad9b60b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a82e49e5000efcac282f81c962ad9b60b">atEnd</a> () const</td></tr>
+<tr class="memdesc:a82e49e5000efcac282f81c962ad9b60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the reader has reached the end of the underlying data or device, or an error has occurred.  <a href="classFitStreamReader.html#a82e49e5000efcac282f81c962ad9b60b">More...</a><br /></td></tr>
 <tr class="separator:a82e49e5000efcac282f81c962ad9b60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd70d1e90b4c90d0bba7ac3e7337dec3"><td class="memItemLeft" align="right" valign="top"><a id="abd70d1e90b4c90d0bba7ac3e7337dec3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:abd70d1e90b4c90d0bba7ac3e7337dec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">clear</a> ()</td></tr>
+<tr class="memdesc:abd70d1e90b4c90d0bba7ac3e7337dec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the FIT stream reader.  <a href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3">More...</a><br /></td></tr>
 <tr class="separator:abd70d1e90b4c90d0bba7ac3e7337dec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b8b07fb63033dfdd9a118b24a67291"><td class="memItemLeft" align="right" valign="top"><a id="ab5b8b07fb63033dfdd9a118b24a67291"></a>
-QIODevice *&#160;</td><td class="memItemRight" valign="bottom"><b>device</b> () const</td></tr>
+<tr class="memitem:ab5b8b07fb63033dfdd9a118b24a67291"><td class="memItemLeft" align="right" valign="top">QIODevice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a> () const</td></tr>
+<tr class="memdesc:ab5b8b07fb63033dfdd9a118b24a67291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current device associated with the reader, or <code>nullptr</code> if no device is assigned.  <a href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">More...</a><br /></td></tr>
 <tr class="separator:ab5b8b07fb63033dfdd9a118b24a67291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5922537088dfa514ee1013d08ee59be"><td class="memItemLeft" align="right" valign="top"><a id="ac5922537088dfa514ee1013d08ee59be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDevice</b> (QIODevice *device)</td></tr>
+<tr class="memitem:ac5922537088dfa514ee1013d08ee59be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be">setDevice</a> (QIODevice *<a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291">device</a>)</td></tr>
+<tr class="memdesc:ac5922537088dfa514ee1013d08ee59be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current device to <code>device</code>, and resets the stream to its initial state.  <a href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be">More...</a><br /></td></tr>
 <tr class="separator:ac5922537088dfa514ee1013d08ee59be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affe4e2c157a4a15b436ca8f0a9d07b88"><td class="memItemLeft" align="right" valign="top"><a id="affe4e2c157a4a15b436ca8f0a9d07b88"></a>
-QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><b>protocolVersion</b> () const</td></tr>
+<tr class="memitem:affe4e2c157a4a15b436ca8f0a9d07b88"><td class="memItemLeft" align="right" valign="top">QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#affe4e2c157a4a15b436ca8f0a9d07b88">protocolVersion</a> () const</td></tr>
+<tr class="memdesc:affe4e2c157a4a15b436ca8f0a9d07b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the protocol version read from the FIT file header, otherwise a null QVersionNumber.  <a href="classFitStreamReader.html#affe4e2c157a4a15b436ca8f0a9d07b88">More...</a><br /></td></tr>
 <tr class="separator:affe4e2c157a4a15b436ca8f0a9d07b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bf4325a94cfd534e2752fc06317e98c"><td class="memItemLeft" align="right" valign="top"><a id="a5bf4325a94cfd534e2752fc06317e98c"></a>
-QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><b>profileVersion</b> () const</td></tr>
+<tr class="memitem:a5bf4325a94cfd534e2752fc06317e98c"><td class="memItemLeft" align="right" valign="top">QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c">profileVersion</a> () const</td></tr>
+<tr class="memdesc:a5bf4325a94cfd534e2752fc06317e98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the profile version read from the FIT file header, otherwise a null QVersionNumber.  <a href="classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c">More...</a><br /></td></tr>
 <tr class="separator:a5bf4325a94cfd534e2752fc06317e98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed6132918de0394f6def37faeeb0f70"><td class="memItemLeft" align="right" valign="top"><a id="afed6132918de0394f6def37faeeb0f70"></a>
-<a class="el" href="classFitDataMessage.html">FitDataMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><b>readNext</b> ()</td></tr>
+<tr class="memitem:afed6132918de0394f6def37faeeb0f70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFitDataMessage.html">FitDataMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70">readNext</a> ()</td></tr>
+<tr class="memdesc:afed6132918de0394f6def37faeeb0f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next FIT data message from the underlying stream, or a null data message if none could be read.  <a href="classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70">More...</a><br /></td></tr>
 <tr class="separator:afed6132918de0394f6def37faeeb0f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classFitStreamReader.html" title="The FitStreamReader class provides a streaming parser for reading Garmin FIT files.">FitStreamReader</a> class provides a streaming parser for reading Garmin FIT files. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Mention that this is a lower-level class, a users should probably use some yet-to-be FitFile class, that wraps up the calls to this one.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://developer.garmin.com/fit/protocol/">https://developer.garmin.com/fit/protocol/</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a800d071652f0d6e7a806f63a4514d620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800d071652f0d6e7a806f63a4514d620">&#9670;&nbsp;</a></span>FitStreamReader() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FitStreamReader::FitStreamReader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a FIT stream reader with no initial data. </p>
+<p>Use <a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData()</a> or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a> to provide data when ready.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd>
+<dd>
+<a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice</a> </dd></dl>
+
+</div>
+</div>
+<a id="acf08907e2d7128911fe805bc67664291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf08907e2d7128911fe805bc67664291">&#9670;&nbsp;</a></span>FitStreamReader() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FitStreamReader::FitStreamReader </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a FIT stream reader that reads from <em>data</em>. </p>
+<p><code>data</code> may be empty or incomplete, in which case more data can be added later via <a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>FIT data to begin reading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3eb791a8907403a4cb9cdc5b4b339878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb791a8907403a4cb9cdc5b4b339878">&#9670;&nbsp;</a></span>FitStreamReader() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FitStreamReader::FitStreamReader </td>
+          <td>(</td>
+          <td class="paramtype">QIODevice *&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a FIT stream reader that reads from <code>device</code>. </p>
+<p><code>device</code> must be open for reading, but does not need to have any bytes available yet.</p>
+<dl class="section note"><dt>Note</dt><dd>The caller is responsible for ensuring that <code>device</code> remains valid for the lifetime of the constructed reader, or until <a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3" title="Clears the FIT stream reader.">clear()</a> or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a> is used to clear or replace the device.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>Device to to begin reading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3" title="Clears the FIT stream reader.">clear</a> </dd>
+<dd>
+<a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice</a> </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitStreamReader_a3eb791a8907403a4cb9cdc5b4b339878_cgraph.svg" width="444" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa76d454b0121334118da9ddc16d550fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76d454b0121334118da9ddc16d550fe">&#9670;&nbsp;</a></span>addData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FitStreamReader::addData </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds more data to read. </p>
+<dl class="section note"><dt>Note</dt><dd>It is not valid to use this function if a device has been assigned, ie via either the <a class="el" href="classFitStreamReader.html#a3eb791a8907403a4cb9cdc5b4b339878" title="Constructs a FIT stream reader that reads from device.">FitStreamReader(QIODevice *device)</a> constructor, or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a>.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Additonal data to read. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a82e49e5000efcac282f81c962ad9b60b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82e49e5000efcac282f81c962ad9b60b">&#9670;&nbsp;</a></span>atEnd()</h2>
 
@@ -140,7 +287,165 @@ QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><b>profileVers
         </tr>
       </table>
 </div><div class="memdoc">
-<p>&lt; </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd></dd></dl>
+
+<p>Returns <code>true</code> if the reader has reached the end of the underlying data or device, or an error has occurred. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Implement this method.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the reader has reached the end of the underlying data or device. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Implement this method. </dd></dl>
+
+</div>
+</div>
+<a id="abd70d1e90b4c90d0bba7ac3e7337dec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd70d1e90b4c90d0bba7ac3e7337dec3">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FitStreamReader::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the FIT stream reader. </p>
+<p>This returns the reader to a state equivalent to having just been default-constructed.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#a800d071652f0d6e7a806f63a4514d620" title="Constructs a FIT stream reader with no initial data.">FitStreamReader()</a> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitStreamReader_abd70d1e90b4c90d0bba7ac3e7337dec3_icgraph.svg" width="434" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab5b8b07fb63033dfdd9a118b24a67291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b8b07fb63033dfdd9a118b24a67291">&#9670;&nbsp;</a></span>device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QIODevice * FitStreamReader::device </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current device associated with the reader, or <code>nullptr</code> if no device is assigned. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current device associated with the reader, or <code>nullptr</code> if no device is assigned.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice</a> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitStreamReader_ab5b8b07fb63033dfdd9a118b24a67291_icgraph.svg" width="446" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5bf4325a94cfd534e2752fc06317e98c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf4325a94cfd534e2752fc06317e98c">&#9670;&nbsp;</a></span>profileVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVersionNumber FitStreamReader::profileVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the profile version read from the FIT file header, otherwise a null QVersionNumber. </p>
+<p>FIT profile versions have only two components - major and minor. Both have a maximum value of 15, as the underlying format uses 4-bits for each component.</p>
+<dl class="section return"><dt>Returns</dt><dd>the profile version read from the FIT file header, otherwise a null QVersionNumber. </dd></dl>
+
+</div>
+</div>
+<a id="affe4e2c157a4a15b436ca8f0a9d07b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe4e2c157a4a15b436ca8f0a9d07b88">&#9670;&nbsp;</a></span>protocolVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVersionNumber FitStreamReader::protocolVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the protocol version read from the FIT file header, otherwise a null QVersionNumber. </p>
+<p>FIT protocol versions have only two components - major and minor. The minor component is limited to the range 0 to 100, whereas the major component may be (theoreticlly) 0 to 655.</p>
+<dl class="section return"><dt>Returns</dt><dd>the protocol version read from the FIT file header, otherwise a null QVersionNumber. </dd></dl>
+
+</div>
+</div>
+<a id="afed6132918de0394f6def37faeeb0f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed6132918de0394f6def37faeeb0f70">&#9670;&nbsp;</a></span>readNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFitDataMessage.html">FitDataMessage</a> FitStreamReader::readNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the next FIT data message from the underlying stream, or a null data message if none could be read. </p>
+<p>If FIT header has not been read yet, it will be read first. If any FIT definition messages are found, they will be parsed, and kept in a dictionary, to used for interpretation of subsequent data messages. Reading will continue until the next FIT data message is found, or no more bytes are available for reading.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Document how the caller should distinguish errors, from more-data-needed.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the next FIT data message, or a null data message.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac5922537088dfa514ee1013d08ee59be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5922537088dfa514ee1013d08ee59be">&#9670;&nbsp;</a></span>setDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FitStreamReader::setDevice </td>
+          <td>(</td>
+          <td class="paramtype">QIODevice *&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the current device to <code>device</code>, and resets the stream to its initial state. </p>
+<p><code>device</code> must be open for reading, but does not need to have any bytes available yet.</p>
+<dl class="section note"><dt>Note</dt><dd>The caller is responsible for ensuring that <code>device</code> remains valid for the lifetime of the constructed reader, or until <a class="el" href="classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3" title="Clears the FIT stream reader.">clear()</a> or <a class="el" href="classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be" title="Sets the current device to device, and resets the stream to its initial state.">setDevice()</a> is used to clear or replace the device.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>IO device to read from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291" title="Returns the current device associated with the reader, or nullptr if no device is assigned.">device</a> </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitStreamReader_ac5922537088dfa514ee1013d08ee59be_cgraph.svg" width="446" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

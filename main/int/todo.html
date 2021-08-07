@@ -90,28 +90,36 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="QtFit__global_8h.html#a04f0529fdd7f7d0ff3a2d284cf167b14">QTFIT_NAMESPACE</a>  </dt>
-<dd><a class="anchor" id="_todo000013"></a>Consider moving this to a CMake option.  </dd>
 <dt>Member <a class="el" href="classFileIdMessagePrivate.html#a9e7398473dad396210e933ba4d7c129b">FileIdMessagePrivate::FileIdMessagePrivate</a>  ()=delete</dt>
 <dd><a class="anchor" id="_todo000003"></a>Generate members.  </dd>
 <dt>Member <a class="el" href="classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438">FileIdMessagePrivate::setField</a>  (const int fieldId, const QByteArray data, int baseType) override</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000001"></a>Generate implementation. </p>
-<p class="enddd"><a class="anchor" id="_todo000004"></a>Make base type enum.  </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000004"></a>Make base type enum. </p>
+<p class="enddd"><a class="anchor" id="_todo000001"></a>Generate implementation.  </p>
 </dd>
+<dt>Member <a class="el" href="fitstreamreader_8cpp.html#ae1dc2f3ad4869b2d74ae07e503e75013">fitChecksum</a>  (const QByteArray &amp;data)</dt>
+<dd><a class="anchor" id="_todo000009"></a>Move this somewhere appropriate (probably <a class="el" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>). </dd>
 <dt>Member <a class="el" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>  (const int fieldId, const QByteArray data, int baseType)</dt>
 <dd><a class="anchor" id="_todo000005"></a>Make base type enum.  </dd>
+<dt>Class <a class="el" href="classFitStreamReader.html">FitStreamReader</a>  </dt>
+<dd><a class="anchor" id="_todo000006"></a>Mention that this is a lower-level class, a users should probably use some yet-to-be FitFile class, that wraps up the calls to this one. </dd>
 <dt>Member <a class="el" href="classFitStreamReader.html#a82e49e5000efcac282f81c962ad9b60b">FitStreamReader::atEnd</a>  () const</dt>
-<dd><a class="anchor" id="_todo000006"></a>  </dd>
-<dt>Member <a class="el" href="classFitStreamReaderPrivate.html#a9b01406763b3610218581fcd47af15a9">FitStreamReaderPrivate::parseDataMessage</a>  ()</dt>
-<dd><a class="anchor" id="_todo000012"></a>Implement!  </dd>
-<dt>Member <a class="el" href="classFitStreamReaderPrivate.html#a1dd45f588b8ecb89cc8968c6c5d0381f">FitStreamReaderPrivate::parseDefinitionMessage</a>  ()</dt>
-<dd><a class="anchor" id="_todo000011"></a>Implement!  </dd>
-<dt>Member <a class="el" href="classFitStreamReaderPrivate.html#ae158e9d75149893030cedf1b13d6b07b">FitStreamReaderPrivate::parseFileHeader</a>  ()</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000007"></a>set not-enough-bytes; ie might need to wait for more bytes. </p>
-<p class="interdd"><a class="anchor" id="_todo000008"></a>set invalid header size error; ie FIT stream is corrupt / invalid. </p>
-<p class="interdd"><a class="anchor" id="_todo000009"></a>set invalid header data type (must be ".FIT"). </p>
-<p class="enddd"><a class="anchor" id="_todo000010"></a>set error, and return false here? </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000007"></a>Implement this method.</p>
+<p class="enddd"><a class="anchor" id="_todo000008"></a>Implement this method.  </p>
 </dd>
+<dt>Member <a class="el" href="classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70">FitStreamReader::readNext</a>  ()</dt>
+<dd><a class="anchor" id="_todo000010"></a>Document how the caller should distinguish errors, from more-data-needed. </dd>
+<dt>Member <a class="el" href="classFitStreamReaderPrivate.html#a9b01406763b3610218581fcd47af15a9">FitStreamReaderPrivate::parseDataMessage</a>  ()</dt>
+<dd><a class="anchor" id="_todo000016"></a>Implement!  </dd>
+<dt>Member <a class="el" href="classFitStreamReaderPrivate.html#a1dd45f588b8ecb89cc8968c6c5d0381f">FitStreamReaderPrivate::parseDefinitionMessage</a>  ()</dt>
+<dd><a class="anchor" id="_todo000015"></a>Implement!  </dd>
+<dt>Member <a class="el" href="classFitStreamReaderPrivate.html#ae158e9d75149893030cedf1b13d6b07b">FitStreamReaderPrivate::parseFileHeader</a>  ()</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000011"></a>set not-enough-bytes; ie might need to wait for more bytes. </p>
+<p class="interdd"><a class="anchor" id="_todo000012"></a>set invalid header size error; ie FIT stream is corrupt / invalid. </p>
+<p class="interdd"><a class="anchor" id="_todo000013"></a>set invalid header data type (must be ".FIT"). </p>
+<p class="enddd"><a class="anchor" id="_todo000014"></a>set error, and return false here?  </p>
+</dd>
+<dt>Member <a class="el" href="QtFit__global_8h.html#a04f0529fdd7f7d0ff3a2d284cf167b14">QTFIT_NAMESPACE</a>  </dt>
+<dd><a class="anchor" id="_todo000017"></a>Consider moving this to a CMake option. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
