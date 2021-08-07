@@ -1,0 +1,46 @@
+name: Export Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Checkout main Branch
+      actions/checkout@v2
+      uses:
+        - ref: main
+        - path: main
+        - submodules: true
+    - uses: Checkout doc Branch
+      actions/checkout@v2
+      uses:
+        - ref: doc
+        - path: doc
+        - submodules: true
+    - name: Install Doxygen
+      run: sudo apt install doxygen graphviz
+    - name: Build Docs
+      run: |
+        cmake -S "$GITHUB_WORKSPACE/main" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" doc doc-internal
+    - Install Docs
+      run: |
+        rm -rf "$GITHUB_WORKSPACE/doc/main/"{doc,int}
+        cp -a "$RUNNER_TEMP/doc/public" "$GITHUB_WORKSPACE/doc/main/doc"
+        cp -a "$RUNNER_TEMP/doc/internal" "$GITHUB_WORKSPACE/doc/main/int"
+    - name: Inspect Changes
+      run: |
+        git -C "$GITHUB_WORKSPACE/doc" status
+        git -C "$GITHUB_WORKSPACE/doc" diff
+    - name: Push Updated Docs
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "Update generated docs for ${GITHUB_SHA}"
+        #git push
+      working-directory: ${{ github.workspace }}/doc
