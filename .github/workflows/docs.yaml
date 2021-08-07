@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  publish:
+  generate:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout main Branch
@@ -22,7 +22,7 @@ jobs:
         path: doc
         submodules: true
     - name: Install Doxygen
-      run: sudo apt install doxygen graphviz
+      run: sudo apt install doxygen graphviz qtbase5-dev
     - name: Build Docs
       run: |
         cmake -S "$GITHUB_WORKSPACE/main" -B "$RUNNER_TEMP"
