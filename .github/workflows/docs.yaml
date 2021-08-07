@@ -24,8 +24,8 @@ jobs:
     - name: Install Doxygen
       run: |
         sudo apt install graphviz qtbase5-dev
-        wget https://doxygen.nl/files/doxygen-1.9.1.linux.bin.tar.gz --output-document "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz"
-        tar --extract --file "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz" --verbose "$RUNNER_TEMP"
+        wget --quiet https://doxygen.nl/files/doxygen-1.9.1.linux.bin.tar.gz --output-document "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz"
+        tar --extract --file "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz" --directory "$RUNNER_TEMP" --verbose
         "$RUNNER_TEMP/oxygen-1.9.1/bin/doxygen" --version
     - name: Build Docs
       run: |
