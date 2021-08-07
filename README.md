@@ -2,8 +2,7 @@
 
 [![Build Status](https://github.com/pcolby/qtfit/actions/workflows/build.yaml/badge.svg)](https://github.com/pcolby/qtfit/actions/workflows/build.yaml)
 [![Static Analysis](https://github.com/pcolby/qtfit/actions/workflows/static.yaml/badge.svg)](https://github.com/pcolby/qtfit/actions/workflows/static.yaml)
-[![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/qtfit?label=Codecov&logo=Codecov)](https://app.codecov.io/gh/pcolby/qtfit)
-[![Coverage Status](https://img.shields.io/coveralls/github/pcolby/qtfit?label=Coveralls&logo=Coveralls)](https://coveralls.io/github/pcolby/qtfit)
+[![Coverage Status](https://img.shields.io/coveralls/github/pcolby/qtfit?label=Coverage)](https://coveralls.io/github/pcolby/qtfit)
 [![GitHub Release](https://img.shields.io/github/v/release/pcolby/qtfit?include_prereleases&label=Release)](https://github.com/pcolby/qtfit/releases/latest)
 [![LGPLv3 License](https://img.shields.io/badge/License-LGPLv3-informational.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
 
@@ -37,7 +36,7 @@ cmake --build <tmp-build-dir> --target coverage coverage-html
 The first target (`coverage`) uses `lcov` to generate `coverage.info` summary. And the second target (`coverage-html`)
 used LCOV's `genhtml` to generate an HTML view of `coverage.info`.
 
-Also available via [Coveralls](https://coveralls.io/github/pcolby/qtfit).
+Also available via [Coveralls](https://coveralls.io/github/pcolby/qtfit) (or [Codecov](https://app.codecov.io/gh/pcolby/qtfit)).
 
 ### Documentation
 
