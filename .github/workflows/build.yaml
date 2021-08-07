@@ -62,7 +62,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ macOs-latest ]
-        qt: [ '5.9.9', '5.12.11', '5.15.2', '6.0.4', '6.1.2', '6.2.0' ]
+        qt: [ '5.9.9', '5.12.11', '5.15.2' ]
         env:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc-11, cxx: g++-11 }
