@@ -120,10 +120,6 @@ int Generator::processTypes()
             const QString valueName = safeEnumLabel(toCamelCase(QString::fromUtf8(columns.at(2))));
             const QString valueValue = QString::fromUtf8(columns.at(3));
             if (valueName.length() > maxValueNameLength) maxValueNameLength=valueName.length();
-            /// \todo The following line was added temporarily to replicate a misbehaviour in the
-            /// original types.sh generation script. That is, having the next line make this
-            /// Grantlee-based generator identical. We'll remove the hack soon.
-            if (columns.at(2).length() > maxValueNameLength) maxValueNameLength=columns.at(2).length();
             if (valueValue.length() > maxValueValueLength) maxValueValueLength=valueValue.length();
             QVariantMap enumValue{
                 { QSL("valueName"), valueName },
