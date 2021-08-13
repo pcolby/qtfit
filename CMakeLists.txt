@@ -46,3 +46,11 @@ include(CTest)
 add_subdirectory(doc)
 add_subdirectory(src)
 add_subdirectory(test)
+
+# Optional codegen sub-project (requires Grantlee; off by default).
+option(BUILD_CODEGEN "Build codegen sub-project" OFF)
+if (BUILD_CODEGEN)
+  find_package(Grantlee5 REQUIRED)
+  message("-- Found Grantlee ${Grantlee5_VERSION}")
+  add_subdirectory(codegen)
+endif()

@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource>
+    <file>fit-sdk/ProfileMessages.tsv</file>
+    <file>fit-sdk/ProfileTypes.tsv</file>
+    <file>templates/license.txt</file>
+    <file>templates/src/types.h</file>
+  </qresource>
+</RCC>
