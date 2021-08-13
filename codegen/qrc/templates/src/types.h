@@ -1,4 +1,5 @@
 {% include "license.txt" %}
+{% include "autogen.txt" %}
 #ifndef {{ProjectName|upper}}_{{FileName|upper}}_H
 #define {{ProjectName|upper}}_{{FileName|upper}}_H
 

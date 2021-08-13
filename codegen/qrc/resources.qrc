@@ -3,6 +3,7 @@
   <qresource>
     <file>fit-sdk/ProfileMessages.tsv</file>
     <file>fit-sdk/ProfileTypes.tsv</file>
+    <file>templates/autogen.txt</file>
     <file>templates/license.txt</file>
     <file>templates/src/types.h</file>
   </qresource>

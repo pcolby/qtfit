@@ -17,6 +17,11 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*!
+ * \file
+ * \note This file is automatcially generated. Any changes here are likely to be overwritten.
+ */
+
 #ifndef QTFIT_TYPES_H
 #define QTFIT_TYPES_H
 
