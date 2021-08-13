@@ -33,4 +33,33 @@ var menudata={children:[
 {text:"All",url:"functions.html"},
 {text:"Functions",url:"functions_func.html"}]}]},
 {text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"}]}]}
+{text:"File List",url:"files.html"},
+{text:"File Members",url:"globals.html",children:[
+{text:"All",url:"globals.html",children:[
+{text:"a",url:"globals.html#index_a"},
+{text:"b",url:"globals.html#index_b"},
+{text:"c",url:"globals.html#index_c"},
+{text:"d",url:"globals.html#index_d"},
+{text:"e",url:"globals.html#index_e"},
+{text:"f",url:"globals.html#index_f"},
+{text:"g",url:"globals.html#index_g"},
+{text:"h",url:"globals.html#index_h"},
+{text:"l",url:"globals.html#index_l"},
+{text:"m",url:"globals.html#index_m"},
+{text:"s",url:"globals.html#index_s"},
+{text:"t",url:"globals.html#index_t"},
+{text:"w",url:"globals.html#index_w"}]},
+{text:"Enumerations",url:"globals_enum.html",children:[
+{text:"a",url:"globals_enum.html#index_a"},
+{text:"b",url:"globals_enum.html#index_b"},
+{text:"c",url:"globals_enum.html#index_c"},
+{text:"d",url:"globals_enum.html#index_d"},
+{text:"e",url:"globals_enum.html#index_e"},
+{text:"f",url:"globals_enum.html#index_f"},
+{text:"g",url:"globals_enum.html#index_g"},
+{text:"h",url:"globals_enum.html#index_h"},
+{text:"l",url:"globals_enum.html#index_l"},
+{text:"m",url:"globals_enum.html#index_m"},
+{text:"s",url:"globals_enum.html#index_s"},
+{text:"t",url:"globals_enum.html#index_t"},
+{text:"w",url:"globals_enum.html#index_w"}]}]}]}]}
