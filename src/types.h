@@ -22,6 +22,17 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ *
+ * Types defined by the ANT+ FIT SDK.
+ *
+ * Specifically these types are automatically generated from the Types tab of the FIT SDK's
+ * Profile.xlsx file.
+ *
+ * \see https://developer.garmin.com/fit/download/
+ */
+
 #ifndef QTFIT_TYPES_H
 #define QTFIT_TYPES_H
 

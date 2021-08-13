@@ -1,5 +1,16 @@
 {% include "license.txt" %}
 {% include "autogen.txt" %}
+/*!
+ * \file
+ *
+ * Types defined by the ANT+ FIT SDK.
+ *
+ * Specifically these types are automatically generated from the Types tab of the FIT SDK's
+ * Profile.xlsx file.
+ *
+ * \see https://developer.garmin.com/fit/download/
+ */
+
 #ifndef {{ProjectName|upper}}_{{FileName|upper}}_H
 #define {{ProjectName|upper}}_{{FileName|upper}}_H
 
