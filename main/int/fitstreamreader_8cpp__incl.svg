@@ -155,7 +155,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="types_8h.html" target="_top" xlink:title="Types defined by the ANT+ FIT SDK.">
 <polygon fill="none" stroke="black" points="79,-112.5 79,-131.5 132,-131.5 132,-112.5 79,-112.5"/>
 <text text-anchor="middle" x="105.5" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">types.h</text>
 </a>
