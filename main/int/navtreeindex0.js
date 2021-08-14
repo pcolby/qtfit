@@ -114,6 +114,7 @@ var NAVTREEINDEX0 =
 "structDataDefinition.html":[3,0,0],
 "structDataDefinition.html#a365c81347c77b8bfa3963bf46061061e":[3,0,0,2],
 "structDataDefinition.html#a4394ff8628ff9d764cdcb536ef36b3c6":[3,0,0,1],
+"structDataDefinition.html#a970e98ec5a59edbea60452eadb71231a":[3,0,0,4],
 "structDataDefinition.html#ac48daaed22d72cd8a025c6c13c455b99":[3,0,0,0],
 "structDataDefinition.html#acdf8d52c19ad998b469e68d3fc1b7ddd":[3,0,0,3],
 "structDataMessage.html":[3,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "types_8h.html#a00eecc1db747a403407ee496ccd56103a463ada8e39dfb27bd3d178a512eb00eb":[4,0,10,69,84],
 "types_8h.html#a00eecc1db747a403407ee496ccd56103a474fc9aad4053d833bf0d79dfd332c8d":[4,0,10,69,3],
 "types_8h.html#a00eecc1db747a403407ee496ccd56103a47cc16c425b4efc0db6017e3d817c569":[4,0,10,69,291],
-"types_8h.html#a00eecc1db747a403407ee496ccd56103a49ab28040dfa07f53544970c6d147e1e":[4,0,10,69,347],
-"types_8h.html#a00eecc1db747a403407ee496ccd56103a4a17f7fbe428d1e7a70dcc6172b7f68c":[4,0,10,69,148]
+"types_8h.html#a00eecc1db747a403407ee496ccd56103a49ab28040dfa07f53544970c6d147e1e":[4,0,10,69,347]
 };

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clear_3266',['clear',['../classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3',1,'FitStreamReader']]]
+  ['clear_3267',['clear',['../classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3',1,'FitStreamReader']]]
 ];
