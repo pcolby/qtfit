@@ -355,7 +355,7 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
                "FIT record header does not indiciate a definition message");
     const bool hasDevFields = (recordHeader & (1 << 5));
     qDebug() << __func__ << "has dev fields" << hasDevFields;
-    qDebug() << __func__ << "reserved" << (recordHeader & (1 >> 4));
+    qDebug() << __func__ << "reserved" << (recordHeader & (1 << 4));
     const quint8 localMessageType = (recordHeader & 0xF); // Least significant 4 bits.
     qDebug() << __func__ << "local message type" << localMessageType;
 
@@ -426,7 +426,43 @@ template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
 {
     Q_ASSERT(bytesAvailable<T>());
     qDebug() << "parsing data message";
+    const quint8 recordHeader = peekByte<T>();
+    qDebug() << __func__ << "recordHeader" << recordHeader;
+    Q_ASSERT_X(!isDefinitionMessage(recordHeader), "parseDataMessage",
+               "FIT record header does not indiciate a data message");
 
+    // Parse the record header.
+    quint8 localMessageType;
+    if (recordHeader & (1 << 7)) { // Compressed Timestamp Header.
+        qDebug() << __func__ << "Compressed Timestamp Header";
+        localMessageType = ((recordHeader >> 4) & 0x7);
+        const quint8 timeOffset = (recordHeader & 0xF);
+        qDebug() << "time offset" << timeOffset;
+        /// \todo Process timeOffset.
+    } else { // Normal (Data Message) Header
+        qDebug() << __func__ << "Normal (Data Message) Header";
+        qDebug() << __func__ << "reserved5" << (recordHeader & (1 << 5));
+        qDebug() << __func__ << "reserved4" << (recordHeader & (1 << 4));
+        localMessageType = (recordHeader & 0xF); // Least significant 4 bits.
+    }
+    qDebug() << __func__ << "local message type" << localMessageType;
+
+    // Lookup the record's field definitions.
+    if (!dataDefinitions.contains(localMessageType)) {
+        qWarning() << "No definition for local message type" << localMessageType;
+        /// \todo Set error code.
+        return FitDataMessage(); // FIT data is corrupt; we cannot safely continue parsing.
+    }
+    const DataDefinition defn = dataDefinitions.value(localMessageType);
+
+    // Parse record's Data Fields.
+    const int recordSize = 0; /// \a Todo either calculate from defn, or maybe add to defn.
+    qDebug() << "recors size" << recordSize;
+    const QByteArray record = readBytes<T>(recordSize);
+    if (record.isEmpty()) {
+        return FitDataMessage(); // Not enough bytes.
+    }
+  //FitDataMessage::fromRecordData(defn.globalMessageNumber, record); ///< \a todo
     return FitDataMessage(); /// @todo Implement!
 }
 
