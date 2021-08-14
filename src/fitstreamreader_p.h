@@ -55,7 +55,7 @@ protected:
     template<class T> bool parseFileHeader();
     template<class T> bool parseDefinitionMessage();
     template<class T> FitDataMessage parseDataMessage();
-    template<class T> quint8 peekByte() const;
+    template<class T> quint8 peekByte(const int pos=0) const;
     template<class T> QByteArray readBytes(const size_t size);
     template<class T> QByteArray readFileHeader();
     template<class T> FitDataMessage readNextDataMessage();

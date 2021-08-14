@@ -65,6 +65,7 @@ void TestSdkExamples::parseFitFile()
     QVERIFY(!reader.profileVersion().isNull());
 
     /// @todo Convert to CSV, and compare.
+    reader.readNext();
     const QByteArray result(csvData);
     QCOMPARE(result, csvData);
 }

@@ -347,26 +347,58 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
 template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
 {
     Q_ASSERT(bytesAvailable<T>());
+    qDebug() << "parsing definition message";
+    Q_ASSERT_X(peekByte<T>() & (1 << 6), "parseDefinitionMessage",
+               "FIT record header does not indiciate a definition message");
+    if (bytesAvailable<T>() < 6) {
+        return false; // Not enough bytes.
+    }
+    const quint8 numberOfFields = peekByte<T>(6);
+    const int offsetToNumberOfDevFields = 6 + (numberOfFields * 3);
+    qDebug() << __func__ << "number of fields" << numberOfFields;
+    qDebug() << __func__ << "offset to number of dev fields" << offsetToNumberOfDevFields;
+    if (bytesAvailable<T>() < offsetToNumberOfDevFields) {
+        return false; // Not enough bytes.
+    }
+    const int numberOfDevFields = peekByte<T>(offsetToNumberOfDevFields);
+    const int recordSize = 6 + (numberOfFields * 3) + 1 + (numberOfDevFields * 3);
+    qDebug() << __func__ << "number of dev fields" << numberOfDevFields;
+    qDebug() << __func__ << "record size" << recordSize;
+    const QByteArray record = readBytes<T>(recordSize);
+    if (record.isEmpty()) {
+        return false; // Not enough bytes.
+    }
+    const quint8 arch = record.at(2);
+    qDebug() << __func__ << "architecture" << arch;
+    qDebug() << record.mid(3,2);
+    const quint16 msgNum = (arch)
+        ? qFromBigEndian<quint16>(record.mid(3,2))
+        : qFromLittleEndian<quint16>(record.mid(3,2));
+    qDebug() << __func__ << "header" << (quint8)record.at(0);
+    qDebug() << __func__ << "reserved" << (quint8)record.at(1);
+    qDebug() << __func__ << "msgNum" << msgNum;
     return false; /// @todo Implement!
 }
 
 template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
 {
     Q_ASSERT(bytesAvailable<T>());
+    qDebug() << "parsing data message";
+
     return FitDataMessage(); /// @todo Implement!
 }
 
-template<> quint8 FitStreamReaderPrivate::peekByte<QByteArray>() const
+template<> quint8 FitStreamReaderPrivate::peekByte<QByteArray>(const int pos) const
 {
     Q_ASSERT(device == nullptr);
-    return (data.size() > dataOffset) ? data.at(dataOffset) : 0;
+    return (data.size() > (dataOffset + pos)) ? data.at(dataOffset+pos) : 0;
 }
 
-template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>() const
+template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>(const int pos) const
 {
     Q_ASSERT(device != nullptr);
-    const QByteArray byte = device->peek(1);
-    return byte.isEmpty() ? 0 : byte.at(0);
+    const QByteArray bytes = device->peek(1+pos);
+    return (bytes.size() > pos) ? bytes.at(pos) : 0;
 }
 
 template<> QByteArray FitStreamReaderPrivate::readBytes<QByteArray>(const size_t size)
