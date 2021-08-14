@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classFitStreamReaderPrivate.html','');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classFitStreamReaderPrivate-members.html">List of all members</a>  </div>
@@ -171,6 +172,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa00709ad70b4e3fb322093813901f7ef"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:aa00709ad70b4e3fb322093813901f7ef"><td class="memTemplItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFitStreamReaderPrivate.html#aa00709ad70b4e3fb322093813901f7ef">readBytes</a> (const <a class="el" href="classFitStreamReaderPrivate.html#acf93389d706fbe22fe4b1addb0d4264c">size_t</a> size)</td></tr>
 <tr class="separator:aa00709ad70b4e3fb322093813901f7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1a5399efd9c35426756598773cacd14e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e">isDefinitionMessage</a> (const quint8 recordHeader)</td></tr>
+<tr class="separator:a1a5399efd9c35426756598773cacd14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -378,6 +384,48 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a1a5399efd9c35426756598773cacd14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5399efd9c35426756598773cacd14e">&#9670;&nbsp;</a></span>isDefinitionMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FitStreamReaderPrivate::isDefinitionMessage </td>
+          <td>(</td>
+          <td class="paramtype">const quint8&#160;</td>
+          <td class="paramname"><em>recordHeader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00482">482</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;{</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    <span class="comment">// For definition messages, bit 7 must be off (bit 7 on would indicate a Compressed Timestamp</span></div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="comment">// Data Message, which cannot be a Definition Message), and bit 6 must be on (otherwise this</span></div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="comment">// woud be a Normal Data Message, not a Definition Message).</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keywordflow">return</span> ((recordHeader &gt;&gt; 6) == 1); <span class="comment">// Match bit 7 on and 6 off; ie 01xxxxxx.</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00347">parseDefinitionMessage()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00464">readNextDataMessage()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitStreamReaderPrivate_a1a5399efd9c35426756598773cacd14e_icgraph.svg" width="423" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a9b01406763b3610218581fcd47af15a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b01406763b3610218581fcd47af15a9">&#9670;&nbsp;</a></span>parseDataMessage()</h2>
 
@@ -399,15 +447,15 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>Implement! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>Implement! </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00383">383</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;{</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    Q_ASSERT(bytesAvailable&lt;T&gt;());</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;parsing data message&quot;</span>;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(); <span class="comment">/// @todo Implement!</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00425">425</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;{</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    Q_ASSERT(bytesAvailable&lt;T&gt;());</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;parsing data message&quot;</span>;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(); <span class="comment">/// @todo Implement!</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00030">fitdatamessage.h:30</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -433,44 +481,111 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>Implement! </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00347">347</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;{</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    Q_ASSERT(bytesAvailable&lt;T&gt;());</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="comment">// Parse the record header.</span></div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;parsing definition message&quot;</span>;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    Q_ASSERT_X(peekByte&lt;T&gt;() &amp; (1 &lt;&lt; 6), <span class="stringliteral">&quot;parseDefinitionMessage&quot;</span>,</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;               <span class="stringliteral">&quot;FIT record header does not indiciate a definition message&quot;</span>);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">if</span> (bytesAvailable&lt;T&gt;() &lt; 6) {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Not enough bytes.</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keyword">const</span> quint8 numberOfFields = peekByte&lt;T&gt;(6);</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> offsetToNumberOfDevFields = 6 + (numberOfFields * 3);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;number of fields&quot;</span> &lt;&lt; numberOfFields;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;offset to number of dev fields&quot;</span> &lt;&lt; offsetToNumberOfDevFields;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">if</span> (bytesAvailable&lt;T&gt;() &lt; offsetToNumberOfDevFields) {</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Not enough bytes.</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> numberOfDevFields = peekByte&lt;T&gt;(offsetToNumberOfDevFields);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> recordSize = 6 + (numberOfFields * 3) + 1 + (numberOfDevFields * 3);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;number of dev fields&quot;</span> &lt;&lt; numberOfDevFields;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;record size&quot;</span> &lt;&lt; recordSize;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keyword">const</span> QByteArray record = readBytes&lt;T&gt;(recordSize);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">if</span> (record.isEmpty()) {</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Not enough bytes.</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keyword">const</span> quint8 arch = record.at(2);</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;architecture&quot;</span> &lt;&lt; arch;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    qDebug() &lt;&lt; record.mid(3,2);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keyword">const</span> quint16 msgNum = (arch)</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        ? qFromBigEndian&lt;quint16&gt;(record.mid(3,2))</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        : qFromLittleEndian&lt;quint16&gt;(record.mid(3,2));</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;header&quot;</span> &lt;&lt; (quint8)record.at(0);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;reserved&quot;</span> &lt;&lt; (quint8)record.at(1);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;msgNum&quot;</span> &lt;&lt; msgNum;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">/// @todo Implement!</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    Q_ASSERT(bytesAvailable&lt;T&gt;());</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">const</span> quint8 recordHeader = peekByte&lt;T&gt;();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;recordHeader&quot;</span> &lt;&lt; recordHeader;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    Q_ASSERT_X(<a class="code" href="classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e">isDefinitionMessage</a>(recordHeader), <span class="stringliteral">&quot;parseDefinitionMessage&quot;</span>,</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;               <span class="stringliteral">&quot;FIT record header does not indiciate a definition message&quot;</span>);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> hasDevFields = (recordHeader &amp; (1 &lt;&lt; 5));</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;has dev fields&quot;</span> &lt;&lt; hasDevFields;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;reserved&quot;</span> &lt;&lt; (recordHeader &amp; (1 &gt;&gt; 4));</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">const</span> quint8 localMessageType = (recordHeader &amp; 0xF); <span class="comment">// Least significant 4 bits.</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;local message type&quot;</span> &lt;&lt; localMessageType;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="comment">// Read the completed definition record (if available).</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">if</span> (bytesAvailable&lt;T&gt;() &lt; 6) {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Not enough bytes.</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keyword">const</span> quint8 numberOfFields = peekByte&lt;T&gt;(6);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;number of fields&quot;</span> &lt;&lt; numberOfFields;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">int</span> numberOfDevFields = 0;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">if</span> (hasDevFields) {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> offsetToNumberOfDevFields = 6 + (numberOfFields * 3);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;offset to number of dev fields&quot;</span> &lt;&lt; offsetToNumberOfDevFields;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">if</span> (bytesAvailable&lt;T&gt;() &lt; offsetToNumberOfDevFields) {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Not enough bytes.</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        numberOfDevFields = peekByte&lt;T&gt;(offsetToNumberOfDevFields);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> recordSize = 6 + (numberOfFields * 3) + (hasDevFields ? 1 + (numberOfDevFields * 3) : 0);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;number of dev fields&quot;</span> &lt;&lt; numberOfDevFields;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;record size&quot;</span> &lt;&lt; recordSize;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">const</span> QByteArray record = readBytes&lt;T&gt;(recordSize);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">if</span> (record.isEmpty()) {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Not enough bytes.</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">// Parse the rest of the definition record.</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="structDataDefinition.html">DataDefinition</a> defn;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    defn.<a class="code" href="structDataDefinition.html#ac48daaed22d72cd8a025c6c13c455b99">architecture</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types__p_8h.html#a9d29ee6d65ece8256e068c11186a92e8">Architecture</a><span class="keyword">&gt;</span>(record.at(2));</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;architecture&quot;</span> &lt;&lt; (int)defn.<a class="code" href="structDataDefinition.html#ac48daaed22d72cd8a025c6c13c455b99">architecture</a>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    qDebug() &lt;&lt; record.mid(3,2);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    defn.<a class="code" href="structDataDefinition.html#acdf8d52c19ad998b469e68d3fc1b7ddd">globalMessageNumber</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22c">MesgNum</a><span class="keyword">&gt;</span>((defn.<a class="code" href="structDataDefinition.html#ac48daaed22d72cd8a025c6c13c455b99">architecture</a> == <a class="code" href="types__p_8h.html#a9d29ee6d65ece8256e068c11186a92e8a2ce7a92ae43763828ac4acb4560c2a5b">Architecture::BigEndian</a>)</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        ? qFromBigEndian&lt;quint16&gt;(record.mid(3,2))</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        : qFromLittleEndian&lt;quint16&gt;(record.mid(3,2)));</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;header&quot;</span> &lt;&lt; (quint8)record.at(0);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;reserved&quot;</span> &lt;&lt; (quint8)record.at(1);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    qDebug() &lt;&lt; __func__ &lt;&lt; <span class="stringliteral">&quot;msgNum&quot;</span> &lt;&lt; (int)defn.<a class="code" href="structDataDefinition.html#acdf8d52c19ad998b469e68d3fc1b7ddd">globalMessageNumber</a>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="comment">// Parse the definition fields.</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    for (<span class="keywordtype">int</span> i=0; i &lt; numberOfFields; ++i) {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> pos = 6 + (i * 3);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <a class="code" href="structFieldDefinition.html">FieldDefinition</a> field;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        field.<a class="code" href="structFieldDefinition.html#a62afa0ec7bb936c3a543949b7cd2a2af">number</a> = record.at(pos);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        field.<a class="code" href="structFieldDefinition.html#aad2191d20cf144ff378cda5b32ca1a4e">size</a> = record.at(pos+1);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        field.<a class="code" href="structFieldDefinition.html#a7cfd3d8873436081e7b51f77141c45f4">type</a> = record.at(pos+2);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        defn.<a class="code" href="structDataDefinition.html#a365c81347c77b8bfa3963bf46061061e">fieldDefinitions</a>.append(field);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    Q_ASSERT(defn.<a class="code" href="structDataDefinition.html#a365c81347c77b8bfa3963bf46061061e">fieldDefinitions</a>.size() == numberOfFields);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="comment">// Parse the definition fields.</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    Q_ASSERT(hasDevFields || (numberOfDevFields == 0));</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i &lt; numberOfDevFields; ++i) {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> pos = 6 + (numberOfFields * 3) + 1 + (i * 3);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <a class="code" href="structDeveloperFieldDefinition.html">DeveloperFieldDefinition</a> field;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        field.<a class="code" href="structDeveloperFieldDefinition.html#a0cdc4a4b6f65cafba216ff551f308001">fieldNumber</a> = record.at(pos);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        field.<a class="code" href="structDeveloperFieldDefinition.html#a449a9c8747def15719597d27ae7ed00b">size</a> = record.at(pos+1);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        field.<a class="code" href="structDeveloperFieldDefinition.html#a5d607b902765d25b429a423e3206ff11">devDataIndex</a> = record.at(pos+2);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        defn.<a class="code" href="structDataDefinition.html#a4394ff8628ff9d764cdcb536ef36b3c6">developerFieldDefinitions</a>.append(field);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    Q_ASSERT(defn.<a class="code" href="structDataDefinition.html#a4394ff8628ff9d764cdcb536ef36b3c6">developerFieldDefinitions</a>.size() == numberOfDevFields);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="comment">// Record the definition data for future Data Messages.</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <a class="code" href="classFitStreamReaderPrivate.html#a91ebd356ba83d48350db239f61a745a5">dataDefinitions</a>.insert(localMessageType, defn);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;}</div>
+<div class="ttc" id="aclassFitStreamReaderPrivate_html_a1a5399efd9c35426756598773cacd14e"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e">FitStreamReaderPrivate::isDefinitionMessage</a></div><div class="ttdeci">static bool isDefinitionMessage(const quint8 recordHeader)</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8cpp_source.html#l00482">fitstreamreader.cpp:482</a></div></div>
+<div class="ttc" id="aclassFitStreamReaderPrivate_html_a91ebd356ba83d48350db239f61a745a5"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a91ebd356ba83d48350db239f61a745a5">FitStreamReaderPrivate::dataDefinitions</a></div><div class="ttdeci">QHash&lt; int, DataDefinition &gt; dataDefinitions</div><div class="ttdoc">Local message types to current data definitions.</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00072">fitstreamreader_p.h:72</a></div></div>
+<div class="ttc" id="astructDataDefinition_html"><div class="ttname"><a href="structDataDefinition.html">DataDefinition</a></div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00046">types_p.h:46</a></div></div>
+<div class="ttc" id="astructDataDefinition_html_a365c81347c77b8bfa3963bf46061061e"><div class="ttname"><a href="structDataDefinition.html#a365c81347c77b8bfa3963bf46061061e">DataDefinition::fieldDefinitions</a></div><div class="ttdeci">QList&lt; FieldDefinition &gt; fieldDefinitions</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00049">types_p.h:49</a></div></div>
+<div class="ttc" id="astructDataDefinition_html_a4394ff8628ff9d764cdcb536ef36b3c6"><div class="ttname"><a href="structDataDefinition.html#a4394ff8628ff9d764cdcb536ef36b3c6">DataDefinition::developerFieldDefinitions</a></div><div class="ttdeci">QList&lt; DeveloperFieldDefinition &gt; developerFieldDefinitions</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00050">types_p.h:50</a></div></div>
+<div class="ttc" id="astructDataDefinition_html_ac48daaed22d72cd8a025c6c13c455b99"><div class="ttname"><a href="structDataDefinition.html#ac48daaed22d72cd8a025c6c13c455b99">DataDefinition::architecture</a></div><div class="ttdeci">Architecture architecture</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00047">types_p.h:47</a></div></div>
+<div class="ttc" id="astructDataDefinition_html_acdf8d52c19ad998b469e68d3fc1b7ddd"><div class="ttname"><a href="structDataDefinition.html#acdf8d52c19ad998b469e68d3fc1b7ddd">DataDefinition::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00048">types_p.h:48</a></div></div>
+<div class="ttc" id="astructDeveloperFieldDefinition_html"><div class="ttname"><a href="structDeveloperFieldDefinition.html">DeveloperFieldDefinition</a></div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00034">types_p.h:34</a></div></div>
+<div class="ttc" id="astructDeveloperFieldDefinition_html_a0cdc4a4b6f65cafba216ff551f308001"><div class="ttname"><a href="structDeveloperFieldDefinition.html#a0cdc4a4b6f65cafba216ff551f308001">DeveloperFieldDefinition::fieldNumber</a></div><div class="ttdeci">quint8 fieldNumber</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00035">types_p.h:35</a></div></div>
+<div class="ttc" id="astructDeveloperFieldDefinition_html_a449a9c8747def15719597d27ae7ed00b"><div class="ttname"><a href="structDeveloperFieldDefinition.html#a449a9c8747def15719597d27ae7ed00b">DeveloperFieldDefinition::size</a></div><div class="ttdeci">quint8 size</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00036">types_p.h:36</a></div></div>
+<div class="ttc" id="astructDeveloperFieldDefinition_html_a5d607b902765d25b429a423e3206ff11"><div class="ttname"><a href="structDeveloperFieldDefinition.html#a5d607b902765d25b429a423e3206ff11">DeveloperFieldDefinition::devDataIndex</a></div><div class="ttdeci">quint8 devDataIndex</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00037">types_p.h:37</a></div></div>
+<div class="ttc" id="astructFieldDefinition_html"><div class="ttname"><a href="structFieldDefinition.html">FieldDefinition</a></div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00040">types_p.h:40</a></div></div>
+<div class="ttc" id="astructFieldDefinition_html_a62afa0ec7bb936c3a543949b7cd2a2af"><div class="ttname"><a href="structFieldDefinition.html#a62afa0ec7bb936c3a543949b7cd2a2af">FieldDefinition::number</a></div><div class="ttdeci">quint8 number</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00041">types_p.h:41</a></div></div>
+<div class="ttc" id="astructFieldDefinition_html_a7cfd3d8873436081e7b51f77141c45f4"><div class="ttname"><a href="structFieldDefinition.html#a7cfd3d8873436081e7b51f77141c45f4">FieldDefinition::type</a></div><div class="ttdeci">quint8 type</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00043">types_p.h:43</a></div></div>
+<div class="ttc" id="astructFieldDefinition_html_aad2191d20cf144ff378cda5b32ca1a4e"><div class="ttname"><a href="structFieldDefinition.html#aad2191d20cf144ff378cda5b32ca1a4e">FieldDefinition::size</a></div><div class="ttdeci">quint8 size</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00042">types_p.h:42</a></div></div>
+<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22c"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22c">MesgNum</a></div><div class="ttdeci">MesgNum</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00071">types.h:71</a></div></div>
+<div class="ttc" id="atypes__p_8h_html_a9d29ee6d65ece8256e068c11186a92e8"><div class="ttname"><a href="types__p_8h.html#a9d29ee6d65ece8256e068c11186a92e8">Architecture</a></div><div class="ttdeci">Architecture</div><div class="ttdef"><b>Definition:</b> <a href="types__p_8h_source.html#l00029">types_p.h:29</a></div></div>
+<div class="ttc" id="atypes__p_8h_html_a9d29ee6d65ece8256e068c11186a92e8a2ce7a92ae43763828ac4acb4560c2a5b"><div class="ttname"><a href="types__p_8h.html#a9d29ee6d65ece8256e068c11186a92e8a2ce7a92ae43763828ac4acb4560c2a5b">Architecture::BigEndian</a></div><div class="ttdeci">@ BigEndian</div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="types__p_8h_source.html#l00047">DataDefinition::architecture</a>, <a class="el" href="types__p_8h.html#a9d29ee6d65ece8256e068c11186a92e8a2ce7a92ae43763828ac4acb4560c2a5b">BigEndian</a>, <a class="el" href="fitstreamreader__p_8h_source.html#l00072">dataDefinitions</a>, <a class="el" href="types__p_8h_source.html#l00037">DeveloperFieldDefinition::devDataIndex</a>, <a class="el" href="types__p_8h_source.html#l00050">DataDefinition::developerFieldDefinitions</a>, <a class="el" href="types__p_8h_source.html#l00049">DataDefinition::fieldDefinitions</a>, <a class="el" href="types__p_8h_source.html#l00035">DeveloperFieldDefinition::fieldNumber</a>, <a class="el" href="types__p_8h_source.html#l00048">DataDefinition::globalMessageNumber</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00482">isDefinitionMessage()</a>, <a class="el" href="types__p_8h_source.html#l00041">FieldDefinition::number</a>, <a class="el" href="types__p_8h_source.html#l00036">DeveloperFieldDefinition::size</a>, <a class="el" href="types__p_8h_source.html#l00042">FieldDefinition::size</a>, and <a class="el" href="types__p_8h_source.html#l00043">FieldDefinition::type</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitStreamReaderPrivate_a1dd45f588b8ecb89cc8968c6c5d0381f_cgraph.svg" width="423" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="ae158e9d75149893030cedf1b13d6b07b"></a>
@@ -558,12 +673,12 @@ template&lt;class T &gt; </div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
-<div class="ttc" id="aclassFitStreamReaderPrivate_html_a039a774c86525f7b281b7e39efa385ca"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a039a774c86525f7b281b7e39efa385ca">FitStreamReaderPrivate::expectedDataSize</a></div><div class="ttdeci">quint32 expectedDataSize</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00067">fitstreamreader_p.h:67</a></div></div>
-<div class="ttc" id="aclassFitStreamReaderPrivate_html_a536f735ae4c3d6371efa3e3e0414d172"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a536f735ae4c3d6371efa3e3e0414d172">FitStreamReaderPrivate::profileVersion</a></div><div class="ttdeci">QVersionNumber profileVersion</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00066">fitstreamreader_p.h:66</a></div></div>
-<div class="ttc" id="aclassFitStreamReaderPrivate_html_a784dba2fad2b19065b295ef4ba1399e9"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a784dba2fad2b19065b295ef4ba1399e9">FitStreamReaderPrivate::protocolVersion</a></div><div class="ttdeci">QVersionNumber protocolVersion</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00065">fitstreamreader_p.h:65</a></div></div>
+<div class="ttc" id="aclassFitStreamReaderPrivate_html_a039a774c86525f7b281b7e39efa385ca"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a039a774c86525f7b281b7e39efa385ca">FitStreamReaderPrivate::expectedDataSize</a></div><div class="ttdeci">quint32 expectedDataSize</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00069">fitstreamreader_p.h:69</a></div></div>
+<div class="ttc" id="aclassFitStreamReaderPrivate_html_a536f735ae4c3d6371efa3e3e0414d172"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a536f735ae4c3d6371efa3e3e0414d172">FitStreamReaderPrivate::profileVersion</a></div><div class="ttdeci">QVersionNumber profileVersion</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00068">fitstreamreader_p.h:68</a></div></div>
+<div class="ttc" id="aclassFitStreamReaderPrivate_html_a784dba2fad2b19065b295ef4ba1399e9"><div class="ttname"><a href="classFitStreamReaderPrivate.html#a784dba2fad2b19065b295ef4ba1399e9">FitStreamReaderPrivate::protocolVersion</a></div><div class="ttdeci">QVersionNumber protocolVersion</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader__p_8h_source.html#l00067">fitstreamreader_p.h:67</a></div></div>
 <div class="ttc" id="afitstreamreader_8cpp_html_ae1dc2f3ad4869b2d74ae07e503e75013"><div class="ttname"><a href="fitstreamreader_8cpp.html#ae1dc2f3ad4869b2d74ae07e503e75013">fitChecksum</a></div><div class="ttdeci">quint16 fitChecksum(const QByteArray &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="fitstreamreader_8cpp_source.html#l00198">fitstreamreader.cpp:198</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitstreamreader__p_8h_source.html#l00044">data</a>, <a class="el" href="fitstreamreader__p_8h_source.html#l00067">expectedDataSize</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00198">fitChecksum()</a>, <a class="el" href="fitstreamreader__p_8h_source.html#l00066">profileVersion</a>, and <a class="el" href="fitstreamreader__p_8h_source.html#l00065">protocolVersion</a>.</p>
+<p class="reference">References <a class="el" href="fitstreamreader__p_8h_source.html#l00044">data</a>, <a class="el" href="fitstreamreader__p_8h_source.html#l00069">expectedDataSize</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00198">fitChecksum()</a>, <a class="el" href="fitstreamreader__p_8h_source.html#l00068">profileVersion</a>, and <a class="el" href="fitstreamreader__p_8h_source.html#l00067">protocolVersion</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -599,11 +714,11 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00391">391</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;{</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.size() &gt; (<a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a> + pos)) ? <a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.at(<a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a>+pos) : 0;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00433">433</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;{</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.size() &gt; (<a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a> + pos)) ? <a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.at(<a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a>+pos) : 0;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="fitstreamreader__p_8h_source.html#l00044">data</a>, <a class="el" href="fitstreamreader__p_8h_source.html#l00045">dataOffset</a>, and <a class="el" href="fitstreamreader__p_8h_source.html#l00046">device</a>.</p>
 
@@ -635,12 +750,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00397">397</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;{</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keyword">const</span> QByteArray bytes = <a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a>-&gt;peek(1+pos);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> (bytes.size() &gt; pos) ? bytes.at(pos) : 0;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00439">439</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;{</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keyword">const</span> QByteArray bytes = <a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a>-&gt;peek(1+pos);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">return</span> (bytes.size() &gt; pos) ? bytes.at(pos) : 0;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="fitstreamreader__p_8h_source.html#l00046">device</a>.</p>
 
@@ -700,11 +815,11 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00404">404</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;{</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.size() - <a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a>) &lt; size) ? QByteArray() : <a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.mid((<a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a>+=size)-size, size);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00446">446</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;{</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.size() - <a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a>) &lt; size) ? QByteArray() : <a class="code" href="classFitStreamReaderPrivate.html#a200ad0a1cb1dda3cbe03f3c47bf1293d">data</a>.mid((<a class="code" href="classFitStreamReaderPrivate.html#a81ab38ab6097d7de6e2d39ba57517272">dataOffset</a>+=size)-size, size);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="fitstreamreader__p_8h_source.html#l00044">data</a>, <a class="el" href="fitstreamreader__p_8h_source.html#l00045">dataOffset</a>, and <a class="el" href="fitstreamreader__p_8h_source.html#l00046">device</a>.</p>
 
@@ -736,11 +851,11 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00410">410</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;{</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a>-&gt;bytesAvailable() &lt; size) ? QByteArray() : <a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a>-&gt;read(size);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00452">452</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;{</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    Q_ASSERT(<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a> != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a>-&gt;bytesAvailable() &lt; size) ? QByteArray() : <a class="code" href="classFitStreamReaderPrivate.html#a174b6b45ff54f0b149b59aebdb8061b5">device</a>-&gt;read(size);</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="fitstreamreader__p_8h_source.html#l00046">device</a>.</p>
 
@@ -796,11 +911,11 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00416">416</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;{</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="comment">// Return `n` bytes, where `n` is given by the first byte (ie a length-prefixed buffer).</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">return</span> (bytesAvailable&lt;T&gt;()) ? readBytes&lt;T&gt;(peekByte&lt;T&gt;()) : QByteArray();</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00458">458</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;{</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="comment">// Return `n` bytes, where `n` is given by the first byte (ie a length-prefixed buffer).</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordflow">return</span> (bytesAvailable&lt;T&gt;()) ? readBytes&lt;T&gt;(peekByte&lt;T&gt;()) : QByteArray();</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -826,25 +941,31 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00422">422</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;{</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="comment">// If we haven&#39;t parsed the FIT File Header yet, do so now.</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">if</span> ((<a class="code" href="classFitStreamReaderPrivate.html#a784dba2fad2b19065b295ef4ba1399e9">protocolVersion</a>.isNull() &amp;&amp; (!parseFileHeader&lt;T&gt;()))) {</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(); <span class="comment">// Need a way to return a null message.</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    }</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="comment">// Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordflow">while</span> (bytesAvailable&lt;T&gt;()) { <span class="comment">// At least one byte, for the next data record header byte.</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keyword">const</span> quint8 recordHeader = peekByte&lt;T&gt;();</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="keywordflow">if</span> (recordHeader &amp; (1 &lt;&lt; 6)) { <span class="comment">// Bit 6 indicates a Definition Message.</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            <span class="keywordflow">if</span> (!parseDefinitionMessage&lt;T&gt;()) <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>();</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            <span class="comment">// Not returning here; we&#39;ll continue processing until we get a FIT Data Message.</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">return</span> parseDataMessage&lt;T&gt;();</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>();</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00464">464</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;{</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="comment">// If we haven&#39;t parsed the FIT File Header yet, do so now.</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordflow">if</span> ((<a class="code" href="classFitStreamReaderPrivate.html#a784dba2fad2b19065b295ef4ba1399e9">protocolVersion</a>.isNull() &amp;&amp; (!parseFileHeader&lt;T&gt;()))) {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(); <span class="comment">// Need a way to return a null message.</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="comment">// Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">while</span> (bytesAvailable&lt;T&gt;()) { <span class="comment">// At least one byte, for the next data record header byte.</span></div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keyword">const</span> quint8 recordHeader = peekByte&lt;T&gt;();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e">isDefinitionMessage</a>(recordHeader)) {</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            <span class="keywordflow">if</span> (!parseDefinitionMessage&lt;T&gt;()) <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>();</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            <span class="comment">// Not returning here; we&#39;ll continue processing until we get a FIT Data Message.</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">return</span> parseDataMessage&lt;T&gt;();</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a>();</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitstreamreader__p_8h_source.html#l00065">protocolVersion</a>.</p>
+<p class="reference">References <a class="el" href="fitstreamreader_8cpp_source.html#l00482">isDefinitionMessage()</a>, and <a class="el" href="fitstreamreader__p_8h_source.html#l00067">protocolVersion</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFitStreamReaderPrivate_a424a5c188d2d4485daf7f2d7be569791_cgraph.svg" width="415" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -863,7 +984,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00044">44</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00275">bytesAvailable()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00287">parseFileHeader()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00391">peekByte()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00404">readBytes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00275">bytesAvailable()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00287">parseFileHeader()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00433">peekByte()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00446">readBytes()</a>.</p>
 
 </div>
 </div>
@@ -889,7 +1010,9 @@ template&lt;class T &gt; </div>
 
 <p>Local message types to current data definitions. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00070">70</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00072">72</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00347">parseDefinitionMessage()</a>.</p>
 
 </div>
 </div>
@@ -907,7 +1030,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00045">45</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00275">bytesAvailable()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00391">peekByte()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00404">readBytes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00275">bytesAvailable()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00433">peekByte()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00446">readBytes()</a>.</p>
 
 </div>
 </div>
@@ -925,7 +1048,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00046">46</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00275">bytesAvailable()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00391">peekByte()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00404">readBytes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00275">bytesAvailable()</a>, <a class="el" href="fitstreamreader_8cpp_source.html#l00433">peekByte()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00446">readBytes()</a>.</p>
 
 </div>
 </div>
@@ -949,7 +1072,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00067">67</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00069">69</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00287">parseFileHeader()</a>.</p>
 
@@ -975,7 +1098,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00066">66</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00068">68</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00287">parseFileHeader()</a>.</p>
 
@@ -1001,9 +1124,9 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00065">65</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00067">67</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00287">parseFileHeader()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00422">readNextDataMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00287">parseFileHeader()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00464">readNextDataMessage()</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1178,7 @@ template&lt;class T &gt; </div>
 
 <p>Local message types to current record sizes. </p>
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00071">71</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader__p_8h_source.html#l00073">73</a> of file <a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>.</p>
 
 </div>
 </div>
