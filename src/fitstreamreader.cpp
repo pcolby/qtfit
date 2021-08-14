@@ -372,7 +372,7 @@ template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>() const
 template<> QByteArray FitStreamReaderPrivate::readBytes<QByteArray>(const size_t size)
 {
     Q_ASSERT(device == nullptr);
-    return ((data.size() - dataOffset) < size) ? QByteArray() : data.mid(dataOffset, size);
+    return ((data.size() - dataOffset) < size) ? QByteArray() : data.mid((dataOffset+=size)-size, size);
 }
 
 template<> QByteArray FitStreamReaderPrivate::readBytes<QIODevice>(const size_t size)
