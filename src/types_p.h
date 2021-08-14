@@ -48,6 +48,7 @@ struct DataDefinition {
     MesgNum globalMessageNumber;
     QList<FieldDefinition> fieldDefinitions;
     QList<DeveloperFieldDefinition> developerFieldDefinitions;
+    int recordSize; ///< Sum of all sizes in fieldDefinitions and developerFieldDefintions.
 };
 
 //typedef QList<FieldDefinition> FieldDefinitionList;
