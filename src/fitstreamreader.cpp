@@ -346,10 +346,14 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
 
 template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
 {
-    Q_ASSERT(bytesAvailable<T>());
+    // Parse the record header.
     qDebug() << "parsing definition message";
-    Q_ASSERT_X(peekByte<T>() & (1 << 6), "parseDefinitionMessage",
+    Q_ASSERT(bytesAvailable<T>());
+    const quint8 recordHeader = peekByte<T>();
+    Q_ASSERT_X(isDefinitionMessage(recordHeader), "parseDefinitionMessage",
                "FIT record header does not indiciate a definition message");
+
+    // Read the completed definition record (if available).
     if (bytesAvailable<T>() < 6) {
         return false; // Not enough bytes.
     }
@@ -377,6 +381,9 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     qDebug() << __func__ << "header" << (quint8)record.at(0);
     qDebug() << __func__ << "reserved" << (quint8)record.at(1);
     qDebug() << __func__ << "msgNum" << msgNum;
+
+    // Parse the definition fields.
+    // ...
     return false; /// @todo Implement!
 }
 
@@ -429,12 +436,20 @@ template<class T> FitDataMessage FitStreamReaderPrivate::readNextDataMessage()
     // Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).
     while (bytesAvailable<T>()) { // At least one byte, for the next data record header byte.
         const quint8 recordHeader = peekByte<T>();
-        if (recordHeader & (1 << 6)) { // Bit 6 indicates a Definition Message.
+        if (isDefinitionMessage(recordHeader)) {
             if (!parseDefinitionMessage<T>()) return FitDataMessage();
             // Not returning here; we'll continue processing until we get a FIT Data Message.
         } else return parseDataMessage<T>();
     }
     return FitDataMessage();
+}
+
+bool FitStreamReaderPrivate::isDefinitionMessage(const quint8 recordHeader)
+{
+    // For definition messages, bit 7 must be off (bit 7 on would indicate a Compressed Timestamp
+    // Data Message, which cannot be a Definition Message), and bit 6 must be on (otherwise this
+    // woud be a Normal Data Message, not a Definition Message).
+    return ((recordHeader >> 6) == 1); // Match bit 7 on and 6 off; ie 01xxxxxx.
 }
 
 QTFIT_END_NAMESPACE

@@ -60,6 +60,8 @@ protected:
     template<class T> QByteArray readFileHeader();
     template<class T> FitDataMessage readNextDataMessage();
 
+    static inline bool isDefinitionMessage(const quint8 recordHeader);
+
 private:
 //    quint8 headerSize;
     QVersionNumber protocolVersion;
