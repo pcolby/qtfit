@@ -363,7 +363,7 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     if (bytesAvailable<T>() < 6) {
         return false; // Not enough bytes.
     }
-    const quint8 numberOfFields = peekByte<T>(6);
+    const quint8 numberOfFields = peekByte<T>(5);
     qDebug() << __func__ << "number of fields" << numberOfFields;
     int numberOfDevFields = 0;
     if (hasDevFields) {
@@ -402,6 +402,9 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
         field.number = record.at(pos);
         field.size = record.at(pos+1);
         field.type = record.at(pos+2);
+        qDebug() << __func__ << "field" << i << "number" << field.number;
+        qDebug() << __func__ << "field" << i << "size" << field.size;
+        qDebug() << __func__ << "field" << i << "type" << field.type;
         defn.fieldDefinitions.append(field);
         defn.recordSize += field.size;
     }
@@ -416,6 +419,9 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
         field.fieldNumber = record.at(pos);
         field.size = record.at(pos+1);
         field.devDataIndex = record.at(pos+2);
+        qDebug() << __func__ << "dev field" << i << "number" << field.fieldNumber;
+        qDebug() << __func__ << "dev field" << i << "size" << field.size;
+        qDebug() << __func__ << "dev field" << i << "dataIndex" << field.devDataIndex;
         defn.developerFieldDefinitions.append(field);
         defn.recordSize += field.size;
     }
@@ -464,17 +470,17 @@ template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
     const DataDefinition defn = dataDefinitions.value(localMessageType);
 
     // Parse record's Data Fields.
-    const int recordSize = defn.recordSize;
-    qDebug() << "record size" << recordSize;
+    qDebug() << __func__ << "record size" << defn.recordSize;
     if (defn.recordSize == 0) {
         qWarning() << "record size is zero"; // Not really sure what to do here.
         return FitDataMessage();
     }
-    const QByteArray record = readBytes<T>(recordSize+1);
+    const QByteArray record = readBytes<T>(defn.recordSize+1);
     if (record.isEmpty()) {
         return FitDataMessage(); // Not enough bytes.
     }
-  //FitDataMessage::fromRecordData(defn.globalMessageNumber, record.mid(0)); ///< \a todo
+    qDebug() << "record" << record.mid(1);
+  //FitDataMessage::fromRecordData(defn.globalMessageNumber, record.mid(1)); ///< \a todo
     return FitDataMessage(); /// @todo Implement!
 }
 
