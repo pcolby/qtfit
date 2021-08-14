@@ -350,32 +350,43 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     qDebug() << "parsing definition message";
     Q_ASSERT(bytesAvailable<T>());
     const quint8 recordHeader = peekByte<T>();
+    qDebug() << __func__ << "recordHeader" << recordHeader;
     Q_ASSERT_X(isDefinitionMessage(recordHeader), "parseDefinitionMessage",
                "FIT record header does not indiciate a definition message");
+    const bool hasDevFields = (recordHeader & (1 << 5));
+    qDebug() << __func__ << "has dev fields" << hasDevFields;
+    qDebug() << __func__ << "reserved" << (recordHeader & (1 >> 4));
+    const quint8 localMessageType = (recordHeader & 0xF); // Least significant 4 bits.
+    qDebug() << __func__ << "local message type" << localMessageType;
 
     // Read the completed definition record (if available).
     if (bytesAvailable<T>() < 6) {
         return false; // Not enough bytes.
     }
     const quint8 numberOfFields = peekByte<T>(6);
-    const int offsetToNumberOfDevFields = 6 + (numberOfFields * 3);
     qDebug() << __func__ << "number of fields" << numberOfFields;
-    qDebug() << __func__ << "offset to number of dev fields" << offsetToNumberOfDevFields;
-    if (bytesAvailable<T>() < offsetToNumberOfDevFields) {
-        return false; // Not enough bytes.
+    int numberOfDevFields = 0;
+    if (hasDevFields) {
+        const int offsetToNumberOfDevFields = 6 + (numberOfFields * 3);
+        qDebug() << __func__ << "offset to number of dev fields" << offsetToNumberOfDevFields;
+        if (bytesAvailable<T>() < offsetToNumberOfDevFields) {
+            return false; // Not enough bytes.
+        }
+        numberOfDevFields = peekByte<T>(offsetToNumberOfDevFields);
     }
-    const int numberOfDevFields = peekByte<T>(offsetToNumberOfDevFields);
-    const int recordSize = 6 + (numberOfFields * 3) + 1 + (numberOfDevFields * 3);
+    const int recordSize = 6 + (numberOfFields * 3) + (hasDevFields ? 1 + (numberOfDevFields * 3) : 0);
     qDebug() << __func__ << "number of dev fields" << numberOfDevFields;
     qDebug() << __func__ << "record size" << recordSize;
     const QByteArray record = readBytes<T>(recordSize);
     if (record.isEmpty()) {
         return false; // Not enough bytes.
     }
-    const quint8 arch = record.at(2);
-    qDebug() << __func__ << "architecture" << arch;
+
+    // Parse the rest of the definition record.
+    const quint8 architecture = record.at(2);
+    qDebug() << __func__ << "architecture" << architecture;
     qDebug() << record.mid(3,2);
-    const quint16 msgNum = (arch)
+    const quint16 msgNum = (architecture)
         ? qFromBigEndian<quint16>(record.mid(3,2))
         : qFromLittleEndian<quint16>(record.mid(3,2));
     qDebug() << __func__ << "header" << (quint8)record.at(0);
@@ -383,7 +394,28 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     qDebug() << __func__ << "msgNum" << msgNum;
 
     // Parse the definition fields.
-    // ...
+    for (int i=0; i < numberOfFields; ++i) {
+        const int pos = 6 + (i * 3);
+        qDebug() << __func__ << "field" << i << "defn#"    << (quint8)record.at(pos);
+        qDebug() << __func__ << "field" << i << "size"     << (quint8)record.at(pos+1);
+        qDebug() << __func__ << "field" << i << "baseType" << (quint8)record.at(pos+2);
+    }
+
+    // Parse the definition fields.
+    Q_ASSERT(hasDevFields || (numberOfDevFields == 0));
+    for (int i=0; i < numberOfDevFields; ++i) {
+        const int pos = 6 + (numberOfFields * 3) + 1 + (i * 3);
+        qDebug() << __func__ << "dev field" << i << "defn#"     << (quint8)record.at(pos);
+        qDebug() << __func__ << "dev field" << i << "size"      << (quint8)record.at(pos+1);
+        qDebug() << __func__ << "dev field" << i << "dataIndex" << (quint8)record.at(pos+2);
+    }
+
+    DataDefinition defn;
+//    defn.architecture = (architecture) ? Architecture::BigEndian : Architecture::LittleEndian;
+//    defn.globalMessageNumber = static_cast<MesgNum>(msgNum);
+//    defn.fieldDefinitions = ...
+//    defn.developerFieldDefinitions = ...
+    dataDefinitions.insert(localMessageType, defn);
     return false; /// @todo Implement!
 }
 

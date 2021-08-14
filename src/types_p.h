@@ -27,7 +27,7 @@
 QTFIT_BEGIN_NAMESPACE
 
 enum class Architecture : quint8 {
-    LitteEndian = 0,
+    LittleEndian = 0,
     BigEndian = 1,
 };
 
