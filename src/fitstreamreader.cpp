@@ -383,40 +383,43 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     }
 
     // Parse the rest of the definition record.
-    const quint8 architecture = record.at(2);
-    qDebug() << __func__ << "architecture" << architecture;
+    DataDefinition defn;
+    defn.architecture = static_cast<Architecture>(record.at(2));
+    qDebug() << __func__ << "architecture" << (int)defn.architecture;
     qDebug() << record.mid(3,2);
-    const quint16 msgNum = (architecture)
+    defn.globalMessageNumber = static_cast<MesgNum>((defn.architecture == Architecture::BigEndian)
         ? qFromBigEndian<quint16>(record.mid(3,2))
-        : qFromLittleEndian<quint16>(record.mid(3,2));
+        : qFromLittleEndian<quint16>(record.mid(3,2)));
     qDebug() << __func__ << "header" << (quint8)record.at(0);
     qDebug() << __func__ << "reserved" << (quint8)record.at(1);
-    qDebug() << __func__ << "msgNum" << msgNum;
+    qDebug() << __func__ << "msgNum" << (int)defn.globalMessageNumber;
 
     // Parse the definition fields.
     for (int i=0; i < numberOfFields; ++i) {
         const int pos = 6 + (i * 3);
-        qDebug() << __func__ << "field" << i << "defn#"    << (quint8)record.at(pos);
-        qDebug() << __func__ << "field" << i << "size"     << (quint8)record.at(pos+1);
-        qDebug() << __func__ << "field" << i << "baseType" << (quint8)record.at(pos+2);
+        FieldDefinition field;
+        field.number = record.at(pos);
+        field.size = record.at(pos+1);
+        field.type = record.at(pos+2);
+        defn.fieldDefinitions.append(field);
     }
+    Q_ASSERT(defn.fieldDefinitions.size() == numberOfFields);
 
     // Parse the definition fields.
     Q_ASSERT(hasDevFields || (numberOfDevFields == 0));
     for (int i=0; i < numberOfDevFields; ++i) {
         const int pos = 6 + (numberOfFields * 3) + 1 + (i * 3);
-        qDebug() << __func__ << "dev field" << i << "defn#"     << (quint8)record.at(pos);
-        qDebug() << __func__ << "dev field" << i << "size"      << (quint8)record.at(pos+1);
-        qDebug() << __func__ << "dev field" << i << "dataIndex" << (quint8)record.at(pos+2);
+        DeveloperFieldDefinition field;
+        field.fieldNumber = record.at(pos);
+        field.size = record.at(pos+1);
+        field.devDataIndex = record.at(pos+2);
+        defn.developerFieldDefinitions.append(field);
     }
+    Q_ASSERT(defn.developerFieldDefinitions.size() == numberOfDevFields);
 
-    DataDefinition defn;
-//    defn.architecture = (architecture) ? Architecture::BigEndian : Architecture::LittleEndian;
-//    defn.globalMessageNumber = static_cast<MesgNum>(msgNum);
-//    defn.fieldDefinitions = ...
-//    defn.developerFieldDefinitions = ...
+    // Record the definition data for future Data Messages.
     dataDefinitions.insert(localMessageType, defn);
-    return false; /// @todo Implement!
+    return true;
 }
 
 template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
