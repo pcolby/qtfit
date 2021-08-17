@@ -1,0 +1,19 @@
+name: Code Generator
+
+on: [push, pull_request]
+
+jobs:
+  CodeGen:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Qt
+      run: sudo apt install libgrantlee5-dev
+    - name: Build
+      run: |
+        cmake -D 'BUILD_CODEGEN:BOOLEAN=true' -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" codegen
+    - name: Generate Code
+      run: "$RUNNER_TEMP/codegen/codegen" --force
+    - name: Check for Changes
+      run: '[[ -z $(git -C "$GITHUB_WORKSPACE" status --porcelain) ]]'
