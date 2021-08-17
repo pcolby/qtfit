@@ -25,7 +25,7 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-class DataDefinition;
+struct DataDefinition;
 class FitDataMessagePrivate;
 
 class QTFIT_EXPORT FitDataMessage {
