@@ -53,14 +53,18 @@ Generator::Generator(const QDir &outputDir)
 
 int Generator::generate()
 {
+    Grantlee::Context context;
+    context.insert(QSL("ProjectName"), QSL("QtFit"));
     int counts[2];
-    if ((counts[0] = processMessages()) < 0) return counts[0];
-    if ((counts[1] = processTypes()) < 0) return counts[1];
+    if ((counts[0] = processMessages(context)) < 0) return counts[0];
+    if ((counts[1] = processTypes(context)) < 0) return counts[1];
     return counts[0] + counts[1];
 }
 
-int Generator::processMessages()
+int Generator::processMessages(Grantlee::Context &context)
 {
+    Q_UNUSED(context)
+
     QFile file(QSL(":/fit-sdk/ProfileMessages.tsv"));
     if (!file.open(QFile::ReadOnly)) {
         qWarning() << "failed to open internal resource" << file.fileName();
@@ -76,7 +80,7 @@ int Generator::processMessages()
     return 0;//-1;
 }
 
-int Generator::processTypes()
+int Generator::processTypes(Grantlee::Context &context)
 {
     // Read all the lines of the Profile.xlsx Types tab.
     QFile file(QSL(":/fit-sdk/ProfileTypes.tsv"));
@@ -131,10 +135,13 @@ int Generator::processTypes()
     }
 
     // Generate the types header.
-    Grantlee::Context context;
-    context.insert(QSL("ProjectName"), QSL("QtFit"));
+    context.push();
     context.insert(QSL("enums"), enums);
-    return render(QSL("src/types.h"), context, outputDir.absoluteFilePath(QSL("src/types.h"))) ? 1 : -1;
+    const bool result =
+        render(QSL("src/fitdatamessages.cpp"), context, outputDir.absoluteFilePath(QSL("src/fitdatamessages.cpp")))
+     && render(QSL("src/types.h"), context, outputDir.absoluteFilePath(QSL("src/types.h")));
+    context.pop();
+    return result ? 2 : -1;
 }
 
 // Grantlee output stream that does *no* content escaping.

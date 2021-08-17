@@ -30,8 +30,8 @@ public:
     int generate();
 
 protected:
-    int processMessages();
-    int processTypes();
+    int processMessages(Grantlee::Context &context);
+    int processTypes(Grantlee::Context &context);
 
     bool render(const QString &templateName, Grantlee::Context &context,
                 const QString &outputPathName) const;

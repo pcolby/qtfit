@@ -7,6 +7,7 @@ add_library(QtFit SHARED
   fitdatamessage.cpp
   fitdatamessage.h
   fitdatamessage_p.h
+  fitdatamessages.cpp
   fitstreamreader.cpp
   fitstreamreader.h
   fitstreamreader_p.h

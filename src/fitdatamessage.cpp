@@ -66,27 +66,9 @@ bool FitDataMessage::isNull() const
     return d->isNull;
 }
 
-//! \todo Move this to a separate file, so it can be code-generated safely.
-//! \todo Consider moving this to the FitDataMessagePrivate class.
-#include "fileidmessage.h"
-FitDataMessage * FitDataMessage::fromData(const DataDefinition * const defn, const QByteArray &record)
-{
-    Q_ASSERT(defn);
-    FitDataMessage * message = nullptr;
-    switch (defn->globalMessageNumber) {
-    case MesgNum::FileId: message = new fit::FileIdMessage; break;
-    /// \todo Auto-generate case statements for all message types.
-    }
-    if (message) {
-        message->d_ptr->setFields(defn, record);
-    }
-    return message;
-}
-
 FitDataMessagePrivate::FitDataMessagePrivate(FitDataMessage * const q)
     : globalMessageNumber(static_cast<MesgNum>(0xFFFF)), isNull(true), q_ptr(q)
 {
-
 }
 
 FitDataMessagePrivate::~FitDataMessagePrivate()
