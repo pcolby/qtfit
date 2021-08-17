@@ -38,7 +38,10 @@ public:
     explicit FitDataMessagePrivate(FitDataMessage * const q);
     virtual ~FitDataMessagePrivate();
 
-    bool setFields(const QByteArray &dataRecord, const DataDefinition &definition);
+
+    static FitDataMessage fromDataRecord(const MesgNum globalMessageNumber, const QByteArray record);
+
+    bool setFields(const DataDefinition * const defn, const QByteArray &record);
 
 protected:
     FitDataMessage * const q_ptr; ///< Internal q-pointer.

@@ -24,12 +24,10 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-//FileIdMessage::FileIdMessage(const QByteArray dataRecord, const FieldDefinitions &fieldDefs, arch)
-//    //: FitDataMessage(0, data, defn) ///< @todo
-//{
+FileIdMessage::FileIdMessage() : FitDataMessage(new FileIdMessagePrivate(this))
+{
 
-//}
-
+}
 
 FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : FitDataMessagePrivate(q)
 {

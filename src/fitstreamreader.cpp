@@ -17,6 +17,7 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "fitdatamessage.h"
 #include "fitstreamreader.h"
 #include "fitstreamreader_p.h"
 
@@ -254,7 +255,7 @@ QVersionNumber FitStreamReader::protocolVersion() const
  *
  * \sa addData
  */
-FitDataMessage FitStreamReader::readNext()
+FitDataMessage * FitStreamReader::readNext()
 {
     Q_D(FitStreamReader);
     return (d->device == nullptr)
@@ -436,7 +437,7 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     return true;
 }
 
-template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
+template<class T> FitDataMessage * FitStreamReaderPrivate::parseDataMessage()
 {
     Q_ASSERT(bytesAvailable<T>());
     qDebug() << "parsing data message";
@@ -465,7 +466,7 @@ template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
     if (!dataDefinitions.contains(localMessageType)) {
         qWarning() << "No definition for local message type" << localMessageType;
         /// \todo Set error code.
-        return FitDataMessage(); // FIT data is corrupt; we cannot safely continue parsing.
+        return nullptr; // FIT data is corrupt; we cannot safely continue parsing.
     }
     const DataDefinition defn = dataDefinitions.value(localMessageType);
 
@@ -473,15 +474,14 @@ template<class T> FitDataMessage FitStreamReaderPrivate::parseDataMessage()
     qDebug() << __func__ << "record size" << defn.recordSize;
     if (defn.recordSize == 0) {
         qWarning() << "record size is zero"; // Not really sure what to do here.
-        return FitDataMessage();
+        return nullptr;
     }
     const QByteArray record = readBytes<T>(defn.recordSize+1);
     if (record.isEmpty()) {
-        return FitDataMessage(); // Not enough bytes.
+        return nullptr; // Not enough bytes.
     }
     qDebug() << "record" << record.mid(1);
-  //FitDataMessage::fromRecordData(defn.globalMessageNumber, record.mid(1)); ///< \a todo
-    return FitDataMessage(); /// @todo Implement!
+    return FitDataMessage::fromData(&defn, record.mid(1));
 }
 
 template<> quint8 FitStreamReaderPrivate::peekByte<QByteArray>(const int pos) const
@@ -515,22 +515,22 @@ template<class T> QByteArray FitStreamReaderPrivate::readFileHeader()
     return (bytesAvailable<T>()) ? readBytes<T>(peekByte<T>()) : QByteArray();
 }
 
-template<class T> FitDataMessage FitStreamReaderPrivate::readNextDataMessage()
+template<class T> FitDataMessage * FitStreamReaderPrivate::readNextDataMessage()
 {
     // If we haven't parsed the FIT File Header yet, do so now.
     if ((protocolVersion.isNull() && (!parseFileHeader<T>()))) {
-        return FitDataMessage(); // Need a way to return a null message.
+        return nullptr;
     }
 
     // Process all FIT Data Records until we get a FIT Data Message (or run out of bytes).
     while (bytesAvailable<T>()) { // At least one byte, for the next data record header byte.
         const quint8 recordHeader = peekByte<T>();
         if (isDefinitionMessage(recordHeader)) {
-            if (!parseDefinitionMessage<T>()) return FitDataMessage();
+            if (!parseDefinitionMessage<T>()) return nullptr;
             // Not returning here; we'll continue processing until we get a FIT Data Message.
         } else return parseDataMessage<T>();
     }
-    return FitDataMessage();
+    return nullptr;
 }
 
 bool FitStreamReaderPrivate::isDefinitionMessage(const quint8 recordHeader)

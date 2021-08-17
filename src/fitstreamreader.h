@@ -51,7 +51,7 @@ public:
 //    quint32 expectedDataSize() const;
 //    quint32 expectedChecksum() const;
 
-    FitDataMessage readNext(); // Will consume the file header, defn records, and data message headers.
+    FitDataMessage * readNext(); // Will consume the file header, defn records, and data message headers.
 
 protected:
     /// @cond internal

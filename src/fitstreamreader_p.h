@@ -20,7 +20,6 @@
 #ifndef FITSTREAMREADER_P_H
 #define FITSTREAMREADER_P_H
 
-#include "fitdatamessage.h"
 #include "types_p.h"
 
 #include <QByteArray>
@@ -30,6 +29,7 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+class FitDataMessage;
 class FitStreamReader;
 
 class FitStreamReaderPrivate {
@@ -54,11 +54,11 @@ protected:
     template<class T> size_t bytesAvailable() const;
     template<class T> bool parseFileHeader();
     template<class T> bool parseDefinitionMessage();
-    template<class T> FitDataMessage parseDataMessage();
+    template<class T> FitDataMessage * parseDataMessage();
     template<class T> quint8 peekByte(const int pos=0) const;
     template<class T> QByteArray readBytes(const size_t size);
     template<class T> QByteArray readFileHeader();
-    template<class T> FitDataMessage readNextDataMessage();
+    template<class T> FitDataMessage * readNextDataMessage();
 
     static inline bool isDefinitionMessage(const quint8 recordHeader);
 

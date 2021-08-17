@@ -66,6 +66,23 @@ bool FitDataMessage::isNull() const
     return d->isNull;
 }
 
+//! \todo Move this to a separate file, so it can be code-generated safely.
+//! \todo Consider moving this to the FitDataMessagePrivate class.
+#include "fileidmessage.h"
+FitDataMessage * FitDataMessage::fromData(const DataDefinition * const defn, const QByteArray &record)
+{
+    Q_ASSERT(defn);
+    FitDataMessage * message = nullptr;
+    switch (defn->globalMessageNumber) {
+    case MesgNum::FileId: message = new fit::FileIdMessage; break;
+    /// \todo Auto-generate case statements for all message types.
+    }
+    if (message) {
+        message->d_ptr->setFields(defn, record);
+    }
+    return message;
+}
+
 FitDataMessagePrivate::FitDataMessagePrivate(FitDataMessage * const q)
     : globalMessageNumber(static_cast<MesgNum>(0xFFFF)), isNull(true), q_ptr(q)
 {
@@ -77,12 +94,12 @@ FitDataMessagePrivate::~FitDataMessagePrivate()
 
 }
 
-bool FitDataMessagePrivate::setFields(const QByteArray &dataRecord, const DataDefinition &definition)
+bool FitDataMessagePrivate::setFields(const DataDefinition * const defn, const QByteArray &record)
 {
-    Q_ASSERT(definition.globalMessageNumber == this->globalMessageNumber);
+    Q_ASSERT(defn->globalMessageNumber == this->globalMessageNumber);
     int dataOffset=0; // Next field's offset within dataRecord.
-    for (const FieldDefinition &field: definition.fieldDefinitions) {
-        if (!setField(field.number, dataRecord.mid(dataOffset,field.size), field.type))
+    for (const FieldDefinition &field: defn->fieldDefinitions) {
+        if (!setField(field.number, record.mid(dataOffset,field.size), field.type))
             return false;
         dataOffset += field.size;
     }

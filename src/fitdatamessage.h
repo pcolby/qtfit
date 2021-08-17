@@ -25,6 +25,7 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+class DataDefinition;
 class FitDataMessagePrivate;
 
 class QTFIT_EXPORT FitDataMessage {
@@ -37,6 +38,8 @@ public:
     MesgNum globalMessageNumber() const;
     bool isNull() const;
 //    bool isValid() const; ///< @todo?
+
+    static FitDataMessage * fromData(const DataDefinition * const defn, const QByteArray &record);
 
 protected:
     /// @cond internal

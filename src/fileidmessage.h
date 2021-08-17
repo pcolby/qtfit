@@ -24,13 +24,13 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+class DataDefinition;
 class FileIdMessagePrivate;
 
 class QTFIT_EXPORT FileIdMessage : public FitDataMessage {
 
 public:
     FileIdMessage();
-    explicit FileIdMessage(const QByteArray &data);
     ~FileIdMessage();
 
     /// @todo Generate getters/setters.
