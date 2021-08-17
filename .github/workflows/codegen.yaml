@@ -12,7 +12,7 @@ jobs:
     - name: Build
       run: |
         cmake -D 'BUILD_CODEGEN:BOOLEAN=true' -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" codegen
+        cmake --build "$RUNNER_TEMP" --target codegen
     - name: Generate Code
       run: '"$RUNNER_TEMP/codegen/codegen" --force'
     - name: Check for Changes
