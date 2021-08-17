@@ -91,7 +91,8 @@ $(document).ready(function(){initNavTree('fitstreamreader_8cpp.html',''); initRe
 <div class="title">fitstreamreader.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="fitstreamreader_8h_source.html">fitstreamreader.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="fitdatamessage_8h_source.html">fitdatamessage.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fitstreamreader_8h_source.html">fitstreamreader.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fitstreamreader__p_8h_source.html">fitstreamreader_p.h</a>&quot;</code><br />
 <code>#include &lt;QDebug&gt;</code><br />
 <code>#include &lt;QBitArray&gt;</code><br />
@@ -127,7 +128,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Calculates a checksum, as per the algorithm used by FIT file headers.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Move this somewhere appropriate (probably <a class="el" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>).</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Move this somewhere appropriate (probably <a class="el" href="classFitStreamReaderPrivate.html">FitStreamReaderPrivate</a>).</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>FIT file header to calculate the checksum for.</td></tr>
@@ -136,24 +137,24 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>16-bit checksum for <em>data</em>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00198">198</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                            {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    quint16 checksum=0;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<span class="keywordtype">byte</span>: data) {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> quint16 crcTable[16] = {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            0x0000, 0xCC01, 0xD801, 0x1400, 0xF001, 0x3C00, 0x2800, 0xE401,</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            0xA001, 0x6C00, 0x7800, 0xB401, 0x5000, 0x9C01, 0x8801, 0x4400</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        };</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> byteShift=0; byteShift&lt;=4; byteShift+=4) {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keyword">const</span> quint16 tmp = crcTable[checksum &amp; 0xF];</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            checksum = (checksum &gt;&gt; 4) &amp; 0x0FFF;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            checksum = checksum ^ tmp ^ crcTable[(<span class="keywordtype">byte</span> &gt;&gt; byteShift) &amp; 0xF];</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">return</span> checksum;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="fitstreamreader_8cpp_source.html#l00199">199</a> of file <a class="el" href="fitstreamreader_8cpp_source.html">fitstreamreader.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                            {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    quint16 checksum=0;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<span class="keywordtype">byte</span>: data) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> quint16 crcTable[16] = {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            0x0000, 0xCC01, 0xD801, 0x1400, 0xF001, 0x3C00, 0x2800, 0xE401,</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            0xA001, 0x6C00, 0x7800, 0xB401, 0x5000, 0x9C01, 0x8801, 0x4400</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        };</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> byteShift=0; byteShift&lt;=4; byteShift+=4) {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keyword">const</span> quint16 tmp = crcTable[checksum &amp; 0xF];</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            checksum = (checksum &gt;&gt; 4) &amp; 0x0FFF;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            checksum = checksum ^ tmp ^ crcTable[(<span class="keywordtype">byte</span> &gt;&gt; byteShift) &amp; 0xF];</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">return</span> checksum;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00287">FitStreamReaderPrivate::parseFileHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00288">FitStreamReaderPrivate::parseFileHeader()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

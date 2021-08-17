@@ -14,6 +14,7 @@ var files_dup =
     [ "fitdatamessage_p.h", "fitdatamessage__p_8h.html", [
       [ "FitDataMessagePrivate", "classFitDataMessagePrivate.html", "classFitDataMessagePrivate" ]
     ] ],
+    [ "fitdatamessages.cpp", "fitdatamessages_8cpp.html", null ],
     [ "fitstreamreader.cpp", "fitstreamreader_8cpp.html", "fitstreamreader_8cpp" ],
     [ "fitstreamreader.h", "fitstreamreader_8h.html", [
       [ "FitStreamReader", "classFitStreamReader.html", "classFitStreamReader" ]

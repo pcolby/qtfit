@@ -1,13 +1,14 @@
 <map id="types.h" name="types.h">
-<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="180,5,251,32"/>
-<area shape="rect" id="node2" href="$fitdatamessage_8h.html" title=" " alt="" coords="301,80,436,107"/>
-<area shape="rect" id="node9" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="5,155,156,181"/>
-<area shape="rect" id="node11" href="$types__p_8h.html" title=" " alt="" coords="173,80,258,107"/>
-<area shape="rect" id="node3" href="$fileidmessage_8h.html" title=" " alt="" coords="521,229,646,256"/>
-<area shape="rect" id="node5" href="$fitdatamessage_8cpp.html" title=" " alt="" coords="172,229,323,256"/>
-<area shape="rect" id="node6" href="$fitstreamreader_8h.html" title=" " alt="" coords="407,155,541,181"/>
-<area shape="rect" id="node8" href="$fitstreamreader__p_8h.html" title=" " alt="" coords="180,155,331,181"/>
-<area shape="rect" id="node4" href="$fileidmessage_8cpp.html" title=" " alt="" coords="260,304,400,331"/>
-<area shape="rect" id="node7" href="$fitstreamreader_8cpp.html" title=" " alt="" coords="347,229,497,256"/>
-<area shape="rect" id="node10" href="$fileidmessage__p_8h.html" title=" " alt="" coords="8,229,148,256"/>
+<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="325,5,396,32"/>
+<area shape="rect" id="node2" href="$fitdatamessage_8h.html" title=" " alt="" coords="435,80,569,107"/>
+<area shape="rect" id="node9" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="169,155,320,181"/>
+<area shape="rect" id="node11" href="$types__p_8h.html" title=" " alt="" coords="318,80,403,107"/>
+<area shape="rect" id="node3" href="$fileidmessage_8h.html" title=" " alt="" coords="446,155,571,181"/>
+<area shape="rect" id="node5" href="$fitdatamessages_8cpp.html" title=" " alt="" coords="345,229,502,256"/>
+<area shape="rect" id="node6" href="$fitdatamessage_8cpp.html" title=" " alt="" coords="169,229,320,256"/>
+<area shape="rect" id="node7" href="$fitstreamreader_8cpp.html" title=" " alt="" coords="763,229,913,256"/>
+<area shape="rect" id="node8" href="$fitstreamreader_8h.html" title=" " alt="" coords="771,155,905,181"/>
+<area shape="rect" id="node4" href="$fileidmessage_8cpp.html" title=" " alt="" coords="237,304,377,331"/>
+<area shape="rect" id="node10" href="$fileidmessage__p_8h.html" title=" " alt="" coords="5,229,145,256"/>
+<area shape="rect" id="node12" href="$fitstreamreader__p_8h.html" title=" " alt="" coords="596,155,747,181"/>
 </map>

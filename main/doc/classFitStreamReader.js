@@ -10,6 +10,6 @@ var classFitStreamReader =
     [ "device", "classFitStreamReader.html#ab5b8b07fb63033dfdd9a118b24a67291", null ],
     [ "profileVersion", "classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c", null ],
     [ "protocolVersion", "classFitStreamReader.html#affe4e2c157a4a15b436ca8f0a9d07b88", null ],
-    [ "readNext", "classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70", null ],
+    [ "readNext", "classFitStreamReader.html#a5a075c9f4ce1cd5ae7bf5503557538c3", null ],
     [ "setDevice", "classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be", null ]
 ];

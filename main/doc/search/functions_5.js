@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readnext_343',['readNext',['../classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70',1,'FitStreamReader']]]
+  ['readnext_345',['readNext',['../classFitStreamReader.html#a5a075c9f4ce1cd5ae7bf5503557538c3',1,'FitStreamReader']]]
 ];

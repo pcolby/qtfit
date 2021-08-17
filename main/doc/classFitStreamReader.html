@@ -132,13 +132,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5bf4325a94cfd534e2752fc06317e98c"><td class="memItemLeft" align="right" valign="top">QVersionNumber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c">profileVersion</a> () const</td></tr>
 <tr class="memdesc:a5bf4325a94cfd534e2752fc06317e98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the profile version read from the FIT file header, otherwise a null QVersionNumber.  <a href="classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c">More...</a><br /></td></tr>
 <tr class="separator:a5bf4325a94cfd534e2752fc06317e98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed6132918de0394f6def37faeeb0f70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFitDataMessage.html">FitDataMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70">readNext</a> ()</td></tr>
-<tr class="memdesc:afed6132918de0394f6def37faeeb0f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next FIT data message from the underlying stream, or a null data message if none could be read.  <a href="classFitStreamReader.html#afed6132918de0394f6def37faeeb0f70">More...</a><br /></td></tr>
-<tr class="separator:afed6132918de0394f6def37faeeb0f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a075c9f4ce1cd5ae7bf5503557538c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFitDataMessage.html">FitDataMessage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitStreamReader.html#a5a075c9f4ce1cd5ae7bf5503557538c3">readNext</a> ()</td></tr>
+<tr class="memdesc:a5a075c9f4ce1cd5ae7bf5503557538c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next FIT data message from the underlying stream, or a null data message if none could be read.  <a href="classFitStreamReader.html#a5a075c9f4ce1cd5ae7bf5503557538c3">More...</a><br /></td></tr>
+<tr class="separator:a5a075c9f4ce1cd5ae7bf5503557538c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classFitStreamReader.html" title="The FitStreamReader class provides a streaming parser for reading Garmin FIT files.">FitStreamReader</a> class provides a streaming parser for reading Garmin FIT files. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Mention that this is a lower-level class, a users should probably use some yet-to-be FitFile class, that wraps up the calls to this one.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Mention that this is a lower-level class, a users should probably use some yet-to-be FitFile class, that wraps up the calls to this one.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://developer.garmin.com/fit/protocol/">https://developer.garmin.com/fit/protocol/</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a800d071652f0d6e7a806f63a4514d620"></a>
@@ -289,9 +289,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns <code>true</code> if the reader has reached the end of the underlying data or device, or an error has occurred. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Implement this method.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Implement this method.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the reader has reached the end of the underlying data or device. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Implement this method. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Implement this method. </dd></dl>
 
 </div>
 </div>
@@ -391,14 +391,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="afed6132918de0394f6def37faeeb0f70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afed6132918de0394f6def37faeeb0f70">&#9670;&nbsp;</a></span>readNext()</h2>
+<a id="a5a075c9f4ce1cd5ae7bf5503557538c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a075c9f4ce1cd5ae7bf5503557538c3">&#9670;&nbsp;</a></span>readNext()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFitDataMessage.html">FitDataMessage</a> FitStreamReader::readNext </td>
+          <td class="memname"><a class="el" href="classFitDataMessage.html">FitDataMessage</a> * FitStreamReader::readNext </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -408,7 +408,7 @@ Here is the caller graph for this function:</div>
 
 <p>Returns the next FIT data message from the underlying stream, or a null data message if none could be read. </p>
 <p>If FIT header has not been read yet, it will be read first. If any FIT definition messages are found, they will be parsed, and kept in a dictionary, to used for interpretation of subsequent data messages. Reading will continue until the next FIT data message is found, or no more bytes are available for reading.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Document how the caller should distinguish errors, from more-data-needed.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Document how the caller should distinguish errors, from more-data-needed.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the next FIT data message, or a null data message.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd></dl>
 

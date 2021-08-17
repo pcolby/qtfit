@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classFitDataMessagePrivate.html#a0ea982eb23d4acb810f611a364b240ec" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classFitDataMessagePrivate.html#af88ba07d7aacda7469539d5a0629162d" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 130,-30.5 130,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitDataMessagePrivate</text>
 <text text-anchor="middle" x="65" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::setFields</text>

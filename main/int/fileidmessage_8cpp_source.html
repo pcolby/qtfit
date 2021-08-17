@@ -115,51 +115,52 @@ $(document).ready(function(){initNavTree('fileidmessage_8cpp_source.html',''); i
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//FileIdMessage::FileIdMessage(const QByteArray dataRecord, const FieldDefinitions &amp;fieldDefs, arch)</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//    //: FitDataMessage(0, data, defn) ///&lt; @todo</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//{</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classFileIdMessagePrivate.html#a2203982923a68ee7458dcfbb15955dc8">   34</a></span>&#160;<a class="code" href="classFileIdMessagePrivate.html#a9e7398473dad396210e933ba4d7c129b">FileIdMessagePrivate::FileIdMessagePrivate</a>(<a class="code" href="classFileIdMessage.html">FileIdMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classFileIdMessage.html#a92f628913fbdae0cd62b72123b033f08">   27</a></span>&#160;<a class="code" href="classFileIdMessage.html#a92f628913fbdae0cd62b72123b033f08">FileIdMessage::FileIdMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classFileIdMessagePrivate.html">FileIdMessagePrivate</a>(this))</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classFileIdMessagePrivate.html#ab7f5e37b5967aac7da1f9675d655c8f7">   32</a></span>&#160;<a class="code" href="classFileIdMessagePrivate.html#a9e7398473dad396210e933ba4d7c129b">FileIdMessagePrivate::FileIdMessagePrivate</a>(<a class="code" href="classFileIdMessage.html">FileIdMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classFileIdMessagePrivate.html#a91395c967fe03b16fc3b77420082c419">   39</a></span>&#160;<a class="code" href="classFileIdMessagePrivate.html#a91395c967fe03b16fc3b77420082c419">FileIdMessagePrivate::~FileIdMessagePrivate</a>()</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/// @todo Generate implementation.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438">   45</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438">FileIdMessagePrivate::setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray data, <span class="keywordtype">int</span> baseType)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//    switch fieldId {</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//        default:</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//            return false;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classFileIdMessagePrivate.html#a91395c967fe03b16fc3b77420082c419">   37</a></span>&#160;<a class="code" href="classFileIdMessagePrivate.html#a91395c967fe03b16fc3b77420082c419">FileIdMessagePrivate::~FileIdMessagePrivate</a>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/// @todo Generate implementation.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438">   43</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438">FileIdMessagePrivate::setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray data, <span class="keywordtype">int</span> baseType)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//    switch fieldId {</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//        default:</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//            return false;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
-<div class="ttc" id="aclassFileIdMessagePrivate_html_a91395c967fe03b16fc3b77420082c419"><div class="ttname"><a href="classFileIdMessagePrivate.html#a91395c967fe03b16fc3b77420082c419">FileIdMessagePrivate::~FileIdMessagePrivate</a></div><div class="ttdeci">virtual ~FileIdMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage_8cpp_source.html#l00039">fileidmessage.cpp:39</a></div></div>
+<div class="ttc" id="aclassFileIdMessagePrivate_html"><div class="ttname"><a href="classFileIdMessagePrivate.html">FileIdMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage__p_8h_source.html#l00029">fileidmessage_p.h:29</a></div></div>
+<div class="ttc" id="aclassFileIdMessagePrivate_html_a91395c967fe03b16fc3b77420082c419"><div class="ttname"><a href="classFileIdMessagePrivate.html#a91395c967fe03b16fc3b77420082c419">FileIdMessagePrivate::~FileIdMessagePrivate</a></div><div class="ttdeci">virtual ~FileIdMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage_8cpp_source.html#l00037">fileidmessage.cpp:37</a></div></div>
 <div class="ttc" id="aclassFileIdMessagePrivate_html_a9e7398473dad396210e933ba4d7c129b"><div class="ttname"><a href="classFileIdMessagePrivate.html#a9e7398473dad396210e933ba4d7c129b">FileIdMessagePrivate::FileIdMessagePrivate</a></div><div class="ttdeci">FileIdMessagePrivate()=delete</div></div>
-<div class="ttc" id="aclassFileIdMessagePrivate_html_aa1be506310d0b4ad57b05bc805384438"><div class="ttname"><a href="classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438">FileIdMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray data, int baseType) override</div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage_8cpp_source.html#l00045">fileidmessage.cpp:45</a></div></div>
-<div class="ttc" id="aclassFileIdMessage_html"><div class="ttname"><a href="classFileIdMessage.html">FileIdMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage_8h_source.html#l00029">fileidmessage.h:29</a></div></div>
+<div class="ttc" id="aclassFileIdMessagePrivate_html_aa1be506310d0b4ad57b05bc805384438"><div class="ttname"><a href="classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438">FileIdMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray data, int baseType) override</div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage_8cpp_source.html#l00043">fileidmessage.cpp:43</a></div></div>
+<div class="ttc" id="aclassFileIdMessage_html"><div class="ttname"><a href="classFileIdMessage.html">FileIdMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage_8h_source.html#l00030">fileidmessage.h:30</a></div></div>
+<div class="ttc" id="aclassFileIdMessage_html_a92f628913fbdae0cd62b72123b033f08"><div class="ttname"><a href="classFileIdMessage.html#a92f628913fbdae0cd62b72123b033f08">FileIdMessage::FileIdMessage</a></div><div class="ttdeci">FileIdMessage()</div><div class="ttdef"><b>Definition:</b> <a href="fileidmessage_8cpp_source.html#l00027">fileidmessage.cpp:27</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
+<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="afileidmessage_8h_html"><div class="ttname"><a href="fileidmessage_8h.html">fileidmessage.h</a></div></div>
 <div class="ttc" id="afileidmessage__p_8h_html"><div class="ttname"><a href="fileidmessage__p_8h.html">fileidmessage_p.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
