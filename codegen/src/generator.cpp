@@ -71,7 +71,7 @@ int Generator::processMessages(Grantlee::Context &context)
         qWarning() << "failed to open internal resource" << file.fileName();
         return -1;
     }
-    const QList<QByteArray> lines = file.readAll().split('\n');
+    const QList<QByteArray> lines = file.readAll().split('\n').mid(1);
     if (!lines.last().isEmpty()) {
         qWarning() << "trailing non-LF-terminated line in" << file.fileName();
         return -1;

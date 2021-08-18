@@ -47,7 +47,6 @@ target_sources(QtFit
   PUBLIC  magnetometerdatamessage.h
   PUBLIC  memoglobmessage.h
   PUBLIC  mesgcapabilitiesmessage.h
-  PUBLIC  messagenamemessage.h
   PUBLIC  metzonemessage.h
   PUBLIC  monitoringinfomessage.h
   PUBLIC  monitoringmessage.h
@@ -135,7 +134,6 @@ target_sources(QtFit
   PRIVATE magnetometerdatamessage.cpp
   PRIVATE memoglobmessage.cpp
   PRIVATE mesgcapabilitiesmessage.cpp
-  PRIVATE messagenamemessage.cpp
   PRIVATE metzonemessage.cpp
   PRIVATE monitoringinfomessage.cpp
   PRIVATE monitoringmessage.cpp
@@ -223,7 +221,6 @@ target_sources(QtFit
   PRIVATE magnetometerdatamessage_p.h
   PRIVATE memoglobmessage_p.h
   PRIVATE mesgcapabilitiesmessage_p.h
-  PRIVATE messagenamemessage_p.h
   PRIVATE metzonemessage_p.h
   PRIVATE monitoringinfomessage_p.h
   PRIVATE monitoringmessage_p.h
