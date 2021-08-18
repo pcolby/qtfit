@@ -17,8 +17,13 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef FILEIDMESSAGE_P_H
-#define FILEIDMESSAGE_P_H
+/*!
+ * \file
+ * \note This file is automatcially generated. Any changes here are likely to be overwritten.
+ */
+
+#ifndef QTFIT_FILEIDMESSAGE_P_H
+#define QTFIT_FILEIDMESSAGE_P_H
 
 #include "fitdatamessage_p.h"
 
@@ -30,18 +35,9 @@ class FileIdMessagePrivate : public FitDataMessagePrivate {
 
 public:
     /// @todo Generate members.
-//    static int qMetaTypeId;
-//    quint8 type;
-//    quint16 manufacturer; // Make enum.
-//    quint16 product;
-//    quint32 serialNumber;
-//    QDateTime timeCreated;
-//    quint16 number;
-//    QString productName;
 
     FileIdMessagePrivate() = delete;
     explicit FileIdMessagePrivate(FileIdMessage * const q);
-
     virtual ~FileIdMessagePrivate();
 
 protected:
@@ -56,4 +52,4 @@ private:
 
 QTFIT_END_NAMESPACE
 
-#endif // FILEIDMESSAGE_P_H
+#endif // QTFIT_FILEIDMESSAGE_P_H

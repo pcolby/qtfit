@@ -39,6 +39,9 @@ protected:
     bool render(const QString &templateName, Grantlee::Context &context,
                 const QString &outputDirName, const QString &outputFileName) const;
 
+    bool renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
+                          const QString &outputPathName, const QString className);
+
     static QString safeEnumLabel(const QString &string);
     static QString toCamelCase(const QString &string);
 

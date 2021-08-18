@@ -16,6 +16,8 @@ add_library(QtFit SHARED
   types_p.h
 )
 
+include(fitdatamessages.cmake)
+
 target_link_libraries(QtFit PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 
 target_compile_definitions(QtFit PRIVATE QTFIT_LIBRARY)

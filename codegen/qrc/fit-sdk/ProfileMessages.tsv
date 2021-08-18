@@ -449,16 +449,8 @@ lap
 	8	total_timer_time	uint32			1000		s					Timer Time (excludes pauses)		1
 	9	total_distance	uint32			100		m							1
 	10	total_cycles	uint32					cycles							1
-		total_strides	uint32					strides			"sport,
-sport"	"running,
-walking"			1
-		total_strokes	uint32					strokes			"sport,
-sport,
-sport,
-sport"	"cycling,
-swimming,
-rowing,
-stand_up_paddleboarding"			1
+		total_strides	uint32					strides			sport,sport	running,walking			1
+		total_strokes	uint32					strokes			sport,sport,sport,sport	cycling,swimming,rowing,stand_up_paddleboarding			1
 	11	total_calories	uint16					kcal							1
 	12	total_fat_calories	uint16					kcal					If New Leaf		1
 	13	avg_speed	uint16		enhanced_avg_speed	1000		m/s	16						1
@@ -594,12 +586,7 @@ record
 	5	distance	uint32			100		m							1
 	6	speed	uint16		enhanced_speed	1000		m/s	16						1
 	7	power	uint16					watts							1
-	8	compressed_speed_distance	byte	[3]	"speed,
-distance"	"100,
-16"		"m/s,
-m"	"12,
-12"	"0,
-1"					1
+	8	compressed_speed_distance	byte	[3]	speed,distance	100,16		m/s,m	12,12	0,1					1
 	9	grade	sint16			100		%							1
 	10	resistance	uint8										Relative. 0 is none  254 is Max.		1
 	11	time_from_course	sint32			1000		s							1
@@ -687,15 +674,7 @@ event
 		calorie_duration_alert	uint32					calories			event	calorie_duration_alert			1
 		fitness_equipment_state	fitness_equipment_state								event	fitness_equipment			1
 		sport_point	uint32		score,opponent_score	1,1			16,16		event	sport_point			1
-		gear_change_data	uint32		"rear_gear_num,
-rear_gear,
-front_gear_num,
-front_gear"	1,1,1,1			"8,
-8,
-8,
-8"		"event,
-event"	"front_gear_change,
-rear_gear_change"			1
+		gear_change_data	uint32		rear_gear_num,rear_gear,front_gear_num,front_gear	1,1,1,1			8,8,8,8		event,event	front_gear_change,rear_gear_change			1
 		rider_position	rider_position_type								event	rider_position_change	Indicates the rider position value.		
 		comm_timeout	comm_timeout_type								event	comm_timeout			
 		radar_threat_alert	uint32		radar_threat_level_max,radar_threat_count	1,1			8,8		event	radar_threat_alert	The first byte is the radar_threat_level_max, the second byte is the radar_threat_count, and the last 16 bits are reserved for future use and should be set to FFFF.		1
@@ -1122,12 +1101,8 @@ workout_step
 		repeat_time	uint32			1000		s			duration_type	repeat_until_time			1
 		repeat_distance	uint32			100		m			duration_type	repeat_until_distance			1
 		repeat_calories	uint32					calories			duration_type	repeat_until_calories			1
-		repeat_hr	workout_hr					% or bpm			"duration_type,
-duration_type"	"repeat_until_hr_less_than,
-repeat_until_hr_greater_than"			1
-		repeat_power	workout_power					% or watts			"duration_type,
-duration_type"	"repeat_until_power_less_than,
-repeat_until_power_greater_than"			1
+		repeat_hr	workout_hr					% or bpm			duration_type,duration_type	repeat_until_hr_less_than,repeat_until_hr_greater_than			1
+		repeat_power	workout_power					% or watts			duration_type,duration_type	repeat_until_power_less_than,repeat_until_power_greater_than			1
 		target_stroke_type	swim_stroke								target_type	swim_stroke			1
 	5	custom_target_value_low	uint32												1
 		custom_target_speed_low	uint32			1000		m/s			target_type	speed			1
@@ -1222,12 +1197,8 @@ monitoring
 	1	calories	uint16					kcal					Accumulated total calories.  Maintained by MonitoringReader for each activity_type.  See SDK documentation		1
 	2	distance	uint32			100		m					Accumulated distance.  Maintained by MonitoringReader for each activity_type.  See SDK documentation.		1
 	3	cycles	uint32			2		cycles					Accumulated cycles.  Maintained by MonitoringReader for each activity_type.  See SDK documentation.		1
-		steps	uint32			1		steps			"activity_type,
-activity_type"	"walking,
-running"			
-		strokes	uint32			2		strokes			"activity_type,
-activity_type"	"cycling,
-swimming"			1
+		steps	uint32			1		steps			activity_type,activity_type	walking,running			
+		strokes	uint32			2		strokes			activity_type,activity_type	cycling,swimming			1
 	4	active_time	uint32			1000		s							1
 	5	activity_type	activity_type												1
 	6	activity_subtype	activity_subtype												1
@@ -1259,44 +1230,7 @@ hr
 	1	time256	uint8		fractional_timestamp	256		s	8						1
 	6	filtered_bpm	uint8	[N]				bpm							1
 	9	event_timestamp	uint32	[N]		1024		s							1
-	10	event_timestamp_12	byte	[N]	"event_timestamp,
-event_timestamp,
-event_timestamp,
-event_timestamp,
-event_timestamp,
-event_timestamp,
-event_timestamp,
-event_timestamp,
-event_timestamp,
-event_timestamp
-"	"1024,
-1024,
-1024,
-1024,
-1024,
-1024,
-1024,
-1024,
-1024,
-1024"		s	"12,
-12,
-12,
-12,
-12,
-12,
-12,
-12,
-12,
-12"	"1,
-1,
-1,
-1,
-1,
-1,
-1,
-1,
-1,
-1"					1
+	10	event_timestamp_12	byte	[N]	event_timestamp,event_timestamp,event_timestamp,event_timestamp,event_timestamp,event_timestamp,event_timestamp,event_timestamp,event_timestamp,event_timestamp	1024,1024,1024,1024,1024,1024,1024,1024,1024,1024		s	12,12,12,12,12,12,12,12,12,12	1,1,1,1,1,1,1,1,1,1					1
 stress_level													Value from 1 to 100 calculated by FirstBeat		
 	0	stress_level_value	sint16												
 	1	stress_level_time	date_time					s					Time stress score was calculated		

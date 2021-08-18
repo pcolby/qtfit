@@ -17,14 +17,18 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef FILEIDMESSAGE_H
-#define FILEIDMESSAGE_H
+/*!
+ * \file
+ * \note This file is automatcially generated. Any changes here are likely to be overwritten.
+ */
+
+#ifndef QTFIT_FILEIDMESSAGE_H
+#define QTFIT_FILEIDMESSAGE_H
 
 #include "fitdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
-struct DataDefinition;
 class FileIdMessagePrivate;
 
 class QTFIT_EXPORT FileIdMessage : public FitDataMessage {
@@ -34,14 +38,6 @@ public:
     ~FileIdMessage();
 
     /// @todo Generate getters/setters.
-//    static int qMetaTypeId;
-//    quint8 type;
-//    quint16 manufacturer; // Make enum.
-//    quint16 product;
-//    quint32 serialNumber;
-//    QDateTime timeCreated;
-//    quint16 number;
-//    QString productName;
 
 protected:
     /// @cond internal
@@ -50,9 +46,10 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(FileIdMessage)
+  //Q_DISABLE_COPY(FileIdMessage)
 
 };
 
 QTFIT_END_NAMESPACE
 
-#endif // FILEIDMESSAGE_H
+#endif // QTFIT_FILEIDMESSAGE_H

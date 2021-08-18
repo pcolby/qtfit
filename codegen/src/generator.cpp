@@ -61,6 +61,7 @@ int Generator::generate()
     return counts[0] + counts[1];
 }
 
+/// \todo Generate test classes too.
 int Generator::processMessages(Grantlee::Context &context)
 {
     Q_UNUSED(context)
@@ -76,7 +77,54 @@ int Generator::processMessages(Grantlee::Context &context)
         return -1;
     }
 
-    qWarning() << "processMessages() not implemented";
+    // Generate class files for each of the FIT message types.
+    QStringList classNames;
+    QString messageName;
+    QVariantList fields;
+    int fileCount=0;
+    for (const QByteArray &line: lines) {
+        qDebug() << line;
+        const QList<QByteArray> columns = line.split('\t');
+        if ((columns.size() != 16) && (!line.isEmpty())) {
+            qWarning() << "line with unexpected" << columns.size() << "columns" << line;
+            return -1;
+        }
+
+        // If we're starting a new message.
+        if (((line.isEmpty()) || (!columns.at(0).isEmpty())) && (!messageName.isEmpty())) {
+            const QString className = toCamelCase(messageName) + QSL("Message");
+            classNames.append(className);
+            context.push();
+            context.insert(QSL("fields"), fields);
+            const bool result = renderClassFiles(QSL("src/datamessage"), context,
+                                                 outputDir.absoluteFilePath(QSL("src")), className);
+            context.pop();
+            messageName.clear();
+            fields.clear();
+            if (result) fileCount+=3; else return -1;
+        }
+
+        if (line.isEmpty()) continue; // Skip empty lines (usually just the final trailing line).
+        if (!columns.at(0).isEmpty()) {
+            messageName = QString::fromUtf8(columns.at(0));
+        }
+        if (!columns.at(1).isEmpty()) {
+            QVariantMap field;
+            field.insert(QSL("number"), columns.at(1).toInt());
+            field.insert(QSL("name"), toCamelCase(QString::fromUtf8(columns.at(2))));
+            field.insert(QSL("type"), toCamelCase(QString::fromUtf8(columns.at(3))));
+            /// \todo Lots more properties to consider here.
+            fields.append(field);
+        }
+    }
+
+    // Add the generated classed to the CMake targets.
+    classNames.sort(Qt::CaseInsensitive);
+    context.push();
+    context.insert(QSL("TargetName"), context.lookup(QSL("ProjectName")));
+    context.insert(QSL("classNames"), classNames);
+    render(QSL("src/fitdatamessages.cmake"), context, outputDir.absoluteFilePath(QSL("src/fitdatamessages.cmake")));
+    context.pop();
     return 0;//-1;
 }
 
@@ -114,7 +162,7 @@ int Generator::processTypes(Grantlee::Context &context)
             values.clear();
             maxValueNameLength = maxValueValueLength = 0;
         }
-        if (line.isEmpty()) continue;
+        if (line.isEmpty()) continue; // Skip empty lines (usually just the final trailing line).
         if (!columns.at(0).isEmpty()) {
             type.insert(QSL("typeName"), toCamelCase(QString::fromUtf8(columns.at(0))));
             type.insert(QSL("baseType"), QString::fromUtf8(columns.at(1)));
@@ -187,6 +235,20 @@ bool Generator::render(const QString &templateName, Grantlee::Context &context,
                        const QString &outputDirName, const QString &outputFileName) const
 {
     return render(templateName, context, outputDirName + QLatin1Char('/') + outputFileName);
+}
+
+bool Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
+                                 const QString &outputPathName, const QString className)
+{
+    context.push();
+    context.insert(QSL("ClassName"), className);
+    foreach (const QString &extension, QStringList() << QSL(".cpp") << QSL(".h") << QSL("_p.h")) {
+        if (!render(templateBaseName + extension, context, outputPathName, className.toLower() + extension)) {
+            return false;
+        }
+    }
+    context.pop();
+    return true;
 }
 
 QString Generator::safeEnumLabel(const QString &string)

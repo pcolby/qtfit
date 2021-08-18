@@ -5,6 +5,10 @@
     <file>fit-sdk/ProfileTypes.tsv</file>
     <file>templates/autogen.txt</file>
     <file>templates/license.txt</file>
+    <file>templates/src/datamessage.cpp</file>
+    <file>templates/src/datamessage.h</file>
+    <file>templates/src/datamessage_p.h</file>
+    <file>templates/src/fitdatamessages.cmake</file>
     <file>templates/src/fitdatamessages.cpp</file>
     <file>templates/src/types.h</file>
   </qresource>

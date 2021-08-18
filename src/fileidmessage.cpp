@@ -17,16 +17,19 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*!
+ * \file
+ * \note This file is automatcially generated. Any changes here are likely to be overwritten.
+ */
+
 #include "fileidmessage.h"
 #include "fileidmessage_p.h"
-
-#include <QDebug>
 
 QTFIT_BEGIN_NAMESPACE
 
 FileIdMessage::FileIdMessage() : FitDataMessage(new FileIdMessagePrivate(this))
 {
-
+  /// \todo Set global message number.
 }
 
 FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : FitDataMessagePrivate(q)
