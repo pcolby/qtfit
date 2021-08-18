@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 MonitoringInfoMessage::MonitoringInfoMessage() : FitDataMessage(new MonitoringInfoMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 MonitoringInfoMessagePrivate::MonitoringInfoMessagePrivate(MonitoringInfoMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::MonitoringInfo;
 }
 
 MonitoringInfoMessagePrivate::~MonitoringInfoMessagePrivate()

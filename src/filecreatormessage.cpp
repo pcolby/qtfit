@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 FileCreatorMessage::FileCreatorMessage() : FitDataMessage(new FileCreatorMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 FileCreatorMessagePrivate::FileCreatorMessagePrivate(FileCreatorMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::FileCreator;
 }
 
 FileCreatorMessagePrivate::~FileCreatorMessagePrivate()

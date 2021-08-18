@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 NmeaSentenceMessage::NmeaSentenceMessage() : FitDataMessage(new NmeaSentenceMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 NmeaSentenceMessagePrivate::NmeaSentenceMessagePrivate(NmeaSentenceMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::NmeaSentence;
 }
 
 NmeaSentenceMessagePrivate::~NmeaSentenceMessagePrivate()

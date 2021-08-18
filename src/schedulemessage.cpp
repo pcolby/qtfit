@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ScheduleMessage::ScheduleMessage() : FitDataMessage(new ScheduleMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ScheduleMessagePrivate::ScheduleMessagePrivate(ScheduleMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Schedule;
 }
 
 ScheduleMessagePrivate::~ScheduleMessagePrivate()

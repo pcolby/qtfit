@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SpeedZoneMessage::SpeedZoneMessage() : FitDataMessage(new SpeedZoneMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SpeedZoneMessagePrivate::SpeedZoneMessagePrivate(SpeedZoneMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::SpeedZone;
 }
 
 SpeedZoneMessagePrivate::~SpeedZoneMessagePrivate()

@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SoftwareMessage::SoftwareMessage() : FitDataMessage(new SoftwareMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SoftwareMessagePrivate::SoftwareMessagePrivate(SoftwareMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Software;
 }
 
 SoftwareMessagePrivate::~SoftwareMessagePrivate()

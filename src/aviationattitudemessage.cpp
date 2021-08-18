@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 AviationAttitudeMessage::AviationAttitudeMessage() : FitDataMessage(new AviationAttitudeMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 AviationAttitudeMessagePrivate::AviationAttitudeMessagePrivate(AviationAttitudeMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::AviationAttitude;
 }
 
 AviationAttitudeMessagePrivate::~AviationAttitudeMessagePrivate()

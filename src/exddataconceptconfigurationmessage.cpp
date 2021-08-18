@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ExdDataConceptConfigurationMessage::ExdDataConceptConfigurationMessage() : FitDataMessage(new ExdDataConceptConfigurationMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ExdDataConceptConfigurationMessagePrivate::ExdDataConceptConfigurationMessagePrivate(ExdDataConceptConfigurationMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::ExdDataConceptConfiguration;
 }
 
 ExdDataConceptConfigurationMessagePrivate::~ExdDataConceptConfigurationMessagePrivate()

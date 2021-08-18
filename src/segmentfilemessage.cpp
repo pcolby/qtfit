@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SegmentFileMessage::SegmentFileMessage() : FitDataMessage(new SegmentFileMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SegmentFileMessagePrivate::SegmentFileMessagePrivate(SegmentFileMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::SegmentFile;
 }
 
 SegmentFileMessagePrivate::~SegmentFileMessagePrivate()

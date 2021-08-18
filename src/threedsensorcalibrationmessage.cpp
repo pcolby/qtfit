@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : FitDataMessage(new ThreeDSensorCalibrationMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ThreeDSensorCalibrationMessagePrivate::ThreeDSensorCalibrationMessagePrivate(ThreeDSensorCalibrationMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::ThreeDSensorCalibration;
 }
 
 ThreeDSensorCalibrationMessagePrivate::~ThreeDSensorCalibrationMessagePrivate()

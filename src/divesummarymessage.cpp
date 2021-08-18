@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 DiveSummaryMessage::DiveSummaryMessage() : FitDataMessage(new DiveSummaryMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::DiveSummary;
 }
 
 DiveSummaryMessagePrivate::~DiveSummaryMessagePrivate()

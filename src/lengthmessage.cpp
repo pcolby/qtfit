@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 LengthMessage::LengthMessage() : FitDataMessage(new LengthMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 LengthMessagePrivate::LengthMessagePrivate(LengthMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Length;
 }
 
 LengthMessagePrivate::~LengthMessagePrivate()

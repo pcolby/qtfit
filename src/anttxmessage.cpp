@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 AntTxMessage::AntTxMessage() : FitDataMessage(new AntTxMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 AntTxMessagePrivate::AntTxMessagePrivate(AntTxMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::AntTx;
 }
 
 AntTxMessagePrivate::~AntTxMessagePrivate()

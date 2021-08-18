@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 WeightScaleMessage::WeightScaleMessage() : FitDataMessage(new WeightScaleMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 WeightScaleMessagePrivate::WeightScaleMessagePrivate(WeightScaleMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::WeightScale;
 }
 
 WeightScaleMessagePrivate::~WeightScaleMessagePrivate()

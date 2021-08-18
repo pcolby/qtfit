@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ExdScreenConfigurationMessage::ExdScreenConfigurationMessage() : FitDataMessage(new ExdScreenConfigurationMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ExdScreenConfigurationMessagePrivate::ExdScreenConfigurationMessagePrivate(ExdScreenConfigurationMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::ExdScreenConfiguration;
 }
 
 ExdScreenConfigurationMessagePrivate::~ExdScreenConfigurationMessagePrivate()

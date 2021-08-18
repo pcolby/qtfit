@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 OneDSensorCalibrationMessage::OneDSensorCalibrationMessage() : FitDataMessage(new OneDSensorCalibrationMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 OneDSensorCalibrationMessagePrivate::OneDSensorCalibrationMessagePrivate(OneDSensorCalibrationMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::OneDSensorCalibration;
 }
 
 OneDSensorCalibrationMessagePrivate::~OneDSensorCalibrationMessagePrivate()

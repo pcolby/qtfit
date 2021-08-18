@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 TimestampCorrelationMessage::TimestampCorrelationMessage() : FitDataMessage(new TimestampCorrelationMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 TimestampCorrelationMessagePrivate::TimestampCorrelationMessagePrivate(TimestampCorrelationMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::TimestampCorrelation;
 }
 
 TimestampCorrelationMessagePrivate::~TimestampCorrelationMessagePrivate()

@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 EventMessage::EventMessage() : FitDataMessage(new EventMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 EventMessagePrivate::EventMessagePrivate(EventMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Event;
 }
 
 EventMessagePrivate::~EventMessagePrivate()

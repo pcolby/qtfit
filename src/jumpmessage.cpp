@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 JumpMessage::JumpMessage() : FitDataMessage(new JumpMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 JumpMessagePrivate::JumpMessagePrivate(JumpMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Jump;
 }
 
 JumpMessagePrivate::~JumpMessagePrivate()

@@ -95,6 +95,7 @@ int Generator::processMessages(Grantlee::Context &context)
             classNames.append(className);
             context.push();
             context.insert(QSL("fields"), fields);
+            context.insert(QSL("MesgNumLabel"), toCamelCase(messageName));
             const bool result = renderClassFiles(QSL("src/datamessage"), context,
                                                  outputDir.absoluteFilePath(QSL("src")), className);
             context.pop();

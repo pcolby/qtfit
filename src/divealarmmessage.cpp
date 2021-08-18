@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 DiveAlarmMessage::DiveAlarmMessage() : FitDataMessage(new DiveAlarmMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 DiveAlarmMessagePrivate::DiveAlarmMessagePrivate(DiveAlarmMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::DiveAlarm;
 }
 
 DiveAlarmMessagePrivate::~DiveAlarmMessagePrivate()

@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 VideoDescriptionMessage::VideoDescriptionMessage() : FitDataMessage(new VideoDescriptionMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 VideoDescriptionMessagePrivate::VideoDescriptionMessagePrivate(VideoDescriptionMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::VideoDescription;
 }
 
 VideoDescriptionMessagePrivate::~VideoDescriptionMessagePrivate()

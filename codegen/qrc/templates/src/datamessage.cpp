@@ -7,12 +7,12 @@
 
 {{ClassName}}::{{ClassName}}() : FitDataMessage(new {{ClassName}}Private(this))
 {
-  /// \todo Set global message number.
+
 }
 
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::{{MesgNumLabel}};
 }
 
 {{ClassName}}Private::~{{ClassName}}Private()

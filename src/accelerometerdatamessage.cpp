@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 AccelerometerDataMessage::AccelerometerDataMessage() : FitDataMessage(new AccelerometerDataMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 AccelerometerDataMessagePrivate::AccelerometerDataMessagePrivate(AccelerometerDataMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::AccelerometerData;
 }
 
 AccelerometerDataMessagePrivate::~AccelerometerDataMessagePrivate()

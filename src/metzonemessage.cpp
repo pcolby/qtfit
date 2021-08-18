@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 MetZoneMessage::MetZoneMessage() : FitDataMessage(new MetZoneMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 MetZoneMessagePrivate::MetZoneMessagePrivate(MetZoneMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::MetZone;
 }
 
 MetZoneMessagePrivate::~MetZoneMessagePrivate()

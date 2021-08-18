@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 MemoGlobMessage::MemoGlobMessage() : FitDataMessage(new MemoGlobMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 MemoGlobMessagePrivate::MemoGlobMessagePrivate(MemoGlobMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::MemoGlob;
 }
 
 MemoGlobMessagePrivate::~MemoGlobMessagePrivate()

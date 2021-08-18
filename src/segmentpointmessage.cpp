@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SegmentPointMessage::SegmentPointMessage() : FitDataMessage(new SegmentPointMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SegmentPointMessagePrivate::SegmentPointMessagePrivate(SegmentPointMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::SegmentPoint;
 }
 
 SegmentPointMessagePrivate::~SegmentPointMessagePrivate()

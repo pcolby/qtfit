@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 AntChannelIdMessage::AntChannelIdMessage() : FitDataMessage(new AntChannelIdMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 AntChannelIdMessagePrivate::AntChannelIdMessagePrivate(AntChannelIdMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::AntChannelId;
 }
 
 AntChannelIdMessagePrivate::~AntChannelIdMessagePrivate()

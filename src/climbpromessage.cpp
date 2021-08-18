@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ClimbProMessage::ClimbProMessage() : FitDataMessage(new ClimbProMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ClimbProMessagePrivate::ClimbProMessagePrivate(ClimbProMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::ClimbPro;
 }
 
 ClimbProMessagePrivate::~ClimbProMessagePrivate()

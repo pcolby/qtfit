@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 BikeProfileMessage::BikeProfileMessage() : FitDataMessage(new BikeProfileMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 BikeProfileMessagePrivate::BikeProfileMessagePrivate(BikeProfileMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::BikeProfile;
 }
 
 BikeProfileMessagePrivate::~BikeProfileMessagePrivate()

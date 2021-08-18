@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 UserProfileMessage::UserProfileMessage() : FitDataMessage(new UserProfileMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 UserProfileMessagePrivate::UserProfileMessagePrivate(UserProfileMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::UserProfile;
 }
 
 UserProfileMessagePrivate::~UserProfileMessagePrivate()

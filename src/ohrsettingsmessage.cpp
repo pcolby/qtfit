@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 OhrSettingsMessage::OhrSettingsMessage() : FitDataMessage(new OhrSettingsMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 OhrSettingsMessagePrivate::OhrSettingsMessagePrivate(OhrSettingsMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::OhrSettings;
 }
 
 OhrSettingsMessagePrivate::~OhrSettingsMessagePrivate()

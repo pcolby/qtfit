@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 GpsMetadataMessage::GpsMetadataMessage() : FitDataMessage(new GpsMetadataMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 GpsMetadataMessagePrivate::GpsMetadataMessagePrivate(GpsMetadataMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::GpsMetadata;
 }
 
 GpsMetadataMessagePrivate::~GpsMetadataMessagePrivate()

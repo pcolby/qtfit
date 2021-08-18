@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 FileIdMessage::FileIdMessage() : FitDataMessage(new FileIdMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::FileId;
 }
 
 FileIdMessagePrivate::~FileIdMessagePrivate()

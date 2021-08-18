@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 TrainingFileMessage::TrainingFileMessage() : FitDataMessage(new TrainingFileMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 TrainingFileMessagePrivate::TrainingFileMessagePrivate(TrainingFileMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::TrainingFile;
 }
 
 TrainingFileMessagePrivate::~TrainingFileMessagePrivate()

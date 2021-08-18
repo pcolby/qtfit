@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SlaveDeviceMessage::SlaveDeviceMessage() : FitDataMessage(new SlaveDeviceMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SlaveDeviceMessagePrivate::SlaveDeviceMessagePrivate(SlaveDeviceMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::SlaveDevice;
 }
 
 SlaveDeviceMessagePrivate::~SlaveDeviceMessagePrivate()

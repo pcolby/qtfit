@@ -38,9 +38,6 @@ public:
     explicit FitDataMessagePrivate(FitDataMessage * const q);
     virtual ~FitDataMessagePrivate();
 
-
-    static FitDataMessage fromDataRecord(const MesgNum globalMessageNumber, const QByteArray record);
-
     bool setFields(const DataDefinition * const defn, const QByteArray &record);
 
 protected:

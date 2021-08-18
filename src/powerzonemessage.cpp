@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 PowerZoneMessage::PowerZoneMessage() : FitDataMessage(new PowerZoneMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 PowerZoneMessagePrivate::PowerZoneMessagePrivate(PowerZoneMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::PowerZone;
 }
 
 PowerZoneMessagePrivate::~PowerZoneMessagePrivate()

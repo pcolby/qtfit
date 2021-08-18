@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 WatchfaceSettingsMessage::WatchfaceSettingsMessage() : FitDataMessage(new WatchfaceSettingsMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 WatchfaceSettingsMessagePrivate::WatchfaceSettingsMessagePrivate(WatchfaceSettingsMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::WatchfaceSettings;
 }
 
 WatchfaceSettingsMessagePrivate::~WatchfaceSettingsMessagePrivate()

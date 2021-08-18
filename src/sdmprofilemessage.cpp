@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SdmProfileMessage::SdmProfileMessage() : FitDataMessage(new SdmProfileMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SdmProfileMessagePrivate::SdmProfileMessagePrivate(SdmProfileMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::SdmProfile;
 }
 
 SdmProfileMessagePrivate::~SdmProfileMessagePrivate()

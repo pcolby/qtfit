@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 WeatherAlertMessage::WeatherAlertMessage() : FitDataMessage(new WeatherAlertMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 WeatherAlertMessagePrivate::WeatherAlertMessagePrivate(WeatherAlertMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::WeatherAlert;
 }
 
 WeatherAlertMessagePrivate::~WeatherAlertMessagePrivate()

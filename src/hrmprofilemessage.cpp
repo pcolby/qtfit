@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 HrmProfileMessage::HrmProfileMessage() : FitDataMessage(new HrmProfileMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 HrmProfileMessagePrivate::HrmProfileMessagePrivate(HrmProfileMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::HrmProfile;
 }
 
 HrmProfileMessagePrivate::~HrmProfileMessagePrivate()

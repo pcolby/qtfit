@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 LapMessage::LapMessage() : FitDataMessage(new LapMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 LapMessagePrivate::LapMessagePrivate(LapMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Lap;
 }
 
 LapMessagePrivate::~LapMessagePrivate()

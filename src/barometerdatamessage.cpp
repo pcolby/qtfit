@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 BarometerDataMessage::BarometerDataMessage() : FitDataMessage(new BarometerDataMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 BarometerDataMessagePrivate::BarometerDataMessagePrivate(BarometerDataMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::BarometerData;
 }
 
 BarometerDataMessagePrivate::~BarometerDataMessagePrivate()

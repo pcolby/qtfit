@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 RecordMessage::RecordMessage() : FitDataMessage(new RecordMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 RecordMessagePrivate::RecordMessagePrivate(RecordMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Record;
 }
 
 RecordMessagePrivate::~RecordMessagePrivate()

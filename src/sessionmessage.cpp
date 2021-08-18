@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SessionMessage::SessionMessage() : FitDataMessage(new SessionMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SessionMessagePrivate::SessionMessagePrivate(SessionMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Session;
 }
 
 SessionMessagePrivate::~SessionMessagePrivate()

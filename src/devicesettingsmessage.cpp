@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 DeviceSettingsMessage::DeviceSettingsMessage() : FitDataMessage(new DeviceSettingsMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 DeviceSettingsMessagePrivate::DeviceSettingsMessagePrivate(DeviceSettingsMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::DeviceSettings;
 }
 
 DeviceSettingsMessagePrivate::~DeviceSettingsMessagePrivate()

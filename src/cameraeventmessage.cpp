@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 CameraEventMessage::CameraEventMessage() : FitDataMessage(new CameraEventMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 CameraEventMessagePrivate::CameraEventMessagePrivate(CameraEventMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::CameraEvent;
 }
 
 CameraEventMessagePrivate::~CameraEventMessagePrivate()

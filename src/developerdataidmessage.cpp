@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 DeveloperDataIdMessage::DeveloperDataIdMessage() : FitDataMessage(new DeveloperDataIdMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 DeveloperDataIdMessagePrivate::DeveloperDataIdMessagePrivate(DeveloperDataIdMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::DeveloperDataId;
 }
 
 DeveloperDataIdMessagePrivate::~DeveloperDataIdMessagePrivate()

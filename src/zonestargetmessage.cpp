@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ZonesTargetMessage::ZonesTargetMessage() : FitDataMessage(new ZonesTargetMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ZonesTargetMessagePrivate::ZonesTargetMessagePrivate(ZonesTargetMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::ZonesTarget;
 }
 
 ZonesTargetMessagePrivate::~ZonesTargetMessagePrivate()

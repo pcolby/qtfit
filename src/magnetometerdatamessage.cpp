@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 MagnetometerDataMessage::MagnetometerDataMessage() : FitDataMessage(new MagnetometerDataMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 MagnetometerDataMessagePrivate::MagnetometerDataMessagePrivate(MagnetometerDataMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::MagnetometerData;
 }
 
 MagnetometerDataMessagePrivate::~MagnetometerDataMessagePrivate()

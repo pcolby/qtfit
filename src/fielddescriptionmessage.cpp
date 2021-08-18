@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 FieldDescriptionMessage::FieldDescriptionMessage() : FitDataMessage(new FieldDescriptionMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 FieldDescriptionMessagePrivate::FieldDescriptionMessagePrivate(FieldDescriptionMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::FieldDescription;
 }
 
 FieldDescriptionMessagePrivate::~FieldDescriptionMessagePrivate()

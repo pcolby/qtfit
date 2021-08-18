@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 HrvMessage::HrvMessage() : FitDataMessage(new HrvMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 HrvMessagePrivate::HrvMessagePrivate(HrvMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Hrv;
 }
 
 HrvMessagePrivate::~HrvMessagePrivate()

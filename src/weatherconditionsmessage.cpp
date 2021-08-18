@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 WeatherConditionsMessage::WeatherConditionsMessage() : FitDataMessage(new WeatherConditionsMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 WeatherConditionsMessagePrivate::WeatherConditionsMessagePrivate(WeatherConditionsMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::WeatherConditions;
 }
 
 WeatherConditionsMessagePrivate::~WeatherConditionsMessagePrivate()

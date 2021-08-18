@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ConnectivityMessage::ConnectivityMessage() : FitDataMessage(new ConnectivityMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ConnectivityMessagePrivate::ConnectivityMessagePrivate(ConnectivityMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Connectivity;
 }
 
 ConnectivityMessagePrivate::~ConnectivityMessagePrivate()

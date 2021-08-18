@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 StressLevelMessage::StressLevelMessage() : FitDataMessage(new StressLevelMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 StressLevelMessagePrivate::StressLevelMessagePrivate(StressLevelMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::StressLevel;
 }
 
 StressLevelMessagePrivate::~StressLevelMessagePrivate()

@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 WorkoutMessage::WorkoutMessage() : FitDataMessage(new WorkoutMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 WorkoutMessagePrivate::WorkoutMessagePrivate(WorkoutMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Workout;
 }
 
 WorkoutMessagePrivate::~WorkoutMessagePrivate()

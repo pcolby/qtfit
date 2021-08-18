@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 SegmentLeaderboardEntryMessage::SegmentLeaderboardEntryMessage() : FitDataMessage(new SegmentLeaderboardEntryMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 SegmentLeaderboardEntryMessagePrivate::SegmentLeaderboardEntryMessagePrivate(SegmentLeaderboardEntryMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::SegmentLeaderboardEntry;
 }
 
 SegmentLeaderboardEntryMessagePrivate::~SegmentLeaderboardEntryMessagePrivate()

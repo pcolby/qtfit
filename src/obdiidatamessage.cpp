@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ObdiiDataMessage::ObdiiDataMessage() : FitDataMessage(new ObdiiDataMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ObdiiDataMessagePrivate::ObdiiDataMessagePrivate(ObdiiDataMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::ObdiiData;
 }
 
 ObdiiDataMessagePrivate::~ObdiiDataMessagePrivate()

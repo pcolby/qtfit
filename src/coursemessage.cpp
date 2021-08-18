@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 CourseMessage::CourseMessage() : FitDataMessage(new CourseMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 CourseMessagePrivate::CourseMessagePrivate(CourseMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Course;
 }
 
 CourseMessagePrivate::~CourseMessagePrivate()

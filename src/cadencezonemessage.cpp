@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 CadenceZoneMessage::CadenceZoneMessage() : FitDataMessage(new CadenceZoneMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 CadenceZoneMessagePrivate::CadenceZoneMessagePrivate(CadenceZoneMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::CadenceZone;
 }
 
 CadenceZoneMessagePrivate::~CadenceZoneMessagePrivate()

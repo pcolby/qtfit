@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 ActivityMessage::ActivityMessage() : FitDataMessage(new ActivityMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 ActivityMessagePrivate::ActivityMessagePrivate(ActivityMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::Activity;
 }
 
 ActivityMessagePrivate::~ActivityMessagePrivate()

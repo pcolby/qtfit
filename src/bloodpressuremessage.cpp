@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 BloodPressureMessage::BloodPressureMessage() : FitDataMessage(new BloodPressureMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 BloodPressureMessagePrivate::BloodPressureMessagePrivate(BloodPressureMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::BloodPressure;
 }
 
 BloodPressureMessagePrivate::~BloodPressureMessagePrivate()

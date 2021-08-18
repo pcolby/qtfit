@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 GyroscopeDataMessage::GyroscopeDataMessage() : FitDataMessage(new GyroscopeDataMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 GyroscopeDataMessagePrivate::GyroscopeDataMessagePrivate(GyroscopeDataMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::GyroscopeData;
 }
 
 GyroscopeDataMessagePrivate::~GyroscopeDataMessagePrivate()

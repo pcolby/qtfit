@@ -29,12 +29,12 @@ QTFIT_BEGIN_NAMESPACE
 
 FileCapabilitiesMessage::FileCapabilitiesMessage() : FitDataMessage(new FileCapabilitiesMessagePrivate(this))
 {
-  /// \todo Set global message number.
+
 }
 
 FileCapabilitiesMessagePrivate::FileCapabilitiesMessagePrivate(FileCapabilitiesMessage * const q) : FitDataMessagePrivate(q)
 {
-
+    globalMessageNumber = MesgNum::FileCapabilities;
 }
 
 FileCapabilitiesMessagePrivate::~FileCapabilitiesMessagePrivate()
