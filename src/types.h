@@ -668,6 +668,7 @@ enum class SubSport {
     ApneaHunting         =  57, ///< Diving
     VirtualActivity      =  58,
     Obstacle             =  59, ///< Used for events where participants run, crawl through mud, climb over walls, etc.
+    SailRace             =  65, ///< Sailing
     All                  = 254,
 };
 
@@ -1465,6 +1466,7 @@ enum class GarminProduct : quint16 {
     LegacyFirstAvengerAsia     =  3536,
     LegacyReyAsia              =  3537,
     LegacyDarthVaderAsia       =  3538,
+    DescentMk2s                =  3542,
     Edge130Plus                =  3558,
     Edge1030Plus               =  3570,
     Rally200                   =  3578, ///< Rally 100/200 Power Meter Series
@@ -1490,6 +1492,7 @@ enum class GarminProduct : quint16 {
     VenusqAsia                 =  3837,
     MarqGolferAsia             =  3850,
     ApproachG12                =  3927,
+    DescentMk2sAsia            =  3930,
     ApproachS42                =  3934,
     Venu2sAsia                 =  3949,
     Venu2Asia                  =  3950,
