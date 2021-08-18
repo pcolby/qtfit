@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"types_8h.html#ad682f23e76bb7b21f4f4c663b89139edabce431d01a4df1bf31ba7787331ad1dc":[4,0,150,162,3],
+"types_8h.html#ad682f23e76bb7b21f4f4c663b89139edac3bf447eabe632720a3aa1a7ce401274":[4,0,150,162,2],
 "types_8h.html#ad682f23e76bb7b21f4f4c663b89139edadd4fe0cc913f704600b97d1f5dd285de":[4,0,150,162,4],
 "types_8h.html#ad682f23e76bb7b21f4f4c663b89139edaf4e8e5f6d4deccbf2bc8bec7de34057a":[4,0,150,162,12],
 "types_8h.html#adc41059dbe339afff94e619609e0c2d6":[4,0,150,134],
@@ -61,6 +63,7 @@ var NAVTREEINDEX15 =
 "types_8h.html#aed10717f0596999a72fa9b81a529b08ba18812708076ab7a7dabd784e2f280385":[4,0,150,138,13],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08ba250b49216932f6b3d77df2363fdc8fc8":[4,0,150,138,36],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08ba2937bdbdbae1d8f0c04f65052e7fac94":[4,0,150,138,54],
+"types_8h.html#aed10717f0596999a72fa9b81a529b08ba3ce0843125bbae4aedd8e9b5d0d7b798":[4,0,150,138,60],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08ba3f1f960f689060866783772550120c07":[4,0,150,138,32],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08ba42e7de6bd6440b32d0f084da4a89f4ce":[4,0,150,138,6],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08ba46f3ea056caa3126b91f3f70beea068c":[4,0,150,138,52],
@@ -92,7 +95,7 @@ var NAVTREEINDEX15 =
 "types_8h.html#aed10717f0596999a72fa9b81a529b08baadbc1ebaa0be5dac1f18fd79e66cfe59":[4,0,150,138,14],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08baaefd4f054585fc7efba367aa0751eb80":[4,0,150,138,53],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08bab0bd4b35d8410638f1e31e771a919c19":[4,0,150,138,38],
-"types_8h.html#aed10717f0596999a72fa9b81a529b08bab1c94ca2fbc3e78fc30069c8d0f01680":[4,0,150,138,60],
+"types_8h.html#aed10717f0596999a72fa9b81a529b08bab1c94ca2fbc3e78fc30069c8d0f01680":[4,0,150,138,61],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08bab5f5623b6137a89a1dadf079a5e92266":[4,0,150,138,24],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08bab5fc5b7fd7a011233d559a46a593b2db":[4,0,150,138,46],
 "types_8h.html#aed10717f0596999a72fa9b81a529b08bab892adeab0e2d3cf81a02c291671a8f8":[4,0,150,138,41],
@@ -246,8 +249,5 @@ var NAVTREEINDEX15 =
 "watchfacesettingsmessage_8cpp.html":[4,0,163],
 "watchfacesettingsmessage_8h.html":[4,0,164],
 "watchfacesettingsmessage_8h_source.html":[4,0,164],
-"weatheralertmessage_8cpp.html":[4,0,165],
-"weatheralertmessage_8h.html":[4,0,166],
-"weatheralertmessage_8h_source.html":[4,0,166],
-"weatherconditionsmessage_8cpp.html":[4,0,167]
+"weatheralertmessage_8cpp.html":[4,0,165]
 };

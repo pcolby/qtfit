@@ -1457,6 +1457,7 @@ var types_8h =
       [ "LegacyFirstAvengerAsia", "types_8h.html#a00eecc1db747a403407ee496ccd56103a356d8bd738799c0dd3b7c9750f9b2a83", null ],
       [ "LegacyReyAsia", "types_8h.html#a00eecc1db747a403407ee496ccd56103a588e1d404c25e861e9754528ed6b2ff6", null ],
       [ "LegacyDarthVaderAsia", "types_8h.html#a00eecc1db747a403407ee496ccd56103a8d21c1fe50309e66ba3f67c016f1b4cf", null ],
+      [ "DescentMk2s", "types_8h.html#a00eecc1db747a403407ee496ccd56103ae2d3c6117ac15ff2b23799f82dccd1b9", null ],
       [ "Edge130Plus", "types_8h.html#a00eecc1db747a403407ee496ccd56103ae49b8ac4c07d283104852a0a544cfc7c", null ],
       [ "Edge1030Plus", "types_8h.html#a00eecc1db747a403407ee496ccd56103a3d64310ebaffc52b5ef729ea7ad5163f", null ],
       [ "Rally200", "types_8h.html#a00eecc1db747a403407ee496ccd56103ac42778cdaff5899aad5b8be7e529b91a", null ],
@@ -1482,6 +1483,7 @@ var types_8h =
       [ "VenusqAsia", "types_8h.html#a00eecc1db747a403407ee496ccd56103a79c6d4aaf76d4fd88d84ea38525cbe62", null ],
       [ "MarqGolferAsia", "types_8h.html#a00eecc1db747a403407ee496ccd56103a6bb7652bf4eea24e15f9e6227eb2674d", null ],
       [ "ApproachG12", "types_8h.html#a00eecc1db747a403407ee496ccd56103a1cebbb0db291fc8f5b074ee3767ef8a1", null ],
+      [ "DescentMk2sAsia", "types_8h.html#a00eecc1db747a403407ee496ccd56103a0e62cc35ffba278c6df1c40141eca231", null ],
       [ "ApproachS42", "types_8h.html#a00eecc1db747a403407ee496ccd56103a36500c4b29259e20e684d7bcbff0117c", null ],
       [ "Venu2sAsia", "types_8h.html#a00eecc1db747a403407ee496ccd56103af89dfdb2d9a5894dcb98b6cdd44f7120", null ],
       [ "Venu2Asia", "types_8h.html#a00eecc1db747a403407ee496ccd56103a8e85116b85e36a2e1e367242853f6e6b", null ],
@@ -3096,6 +3098,7 @@ var types_8h =
       [ "ApneaHunting", "types_8h.html#aed10717f0596999a72fa9b81a529b08ba6085d6410fbb6820ae3be25a5447d24f", null ],
       [ "VirtualActivity", "types_8h.html#aed10717f0596999a72fa9b81a529b08ba8dbe01f6b8b0087a95f599f954051596", null ],
       [ "Obstacle", "types_8h.html#aed10717f0596999a72fa9b81a529b08bafe29c1262b319e6d200d32384ae636c7", null ],
+      [ "SailRace", "types_8h.html#aed10717f0596999a72fa9b81a529b08ba3ce0843125bbae4aedd8e9b5d0d7b798", null ],
       [ "All", "types_8h.html#aed10717f0596999a72fa9b81a529b08bab1c94ca2fbc3e78fc30069c8d0f01680", null ]
     ] ],
     [ "SupportedExdScreenLayouts", "types_8h.html#a327c3fb7f88861d4d25f2e9b39452722", [

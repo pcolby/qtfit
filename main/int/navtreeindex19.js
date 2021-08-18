@@ -1,5 +1,8 @@
 var NAVTREEINDEX19 =
 {
+"types_8h.html#aff147b6aea9ac73dfb73b52474c7c26da6466c00c3ca3a8e2dc6f42ecc8e7ba39":[4,0,227,24,4],
+"types_8h.html#aff147b6aea9ac73dfb73b52474c7c26da70a47cae4eb221930f2663fd244369ea":[4,0,227,24,0],
+"types_8h.html#aff147b6aea9ac73dfb73b52474c7c26da72f7cf320dfb017c4092d5912acd7848":[4,0,227,24,1],
 "types_8h.html#aff147b6aea9ac73dfb73b52474c7c26daa53d546579a3df00a9282b864e1fbdbc":[4,0,227,24,3],
 "types_8h.html#aff147b6aea9ac73dfb73b52474c7c26dabb052301614e93243f3bfa9f1bc28821":[4,0,227,24,2],
 "types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3":[4,0,227,41],
