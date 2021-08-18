@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['backlighttimeout_351',['BacklightTimeout',['../types_8h.html#aa69322d9ced39379dd197f99257c7781',1,'types.h']]],
-  ['bodylocation_352',['BodyLocation',['../types_8h.html#a4cea131c826b8a26b33b1492369e389c',1,'types.h']]]
+  ['backlighttimeout_965',['BacklightTimeout',['../types_8h.html#aa69322d9ced39379dd197f99257c7781',1,'types.h']]],
+  ['bodylocation_966',['BodyLocation',['../types_8h.html#a4cea131c826b8a26b33b1492369e389c',1,'types.h']]]
 ];

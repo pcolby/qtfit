@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['setdevice_3296',['setDevice',['../classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be',1,'FitStreamReader']]],
-  ['setfield_3297',['setField',['../classFileIdMessagePrivate.html#aa1be506310d0b4ad57b05bc805384438',1,'FileIdMessagePrivate::setField()'],['../classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232',1,'FitDataMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)']]],
-  ['setfields_3298',['setFields',['../classFitDataMessagePrivate.html#af88ba07d7aacda7469539d5a0629162d',1,'FitDataMessagePrivate']]]
+  ['lapmessage_4410',['LapMessage',['../classLapMessage.html#a856aedbd420f93b6fc565fb1fcacd5e5',1,'LapMessage']]],
+  ['lapmessageprivate_4411',['LapMessagePrivate',['../classLapMessagePrivate.html#a7f43132de56d88bdca83293e1f869179',1,'LapMessagePrivate::LapMessagePrivate()=delete'],['../classLapMessagePrivate.html#a6681587bd2a91338a4459e71159c59cd',1,'LapMessagePrivate::LapMessagePrivate(LapMessage *const q)']]],
+  ['lengthmessage_4412',['LengthMessage',['../classLengthMessage.html#a8dc799442b14aa283f2d13966c00cb90',1,'LengthMessage']]],
+  ['lengthmessageprivate_4413',['LengthMessagePrivate',['../classLengthMessagePrivate.html#a464b46a999f45f17b75c236686a9a43e',1,'LengthMessagePrivate::LengthMessagePrivate()=delete'],['../classLengthMessagePrivate.html#a45e1a34bfc0bfbd8af7469b0bcb98cc5',1,'LengthMessagePrivate::LengthMessagePrivate(LengthMessage *const q)']]]
 ];

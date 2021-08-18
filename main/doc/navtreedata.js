@@ -53,19 +53,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "QtFit__global_8h_source.html",
-"types_8h.html#a00eecc1db747a403407ee496ccd56103a8569dc58dae2a946c69a7c67d36ad463",
-"types_8h.html#a17c9d8de027c09e02b07fda419c76507a0a3f8a7c4c7274c94611fd9a481f442c",
-"types_8h.html#a315ca917ad583797f709ea477dd28705a28c84f05dbc521ffa52220ce03b16356",
-"types_8h.html#a3c49dbfab9e2e7b9738b3ba5b19ac6d0aab71268b0a8668de7161cc03e61e5b42",
-"types_8h.html#a429fcbf35fad76b1d05f9b4e23d821deaf72a3dcae5df9b7781264f92bf033400",
-"types_8h.html#a5d567f144bddb8d834b7904e76fbc375a55276c10d84e1df7713b441e76e141f9",
-"types_8h.html#a6de877374e2192ef42af6f854ecc225aaff8846c3cff65c248bde8bb8e2392294",
-"types_8h.html#a8df0bd47295070f98af72ed3d9959878a8045a0a6c688b0635e3caccc408a1446",
-"types_8h.html#aa38779be7755efe28b3e81b7ac6d658ca74a3739212f2e796656820cfe02015fb",
-"types_8h.html#ab50f20485cd3f48dac27f35cdcddfdcbaeb21b1b6a597e704455a3cb1f8e607d6",
-"types_8h.html#abff0cc6077b6b352288453cfaef93f80a7adc8d4ee76503cc662c1db5932c43d7",
-"types_8h.html#ac77ff16ce976e5b30f31d739c90095dd",
-"types_8h.html#ad0a5248f7b91eae94b53d7b6d04219f9"
+"classSetMessage.html",
+"softwaremessage_8cpp.html",
+"types_8h.html#a00eecc1db747a403407ee496ccd56103a90f6dd254d8f27bde43815b3131b928a",
+"types_8h.html#a17c9d8de027c09e02b07fda419c76507a297438e48f413a9eff7ffa2186f18b8d",
+"types_8h.html#a315ca917ad583797f709ea477dd28705a90589c47f06eb971d548591f23c285af",
+"types_8h.html#a3f472eba0bbcfdce6a17250303a4e8cea06c8cc380c61817dc11e1690c2b69605",
+"types_8h.html#a438ab2ac60ad5d5ced30e4201476800bacf41b2d58558490968c0c81060ebf429",
+"types_8h.html#a6230df23cf868e87b9d6a76cb6870bc9a10b0cab203628448fde6b629dec656cf",
+"types_8h.html#a71ece1115066545f8d3b16037d342378a085497e619eba51094167e561adbc44d",
+"types_8h.html#a8df0bd47295070f98af72ed3d9959878ac674855a0c34570f1d91310c95da3ed2",
+"types_8h.html#aa455026201b375659811c45137e139d3a3ac705f2acd51a4613f9188c05c91d0d",
+"types_8h.html#ab7fe9751f3f85320c2e9818675c5ab86a70f5334f1322723342d5e0319cfbe1e1",
+"types_8h.html#abff0cc6077b6b352288453cfaef93f80a8c80b5999767ea41ad2995f9187a8bf8",
+"types_8h.html#ac77ff16ce976e5b30f31d739c90095dda68f6f9e9cda09f2791928aaf0df56f67",
+"types_8h.html#ad682f23e76bb7b21f4f4c663b89139eda8e7cbd7e748020187a486ace0a1f13c9",
+"watchfacesettingsmessage_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

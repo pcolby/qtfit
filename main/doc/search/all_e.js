@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['pairingtimeout_211',['PairingTimeout',['../types_8h.html#a76ce1eb945fba283444a59292e8751f2a2d07af1783af4951101ed9f5b97bb0e9',1,'types.h']]],
-  ['phototaken_212',['PhotoTaken',['../types_8h.html#a438ab2ac60ad5d5ced30e4201476800bab5d585a7e1ffd72f4695261463aafbfb',1,'types.h']]],
-  ['pilates_213',['Pilates',['../types_8h.html#aed10717f0596999a72fa9b81a529b08ba703de7736fc7280a781ecafec1d9401f',1,'types.h']]],
-  ['portraitflipped_214',['PortraitFlipped',['../types_8h.html#a38bd6ad994c4baaac737cf426fbf23eaa13be439a13712e02008085c7861871f3',1,'types.h']]],
-  ['power_215',['Power',['../types_8h.html#ac76b47805040089da0368a7273a87655add4fe0cc913f704600b97d1f5dd285de',1,'types.h']]],
-  ['powerdown_216',['PowerDown',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a5738b4738d0d5191678eed09d6b5c6f8',1,'types.h']]],
-  ['powerhighalert_217',['PowerHighAlert',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a6c5be050cbf60506b44882509b0fbad6',1,'types.h']]],
-  ['powerlowalert_218',['PowerLowAlert',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3ab67d638c4b517d7506f3e61c8199467b',1,'types.h']]],
-  ['powerup_219',['PowerUp',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a2808673935a9be95a8f295b932962bc3',1,'types.h']]],
-  ['precor_220',['Precor',['../types_8h.html#abff0cc6077b6b352288453cfaef93f80a7938e7b1ee9b26fda8878d36f2439f89',1,'types.h']]],
-  ['profileversion_221',['profileVersion',['../classFitStreamReader.html#a5bf4325a94cfd534e2752fc06317e98c',1,'FitStreamReader']]],
-  ['protocolversion_222',['protocolVersion',['../classFitStreamReader.html#affe4e2c157a4a15b436ca8f0a9d07b88',1,'FitStreamReader']]]
+  ['obdiidatamessage_358',['ObdiiDataMessage',['../classObdiiDataMessage.html',1,'ObdiiDataMessage'],['../classObdiiDataMessage.html#a834d5ba479819b0165871acf5fdaff3f',1,'ObdiiDataMessage::ObdiiDataMessage()']]],
+  ['obdiidatamessage_2ecpp_359',['obdiidatamessage.cpp',['../obdiidatamessage_8cpp.html',1,'']]],
+  ['obdiidatamessage_2eh_360',['obdiidatamessage.h',['../obdiidatamessage_8h.html',1,'']]],
+  ['obstacle_361',['Obstacle',['../types_8h.html#aed10717f0596999a72fa9b81a529b08bafe29c1262b319e6d200d32384ae636c7',1,'types.h']]],
+  ['offcourse_362',['OffCourse',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a35986fdd5ff2e79460e8b6bdf0fe4f09',1,'types.h']]],
+  ['ohrsettingsmessage_363',['OhrSettingsMessage',['../classOhrSettingsMessage.html',1,'OhrSettingsMessage'],['../classOhrSettingsMessage.html#a5c1e6c26a66f75e19d9a0ffefc3aa4fb',1,'OhrSettingsMessage::OhrSettingsMessage()']]],
+  ['ohrsettingsmessage_2ecpp_364',['ohrsettingsmessage.cpp',['../ohrsettingsmessage_8cpp.html',1,'']]],
+  ['ohrsettingsmessage_2eh_365',['ohrsettingsmessage.h',['../ohrsettingsmessage_8h.html',1,'']]],
+  ['ok_366',['Ok',['../types_8h.html#abb4b0b6abb2e45831a285a2990d0af5eaa60852f204ed8028c1c58808b746d115',1,'types.h']]],
+  ['onedsensorcalibrationmessage_367',['OneDSensorCalibrationMessage',['../classOneDSensorCalibrationMessage.html#ae5ef1ef264bae4c66026b90e573bfbfa',1,'OneDSensorCalibrationMessage::OneDSensorCalibrationMessage()'],['../classOneDSensorCalibrationMessage.html',1,'OneDSensorCalibrationMessage']]],
+  ['onedsensorcalibrationmessage_2ecpp_368',['onedsensorcalibrationmessage.cpp',['../onedsensorcalibrationmessage_8cpp.html',1,'']]],
+  ['onedsensorcalibrationmessage_2eh_369',['onedsensorcalibrationmessage.h',['../onedsensorcalibrationmessage_8h.html',1,'']]],
+  ['openwater_370',['OpenWater',['../types_8h.html#aed10717f0596999a72fa9b81a529b08bae5c319555ad8b0063cf81af91c42c01c',1,'OpenWater():&#160;types.h'],['../types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77ae5c319555ad8b0063cf81af91c42c01c',1,'OpenWater():&#160;types.h']]],
+  ['other_371',['Other',['../types_8h.html#a8f718445e86f6443489c95d1e396bab4a6311ae17c1ee52b36e68aaf4ad066387',1,'types.h']]]
 ];

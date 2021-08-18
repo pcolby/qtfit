@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['readbytes_3292',['readBytes',['../classFitStreamReaderPrivate.html#ae94d94f3c94e7c26cb3647e3b3c14261',1,'FitStreamReaderPrivate::readBytes(const size_t size)'],['../classFitStreamReaderPrivate.html#aa00709ad70b4e3fb322093813901f7ef',1,'FitStreamReaderPrivate::readBytes(const size_t size)'],['../classFitStreamReaderPrivate.html#aa00709ad70b4e3fb322093813901f7ef',1,'FitStreamReaderPrivate::readBytes(const size_t size)']]],
-  ['readfileheader_3293',['readFileHeader',['../classFitStreamReaderPrivate.html#a6521cfb558bd434888d4d90db166612b',1,'FitStreamReaderPrivate']]],
-  ['readnext_3294',['readNext',['../classFitStreamReader.html#a5a075c9f4ce1cd5ae7bf5503557538c3',1,'FitStreamReader']]],
-  ['readnextdatamessage_3295',['readNextDataMessage',['../classFitStreamReaderPrivate.html#a742261bda7db9743510330a529b3ecc2',1,'FitStreamReaderPrivate']]]
+  ['jumpmessage_4408',['JumpMessage',['../classJumpMessage.html#a7a38ab170b3c9f5d6aaf0f78e5f3fd72',1,'JumpMessage']]],
+  ['jumpmessageprivate_4409',['JumpMessagePrivate',['../classJumpMessagePrivate.html#a41f646a27738849bf42b033d82155cf5',1,'JumpMessagePrivate::JumpMessagePrivate()=delete'],['../classJumpMessagePrivate.html#a7a4cf8a186b89f338beff19e672e667f',1,'JumpMessagePrivate::JumpMessagePrivate(JumpMessage *const q)']]]
 ];

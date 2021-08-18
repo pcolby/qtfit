@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['fielddefinition_3247',['FieldDefinition',['../structFieldDefinition.html',1,'']]],
-  ['fileidmessage_3248',['FileIdMessage',['../classFileIdMessage.html',1,'']]],
-  ['fileidmessageprivate_3249',['FileIdMessagePrivate',['../classFileIdMessagePrivate.html',1,'']]],
-  ['fitdatamessage_3250',['FitDataMessage',['../classFitDataMessage.html',1,'']]],
-  ['fitdatamessageprivate_3251',['FitDataMessagePrivate',['../classFitDataMessagePrivate.html',1,'']]],
-  ['fitstreamreader_3252',['FitStreamReader',['../classFitStreamReader.html',1,'']]],
-  ['fitstreamreaderprivate_3253',['FitStreamReaderPrivate',['../classFitStreamReaderPrivate.html',1,'']]]
+  ['barometerdatamessage_3866',['BarometerDataMessage',['../classBarometerDataMessage.html',1,'']]],
+  ['barometerdatamessageprivate_3867',['BarometerDataMessagePrivate',['../classBarometerDataMessagePrivate.html',1,'']]],
+  ['bikeprofilemessage_3868',['BikeProfileMessage',['../classBikeProfileMessage.html',1,'']]],
+  ['bikeprofilemessageprivate_3869',['BikeProfileMessagePrivate',['../classBikeProfileMessagePrivate.html',1,'']]],
+  ['bloodpressuremessage_3870',['BloodPressureMessage',['../classBloodPressureMessage.html',1,'']]],
+  ['bloodpressuremessageprivate_3871',['BloodPressureMessagePrivate',['../classBloodPressureMessagePrivate.html',1,'']]]
 ];
