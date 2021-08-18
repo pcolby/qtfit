@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install Qt
-      run: sudo apt install qtbase5-dev
+      run: sudo apt update && sudo apt upgrade && sudo apt install qtbase5-dev
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install Cppcheck
-      run: sudo apt install cppcheck
+      run: sudo apt update && sudo apt upgrade && sudo apt install cppcheck
     - uses: actions/checkout@v2
     - name: Perform Cppcheck Analysis
       run: |

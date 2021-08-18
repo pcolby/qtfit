@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install Qt
-      run: sudo apt install qtbase5-dev
+      run: sudo apt update && sudo apt upgrade && sudo apt install qtbase5-dev
     - name: Build
       env:
         CC:  ${{ matrix.env.cc }}
@@ -40,7 +40,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install Tools
-      run: sudo apt install clang
+      run: sudo apt update && sudo apt upgrade && sudo apt install clang
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:

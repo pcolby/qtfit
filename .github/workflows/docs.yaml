@@ -23,6 +23,8 @@ jobs:
         submodules: true
     - name: Install Doxygen
       run: |
+        sudo apt update
+        sudo apt upgrade
         sudo apt install graphviz libclang1-9 libclang-cpp9 qtbase5-dev
         wget --quiet https://doxygen.nl/files/doxygen-1.9.1.linux.bin.tar.gz --output-document "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz"
         tar --extract --file "$RUNNER_TEMP/oxygen-1.9.1.linux.bin.tar.gz" --directory "$RUNNER_TEMP"
