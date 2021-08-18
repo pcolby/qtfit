@@ -337,13 +337,6 @@ var files_dup =
     [ "mesgcapabilitiesmessage_p.h", "mesgcapabilitiesmessage__p_8h.html", [
       [ "MesgCapabilitiesMessagePrivate", "classMesgCapabilitiesMessagePrivate.html", "classMesgCapabilitiesMessagePrivate" ]
     ] ],
-    [ "messagenamemessage.cpp", "messagenamemessage_8cpp.html", null ],
-    [ "messagenamemessage.h", "messagenamemessage_8h.html", [
-      [ "MessageNameMessage", "classMessageNameMessage.html", "classMessageNameMessage" ]
-    ] ],
-    [ "messagenamemessage_p.h", "messagenamemessage__p_8h.html", [
-      [ "MessageNameMessagePrivate", "classMessageNameMessagePrivate.html", "classMessageNameMessagePrivate" ]
-    ] ],
     [ "metzonemessage.cpp", "metzonemessage_8cpp.html", null ],
     [ "metzonemessage.h", "metzonemessage_8h.html", [
       [ "MetZoneMessage", "classMetZoneMessage.html", "classMetZoneMessage" ]

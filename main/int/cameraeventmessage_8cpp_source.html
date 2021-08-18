@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('cameraeventmessage_8cpp_source.html','
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classCameraEventMessage.html#a075428abf1b9c722f42c223b314831bf">   30</a></span>&#160;<a class="code" href="classCameraEventMessage.html#a075428abf1b9c722f42c223b314831bf">CameraEventMessage::CameraEventMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classCameraEventMessagePrivate.html">CameraEventMessagePrivate</a>(this))</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  /// \todo Set global message number.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classCameraEventMessagePrivate.html#ae3d6d54c1c5eae1a70795b4d140649ac">   35</a></span>&#160;<a class="code" href="classCameraEventMessagePrivate.html#af9aa561c8767b98b44211a02e6578057">CameraEventMessagePrivate::CameraEventMessagePrivate</a>(<a class="code" href="classCameraEventMessage.html">CameraEventMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22caeeb3850122902d60a47a098b85510020">MesgNum::CameraEvent</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classCameraEventMessagePrivate.html#ae588f20110353a5df65ff9b9bdaf4b02">   40</a></span>&#160;<a class="code" href="classCameraEventMessagePrivate.html#ae588f20110353a5df65ff9b9bdaf4b02">CameraEventMessagePrivate::~CameraEventMessagePrivate</a>()</div>
@@ -164,8 +164,10 @@ $(document).ready(function(){initNavTree('cameraeventmessage_8cpp_source.html','
 <div class="ttc" id="aclassCameraEventMessage_html"><div class="ttname"><a href="classCameraEventMessage.html">CameraEventMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="cameraeventmessage_8h_source.html#l00034">cameraeventmessage.h:34</a></div></div>
 <div class="ttc" id="aclassCameraEventMessage_html_a075428abf1b9c722f42c223b314831bf"><div class="ttname"><a href="classCameraEventMessage.html#a075428abf1b9c722f42c223b314831bf">CameraEventMessage::CameraEventMessage</a></div><div class="ttdeci">CameraEventMessage()</div><div class="ttdef"><b>Definition:</b> <a href="cameraeventmessage_8cpp_source.html#l00030">cameraeventmessage.cpp:30</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
+<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22caeeb3850122902d60a47a098b85510020"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22caeeb3850122902d60a47a098b85510020">MesgNum::CameraEvent</a></div><div class="ttdeci">@ CameraEvent</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nmeasentencemessage_648',['NmeaSentenceMessage',['../classNmeaSentenceMessage.html',1,'']]]
+  ['nmeasentencemessage_644',['NmeaSentenceMessage',['../classNmeaSentenceMessage.html',1,'']]]
 ];

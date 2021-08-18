@@ -48,7 +48,6 @@ var annotated_dup =
     [ "MagnetometerDataMessage", "classMagnetometerDataMessage.html", "classMagnetometerDataMessage" ],
     [ "MemoGlobMessage", "classMemoGlobMessage.html", "classMemoGlobMessage" ],
     [ "MesgCapabilitiesMessage", "classMesgCapabilitiesMessage.html", "classMesgCapabilitiesMessage" ],
-    [ "MessageNameMessage", "classMessageNameMessage.html", "classMessageNameMessage" ],
     [ "MetZoneMessage", "classMetZoneMessage.html", "classMetZoneMessage" ],
     [ "MonitoringInfoMessage", "classMonitoringInfoMessage.html", "classMonitoringInfoMessage" ],
     [ "MonitoringMessage", "classMonitoringMessage.html", "classMonitoringMessage" ],

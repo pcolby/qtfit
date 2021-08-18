@@ -100,8 +100,6 @@ var annotated_dup =
     [ "MemoGlobMessagePrivate", "classMemoGlobMessagePrivate.html", "classMemoGlobMessagePrivate" ],
     [ "MesgCapabilitiesMessage", "classMesgCapabilitiesMessage.html", "classMesgCapabilitiesMessage" ],
     [ "MesgCapabilitiesMessagePrivate", "classMesgCapabilitiesMessagePrivate.html", "classMesgCapabilitiesMessagePrivate" ],
-    [ "MessageNameMessage", "classMessageNameMessage.html", "classMessageNameMessage" ],
-    [ "MessageNameMessagePrivate", "classMessageNameMessagePrivate.html", "classMessageNameMessagePrivate" ],
     [ "MetZoneMessage", "classMetZoneMessage.html", "classMetZoneMessage" ],
     [ "MetZoneMessagePrivate", "classMetZoneMessagePrivate.html", "classMetZoneMessagePrivate" ],
     [ "MonitoringInfoMessage", "classMonitoringInfoMessage.html", "classMonitoringInfoMessage" ],

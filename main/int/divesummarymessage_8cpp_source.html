@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('divesummarymessage_8cpp_source.html','
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classDiveSummaryMessage.html#a2e7ef0e92af56ea9fc0620b5e066878c">   30</a></span>&#160;<a class="code" href="classDiveSummaryMessage.html#a2e7ef0e92af56ea9fc0620b5e066878c">DiveSummaryMessage::DiveSummaryMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classDiveSummaryMessagePrivate.html">DiveSummaryMessagePrivate</a>(this))</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  /// \todo Set global message number.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classDiveSummaryMessagePrivate.html#a8fa991861f43c32edb17ebfdea7e46ca">   35</a></span>&#160;<a class="code" href="classDiveSummaryMessagePrivate.html#a033d5c5f98a5ef9ceb6d37961c025afc">DiveSummaryMessagePrivate::DiveSummaryMessagePrivate</a>(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca57b09bffe93da842a887a5e8a893056f">MesgNum::DiveSummary</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classDiveSummaryMessagePrivate.html#a6ac0acbbe524d51b104c8b117d5bf8f1">   40</a></span>&#160;<a class="code" href="classDiveSummaryMessagePrivate.html#a6ac0acbbe524d51b104c8b117d5bf8f1">DiveSummaryMessagePrivate::~DiveSummaryMessagePrivate</a>()</div>
@@ -162,10 +162,12 @@ $(document).ready(function(){initNavTree('divesummarymessage_8cpp_source.html','
 <div class="ttc" id="aclassDiveSummaryMessage_html"><div class="ttname"><a href="classDiveSummaryMessage.html">DiveSummaryMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8h_source.html#l00034">divesummarymessage.h:34</a></div></div>
 <div class="ttc" id="aclassDiveSummaryMessage_html_a2e7ef0e92af56ea9fc0620b5e066878c"><div class="ttname"><a href="classDiveSummaryMessage.html#a2e7ef0e92af56ea9fc0620b5e066878c">DiveSummaryMessage::DiveSummaryMessage</a></div><div class="ttdeci">DiveSummaryMessage()</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00030">divesummarymessage.cpp:30</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="adivesummarymessage_8h_html"><div class="ttname"><a href="divesummarymessage_8h.html">divesummarymessage.h</a></div></div>
 <div class="ttc" id="adivesummarymessage__p_8h_html"><div class="ttname"><a href="divesummarymessage__p_8h.html">divesummarymessage_p.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22ca57b09bffe93da842a887a5e8a893056f"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca57b09bffe93da842a887a5e8a893056f">MesgNum::DiveSummary</a></div><div class="ttdeci">@ DiveSummary</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

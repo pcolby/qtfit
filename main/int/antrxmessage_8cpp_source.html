@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('antrxmessage_8cpp_source.html',''); in
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classAntRxMessage.html#ace0f2dc21bba5db1dfd5e3844542b055">   30</a></span>&#160;<a class="code" href="classAntRxMessage.html#ace0f2dc21bba5db1dfd5e3844542b055">AntRxMessage::AntRxMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classAntRxMessagePrivate.html">AntRxMessagePrivate</a>(this))</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  /// \todo Set global message number.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classAntRxMessagePrivate.html#a8a338d30fab0ae41408a0806ee8ce22e">   35</a></span>&#160;<a class="code" href="classAntRxMessagePrivate.html#a5977410399719baecee6aa81c95bb37f">AntRxMessagePrivate::AntRxMessagePrivate</a>(<a class="code" href="classAntRxMessage.html">AntRxMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca7ec222695968ebb2ccbce69d0634d38b">MesgNum::AntRx</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classAntRxMessagePrivate.html#ae57af36338d4703568787a26f9d78d0e">   40</a></span>&#160;<a class="code" href="classAntRxMessagePrivate.html#ae57af36338d4703568787a26f9d78d0e">AntRxMessagePrivate::~AntRxMessagePrivate</a>()</div>
@@ -164,8 +164,10 @@ $(document).ready(function(){initNavTree('antrxmessage_8cpp_source.html',''); in
 <div class="ttc" id="aclassAntRxMessage_html"><div class="ttname"><a href="classAntRxMessage.html">AntRxMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="antrxmessage_8h_source.html#l00034">antrxmessage.h:34</a></div></div>
 <div class="ttc" id="aclassAntRxMessage_html_ace0f2dc21bba5db1dfd5e3844542b055"><div class="ttname"><a href="classAntRxMessage.html#ace0f2dc21bba5db1dfd5e3844542b055">AntRxMessage::AntRxMessage</a></div><div class="ttdeci">AntRxMessage()</div><div class="ttdef"><b>Definition:</b> <a href="antrxmessage_8cpp_source.html#l00030">antrxmessage.cpp:30</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
+<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22ca7ec222695968ebb2ccbce69d0634d38b"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca7ec222695968ebb2ccbce69d0634d38b">MesgNum::AntRx</a></div><div class="ttdeci">@ AntRx</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

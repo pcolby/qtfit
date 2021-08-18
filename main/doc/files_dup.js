@@ -187,10 +187,6 @@ var files_dup =
     [ "mesgcapabilitiesmessage.h", "mesgcapabilitiesmessage_8h.html", [
       [ "MesgCapabilitiesMessage", "classMesgCapabilitiesMessage.html", "classMesgCapabilitiesMessage" ]
     ] ],
-    [ "messagenamemessage.cpp", "messagenamemessage_8cpp.html", null ],
-    [ "messagenamemessage.h", "messagenamemessage_8h.html", [
-      [ "MessageNameMessage", "classMessageNameMessage.html", "classMessageNameMessage" ]
-    ] ],
     [ "metzonemessage.cpp", "metzonemessage_8cpp.html", null ],
     [ "metzonemessage.h", "metzonemessage_8h.html", [
       [ "MetZoneMessage", "classMetZoneMessage.html", "classMetZoneMessage" ]

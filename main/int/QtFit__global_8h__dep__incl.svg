@@ -32,33 +32,33 @@
 <path fill="none" stroke="midnightblue" d="M3634.18,-216.47C3627.24,-208.26 3619.17,-197.98 3613,-188 3601.24,-168.97 3591.19,-144.57 3586.25,-131.75"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3631.67,-218.92 3640.87,-224.18 3636.95,-214.33 3631.67,-218.92"/>
 </g>
-<!-- Node183 -->
+<!-- Node181 -->
 <g id="node49" class="node">
-<title>Node183</title>
+<title>Node181</title>
 <g id="a_node49"><a xlink:href="fitdatamessage__p_8h.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="red" points="4962.5,-112.5 4962.5,-131.5 5075.5,-131.5 5075.5,-112.5 4962.5,-112.5"/>
 <text text-anchor="middle" x="5019" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitdatamessage_p.h</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node183 -->
+<!-- Node1&#45;&gt;Node181 -->
 <g id="edge91" class="edge">
-<title>Node1&#45;&gt;Node183</title>
+<title>Node1&#45;&gt;Node181</title>
 <path fill="none" stroke="midnightblue" d="M3701.24,-228.81C3917.12,-211.47 4738.79,-145.5 4962.48,-127.54"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3700.81,-225.33 3691.13,-229.62 3701.37,-232.31 3700.81,-225.33"/>
 </g>
-<!-- Node272 -->
+<!-- Node269 -->
 <g id="node50" class="node">
-<title>Node272</title>
+<title>Node269</title>
 <g id="a_node50"><a xlink:href="types_8h.html" target="_top" xlink:title="Types defined by the ANT+ FIT SDK.">
 <polygon fill="none" stroke="red" points="3622.5,-168.5 3622.5,-187.5 3675.5,-187.5 3675.5,-168.5 3622.5,-168.5"/>
 <text text-anchor="middle" x="3649" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">types.h</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node272 -->
+<!-- Node1&#45;&gt;Node269 -->
 <g id="edge94" class="edge">
-<title>Node1&#45;&gt;Node272</title>
+<title>Node1&#45;&gt;Node269</title>
 <path fill="none" stroke="midnightblue" d="M3649,-213.8C3649,-204.91 3649,-194.78 3649,-187.75"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3645.5,-214.08 3649,-224.08 3652.5,-214.08 3645.5,-214.08"/>
 </g>
@@ -1010,27 +1010,27 @@
 <path fill="none" stroke="midnightblue" d="M3929.37,-56.05C3729.27,-31.53 3504.69,-18.75 3400.12,-13.65"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3929.13,-59.55 3939.48,-57.3 3929.99,-52.6 3929.13,-59.55"/>
 </g>
-<!-- Node183&#45;&gt;Node5 -->
+<!-- Node181&#45;&gt;Node5 -->
 <g id="edge93" class="edge">
-<title>Node183&#45;&gt;Node5</title>
+<title>Node181&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M5085.63,-121.37C5354.95,-122.53 6350.95,-123.57 6397,-76 6403.18,-69.61 6403.24,-62.33 6397,-56 6369.68,-28.27 3822.75,-13.56 3400.11,-11.31"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="5085.62,-117.87 5075.6,-121.32 5085.59,-124.87 5085.62,-117.87"/>
 </g>
-<!-- Node183&#45;&gt;Node70 -->
+<!-- Node181&#45;&gt;Node70 -->
 <g id="edge92" class="edge">
-<title>Node183&#45;&gt;Node70</title>
+<title>Node181&#45;&gt;Node70</title>
 <path fill="none" stroke="midnightblue" d="M5085.88,-120.69C5272.16,-119.35 5812.64,-112.39 6260,-76 6264.71,-75.62 6269.58,-75.15 6274.47,-74.63"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="5085.67,-117.19 5075.7,-120.76 5085.72,-124.19 5085.67,-117.19"/>
 </g>
-<!-- Node272&#45;&gt;Node2 -->
+<!-- Node269&#45;&gt;Node2 -->
 <g id="edge95" class="edge">
-<title>Node272&#45;&gt;Node2</title>
+<title>Node269&#45;&gt;Node2</title>
 <path fill="none" stroke="midnightblue" d="M3630.45,-161.82C3618.62,-152.15 3603.71,-139.95 3593.8,-131.83"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3628.44,-164.7 3638.4,-168.32 3632.87,-159.28 3628.44,-164.7"/>
 </g>
-<!-- Node272&#45;&gt;Node183 -->
+<!-- Node269&#45;&gt;Node181 -->
 <g id="edge96" class="edge">
-<title>Node272&#45;&gt;Node183</title>
+<title>Node269&#45;&gt;Node181</title>
 <path fill="none" stroke="midnightblue" d="M3685.68,-168.88C3687.81,-168.55 3689.93,-168.25 3692,-168 3943.6,-137.63 4741.92,-126.23 4962.21,-123.62"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3684.95,-165.46 3675.72,-170.66 3686.18,-172.35 3684.95,-165.46"/>
 </g>

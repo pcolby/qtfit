@@ -1,11 +1,11 @@
 var NAVTREEINDEX0 =
 {
-"QtFit__global_8h.html":[4,0,172],
-"QtFit__global_8h.html#a04f0529fdd7f7d0ff3a2d284cf167b14":[4,0,172,3],
-"QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c":[4,0,172,2],
-"QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139":[4,0,172,1],
-"QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e":[4,0,172,0],
-"QtFit__global_8h_source.html":[4,0,172],
+"QtFit__global_8h.html":[4,0,169],
+"QtFit__global_8h.html#a04f0529fdd7f7d0ff3a2d284cf167b14":[4,0,169,3],
+"QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c":[4,0,169,2],
+"QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139":[4,0,169,1],
+"QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e":[4,0,169,0],
+"QtFit__global_8h_source.html":[4,0,169],
 "accelerometerdatamessage_8cpp.html":[4,0,0],
 "accelerometerdatamessage_8cpp_source.html":[4,0,0],
 "accelerometerdatamessage_8h.html":[4,0,1],

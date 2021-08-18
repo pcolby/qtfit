@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('climbpromessage_8cpp_source.html','');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classClimbProMessage.html#ad3713622fcbeffac7ef65b68316f3124">   30</a></span>&#160;<a class="code" href="classClimbProMessage.html#ad3713622fcbeffac7ef65b68316f3124">ClimbProMessage::ClimbProMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classClimbProMessagePrivate.html">ClimbProMessagePrivate</a>(this))</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  /// \todo Set global message number.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classClimbProMessagePrivate.html#ad0036227570a1ad4f4dd94b8ef15fb7e">   35</a></span>&#160;<a class="code" href="classClimbProMessagePrivate.html#aa02a37b81a0119b91a07870855cb307c">ClimbProMessagePrivate::ClimbProMessagePrivate</a>(<a class="code" href="classClimbProMessage.html">ClimbProMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22cacc11da16eff4c73fe4bb242bad6abffc">MesgNum::ClimbPro</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classClimbProMessagePrivate.html#a97b12cac0a330df31ebfe89fe14e2133">   40</a></span>&#160;<a class="code" href="classClimbProMessagePrivate.html#a97b12cac0a330df31ebfe89fe14e2133">ClimbProMessagePrivate::~ClimbProMessagePrivate</a>()</div>
@@ -162,10 +162,12 @@ $(document).ready(function(){initNavTree('climbpromessage_8cpp_source.html','');
 <div class="ttc" id="aclassClimbProMessage_html"><div class="ttname"><a href="classClimbProMessage.html">ClimbProMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="climbpromessage_8h_source.html#l00034">climbpromessage.h:34</a></div></div>
 <div class="ttc" id="aclassClimbProMessage_html_ad3713622fcbeffac7ef65b68316f3124"><div class="ttname"><a href="classClimbProMessage.html#ad3713622fcbeffac7ef65b68316f3124">ClimbProMessage::ClimbProMessage</a></div><div class="ttdeci">ClimbProMessage()</div><div class="ttdef"><b>Definition:</b> <a href="climbpromessage_8cpp_source.html#l00030">climbpromessage.cpp:30</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="aclimbpromessage_8h_html"><div class="ttname"><a href="climbpromessage_8h.html">climbpromessage.h</a></div></div>
 <div class="ttc" id="aclimbpromessage__p_8h_html"><div class="ttname"><a href="climbpromessage__p_8h.html">climbpromessage_p.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22cacc11da16eff4c73fe4bb242bad6abffc"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22cacc11da16eff4c73fe4bb242bad6abffc">MesgNum::ClimbPro</a></div><div class="ttdeci">@ ClimbPro</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

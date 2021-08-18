@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('devicesettingsmessage_8cpp_source.html
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classDeviceSettingsMessage.html#adae8722ab237697ca83f772826396d3a">   30</a></span>&#160;<a class="code" href="classDeviceSettingsMessage.html#adae8722ab237697ca83f772826396d3a">DeviceSettingsMessage::DeviceSettingsMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a>(this))</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  /// \todo Set global message number.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classDeviceSettingsMessagePrivate.html#abfc895125ea02dfe7eabf2d817f288c6">   35</a></span>&#160;<a class="code" href="classDeviceSettingsMessagePrivate.html#a5530052e0cc8c465a20524b352fb5d15">DeviceSettingsMessagePrivate::DeviceSettingsMessagePrivate</a>(<a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca06a4484c5c5210ddbeb6cdf5ca9bf0f3">MesgNum::DeviceSettings</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classDeviceSettingsMessagePrivate.html#a4c2454e9d172a1d856682dd9ec713be2">   40</a></span>&#160;<a class="code" href="classDeviceSettingsMessagePrivate.html#a4c2454e9d172a1d856682dd9ec713be2">DeviceSettingsMessagePrivate::~DeviceSettingsMessagePrivate</a>()</div>
@@ -162,10 +162,12 @@ $(document).ready(function(){initNavTree('devicesettingsmessage_8cpp_source.html
 <div class="ttc" id="aclassDeviceSettingsMessage_html"><div class="ttname"><a href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage_8h_source.html#l00034">devicesettingsmessage.h:34</a></div></div>
 <div class="ttc" id="aclassDeviceSettingsMessage_html_adae8722ab237697ca83f772826396d3a"><div class="ttname"><a href="classDeviceSettingsMessage.html#adae8722ab237697ca83f772826396d3a">DeviceSettingsMessage::DeviceSettingsMessage</a></div><div class="ttdeci">DeviceSettingsMessage()</div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage_8cpp_source.html#l00030">devicesettingsmessage.cpp:30</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="adevicesettingsmessage_8h_html"><div class="ttname"><a href="devicesettingsmessage_8h.html">devicesettingsmessage.h</a></div></div>
 <div class="ttc" id="adevicesettingsmessage__p_8h_html"><div class="ttname"><a href="devicesettingsmessage__p_8h.html">devicesettingsmessage_p.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22ca06a4484c5c5210ddbeb6cdf5ca9bf0f3"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca06a4484c5c5210ddbeb6cdf5ca9bf0f3">MesgNum::DeviceSettings</a></div><div class="ttdeci">@ DeviceSettings</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

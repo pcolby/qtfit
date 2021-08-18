@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('goalmessage_8cpp_source.html',''); ini
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classGoalMessage.html#a7fa899591830efe71af8d4393ffe4edc">   30</a></span>&#160;<a class="code" href="classGoalMessage.html#a7fa899591830efe71af8d4393ffe4edc">GoalMessage::GoalMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classGoalMessagePrivate.html">GoalMessagePrivate</a>(this))</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  /// \todo Set global message number.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classGoalMessagePrivate.html#a0f9f191b79dde68c2286f44a4c4a0ed5">   35</a></span>&#160;<a class="code" href="classGoalMessagePrivate.html#a32abd0a6c79a49140ec833f4f7d277bc">GoalMessagePrivate::GoalMessagePrivate</a>(<a class="code" href="classGoalMessage.html">GoalMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca12c74214cb4c18cf36d885303d6aa2e1">MesgNum::Goal</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classGoalMessagePrivate.html#a97f859e506458ef62cee9c400c6a9740">   40</a></span>&#160;<a class="code" href="classGoalMessagePrivate.html#a97f859e506458ef62cee9c400c6a9740">GoalMessagePrivate::~GoalMessagePrivate</a>()</div>
@@ -156,6 +156,7 @@ $(document).ready(function(){initNavTree('goalmessage_8cpp_source.html',''); ini
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="aclassGoalMessagePrivate_html"><div class="ttname"><a href="classGoalMessagePrivate.html">GoalMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="goalmessage__p_8h_source.html#l00034">goalmessage_p.h:34</a></div></div>
@@ -166,6 +167,7 @@ $(document).ready(function(){initNavTree('goalmessage_8cpp_source.html',''); ini
 <div class="ttc" id="aclassGoalMessage_html_a7fa899591830efe71af8d4393ffe4edc"><div class="ttname"><a href="classGoalMessage.html#a7fa899591830efe71af8d4393ffe4edc">GoalMessage::GoalMessage</a></div><div class="ttdeci">GoalMessage()</div><div class="ttdef"><b>Definition:</b> <a href="goalmessage_8cpp_source.html#l00030">goalmessage.cpp:30</a></div></div>
 <div class="ttc" id="agoalmessage_8h_html"><div class="ttname"><a href="goalmessage_8h.html">goalmessage.h</a></div></div>
 <div class="ttc" id="agoalmessage__p_8h_html"><div class="ttname"><a href="goalmessage__p_8h.html">goalmessage_p.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22ca12c74214cb4c18cf36d885303d6aa2e1"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca12c74214cb4c18cf36d885303d6aa2e1">MesgNum::Goal</a></div><div class="ttdeci">@ Goal</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

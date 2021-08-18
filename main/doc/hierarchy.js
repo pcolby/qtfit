@@ -47,7 +47,6 @@ var hierarchy =
       [ "MagnetometerDataMessage", "classMagnetometerDataMessage.html", null ],
       [ "MemoGlobMessage", "classMemoGlobMessage.html", null ],
       [ "MesgCapabilitiesMessage", "classMesgCapabilitiesMessage.html", null ],
-      [ "MessageNameMessage", "classMessageNameMessage.html", null ],
       [ "MetZoneMessage", "classMetZoneMessage.html", null ],
       [ "MonitoringInfoMessage", "classMonitoringInfoMessage.html", null ],
       [ "MonitoringMessage", "classMonitoringMessage.html", null ],

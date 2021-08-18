@@ -53,22 +53,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "QtFit__global_8h_source.html",
-"classSetMessage.html",
-"softwaremessage_8cpp.html",
-"types_8h.html#a00eecc1db747a403407ee496ccd56103a90f6dd254d8f27bde43815b3131b928a",
-"types_8h.html#a17c9d8de027c09e02b07fda419c76507a297438e48f413a9eff7ffa2186f18b8d",
-"types_8h.html#a315ca917ad583797f709ea477dd28705a90589c47f06eb971d548591f23c285af",
-"types_8h.html#a3f472eba0bbcfdce6a17250303a4e8cea06c8cc380c61817dc11e1690c2b69605",
-"types_8h.html#a438ab2ac60ad5d5ced30e4201476800bacf41b2d58558490968c0c81060ebf429",
-"types_8h.html#a6230df23cf868e87b9d6a76cb6870bc9a10b0cab203628448fde6b629dec656cf",
-"types_8h.html#a71ece1115066545f8d3b16037d342378a085497e619eba51094167e561adbc44d",
-"types_8h.html#a8df0bd47295070f98af72ed3d9959878ac674855a0c34570f1d91310c95da3ed2",
-"types_8h.html#aa455026201b375659811c45137e139d3a3ac705f2acd51a4613f9188c05c91d0d",
-"types_8h.html#ab7fe9751f3f85320c2e9818675c5ab86a70f5334f1322723342d5e0319cfbe1e1",
-"types_8h.html#abff0cc6077b6b352288453cfaef93f80a8c80b5999767ea41ad2995f9187a8bf8",
-"types_8h.html#ac77ff16ce976e5b30f31d739c90095dda68f6f9e9cda09f2791928aaf0df56f67",
-"types_8h.html#ad682f23e76bb7b21f4f4c663b89139eda8e7cbd7e748020187a486ace0a1f13c9",
-"watchfacesettingsmessage_8h.html"
+"classSlaveDeviceMessage.html",
+"sportmessage_8cpp.html",
+"types_8h.html#a00eecc1db747a403407ee496ccd56103a94b882511a4d608a34cd5fd0fc7e4632",
+"types_8h.html#a17c9d8de027c09e02b07fda419c76507a339dcc9594350e228e2793c612a26e37",
+"types_8h.html#a315ca917ad583797f709ea477dd28705ac730389bc8d99e59c867766babdd48b5",
+"types_8h.html#a3f472eba0bbcfdce6a17250303a4e8cea0f094b17d6d26c3925824223a3c97fdd",
+"types_8h.html#a459cdb998d4b2efa4df501994b310cd8a810c063ba18dfe4b3d05ab535fc2ba16",
+"types_8h.html#a6230df23cf868e87b9d6a76cb6870bc9a265a821f41e99b544f8cbb3dd2d39188",
+"types_8h.html#a71ece1115066545f8d3b16037d342378a1c057daa5bf5cc2b4deb29282ef7c7ca",
+"types_8h.html#a8df0bd47295070f98af72ed3d9959878ae58b0c0b52443b859a489db668c2f4f5",
+"types_8h.html#aa455026201b375659811c45137e139d3acf270e40d273f9e7fd7c3061729060c3",
+"types_8h.html#ab7fe9751f3f85320c2e9818675c5ab86aacf147e43ab605bd9ff10b44a62cb1f4",
+"types_8h.html#abff0cc6077b6b352288453cfaef93f80a915cd8c8740c8d85492d2c6f899b1143",
+"types_8h.html#ac77ff16ce976e5b30f31d739c90095dda7b8587baa3c314f619794cd537a28410",
+"types_8h.html#ad682f23e76bb7b21f4f4c663b89139edadd4fe0cc913f704600b97d1f5dd285de",
+"weatherconditionsmessage_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
