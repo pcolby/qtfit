@@ -83,7 +83,6 @@ int Generator::processMessages(Grantlee::Context &context)
     QVariantList fields;
     int fileCount=0;
     for (const QByteArray &line: lines) {
-        qDebug() << line;
         const QList<QByteArray> columns = line.split('\t');
         if ((columns.size() != 16) && (!line.isEmpty())) {
             qWarning() << "line with unexpected" << columns.size() << "columns" << line;
