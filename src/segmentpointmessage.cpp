@@ -32,6 +32,73 @@ SegmentPointMessage::SegmentPointMessage() : FitDataMessage(new SegmentPointMess
 
 }
 
+MessageIndex SegmentPointMessage::messageIndex() const
+{
+    Q_D(const SegmentPointMessage);
+    return d->messageIndex;
+}
+
+qint32 SegmentPointMessage::positionLat() const
+{
+    Q_D(const SegmentPointMessage);
+    return d->positionLat;
+}
+
+qint32 SegmentPointMessage::positionLong() const
+{
+    Q_D(const SegmentPointMessage);
+    return d->positionLong;
+}
+
+quint32 SegmentPointMessage::distance() const
+{
+    Q_D(const SegmentPointMessage);
+    return d->distance;
+}
+
+quint16 SegmentPointMessage::altitude() const
+{
+    Q_D(const SegmentPointMessage);
+    return d->altitude;
+}
+
+quint32 SegmentPointMessage::leaderTime() const
+{
+    Q_D(const SegmentPointMessage);
+    return d->leaderTime;
+}
+
+void SegmentPointMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(SegmentPointMessage);
+    d->messageIndex = messageIndex;
+}
+void SegmentPointMessage::setPositionLat(const qint32 positionLat)
+{
+    Q_D(SegmentPointMessage);
+    d->positionLat = positionLat;
+}
+void SegmentPointMessage::setPositionLong(const qint32 positionLong)
+{
+    Q_D(SegmentPointMessage);
+    d->positionLong = positionLong;
+}
+void SegmentPointMessage::setDistance(const quint32 distance)
+{
+    Q_D(SegmentPointMessage);
+    d->distance = distance;
+}
+void SegmentPointMessage::setAltitude(const quint16 altitude)
+{
+    Q_D(SegmentPointMessage);
+    d->altitude = altitude;
+}
+void SegmentPointMessage::setLeaderTime(const quint32 leaderTime)
+{
+    Q_D(SegmentPointMessage);
+    d->leaderTime = leaderTime;
+}
+
 SegmentPointMessagePrivate::SegmentPointMessagePrivate(SegmentPointMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::SegmentPoint;

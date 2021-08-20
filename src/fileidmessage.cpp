@@ -32,6 +32,84 @@ FileIdMessage::FileIdMessage() : FitDataMessage(new FileIdMessagePrivate(this))
 
 }
 
+File FileIdMessage::type() const
+{
+    Q_D(const FileIdMessage);
+    return d->type;
+}
+
+Manufacturer FileIdMessage::manufacturer() const
+{
+    Q_D(const FileIdMessage);
+    return d->manufacturer;
+}
+
+quint16 FileIdMessage::product() const
+{
+    Q_D(const FileIdMessage);
+    return d->product;
+}
+
+quint32z FileIdMessage::serialNumber() const
+{
+    Q_D(const FileIdMessage);
+    return d->serialNumber;
+}
+
+DateTime FileIdMessage::timeCreated() const
+{
+    Q_D(const FileIdMessage);
+    return d->timeCreated;
+}
+
+quint16 FileIdMessage::number() const
+{
+    Q_D(const FileIdMessage);
+    return d->number;
+}
+
+QString FileIdMessage::productName() const
+{
+    Q_D(const FileIdMessage);
+    return d->productName;
+}
+
+void FileIdMessage::setType(const File type)
+{
+    Q_D(FileIdMessage);
+    d->type = type;
+}
+void FileIdMessage::setManufacturer(const Manufacturer manufacturer)
+{
+    Q_D(FileIdMessage);
+    d->manufacturer = manufacturer;
+}
+void FileIdMessage::setProduct(const quint16 product)
+{
+    Q_D(FileIdMessage);
+    d->product = product;
+}
+void FileIdMessage::setSerialNumber(const quint32z serialNumber)
+{
+    Q_D(FileIdMessage);
+    d->serialNumber = serialNumber;
+}
+void FileIdMessage::setTimeCreated(const DateTime timeCreated)
+{
+    Q_D(FileIdMessage);
+    d->timeCreated = timeCreated;
+}
+void FileIdMessage::setNumber(const quint16 number)
+{
+    Q_D(FileIdMessage);
+    d->number = number;
+}
+void FileIdMessage::setProductName(const QString productName)
+{
+    Q_D(FileIdMessage);
+    d->productName = productName;
+}
+
 FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::FileId;

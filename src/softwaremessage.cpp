@@ -32,6 +32,40 @@ SoftwareMessage::SoftwareMessage() : FitDataMessage(new SoftwareMessagePrivate(t
 
 }
 
+MessageIndex SoftwareMessage::messageIndex() const
+{
+    Q_D(const SoftwareMessage);
+    return d->messageIndex;
+}
+
+quint16 SoftwareMessage::version() const
+{
+    Q_D(const SoftwareMessage);
+    return d->version;
+}
+
+QString SoftwareMessage::partNumber() const
+{
+    Q_D(const SoftwareMessage);
+    return d->partNumber;
+}
+
+void SoftwareMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(SoftwareMessage);
+    d->messageIndex = messageIndex;
+}
+void SoftwareMessage::setVersion(const quint16 version)
+{
+    Q_D(SoftwareMessage);
+    d->version = version;
+}
+void SoftwareMessage::setPartNumber(const QString partNumber)
+{
+    Q_D(SoftwareMessage);
+    d->partNumber = partNumber;
+}
+
 SoftwareMessagePrivate::SoftwareMessagePrivate(SoftwareMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Software;

@@ -37,7 +37,25 @@ public:
     GyroscopeDataMessage();
     ~GyroscopeDataMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    quint16 sampleTimeOffset() const;
+    quint16 gyroX() const;
+    quint16 gyroY() const;
+    quint16 gyroZ() const;
+    float calibratedGyroX() const;
+    float calibratedGyroY() const;
+    float calibratedGyroZ() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setSampleTimeOffset(const quint16 sampleTimeOffset);
+    void setGyroX(const quint16 gyroX);
+    void setGyroY(const quint16 gyroY);
+    void setGyroZ(const quint16 gyroZ);
+    void setCalibratedGyroX(const float calibratedGyroX);
+    void setCalibratedGyroY(const float calibratedGyroY);
+    void setCalibratedGyroZ(const float calibratedGyroZ);
 
 protected:
     /// @cond internal

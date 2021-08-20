@@ -32,6 +32,139 @@ AccelerometerDataMessage::AccelerometerDataMessage() : FitDataMessage(new Accele
 
 }
 
+DateTime AccelerometerDataMessage::timestamp() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->timestamp;
+}
+
+quint16 AccelerometerDataMessage::timestampMs() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->timestampMs;
+}
+
+quint16 AccelerometerDataMessage::sampleTimeOffset() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->sampleTimeOffset;
+}
+
+quint16 AccelerometerDataMessage::accelX() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->accelX;
+}
+
+quint16 AccelerometerDataMessage::accelY() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->accelY;
+}
+
+quint16 AccelerometerDataMessage::accelZ() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->accelZ;
+}
+
+float AccelerometerDataMessage::calibratedAccelX() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->calibratedAccelX;
+}
+
+float AccelerometerDataMessage::calibratedAccelY() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->calibratedAccelY;
+}
+
+float AccelerometerDataMessage::calibratedAccelZ() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->calibratedAccelZ;
+}
+
+qint16 AccelerometerDataMessage::compressedCalibratedAccelX() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->compressedCalibratedAccelX;
+}
+
+qint16 AccelerometerDataMessage::compressedCalibratedAccelY() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->compressedCalibratedAccelY;
+}
+
+qint16 AccelerometerDataMessage::compressedCalibratedAccelZ() const
+{
+    Q_D(const AccelerometerDataMessage);
+    return d->compressedCalibratedAccelZ;
+}
+
+void AccelerometerDataMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(AccelerometerDataMessage);
+    d->timestamp = timestamp;
+}
+void AccelerometerDataMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(AccelerometerDataMessage);
+    d->timestampMs = timestampMs;
+}
+void AccelerometerDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
+{
+    Q_D(AccelerometerDataMessage);
+    d->sampleTimeOffset = sampleTimeOffset;
+}
+void AccelerometerDataMessage::setAccelX(const quint16 accelX)
+{
+    Q_D(AccelerometerDataMessage);
+    d->accelX = accelX;
+}
+void AccelerometerDataMessage::setAccelY(const quint16 accelY)
+{
+    Q_D(AccelerometerDataMessage);
+    d->accelY = accelY;
+}
+void AccelerometerDataMessage::setAccelZ(const quint16 accelZ)
+{
+    Q_D(AccelerometerDataMessage);
+    d->accelZ = accelZ;
+}
+void AccelerometerDataMessage::setCalibratedAccelX(const float calibratedAccelX)
+{
+    Q_D(AccelerometerDataMessage);
+    d->calibratedAccelX = calibratedAccelX;
+}
+void AccelerometerDataMessage::setCalibratedAccelY(const float calibratedAccelY)
+{
+    Q_D(AccelerometerDataMessage);
+    d->calibratedAccelY = calibratedAccelY;
+}
+void AccelerometerDataMessage::setCalibratedAccelZ(const float calibratedAccelZ)
+{
+    Q_D(AccelerometerDataMessage);
+    d->calibratedAccelZ = calibratedAccelZ;
+}
+void AccelerometerDataMessage::setCompressedCalibratedAccelX(const qint16 compressedCalibratedAccelX)
+{
+    Q_D(AccelerometerDataMessage);
+    d->compressedCalibratedAccelX = compressedCalibratedAccelX;
+}
+void AccelerometerDataMessage::setCompressedCalibratedAccelY(const qint16 compressedCalibratedAccelY)
+{
+    Q_D(AccelerometerDataMessage);
+    d->compressedCalibratedAccelY = compressedCalibratedAccelY;
+}
+void AccelerometerDataMessage::setCompressedCalibratedAccelZ(const qint16 compressedCalibratedAccelZ)
+{
+    Q_D(AccelerometerDataMessage);
+    d->compressedCalibratedAccelZ = compressedCalibratedAccelZ;
+}
+
 AccelerometerDataMessagePrivate::AccelerometerDataMessagePrivate(AccelerometerDataMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::AccelerometerData;

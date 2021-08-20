@@ -37,7 +37,15 @@ public:
     DiveGasMessage();
     ~DiveGasMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint8 heliumContent() const;
+    quint8 oxygenContent() const;
+    DiveGasStatus status() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setHeliumContent(const quint8 heliumContent);
+    void setOxygenContent(const quint8 oxygenContent);
+    void setStatus(const DiveGasStatus status);
 
 protected:
     /// @cond internal

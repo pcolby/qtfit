@@ -37,7 +37,15 @@ public:
     ExerciseTitleMessage();
     ~ExerciseTitleMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    ExerciseCategory exerciseCategory() const;
+    quint16 exerciseName() const;
+    QString wktStepName() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setExerciseCategory(const ExerciseCategory exerciseCategory);
+    void setExerciseName(const quint16 exerciseName);
+    void setWktStepName(const QString wktStepName);
 
 protected:
     /// @cond internal

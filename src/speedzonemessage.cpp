@@ -32,6 +32,40 @@ SpeedZoneMessage::SpeedZoneMessage() : FitDataMessage(new SpeedZoneMessagePrivat
 
 }
 
+MessageIndex SpeedZoneMessage::messageIndex() const
+{
+    Q_D(const SpeedZoneMessage);
+    return d->messageIndex;
+}
+
+quint16 SpeedZoneMessage::highValue() const
+{
+    Q_D(const SpeedZoneMessage);
+    return d->highValue;
+}
+
+QString SpeedZoneMessage::name() const
+{
+    Q_D(const SpeedZoneMessage);
+    return d->name;
+}
+
+void SpeedZoneMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(SpeedZoneMessage);
+    d->messageIndex = messageIndex;
+}
+void SpeedZoneMessage::setHighValue(const quint16 highValue)
+{
+    Q_D(SpeedZoneMessage);
+    d->highValue = highValue;
+}
+void SpeedZoneMessage::setName(const QString name)
+{
+    Q_D(SpeedZoneMessage);
+    d->name = name;
+}
+
 SpeedZoneMessagePrivate::SpeedZoneMessagePrivate(SpeedZoneMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::SpeedZone;

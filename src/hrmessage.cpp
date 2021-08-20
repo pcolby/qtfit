@@ -32,6 +32,73 @@ HrMessage::HrMessage() : FitDataMessage(new HrMessagePrivate(this))
 
 }
 
+DateTime HrMessage::timestamp() const
+{
+    Q_D(const HrMessage);
+    return d->timestamp;
+}
+
+quint16 HrMessage::fractionalTimestamp() const
+{
+    Q_D(const HrMessage);
+    return d->fractionalTimestamp;
+}
+
+quint8 HrMessage::time256() const
+{
+    Q_D(const HrMessage);
+    return d->time256;
+}
+
+quint8 HrMessage::filteredBpm() const
+{
+    Q_D(const HrMessage);
+    return d->filteredBpm;
+}
+
+quint32 HrMessage::eventTimestamp() const
+{
+    Q_D(const HrMessage);
+    return d->eventTimestamp;
+}
+
+quint8 HrMessage::eventTimestamp12() const
+{
+    Q_D(const HrMessage);
+    return d->eventTimestamp12;
+}
+
+void HrMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(HrMessage);
+    d->timestamp = timestamp;
+}
+void HrMessage::setFractionalTimestamp(const quint16 fractionalTimestamp)
+{
+    Q_D(HrMessage);
+    d->fractionalTimestamp = fractionalTimestamp;
+}
+void HrMessage::setTime256(const quint8 time256)
+{
+    Q_D(HrMessage);
+    d->time256 = time256;
+}
+void HrMessage::setFilteredBpm(const quint8 filteredBpm)
+{
+    Q_D(HrMessage);
+    d->filteredBpm = filteredBpm;
+}
+void HrMessage::setEventTimestamp(const quint32 eventTimestamp)
+{
+    Q_D(HrMessage);
+    d->eventTimestamp = eventTimestamp;
+}
+void HrMessage::setEventTimestamp12(const quint8 eventTimestamp12)
+{
+    Q_D(HrMessage);
+    d->eventTimestamp12 = eventTimestamp12;
+}
+
 HrMessagePrivate::HrMessagePrivate(HrMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Hr;

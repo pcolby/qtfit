@@ -37,7 +37,23 @@ public:
     SdmProfileMessage();
     ~SdmProfileMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    bool enabled() const;
+    quint16z sdmAntId() const;
+    quint16 sdmCalFactor() const;
+    quint32 odometer() const;
+    bool speedSource() const;
+    quint8z sdmAntIdTransType() const;
+    quint8 odometerRollover() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setEnabled(const bool enabled);
+    void setSdmAntId(const quint16z sdmAntId);
+    void setSdmCalFactor(const quint16 sdmCalFactor);
+    void setOdometer(const quint32 odometer);
+    void setSpeedSource(const bool speedSource);
+    void setSdmAntIdTransType(const quint8z sdmAntIdTransType);
+    void setOdometerRollover(const quint8 odometerRollover);
 
 protected:
     /// @cond internal

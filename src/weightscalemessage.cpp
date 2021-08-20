@@ -32,6 +32,150 @@ WeightScaleMessage::WeightScaleMessage() : FitDataMessage(new WeightScaleMessage
 
 }
 
+DateTime WeightScaleMessage::timestamp() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->timestamp;
+}
+
+Weight WeightScaleMessage::weight() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->weight;
+}
+
+quint16 WeightScaleMessage::percentFat() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->percentFat;
+}
+
+quint16 WeightScaleMessage::percentHydration() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->percentHydration;
+}
+
+quint16 WeightScaleMessage::visceralFatMass() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->visceralFatMass;
+}
+
+quint16 WeightScaleMessage::boneMass() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->boneMass;
+}
+
+quint16 WeightScaleMessage::muscleMass() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->muscleMass;
+}
+
+quint16 WeightScaleMessage::basalMet() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->basalMet;
+}
+
+quint8 WeightScaleMessage::physiqueRating() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->physiqueRating;
+}
+
+quint16 WeightScaleMessage::activeMet() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->activeMet;
+}
+
+quint8 WeightScaleMessage::metabolicAge() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->metabolicAge;
+}
+
+quint8 WeightScaleMessage::visceralFatRating() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->visceralFatRating;
+}
+
+MessageIndex WeightScaleMessage::userProfileIndex() const
+{
+    Q_D(const WeightScaleMessage);
+    return d->userProfileIndex;
+}
+
+void WeightScaleMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(WeightScaleMessage);
+    d->timestamp = timestamp;
+}
+void WeightScaleMessage::setWeight(const Weight weight)
+{
+    Q_D(WeightScaleMessage);
+    d->weight = weight;
+}
+void WeightScaleMessage::setPercentFat(const quint16 percentFat)
+{
+    Q_D(WeightScaleMessage);
+    d->percentFat = percentFat;
+}
+void WeightScaleMessage::setPercentHydration(const quint16 percentHydration)
+{
+    Q_D(WeightScaleMessage);
+    d->percentHydration = percentHydration;
+}
+void WeightScaleMessage::setVisceralFatMass(const quint16 visceralFatMass)
+{
+    Q_D(WeightScaleMessage);
+    d->visceralFatMass = visceralFatMass;
+}
+void WeightScaleMessage::setBoneMass(const quint16 boneMass)
+{
+    Q_D(WeightScaleMessage);
+    d->boneMass = boneMass;
+}
+void WeightScaleMessage::setMuscleMass(const quint16 muscleMass)
+{
+    Q_D(WeightScaleMessage);
+    d->muscleMass = muscleMass;
+}
+void WeightScaleMessage::setBasalMet(const quint16 basalMet)
+{
+    Q_D(WeightScaleMessage);
+    d->basalMet = basalMet;
+}
+void WeightScaleMessage::setPhysiqueRating(const quint8 physiqueRating)
+{
+    Q_D(WeightScaleMessage);
+    d->physiqueRating = physiqueRating;
+}
+void WeightScaleMessage::setActiveMet(const quint16 activeMet)
+{
+    Q_D(WeightScaleMessage);
+    d->activeMet = activeMet;
+}
+void WeightScaleMessage::setMetabolicAge(const quint8 metabolicAge)
+{
+    Q_D(WeightScaleMessage);
+    d->metabolicAge = metabolicAge;
+}
+void WeightScaleMessage::setVisceralFatRating(const quint8 visceralFatRating)
+{
+    Q_D(WeightScaleMessage);
+    d->visceralFatRating = visceralFatRating;
+}
+void WeightScaleMessage::setUserProfileIndex(const MessageIndex userProfileIndex)
+{
+    Q_D(WeightScaleMessage);
+    d->userProfileIndex = userProfileIndex;
+}
+
 WeightScaleMessagePrivate::WeightScaleMessagePrivate(WeightScaleMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::WeightScale;

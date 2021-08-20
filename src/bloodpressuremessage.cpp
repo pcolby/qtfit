@@ -32,6 +32,128 @@ BloodPressureMessage::BloodPressureMessage() : FitDataMessage(new BloodPressureM
 
 }
 
+DateTime BloodPressureMessage::timestamp() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->timestamp;
+}
+
+quint16 BloodPressureMessage::systolicPressure() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->systolicPressure;
+}
+
+quint16 BloodPressureMessage::diastolicPressure() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->diastolicPressure;
+}
+
+quint16 BloodPressureMessage::meanArterialPressure() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->meanArterialPressure;
+}
+
+quint16 BloodPressureMessage::map3SampleMean() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->map3SampleMean;
+}
+
+quint16 BloodPressureMessage::mapMorningValues() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->mapMorningValues;
+}
+
+quint16 BloodPressureMessage::mapEveningValues() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->mapEveningValues;
+}
+
+quint8 BloodPressureMessage::heartRate() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->heartRate;
+}
+
+HrType BloodPressureMessage::heartRateType() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->heartRateType;
+}
+
+BpStatus BloodPressureMessage::status() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->status;
+}
+
+MessageIndex BloodPressureMessage::userProfileIndex() const
+{
+    Q_D(const BloodPressureMessage);
+    return d->userProfileIndex;
+}
+
+void BloodPressureMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(BloodPressureMessage);
+    d->timestamp = timestamp;
+}
+void BloodPressureMessage::setSystolicPressure(const quint16 systolicPressure)
+{
+    Q_D(BloodPressureMessage);
+    d->systolicPressure = systolicPressure;
+}
+void BloodPressureMessage::setDiastolicPressure(const quint16 diastolicPressure)
+{
+    Q_D(BloodPressureMessage);
+    d->diastolicPressure = diastolicPressure;
+}
+void BloodPressureMessage::setMeanArterialPressure(const quint16 meanArterialPressure)
+{
+    Q_D(BloodPressureMessage);
+    d->meanArterialPressure = meanArterialPressure;
+}
+void BloodPressureMessage::setMap3SampleMean(const quint16 map3SampleMean)
+{
+    Q_D(BloodPressureMessage);
+    d->map3SampleMean = map3SampleMean;
+}
+void BloodPressureMessage::setMapMorningValues(const quint16 mapMorningValues)
+{
+    Q_D(BloodPressureMessage);
+    d->mapMorningValues = mapMorningValues;
+}
+void BloodPressureMessage::setMapEveningValues(const quint16 mapEveningValues)
+{
+    Q_D(BloodPressureMessage);
+    d->mapEveningValues = mapEveningValues;
+}
+void BloodPressureMessage::setHeartRate(const quint8 heartRate)
+{
+    Q_D(BloodPressureMessage);
+    d->heartRate = heartRate;
+}
+void BloodPressureMessage::setHeartRateType(const HrType heartRateType)
+{
+    Q_D(BloodPressureMessage);
+    d->heartRateType = heartRateType;
+}
+void BloodPressureMessage::setStatus(const BpStatus status)
+{
+    Q_D(BloodPressureMessage);
+    d->status = status;
+}
+void BloodPressureMessage::setUserProfileIndex(const MessageIndex userProfileIndex)
+{
+    Q_D(BloodPressureMessage);
+    d->userProfileIndex = userProfileIndex;
+}
+
 BloodPressureMessagePrivate::BloodPressureMessagePrivate(BloodPressureMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::BloodPressure;

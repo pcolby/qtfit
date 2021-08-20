@@ -32,6 +32,29 @@ FileCreatorMessage::FileCreatorMessage() : FitDataMessage(new FileCreatorMessage
 
 }
 
+quint16 FileCreatorMessage::softwareVersion() const
+{
+    Q_D(const FileCreatorMessage);
+    return d->softwareVersion;
+}
+
+quint8 FileCreatorMessage::hardwareVersion() const
+{
+    Q_D(const FileCreatorMessage);
+    return d->hardwareVersion;
+}
+
+void FileCreatorMessage::setSoftwareVersion(const quint16 softwareVersion)
+{
+    Q_D(FileCreatorMessage);
+    d->softwareVersion = softwareVersion;
+}
+void FileCreatorMessage::setHardwareVersion(const quint8 hardwareVersion)
+{
+    Q_D(FileCreatorMessage);
+    d->hardwareVersion = hardwareVersion;
+}
+
 FileCreatorMessagePrivate::FileCreatorMessagePrivate(FileCreatorMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::FileCreator;

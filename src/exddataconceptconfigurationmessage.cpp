@@ -32,6 +32,128 @@ ExdDataConceptConfigurationMessage::ExdDataConceptConfigurationMessage() : FitDa
 
 }
 
+quint8 ExdDataConceptConfigurationMessage::screenIndex() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->screenIndex;
+}
+
+quint8 ExdDataConceptConfigurationMessage::conceptField() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->conceptField;
+}
+
+quint8 ExdDataConceptConfigurationMessage::fieldId() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->fieldId;
+}
+
+quint8 ExdDataConceptConfigurationMessage::conceptIndex() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->conceptIndex;
+}
+
+quint8 ExdDataConceptConfigurationMessage::dataPage() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->dataPage;
+}
+
+quint8 ExdDataConceptConfigurationMessage::conceptKey() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->conceptKey;
+}
+
+quint8 ExdDataConceptConfigurationMessage::scaling() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->scaling;
+}
+
+ExdDataUnits ExdDataConceptConfigurationMessage::dataUnits() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->dataUnits;
+}
+
+ExdQualifiers ExdDataConceptConfigurationMessage::qualifier() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->qualifier;
+}
+
+ExdDescriptors ExdDataConceptConfigurationMessage::descriptor() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->descriptor;
+}
+
+bool ExdDataConceptConfigurationMessage::isSigned() const
+{
+    Q_D(const ExdDataConceptConfigurationMessage);
+    return d->isSigned;
+}
+
+void ExdDataConceptConfigurationMessage::setScreenIndex(const quint8 screenIndex)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->screenIndex = screenIndex;
+}
+void ExdDataConceptConfigurationMessage::setConceptField(const quint8 conceptField)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->conceptField = conceptField;
+}
+void ExdDataConceptConfigurationMessage::setFieldId(const quint8 fieldId)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->fieldId = fieldId;
+}
+void ExdDataConceptConfigurationMessage::setConceptIndex(const quint8 conceptIndex)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->conceptIndex = conceptIndex;
+}
+void ExdDataConceptConfigurationMessage::setDataPage(const quint8 dataPage)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->dataPage = dataPage;
+}
+void ExdDataConceptConfigurationMessage::setConceptKey(const quint8 conceptKey)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->conceptKey = conceptKey;
+}
+void ExdDataConceptConfigurationMessage::setScaling(const quint8 scaling)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->scaling = scaling;
+}
+void ExdDataConceptConfigurationMessage::setDataUnits(const ExdDataUnits dataUnits)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->dataUnits = dataUnits;
+}
+void ExdDataConceptConfigurationMessage::setQualifier(const ExdQualifiers qualifier)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->qualifier = qualifier;
+}
+void ExdDataConceptConfigurationMessage::setDescriptor(const ExdDescriptors descriptor)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->descriptor = descriptor;
+}
+void ExdDataConceptConfigurationMessage::setIsSigned(const bool isSigned)
+{
+    Q_D(ExdDataConceptConfigurationMessage);
+    d->isSigned = isSigned;
+}
+
 ExdDataConceptConfigurationMessagePrivate::ExdDataConceptConfigurationMessagePrivate(ExdDataConceptConfigurationMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::ExdDataConceptConfiguration;

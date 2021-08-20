@@ -37,7 +37,11 @@ public:
     OhrSettingsMessage();
     ~OhrSettingsMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    Switch enabled() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setEnabled(const Switch enabled);
 
 protected:
     /// @cond internal

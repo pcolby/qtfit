@@ -32,6 +32,40 @@ VideoFrameMessage::VideoFrameMessage() : FitDataMessage(new VideoFrameMessagePri
 
 }
 
+DateTime VideoFrameMessage::timestamp() const
+{
+    Q_D(const VideoFrameMessage);
+    return d->timestamp;
+}
+
+quint16 VideoFrameMessage::timestampMs() const
+{
+    Q_D(const VideoFrameMessage);
+    return d->timestampMs;
+}
+
+quint32 VideoFrameMessage::frameNumber() const
+{
+    Q_D(const VideoFrameMessage);
+    return d->frameNumber;
+}
+
+void VideoFrameMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(VideoFrameMessage);
+    d->timestamp = timestamp;
+}
+void VideoFrameMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(VideoFrameMessage);
+    d->timestampMs = timestampMs;
+}
+void VideoFrameMessage::setFrameNumber(const quint32 frameNumber)
+{
+    Q_D(VideoFrameMessage);
+    d->frameNumber = frameNumber;
+}
+
 VideoFrameMessagePrivate::VideoFrameMessagePrivate(VideoFrameMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::VideoFrame;

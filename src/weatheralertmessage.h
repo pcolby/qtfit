@@ -37,7 +37,19 @@ public:
     WeatherAlertMessage();
     ~WeatherAlertMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    QString reportId() const;
+    DateTime issueTime() const;
+    DateTime expireTime() const;
+    WeatherSeverity severity() const;
+    WeatherSevereType type() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setReportId(const QString reportId);
+    void setIssueTime(const DateTime issueTime);
+    void setExpireTime(const DateTime expireTime);
+    void setSeverity(const WeatherSeverity severity);
+    void setType(const WeatherSevereType type);
 
 protected:
     /// @cond internal

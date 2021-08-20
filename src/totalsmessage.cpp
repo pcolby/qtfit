@@ -32,6 +32,117 @@ TotalsMessage::TotalsMessage() : FitDataMessage(new TotalsMessagePrivate(this))
 
 }
 
+MessageIndex TotalsMessage::messageIndex() const
+{
+    Q_D(const TotalsMessage);
+    return d->messageIndex;
+}
+
+DateTime TotalsMessage::timestamp() const
+{
+    Q_D(const TotalsMessage);
+    return d->timestamp;
+}
+
+quint32 TotalsMessage::timerTime() const
+{
+    Q_D(const TotalsMessage);
+    return d->timerTime;
+}
+
+quint32 TotalsMessage::distance() const
+{
+    Q_D(const TotalsMessage);
+    return d->distance;
+}
+
+quint32 TotalsMessage::calories() const
+{
+    Q_D(const TotalsMessage);
+    return d->calories;
+}
+
+Sport TotalsMessage::sport() const
+{
+    Q_D(const TotalsMessage);
+    return d->sport;
+}
+
+quint32 TotalsMessage::elapsedTime() const
+{
+    Q_D(const TotalsMessage);
+    return d->elapsedTime;
+}
+
+quint16 TotalsMessage::sessions() const
+{
+    Q_D(const TotalsMessage);
+    return d->sessions;
+}
+
+quint32 TotalsMessage::activeTime() const
+{
+    Q_D(const TotalsMessage);
+    return d->activeTime;
+}
+
+quint8 TotalsMessage::sportIndex() const
+{
+    Q_D(const TotalsMessage);
+    return d->sportIndex;
+}
+
+void TotalsMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(TotalsMessage);
+    d->messageIndex = messageIndex;
+}
+void TotalsMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(TotalsMessage);
+    d->timestamp = timestamp;
+}
+void TotalsMessage::setTimerTime(const quint32 timerTime)
+{
+    Q_D(TotalsMessage);
+    d->timerTime = timerTime;
+}
+void TotalsMessage::setDistance(const quint32 distance)
+{
+    Q_D(TotalsMessage);
+    d->distance = distance;
+}
+void TotalsMessage::setCalories(const quint32 calories)
+{
+    Q_D(TotalsMessage);
+    d->calories = calories;
+}
+void TotalsMessage::setSport(const Sport sport)
+{
+    Q_D(TotalsMessage);
+    d->sport = sport;
+}
+void TotalsMessage::setElapsedTime(const quint32 elapsedTime)
+{
+    Q_D(TotalsMessage);
+    d->elapsedTime = elapsedTime;
+}
+void TotalsMessage::setSessions(const quint16 sessions)
+{
+    Q_D(TotalsMessage);
+    d->sessions = sessions;
+}
+void TotalsMessage::setActiveTime(const quint32 activeTime)
+{
+    Q_D(TotalsMessage);
+    d->activeTime = activeTime;
+}
+void TotalsMessage::setSportIndex(const quint8 sportIndex)
+{
+    Q_D(TotalsMessage);
+    d->sportIndex = sportIndex;
+}
+
 TotalsMessagePrivate::TotalsMessagePrivate(TotalsMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Totals;

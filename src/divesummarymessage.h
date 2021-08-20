@@ -37,7 +37,33 @@ public:
     DiveSummaryMessage();
     ~DiveSummaryMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    MesgNum referenceMesg() const;
+    MessageIndex referenceIndex() const;
+    quint32 avgDepth() const;
+    quint32 maxDepth() const;
+    quint32 surfaceInterval() const;
+    quint8 startCns() const;
+    quint8 endCns() const;
+    quint16 startN2() const;
+    quint16 endN2() const;
+    quint16 o2Toxicity() const;
+    quint32 diveNumber() const;
+    quint32 bottomTime() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setReferenceMesg(const MesgNum referenceMesg);
+    void setReferenceIndex(const MessageIndex referenceIndex);
+    void setAvgDepth(const quint32 avgDepth);
+    void setMaxDepth(const quint32 maxDepth);
+    void setSurfaceInterval(const quint32 surfaceInterval);
+    void setStartCns(const quint8 startCns);
+    void setEndCns(const quint8 endCns);
+    void setStartN2(const quint16 startN2);
+    void setEndN2(const quint16 endN2);
+    void setO2Toxicity(const quint16 o2Toxicity);
+    void setDiveNumber(const quint32 diveNumber);
+    void setBottomTime(const quint32 bottomTime);
 
 protected:
     /// @cond internal

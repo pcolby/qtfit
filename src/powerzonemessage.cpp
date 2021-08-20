@@ -32,6 +32,40 @@ PowerZoneMessage::PowerZoneMessage() : FitDataMessage(new PowerZoneMessagePrivat
 
 }
 
+MessageIndex PowerZoneMessage::messageIndex() const
+{
+    Q_D(const PowerZoneMessage);
+    return d->messageIndex;
+}
+
+quint16 PowerZoneMessage::highValue() const
+{
+    Q_D(const PowerZoneMessage);
+    return d->highValue;
+}
+
+QString PowerZoneMessage::name() const
+{
+    Q_D(const PowerZoneMessage);
+    return d->name;
+}
+
+void PowerZoneMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(PowerZoneMessage);
+    d->messageIndex = messageIndex;
+}
+void PowerZoneMessage::setHighValue(const quint16 highValue)
+{
+    Q_D(PowerZoneMessage);
+    d->highValue = highValue;
+}
+void PowerZoneMessage::setName(const QString name)
+{
+    Q_D(PowerZoneMessage);
+    d->name = name;
+}
+
 PowerZoneMessagePrivate::PowerZoneMessagePrivate(PowerZoneMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::PowerZone;

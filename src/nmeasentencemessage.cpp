@@ -32,6 +32,40 @@ NmeaSentenceMessage::NmeaSentenceMessage() : FitDataMessage(new NmeaSentenceMess
 
 }
 
+DateTime NmeaSentenceMessage::timestamp() const
+{
+    Q_D(const NmeaSentenceMessage);
+    return d->timestamp;
+}
+
+quint16 NmeaSentenceMessage::timestampMs() const
+{
+    Q_D(const NmeaSentenceMessage);
+    return d->timestampMs;
+}
+
+QString NmeaSentenceMessage::sentence() const
+{
+    Q_D(const NmeaSentenceMessage);
+    return d->sentence;
+}
+
+void NmeaSentenceMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(NmeaSentenceMessage);
+    d->timestamp = timestamp;
+}
+void NmeaSentenceMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(NmeaSentenceMessage);
+    d->timestampMs = timestampMs;
+}
+void NmeaSentenceMessage::setSentence(const QString sentence)
+{
+    Q_D(NmeaSentenceMessage);
+    d->sentence = sentence;
+}
+
 NmeaSentenceMessagePrivate::NmeaSentenceMessagePrivate(NmeaSentenceMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::NmeaSentence;

@@ -37,7 +37,23 @@ public:
     ActivityMessage();
     ~ActivityMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint32 totalTimerTime() const;
+    quint16 numSessions() const;
+    Activity type() const;
+    Event event() const;
+    EventType eventType() const;
+    LocalDateTime localTimestamp() const;
+    quint8 eventGroup() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTotalTimerTime(const quint32 totalTimerTime);
+    void setNumSessions(const quint16 numSessions);
+    void setType(const Activity type);
+    void setEvent(const Event event);
+    void setEventType(const EventType eventType);
+    void setLocalTimestamp(const LocalDateTime localTimestamp);
+    void setEventGroup(const quint8 eventGroup);
 
 protected:
     /// @cond internal

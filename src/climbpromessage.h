@@ -37,7 +37,21 @@ public:
     ClimbProMessage();
     ~ClimbProMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    qint32 positionLat() const;
+    qint32 positionLong() const;
+    ClimbProEvent climbProEvent() const;
+    quint16 climbNumber() const;
+    quint8 climbCategory() const;
+    float currentDist() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setPositionLat(const qint32 positionLat);
+    void setPositionLong(const qint32 positionLong);
+    void setClimbProEvent(const ClimbProEvent climbProEvent);
+    void setClimbNumber(const quint16 climbNumber);
+    void setClimbCategory(const quint8 climbCategory);
+    void setCurrentDist(const float currentDist);
 
 protected:
     /// @cond internal

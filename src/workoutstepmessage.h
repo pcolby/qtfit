@@ -37,7 +37,37 @@ public:
     WorkoutStepMessage();
     ~WorkoutStepMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    QString wktStepName() const;
+    WktStepDuration durationType() const;
+    quint32 durationValue() const;
+    WktStepTarget targetType() const;
+    quint32 targetValue() const;
+    quint32 customTargetValueLow() const;
+    quint32 customTargetValueHigh() const;
+    Intensity intensity() const;
+    QString notes() const;
+    WorkoutEquipment equipment() const;
+    ExerciseCategory exerciseCategory() const;
+    quint16 exerciseName() const;
+    quint16 exerciseWeight() const;
+    FitBaseUnit weightDisplayUnit() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setWktStepName(const QString wktStepName);
+    void setDurationType(const WktStepDuration durationType);
+    void setDurationValue(const quint32 durationValue);
+    void setTargetType(const WktStepTarget targetType);
+    void setTargetValue(const quint32 targetValue);
+    void setCustomTargetValueLow(const quint32 customTargetValueLow);
+    void setCustomTargetValueHigh(const quint32 customTargetValueHigh);
+    void setIntensity(const Intensity intensity);
+    void setNotes(const QString notes);
+    void setEquipment(const WorkoutEquipment equipment);
+    void setExerciseCategory(const ExerciseCategory exerciseCategory);
+    void setExerciseName(const quint16 exerciseName);
+    void setExerciseWeight(const quint16 exerciseWeight);
+    void setWeightDisplayUnit(const FitBaseUnit weightDisplayUnit);
 
 protected:
     /// @cond internal

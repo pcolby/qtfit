@@ -32,6 +32,326 @@ MonitoringMessage::MonitoringMessage() : FitDataMessage(new MonitoringMessagePri
 
 }
 
+DateTime MonitoringMessage::timestamp() const
+{
+    Q_D(const MonitoringMessage);
+    return d->timestamp;
+}
+
+DeviceIndex MonitoringMessage::deviceIndex() const
+{
+    Q_D(const MonitoringMessage);
+    return d->deviceIndex;
+}
+
+quint16 MonitoringMessage::calories() const
+{
+    Q_D(const MonitoringMessage);
+    return d->calories;
+}
+
+quint32 MonitoringMessage::distance() const
+{
+    Q_D(const MonitoringMessage);
+    return d->distance;
+}
+
+quint32 MonitoringMessage::cycles() const
+{
+    Q_D(const MonitoringMessage);
+    return d->cycles;
+}
+
+quint32 MonitoringMessage::activeTime() const
+{
+    Q_D(const MonitoringMessage);
+    return d->activeTime;
+}
+
+ActivityType MonitoringMessage::activityType() const
+{
+    Q_D(const MonitoringMessage);
+    return d->activityType;
+}
+
+ActivitySubtype MonitoringMessage::activitySubtype() const
+{
+    Q_D(const MonitoringMessage);
+    return d->activitySubtype;
+}
+
+ActivityLevel MonitoringMessage::activityLevel() const
+{
+    Q_D(const MonitoringMessage);
+    return d->activityLevel;
+}
+
+quint16 MonitoringMessage::distance16() const
+{
+    Q_D(const MonitoringMessage);
+    return d->distance16;
+}
+
+quint16 MonitoringMessage::cycles16() const
+{
+    Q_D(const MonitoringMessage);
+    return d->cycles16;
+}
+
+quint16 MonitoringMessage::activeTime16() const
+{
+    Q_D(const MonitoringMessage);
+    return d->activeTime16;
+}
+
+LocalDateTime MonitoringMessage::localTimestamp() const
+{
+    Q_D(const MonitoringMessage);
+    return d->localTimestamp;
+}
+
+qint16 MonitoringMessage::temperature() const
+{
+    Q_D(const MonitoringMessage);
+    return d->temperature;
+}
+
+qint16 MonitoringMessage::temperatureMin() const
+{
+    Q_D(const MonitoringMessage);
+    return d->temperatureMin;
+}
+
+qint16 MonitoringMessage::temperatureMax() const
+{
+    Q_D(const MonitoringMessage);
+    return d->temperatureMax;
+}
+
+quint16 MonitoringMessage::activityTime() const
+{
+    Q_D(const MonitoringMessage);
+    return d->activityTime;
+}
+
+quint16 MonitoringMessage::activeCalories() const
+{
+    Q_D(const MonitoringMessage);
+    return d->activeCalories;
+}
+
+quint8 MonitoringMessage::currentActivityTypeIntensity() const
+{
+    Q_D(const MonitoringMessage);
+    return d->currentActivityTypeIntensity;
+}
+
+quint8 MonitoringMessage::timestampMin8() const
+{
+    Q_D(const MonitoringMessage);
+    return d->timestampMin8;
+}
+
+quint16 MonitoringMessage::timestamp16() const
+{
+    Q_D(const MonitoringMessage);
+    return d->timestamp16;
+}
+
+quint8 MonitoringMessage::heartRate() const
+{
+    Q_D(const MonitoringMessage);
+    return d->heartRate;
+}
+
+quint8 MonitoringMessage::intensity() const
+{
+    Q_D(const MonitoringMessage);
+    return d->intensity;
+}
+
+quint16 MonitoringMessage::durationMin() const
+{
+    Q_D(const MonitoringMessage);
+    return d->durationMin;
+}
+
+quint32 MonitoringMessage::duration() const
+{
+    Q_D(const MonitoringMessage);
+    return d->duration;
+}
+
+quint32 MonitoringMessage::ascent() const
+{
+    Q_D(const MonitoringMessage);
+    return d->ascent;
+}
+
+quint32 MonitoringMessage::descent() const
+{
+    Q_D(const MonitoringMessage);
+    return d->descent;
+}
+
+quint16 MonitoringMessage::moderateActivityMinutes() const
+{
+    Q_D(const MonitoringMessage);
+    return d->moderateActivityMinutes;
+}
+
+quint16 MonitoringMessage::vigorousActivityMinutes() const
+{
+    Q_D(const MonitoringMessage);
+    return d->vigorousActivityMinutes;
+}
+
+void MonitoringMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(MonitoringMessage);
+    d->timestamp = timestamp;
+}
+void MonitoringMessage::setDeviceIndex(const DeviceIndex deviceIndex)
+{
+    Q_D(MonitoringMessage);
+    d->deviceIndex = deviceIndex;
+}
+void MonitoringMessage::setCalories(const quint16 calories)
+{
+    Q_D(MonitoringMessage);
+    d->calories = calories;
+}
+void MonitoringMessage::setDistance(const quint32 distance)
+{
+    Q_D(MonitoringMessage);
+    d->distance = distance;
+}
+void MonitoringMessage::setCycles(const quint32 cycles)
+{
+    Q_D(MonitoringMessage);
+    d->cycles = cycles;
+}
+void MonitoringMessage::setActiveTime(const quint32 activeTime)
+{
+    Q_D(MonitoringMessage);
+    d->activeTime = activeTime;
+}
+void MonitoringMessage::setActivityType(const ActivityType activityType)
+{
+    Q_D(MonitoringMessage);
+    d->activityType = activityType;
+}
+void MonitoringMessage::setActivitySubtype(const ActivitySubtype activitySubtype)
+{
+    Q_D(MonitoringMessage);
+    d->activitySubtype = activitySubtype;
+}
+void MonitoringMessage::setActivityLevel(const ActivityLevel activityLevel)
+{
+    Q_D(MonitoringMessage);
+    d->activityLevel = activityLevel;
+}
+void MonitoringMessage::setDistance16(const quint16 distance16)
+{
+    Q_D(MonitoringMessage);
+    d->distance16 = distance16;
+}
+void MonitoringMessage::setCycles16(const quint16 cycles16)
+{
+    Q_D(MonitoringMessage);
+    d->cycles16 = cycles16;
+}
+void MonitoringMessage::setActiveTime16(const quint16 activeTime16)
+{
+    Q_D(MonitoringMessage);
+    d->activeTime16 = activeTime16;
+}
+void MonitoringMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
+{
+    Q_D(MonitoringMessage);
+    d->localTimestamp = localTimestamp;
+}
+void MonitoringMessage::setTemperature(const qint16 temperature)
+{
+    Q_D(MonitoringMessage);
+    d->temperature = temperature;
+}
+void MonitoringMessage::setTemperatureMin(const qint16 temperatureMin)
+{
+    Q_D(MonitoringMessage);
+    d->temperatureMin = temperatureMin;
+}
+void MonitoringMessage::setTemperatureMax(const qint16 temperatureMax)
+{
+    Q_D(MonitoringMessage);
+    d->temperatureMax = temperatureMax;
+}
+void MonitoringMessage::setActivityTime(const quint16 activityTime)
+{
+    Q_D(MonitoringMessage);
+    d->activityTime = activityTime;
+}
+void MonitoringMessage::setActiveCalories(const quint16 activeCalories)
+{
+    Q_D(MonitoringMessage);
+    d->activeCalories = activeCalories;
+}
+void MonitoringMessage::setCurrentActivityTypeIntensity(const quint8 currentActivityTypeIntensity)
+{
+    Q_D(MonitoringMessage);
+    d->currentActivityTypeIntensity = currentActivityTypeIntensity;
+}
+void MonitoringMessage::setTimestampMin8(const quint8 timestampMin8)
+{
+    Q_D(MonitoringMessage);
+    d->timestampMin8 = timestampMin8;
+}
+void MonitoringMessage::setTimestamp16(const quint16 timestamp16)
+{
+    Q_D(MonitoringMessage);
+    d->timestamp16 = timestamp16;
+}
+void MonitoringMessage::setHeartRate(const quint8 heartRate)
+{
+    Q_D(MonitoringMessage);
+    d->heartRate = heartRate;
+}
+void MonitoringMessage::setIntensity(const quint8 intensity)
+{
+    Q_D(MonitoringMessage);
+    d->intensity = intensity;
+}
+void MonitoringMessage::setDurationMin(const quint16 durationMin)
+{
+    Q_D(MonitoringMessage);
+    d->durationMin = durationMin;
+}
+void MonitoringMessage::setDuration(const quint32 duration)
+{
+    Q_D(MonitoringMessage);
+    d->duration = duration;
+}
+void MonitoringMessage::setAscent(const quint32 ascent)
+{
+    Q_D(MonitoringMessage);
+    d->ascent = ascent;
+}
+void MonitoringMessage::setDescent(const quint32 descent)
+{
+    Q_D(MonitoringMessage);
+    d->descent = descent;
+}
+void MonitoringMessage::setModerateActivityMinutes(const quint16 moderateActivityMinutes)
+{
+    Q_D(MonitoringMessage);
+    d->moderateActivityMinutes = moderateActivityMinutes;
+}
+void MonitoringMessage::setVigorousActivityMinutes(const quint16 vigorousActivityMinutes)
+{
+    Q_D(MonitoringMessage);
+    d->vigorousActivityMinutes = vigorousActivityMinutes;
+}
+
 MonitoringMessagePrivate::MonitoringMessagePrivate(MonitoringMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Monitoring;

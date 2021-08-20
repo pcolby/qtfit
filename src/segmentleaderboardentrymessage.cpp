@@ -32,6 +32,84 @@ SegmentLeaderboardEntryMessage::SegmentLeaderboardEntryMessage() : FitDataMessag
 
 }
 
+MessageIndex SegmentLeaderboardEntryMessage::messageIndex() const
+{
+    Q_D(const SegmentLeaderboardEntryMessage);
+    return d->messageIndex;
+}
+
+QString SegmentLeaderboardEntryMessage::name() const
+{
+    Q_D(const SegmentLeaderboardEntryMessage);
+    return d->name;
+}
+
+SegmentLeaderboardType SegmentLeaderboardEntryMessage::type() const
+{
+    Q_D(const SegmentLeaderboardEntryMessage);
+    return d->type;
+}
+
+quint32 SegmentLeaderboardEntryMessage::groupPrimaryKey() const
+{
+    Q_D(const SegmentLeaderboardEntryMessage);
+    return d->groupPrimaryKey;
+}
+
+quint32 SegmentLeaderboardEntryMessage::activityId() const
+{
+    Q_D(const SegmentLeaderboardEntryMessage);
+    return d->activityId;
+}
+
+quint32 SegmentLeaderboardEntryMessage::segmentTime() const
+{
+    Q_D(const SegmentLeaderboardEntryMessage);
+    return d->segmentTime;
+}
+
+QString SegmentLeaderboardEntryMessage::activityIdString() const
+{
+    Q_D(const SegmentLeaderboardEntryMessage);
+    return d->activityIdString;
+}
+
+void SegmentLeaderboardEntryMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(SegmentLeaderboardEntryMessage);
+    d->messageIndex = messageIndex;
+}
+void SegmentLeaderboardEntryMessage::setName(const QString name)
+{
+    Q_D(SegmentLeaderboardEntryMessage);
+    d->name = name;
+}
+void SegmentLeaderboardEntryMessage::setType(const SegmentLeaderboardType type)
+{
+    Q_D(SegmentLeaderboardEntryMessage);
+    d->type = type;
+}
+void SegmentLeaderboardEntryMessage::setGroupPrimaryKey(const quint32 groupPrimaryKey)
+{
+    Q_D(SegmentLeaderboardEntryMessage);
+    d->groupPrimaryKey = groupPrimaryKey;
+}
+void SegmentLeaderboardEntryMessage::setActivityId(const quint32 activityId)
+{
+    Q_D(SegmentLeaderboardEntryMessage);
+    d->activityId = activityId;
+}
+void SegmentLeaderboardEntryMessage::setSegmentTime(const quint32 segmentTime)
+{
+    Q_D(SegmentLeaderboardEntryMessage);
+    d->segmentTime = segmentTime;
+}
+void SegmentLeaderboardEntryMessage::setActivityIdString(const QString activityIdString)
+{
+    Q_D(SegmentLeaderboardEntryMessage);
+    d->activityIdString = activityIdString;
+}
+
 SegmentLeaderboardEntryMessagePrivate::SegmentLeaderboardEntryMessagePrivate(SegmentLeaderboardEntryMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::SegmentLeaderboardEntry;

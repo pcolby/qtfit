@@ -32,6 +32,106 @@ MagnetometerDataMessage::MagnetometerDataMessage() : FitDataMessage(new Magnetom
 
 }
 
+DateTime MagnetometerDataMessage::timestamp() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->timestamp;
+}
+
+quint16 MagnetometerDataMessage::timestampMs() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->timestampMs;
+}
+
+quint16 MagnetometerDataMessage::sampleTimeOffset() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->sampleTimeOffset;
+}
+
+quint16 MagnetometerDataMessage::magX() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->magX;
+}
+
+quint16 MagnetometerDataMessage::magY() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->magY;
+}
+
+quint16 MagnetometerDataMessage::magZ() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->magZ;
+}
+
+float MagnetometerDataMessage::calibratedMagX() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->calibratedMagX;
+}
+
+float MagnetometerDataMessage::calibratedMagY() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->calibratedMagY;
+}
+
+float MagnetometerDataMessage::calibratedMagZ() const
+{
+    Q_D(const MagnetometerDataMessage);
+    return d->calibratedMagZ;
+}
+
+void MagnetometerDataMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(MagnetometerDataMessage);
+    d->timestamp = timestamp;
+}
+void MagnetometerDataMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(MagnetometerDataMessage);
+    d->timestampMs = timestampMs;
+}
+void MagnetometerDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
+{
+    Q_D(MagnetometerDataMessage);
+    d->sampleTimeOffset = sampleTimeOffset;
+}
+void MagnetometerDataMessage::setMagX(const quint16 magX)
+{
+    Q_D(MagnetometerDataMessage);
+    d->magX = magX;
+}
+void MagnetometerDataMessage::setMagY(const quint16 magY)
+{
+    Q_D(MagnetometerDataMessage);
+    d->magY = magY;
+}
+void MagnetometerDataMessage::setMagZ(const quint16 magZ)
+{
+    Q_D(MagnetometerDataMessage);
+    d->magZ = magZ;
+}
+void MagnetometerDataMessage::setCalibratedMagX(const float calibratedMagX)
+{
+    Q_D(MagnetometerDataMessage);
+    d->calibratedMagX = calibratedMagX;
+}
+void MagnetometerDataMessage::setCalibratedMagY(const float calibratedMagY)
+{
+    Q_D(MagnetometerDataMessage);
+    d->calibratedMagY = calibratedMagY;
+}
+void MagnetometerDataMessage::setCalibratedMagZ(const float calibratedMagZ)
+{
+    Q_D(MagnetometerDataMessage);
+    d->calibratedMagZ = calibratedMagZ;
+}
+
 MagnetometerDataMessagePrivate::MagnetometerDataMessagePrivate(MagnetometerDataMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::MagnetometerData;

@@ -37,7 +37,21 @@ public:
     WorkoutSessionMessage();
     ~WorkoutSessionMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    Sport sport() const;
+    SubSport subSport() const;
+    quint16 numValidSteps() const;
+    quint16 firstStepIndex() const;
+    quint16 poolLength() const;
+    DisplayMeasure poolLengthUnit() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setSport(const Sport sport);
+    void setSubSport(const SubSport subSport);
+    void setNumValidSteps(const quint16 numValidSteps);
+    void setFirstStepIndex(const quint16 firstStepIndex);
+    void setPoolLength(const quint16 poolLength);
+    void setPoolLengthUnit(const DisplayMeasure poolLengthUnit);
 
 protected:
     /// @cond internal

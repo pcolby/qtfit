@@ -37,7 +37,21 @@ public:
     SegmentLeaderboardEntryMessage();
     ~SegmentLeaderboardEntryMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    QString name() const;
+    SegmentLeaderboardType type() const;
+    quint32 groupPrimaryKey() const;
+    quint32 activityId() const;
+    quint32 segmentTime() const;
+    QString activityIdString() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setName(const QString name);
+    void setType(const SegmentLeaderboardType type);
+    void setGroupPrimaryKey(const quint32 groupPrimaryKey);
+    void setActivityId(const quint32 activityId);
+    void setSegmentTime(const quint32 segmentTime);
+    void setActivityIdString(const QString activityIdString);
 
 protected:
     /// @cond internal

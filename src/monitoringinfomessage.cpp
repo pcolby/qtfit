@@ -32,6 +32,73 @@ MonitoringInfoMessage::MonitoringInfoMessage() : FitDataMessage(new MonitoringIn
 
 }
 
+DateTime MonitoringInfoMessage::timestamp() const
+{
+    Q_D(const MonitoringInfoMessage);
+    return d->timestamp;
+}
+
+LocalDateTime MonitoringInfoMessage::localTimestamp() const
+{
+    Q_D(const MonitoringInfoMessage);
+    return d->localTimestamp;
+}
+
+ActivityType MonitoringInfoMessage::activityType() const
+{
+    Q_D(const MonitoringInfoMessage);
+    return d->activityType;
+}
+
+quint16 MonitoringInfoMessage::cyclesToDistance() const
+{
+    Q_D(const MonitoringInfoMessage);
+    return d->cyclesToDistance;
+}
+
+quint16 MonitoringInfoMessage::cyclesToCalories() const
+{
+    Q_D(const MonitoringInfoMessage);
+    return d->cyclesToCalories;
+}
+
+quint16 MonitoringInfoMessage::restingMetabolicRate() const
+{
+    Q_D(const MonitoringInfoMessage);
+    return d->restingMetabolicRate;
+}
+
+void MonitoringInfoMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(MonitoringInfoMessage);
+    d->timestamp = timestamp;
+}
+void MonitoringInfoMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
+{
+    Q_D(MonitoringInfoMessage);
+    d->localTimestamp = localTimestamp;
+}
+void MonitoringInfoMessage::setActivityType(const ActivityType activityType)
+{
+    Q_D(MonitoringInfoMessage);
+    d->activityType = activityType;
+}
+void MonitoringInfoMessage::setCyclesToDistance(const quint16 cyclesToDistance)
+{
+    Q_D(MonitoringInfoMessage);
+    d->cyclesToDistance = cyclesToDistance;
+}
+void MonitoringInfoMessage::setCyclesToCalories(const quint16 cyclesToCalories)
+{
+    Q_D(MonitoringInfoMessage);
+    d->cyclesToCalories = cyclesToCalories;
+}
+void MonitoringInfoMessage::setRestingMetabolicRate(const quint16 restingMetabolicRate)
+{
+    Q_D(MonitoringInfoMessage);
+    d->restingMetabolicRate = restingMetabolicRate;
+}
+
 MonitoringInfoMessagePrivate::MonitoringInfoMessagePrivate(MonitoringInfoMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::MonitoringInfo;

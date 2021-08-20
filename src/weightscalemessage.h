@@ -37,7 +37,33 @@ public:
     WeightScaleMessage();
     ~WeightScaleMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    Weight weight() const;
+    quint16 percentFat() const;
+    quint16 percentHydration() const;
+    quint16 visceralFatMass() const;
+    quint16 boneMass() const;
+    quint16 muscleMass() const;
+    quint16 basalMet() const;
+    quint8 physiqueRating() const;
+    quint16 activeMet() const;
+    quint8 metabolicAge() const;
+    quint8 visceralFatRating() const;
+    MessageIndex userProfileIndex() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setWeight(const Weight weight);
+    void setPercentFat(const quint16 percentFat);
+    void setPercentHydration(const quint16 percentHydration);
+    void setVisceralFatMass(const quint16 visceralFatMass);
+    void setBoneMass(const quint16 boneMass);
+    void setMuscleMass(const quint16 muscleMass);
+    void setBasalMet(const quint16 basalMet);
+    void setPhysiqueRating(const quint8 physiqueRating);
+    void setActiveMet(const quint16 activeMet);
+    void setMetabolicAge(const quint8 metabolicAge);
+    void setVisceralFatRating(const quint8 visceralFatRating);
+    void setUserProfileIndex(const MessageIndex userProfileIndex);
 
 protected:
     /// @cond internal

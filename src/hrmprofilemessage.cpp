@@ -32,6 +32,62 @@ HrmProfileMessage::HrmProfileMessage() : FitDataMessage(new HrmProfileMessagePri
 
 }
 
+MessageIndex HrmProfileMessage::messageIndex() const
+{
+    Q_D(const HrmProfileMessage);
+    return d->messageIndex;
+}
+
+bool HrmProfileMessage::enabled() const
+{
+    Q_D(const HrmProfileMessage);
+    return d->enabled;
+}
+
+quint16z HrmProfileMessage::hrmAntId() const
+{
+    Q_D(const HrmProfileMessage);
+    return d->hrmAntId;
+}
+
+bool HrmProfileMessage::logHrv() const
+{
+    Q_D(const HrmProfileMessage);
+    return d->logHrv;
+}
+
+quint8z HrmProfileMessage::hrmAntIdTransType() const
+{
+    Q_D(const HrmProfileMessage);
+    return d->hrmAntIdTransType;
+}
+
+void HrmProfileMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(HrmProfileMessage);
+    d->messageIndex = messageIndex;
+}
+void HrmProfileMessage::setEnabled(const bool enabled)
+{
+    Q_D(HrmProfileMessage);
+    d->enabled = enabled;
+}
+void HrmProfileMessage::setHrmAntId(const quint16z hrmAntId)
+{
+    Q_D(HrmProfileMessage);
+    d->hrmAntId = hrmAntId;
+}
+void HrmProfileMessage::setLogHrv(const bool logHrv)
+{
+    Q_D(HrmProfileMessage);
+    d->logHrv = logHrv;
+}
+void HrmProfileMessage::setHrmAntIdTransType(const quint8z hrmAntIdTransType)
+{
+    Q_D(HrmProfileMessage);
+    d->hrmAntIdTransType = hrmAntIdTransType;
+}
+
 HrmProfileMessagePrivate::HrmProfileMessagePrivate(HrmProfileMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::HrmProfile;

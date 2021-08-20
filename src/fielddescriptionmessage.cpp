@@ -32,6 +32,161 @@ FieldDescriptionMessage::FieldDescriptionMessage() : FitDataMessage(new FieldDes
 
 }
 
+quint8 FieldDescriptionMessage::developerDataIndex() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->developerDataIndex;
+}
+
+quint8 FieldDescriptionMessage::fieldDefinitionNumber() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->fieldDefinitionNumber;
+}
+
+FitBaseType FieldDescriptionMessage::fitBaseTypeId() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->fitBaseTypeId;
+}
+
+QString FieldDescriptionMessage::fieldName() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->fieldName;
+}
+
+quint8 FieldDescriptionMessage::array() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->array;
+}
+
+QString FieldDescriptionMessage::components() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->components;
+}
+
+quint8 FieldDescriptionMessage::scale() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->scale;
+}
+
+qint8 FieldDescriptionMessage::offset() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->offset;
+}
+
+QString FieldDescriptionMessage::units() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->units;
+}
+
+QString FieldDescriptionMessage::bits() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->bits;
+}
+
+QString FieldDescriptionMessage::accumulate() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->accumulate;
+}
+
+FitBaseUnit FieldDescriptionMessage::fitBaseUnitId() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->fitBaseUnitId;
+}
+
+MesgNum FieldDescriptionMessage::nativeMesgNum() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->nativeMesgNum;
+}
+
+quint8 FieldDescriptionMessage::nativeFieldNum() const
+{
+    Q_D(const FieldDescriptionMessage);
+    return d->nativeFieldNum;
+}
+
+void FieldDescriptionMessage::setDeveloperDataIndex(const quint8 developerDataIndex)
+{
+    Q_D(FieldDescriptionMessage);
+    d->developerDataIndex = developerDataIndex;
+}
+void FieldDescriptionMessage::setFieldDefinitionNumber(const quint8 fieldDefinitionNumber)
+{
+    Q_D(FieldDescriptionMessage);
+    d->fieldDefinitionNumber = fieldDefinitionNumber;
+}
+void FieldDescriptionMessage::setFitBaseTypeId(const FitBaseType fitBaseTypeId)
+{
+    Q_D(FieldDescriptionMessage);
+    d->fitBaseTypeId = fitBaseTypeId;
+}
+void FieldDescriptionMessage::setFieldName(const QString fieldName)
+{
+    Q_D(FieldDescriptionMessage);
+    d->fieldName = fieldName;
+}
+void FieldDescriptionMessage::setArray(const quint8 array)
+{
+    Q_D(FieldDescriptionMessage);
+    d->array = array;
+}
+void FieldDescriptionMessage::setComponents(const QString components)
+{
+    Q_D(FieldDescriptionMessage);
+    d->components = components;
+}
+void FieldDescriptionMessage::setScale(const quint8 scale)
+{
+    Q_D(FieldDescriptionMessage);
+    d->scale = scale;
+}
+void FieldDescriptionMessage::setOffset(const qint8 offset)
+{
+    Q_D(FieldDescriptionMessage);
+    d->offset = offset;
+}
+void FieldDescriptionMessage::setUnits(const QString units)
+{
+    Q_D(FieldDescriptionMessage);
+    d->units = units;
+}
+void FieldDescriptionMessage::setBits(const QString bits)
+{
+    Q_D(FieldDescriptionMessage);
+    d->bits = bits;
+}
+void FieldDescriptionMessage::setAccumulate(const QString accumulate)
+{
+    Q_D(FieldDescriptionMessage);
+    d->accumulate = accumulate;
+}
+void FieldDescriptionMessage::setFitBaseUnitId(const FitBaseUnit fitBaseUnitId)
+{
+    Q_D(FieldDescriptionMessage);
+    d->fitBaseUnitId = fitBaseUnitId;
+}
+void FieldDescriptionMessage::setNativeMesgNum(const MesgNum nativeMesgNum)
+{
+    Q_D(FieldDescriptionMessage);
+    d->nativeMesgNum = nativeMesgNum;
+}
+void FieldDescriptionMessage::setNativeFieldNum(const quint8 nativeFieldNum)
+{
+    Q_D(FieldDescriptionMessage);
+    d->nativeFieldNum = nativeFieldNum;
+}
+
 FieldDescriptionMessagePrivate::FieldDescriptionMessagePrivate(FieldDescriptionMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::FieldDescription;

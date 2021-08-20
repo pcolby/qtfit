@@ -32,6 +32,51 @@ MemoGlobMessage::MemoGlobMessage() : FitDataMessage(new MemoGlobMessagePrivate(t
 
 }
 
+quint32 MemoGlobMessage::partIndex() const
+{
+    Q_D(const MemoGlobMessage);
+    return d->partIndex;
+}
+
+quint8 MemoGlobMessage::memo() const
+{
+    Q_D(const MemoGlobMessage);
+    return d->memo;
+}
+
+quint16 MemoGlobMessage::messageNumber() const
+{
+    Q_D(const MemoGlobMessage);
+    return d->messageNumber;
+}
+
+MessageIndex MemoGlobMessage::messageIndex() const
+{
+    Q_D(const MemoGlobMessage);
+    return d->messageIndex;
+}
+
+void MemoGlobMessage::setPartIndex(const quint32 partIndex)
+{
+    Q_D(MemoGlobMessage);
+    d->partIndex = partIndex;
+}
+void MemoGlobMessage::setMemo(const quint8 memo)
+{
+    Q_D(MemoGlobMessage);
+    d->memo = memo;
+}
+void MemoGlobMessage::setMessageNumber(const quint16 messageNumber)
+{
+    Q_D(MemoGlobMessage);
+    d->messageNumber = messageNumber;
+}
+void MemoGlobMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(MemoGlobMessage);
+    d->messageIndex = messageIndex;
+}
+
 MemoGlobMessagePrivate::MemoGlobMessagePrivate(MemoGlobMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::MemoGlob;

@@ -32,6 +32,150 @@ GoalMessage::GoalMessage() : FitDataMessage(new GoalMessagePrivate(this))
 
 }
 
+MessageIndex GoalMessage::messageIndex() const
+{
+    Q_D(const GoalMessage);
+    return d->messageIndex;
+}
+
+Sport GoalMessage::sport() const
+{
+    Q_D(const GoalMessage);
+    return d->sport;
+}
+
+SubSport GoalMessage::subSport() const
+{
+    Q_D(const GoalMessage);
+    return d->subSport;
+}
+
+DateTime GoalMessage::startDate() const
+{
+    Q_D(const GoalMessage);
+    return d->startDate;
+}
+
+DateTime GoalMessage::endDate() const
+{
+    Q_D(const GoalMessage);
+    return d->endDate;
+}
+
+Goal GoalMessage::type() const
+{
+    Q_D(const GoalMessage);
+    return d->type;
+}
+
+quint32 GoalMessage::value() const
+{
+    Q_D(const GoalMessage);
+    return d->value;
+}
+
+bool GoalMessage::repeat() const
+{
+    Q_D(const GoalMessage);
+    return d->repeat;
+}
+
+quint32 GoalMessage::targetValue() const
+{
+    Q_D(const GoalMessage);
+    return d->targetValue;
+}
+
+GoalRecurrence GoalMessage::recurrence() const
+{
+    Q_D(const GoalMessage);
+    return d->recurrence;
+}
+
+quint16 GoalMessage::recurrenceValue() const
+{
+    Q_D(const GoalMessage);
+    return d->recurrenceValue;
+}
+
+bool GoalMessage::enabled() const
+{
+    Q_D(const GoalMessage);
+    return d->enabled;
+}
+
+GoalSource GoalMessage::source() const
+{
+    Q_D(const GoalMessage);
+    return d->source;
+}
+
+void GoalMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(GoalMessage);
+    d->messageIndex = messageIndex;
+}
+void GoalMessage::setSport(const Sport sport)
+{
+    Q_D(GoalMessage);
+    d->sport = sport;
+}
+void GoalMessage::setSubSport(const SubSport subSport)
+{
+    Q_D(GoalMessage);
+    d->subSport = subSport;
+}
+void GoalMessage::setStartDate(const DateTime startDate)
+{
+    Q_D(GoalMessage);
+    d->startDate = startDate;
+}
+void GoalMessage::setEndDate(const DateTime endDate)
+{
+    Q_D(GoalMessage);
+    d->endDate = endDate;
+}
+void GoalMessage::setType(const Goal type)
+{
+    Q_D(GoalMessage);
+    d->type = type;
+}
+void GoalMessage::setValue(const quint32 value)
+{
+    Q_D(GoalMessage);
+    d->value = value;
+}
+void GoalMessage::setRepeat(const bool repeat)
+{
+    Q_D(GoalMessage);
+    d->repeat = repeat;
+}
+void GoalMessage::setTargetValue(const quint32 targetValue)
+{
+    Q_D(GoalMessage);
+    d->targetValue = targetValue;
+}
+void GoalMessage::setRecurrence(const GoalRecurrence recurrence)
+{
+    Q_D(GoalMessage);
+    d->recurrence = recurrence;
+}
+void GoalMessage::setRecurrenceValue(const quint16 recurrenceValue)
+{
+    Q_D(GoalMessage);
+    d->recurrenceValue = recurrenceValue;
+}
+void GoalMessage::setEnabled(const bool enabled)
+{
+    Q_D(GoalMessage);
+    d->enabled = enabled;
+}
+void GoalMessage::setSource(const GoalSource source)
+{
+    Q_D(GoalMessage);
+    d->source = source;
+}
+
 GoalMessagePrivate::GoalMessagePrivate(GoalMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Goal;

@@ -37,7 +37,25 @@ public:
     SegmentIdMessage();
     ~SegmentIdMessage();
 
-    /// @todo Generate getters/setters.
+    QString name() const;
+    QString uuid() const;
+    Sport sport() const;
+    bool enabled() const;
+    quint32 userProfilePrimaryKey() const;
+    quint32 deviceId() const;
+    quint8 defaultRaceLeader() const;
+    SegmentDeleteStatus deleteStatus() const;
+    SegmentSelectionType selectionType() const;
+
+    void setName(const QString name);
+    void setUuid(const QString uuid);
+    void setSport(const Sport sport);
+    void setEnabled(const bool enabled);
+    void setUserProfilePrimaryKey(const quint32 userProfilePrimaryKey);
+    void setDeviceId(const quint32 deviceId);
+    void setDefaultRaceLeader(const quint8 defaultRaceLeader);
+    void setDeleteStatus(const SegmentDeleteStatus deleteStatus);
+    void setSelectionType(const SegmentSelectionType selectionType);
 
 protected:
     /// @cond internal

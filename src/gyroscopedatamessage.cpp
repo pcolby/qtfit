@@ -32,6 +32,106 @@ GyroscopeDataMessage::GyroscopeDataMessage() : FitDataMessage(new GyroscopeDataM
 
 }
 
+DateTime GyroscopeDataMessage::timestamp() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->timestamp;
+}
+
+quint16 GyroscopeDataMessage::timestampMs() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->timestampMs;
+}
+
+quint16 GyroscopeDataMessage::sampleTimeOffset() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->sampleTimeOffset;
+}
+
+quint16 GyroscopeDataMessage::gyroX() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->gyroX;
+}
+
+quint16 GyroscopeDataMessage::gyroY() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->gyroY;
+}
+
+quint16 GyroscopeDataMessage::gyroZ() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->gyroZ;
+}
+
+float GyroscopeDataMessage::calibratedGyroX() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->calibratedGyroX;
+}
+
+float GyroscopeDataMessage::calibratedGyroY() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->calibratedGyroY;
+}
+
+float GyroscopeDataMessage::calibratedGyroZ() const
+{
+    Q_D(const GyroscopeDataMessage);
+    return d->calibratedGyroZ;
+}
+
+void GyroscopeDataMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(GyroscopeDataMessage);
+    d->timestamp = timestamp;
+}
+void GyroscopeDataMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(GyroscopeDataMessage);
+    d->timestampMs = timestampMs;
+}
+void GyroscopeDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
+{
+    Q_D(GyroscopeDataMessage);
+    d->sampleTimeOffset = sampleTimeOffset;
+}
+void GyroscopeDataMessage::setGyroX(const quint16 gyroX)
+{
+    Q_D(GyroscopeDataMessage);
+    d->gyroX = gyroX;
+}
+void GyroscopeDataMessage::setGyroY(const quint16 gyroY)
+{
+    Q_D(GyroscopeDataMessage);
+    d->gyroY = gyroY;
+}
+void GyroscopeDataMessage::setGyroZ(const quint16 gyroZ)
+{
+    Q_D(GyroscopeDataMessage);
+    d->gyroZ = gyroZ;
+}
+void GyroscopeDataMessage::setCalibratedGyroX(const float calibratedGyroX)
+{
+    Q_D(GyroscopeDataMessage);
+    d->calibratedGyroX = calibratedGyroX;
+}
+void GyroscopeDataMessage::setCalibratedGyroY(const float calibratedGyroY)
+{
+    Q_D(GyroscopeDataMessage);
+    d->calibratedGyroY = calibratedGyroY;
+}
+void GyroscopeDataMessage::setCalibratedGyroZ(const float calibratedGyroZ)
+{
+    Q_D(GyroscopeDataMessage);
+    d->calibratedGyroZ = calibratedGyroZ;
+}
+
 GyroscopeDataMessagePrivate::GyroscopeDataMessagePrivate(GyroscopeDataMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::GyroscopeData;

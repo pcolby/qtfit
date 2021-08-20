@@ -37,7 +37,15 @@ public:
     BarometerDataMessage();
     ~BarometerDataMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    quint16 sampleTimeOffset() const;
+    quint32 baroPres() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setSampleTimeOffset(const quint16 sampleTimeOffset);
+    void setBaroPres(const quint32 baroPres);
 
 protected:
     /// @cond internal

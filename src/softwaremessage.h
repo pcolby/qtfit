@@ -37,7 +37,13 @@ public:
     SoftwareMessage();
     ~SoftwareMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint16 version() const;
+    QString partNumber() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setVersion(const quint16 version);
+    void setPartNumber(const QString partNumber);
 
 protected:
     /// @cond internal

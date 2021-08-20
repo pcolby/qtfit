@@ -37,7 +37,15 @@ public:
     CapabilitiesMessage();
     ~CapabilitiesMessage();
 
-    /// @todo Generate getters/setters.
+    quint8z languages() const;
+    SportBits0 sports() const;
+    WorkoutCapabilities workoutsSupported() const;
+    ConnectivityCapabilities connectivitySupported() const;
+
+    void setLanguages(const quint8z languages);
+    void setSports(const SportBits0 sports);
+    void setWorkoutsSupported(const WorkoutCapabilities workoutsSupported);
+    void setConnectivitySupported(const ConnectivityCapabilities connectivitySupported);
 
 protected:
     /// @cond internal

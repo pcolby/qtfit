@@ -37,7 +37,19 @@ public:
     ExdDataFieldConfigurationMessage();
     ~ExdDataFieldConfigurationMessage();
 
-    /// @todo Generate getters/setters.
+    quint8 screenIndex() const;
+    quint8 conceptField() const;
+    quint8 fieldId() const;
+    quint8 conceptCount() const;
+    ExdDisplayType displayType() const;
+    QString title() const;
+
+    void setScreenIndex(const quint8 screenIndex);
+    void setConceptField(const quint8 conceptField);
+    void setFieldId(const quint8 fieldId);
+    void setConceptCount(const quint8 conceptCount);
+    void setDisplayType(const ExdDisplayType displayType);
+    void setTitle(const QString title);
 
 protected:
     /// @cond internal

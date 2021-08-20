@@ -32,6 +32,139 @@ AviationAttitudeMessage::AviationAttitudeMessage() : FitDataMessage(new Aviation
 
 }
 
+DateTime AviationAttitudeMessage::timestamp() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->timestamp;
+}
+
+quint16 AviationAttitudeMessage::timestampMs() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->timestampMs;
+}
+
+quint32 AviationAttitudeMessage::systemTime() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->systemTime;
+}
+
+qint16 AviationAttitudeMessage::pitch() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->pitch;
+}
+
+qint16 AviationAttitudeMessage::roll() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->roll;
+}
+
+qint16 AviationAttitudeMessage::accelLateral() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->accelLateral;
+}
+
+qint16 AviationAttitudeMessage::accelNormal() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->accelNormal;
+}
+
+qint16 AviationAttitudeMessage::turnRate() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->turnRate;
+}
+
+AttitudeStage AviationAttitudeMessage::stage() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->stage;
+}
+
+quint8 AviationAttitudeMessage::attitudeStageComplete() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->attitudeStageComplete;
+}
+
+quint16 AviationAttitudeMessage::track() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->track;
+}
+
+AttitudeValidity AviationAttitudeMessage::validity() const
+{
+    Q_D(const AviationAttitudeMessage);
+    return d->validity;
+}
+
+void AviationAttitudeMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(AviationAttitudeMessage);
+    d->timestamp = timestamp;
+}
+void AviationAttitudeMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(AviationAttitudeMessage);
+    d->timestampMs = timestampMs;
+}
+void AviationAttitudeMessage::setSystemTime(const quint32 systemTime)
+{
+    Q_D(AviationAttitudeMessage);
+    d->systemTime = systemTime;
+}
+void AviationAttitudeMessage::setPitch(const qint16 pitch)
+{
+    Q_D(AviationAttitudeMessage);
+    d->pitch = pitch;
+}
+void AviationAttitudeMessage::setRoll(const qint16 roll)
+{
+    Q_D(AviationAttitudeMessage);
+    d->roll = roll;
+}
+void AviationAttitudeMessage::setAccelLateral(const qint16 accelLateral)
+{
+    Q_D(AviationAttitudeMessage);
+    d->accelLateral = accelLateral;
+}
+void AviationAttitudeMessage::setAccelNormal(const qint16 accelNormal)
+{
+    Q_D(AviationAttitudeMessage);
+    d->accelNormal = accelNormal;
+}
+void AviationAttitudeMessage::setTurnRate(const qint16 turnRate)
+{
+    Q_D(AviationAttitudeMessage);
+    d->turnRate = turnRate;
+}
+void AviationAttitudeMessage::setStage(const AttitudeStage stage)
+{
+    Q_D(AviationAttitudeMessage);
+    d->stage = stage;
+}
+void AviationAttitudeMessage::setAttitudeStageComplete(const quint8 attitudeStageComplete)
+{
+    Q_D(AviationAttitudeMessage);
+    d->attitudeStageComplete = attitudeStageComplete;
+}
+void AviationAttitudeMessage::setTrack(const quint16 track)
+{
+    Q_D(AviationAttitudeMessage);
+    d->track = track;
+}
+void AviationAttitudeMessage::setValidity(const AttitudeValidity validity)
+{
+    Q_D(AviationAttitudeMessage);
+    d->validity = validity;
+}
+
 AviationAttitudeMessagePrivate::AviationAttitudeMessagePrivate(AviationAttitudeMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::AviationAttitude;

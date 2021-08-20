@@ -32,6 +32,73 @@ TrainingFileMessage::TrainingFileMessage() : FitDataMessage(new TrainingFileMess
 
 }
 
+DateTime TrainingFileMessage::timestamp() const
+{
+    Q_D(const TrainingFileMessage);
+    return d->timestamp;
+}
+
+File TrainingFileMessage::type() const
+{
+    Q_D(const TrainingFileMessage);
+    return d->type;
+}
+
+Manufacturer TrainingFileMessage::manufacturer() const
+{
+    Q_D(const TrainingFileMessage);
+    return d->manufacturer;
+}
+
+quint16 TrainingFileMessage::product() const
+{
+    Q_D(const TrainingFileMessage);
+    return d->product;
+}
+
+quint32z TrainingFileMessage::serialNumber() const
+{
+    Q_D(const TrainingFileMessage);
+    return d->serialNumber;
+}
+
+DateTime TrainingFileMessage::timeCreated() const
+{
+    Q_D(const TrainingFileMessage);
+    return d->timeCreated;
+}
+
+void TrainingFileMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(TrainingFileMessage);
+    d->timestamp = timestamp;
+}
+void TrainingFileMessage::setType(const File type)
+{
+    Q_D(TrainingFileMessage);
+    d->type = type;
+}
+void TrainingFileMessage::setManufacturer(const Manufacturer manufacturer)
+{
+    Q_D(TrainingFileMessage);
+    d->manufacturer = manufacturer;
+}
+void TrainingFileMessage::setProduct(const quint16 product)
+{
+    Q_D(TrainingFileMessage);
+    d->product = product;
+}
+void TrainingFileMessage::setSerialNumber(const quint32z serialNumber)
+{
+    Q_D(TrainingFileMessage);
+    d->serialNumber = serialNumber;
+}
+void TrainingFileMessage::setTimeCreated(const DateTime timeCreated)
+{
+    Q_D(TrainingFileMessage);
+    d->timeCreated = timeCreated;
+}
+
 TrainingFileMessagePrivate::TrainingFileMessagePrivate(TrainingFileMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::TrainingFile;

@@ -32,6 +32,51 @@ ExerciseTitleMessage::ExerciseTitleMessage() : FitDataMessage(new ExerciseTitleM
 
 }
 
+MessageIndex ExerciseTitleMessage::messageIndex() const
+{
+    Q_D(const ExerciseTitleMessage);
+    return d->messageIndex;
+}
+
+ExerciseCategory ExerciseTitleMessage::exerciseCategory() const
+{
+    Q_D(const ExerciseTitleMessage);
+    return d->exerciseCategory;
+}
+
+quint16 ExerciseTitleMessage::exerciseName() const
+{
+    Q_D(const ExerciseTitleMessage);
+    return d->exerciseName;
+}
+
+QString ExerciseTitleMessage::wktStepName() const
+{
+    Q_D(const ExerciseTitleMessage);
+    return d->wktStepName;
+}
+
+void ExerciseTitleMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(ExerciseTitleMessage);
+    d->messageIndex = messageIndex;
+}
+void ExerciseTitleMessage::setExerciseCategory(const ExerciseCategory exerciseCategory)
+{
+    Q_D(ExerciseTitleMessage);
+    d->exerciseCategory = exerciseCategory;
+}
+void ExerciseTitleMessage::setExerciseName(const quint16 exerciseName)
+{
+    Q_D(ExerciseTitleMessage);
+    d->exerciseName = exerciseName;
+}
+void ExerciseTitleMessage::setWktStepName(const QString wktStepName)
+{
+    Q_D(ExerciseTitleMessage);
+    d->wktStepName = wktStepName;
+}
+
 ExerciseTitleMessagePrivate::ExerciseTitleMessagePrivate(ExerciseTitleMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::ExerciseTitle;

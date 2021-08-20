@@ -37,7 +37,15 @@ public:
     ExdScreenConfigurationMessage();
     ~ExdScreenConfigurationMessage();
 
-    /// @todo Generate getters/setters.
+    quint8 screenIndex() const;
+    quint8 fieldCount() const;
+    ExdLayout layout() const;
+    bool screenEnabled() const;
+
+    void setScreenIndex(const quint8 screenIndex);
+    void setFieldCount(const quint8 fieldCount);
+    void setLayout(const ExdLayout layout);
+    void setScreenEnabled(const bool screenEnabled);
 
 protected:
     /// @cond internal

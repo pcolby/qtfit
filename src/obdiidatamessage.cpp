@@ -32,6 +32,106 @@ ObdiiDataMessage::ObdiiDataMessage() : FitDataMessage(new ObdiiDataMessagePrivat
 
 }
 
+DateTime ObdiiDataMessage::timestamp() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->timestamp;
+}
+
+quint16 ObdiiDataMessage::timestampMs() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->timestampMs;
+}
+
+quint16 ObdiiDataMessage::timeOffset() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->timeOffset;
+}
+
+quint8 ObdiiDataMessage::pid() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->pid;
+}
+
+quint8 ObdiiDataMessage::rawData() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->rawData;
+}
+
+quint8 ObdiiDataMessage::pidDataSize() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->pidDataSize;
+}
+
+quint32 ObdiiDataMessage::systemTime() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->systemTime;
+}
+
+DateTime ObdiiDataMessage::startTimestamp() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->startTimestamp;
+}
+
+quint16 ObdiiDataMessage::startTimestampMs() const
+{
+    Q_D(const ObdiiDataMessage);
+    return d->startTimestampMs;
+}
+
+void ObdiiDataMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(ObdiiDataMessage);
+    d->timestamp = timestamp;
+}
+void ObdiiDataMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(ObdiiDataMessage);
+    d->timestampMs = timestampMs;
+}
+void ObdiiDataMessage::setTimeOffset(const quint16 timeOffset)
+{
+    Q_D(ObdiiDataMessage);
+    d->timeOffset = timeOffset;
+}
+void ObdiiDataMessage::setPid(const quint8 pid)
+{
+    Q_D(ObdiiDataMessage);
+    d->pid = pid;
+}
+void ObdiiDataMessage::setRawData(const quint8 rawData)
+{
+    Q_D(ObdiiDataMessage);
+    d->rawData = rawData;
+}
+void ObdiiDataMessage::setPidDataSize(const quint8 pidDataSize)
+{
+    Q_D(ObdiiDataMessage);
+    d->pidDataSize = pidDataSize;
+}
+void ObdiiDataMessage::setSystemTime(const quint32 systemTime)
+{
+    Q_D(ObdiiDataMessage);
+    d->systemTime = systemTime;
+}
+void ObdiiDataMessage::setStartTimestamp(const DateTime startTimestamp)
+{
+    Q_D(ObdiiDataMessage);
+    d->startTimestamp = startTimestamp;
+}
+void ObdiiDataMessage::setStartTimestampMs(const quint16 startTimestampMs)
+{
+    Q_D(ObdiiDataMessage);
+    d->startTimestampMs = startTimestampMs;
+}
+
 ObdiiDataMessagePrivate::ObdiiDataMessagePrivate(ObdiiDataMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::ObdiiData;

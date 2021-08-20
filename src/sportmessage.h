@@ -37,7 +37,13 @@ public:
     SportMessage();
     ~SportMessage();
 
-    /// @todo Generate getters/setters.
+    Sport sport() const;
+    SubSport subSport() const;
+    QString name() const;
+
+    void setSport(const Sport sport);
+    void setSubSport(const SubSport subSport);
+    void setName(const QString name);
 
 protected:
     /// @cond internal

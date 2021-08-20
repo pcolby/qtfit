@@ -37,7 +37,13 @@ public:
     VideoMessage();
     ~VideoMessage();
 
-    /// @todo Generate getters/setters.
+    QString url() const;
+    QString hostingProvider() const;
+    quint32 duration() const;
+
+    void setUrl(const QString url);
+    void setHostingProvider(const QString hostingProvider);
+    void setDuration(const quint32 duration);
 
 protected:
     /// @cond internal

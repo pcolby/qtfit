@@ -37,7 +37,21 @@ public:
     FileIdMessage();
     ~FileIdMessage();
 
-    /// @todo Generate getters/setters.
+    File type() const;
+    Manufacturer manufacturer() const;
+    quint16 product() const;
+    quint32z serialNumber() const;
+    DateTime timeCreated() const;
+    quint16 number() const;
+    QString productName() const;
+
+    void setType(const File type);
+    void setManufacturer(const Manufacturer manufacturer);
+    void setProduct(const quint16 product);
+    void setSerialNumber(const quint32z serialNumber);
+    void setTimeCreated(const DateTime timeCreated);
+    void setNumber(const quint16 number);
+    void setProductName(const QString productName);
 
 protected:
     /// @cond internal

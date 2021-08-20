@@ -37,7 +37,33 @@ public:
     GoalMessage();
     ~GoalMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    Sport sport() const;
+    SubSport subSport() const;
+    DateTime startDate() const;
+    DateTime endDate() const;
+    Goal type() const;
+    quint32 value() const;
+    bool repeat() const;
+    quint32 targetValue() const;
+    GoalRecurrence recurrence() const;
+    quint16 recurrenceValue() const;
+    bool enabled() const;
+    GoalSource source() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setSport(const Sport sport);
+    void setSubSport(const SubSport subSport);
+    void setStartDate(const DateTime startDate);
+    void setEndDate(const DateTime endDate);
+    void setType(const Goal type);
+    void setValue(const quint32 value);
+    void setRepeat(const bool repeat);
+    void setTargetValue(const quint32 targetValue);
+    void setRecurrence(const GoalRecurrence recurrence);
+    void setRecurrenceValue(const quint16 recurrenceValue);
+    void setEnabled(const bool enabled);
+    void setSource(const GoalSource source);
 
 protected:
     /// @cond internal

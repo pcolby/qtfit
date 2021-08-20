@@ -32,6 +32,205 @@ DeviceInfoMessage::DeviceInfoMessage() : FitDataMessage(new DeviceInfoMessagePri
 
 }
 
+DateTime DeviceInfoMessage::timestamp() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->timestamp;
+}
+
+DeviceIndex DeviceInfoMessage::deviceIndex() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->deviceIndex;
+}
+
+quint8 DeviceInfoMessage::deviceType() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->deviceType;
+}
+
+Manufacturer DeviceInfoMessage::manufacturer() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->manufacturer;
+}
+
+quint32z DeviceInfoMessage::serialNumber() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->serialNumber;
+}
+
+quint16 DeviceInfoMessage::product() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->product;
+}
+
+quint16 DeviceInfoMessage::softwareVersion() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->softwareVersion;
+}
+
+quint8 DeviceInfoMessage::hardwareVersion() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->hardwareVersion;
+}
+
+quint32 DeviceInfoMessage::cumOperatingTime() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->cumOperatingTime;
+}
+
+quint16 DeviceInfoMessage::batteryVoltage() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->batteryVoltage;
+}
+
+BatteryStatus DeviceInfoMessage::batteryStatus() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->batteryStatus;
+}
+
+BodyLocation DeviceInfoMessage::sensorPosition() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->sensorPosition;
+}
+
+QString DeviceInfoMessage::descriptor() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->descriptor;
+}
+
+quint8z DeviceInfoMessage::antTransmissionType() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->antTransmissionType;
+}
+
+quint16z DeviceInfoMessage::antDeviceNumber() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->antDeviceNumber;
+}
+
+AntNetwork DeviceInfoMessage::antNetwork() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->antNetwork;
+}
+
+SourceType DeviceInfoMessage::sourceType() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->sourceType;
+}
+
+QString DeviceInfoMessage::productName() const
+{
+    Q_D(const DeviceInfoMessage);
+    return d->productName;
+}
+
+void DeviceInfoMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(DeviceInfoMessage);
+    d->timestamp = timestamp;
+}
+void DeviceInfoMessage::setDeviceIndex(const DeviceIndex deviceIndex)
+{
+    Q_D(DeviceInfoMessage);
+    d->deviceIndex = deviceIndex;
+}
+void DeviceInfoMessage::setDeviceType(const quint8 deviceType)
+{
+    Q_D(DeviceInfoMessage);
+    d->deviceType = deviceType;
+}
+void DeviceInfoMessage::setManufacturer(const Manufacturer manufacturer)
+{
+    Q_D(DeviceInfoMessage);
+    d->manufacturer = manufacturer;
+}
+void DeviceInfoMessage::setSerialNumber(const quint32z serialNumber)
+{
+    Q_D(DeviceInfoMessage);
+    d->serialNumber = serialNumber;
+}
+void DeviceInfoMessage::setProduct(const quint16 product)
+{
+    Q_D(DeviceInfoMessage);
+    d->product = product;
+}
+void DeviceInfoMessage::setSoftwareVersion(const quint16 softwareVersion)
+{
+    Q_D(DeviceInfoMessage);
+    d->softwareVersion = softwareVersion;
+}
+void DeviceInfoMessage::setHardwareVersion(const quint8 hardwareVersion)
+{
+    Q_D(DeviceInfoMessage);
+    d->hardwareVersion = hardwareVersion;
+}
+void DeviceInfoMessage::setCumOperatingTime(const quint32 cumOperatingTime)
+{
+    Q_D(DeviceInfoMessage);
+    d->cumOperatingTime = cumOperatingTime;
+}
+void DeviceInfoMessage::setBatteryVoltage(const quint16 batteryVoltage)
+{
+    Q_D(DeviceInfoMessage);
+    d->batteryVoltage = batteryVoltage;
+}
+void DeviceInfoMessage::setBatteryStatus(const BatteryStatus batteryStatus)
+{
+    Q_D(DeviceInfoMessage);
+    d->batteryStatus = batteryStatus;
+}
+void DeviceInfoMessage::setSensorPosition(const BodyLocation sensorPosition)
+{
+    Q_D(DeviceInfoMessage);
+    d->sensorPosition = sensorPosition;
+}
+void DeviceInfoMessage::setDescriptor(const QString descriptor)
+{
+    Q_D(DeviceInfoMessage);
+    d->descriptor = descriptor;
+}
+void DeviceInfoMessage::setAntTransmissionType(const quint8z antTransmissionType)
+{
+    Q_D(DeviceInfoMessage);
+    d->antTransmissionType = antTransmissionType;
+}
+void DeviceInfoMessage::setAntDeviceNumber(const quint16z antDeviceNumber)
+{
+    Q_D(DeviceInfoMessage);
+    d->antDeviceNumber = antDeviceNumber;
+}
+void DeviceInfoMessage::setAntNetwork(const AntNetwork antNetwork)
+{
+    Q_D(DeviceInfoMessage);
+    d->antNetwork = antNetwork;
+}
+void DeviceInfoMessage::setSourceType(const SourceType sourceType)
+{
+    Q_D(DeviceInfoMessage);
+    d->sourceType = sourceType;
+}
+void DeviceInfoMessage::setProductName(const QString productName)
+{
+    Q_D(DeviceInfoMessage);
+    d->productName = productName;
+}
+
 DeviceInfoMessagePrivate::DeviceInfoMessagePrivate(DeviceInfoMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::DeviceInfo;

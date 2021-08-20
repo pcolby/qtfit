@@ -32,6 +32,40 @@ SportMessage::SportMessage() : FitDataMessage(new SportMessagePrivate(this))
 
 }
 
+Sport SportMessage::sport() const
+{
+    Q_D(const SportMessage);
+    return d->sport;
+}
+
+SubSport SportMessage::subSport() const
+{
+    Q_D(const SportMessage);
+    return d->subSport;
+}
+
+QString SportMessage::name() const
+{
+    Q_D(const SportMessage);
+    return d->name;
+}
+
+void SportMessage::setSport(const Sport sport)
+{
+    Q_D(SportMessage);
+    d->sport = sport;
+}
+void SportMessage::setSubSport(const SubSport subSport)
+{
+    Q_D(SportMessage);
+    d->subSport = subSport;
+}
+void SportMessage::setName(const QString name)
+{
+    Q_D(SportMessage);
+    d->name = name;
+}
+
 SportMessagePrivate::SportMessagePrivate(SportMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Sport;

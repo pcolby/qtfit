@@ -32,6 +32,51 @@ BarometerDataMessage::BarometerDataMessage() : FitDataMessage(new BarometerDataM
 
 }
 
+DateTime BarometerDataMessage::timestamp() const
+{
+    Q_D(const BarometerDataMessage);
+    return d->timestamp;
+}
+
+quint16 BarometerDataMessage::timestampMs() const
+{
+    Q_D(const BarometerDataMessage);
+    return d->timestampMs;
+}
+
+quint16 BarometerDataMessage::sampleTimeOffset() const
+{
+    Q_D(const BarometerDataMessage);
+    return d->sampleTimeOffset;
+}
+
+quint32 BarometerDataMessage::baroPres() const
+{
+    Q_D(const BarometerDataMessage);
+    return d->baroPres;
+}
+
+void BarometerDataMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(BarometerDataMessage);
+    d->timestamp = timestamp;
+}
+void BarometerDataMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(BarometerDataMessage);
+    d->timestampMs = timestampMs;
+}
+void BarometerDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
+{
+    Q_D(BarometerDataMessage);
+    d->sampleTimeOffset = sampleTimeOffset;
+}
+void BarometerDataMessage::setBaroPres(const quint32 baroPres)
+{
+    Q_D(BarometerDataMessage);
+    d->baroPres = baroPres;
+}
+
 BarometerDataMessagePrivate::BarometerDataMessagePrivate(BarometerDataMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::BarometerData;

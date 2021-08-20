@@ -32,6 +32,95 @@ ActivityMessage::ActivityMessage() : FitDataMessage(new ActivityMessagePrivate(t
 
 }
 
+DateTime ActivityMessage::timestamp() const
+{
+    Q_D(const ActivityMessage);
+    return d->timestamp;
+}
+
+quint32 ActivityMessage::totalTimerTime() const
+{
+    Q_D(const ActivityMessage);
+    return d->totalTimerTime;
+}
+
+quint16 ActivityMessage::numSessions() const
+{
+    Q_D(const ActivityMessage);
+    return d->numSessions;
+}
+
+Activity ActivityMessage::type() const
+{
+    Q_D(const ActivityMessage);
+    return d->type;
+}
+
+Event ActivityMessage::event() const
+{
+    Q_D(const ActivityMessage);
+    return d->event;
+}
+
+EventType ActivityMessage::eventType() const
+{
+    Q_D(const ActivityMessage);
+    return d->eventType;
+}
+
+LocalDateTime ActivityMessage::localTimestamp() const
+{
+    Q_D(const ActivityMessage);
+    return d->localTimestamp;
+}
+
+quint8 ActivityMessage::eventGroup() const
+{
+    Q_D(const ActivityMessage);
+    return d->eventGroup;
+}
+
+void ActivityMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(ActivityMessage);
+    d->timestamp = timestamp;
+}
+void ActivityMessage::setTotalTimerTime(const quint32 totalTimerTime)
+{
+    Q_D(ActivityMessage);
+    d->totalTimerTime = totalTimerTime;
+}
+void ActivityMessage::setNumSessions(const quint16 numSessions)
+{
+    Q_D(ActivityMessage);
+    d->numSessions = numSessions;
+}
+void ActivityMessage::setType(const Activity type)
+{
+    Q_D(ActivityMessage);
+    d->type = type;
+}
+void ActivityMessage::setEvent(const Event event)
+{
+    Q_D(ActivityMessage);
+    d->event = event;
+}
+void ActivityMessage::setEventType(const EventType eventType)
+{
+    Q_D(ActivityMessage);
+    d->eventType = eventType;
+}
+void ActivityMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
+{
+    Q_D(ActivityMessage);
+    d->localTimestamp = localTimestamp;
+}
+void ActivityMessage::setEventGroup(const quint8 eventGroup)
+{
+    Q_D(ActivityMessage);
+    d->eventGroup = eventGroup;
+}
+
 ActivityMessagePrivate::ActivityMessagePrivate(ActivityMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Activity;

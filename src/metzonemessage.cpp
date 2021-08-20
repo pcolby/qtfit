@@ -32,6 +32,51 @@ MetZoneMessage::MetZoneMessage() : FitDataMessage(new MetZoneMessagePrivate(this
 
 }
 
+MessageIndex MetZoneMessage::messageIndex() const
+{
+    Q_D(const MetZoneMessage);
+    return d->messageIndex;
+}
+
+quint8 MetZoneMessage::highBpm() const
+{
+    Q_D(const MetZoneMessage);
+    return d->highBpm;
+}
+
+quint16 MetZoneMessage::calories() const
+{
+    Q_D(const MetZoneMessage);
+    return d->calories;
+}
+
+quint8 MetZoneMessage::fatCalories() const
+{
+    Q_D(const MetZoneMessage);
+    return d->fatCalories;
+}
+
+void MetZoneMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(MetZoneMessage);
+    d->messageIndex = messageIndex;
+}
+void MetZoneMessage::setHighBpm(const quint8 highBpm)
+{
+    Q_D(MetZoneMessage);
+    d->highBpm = highBpm;
+}
+void MetZoneMessage::setCalories(const quint16 calories)
+{
+    Q_D(MetZoneMessage);
+    d->calories = calories;
+}
+void MetZoneMessage::setFatCalories(const quint8 fatCalories)
+{
+    Q_D(MetZoneMessage);
+    d->fatCalories = fatCalories;
+}
+
 MetZoneMessagePrivate::MetZoneMessagePrivate(MetZoneMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::MetZone;

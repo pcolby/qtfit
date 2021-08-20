@@ -32,6 +32,73 @@ ExdDataFieldConfigurationMessage::ExdDataFieldConfigurationMessage() : FitDataMe
 
 }
 
+quint8 ExdDataFieldConfigurationMessage::screenIndex() const
+{
+    Q_D(const ExdDataFieldConfigurationMessage);
+    return d->screenIndex;
+}
+
+quint8 ExdDataFieldConfigurationMessage::conceptField() const
+{
+    Q_D(const ExdDataFieldConfigurationMessage);
+    return d->conceptField;
+}
+
+quint8 ExdDataFieldConfigurationMessage::fieldId() const
+{
+    Q_D(const ExdDataFieldConfigurationMessage);
+    return d->fieldId;
+}
+
+quint8 ExdDataFieldConfigurationMessage::conceptCount() const
+{
+    Q_D(const ExdDataFieldConfigurationMessage);
+    return d->conceptCount;
+}
+
+ExdDisplayType ExdDataFieldConfigurationMessage::displayType() const
+{
+    Q_D(const ExdDataFieldConfigurationMessage);
+    return d->displayType;
+}
+
+QString ExdDataFieldConfigurationMessage::title() const
+{
+    Q_D(const ExdDataFieldConfigurationMessage);
+    return d->title;
+}
+
+void ExdDataFieldConfigurationMessage::setScreenIndex(const quint8 screenIndex)
+{
+    Q_D(ExdDataFieldConfigurationMessage);
+    d->screenIndex = screenIndex;
+}
+void ExdDataFieldConfigurationMessage::setConceptField(const quint8 conceptField)
+{
+    Q_D(ExdDataFieldConfigurationMessage);
+    d->conceptField = conceptField;
+}
+void ExdDataFieldConfigurationMessage::setFieldId(const quint8 fieldId)
+{
+    Q_D(ExdDataFieldConfigurationMessage);
+    d->fieldId = fieldId;
+}
+void ExdDataFieldConfigurationMessage::setConceptCount(const quint8 conceptCount)
+{
+    Q_D(ExdDataFieldConfigurationMessage);
+    d->conceptCount = conceptCount;
+}
+void ExdDataFieldConfigurationMessage::setDisplayType(const ExdDisplayType displayType)
+{
+    Q_D(ExdDataFieldConfigurationMessage);
+    d->displayType = displayType;
+}
+void ExdDataFieldConfigurationMessage::setTitle(const QString title)
+{
+    Q_D(ExdDataFieldConfigurationMessage);
+    d->title = title;
+}
+
 ExdDataFieldConfigurationMessagePrivate::ExdDataFieldConfigurationMessagePrivate(ExdDataFieldConfigurationMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::ExdDataFieldConfiguration;

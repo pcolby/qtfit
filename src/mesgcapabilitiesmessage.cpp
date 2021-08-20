@@ -32,6 +32,62 @@ MesgCapabilitiesMessage::MesgCapabilitiesMessage() : FitDataMessage(new MesgCapa
 
 }
 
+MessageIndex MesgCapabilitiesMessage::messageIndex() const
+{
+    Q_D(const MesgCapabilitiesMessage);
+    return d->messageIndex;
+}
+
+File MesgCapabilitiesMessage::file() const
+{
+    Q_D(const MesgCapabilitiesMessage);
+    return d->file;
+}
+
+MesgNum MesgCapabilitiesMessage::mesgNum() const
+{
+    Q_D(const MesgCapabilitiesMessage);
+    return d->mesgNum;
+}
+
+MesgCount MesgCapabilitiesMessage::countType() const
+{
+    Q_D(const MesgCapabilitiesMessage);
+    return d->countType;
+}
+
+quint16 MesgCapabilitiesMessage::count() const
+{
+    Q_D(const MesgCapabilitiesMessage);
+    return d->count;
+}
+
+void MesgCapabilitiesMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(MesgCapabilitiesMessage);
+    d->messageIndex = messageIndex;
+}
+void MesgCapabilitiesMessage::setFile(const File file)
+{
+    Q_D(MesgCapabilitiesMessage);
+    d->file = file;
+}
+void MesgCapabilitiesMessage::setMesgNum(const MesgNum mesgNum)
+{
+    Q_D(MesgCapabilitiesMessage);
+    d->mesgNum = mesgNum;
+}
+void MesgCapabilitiesMessage::setCountType(const MesgCount countType)
+{
+    Q_D(MesgCapabilitiesMessage);
+    d->countType = countType;
+}
+void MesgCapabilitiesMessage::setCount(const quint16 count)
+{
+    Q_D(MesgCapabilitiesMessage);
+    d->count = count;
+}
+
 MesgCapabilitiesMessagePrivate::MesgCapabilitiesMessagePrivate(MesgCapabilitiesMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::MesgCapabilities;

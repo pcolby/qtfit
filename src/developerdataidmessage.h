@@ -37,7 +37,17 @@ public:
     DeveloperDataIdMessage();
     ~DeveloperDataIdMessage();
 
-    /// @todo Generate getters/setters.
+    quint8 developerId() const;
+    quint8 applicationId() const;
+    Manufacturer manufacturerId() const;
+    quint8 developerDataIndex() const;
+    quint32 applicationVersion() const;
+
+    void setDeveloperId(const quint8 developerId);
+    void setApplicationId(const quint8 applicationId);
+    void setManufacturerId(const Manufacturer manufacturerId);
+    void setDeveloperDataIndex(const quint8 developerDataIndex);
+    void setApplicationVersion(const quint32 applicationVersion);
 
 protected:
     /// @cond internal

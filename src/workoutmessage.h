@@ -37,7 +37,21 @@ public:
     WorkoutMessage();
     ~WorkoutMessage();
 
-    /// @todo Generate getters/setters.
+    Sport sport() const;
+    WorkoutCapabilities capabilities() const;
+    quint16 numValidSteps() const;
+    QString wktName() const;
+    SubSport subSport() const;
+    quint16 poolLength() const;
+    DisplayMeasure poolLengthUnit() const;
+
+    void setSport(const Sport sport);
+    void setCapabilities(const WorkoutCapabilities capabilities);
+    void setNumValidSteps(const quint16 numValidSteps);
+    void setWktName(const QString wktName);
+    void setSubSport(const SubSport subSport);
+    void setPoolLength(const quint16 poolLength);
+    void setPoolLengthUnit(const DisplayMeasure poolLengthUnit);
 
 protected:
     /// @cond internal

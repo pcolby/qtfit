@@ -37,7 +37,15 @@ public:
     MetZoneMessage();
     ~MetZoneMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint8 highBpm() const;
+    quint16 calories() const;
+    quint8 fatCalories() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setHighBpm(const quint8 highBpm);
+    void setCalories(const quint16 calories);
+    void setFatCalories(const quint8 fatCalories);
 
 protected:
     /// @cond internal

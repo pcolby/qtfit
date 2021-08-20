@@ -32,6 +32,84 @@ TimestampCorrelationMessage::TimestampCorrelationMessage() : FitDataMessage(new 
 
 }
 
+DateTime TimestampCorrelationMessage::timestamp() const
+{
+    Q_D(const TimestampCorrelationMessage);
+    return d->timestamp;
+}
+
+quint16 TimestampCorrelationMessage::fractionalTimestamp() const
+{
+    Q_D(const TimestampCorrelationMessage);
+    return d->fractionalTimestamp;
+}
+
+DateTime TimestampCorrelationMessage::systemTimestamp() const
+{
+    Q_D(const TimestampCorrelationMessage);
+    return d->systemTimestamp;
+}
+
+quint16 TimestampCorrelationMessage::fractionalSystemTimestamp() const
+{
+    Q_D(const TimestampCorrelationMessage);
+    return d->fractionalSystemTimestamp;
+}
+
+LocalDateTime TimestampCorrelationMessage::localTimestamp() const
+{
+    Q_D(const TimestampCorrelationMessage);
+    return d->localTimestamp;
+}
+
+quint16 TimestampCorrelationMessage::timestampMs() const
+{
+    Q_D(const TimestampCorrelationMessage);
+    return d->timestampMs;
+}
+
+quint16 TimestampCorrelationMessage::systemTimestampMs() const
+{
+    Q_D(const TimestampCorrelationMessage);
+    return d->systemTimestampMs;
+}
+
+void TimestampCorrelationMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(TimestampCorrelationMessage);
+    d->timestamp = timestamp;
+}
+void TimestampCorrelationMessage::setFractionalTimestamp(const quint16 fractionalTimestamp)
+{
+    Q_D(TimestampCorrelationMessage);
+    d->fractionalTimestamp = fractionalTimestamp;
+}
+void TimestampCorrelationMessage::setSystemTimestamp(const DateTime systemTimestamp)
+{
+    Q_D(TimestampCorrelationMessage);
+    d->systemTimestamp = systemTimestamp;
+}
+void TimestampCorrelationMessage::setFractionalSystemTimestamp(const quint16 fractionalSystemTimestamp)
+{
+    Q_D(TimestampCorrelationMessage);
+    d->fractionalSystemTimestamp = fractionalSystemTimestamp;
+}
+void TimestampCorrelationMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
+{
+    Q_D(TimestampCorrelationMessage);
+    d->localTimestamp = localTimestamp;
+}
+void TimestampCorrelationMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(TimestampCorrelationMessage);
+    d->timestampMs = timestampMs;
+}
+void TimestampCorrelationMessage::setSystemTimestampMs(const quint16 systemTimestampMs)
+{
+    Q_D(TimestampCorrelationMessage);
+    d->systemTimestampMs = systemTimestampMs;
+}
+
 TimestampCorrelationMessagePrivate::TimestampCorrelationMessagePrivate(TimestampCorrelationMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::TimestampCorrelation;

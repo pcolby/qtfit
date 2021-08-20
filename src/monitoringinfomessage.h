@@ -37,7 +37,19 @@ public:
     MonitoringInfoMessage();
     ~MonitoringInfoMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    LocalDateTime localTimestamp() const;
+    ActivityType activityType() const;
+    quint16 cyclesToDistance() const;
+    quint16 cyclesToCalories() const;
+    quint16 restingMetabolicRate() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setLocalTimestamp(const LocalDateTime localTimestamp);
+    void setActivityType(const ActivityType activityType);
+    void setCyclesToDistance(const quint16 cyclesToDistance);
+    void setCyclesToCalories(const quint16 cyclesToCalories);
+    void setRestingMetabolicRate(const quint16 restingMetabolicRate);
 
 protected:
     /// @cond internal

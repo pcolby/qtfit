@@ -37,7 +37,19 @@ public:
     AntTxMessage();
     ~AntTxMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 fractionalTimestamp() const;
+    quint8 mesgId() const;
+    quint8 mesgData() const;
+    quint8 channelNumber() const;
+    quint8 data() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setFractionalTimestamp(const quint16 fractionalTimestamp);
+    void setMesgId(const quint8 mesgId);
+    void setMesgData(const quint8 mesgData);
+    void setChannelNumber(const quint8 channelNumber);
+    void setData(const quint8 data);
 
 protected:
     /// @cond internal

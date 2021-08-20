@@ -32,6 +32,62 @@ DeveloperDataIdMessage::DeveloperDataIdMessage() : FitDataMessage(new DeveloperD
 
 }
 
+quint8 DeveloperDataIdMessage::developerId() const
+{
+    Q_D(const DeveloperDataIdMessage);
+    return d->developerId;
+}
+
+quint8 DeveloperDataIdMessage::applicationId() const
+{
+    Q_D(const DeveloperDataIdMessage);
+    return d->applicationId;
+}
+
+Manufacturer DeveloperDataIdMessage::manufacturerId() const
+{
+    Q_D(const DeveloperDataIdMessage);
+    return d->manufacturerId;
+}
+
+quint8 DeveloperDataIdMessage::developerDataIndex() const
+{
+    Q_D(const DeveloperDataIdMessage);
+    return d->developerDataIndex;
+}
+
+quint32 DeveloperDataIdMessage::applicationVersion() const
+{
+    Q_D(const DeveloperDataIdMessage);
+    return d->applicationVersion;
+}
+
+void DeveloperDataIdMessage::setDeveloperId(const quint8 developerId)
+{
+    Q_D(DeveloperDataIdMessage);
+    d->developerId = developerId;
+}
+void DeveloperDataIdMessage::setApplicationId(const quint8 applicationId)
+{
+    Q_D(DeveloperDataIdMessage);
+    d->applicationId = applicationId;
+}
+void DeveloperDataIdMessage::setManufacturerId(const Manufacturer manufacturerId)
+{
+    Q_D(DeveloperDataIdMessage);
+    d->manufacturerId = manufacturerId;
+}
+void DeveloperDataIdMessage::setDeveloperDataIndex(const quint8 developerDataIndex)
+{
+    Q_D(DeveloperDataIdMessage);
+    d->developerDataIndex = developerDataIndex;
+}
+void DeveloperDataIdMessage::setApplicationVersion(const quint32 applicationVersion)
+{
+    Q_D(DeveloperDataIdMessage);
+    d->applicationVersion = applicationVersion;
+}
+
 DeveloperDataIdMessagePrivate::DeveloperDataIdMessagePrivate(DeveloperDataIdMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::DeveloperDataId;

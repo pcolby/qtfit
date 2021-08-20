@@ -32,6 +32,150 @@ DiveSummaryMessage::DiveSummaryMessage() : FitDataMessage(new DiveSummaryMessage
 
 }
 
+DateTime DiveSummaryMessage::timestamp() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->timestamp;
+}
+
+MesgNum DiveSummaryMessage::referenceMesg() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->referenceMesg;
+}
+
+MessageIndex DiveSummaryMessage::referenceIndex() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->referenceIndex;
+}
+
+quint32 DiveSummaryMessage::avgDepth() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->avgDepth;
+}
+
+quint32 DiveSummaryMessage::maxDepth() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->maxDepth;
+}
+
+quint32 DiveSummaryMessage::surfaceInterval() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->surfaceInterval;
+}
+
+quint8 DiveSummaryMessage::startCns() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->startCns;
+}
+
+quint8 DiveSummaryMessage::endCns() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->endCns;
+}
+
+quint16 DiveSummaryMessage::startN2() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->startN2;
+}
+
+quint16 DiveSummaryMessage::endN2() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->endN2;
+}
+
+quint16 DiveSummaryMessage::o2Toxicity() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->o2Toxicity;
+}
+
+quint32 DiveSummaryMessage::diveNumber() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->diveNumber;
+}
+
+quint32 DiveSummaryMessage::bottomTime() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->bottomTime;
+}
+
+void DiveSummaryMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(DiveSummaryMessage);
+    d->timestamp = timestamp;
+}
+void DiveSummaryMessage::setReferenceMesg(const MesgNum referenceMesg)
+{
+    Q_D(DiveSummaryMessage);
+    d->referenceMesg = referenceMesg;
+}
+void DiveSummaryMessage::setReferenceIndex(const MessageIndex referenceIndex)
+{
+    Q_D(DiveSummaryMessage);
+    d->referenceIndex = referenceIndex;
+}
+void DiveSummaryMessage::setAvgDepth(const quint32 avgDepth)
+{
+    Q_D(DiveSummaryMessage);
+    d->avgDepth = avgDepth;
+}
+void DiveSummaryMessage::setMaxDepth(const quint32 maxDepth)
+{
+    Q_D(DiveSummaryMessage);
+    d->maxDepth = maxDepth;
+}
+void DiveSummaryMessage::setSurfaceInterval(const quint32 surfaceInterval)
+{
+    Q_D(DiveSummaryMessage);
+    d->surfaceInterval = surfaceInterval;
+}
+void DiveSummaryMessage::setStartCns(const quint8 startCns)
+{
+    Q_D(DiveSummaryMessage);
+    d->startCns = startCns;
+}
+void DiveSummaryMessage::setEndCns(const quint8 endCns)
+{
+    Q_D(DiveSummaryMessage);
+    d->endCns = endCns;
+}
+void DiveSummaryMessage::setStartN2(const quint16 startN2)
+{
+    Q_D(DiveSummaryMessage);
+    d->startN2 = startN2;
+}
+void DiveSummaryMessage::setEndN2(const quint16 endN2)
+{
+    Q_D(DiveSummaryMessage);
+    d->endN2 = endN2;
+}
+void DiveSummaryMessage::setO2Toxicity(const quint16 o2Toxicity)
+{
+    Q_D(DiveSummaryMessage);
+    d->o2Toxicity = o2Toxicity;
+}
+void DiveSummaryMessage::setDiveNumber(const quint32 diveNumber)
+{
+    Q_D(DiveSummaryMessage);
+    d->diveNumber = diveNumber;
+}
+void DiveSummaryMessage::setBottomTime(const quint32 bottomTime)
+{
+    Q_D(DiveSummaryMessage);
+    d->bottomTime = bottomTime;
+}
+
 DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::DiveSummary;

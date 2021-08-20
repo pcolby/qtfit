@@ -37,7 +37,23 @@ public:
     CoursePointMessage();
     ~CoursePointMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    DateTime timestamp() const;
+    qint32 positionLat() const;
+    qint32 positionLong() const;
+    quint32 distance() const;
+    CoursePoint type() const;
+    QString name() const;
+    bool favorite() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setTimestamp(const DateTime timestamp);
+    void setPositionLat(const qint32 positionLat);
+    void setPositionLong(const qint32 positionLong);
+    void setDistance(const quint32 distance);
+    void setType(const CoursePoint type);
+    void setName(const QString name);
+    void setFavorite(const bool favorite);
 
 protected:
     /// @cond internal

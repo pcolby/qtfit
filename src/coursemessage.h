@@ -37,7 +37,15 @@ public:
     CourseMessage();
     ~CourseMessage();
 
-    /// @todo Generate getters/setters.
+    Sport sport() const;
+    QString name() const;
+    CourseCapabilities capabilities() const;
+    SubSport subSport() const;
+
+    void setSport(const Sport sport);
+    void setName(const QString name);
+    void setCapabilities(const CourseCapabilities capabilities);
+    void setSubSport(const SubSport subSport);
 
 protected:
     /// @cond internal

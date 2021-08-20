@@ -32,6 +32,95 @@ SdmProfileMessage::SdmProfileMessage() : FitDataMessage(new SdmProfileMessagePri
 
 }
 
+MessageIndex SdmProfileMessage::messageIndex() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->messageIndex;
+}
+
+bool SdmProfileMessage::enabled() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->enabled;
+}
+
+quint16z SdmProfileMessage::sdmAntId() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->sdmAntId;
+}
+
+quint16 SdmProfileMessage::sdmCalFactor() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->sdmCalFactor;
+}
+
+quint32 SdmProfileMessage::odometer() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->odometer;
+}
+
+bool SdmProfileMessage::speedSource() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->speedSource;
+}
+
+quint8z SdmProfileMessage::sdmAntIdTransType() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->sdmAntIdTransType;
+}
+
+quint8 SdmProfileMessage::odometerRollover() const
+{
+    Q_D(const SdmProfileMessage);
+    return d->odometerRollover;
+}
+
+void SdmProfileMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(SdmProfileMessage);
+    d->messageIndex = messageIndex;
+}
+void SdmProfileMessage::setEnabled(const bool enabled)
+{
+    Q_D(SdmProfileMessage);
+    d->enabled = enabled;
+}
+void SdmProfileMessage::setSdmAntId(const quint16z sdmAntId)
+{
+    Q_D(SdmProfileMessage);
+    d->sdmAntId = sdmAntId;
+}
+void SdmProfileMessage::setSdmCalFactor(const quint16 sdmCalFactor)
+{
+    Q_D(SdmProfileMessage);
+    d->sdmCalFactor = sdmCalFactor;
+}
+void SdmProfileMessage::setOdometer(const quint32 odometer)
+{
+    Q_D(SdmProfileMessage);
+    d->odometer = odometer;
+}
+void SdmProfileMessage::setSpeedSource(const bool speedSource)
+{
+    Q_D(SdmProfileMessage);
+    d->speedSource = speedSource;
+}
+void SdmProfileMessage::setSdmAntIdTransType(const quint8z sdmAntIdTransType)
+{
+    Q_D(SdmProfileMessage);
+    d->sdmAntIdTransType = sdmAntIdTransType;
+}
+void SdmProfileMessage::setOdometerRollover(const quint8 odometerRollover)
+{
+    Q_D(SdmProfileMessage);
+    d->odometerRollover = odometerRollover;
+}
+
 SdmProfileMessagePrivate::SdmProfileMessagePrivate(SdmProfileMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::SdmProfile;

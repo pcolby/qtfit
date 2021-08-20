@@ -37,7 +37,21 @@ public:
     ScheduleMessage();
     ~ScheduleMessage();
 
-    /// @todo Generate getters/setters.
+    Manufacturer manufacturer() const;
+    quint16 product() const;
+    quint32z serialNumber() const;
+    DateTime timeCreated() const;
+    bool completed() const;
+    Schedule type() const;
+    LocalDateTime scheduledTime() const;
+
+    void setManufacturer(const Manufacturer manufacturer);
+    void setProduct(const quint16 product);
+    void setSerialNumber(const quint32z serialNumber);
+    void setTimeCreated(const DateTime timeCreated);
+    void setCompleted(const bool completed);
+    void setType(const Schedule type);
+    void setScheduledTime(const LocalDateTime scheduledTime);
 
 protected:
     /// @cond internal

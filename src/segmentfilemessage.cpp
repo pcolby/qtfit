@@ -32,6 +32,106 @@ SegmentFileMessage::SegmentFileMessage() : FitDataMessage(new SegmentFileMessage
 
 }
 
+MessageIndex SegmentFileMessage::messageIndex() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->messageIndex;
+}
+
+QString SegmentFileMessage::fileUuid() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->fileUuid;
+}
+
+bool SegmentFileMessage::enabled() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->enabled;
+}
+
+quint32 SegmentFileMessage::userProfilePrimaryKey() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->userProfilePrimaryKey;
+}
+
+SegmentLeaderboardType SegmentFileMessage::leaderType() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->leaderType;
+}
+
+quint32 SegmentFileMessage::leaderGroupPrimaryKey() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->leaderGroupPrimaryKey;
+}
+
+quint32 SegmentFileMessage::leaderActivityId() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->leaderActivityId;
+}
+
+QString SegmentFileMessage::leaderActivityIdString() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->leaderActivityIdString;
+}
+
+quint8 SegmentFileMessage::defaultRaceLeader() const
+{
+    Q_D(const SegmentFileMessage);
+    return d->defaultRaceLeader;
+}
+
+void SegmentFileMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(SegmentFileMessage);
+    d->messageIndex = messageIndex;
+}
+void SegmentFileMessage::setFileUuid(const QString fileUuid)
+{
+    Q_D(SegmentFileMessage);
+    d->fileUuid = fileUuid;
+}
+void SegmentFileMessage::setEnabled(const bool enabled)
+{
+    Q_D(SegmentFileMessage);
+    d->enabled = enabled;
+}
+void SegmentFileMessage::setUserProfilePrimaryKey(const quint32 userProfilePrimaryKey)
+{
+    Q_D(SegmentFileMessage);
+    d->userProfilePrimaryKey = userProfilePrimaryKey;
+}
+void SegmentFileMessage::setLeaderType(const SegmentLeaderboardType leaderType)
+{
+    Q_D(SegmentFileMessage);
+    d->leaderType = leaderType;
+}
+void SegmentFileMessage::setLeaderGroupPrimaryKey(const quint32 leaderGroupPrimaryKey)
+{
+    Q_D(SegmentFileMessage);
+    d->leaderGroupPrimaryKey = leaderGroupPrimaryKey;
+}
+void SegmentFileMessage::setLeaderActivityId(const quint32 leaderActivityId)
+{
+    Q_D(SegmentFileMessage);
+    d->leaderActivityId = leaderActivityId;
+}
+void SegmentFileMessage::setLeaderActivityIdString(const QString leaderActivityIdString)
+{
+    Q_D(SegmentFileMessage);
+    d->leaderActivityIdString = leaderActivityIdString;
+}
+void SegmentFileMessage::setDefaultRaceLeader(const quint8 defaultRaceLeader)
+{
+    Q_D(SegmentFileMessage);
+    d->defaultRaceLeader = defaultRaceLeader;
+}
+
 SegmentFileMessagePrivate::SegmentFileMessagePrivate(SegmentFileMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::SegmentFile;

@@ -37,7 +37,19 @@ public:
     HrMessage();
     ~HrMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 fractionalTimestamp() const;
+    quint8 time256() const;
+    quint8 filteredBpm() const;
+    quint32 eventTimestamp() const;
+    quint8 eventTimestamp12() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setFractionalTimestamp(const quint16 fractionalTimestamp);
+    void setTime256(const quint8 time256);
+    void setFilteredBpm(const quint8 filteredBpm);
+    void setEventTimestamp(const quint32 eventTimestamp);
+    void setEventTimestamp12(const quint8 eventTimestamp12);
 
 protected:
     /// @cond internal

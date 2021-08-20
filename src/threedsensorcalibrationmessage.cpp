@@ -32,6 +32,84 @@ ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : FitDataMessag
 
 }
 
+DateTime ThreeDSensorCalibrationMessage::timestamp() const
+{
+    Q_D(const ThreeDSensorCalibrationMessage);
+    return d->timestamp;
+}
+
+SensorType ThreeDSensorCalibrationMessage::sensorType() const
+{
+    Q_D(const ThreeDSensorCalibrationMessage);
+    return d->sensorType;
+}
+
+quint32 ThreeDSensorCalibrationMessage::calibrationFactor() const
+{
+    Q_D(const ThreeDSensorCalibrationMessage);
+    return d->calibrationFactor;
+}
+
+quint32 ThreeDSensorCalibrationMessage::calibrationDivisor() const
+{
+    Q_D(const ThreeDSensorCalibrationMessage);
+    return d->calibrationDivisor;
+}
+
+quint32 ThreeDSensorCalibrationMessage::levelShift() const
+{
+    Q_D(const ThreeDSensorCalibrationMessage);
+    return d->levelShift;
+}
+
+qint32 ThreeDSensorCalibrationMessage::offsetCal() const
+{
+    Q_D(const ThreeDSensorCalibrationMessage);
+    return d->offsetCal;
+}
+
+qint32 ThreeDSensorCalibrationMessage::orientationMatrix() const
+{
+    Q_D(const ThreeDSensorCalibrationMessage);
+    return d->orientationMatrix;
+}
+
+void ThreeDSensorCalibrationMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(ThreeDSensorCalibrationMessage);
+    d->timestamp = timestamp;
+}
+void ThreeDSensorCalibrationMessage::setSensorType(const SensorType sensorType)
+{
+    Q_D(ThreeDSensorCalibrationMessage);
+    d->sensorType = sensorType;
+}
+void ThreeDSensorCalibrationMessage::setCalibrationFactor(const quint32 calibrationFactor)
+{
+    Q_D(ThreeDSensorCalibrationMessage);
+    d->calibrationFactor = calibrationFactor;
+}
+void ThreeDSensorCalibrationMessage::setCalibrationDivisor(const quint32 calibrationDivisor)
+{
+    Q_D(ThreeDSensorCalibrationMessage);
+    d->calibrationDivisor = calibrationDivisor;
+}
+void ThreeDSensorCalibrationMessage::setLevelShift(const quint32 levelShift)
+{
+    Q_D(ThreeDSensorCalibrationMessage);
+    d->levelShift = levelShift;
+}
+void ThreeDSensorCalibrationMessage::setOffsetCal(const qint32 offsetCal)
+{
+    Q_D(ThreeDSensorCalibrationMessage);
+    d->offsetCal = offsetCal;
+}
+void ThreeDSensorCalibrationMessage::setOrientationMatrix(const qint32 orientationMatrix)
+{
+    Q_D(ThreeDSensorCalibrationMessage);
+    d->orientationMatrix = orientationMatrix;
+}
+
 ThreeDSensorCalibrationMessagePrivate::ThreeDSensorCalibrationMessagePrivate(ThreeDSensorCalibrationMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::ThreeDSensorCalibration;

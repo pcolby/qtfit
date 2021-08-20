@@ -32,6 +32,84 @@ DiveAlarmMessage::DiveAlarmMessage() : FitDataMessage(new DiveAlarmMessagePrivat
 
 }
 
+MessageIndex DiveAlarmMessage::messageIndex() const
+{
+    Q_D(const DiveAlarmMessage);
+    return d->messageIndex;
+}
+
+quint32 DiveAlarmMessage::depth() const
+{
+    Q_D(const DiveAlarmMessage);
+    return d->depth;
+}
+
+qint32 DiveAlarmMessage::time() const
+{
+    Q_D(const DiveAlarmMessage);
+    return d->time;
+}
+
+bool DiveAlarmMessage::enabled() const
+{
+    Q_D(const DiveAlarmMessage);
+    return d->enabled;
+}
+
+DiveAlarmType DiveAlarmMessage::alarmType() const
+{
+    Q_D(const DiveAlarmMessage);
+    return d->alarmType;
+}
+
+Tone DiveAlarmMessage::sound() const
+{
+    Q_D(const DiveAlarmMessage);
+    return d->sound;
+}
+
+SubSport DiveAlarmMessage::diveTypes() const
+{
+    Q_D(const DiveAlarmMessage);
+    return d->diveTypes;
+}
+
+void DiveAlarmMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(DiveAlarmMessage);
+    d->messageIndex = messageIndex;
+}
+void DiveAlarmMessage::setDepth(const quint32 depth)
+{
+    Q_D(DiveAlarmMessage);
+    d->depth = depth;
+}
+void DiveAlarmMessage::setTime(const qint32 time)
+{
+    Q_D(DiveAlarmMessage);
+    d->time = time;
+}
+void DiveAlarmMessage::setEnabled(const bool enabled)
+{
+    Q_D(DiveAlarmMessage);
+    d->enabled = enabled;
+}
+void DiveAlarmMessage::setAlarmType(const DiveAlarmType alarmType)
+{
+    Q_D(DiveAlarmMessage);
+    d->alarmType = alarmType;
+}
+void DiveAlarmMessage::setSound(const Tone sound)
+{
+    Q_D(DiveAlarmMessage);
+    d->sound = sound;
+}
+void DiveAlarmMessage::setDiveTypes(const SubSport diveTypes)
+{
+    Q_D(DiveAlarmMessage);
+    d->diveTypes = diveTypes;
+}
+
 DiveAlarmMessagePrivate::DiveAlarmMessagePrivate(DiveAlarmMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::DiveAlarm;

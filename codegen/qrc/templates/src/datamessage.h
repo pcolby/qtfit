@@ -15,7 +15,13 @@ public:
     {{ClassName}}();
     ~{{ClassName}}();
 
-    /// @todo Generate getters/setters.
+{% for field in fields %}
+    {{field.type}} {{field.name}}() const;
+{% endfor %}
+
+{% for field in fields %}
+    void set{{field.name|capfirst}}(const {{field.type}} {{field.name}});
+{% endfor %}
 
 protected:
     /// @cond internal

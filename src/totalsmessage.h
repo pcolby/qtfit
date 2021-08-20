@@ -37,7 +37,27 @@ public:
     TotalsMessage();
     ~TotalsMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    DateTime timestamp() const;
+    quint32 timerTime() const;
+    quint32 distance() const;
+    quint32 calories() const;
+    Sport sport() const;
+    quint32 elapsedTime() const;
+    quint16 sessions() const;
+    quint32 activeTime() const;
+    quint8 sportIndex() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setTimestamp(const DateTime timestamp);
+    void setTimerTime(const quint32 timerTime);
+    void setDistance(const quint32 distance);
+    void setCalories(const quint32 calories);
+    void setSport(const Sport sport);
+    void setElapsedTime(const quint32 elapsedTime);
+    void setSessions(const quint16 sessions);
+    void setActiveTime(const quint32 activeTime);
+    void setSportIndex(const quint8 sportIndex);
 
 protected:
     /// @cond internal

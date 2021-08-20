@@ -32,6 +32,73 @@ OneDSensorCalibrationMessage::OneDSensorCalibrationMessage() : FitDataMessage(ne
 
 }
 
+DateTime OneDSensorCalibrationMessage::timestamp() const
+{
+    Q_D(const OneDSensorCalibrationMessage);
+    return d->timestamp;
+}
+
+SensorType OneDSensorCalibrationMessage::sensorType() const
+{
+    Q_D(const OneDSensorCalibrationMessage);
+    return d->sensorType;
+}
+
+quint32 OneDSensorCalibrationMessage::calibrationFactor() const
+{
+    Q_D(const OneDSensorCalibrationMessage);
+    return d->calibrationFactor;
+}
+
+quint32 OneDSensorCalibrationMessage::calibrationDivisor() const
+{
+    Q_D(const OneDSensorCalibrationMessage);
+    return d->calibrationDivisor;
+}
+
+quint32 OneDSensorCalibrationMessage::levelShift() const
+{
+    Q_D(const OneDSensorCalibrationMessage);
+    return d->levelShift;
+}
+
+qint32 OneDSensorCalibrationMessage::offsetCal() const
+{
+    Q_D(const OneDSensorCalibrationMessage);
+    return d->offsetCal;
+}
+
+void OneDSensorCalibrationMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(OneDSensorCalibrationMessage);
+    d->timestamp = timestamp;
+}
+void OneDSensorCalibrationMessage::setSensorType(const SensorType sensorType)
+{
+    Q_D(OneDSensorCalibrationMessage);
+    d->sensorType = sensorType;
+}
+void OneDSensorCalibrationMessage::setCalibrationFactor(const quint32 calibrationFactor)
+{
+    Q_D(OneDSensorCalibrationMessage);
+    d->calibrationFactor = calibrationFactor;
+}
+void OneDSensorCalibrationMessage::setCalibrationDivisor(const quint32 calibrationDivisor)
+{
+    Q_D(OneDSensorCalibrationMessage);
+    d->calibrationDivisor = calibrationDivisor;
+}
+void OneDSensorCalibrationMessage::setLevelShift(const quint32 levelShift)
+{
+    Q_D(OneDSensorCalibrationMessage);
+    d->levelShift = levelShift;
+}
+void OneDSensorCalibrationMessage::setOffsetCal(const qint32 offsetCal)
+{
+    Q_D(OneDSensorCalibrationMessage);
+    d->offsetCal = offsetCal;
+}
+
 OneDSensorCalibrationMessagePrivate::OneDSensorCalibrationMessagePrivate(OneDSensorCalibrationMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::OneDSensorCalibration;

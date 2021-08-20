@@ -37,7 +37,65 @@ public:
     MonitoringMessage();
     ~MonitoringMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    DeviceIndex deviceIndex() const;
+    quint16 calories() const;
+    quint32 distance() const;
+    quint32 cycles() const;
+    quint32 activeTime() const;
+    ActivityType activityType() const;
+    ActivitySubtype activitySubtype() const;
+    ActivityLevel activityLevel() const;
+    quint16 distance16() const;
+    quint16 cycles16() const;
+    quint16 activeTime16() const;
+    LocalDateTime localTimestamp() const;
+    qint16 temperature() const;
+    qint16 temperatureMin() const;
+    qint16 temperatureMax() const;
+    quint16 activityTime() const;
+    quint16 activeCalories() const;
+    quint8 currentActivityTypeIntensity() const;
+    quint8 timestampMin8() const;
+    quint16 timestamp16() const;
+    quint8 heartRate() const;
+    quint8 intensity() const;
+    quint16 durationMin() const;
+    quint32 duration() const;
+    quint32 ascent() const;
+    quint32 descent() const;
+    quint16 moderateActivityMinutes() const;
+    quint16 vigorousActivityMinutes() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setDeviceIndex(const DeviceIndex deviceIndex);
+    void setCalories(const quint16 calories);
+    void setDistance(const quint32 distance);
+    void setCycles(const quint32 cycles);
+    void setActiveTime(const quint32 activeTime);
+    void setActivityType(const ActivityType activityType);
+    void setActivitySubtype(const ActivitySubtype activitySubtype);
+    void setActivityLevel(const ActivityLevel activityLevel);
+    void setDistance16(const quint16 distance16);
+    void setCycles16(const quint16 cycles16);
+    void setActiveTime16(const quint16 activeTime16);
+    void setLocalTimestamp(const LocalDateTime localTimestamp);
+    void setTemperature(const qint16 temperature);
+    void setTemperatureMin(const qint16 temperatureMin);
+    void setTemperatureMax(const qint16 temperatureMax);
+    void setActivityTime(const quint16 activityTime);
+    void setActiveCalories(const quint16 activeCalories);
+    void setCurrentActivityTypeIntensity(const quint8 currentActivityTypeIntensity);
+    void setTimestampMin8(const quint8 timestampMin8);
+    void setTimestamp16(const quint16 timestamp16);
+    void setHeartRate(const quint8 heartRate);
+    void setIntensity(const quint8 intensity);
+    void setDurationMin(const quint16 durationMin);
+    void setDuration(const quint32 duration);
+    void setAscent(const quint32 ascent);
+    void setDescent(const quint32 descent);
+    void setModerateActivityMinutes(const quint16 moderateActivityMinutes);
+    void setVigorousActivityMinutes(const quint16 vigorousActivityMinutes);
 
 protected:
     /// @cond internal

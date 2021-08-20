@@ -37,7 +37,17 @@ public:
     MesgCapabilitiesMessage();
     ~MesgCapabilitiesMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    File file() const;
+    MesgNum mesgNum() const;
+    MesgCount countType() const;
+    quint16 count() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setFile(const File file);
+    void setMesgNum(const MesgNum mesgNum);
+    void setCountType(const MesgCount countType);
+    void setCount(const quint16 count);
 
 protected:
     /// @cond internal

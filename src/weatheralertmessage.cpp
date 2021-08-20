@@ -32,6 +32,73 @@ WeatherAlertMessage::WeatherAlertMessage() : FitDataMessage(new WeatherAlertMess
 
 }
 
+DateTime WeatherAlertMessage::timestamp() const
+{
+    Q_D(const WeatherAlertMessage);
+    return d->timestamp;
+}
+
+QString WeatherAlertMessage::reportId() const
+{
+    Q_D(const WeatherAlertMessage);
+    return d->reportId;
+}
+
+DateTime WeatherAlertMessage::issueTime() const
+{
+    Q_D(const WeatherAlertMessage);
+    return d->issueTime;
+}
+
+DateTime WeatherAlertMessage::expireTime() const
+{
+    Q_D(const WeatherAlertMessage);
+    return d->expireTime;
+}
+
+WeatherSeverity WeatherAlertMessage::severity() const
+{
+    Q_D(const WeatherAlertMessage);
+    return d->severity;
+}
+
+WeatherSevereType WeatherAlertMessage::type() const
+{
+    Q_D(const WeatherAlertMessage);
+    return d->type;
+}
+
+void WeatherAlertMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(WeatherAlertMessage);
+    d->timestamp = timestamp;
+}
+void WeatherAlertMessage::setReportId(const QString reportId)
+{
+    Q_D(WeatherAlertMessage);
+    d->reportId = reportId;
+}
+void WeatherAlertMessage::setIssueTime(const DateTime issueTime)
+{
+    Q_D(WeatherAlertMessage);
+    d->issueTime = issueTime;
+}
+void WeatherAlertMessage::setExpireTime(const DateTime expireTime)
+{
+    Q_D(WeatherAlertMessage);
+    d->expireTime = expireTime;
+}
+void WeatherAlertMessage::setSeverity(const WeatherSeverity severity)
+{
+    Q_D(WeatherAlertMessage);
+    d->severity = severity;
+}
+void WeatherAlertMessage::setType(const WeatherSevereType type)
+{
+    Q_D(WeatherAlertMessage);
+    d->type = type;
+}
+
 WeatherAlertMessagePrivate::WeatherAlertMessagePrivate(WeatherAlertMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::WeatherAlert;

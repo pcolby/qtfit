@@ -37,7 +37,31 @@ public:
     AccelerometerDataMessage();
     ~AccelerometerDataMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    quint16 sampleTimeOffset() const;
+    quint16 accelX() const;
+    quint16 accelY() const;
+    quint16 accelZ() const;
+    float calibratedAccelX() const;
+    float calibratedAccelY() const;
+    float calibratedAccelZ() const;
+    qint16 compressedCalibratedAccelX() const;
+    qint16 compressedCalibratedAccelY() const;
+    qint16 compressedCalibratedAccelZ() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setSampleTimeOffset(const quint16 sampleTimeOffset);
+    void setAccelX(const quint16 accelX);
+    void setAccelY(const quint16 accelY);
+    void setAccelZ(const quint16 accelZ);
+    void setCalibratedAccelX(const float calibratedAccelX);
+    void setCalibratedAccelY(const float calibratedAccelY);
+    void setCalibratedAccelZ(const float calibratedAccelZ);
+    void setCompressedCalibratedAccelX(const qint16 compressedCalibratedAccelX);
+    void setCompressedCalibratedAccelY(const qint16 compressedCalibratedAccelY);
+    void setCompressedCalibratedAccelZ(const qint16 compressedCalibratedAccelZ);
 
 protected:
     /// @cond internal

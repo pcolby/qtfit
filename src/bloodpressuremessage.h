@@ -37,7 +37,29 @@ public:
     BloodPressureMessage();
     ~BloodPressureMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 systolicPressure() const;
+    quint16 diastolicPressure() const;
+    quint16 meanArterialPressure() const;
+    quint16 map3SampleMean() const;
+    quint16 mapMorningValues() const;
+    quint16 mapEveningValues() const;
+    quint8 heartRate() const;
+    HrType heartRateType() const;
+    BpStatus status() const;
+    MessageIndex userProfileIndex() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setSystolicPressure(const quint16 systolicPressure);
+    void setDiastolicPressure(const quint16 diastolicPressure);
+    void setMeanArterialPressure(const quint16 meanArterialPressure);
+    void setMap3SampleMean(const quint16 map3SampleMean);
+    void setMapMorningValues(const quint16 mapMorningValues);
+    void setMapEveningValues(const quint16 mapEveningValues);
+    void setHeartRate(const quint8 heartRate);
+    void setHeartRateType(const HrType heartRateType);
+    void setStatus(const BpStatus status);
+    void setUserProfileIndex(const MessageIndex userProfileIndex);
 
 protected:
     /// @cond internal

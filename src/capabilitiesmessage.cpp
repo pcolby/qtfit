@@ -32,6 +32,51 @@ CapabilitiesMessage::CapabilitiesMessage() : FitDataMessage(new CapabilitiesMess
 
 }
 
+quint8z CapabilitiesMessage::languages() const
+{
+    Q_D(const CapabilitiesMessage);
+    return d->languages;
+}
+
+SportBits0 CapabilitiesMessage::sports() const
+{
+    Q_D(const CapabilitiesMessage);
+    return d->sports;
+}
+
+WorkoutCapabilities CapabilitiesMessage::workoutsSupported() const
+{
+    Q_D(const CapabilitiesMessage);
+    return d->workoutsSupported;
+}
+
+ConnectivityCapabilities CapabilitiesMessage::connectivitySupported() const
+{
+    Q_D(const CapabilitiesMessage);
+    return d->connectivitySupported;
+}
+
+void CapabilitiesMessage::setLanguages(const quint8z languages)
+{
+    Q_D(CapabilitiesMessage);
+    d->languages = languages;
+}
+void CapabilitiesMessage::setSports(const SportBits0 sports)
+{
+    Q_D(CapabilitiesMessage);
+    d->sports = sports;
+}
+void CapabilitiesMessage::setWorkoutsSupported(const WorkoutCapabilities workoutsSupported)
+{
+    Q_D(CapabilitiesMessage);
+    d->workoutsSupported = workoutsSupported;
+}
+void CapabilitiesMessage::setConnectivitySupported(const ConnectivityCapabilities connectivitySupported)
+{
+    Q_D(CapabilitiesMessage);
+    d->connectivitySupported = connectivitySupported;
+}
+
 CapabilitiesMessagePrivate::CapabilitiesMessagePrivate(CapabilitiesMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Capabilities;

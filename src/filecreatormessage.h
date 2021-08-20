@@ -37,7 +37,11 @@ public:
     FileCreatorMessage();
     ~FileCreatorMessage();
 
-    /// @todo Generate getters/setters.
+    quint16 softwareVersion() const;
+    quint8 hardwareVersion() const;
+
+    void setSoftwareVersion(const quint16 softwareVersion);
+    void setHardwareVersion(const quint8 hardwareVersion);
 
 protected:
     /// @cond internal

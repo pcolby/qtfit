@@ -32,6 +32,62 @@ CameraEventMessage::CameraEventMessage() : FitDataMessage(new CameraEventMessage
 
 }
 
+DateTime CameraEventMessage::timestamp() const
+{
+    Q_D(const CameraEventMessage);
+    return d->timestamp;
+}
+
+quint16 CameraEventMessage::timestampMs() const
+{
+    Q_D(const CameraEventMessage);
+    return d->timestampMs;
+}
+
+CameraEventType CameraEventMessage::cameraEventType() const
+{
+    Q_D(const CameraEventMessage);
+    return d->cameraEventType;
+}
+
+QString CameraEventMessage::cameraFileUuid() const
+{
+    Q_D(const CameraEventMessage);
+    return d->cameraFileUuid;
+}
+
+CameraOrientationType CameraEventMessage::cameraOrientation() const
+{
+    Q_D(const CameraEventMessage);
+    return d->cameraOrientation;
+}
+
+void CameraEventMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(CameraEventMessage);
+    d->timestamp = timestamp;
+}
+void CameraEventMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(CameraEventMessage);
+    d->timestampMs = timestampMs;
+}
+void CameraEventMessage::setCameraEventType(const CameraEventType cameraEventType)
+{
+    Q_D(CameraEventMessage);
+    d->cameraEventType = cameraEventType;
+}
+void CameraEventMessage::setCameraFileUuid(const QString cameraFileUuid)
+{
+    Q_D(CameraEventMessage);
+    d->cameraFileUuid = cameraFileUuid;
+}
+void CameraEventMessage::setCameraOrientation(const CameraOrientationType cameraOrientation)
+{
+    Q_D(CameraEventMessage);
+    d->cameraOrientation = cameraOrientation;
+}
+
 CameraEventMessagePrivate::CameraEventMessagePrivate(CameraEventMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::CameraEvent;

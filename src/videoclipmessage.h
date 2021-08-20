@@ -37,7 +37,21 @@ public:
     VideoClipMessage();
     ~VideoClipMessage();
 
-    /// @todo Generate getters/setters.
+    quint16 clipNumber() const;
+    DateTime startTimestamp() const;
+    quint16 startTimestampMs() const;
+    DateTime endTimestamp() const;
+    quint16 endTimestampMs() const;
+    quint32 clipStart() const;
+    quint32 clipEnd() const;
+
+    void setClipNumber(const quint16 clipNumber);
+    void setStartTimestamp(const DateTime startTimestamp);
+    void setStartTimestampMs(const quint16 startTimestampMs);
+    void setEndTimestamp(const DateTime endTimestamp);
+    void setEndTimestampMs(const quint16 endTimestampMs);
+    void setClipStart(const quint32 clipStart);
+    void setClipEnd(const quint32 clipEnd);
 
 protected:
     /// @cond internal

@@ -32,6 +32,62 @@ FieldCapabilitiesMessage::FieldCapabilitiesMessage() : FitDataMessage(new FieldC
 
 }
 
+MessageIndex FieldCapabilitiesMessage::messageIndex() const
+{
+    Q_D(const FieldCapabilitiesMessage);
+    return d->messageIndex;
+}
+
+File FieldCapabilitiesMessage::file() const
+{
+    Q_D(const FieldCapabilitiesMessage);
+    return d->file;
+}
+
+MesgNum FieldCapabilitiesMessage::mesgNum() const
+{
+    Q_D(const FieldCapabilitiesMessage);
+    return d->mesgNum;
+}
+
+quint8 FieldCapabilitiesMessage::fieldNum() const
+{
+    Q_D(const FieldCapabilitiesMessage);
+    return d->fieldNum;
+}
+
+quint16 FieldCapabilitiesMessage::count() const
+{
+    Q_D(const FieldCapabilitiesMessage);
+    return d->count;
+}
+
+void FieldCapabilitiesMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(FieldCapabilitiesMessage);
+    d->messageIndex = messageIndex;
+}
+void FieldCapabilitiesMessage::setFile(const File file)
+{
+    Q_D(FieldCapabilitiesMessage);
+    d->file = file;
+}
+void FieldCapabilitiesMessage::setMesgNum(const MesgNum mesgNum)
+{
+    Q_D(FieldCapabilitiesMessage);
+    d->mesgNum = mesgNum;
+}
+void FieldCapabilitiesMessage::setFieldNum(const quint8 fieldNum)
+{
+    Q_D(FieldCapabilitiesMessage);
+    d->fieldNum = fieldNum;
+}
+void FieldCapabilitiesMessage::setCount(const quint16 count)
+{
+    Q_D(FieldCapabilitiesMessage);
+    d->count = count;
+}
+
 FieldCapabilitiesMessagePrivate::FieldCapabilitiesMessagePrivate(FieldCapabilitiesMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::FieldCapabilities;

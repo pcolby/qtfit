@@ -32,6 +32,84 @@ VideoClipMessage::VideoClipMessage() : FitDataMessage(new VideoClipMessagePrivat
 
 }
 
+quint16 VideoClipMessage::clipNumber() const
+{
+    Q_D(const VideoClipMessage);
+    return d->clipNumber;
+}
+
+DateTime VideoClipMessage::startTimestamp() const
+{
+    Q_D(const VideoClipMessage);
+    return d->startTimestamp;
+}
+
+quint16 VideoClipMessage::startTimestampMs() const
+{
+    Q_D(const VideoClipMessage);
+    return d->startTimestampMs;
+}
+
+DateTime VideoClipMessage::endTimestamp() const
+{
+    Q_D(const VideoClipMessage);
+    return d->endTimestamp;
+}
+
+quint16 VideoClipMessage::endTimestampMs() const
+{
+    Q_D(const VideoClipMessage);
+    return d->endTimestampMs;
+}
+
+quint32 VideoClipMessage::clipStart() const
+{
+    Q_D(const VideoClipMessage);
+    return d->clipStart;
+}
+
+quint32 VideoClipMessage::clipEnd() const
+{
+    Q_D(const VideoClipMessage);
+    return d->clipEnd;
+}
+
+void VideoClipMessage::setClipNumber(const quint16 clipNumber)
+{
+    Q_D(VideoClipMessage);
+    d->clipNumber = clipNumber;
+}
+void VideoClipMessage::setStartTimestamp(const DateTime startTimestamp)
+{
+    Q_D(VideoClipMessage);
+    d->startTimestamp = startTimestamp;
+}
+void VideoClipMessage::setStartTimestampMs(const quint16 startTimestampMs)
+{
+    Q_D(VideoClipMessage);
+    d->startTimestampMs = startTimestampMs;
+}
+void VideoClipMessage::setEndTimestamp(const DateTime endTimestamp)
+{
+    Q_D(VideoClipMessage);
+    d->endTimestamp = endTimestamp;
+}
+void VideoClipMessage::setEndTimestampMs(const quint16 endTimestampMs)
+{
+    Q_D(VideoClipMessage);
+    d->endTimestampMs = endTimestampMs;
+}
+void VideoClipMessage::setClipStart(const quint32 clipStart)
+{
+    Q_D(VideoClipMessage);
+    d->clipStart = clipStart;
+}
+void VideoClipMessage::setClipEnd(const quint32 clipEnd)
+{
+    Q_D(VideoClipMessage);
+    d->clipEnd = clipEnd;
+}
+
 VideoClipMessagePrivate::VideoClipMessagePrivate(VideoClipMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::VideoClip;

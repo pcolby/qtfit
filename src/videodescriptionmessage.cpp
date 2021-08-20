@@ -32,6 +32,40 @@ VideoDescriptionMessage::VideoDescriptionMessage() : FitDataMessage(new VideoDes
 
 }
 
+MessageIndex VideoDescriptionMessage::messageIndex() const
+{
+    Q_D(const VideoDescriptionMessage);
+    return d->messageIndex;
+}
+
+quint16 VideoDescriptionMessage::messageCount() const
+{
+    Q_D(const VideoDescriptionMessage);
+    return d->messageCount;
+}
+
+QString VideoDescriptionMessage::text() const
+{
+    Q_D(const VideoDescriptionMessage);
+    return d->text;
+}
+
+void VideoDescriptionMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(VideoDescriptionMessage);
+    d->messageIndex = messageIndex;
+}
+void VideoDescriptionMessage::setMessageCount(const quint16 messageCount)
+{
+    Q_D(VideoDescriptionMessage);
+    d->messageCount = messageCount;
+}
+void VideoDescriptionMessage::setText(const QString text)
+{
+    Q_D(VideoDescriptionMessage);
+    d->text = text;
+}
+
 VideoDescriptionMessagePrivate::VideoDescriptionMessagePrivate(VideoDescriptionMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::VideoDescription;

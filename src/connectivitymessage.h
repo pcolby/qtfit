@@ -37,7 +37,33 @@ public:
     ConnectivityMessage();
     ~ConnectivityMessage();
 
-    /// @todo Generate getters/setters.
+    bool bluetoothEnabled() const;
+    bool bluetoothLeEnabled() const;
+    bool antEnabled() const;
+    QString name() const;
+    bool liveTrackingEnabled() const;
+    bool weatherConditionsEnabled() const;
+    bool weatherAlertsEnabled() const;
+    bool autoActivityUploadEnabled() const;
+    bool courseDownloadEnabled() const;
+    bool workoutDownloadEnabled() const;
+    bool gpsEphemerisDownloadEnabled() const;
+    bool incidentDetectionEnabled() const;
+    bool grouptrackEnabled() const;
+
+    void setBluetoothEnabled(const bool bluetoothEnabled);
+    void setBluetoothLeEnabled(const bool bluetoothLeEnabled);
+    void setAntEnabled(const bool antEnabled);
+    void setName(const QString name);
+    void setLiveTrackingEnabled(const bool liveTrackingEnabled);
+    void setWeatherConditionsEnabled(const bool weatherConditionsEnabled);
+    void setWeatherAlertsEnabled(const bool weatherAlertsEnabled);
+    void setAutoActivityUploadEnabled(const bool autoActivityUploadEnabled);
+    void setCourseDownloadEnabled(const bool courseDownloadEnabled);
+    void setWorkoutDownloadEnabled(const bool workoutDownloadEnabled);
+    void setGpsEphemerisDownloadEnabled(const bool gpsEphemerisDownloadEnabled);
+    void setIncidentDetectionEnabled(const bool incidentDetectionEnabled);
+    void setGrouptrackEnabled(const bool grouptrackEnabled);
 
 protected:
     /// @cond internal

@@ -37,7 +37,17 @@ public:
     ZonesTargetMessage();
     ~ZonesTargetMessage();
 
-    /// @todo Generate getters/setters.
+    quint8 maxHeartRate() const;
+    quint8 thresholdHeartRate() const;
+    quint16 functionalThresholdPower() const;
+    HrZoneCalc hrCalcType() const;
+    PwrZoneCalc pwrCalcType() const;
+
+    void setMaxHeartRate(const quint8 maxHeartRate);
+    void setThresholdHeartRate(const quint8 thresholdHeartRate);
+    void setFunctionalThresholdPower(const quint16 functionalThresholdPower);
+    void setHrCalcType(const HrZoneCalc hrCalcType);
+    void setPwrCalcType(const PwrZoneCalc pwrCalcType);
 
 protected:
     /// @cond internal

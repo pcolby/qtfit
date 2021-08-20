@@ -32,6 +32,73 @@ AntTxMessage::AntTxMessage() : FitDataMessage(new AntTxMessagePrivate(this))
 
 }
 
+DateTime AntTxMessage::timestamp() const
+{
+    Q_D(const AntTxMessage);
+    return d->timestamp;
+}
+
+quint16 AntTxMessage::fractionalTimestamp() const
+{
+    Q_D(const AntTxMessage);
+    return d->fractionalTimestamp;
+}
+
+quint8 AntTxMessage::mesgId() const
+{
+    Q_D(const AntTxMessage);
+    return d->mesgId;
+}
+
+quint8 AntTxMessage::mesgData() const
+{
+    Q_D(const AntTxMessage);
+    return d->mesgData;
+}
+
+quint8 AntTxMessage::channelNumber() const
+{
+    Q_D(const AntTxMessage);
+    return d->channelNumber;
+}
+
+quint8 AntTxMessage::data() const
+{
+    Q_D(const AntTxMessage);
+    return d->data;
+}
+
+void AntTxMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(AntTxMessage);
+    d->timestamp = timestamp;
+}
+void AntTxMessage::setFractionalTimestamp(const quint16 fractionalTimestamp)
+{
+    Q_D(AntTxMessage);
+    d->fractionalTimestamp = fractionalTimestamp;
+}
+void AntTxMessage::setMesgId(const quint8 mesgId)
+{
+    Q_D(AntTxMessage);
+    d->mesgId = mesgId;
+}
+void AntTxMessage::setMesgData(const quint8 mesgData)
+{
+    Q_D(AntTxMessage);
+    d->mesgData = mesgData;
+}
+void AntTxMessage::setChannelNumber(const quint8 channelNumber)
+{
+    Q_D(AntTxMessage);
+    d->channelNumber = channelNumber;
+}
+void AntTxMessage::setData(const quint8 data)
+{
+    Q_D(AntTxMessage);
+    d->data = data;
+}
+
 AntTxMessagePrivate::AntTxMessagePrivate(AntTxMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::AntTx;

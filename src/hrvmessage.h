@@ -37,7 +37,9 @@ public:
     HrvMessage();
     ~HrvMessage();
 
-    /// @todo Generate getters/setters.
+    quint16 time() const;
+
+    void setTime(const quint16 time);
 
 protected:
     /// @cond internal

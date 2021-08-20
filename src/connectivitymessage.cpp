@@ -32,6 +32,150 @@ ConnectivityMessage::ConnectivityMessage() : FitDataMessage(new ConnectivityMess
 
 }
 
+bool ConnectivityMessage::bluetoothEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->bluetoothEnabled;
+}
+
+bool ConnectivityMessage::bluetoothLeEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->bluetoothLeEnabled;
+}
+
+bool ConnectivityMessage::antEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->antEnabled;
+}
+
+QString ConnectivityMessage::name() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->name;
+}
+
+bool ConnectivityMessage::liveTrackingEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->liveTrackingEnabled;
+}
+
+bool ConnectivityMessage::weatherConditionsEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->weatherConditionsEnabled;
+}
+
+bool ConnectivityMessage::weatherAlertsEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->weatherAlertsEnabled;
+}
+
+bool ConnectivityMessage::autoActivityUploadEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->autoActivityUploadEnabled;
+}
+
+bool ConnectivityMessage::courseDownloadEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->courseDownloadEnabled;
+}
+
+bool ConnectivityMessage::workoutDownloadEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->workoutDownloadEnabled;
+}
+
+bool ConnectivityMessage::gpsEphemerisDownloadEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->gpsEphemerisDownloadEnabled;
+}
+
+bool ConnectivityMessage::incidentDetectionEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->incidentDetectionEnabled;
+}
+
+bool ConnectivityMessage::grouptrackEnabled() const
+{
+    Q_D(const ConnectivityMessage);
+    return d->grouptrackEnabled;
+}
+
+void ConnectivityMessage::setBluetoothEnabled(const bool bluetoothEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->bluetoothEnabled = bluetoothEnabled;
+}
+void ConnectivityMessage::setBluetoothLeEnabled(const bool bluetoothLeEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->bluetoothLeEnabled = bluetoothLeEnabled;
+}
+void ConnectivityMessage::setAntEnabled(const bool antEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->antEnabled = antEnabled;
+}
+void ConnectivityMessage::setName(const QString name)
+{
+    Q_D(ConnectivityMessage);
+    d->name = name;
+}
+void ConnectivityMessage::setLiveTrackingEnabled(const bool liveTrackingEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->liveTrackingEnabled = liveTrackingEnabled;
+}
+void ConnectivityMessage::setWeatherConditionsEnabled(const bool weatherConditionsEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->weatherConditionsEnabled = weatherConditionsEnabled;
+}
+void ConnectivityMessage::setWeatherAlertsEnabled(const bool weatherAlertsEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->weatherAlertsEnabled = weatherAlertsEnabled;
+}
+void ConnectivityMessage::setAutoActivityUploadEnabled(const bool autoActivityUploadEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->autoActivityUploadEnabled = autoActivityUploadEnabled;
+}
+void ConnectivityMessage::setCourseDownloadEnabled(const bool courseDownloadEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->courseDownloadEnabled = courseDownloadEnabled;
+}
+void ConnectivityMessage::setWorkoutDownloadEnabled(const bool workoutDownloadEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->workoutDownloadEnabled = workoutDownloadEnabled;
+}
+void ConnectivityMessage::setGpsEphemerisDownloadEnabled(const bool gpsEphemerisDownloadEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->gpsEphemerisDownloadEnabled = gpsEphemerisDownloadEnabled;
+}
+void ConnectivityMessage::setIncidentDetectionEnabled(const bool incidentDetectionEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->incidentDetectionEnabled = incidentDetectionEnabled;
+}
+void ConnectivityMessage::setGrouptrackEnabled(const bool grouptrackEnabled)
+{
+    Q_D(ConnectivityMessage);
+    d->grouptrackEnabled = grouptrackEnabled;
+}
+
 ConnectivityMessagePrivate::ConnectivityMessagePrivate(ConnectivityMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Connectivity;

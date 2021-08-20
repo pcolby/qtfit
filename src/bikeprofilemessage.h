@@ -37,7 +37,71 @@ public:
     BikeProfileMessage();
     ~BikeProfileMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    QString name() const;
+    Sport sport() const;
+    SubSport subSport() const;
+    quint32 odometer() const;
+    quint16z bikeSpdAntId() const;
+    quint16z bikeCadAntId() const;
+    quint16z bikeSpdcadAntId() const;
+    quint16z bikePowerAntId() const;
+    quint16 customWheelsize() const;
+    quint16 autoWheelsize() const;
+    quint16 bikeWeight() const;
+    quint16 powerCalFactor() const;
+    bool autoWheelCal() const;
+    bool autoPowerZero() const;
+    quint8 id() const;
+    bool spdEnabled() const;
+    bool cadEnabled() const;
+    bool spdcadEnabled() const;
+    bool powerEnabled() const;
+    quint8 crankLength() const;
+    bool enabled() const;
+    quint8z bikeSpdAntIdTransType() const;
+    quint8z bikeCadAntIdTransType() const;
+    quint8z bikeSpdcadAntIdTransType() const;
+    quint8z bikePowerAntIdTransType() const;
+    quint8 odometerRollover() const;
+    quint8z frontGearNum() const;
+    quint8z frontGear() const;
+    quint8z rearGearNum() const;
+    quint8z rearGear() const;
+    bool shimanoDi2Enabled() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setName(const QString name);
+    void setSport(const Sport sport);
+    void setSubSport(const SubSport subSport);
+    void setOdometer(const quint32 odometer);
+    void setBikeSpdAntId(const quint16z bikeSpdAntId);
+    void setBikeCadAntId(const quint16z bikeCadAntId);
+    void setBikeSpdcadAntId(const quint16z bikeSpdcadAntId);
+    void setBikePowerAntId(const quint16z bikePowerAntId);
+    void setCustomWheelsize(const quint16 customWheelsize);
+    void setAutoWheelsize(const quint16 autoWheelsize);
+    void setBikeWeight(const quint16 bikeWeight);
+    void setPowerCalFactor(const quint16 powerCalFactor);
+    void setAutoWheelCal(const bool autoWheelCal);
+    void setAutoPowerZero(const bool autoPowerZero);
+    void setId(const quint8 id);
+    void setSpdEnabled(const bool spdEnabled);
+    void setCadEnabled(const bool cadEnabled);
+    void setSpdcadEnabled(const bool spdcadEnabled);
+    void setPowerEnabled(const bool powerEnabled);
+    void setCrankLength(const quint8 crankLength);
+    void setEnabled(const bool enabled);
+    void setBikeSpdAntIdTransType(const quint8z bikeSpdAntIdTransType);
+    void setBikeCadAntIdTransType(const quint8z bikeCadAntIdTransType);
+    void setBikeSpdcadAntIdTransType(const quint8z bikeSpdcadAntIdTransType);
+    void setBikePowerAntIdTransType(const quint8z bikePowerAntIdTransType);
+    void setOdometerRollover(const quint8 odometerRollover);
+    void setFrontGearNum(const quint8z frontGearNum);
+    void setFrontGear(const quint8z frontGear);
+    void setRearGearNum(const quint8z rearGearNum);
+    void setRearGear(const quint8z rearGear);
+    void setShimanoDi2Enabled(const bool shimanoDi2Enabled);
 
 protected:
     /// @cond internal

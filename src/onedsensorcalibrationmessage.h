@@ -37,7 +37,19 @@ public:
     OneDSensorCalibrationMessage();
     ~OneDSensorCalibrationMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    SensorType sensorType() const;
+    quint32 calibrationFactor() const;
+    quint32 calibrationDivisor() const;
+    quint32 levelShift() const;
+    qint32 offsetCal() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setSensorType(const SensorType sensorType);
+    void setCalibrationFactor(const quint32 calibrationFactor);
+    void setCalibrationDivisor(const quint32 calibrationDivisor);
+    void setLevelShift(const quint32 levelShift);
+    void setOffsetCal(const qint32 offsetCal);
 
 protected:
     /// @cond internal

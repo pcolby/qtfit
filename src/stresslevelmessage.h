@@ -37,7 +37,11 @@ public:
     StressLevelMessage();
     ~StressLevelMessage();
 
-    /// @todo Generate getters/setters.
+    qint16 stressLevelValue() const;
+    DateTime stressLevelTime() const;
+
+    void setStressLevelValue(const qint16 stressLevelValue);
+    void setStressLevelTime(const DateTime stressLevelTime);
 
 protected:
     /// @cond internal

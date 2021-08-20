@@ -32,6 +32,51 @@ CourseMessage::CourseMessage() : FitDataMessage(new CourseMessagePrivate(this))
 
 }
 
+Sport CourseMessage::sport() const
+{
+    Q_D(const CourseMessage);
+    return d->sport;
+}
+
+QString CourseMessage::name() const
+{
+    Q_D(const CourseMessage);
+    return d->name;
+}
+
+CourseCapabilities CourseMessage::capabilities() const
+{
+    Q_D(const CourseMessage);
+    return d->capabilities;
+}
+
+SubSport CourseMessage::subSport() const
+{
+    Q_D(const CourseMessage);
+    return d->subSport;
+}
+
+void CourseMessage::setSport(const Sport sport)
+{
+    Q_D(CourseMessage);
+    d->sport = sport;
+}
+void CourseMessage::setName(const QString name)
+{
+    Q_D(CourseMessage);
+    d->name = name;
+}
+void CourseMessage::setCapabilities(const CourseCapabilities capabilities)
+{
+    Q_D(CourseMessage);
+    d->capabilities = capabilities;
+}
+void CourseMessage::setSubSport(const SubSport subSport)
+{
+    Q_D(CourseMessage);
+    d->subSport = subSport;
+}
+
 CourseMessagePrivate::CourseMessagePrivate(CourseMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Course;

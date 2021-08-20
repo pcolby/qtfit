@@ -37,7 +37,13 @@ public:
     SpeedZoneMessage();
     ~SpeedZoneMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint16 highValue() const;
+    QString name() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setHighValue(const quint16 highValue);
+    void setName(const QString name);
 
 protected:
     /// @cond internal

@@ -37,7 +37,19 @@ public:
     SegmentPointMessage();
     ~SegmentPointMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    qint32 positionLat() const;
+    qint32 positionLong() const;
+    quint32 distance() const;
+    quint16 altitude() const;
+    quint32 leaderTime() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setPositionLat(const qint32 positionLat);
+    void setPositionLong(const qint32 positionLong);
+    void setDistance(const quint32 distance);
+    void setAltitude(const quint16 altitude);
+    void setLeaderTime(const quint32 leaderTime);
 
 protected:
     /// @cond internal

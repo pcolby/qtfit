@@ -37,7 +37,25 @@ public:
     GpsMetadataMessage();
     ~GpsMetadataMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    qint32 positionLat() const;
+    qint32 positionLong() const;
+    quint32 enhancedAltitude() const;
+    quint32 enhancedSpeed() const;
+    quint16 heading() const;
+    DateTime utcTimestamp() const;
+    qint16 velocity() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setPositionLat(const qint32 positionLat);
+    void setPositionLong(const qint32 positionLong);
+    void setEnhancedAltitude(const quint32 enhancedAltitude);
+    void setEnhancedSpeed(const quint32 enhancedSpeed);
+    void setHeading(const quint16 heading);
+    void setUtcTimestamp(const DateTime utcTimestamp);
+    void setVelocity(const qint16 velocity);
 
 protected:
     /// @cond internal

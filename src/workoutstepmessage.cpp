@@ -32,6 +32,172 @@ WorkoutStepMessage::WorkoutStepMessage() : FitDataMessage(new WorkoutStepMessage
 
 }
 
+MessageIndex WorkoutStepMessage::messageIndex() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->messageIndex;
+}
+
+QString WorkoutStepMessage::wktStepName() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->wktStepName;
+}
+
+WktStepDuration WorkoutStepMessage::durationType() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->durationType;
+}
+
+quint32 WorkoutStepMessage::durationValue() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->durationValue;
+}
+
+WktStepTarget WorkoutStepMessage::targetType() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->targetType;
+}
+
+quint32 WorkoutStepMessage::targetValue() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->targetValue;
+}
+
+quint32 WorkoutStepMessage::customTargetValueLow() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->customTargetValueLow;
+}
+
+quint32 WorkoutStepMessage::customTargetValueHigh() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->customTargetValueHigh;
+}
+
+Intensity WorkoutStepMessage::intensity() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->intensity;
+}
+
+QString WorkoutStepMessage::notes() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->notes;
+}
+
+WorkoutEquipment WorkoutStepMessage::equipment() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->equipment;
+}
+
+ExerciseCategory WorkoutStepMessage::exerciseCategory() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->exerciseCategory;
+}
+
+quint16 WorkoutStepMessage::exerciseName() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->exerciseName;
+}
+
+quint16 WorkoutStepMessage::exerciseWeight() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->exerciseWeight;
+}
+
+FitBaseUnit WorkoutStepMessage::weightDisplayUnit() const
+{
+    Q_D(const WorkoutStepMessage);
+    return d->weightDisplayUnit;
+}
+
+void WorkoutStepMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(WorkoutStepMessage);
+    d->messageIndex = messageIndex;
+}
+void WorkoutStepMessage::setWktStepName(const QString wktStepName)
+{
+    Q_D(WorkoutStepMessage);
+    d->wktStepName = wktStepName;
+}
+void WorkoutStepMessage::setDurationType(const WktStepDuration durationType)
+{
+    Q_D(WorkoutStepMessage);
+    d->durationType = durationType;
+}
+void WorkoutStepMessage::setDurationValue(const quint32 durationValue)
+{
+    Q_D(WorkoutStepMessage);
+    d->durationValue = durationValue;
+}
+void WorkoutStepMessage::setTargetType(const WktStepTarget targetType)
+{
+    Q_D(WorkoutStepMessage);
+    d->targetType = targetType;
+}
+void WorkoutStepMessage::setTargetValue(const quint32 targetValue)
+{
+    Q_D(WorkoutStepMessage);
+    d->targetValue = targetValue;
+}
+void WorkoutStepMessage::setCustomTargetValueLow(const quint32 customTargetValueLow)
+{
+    Q_D(WorkoutStepMessage);
+    d->customTargetValueLow = customTargetValueLow;
+}
+void WorkoutStepMessage::setCustomTargetValueHigh(const quint32 customTargetValueHigh)
+{
+    Q_D(WorkoutStepMessage);
+    d->customTargetValueHigh = customTargetValueHigh;
+}
+void WorkoutStepMessage::setIntensity(const Intensity intensity)
+{
+    Q_D(WorkoutStepMessage);
+    d->intensity = intensity;
+}
+void WorkoutStepMessage::setNotes(const QString notes)
+{
+    Q_D(WorkoutStepMessage);
+    d->notes = notes;
+}
+void WorkoutStepMessage::setEquipment(const WorkoutEquipment equipment)
+{
+    Q_D(WorkoutStepMessage);
+    d->equipment = equipment;
+}
+void WorkoutStepMessage::setExerciseCategory(const ExerciseCategory exerciseCategory)
+{
+    Q_D(WorkoutStepMessage);
+    d->exerciseCategory = exerciseCategory;
+}
+void WorkoutStepMessage::setExerciseName(const quint16 exerciseName)
+{
+    Q_D(WorkoutStepMessage);
+    d->exerciseName = exerciseName;
+}
+void WorkoutStepMessage::setExerciseWeight(const quint16 exerciseWeight)
+{
+    Q_D(WorkoutStepMessage);
+    d->exerciseWeight = exerciseWeight;
+}
+void WorkoutStepMessage::setWeightDisplayUnit(const FitBaseUnit weightDisplayUnit)
+{
+    Q_D(WorkoutStepMessage);
+    d->weightDisplayUnit = weightDisplayUnit;
+}
+
 WorkoutStepMessagePrivate::WorkoutStepMessagePrivate(WorkoutStepMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::WorkoutStep;

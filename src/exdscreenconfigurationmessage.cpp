@@ -32,6 +32,51 @@ ExdScreenConfigurationMessage::ExdScreenConfigurationMessage() : FitDataMessage(
 
 }
 
+quint8 ExdScreenConfigurationMessage::screenIndex() const
+{
+    Q_D(const ExdScreenConfigurationMessage);
+    return d->screenIndex;
+}
+
+quint8 ExdScreenConfigurationMessage::fieldCount() const
+{
+    Q_D(const ExdScreenConfigurationMessage);
+    return d->fieldCount;
+}
+
+ExdLayout ExdScreenConfigurationMessage::layout() const
+{
+    Q_D(const ExdScreenConfigurationMessage);
+    return d->layout;
+}
+
+bool ExdScreenConfigurationMessage::screenEnabled() const
+{
+    Q_D(const ExdScreenConfigurationMessage);
+    return d->screenEnabled;
+}
+
+void ExdScreenConfigurationMessage::setScreenIndex(const quint8 screenIndex)
+{
+    Q_D(ExdScreenConfigurationMessage);
+    d->screenIndex = screenIndex;
+}
+void ExdScreenConfigurationMessage::setFieldCount(const quint8 fieldCount)
+{
+    Q_D(ExdScreenConfigurationMessage);
+    d->fieldCount = fieldCount;
+}
+void ExdScreenConfigurationMessage::setLayout(const ExdLayout layout)
+{
+    Q_D(ExdScreenConfigurationMessage);
+    d->layout = layout;
+}
+void ExdScreenConfigurationMessage::setScreenEnabled(const bool screenEnabled)
+{
+    Q_D(ExdScreenConfigurationMessage);
+    d->screenEnabled = screenEnabled;
+}
+
 ExdScreenConfigurationMessagePrivate::ExdScreenConfigurationMessagePrivate(ExdScreenConfigurationMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::ExdScreenConfiguration;

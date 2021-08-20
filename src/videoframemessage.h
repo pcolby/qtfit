@@ -37,7 +37,13 @@ public:
     VideoFrameMessage();
     ~VideoFrameMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    quint32 frameNumber() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setFrameNumber(const quint32 frameNumber);
 
 protected:
     /// @cond internal

@@ -32,6 +32,128 @@ SetMessage::SetMessage() : FitDataMessage(new SetMessagePrivate(this))
 
 }
 
+DateTime SetMessage::timestamp() const
+{
+    Q_D(const SetMessage);
+    return d->timestamp;
+}
+
+quint32 SetMessage::duration() const
+{
+    Q_D(const SetMessage);
+    return d->duration;
+}
+
+quint16 SetMessage::repetitions() const
+{
+    Q_D(const SetMessage);
+    return d->repetitions;
+}
+
+quint16 SetMessage::weight() const
+{
+    Q_D(const SetMessage);
+    return d->weight;
+}
+
+SetType SetMessage::setType() const
+{
+    Q_D(const SetMessage);
+    return d->setType;
+}
+
+DateTime SetMessage::startTime() const
+{
+    Q_D(const SetMessage);
+    return d->startTime;
+}
+
+ExerciseCategory SetMessage::category() const
+{
+    Q_D(const SetMessage);
+    return d->category;
+}
+
+quint16 SetMessage::categorySubtype() const
+{
+    Q_D(const SetMessage);
+    return d->categorySubtype;
+}
+
+FitBaseUnit SetMessage::weightDisplayUnit() const
+{
+    Q_D(const SetMessage);
+    return d->weightDisplayUnit;
+}
+
+MessageIndex SetMessage::messageIndex() const
+{
+    Q_D(const SetMessage);
+    return d->messageIndex;
+}
+
+MessageIndex SetMessage::wktStepIndex() const
+{
+    Q_D(const SetMessage);
+    return d->wktStepIndex;
+}
+
+void SetMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(SetMessage);
+    d->timestamp = timestamp;
+}
+void SetMessage::setDuration(const quint32 duration)
+{
+    Q_D(SetMessage);
+    d->duration = duration;
+}
+void SetMessage::setRepetitions(const quint16 repetitions)
+{
+    Q_D(SetMessage);
+    d->repetitions = repetitions;
+}
+void SetMessage::setWeight(const quint16 weight)
+{
+    Q_D(SetMessage);
+    d->weight = weight;
+}
+void SetMessage::setSetType(const SetType setType)
+{
+    Q_D(SetMessage);
+    d->setType = setType;
+}
+void SetMessage::setStartTime(const DateTime startTime)
+{
+    Q_D(SetMessage);
+    d->startTime = startTime;
+}
+void SetMessage::setCategory(const ExerciseCategory category)
+{
+    Q_D(SetMessage);
+    d->category = category;
+}
+void SetMessage::setCategorySubtype(const quint16 categorySubtype)
+{
+    Q_D(SetMessage);
+    d->categorySubtype = categorySubtype;
+}
+void SetMessage::setWeightDisplayUnit(const FitBaseUnit weightDisplayUnit)
+{
+    Q_D(SetMessage);
+    d->weightDisplayUnit = weightDisplayUnit;
+}
+void SetMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(SetMessage);
+    d->messageIndex = messageIndex;
+}
+void SetMessage::setWktStepIndex(const MessageIndex wktStepIndex)
+{
+    Q_D(SetMessage);
+    d->wktStepIndex = wktStepIndex;
+}
+
 SetMessagePrivate::SetMessagePrivate(SetMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Set;

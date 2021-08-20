@@ -32,6 +32,62 @@ AntChannelIdMessage::AntChannelIdMessage() : FitDataMessage(new AntChannelIdMess
 
 }
 
+quint8 AntChannelIdMessage::channelNumber() const
+{
+    Q_D(const AntChannelIdMessage);
+    return d->channelNumber;
+}
+
+quint8z AntChannelIdMessage::deviceType() const
+{
+    Q_D(const AntChannelIdMessage);
+    return d->deviceType;
+}
+
+quint16z AntChannelIdMessage::deviceNumber() const
+{
+    Q_D(const AntChannelIdMessage);
+    return d->deviceNumber;
+}
+
+quint8z AntChannelIdMessage::transmissionType() const
+{
+    Q_D(const AntChannelIdMessage);
+    return d->transmissionType;
+}
+
+DeviceIndex AntChannelIdMessage::deviceIndex() const
+{
+    Q_D(const AntChannelIdMessage);
+    return d->deviceIndex;
+}
+
+void AntChannelIdMessage::setChannelNumber(const quint8 channelNumber)
+{
+    Q_D(AntChannelIdMessage);
+    d->channelNumber = channelNumber;
+}
+void AntChannelIdMessage::setDeviceType(const quint8z deviceType)
+{
+    Q_D(AntChannelIdMessage);
+    d->deviceType = deviceType;
+}
+void AntChannelIdMessage::setDeviceNumber(const quint16z deviceNumber)
+{
+    Q_D(AntChannelIdMessage);
+    d->deviceNumber = deviceNumber;
+}
+void AntChannelIdMessage::setTransmissionType(const quint8z transmissionType)
+{
+    Q_D(AntChannelIdMessage);
+    d->transmissionType = transmissionType;
+}
+void AntChannelIdMessage::setDeviceIndex(const DeviceIndex deviceIndex)
+{
+    Q_D(AntChannelIdMessage);
+    d->deviceIndex = deviceIndex;
+}
+
 AntChannelIdMessagePrivate::AntChannelIdMessagePrivate(AntChannelIdMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::AntChannelId;

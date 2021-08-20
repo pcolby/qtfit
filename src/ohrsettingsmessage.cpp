@@ -32,6 +32,29 @@ OhrSettingsMessage::OhrSettingsMessage() : FitDataMessage(new OhrSettingsMessage
 
 }
 
+DateTime OhrSettingsMessage::timestamp() const
+{
+    Q_D(const OhrSettingsMessage);
+    return d->timestamp;
+}
+
+Switch OhrSettingsMessage::enabled() const
+{
+    Q_D(const OhrSettingsMessage);
+    return d->enabled;
+}
+
+void OhrSettingsMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(OhrSettingsMessage);
+    d->timestamp = timestamp;
+}
+void OhrSettingsMessage::setEnabled(const Switch enabled)
+{
+    Q_D(OhrSettingsMessage);
+    d->enabled = enabled;
+}
+
 OhrSettingsMessagePrivate::OhrSettingsMessagePrivate(OhrSettingsMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::OhrSettings;

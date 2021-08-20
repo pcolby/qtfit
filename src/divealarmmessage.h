@@ -37,7 +37,21 @@ public:
     DiveAlarmMessage();
     ~DiveAlarmMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint32 depth() const;
+    qint32 time() const;
+    bool enabled() const;
+    DiveAlarmType alarmType() const;
+    Tone sound() const;
+    SubSport diveTypes() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setDepth(const quint32 depth);
+    void setTime(const qint32 time);
+    void setEnabled(const bool enabled);
+    void setAlarmType(const DiveAlarmType alarmType);
+    void setSound(const Tone sound);
+    void setDiveTypes(const SubSport diveTypes);
 
 protected:
     /// @cond internal

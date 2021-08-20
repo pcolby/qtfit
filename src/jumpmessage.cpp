@@ -32,6 +32,117 @@ JumpMessage::JumpMessage() : FitDataMessage(new JumpMessagePrivate(this))
 
 }
 
+DateTime JumpMessage::timestamp() const
+{
+    Q_D(const JumpMessage);
+    return d->timestamp;
+}
+
+float JumpMessage::distance() const
+{
+    Q_D(const JumpMessage);
+    return d->distance;
+}
+
+float JumpMessage::height() const
+{
+    Q_D(const JumpMessage);
+    return d->height;
+}
+
+quint8 JumpMessage::rotations() const
+{
+    Q_D(const JumpMessage);
+    return d->rotations;
+}
+
+float JumpMessage::hangTime() const
+{
+    Q_D(const JumpMessage);
+    return d->hangTime;
+}
+
+float JumpMessage::score() const
+{
+    Q_D(const JumpMessage);
+    return d->score;
+}
+
+qint32 JumpMessage::positionLat() const
+{
+    Q_D(const JumpMessage);
+    return d->positionLat;
+}
+
+qint32 JumpMessage::positionLong() const
+{
+    Q_D(const JumpMessage);
+    return d->positionLong;
+}
+
+quint16 JumpMessage::speed() const
+{
+    Q_D(const JumpMessage);
+    return d->speed;
+}
+
+quint32 JumpMessage::enhancedSpeed() const
+{
+    Q_D(const JumpMessage);
+    return d->enhancedSpeed;
+}
+
+void JumpMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(JumpMessage);
+    d->timestamp = timestamp;
+}
+void JumpMessage::setDistance(const float distance)
+{
+    Q_D(JumpMessage);
+    d->distance = distance;
+}
+void JumpMessage::setHeight(const float height)
+{
+    Q_D(JumpMessage);
+    d->height = height;
+}
+void JumpMessage::setRotations(const quint8 rotations)
+{
+    Q_D(JumpMessage);
+    d->rotations = rotations;
+}
+void JumpMessage::setHangTime(const float hangTime)
+{
+    Q_D(JumpMessage);
+    d->hangTime = hangTime;
+}
+void JumpMessage::setScore(const float score)
+{
+    Q_D(JumpMessage);
+    d->score = score;
+}
+void JumpMessage::setPositionLat(const qint32 positionLat)
+{
+    Q_D(JumpMessage);
+    d->positionLat = positionLat;
+}
+void JumpMessage::setPositionLong(const qint32 positionLong)
+{
+    Q_D(JumpMessage);
+    d->positionLong = positionLong;
+}
+void JumpMessage::setSpeed(const quint16 speed)
+{
+    Q_D(JumpMessage);
+    d->speed = speed;
+}
+void JumpMessage::setEnhancedSpeed(const quint32 enhancedSpeed)
+{
+    Q_D(JumpMessage);
+    d->enhancedSpeed = enhancedSpeed;
+}
+
 JumpMessagePrivate::JumpMessagePrivate(JumpMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Jump;

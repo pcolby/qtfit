@@ -37,7 +37,13 @@ public:
     WatchfaceSettingsMessage();
     ~WatchfaceSettingsMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    WatchfaceMode mode() const;
+    quint8 layout() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setMode(const WatchfaceMode mode);
+    void setLayout(const quint8 layout);
 
 protected:
     /// @cond internal

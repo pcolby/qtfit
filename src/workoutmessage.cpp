@@ -32,6 +32,84 @@ WorkoutMessage::WorkoutMessage() : FitDataMessage(new WorkoutMessagePrivate(this
 
 }
 
+Sport WorkoutMessage::sport() const
+{
+    Q_D(const WorkoutMessage);
+    return d->sport;
+}
+
+WorkoutCapabilities WorkoutMessage::capabilities() const
+{
+    Q_D(const WorkoutMessage);
+    return d->capabilities;
+}
+
+quint16 WorkoutMessage::numValidSteps() const
+{
+    Q_D(const WorkoutMessage);
+    return d->numValidSteps;
+}
+
+QString WorkoutMessage::wktName() const
+{
+    Q_D(const WorkoutMessage);
+    return d->wktName;
+}
+
+SubSport WorkoutMessage::subSport() const
+{
+    Q_D(const WorkoutMessage);
+    return d->subSport;
+}
+
+quint16 WorkoutMessage::poolLength() const
+{
+    Q_D(const WorkoutMessage);
+    return d->poolLength;
+}
+
+DisplayMeasure WorkoutMessage::poolLengthUnit() const
+{
+    Q_D(const WorkoutMessage);
+    return d->poolLengthUnit;
+}
+
+void WorkoutMessage::setSport(const Sport sport)
+{
+    Q_D(WorkoutMessage);
+    d->sport = sport;
+}
+void WorkoutMessage::setCapabilities(const WorkoutCapabilities capabilities)
+{
+    Q_D(WorkoutMessage);
+    d->capabilities = capabilities;
+}
+void WorkoutMessage::setNumValidSteps(const quint16 numValidSteps)
+{
+    Q_D(WorkoutMessage);
+    d->numValidSteps = numValidSteps;
+}
+void WorkoutMessage::setWktName(const QString wktName)
+{
+    Q_D(WorkoutMessage);
+    d->wktName = wktName;
+}
+void WorkoutMessage::setSubSport(const SubSport subSport)
+{
+    Q_D(WorkoutMessage);
+    d->subSport = subSport;
+}
+void WorkoutMessage::setPoolLength(const quint16 poolLength)
+{
+    Q_D(WorkoutMessage);
+    d->poolLength = poolLength;
+}
+void WorkoutMessage::setPoolLengthUnit(const DisplayMeasure poolLengthUnit)
+{
+    Q_D(WorkoutMessage);
+    d->poolLengthUnit = poolLengthUnit;
+}
+
 WorkoutMessagePrivate::WorkoutMessagePrivate(WorkoutMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Workout;

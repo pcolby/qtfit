@@ -37,7 +37,17 @@ public:
     CameraEventMessage();
     ~CameraEventMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    CameraEventType cameraEventType() const;
+    QString cameraFileUuid() const;
+    CameraOrientationType cameraOrientation() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setCameraEventType(const CameraEventType cameraEventType);
+    void setCameraFileUuid(const QString cameraFileUuid);
+    void setCameraOrientation(const CameraOrientationType cameraOrientation);
 
 protected:
     /// @cond internal

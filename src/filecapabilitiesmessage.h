@@ -37,7 +37,19 @@ public:
     FileCapabilitiesMessage();
     ~FileCapabilitiesMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    File type() const;
+    FileFlags flags() const;
+    QString directory() const;
+    quint16 maxCount() const;
+    quint32 maxSize() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setType(const File type);
+    void setFlags(const FileFlags flags);
+    void setDirectory(const QString directory);
+    void setMaxCount(const quint16 maxCount);
+    void setMaxSize(const quint32 maxSize);
 
 protected:
     /// @cond internal

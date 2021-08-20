@@ -37,7 +37,15 @@ public:
     MemoGlobMessage();
     ~MemoGlobMessage();
 
-    /// @todo Generate getters/setters.
+    quint32 partIndex() const;
+    quint8 memo() const;
+    quint16 messageNumber() const;
+    MessageIndex messageIndex() const;
+
+    void setPartIndex(const quint32 partIndex);
+    void setMemo(const quint8 memo);
+    void setMessageNumber(const quint16 messageNumber);
+    void setMessageIndex(const MessageIndex messageIndex);
 
 protected:
     /// @cond internal

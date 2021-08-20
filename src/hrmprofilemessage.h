@@ -37,7 +37,17 @@ public:
     HrmProfileMessage();
     ~HrmProfileMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    bool enabled() const;
+    quint16z hrmAntId() const;
+    bool logHrv() const;
+    quint8z hrmAntIdTransType() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setEnabled(const bool enabled);
+    void setHrmAntId(const quint16z hrmAntId);
+    void setLogHrv(const bool logHrv);
+    void setHrmAntIdTransType(const quint8z hrmAntIdTransType);
 
 protected:
     /// @cond internal

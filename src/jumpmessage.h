@@ -37,7 +37,27 @@ public:
     JumpMessage();
     ~JumpMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    float distance() const;
+    float height() const;
+    quint8 rotations() const;
+    float hangTime() const;
+    float score() const;
+    qint32 positionLat() const;
+    qint32 positionLong() const;
+    quint16 speed() const;
+    quint32 enhancedSpeed() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setDistance(const float distance);
+    void setHeight(const float height);
+    void setRotations(const quint8 rotations);
+    void setHangTime(const float hangTime);
+    void setScore(const float score);
+    void setPositionLat(const qint32 positionLat);
+    void setPositionLong(const qint32 positionLong);
+    void setSpeed(const quint16 speed);
+    void setEnhancedSpeed(const quint32 enhancedSpeed);
 
 protected:
     /// @cond internal

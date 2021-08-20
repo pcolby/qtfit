@@ -37,7 +37,25 @@ public:
     SegmentFileMessage();
     ~SegmentFileMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    QString fileUuid() const;
+    bool enabled() const;
+    quint32 userProfilePrimaryKey() const;
+    SegmentLeaderboardType leaderType() const;
+    quint32 leaderGroupPrimaryKey() const;
+    quint32 leaderActivityId() const;
+    QString leaderActivityIdString() const;
+    quint8 defaultRaceLeader() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setFileUuid(const QString fileUuid);
+    void setEnabled(const bool enabled);
+    void setUserProfilePrimaryKey(const quint32 userProfilePrimaryKey);
+    void setLeaderType(const SegmentLeaderboardType leaderType);
+    void setLeaderGroupPrimaryKey(const quint32 leaderGroupPrimaryKey);
+    void setLeaderActivityId(const quint32 leaderActivityId);
+    void setLeaderActivityIdString(const QString leaderActivityIdString);
+    void setDefaultRaceLeader(const quint8 defaultRaceLeader);
 
 protected:
     /// @cond internal

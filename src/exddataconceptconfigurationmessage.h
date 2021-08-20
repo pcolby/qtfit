@@ -37,7 +37,29 @@ public:
     ExdDataConceptConfigurationMessage();
     ~ExdDataConceptConfigurationMessage();
 
-    /// @todo Generate getters/setters.
+    quint8 screenIndex() const;
+    quint8 conceptField() const;
+    quint8 fieldId() const;
+    quint8 conceptIndex() const;
+    quint8 dataPage() const;
+    quint8 conceptKey() const;
+    quint8 scaling() const;
+    ExdDataUnits dataUnits() const;
+    ExdQualifiers qualifier() const;
+    ExdDescriptors descriptor() const;
+    bool isSigned() const;
+
+    void setScreenIndex(const quint8 screenIndex);
+    void setConceptField(const quint8 conceptField);
+    void setFieldId(const quint8 fieldId);
+    void setConceptIndex(const quint8 conceptIndex);
+    void setDataPage(const quint8 dataPage);
+    void setConceptKey(const quint8 conceptKey);
+    void setScaling(const quint8 scaling);
+    void setDataUnits(const ExdDataUnits dataUnits);
+    void setQualifier(const ExdQualifiers qualifier);
+    void setDescriptor(const ExdDescriptors descriptor);
+    void setIsSigned(const bool isSigned);
 
 protected:
     /// @cond internal

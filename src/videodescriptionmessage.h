@@ -37,7 +37,13 @@ public:
     VideoDescriptionMessage();
     ~VideoDescriptionMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint16 messageCount() const;
+    QString text() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setMessageCount(const quint16 messageCount);
+    void setText(const QString text);
 
 protected:
     /// @cond internal

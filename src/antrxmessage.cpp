@@ -32,6 +32,73 @@ AntRxMessage::AntRxMessage() : FitDataMessage(new AntRxMessagePrivate(this))
 
 }
 
+DateTime AntRxMessage::timestamp() const
+{
+    Q_D(const AntRxMessage);
+    return d->timestamp;
+}
+
+quint16 AntRxMessage::fractionalTimestamp() const
+{
+    Q_D(const AntRxMessage);
+    return d->fractionalTimestamp;
+}
+
+quint8 AntRxMessage::mesgId() const
+{
+    Q_D(const AntRxMessage);
+    return d->mesgId;
+}
+
+quint8 AntRxMessage::mesgData() const
+{
+    Q_D(const AntRxMessage);
+    return d->mesgData;
+}
+
+quint8 AntRxMessage::channelNumber() const
+{
+    Q_D(const AntRxMessage);
+    return d->channelNumber;
+}
+
+quint8 AntRxMessage::data() const
+{
+    Q_D(const AntRxMessage);
+    return d->data;
+}
+
+void AntRxMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(AntRxMessage);
+    d->timestamp = timestamp;
+}
+void AntRxMessage::setFractionalTimestamp(const quint16 fractionalTimestamp)
+{
+    Q_D(AntRxMessage);
+    d->fractionalTimestamp = fractionalTimestamp;
+}
+void AntRxMessage::setMesgId(const quint8 mesgId)
+{
+    Q_D(AntRxMessage);
+    d->mesgId = mesgId;
+}
+void AntRxMessage::setMesgData(const quint8 mesgData)
+{
+    Q_D(AntRxMessage);
+    d->mesgData = mesgData;
+}
+void AntRxMessage::setChannelNumber(const quint8 channelNumber)
+{
+    Q_D(AntRxMessage);
+    d->channelNumber = channelNumber;
+}
+void AntRxMessage::setData(const quint8 data)
+{
+    Q_D(AntRxMessage);
+    d->data = data;
+}
+
 AntRxMessagePrivate::AntRxMessagePrivate(AntRxMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::AntRx;

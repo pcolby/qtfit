@@ -10,6 +10,22 @@
 
 }
 
+{% for field in fields %}
+{{field.type}} {{ClassName}}::{{field.name}}() const
+{
+    Q_D(const {{ClassName}});
+    return d->{{field.name}};
+}
+
+{% endfor %}
+{% for field in fields %}
+void {{ClassName}}::set{{field.name|capfirst}}(const {{field.type}} {{field.name}})
+{
+    Q_D({{ClassName}});
+    d->{{field.name}} = {{field.name}};
+}
+{% endfor %}
+
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::{{MesgNumLabel}};

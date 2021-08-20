@@ -32,6 +32,73 @@ FileCapabilitiesMessage::FileCapabilitiesMessage() : FitDataMessage(new FileCapa
 
 }
 
+MessageIndex FileCapabilitiesMessage::messageIndex() const
+{
+    Q_D(const FileCapabilitiesMessage);
+    return d->messageIndex;
+}
+
+File FileCapabilitiesMessage::type() const
+{
+    Q_D(const FileCapabilitiesMessage);
+    return d->type;
+}
+
+FileFlags FileCapabilitiesMessage::flags() const
+{
+    Q_D(const FileCapabilitiesMessage);
+    return d->flags;
+}
+
+QString FileCapabilitiesMessage::directory() const
+{
+    Q_D(const FileCapabilitiesMessage);
+    return d->directory;
+}
+
+quint16 FileCapabilitiesMessage::maxCount() const
+{
+    Q_D(const FileCapabilitiesMessage);
+    return d->maxCount;
+}
+
+quint32 FileCapabilitiesMessage::maxSize() const
+{
+    Q_D(const FileCapabilitiesMessage);
+    return d->maxSize;
+}
+
+void FileCapabilitiesMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(FileCapabilitiesMessage);
+    d->messageIndex = messageIndex;
+}
+void FileCapabilitiesMessage::setType(const File type)
+{
+    Q_D(FileCapabilitiesMessage);
+    d->type = type;
+}
+void FileCapabilitiesMessage::setFlags(const FileFlags flags)
+{
+    Q_D(FileCapabilitiesMessage);
+    d->flags = flags;
+}
+void FileCapabilitiesMessage::setDirectory(const QString directory)
+{
+    Q_D(FileCapabilitiesMessage);
+    d->directory = directory;
+}
+void FileCapabilitiesMessage::setMaxCount(const quint16 maxCount)
+{
+    Q_D(FileCapabilitiesMessage);
+    d->maxCount = maxCount;
+}
+void FileCapabilitiesMessage::setMaxSize(const quint32 maxSize)
+{
+    Q_D(FileCapabilitiesMessage);
+    d->maxSize = maxSize;
+}
+
 FileCapabilitiesMessagePrivate::FileCapabilitiesMessagePrivate(FileCapabilitiesMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::FileCapabilities;

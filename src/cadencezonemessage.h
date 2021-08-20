@@ -37,7 +37,13 @@ public:
     CadenceZoneMessage();
     ~CadenceZoneMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint8 highValue() const;
+    QString name() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setHighValue(const quint8 highValue);
+    void setName(const QString name);
 
 protected:
     /// @cond internal

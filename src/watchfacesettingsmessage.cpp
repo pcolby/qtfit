@@ -32,6 +32,40 @@ WatchfaceSettingsMessage::WatchfaceSettingsMessage() : FitDataMessage(new Watchf
 
 }
 
+MessageIndex WatchfaceSettingsMessage::messageIndex() const
+{
+    Q_D(const WatchfaceSettingsMessage);
+    return d->messageIndex;
+}
+
+WatchfaceMode WatchfaceSettingsMessage::mode() const
+{
+    Q_D(const WatchfaceSettingsMessage);
+    return d->mode;
+}
+
+quint8 WatchfaceSettingsMessage::layout() const
+{
+    Q_D(const WatchfaceSettingsMessage);
+    return d->layout;
+}
+
+void WatchfaceSettingsMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(WatchfaceSettingsMessage);
+    d->messageIndex = messageIndex;
+}
+void WatchfaceSettingsMessage::setMode(const WatchfaceMode mode)
+{
+    Q_D(WatchfaceSettingsMessage);
+    d->mode = mode;
+}
+void WatchfaceSettingsMessage::setLayout(const quint8 layout)
+{
+    Q_D(WatchfaceSettingsMessage);
+    d->layout = layout;
+}
+
 WatchfaceSettingsMessagePrivate::WatchfaceSettingsMessagePrivate(WatchfaceSettingsMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::WatchfaceSettings;

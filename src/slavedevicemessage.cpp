@@ -32,6 +32,29 @@ SlaveDeviceMessage::SlaveDeviceMessage() : FitDataMessage(new SlaveDeviceMessage
 
 }
 
+Manufacturer SlaveDeviceMessage::manufacturer() const
+{
+    Q_D(const SlaveDeviceMessage);
+    return d->manufacturer;
+}
+
+quint16 SlaveDeviceMessage::product() const
+{
+    Q_D(const SlaveDeviceMessage);
+    return d->product;
+}
+
+void SlaveDeviceMessage::setManufacturer(const Manufacturer manufacturer)
+{
+    Q_D(SlaveDeviceMessage);
+    d->manufacturer = manufacturer;
+}
+void SlaveDeviceMessage::setProduct(const quint16 product)
+{
+    Q_D(SlaveDeviceMessage);
+    d->product = product;
+}
+
 SlaveDeviceMessagePrivate::SlaveDeviceMessagePrivate(SlaveDeviceMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::SlaveDevice;

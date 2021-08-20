@@ -37,7 +37,11 @@ public:
     SlaveDeviceMessage();
     ~SlaveDeviceMessage();
 
-    /// @todo Generate getters/setters.
+    Manufacturer manufacturer() const;
+    quint16 product() const;
+
+    void setManufacturer(const Manufacturer manufacturer);
+    void setProduct(const quint16 product);
 
 protected:
     /// @cond internal

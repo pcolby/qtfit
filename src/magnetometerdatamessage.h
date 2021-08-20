@@ -37,7 +37,25 @@ public:
     MagnetometerDataMessage();
     ~MagnetometerDataMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    quint16 sampleTimeOffset() const;
+    quint16 magX() const;
+    quint16 magY() const;
+    quint16 magZ() const;
+    float calibratedMagX() const;
+    float calibratedMagY() const;
+    float calibratedMagZ() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setSampleTimeOffset(const quint16 sampleTimeOffset);
+    void setMagX(const quint16 magX);
+    void setMagY(const quint16 magY);
+    void setMagZ(const quint16 magZ);
+    void setCalibratedMagX(const float calibratedMagX);
+    void setCalibratedMagY(const float calibratedMagY);
+    void setCalibratedMagZ(const float calibratedMagZ);
 
 protected:
     /// @cond internal

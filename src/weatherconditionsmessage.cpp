@@ -32,6 +32,183 @@ WeatherConditionsMessage::WeatherConditionsMessage() : FitDataMessage(new Weathe
 
 }
 
+DateTime WeatherConditionsMessage::timestamp() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->timestamp;
+}
+
+WeatherReport WeatherConditionsMessage::weatherReport() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->weatherReport;
+}
+
+qint8 WeatherConditionsMessage::temperature() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->temperature;
+}
+
+WeatherStatus WeatherConditionsMessage::condition() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->condition;
+}
+
+quint16 WeatherConditionsMessage::windDirection() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->windDirection;
+}
+
+quint16 WeatherConditionsMessage::windSpeed() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->windSpeed;
+}
+
+quint8 WeatherConditionsMessage::precipitationProbability() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->precipitationProbability;
+}
+
+qint8 WeatherConditionsMessage::temperatureFeelsLike() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->temperatureFeelsLike;
+}
+
+quint8 WeatherConditionsMessage::relativeHumidity() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->relativeHumidity;
+}
+
+QString WeatherConditionsMessage::location() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->location;
+}
+
+DateTime WeatherConditionsMessage::observedAtTime() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->observedAtTime;
+}
+
+qint32 WeatherConditionsMessage::observedLocationLat() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->observedLocationLat;
+}
+
+qint32 WeatherConditionsMessage::observedLocationLong() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->observedLocationLong;
+}
+
+DayOfWeek WeatherConditionsMessage::dayOfWeek() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->dayOfWeek;
+}
+
+qint8 WeatherConditionsMessage::highTemperature() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->highTemperature;
+}
+
+qint8 WeatherConditionsMessage::lowTemperature() const
+{
+    Q_D(const WeatherConditionsMessage);
+    return d->lowTemperature;
+}
+
+void WeatherConditionsMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(WeatherConditionsMessage);
+    d->timestamp = timestamp;
+}
+void WeatherConditionsMessage::setWeatherReport(const WeatherReport weatherReport)
+{
+    Q_D(WeatherConditionsMessage);
+    d->weatherReport = weatherReport;
+}
+void WeatherConditionsMessage::setTemperature(const qint8 temperature)
+{
+    Q_D(WeatherConditionsMessage);
+    d->temperature = temperature;
+}
+void WeatherConditionsMessage::setCondition(const WeatherStatus condition)
+{
+    Q_D(WeatherConditionsMessage);
+    d->condition = condition;
+}
+void WeatherConditionsMessage::setWindDirection(const quint16 windDirection)
+{
+    Q_D(WeatherConditionsMessage);
+    d->windDirection = windDirection;
+}
+void WeatherConditionsMessage::setWindSpeed(const quint16 windSpeed)
+{
+    Q_D(WeatherConditionsMessage);
+    d->windSpeed = windSpeed;
+}
+void WeatherConditionsMessage::setPrecipitationProbability(const quint8 precipitationProbability)
+{
+    Q_D(WeatherConditionsMessage);
+    d->precipitationProbability = precipitationProbability;
+}
+void WeatherConditionsMessage::setTemperatureFeelsLike(const qint8 temperatureFeelsLike)
+{
+    Q_D(WeatherConditionsMessage);
+    d->temperatureFeelsLike = temperatureFeelsLike;
+}
+void WeatherConditionsMessage::setRelativeHumidity(const quint8 relativeHumidity)
+{
+    Q_D(WeatherConditionsMessage);
+    d->relativeHumidity = relativeHumidity;
+}
+void WeatherConditionsMessage::setLocation(const QString location)
+{
+    Q_D(WeatherConditionsMessage);
+    d->location = location;
+}
+void WeatherConditionsMessage::setObservedAtTime(const DateTime observedAtTime)
+{
+    Q_D(WeatherConditionsMessage);
+    d->observedAtTime = observedAtTime;
+}
+void WeatherConditionsMessage::setObservedLocationLat(const qint32 observedLocationLat)
+{
+    Q_D(WeatherConditionsMessage);
+    d->observedLocationLat = observedLocationLat;
+}
+void WeatherConditionsMessage::setObservedLocationLong(const qint32 observedLocationLong)
+{
+    Q_D(WeatherConditionsMessage);
+    d->observedLocationLong = observedLocationLong;
+}
+void WeatherConditionsMessage::setDayOfWeek(const DayOfWeek dayOfWeek)
+{
+    Q_D(WeatherConditionsMessage);
+    d->dayOfWeek = dayOfWeek;
+}
+void WeatherConditionsMessage::setHighTemperature(const qint8 highTemperature)
+{
+    Q_D(WeatherConditionsMessage);
+    d->highTemperature = highTemperature;
+}
+void WeatherConditionsMessage::setLowTemperature(const qint8 lowTemperature)
+{
+    Q_D(WeatherConditionsMessage);
+    d->lowTemperature = lowTemperature;
+}
+
 WeatherConditionsMessagePrivate::WeatherConditionsMessagePrivate(WeatherConditionsMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::WeatherConditions;

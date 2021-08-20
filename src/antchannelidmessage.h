@@ -37,7 +37,17 @@ public:
     AntChannelIdMessage();
     ~AntChannelIdMessage();
 
-    /// @todo Generate getters/setters.
+    quint8 channelNumber() const;
+    quint8z deviceType() const;
+    quint16z deviceNumber() const;
+    quint8z transmissionType() const;
+    DeviceIndex deviceIndex() const;
+
+    void setChannelNumber(const quint8 channelNumber);
+    void setDeviceType(const quint8z deviceType);
+    void setDeviceNumber(const quint16z deviceNumber);
+    void setTransmissionType(const quint8z transmissionType);
+    void setDeviceIndex(const DeviceIndex deviceIndex);
 
 protected:
     /// @cond internal

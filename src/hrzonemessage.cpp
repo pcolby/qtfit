@@ -32,6 +32,40 @@ HrZoneMessage::HrZoneMessage() : FitDataMessage(new HrZoneMessagePrivate(this))
 
 }
 
+MessageIndex HrZoneMessage::messageIndex() const
+{
+    Q_D(const HrZoneMessage);
+    return d->messageIndex;
+}
+
+quint8 HrZoneMessage::highBpm() const
+{
+    Q_D(const HrZoneMessage);
+    return d->highBpm;
+}
+
+QString HrZoneMessage::name() const
+{
+    Q_D(const HrZoneMessage);
+    return d->name;
+}
+
+void HrZoneMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(HrZoneMessage);
+    d->messageIndex = messageIndex;
+}
+void HrZoneMessage::setHighBpm(const quint8 highBpm)
+{
+    Q_D(HrZoneMessage);
+    d->highBpm = highBpm;
+}
+void HrZoneMessage::setName(const QString name)
+{
+    Q_D(HrZoneMessage);
+    d->name = name;
+}
+
 HrZoneMessagePrivate::HrZoneMessagePrivate(HrZoneMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::HrZone;

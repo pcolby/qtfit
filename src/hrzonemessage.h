@@ -37,7 +37,13 @@ public:
     HrZoneMessage();
     ~HrZoneMessage();
 
-    /// @todo Generate getters/setters.
+    MessageIndex messageIndex() const;
+    quint8 highBpm() const;
+    QString name() const;
+
+    void setMessageIndex(const MessageIndex messageIndex);
+    void setHighBpm(const quint8 highBpm);
+    void setName(const QString name);
 
 protected:
     /// @cond internal

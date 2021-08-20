@@ -32,6 +32,40 @@ CadenceZoneMessage::CadenceZoneMessage() : FitDataMessage(new CadenceZoneMessage
 
 }
 
+MessageIndex CadenceZoneMessage::messageIndex() const
+{
+    Q_D(const CadenceZoneMessage);
+    return d->messageIndex;
+}
+
+quint8 CadenceZoneMessage::highValue() const
+{
+    Q_D(const CadenceZoneMessage);
+    return d->highValue;
+}
+
+QString CadenceZoneMessage::name() const
+{
+    Q_D(const CadenceZoneMessage);
+    return d->name;
+}
+
+void CadenceZoneMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(CadenceZoneMessage);
+    d->messageIndex = messageIndex;
+}
+void CadenceZoneMessage::setHighValue(const quint8 highValue)
+{
+    Q_D(CadenceZoneMessage);
+    d->highValue = highValue;
+}
+void CadenceZoneMessage::setName(const QString name)
+{
+    Q_D(CadenceZoneMessage);
+    d->name = name;
+}
+
 CadenceZoneMessagePrivate::CadenceZoneMessagePrivate(CadenceZoneMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::CadenceZone;

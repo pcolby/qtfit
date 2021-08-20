@@ -32,6 +32,62 @@ ZonesTargetMessage::ZonesTargetMessage() : FitDataMessage(new ZonesTargetMessage
 
 }
 
+quint8 ZonesTargetMessage::maxHeartRate() const
+{
+    Q_D(const ZonesTargetMessage);
+    return d->maxHeartRate;
+}
+
+quint8 ZonesTargetMessage::thresholdHeartRate() const
+{
+    Q_D(const ZonesTargetMessage);
+    return d->thresholdHeartRate;
+}
+
+quint16 ZonesTargetMessage::functionalThresholdPower() const
+{
+    Q_D(const ZonesTargetMessage);
+    return d->functionalThresholdPower;
+}
+
+HrZoneCalc ZonesTargetMessage::hrCalcType() const
+{
+    Q_D(const ZonesTargetMessage);
+    return d->hrCalcType;
+}
+
+PwrZoneCalc ZonesTargetMessage::pwrCalcType() const
+{
+    Q_D(const ZonesTargetMessage);
+    return d->pwrCalcType;
+}
+
+void ZonesTargetMessage::setMaxHeartRate(const quint8 maxHeartRate)
+{
+    Q_D(ZonesTargetMessage);
+    d->maxHeartRate = maxHeartRate;
+}
+void ZonesTargetMessage::setThresholdHeartRate(const quint8 thresholdHeartRate)
+{
+    Q_D(ZonesTargetMessage);
+    d->thresholdHeartRate = thresholdHeartRate;
+}
+void ZonesTargetMessage::setFunctionalThresholdPower(const quint16 functionalThresholdPower)
+{
+    Q_D(ZonesTargetMessage);
+    d->functionalThresholdPower = functionalThresholdPower;
+}
+void ZonesTargetMessage::setHrCalcType(const HrZoneCalc hrCalcType)
+{
+    Q_D(ZonesTargetMessage);
+    d->hrCalcType = hrCalcType;
+}
+void ZonesTargetMessage::setPwrCalcType(const PwrZoneCalc pwrCalcType)
+{
+    Q_D(ZonesTargetMessage);
+    d->pwrCalcType = pwrCalcType;
+}
+
 ZonesTargetMessagePrivate::ZonesTargetMessagePrivate(ZonesTargetMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::ZonesTarget;

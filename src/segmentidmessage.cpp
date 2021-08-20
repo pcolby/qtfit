@@ -32,6 +32,106 @@ SegmentIdMessage::SegmentIdMessage() : FitDataMessage(new SegmentIdMessagePrivat
 
 }
 
+QString SegmentIdMessage::name() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->name;
+}
+
+QString SegmentIdMessage::uuid() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->uuid;
+}
+
+Sport SegmentIdMessage::sport() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->sport;
+}
+
+bool SegmentIdMessage::enabled() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->enabled;
+}
+
+quint32 SegmentIdMessage::userProfilePrimaryKey() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->userProfilePrimaryKey;
+}
+
+quint32 SegmentIdMessage::deviceId() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->deviceId;
+}
+
+quint8 SegmentIdMessage::defaultRaceLeader() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->defaultRaceLeader;
+}
+
+SegmentDeleteStatus SegmentIdMessage::deleteStatus() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->deleteStatus;
+}
+
+SegmentSelectionType SegmentIdMessage::selectionType() const
+{
+    Q_D(const SegmentIdMessage);
+    return d->selectionType;
+}
+
+void SegmentIdMessage::setName(const QString name)
+{
+    Q_D(SegmentIdMessage);
+    d->name = name;
+}
+void SegmentIdMessage::setUuid(const QString uuid)
+{
+    Q_D(SegmentIdMessage);
+    d->uuid = uuid;
+}
+void SegmentIdMessage::setSport(const Sport sport)
+{
+    Q_D(SegmentIdMessage);
+    d->sport = sport;
+}
+void SegmentIdMessage::setEnabled(const bool enabled)
+{
+    Q_D(SegmentIdMessage);
+    d->enabled = enabled;
+}
+void SegmentIdMessage::setUserProfilePrimaryKey(const quint32 userProfilePrimaryKey)
+{
+    Q_D(SegmentIdMessage);
+    d->userProfilePrimaryKey = userProfilePrimaryKey;
+}
+void SegmentIdMessage::setDeviceId(const quint32 deviceId)
+{
+    Q_D(SegmentIdMessage);
+    d->deviceId = deviceId;
+}
+void SegmentIdMessage::setDefaultRaceLeader(const quint8 defaultRaceLeader)
+{
+    Q_D(SegmentIdMessage);
+    d->defaultRaceLeader = defaultRaceLeader;
+}
+void SegmentIdMessage::setDeleteStatus(const SegmentDeleteStatus deleteStatus)
+{
+    Q_D(SegmentIdMessage);
+    d->deleteStatus = deleteStatus;
+}
+void SegmentIdMessage::setSelectionType(const SegmentSelectionType selectionType)
+{
+    Q_D(SegmentIdMessage);
+    d->selectionType = selectionType;
+}
+
 SegmentIdMessagePrivate::SegmentIdMessagePrivate(SegmentIdMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::SegmentId;

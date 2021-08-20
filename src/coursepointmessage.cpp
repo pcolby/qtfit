@@ -32,6 +32,95 @@ CoursePointMessage::CoursePointMessage() : FitDataMessage(new CoursePointMessage
 
 }
 
+MessageIndex CoursePointMessage::messageIndex() const
+{
+    Q_D(const CoursePointMessage);
+    return d->messageIndex;
+}
+
+DateTime CoursePointMessage::timestamp() const
+{
+    Q_D(const CoursePointMessage);
+    return d->timestamp;
+}
+
+qint32 CoursePointMessage::positionLat() const
+{
+    Q_D(const CoursePointMessage);
+    return d->positionLat;
+}
+
+qint32 CoursePointMessage::positionLong() const
+{
+    Q_D(const CoursePointMessage);
+    return d->positionLong;
+}
+
+quint32 CoursePointMessage::distance() const
+{
+    Q_D(const CoursePointMessage);
+    return d->distance;
+}
+
+CoursePoint CoursePointMessage::type() const
+{
+    Q_D(const CoursePointMessage);
+    return d->type;
+}
+
+QString CoursePointMessage::name() const
+{
+    Q_D(const CoursePointMessage);
+    return d->name;
+}
+
+bool CoursePointMessage::favorite() const
+{
+    Q_D(const CoursePointMessage);
+    return d->favorite;
+}
+
+void CoursePointMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(CoursePointMessage);
+    d->messageIndex = messageIndex;
+}
+void CoursePointMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(CoursePointMessage);
+    d->timestamp = timestamp;
+}
+void CoursePointMessage::setPositionLat(const qint32 positionLat)
+{
+    Q_D(CoursePointMessage);
+    d->positionLat = positionLat;
+}
+void CoursePointMessage::setPositionLong(const qint32 positionLong)
+{
+    Q_D(CoursePointMessage);
+    d->positionLong = positionLong;
+}
+void CoursePointMessage::setDistance(const quint32 distance)
+{
+    Q_D(CoursePointMessage);
+    d->distance = distance;
+}
+void CoursePointMessage::setType(const CoursePoint type)
+{
+    Q_D(CoursePointMessage);
+    d->type = type;
+}
+void CoursePointMessage::setName(const QString name)
+{
+    Q_D(CoursePointMessage);
+    d->name = name;
+}
+void CoursePointMessage::setFavorite(const bool favorite)
+{
+    Q_D(CoursePointMessage);
+    d->favorite = favorite;
+}
+
 CoursePointMessagePrivate::CoursePointMessagePrivate(CoursePointMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::CoursePoint;

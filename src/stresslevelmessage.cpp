@@ -32,6 +32,29 @@ StressLevelMessage::StressLevelMessage() : FitDataMessage(new StressLevelMessage
 
 }
 
+qint16 StressLevelMessage::stressLevelValue() const
+{
+    Q_D(const StressLevelMessage);
+    return d->stressLevelValue;
+}
+
+DateTime StressLevelMessage::stressLevelTime() const
+{
+    Q_D(const StressLevelMessage);
+    return d->stressLevelTime;
+}
+
+void StressLevelMessage::setStressLevelValue(const qint16 stressLevelValue)
+{
+    Q_D(StressLevelMessage);
+    d->stressLevelValue = stressLevelValue;
+}
+void StressLevelMessage::setStressLevelTime(const DateTime stressLevelTime)
+{
+    Q_D(StressLevelMessage);
+    d->stressLevelTime = stressLevelTime;
+}
+
 StressLevelMessagePrivate::StressLevelMessagePrivate(StressLevelMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::StressLevel;

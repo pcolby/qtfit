@@ -32,6 +32,51 @@ DiveGasMessage::DiveGasMessage() : FitDataMessage(new DiveGasMessagePrivate(this
 
 }
 
+MessageIndex DiveGasMessage::messageIndex() const
+{
+    Q_D(const DiveGasMessage);
+    return d->messageIndex;
+}
+
+quint8 DiveGasMessage::heliumContent() const
+{
+    Q_D(const DiveGasMessage);
+    return d->heliumContent;
+}
+
+quint8 DiveGasMessage::oxygenContent() const
+{
+    Q_D(const DiveGasMessage);
+    return d->oxygenContent;
+}
+
+DiveGasStatus DiveGasMessage::status() const
+{
+    Q_D(const DiveGasMessage);
+    return d->status;
+}
+
+void DiveGasMessage::setMessageIndex(const MessageIndex messageIndex)
+{
+    Q_D(DiveGasMessage);
+    d->messageIndex = messageIndex;
+}
+void DiveGasMessage::setHeliumContent(const quint8 heliumContent)
+{
+    Q_D(DiveGasMessage);
+    d->heliumContent = heliumContent;
+}
+void DiveGasMessage::setOxygenContent(const quint8 oxygenContent)
+{
+    Q_D(DiveGasMessage);
+    d->oxygenContent = oxygenContent;
+}
+void DiveGasMessage::setStatus(const DiveGasStatus status)
+{
+    Q_D(DiveGasMessage);
+    d->status = status;
+}
+
 DiveGasMessagePrivate::DiveGasMessagePrivate(DiveGasMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::DiveGas;

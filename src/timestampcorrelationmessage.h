@@ -37,7 +37,21 @@ public:
     TimestampCorrelationMessage();
     ~TimestampCorrelationMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 fractionalTimestamp() const;
+    DateTime systemTimestamp() const;
+    quint16 fractionalSystemTimestamp() const;
+    LocalDateTime localTimestamp() const;
+    quint16 timestampMs() const;
+    quint16 systemTimestampMs() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setFractionalTimestamp(const quint16 fractionalTimestamp);
+    void setSystemTimestamp(const DateTime systemTimestamp);
+    void setFractionalSystemTimestamp(const quint16 fractionalSystemTimestamp);
+    void setLocalTimestamp(const LocalDateTime localTimestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setSystemTimestampMs(const quint16 systemTimestampMs);
 
 protected:
     /// @cond internal

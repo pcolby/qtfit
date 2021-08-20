@@ -32,6 +32,40 @@ VideoMessage::VideoMessage() : FitDataMessage(new VideoMessagePrivate(this))
 
 }
 
+QString VideoMessage::url() const
+{
+    Q_D(const VideoMessage);
+    return d->url;
+}
+
+QString VideoMessage::hostingProvider() const
+{
+    Q_D(const VideoMessage);
+    return d->hostingProvider;
+}
+
+quint32 VideoMessage::duration() const
+{
+    Q_D(const VideoMessage);
+    return d->duration;
+}
+
+void VideoMessage::setUrl(const QString url)
+{
+    Q_D(VideoMessage);
+    d->url = url;
+}
+void VideoMessage::setHostingProvider(const QString hostingProvider)
+{
+    Q_D(VideoMessage);
+    d->hostingProvider = hostingProvider;
+}
+void VideoMessage::setDuration(const quint32 duration)
+{
+    Q_D(VideoMessage);
+    d->duration = duration;
+}
+
 VideoMessagePrivate::VideoMessagePrivate(VideoMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::Video;

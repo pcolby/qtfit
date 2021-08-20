@@ -32,6 +32,106 @@ GpsMetadataMessage::GpsMetadataMessage() : FitDataMessage(new GpsMetadataMessage
 
 }
 
+DateTime GpsMetadataMessage::timestamp() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->timestamp;
+}
+
+quint16 GpsMetadataMessage::timestampMs() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->timestampMs;
+}
+
+qint32 GpsMetadataMessage::positionLat() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->positionLat;
+}
+
+qint32 GpsMetadataMessage::positionLong() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->positionLong;
+}
+
+quint32 GpsMetadataMessage::enhancedAltitude() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->enhancedAltitude;
+}
+
+quint32 GpsMetadataMessage::enhancedSpeed() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->enhancedSpeed;
+}
+
+quint16 GpsMetadataMessage::heading() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->heading;
+}
+
+DateTime GpsMetadataMessage::utcTimestamp() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->utcTimestamp;
+}
+
+qint16 GpsMetadataMessage::velocity() const
+{
+    Q_D(const GpsMetadataMessage);
+    return d->velocity;
+}
+
+void GpsMetadataMessage::setTimestamp(const DateTime timestamp)
+{
+    Q_D(GpsMetadataMessage);
+    d->timestamp = timestamp;
+}
+void GpsMetadataMessage::setTimestampMs(const quint16 timestampMs)
+{
+    Q_D(GpsMetadataMessage);
+    d->timestampMs = timestampMs;
+}
+void GpsMetadataMessage::setPositionLat(const qint32 positionLat)
+{
+    Q_D(GpsMetadataMessage);
+    d->positionLat = positionLat;
+}
+void GpsMetadataMessage::setPositionLong(const qint32 positionLong)
+{
+    Q_D(GpsMetadataMessage);
+    d->positionLong = positionLong;
+}
+void GpsMetadataMessage::setEnhancedAltitude(const quint32 enhancedAltitude)
+{
+    Q_D(GpsMetadataMessage);
+    d->enhancedAltitude = enhancedAltitude;
+}
+void GpsMetadataMessage::setEnhancedSpeed(const quint32 enhancedSpeed)
+{
+    Q_D(GpsMetadataMessage);
+    d->enhancedSpeed = enhancedSpeed;
+}
+void GpsMetadataMessage::setHeading(const quint16 heading)
+{
+    Q_D(GpsMetadataMessage);
+    d->heading = heading;
+}
+void GpsMetadataMessage::setUtcTimestamp(const DateTime utcTimestamp)
+{
+    Q_D(GpsMetadataMessage);
+    d->utcTimestamp = utcTimestamp;
+}
+void GpsMetadataMessage::setVelocity(const qint16 velocity)
+{
+    Q_D(GpsMetadataMessage);
+    d->velocity = velocity;
+}
+
 GpsMetadataMessagePrivate::GpsMetadataMessagePrivate(GpsMetadataMessage * const q) : FitDataMessagePrivate(q)
 {
     globalMessageNumber = MesgNum::GpsMetadata;

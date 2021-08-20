@@ -37,7 +37,13 @@ public:
     NmeaSentenceMessage();
     ~NmeaSentenceMessage();
 
-    /// @todo Generate getters/setters.
+    DateTime timestamp() const;
+    quint16 timestampMs() const;
+    QString sentence() const;
+
+    void setTimestamp(const DateTime timestamp);
+    void setTimestampMs(const quint16 timestampMs);
+    void setSentence(const QString sentence);
 
 protected:
     /// @cond internal
