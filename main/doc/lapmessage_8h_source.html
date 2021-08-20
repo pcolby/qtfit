@@ -127,25 +127,264 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classLapMessage.html">LapMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classLapMessage.html">LapMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /// @todo Generate getters/setters.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classLapMessage.html">LapMessage</a>(LapMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classLapMessage.html">LapMessage</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Q_DISABLE_COPY(LapMessage)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;QTFIT_END_NAMESPACE</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_LAPMESSAGE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a> event() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    EventType eventType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> startTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    qint32 startPositionLat() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    qint32 startPositionLong() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    qint32 endPositionLat() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    qint32 endPositionLong() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    quint32 totalElapsedTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    quint32 totalTimerTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    quint32 totalDistance() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    quint32 totalCycles() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    quint16 totalCalories() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    quint16 totalFatCalories() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    quint16 avgSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    quint16 maxSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    quint8 avgHeartRate() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    quint8 maxHeartRate() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    quint8 avgCadence() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    quint8 maxCadence() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    quint16 avgPower() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    quint16 maxPower() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    quint16 totalAscent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    quint16 totalDescent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Intensity intensity() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    LapTrigger lapTrigger() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    quint8 eventGroup() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    quint16 numLengths() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    quint16 normalizedPower() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="types_8h.html#a8694a8a27008597aaea010c38e16520c">LeftRightBalance100</a> leftRightBalance() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    quint16 firstLengthIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    quint16 avgStrokeDistance() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a> swimStroke() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> subSport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    quint16 numActiveLengths() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    quint32 totalWork() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    quint16 avgAltitude() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    quint16 maxAltitude() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    quint8 gpsAccuracy() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    qint16 avgGrade() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    qint16 avgPosGrade() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    qint16 avgNegGrade() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    qint16 maxPosGrade() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    qint16 maxNegGrade() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    qint8 avgTemperature() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    qint8 maxTemperature() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    quint32 totalMovingTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    qint16 avgPosVerticalSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    qint16 avgNegVerticalSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    qint16 maxPosVerticalSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    qint16 maxNegVerticalSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    quint32 timeInHrZone() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    quint32 timeInSpeedZone() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    quint32 timeInCadenceZone() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    quint32 timeInPowerZone() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    quint16 repetitionNum() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    quint16 minAltitude() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    quint8 minHeartRate() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> wktStepIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    quint16 opponentScore() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    quint16 strokeCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    quint16 zoneCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    quint16 avgVerticalOscillation() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    quint16 avgStanceTimePercent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    quint16 avgStanceTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    quint8 avgFractionalCadence() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    quint8 maxFractionalCadence() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    quint8 totalFractionalCycles() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    quint16 playerScore() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    quint16 avgTotalHemoglobinConc() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    quint16 minTotalHemoglobinConc() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    quint16 maxTotalHemoglobinConc() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    quint16 avgSaturatedHemoglobinPercent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    quint16 minSaturatedHemoglobinPercent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    quint16 maxSaturatedHemoglobinPercent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    quint8 avgLeftTorqueEffectiveness() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    quint8 avgRightTorqueEffectiveness() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    quint8 avgLeftPedalSmoothness() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    quint8 avgRightPedalSmoothness() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    quint8 avgCombinedPedalSmoothness() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    quint32 timeStanding() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    quint16 standCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    qint8 avgLeftPco() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    qint8 avgRightPco() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    quint8 avgLeftPowerPhase() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    quint8 avgLeftPowerPhasePeak() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    quint8 avgRightPowerPhase() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    quint8 avgRightPowerPhasePeak() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    quint16 avgPowerPosition() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    quint16 maxPowerPosition() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    quint8 avgCadencePosition() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    quint8 maxCadencePosition() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    quint32 enhancedAvgSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    quint32 enhancedMaxSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    quint32 enhancedAvgAltitude() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    quint32 enhancedMinAltitude() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    quint32 enhancedMaxAltitude() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    quint16 avgLevMotorPower() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    quint16 maxLevMotorPower() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    quint8 levBatteryConsumption() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    quint16 avgVerticalRatio() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    quint16 avgStanceTimeBalance() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    quint16 avgStepLength() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    quint16 avgVam() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">float</span> totalGrit() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">float</span> totalFlow() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    quint16 jumpCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">float</span> avgGrit() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">float</span> avgFlow() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    quint8 totalFractionalAscent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    quint8 totalFractionalDescent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    quint16 avgCoreTemperature() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    quint16 minCoreTemperature() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    quint16 maxCoreTemperature() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> setMessageIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> setTimestamp(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> setEvent(<span class="keyword">const</span> <a class="code" href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a> event);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> setEventType(<span class="keyword">const</span> EventType eventType);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> setStartTime(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> startTime);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> setStartPositionLat(<span class="keyword">const</span> qint32 startPositionLat);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">void</span> setStartPositionLong(<span class="keyword">const</span> qint32 startPositionLong);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> setEndPositionLat(<span class="keyword">const</span> qint32 endPositionLat);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> setEndPositionLong(<span class="keyword">const</span> qint32 endPositionLong);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> setTotalElapsedTime(<span class="keyword">const</span> quint32 totalElapsedTime);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> setTotalTimerTime(<span class="keyword">const</span> quint32 totalTimerTime);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> setTotalDistance(<span class="keyword">const</span> quint32 totalDistance);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span> setTotalCycles(<span class="keyword">const</span> quint32 totalCycles);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">void</span> setTotalCalories(<span class="keyword">const</span> quint16 totalCalories);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> setTotalFatCalories(<span class="keyword">const</span> quint16 totalFatCalories);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> setAvgSpeed(<span class="keyword">const</span> quint16 avgSpeed);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">void</span> setMaxSpeed(<span class="keyword">const</span> quint16 maxSpeed);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">void</span> setAvgHeartRate(<span class="keyword">const</span> quint8 avgHeartRate);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">void</span> setMaxHeartRate(<span class="keyword">const</span> quint8 maxHeartRate);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> setAvgCadence(<span class="keyword">const</span> quint8 avgCadence);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> setMaxCadence(<span class="keyword">const</span> quint8 maxCadence);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> setAvgPower(<span class="keyword">const</span> quint16 avgPower);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">void</span> setMaxPower(<span class="keyword">const</span> quint16 maxPower);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> setTotalAscent(<span class="keyword">const</span> quint16 totalAscent);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> setTotalDescent(<span class="keyword">const</span> quint16 totalDescent);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> setIntensity(<span class="keyword">const</span> Intensity intensity);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> setLapTrigger(<span class="keyword">const</span> LapTrigger lapTrigger);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> setSport(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">void</span> setEventGroup(<span class="keyword">const</span> quint8 eventGroup);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> setNumLengths(<span class="keyword">const</span> quint16 numLengths);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">void</span> setNormalizedPower(<span class="keyword">const</span> quint16 normalizedPower);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> setLeftRightBalance(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8694a8a27008597aaea010c38e16520c">LeftRightBalance100</a> leftRightBalance);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> setFirstLengthIndex(<span class="keyword">const</span> quint16 firstLengthIndex);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> setAvgStrokeDistance(<span class="keyword">const</span> quint16 avgStrokeDistance);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> setSwimStroke(<span class="keyword">const</span> <a class="code" href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a> swimStroke);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">void</span> setSubSport(<span class="keyword">const</span> <a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> subSport);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">void</span> setNumActiveLengths(<span class="keyword">const</span> quint16 numActiveLengths);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> setTotalWork(<span class="keyword">const</span> quint32 totalWork);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">void</span> setAvgAltitude(<span class="keyword">const</span> quint16 avgAltitude);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">void</span> setMaxAltitude(<span class="keyword">const</span> quint16 maxAltitude);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">void</span> setGpsAccuracy(<span class="keyword">const</span> quint8 gpsAccuracy);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> setAvgGrade(<span class="keyword">const</span> qint16 avgGrade);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">void</span> setAvgPosGrade(<span class="keyword">const</span> qint16 avgPosGrade);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">void</span> setAvgNegGrade(<span class="keyword">const</span> qint16 avgNegGrade);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> setMaxPosGrade(<span class="keyword">const</span> qint16 maxPosGrade);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">void</span> setMaxNegGrade(<span class="keyword">const</span> qint16 maxNegGrade);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">void</span> setAvgTemperature(<span class="keyword">const</span> qint8 avgTemperature);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> setMaxTemperature(<span class="keyword">const</span> qint8 maxTemperature);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> setTotalMovingTime(<span class="keyword">const</span> quint32 totalMovingTime);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">void</span> setAvgPosVerticalSpeed(<span class="keyword">const</span> qint16 avgPosVerticalSpeed);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">void</span> setAvgNegVerticalSpeed(<span class="keyword">const</span> qint16 avgNegVerticalSpeed);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">void</span> setMaxPosVerticalSpeed(<span class="keyword">const</span> qint16 maxPosVerticalSpeed);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">void</span> setMaxNegVerticalSpeed(<span class="keyword">const</span> qint16 maxNegVerticalSpeed);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">void</span> setTimeInHrZone(<span class="keyword">const</span> quint32 timeInHrZone);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">void</span> setTimeInSpeedZone(<span class="keyword">const</span> quint32 timeInSpeedZone);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">void</span> setTimeInCadenceZone(<span class="keyword">const</span> quint32 timeInCadenceZone);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">void</span> setTimeInPowerZone(<span class="keyword">const</span> quint32 timeInPowerZone);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">void</span> setRepetitionNum(<span class="keyword">const</span> quint16 repetitionNum);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">void</span> setMinAltitude(<span class="keyword">const</span> quint16 minAltitude);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">void</span> setMinHeartRate(<span class="keyword">const</span> quint8 minHeartRate);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> setWktStepIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> wktStepIndex);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">void</span> setOpponentScore(<span class="keyword">const</span> quint16 opponentScore);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">void</span> setStrokeCount(<span class="keyword">const</span> quint16 strokeCount);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">void</span> setZoneCount(<span class="keyword">const</span> quint16 zoneCount);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">void</span> setAvgVerticalOscillation(<span class="keyword">const</span> quint16 avgVerticalOscillation);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">void</span> setAvgStanceTimePercent(<span class="keyword">const</span> quint16 avgStanceTimePercent);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">void</span> setAvgStanceTime(<span class="keyword">const</span> quint16 avgStanceTime);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">void</span> setAvgFractionalCadence(<span class="keyword">const</span> quint8 avgFractionalCadence);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">void</span> setMaxFractionalCadence(<span class="keyword">const</span> quint8 maxFractionalCadence);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">void</span> setTotalFractionalCycles(<span class="keyword">const</span> quint8 totalFractionalCycles);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">void</span> setPlayerScore(<span class="keyword">const</span> quint16 playerScore);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">void</span> setAvgTotalHemoglobinConc(<span class="keyword">const</span> quint16 avgTotalHemoglobinConc);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">void</span> setMinTotalHemoglobinConc(<span class="keyword">const</span> quint16 minTotalHemoglobinConc);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">void</span> setMaxTotalHemoglobinConc(<span class="keyword">const</span> quint16 maxTotalHemoglobinConc);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">void</span> setAvgSaturatedHemoglobinPercent(<span class="keyword">const</span> quint16 avgSaturatedHemoglobinPercent);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> setMinSaturatedHemoglobinPercent(<span class="keyword">const</span> quint16 minSaturatedHemoglobinPercent);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">void</span> setMaxSaturatedHemoglobinPercent(<span class="keyword">const</span> quint16 maxSaturatedHemoglobinPercent);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">void</span> setAvgLeftTorqueEffectiveness(<span class="keyword">const</span> quint8 avgLeftTorqueEffectiveness);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">void</span> setAvgRightTorqueEffectiveness(<span class="keyword">const</span> quint8 avgRightTorqueEffectiveness);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">void</span> setAvgLeftPedalSmoothness(<span class="keyword">const</span> quint8 avgLeftPedalSmoothness);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">void</span> setAvgRightPedalSmoothness(<span class="keyword">const</span> quint8 avgRightPedalSmoothness);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">void</span> setAvgCombinedPedalSmoothness(<span class="keyword">const</span> quint8 avgCombinedPedalSmoothness);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> setTimeStanding(<span class="keyword">const</span> quint32 timeStanding);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">void</span> setStandCount(<span class="keyword">const</span> quint16 standCount);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">void</span> setAvgLeftPco(<span class="keyword">const</span> qint8 avgLeftPco);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> setAvgRightPco(<span class="keyword">const</span> qint8 avgRightPco);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">void</span> setAvgLeftPowerPhase(<span class="keyword">const</span> quint8 avgLeftPowerPhase);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> setAvgLeftPowerPhasePeak(<span class="keyword">const</span> quint8 avgLeftPowerPhasePeak);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> setAvgRightPowerPhase(<span class="keyword">const</span> quint8 avgRightPowerPhase);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> setAvgRightPowerPhasePeak(<span class="keyword">const</span> quint8 avgRightPowerPhasePeak);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">void</span> setAvgPowerPosition(<span class="keyword">const</span> quint16 avgPowerPosition);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">void</span> setMaxPowerPosition(<span class="keyword">const</span> quint16 maxPowerPosition);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">void</span> setAvgCadencePosition(<span class="keyword">const</span> quint8 avgCadencePosition);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">void</span> setMaxCadencePosition(<span class="keyword">const</span> quint8 maxCadencePosition);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span> setEnhancedAvgSpeed(<span class="keyword">const</span> quint32 enhancedAvgSpeed);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">void</span> setEnhancedMaxSpeed(<span class="keyword">const</span> quint32 enhancedMaxSpeed);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">void</span> setEnhancedAvgAltitude(<span class="keyword">const</span> quint32 enhancedAvgAltitude);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">void</span> setEnhancedMinAltitude(<span class="keyword">const</span> quint32 enhancedMinAltitude);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">void</span> setEnhancedMaxAltitude(<span class="keyword">const</span> quint32 enhancedMaxAltitude);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">void</span> setAvgLevMotorPower(<span class="keyword">const</span> quint16 avgLevMotorPower);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordtype">void</span> setMaxLevMotorPower(<span class="keyword">const</span> quint16 maxLevMotorPower);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">void</span> setLevBatteryConsumption(<span class="keyword">const</span> quint8 levBatteryConsumption);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">void</span> setAvgVerticalRatio(<span class="keyword">const</span> quint16 avgVerticalRatio);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">void</span> setAvgStanceTimeBalance(<span class="keyword">const</span> quint16 avgStanceTimeBalance);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> setAvgStepLength(<span class="keyword">const</span> quint16 avgStepLength);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> setAvgVam(<span class="keyword">const</span> quint16 avgVam);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">void</span> setTotalGrit(<span class="keyword">const</span> <span class="keywordtype">float</span> totalGrit);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">void</span> setTotalFlow(<span class="keyword">const</span> <span class="keywordtype">float</span> totalFlow);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">void</span> setJumpCount(<span class="keyword">const</span> quint16 jumpCount);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">void</span> setAvgGrit(<span class="keyword">const</span> <span class="keywordtype">float</span> avgGrit);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">void</span> setAvgFlow(<span class="keyword">const</span> <span class="keywordtype">float</span> avgFlow);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">void</span> setTotalFractionalAscent(<span class="keyword">const</span> quint8 totalFractionalAscent);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">void</span> setTotalFractionalDescent(<span class="keyword">const</span> quint8 totalFractionalDescent);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">void</span> setAvgCoreTemperature(<span class="keyword">const</span> quint16 avgCoreTemperature);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">void</span> setMinCoreTemperature(<span class="keyword">const</span> quint16 minCoreTemperature);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">void</span> setMaxCoreTemperature(<span class="keyword">const</span> quint16 maxCoreTemperature);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classLapMessage.html">LapMessage</a>(LapMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classLapMessage.html">LapMessage</a>)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="comment">//Q_DISABLE_COPY(LapMessage)</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;};</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;QTFIT_END_NAMESPACE</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_LAPMESSAGE_H</span></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
 <div class="ttc" id="aclassLapMessage_html"><div class="ttname"><a href="classLapMessage.html">LapMessage</a></div><div class="ttdef"><b>Definition:</b> lapmessage.h:34</div></div>
+<div class="ttc" id="atypes_8h_html_a024199a3d93e059de66ed7ae51a7bea5"><div class="ttname"><a href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a></div><div class="ttdeci">SwimStroke</div><div class="ttdef"><b>Definition:</b> types.h:1626</div></div>
+<div class="ttc" id="atypes_8h_html_a5667b805d857c6d28f83f6038a0272d3"><div class="ttname"><a href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a></div><div class="ttdeci">Event</div><div class="ttdef"><b>Definition:</b> types.h:760</div></div>
+<div class="ttc" id="atypes_8h_html_a8694a8a27008597aaea010c38e16520c"><div class="ttname"><a href="types_8h.html#a8694a8a27008597aaea010c38e16520c">LeftRightBalance100</a></div><div class="ttdeci">LeftRightBalance100</div><div class="ttdef"><b>Definition:</b> types.h:1687</div></div>
+<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdef"><b>Definition:</b> types.h:479</div></div>
+<div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdef"><b>Definition:</b> types.h:191</div></div>
+<div class="ttc" id="atypes_8h_html_aed10717f0596999a72fa9b81a529b08b"><div class="ttname"><a href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a></div><div class="ttdeci">SubSport</div><div class="ttdef"><b>Definition:</b> types.h:610</div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> types.h:182</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

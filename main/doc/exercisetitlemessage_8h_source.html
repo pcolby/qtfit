@@ -127,25 +127,34 @@ $(document).ready(function(){initNavTree('exercisetitlemessage_8h_source.html','
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /// @todo Generate getters/setters.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>(ExerciseTitleMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Q_DISABLE_COPY(ExerciseTitleMessage)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;QTFIT_END_NAMESPACE</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_EXERCISETITLEMESSAGE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    ExerciseCategory exerciseCategory() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    quint16 exerciseName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QString wktStepName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> setMessageIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> setExerciseCategory(<span class="keyword">const</span> ExerciseCategory exerciseCategory);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> setExerciseName(<span class="keyword">const</span> quint16 exerciseName);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> setWktStepName(<span class="keyword">const</span> QString wktStepName);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>(ExerciseTitleMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//Q_DISABLE_COPY(ExerciseTitleMessage)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;QTFIT_END_NAMESPACE</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_EXERCISETITLEMESSAGE_H</span></div>
 <div class="ttc" id="aclassExerciseTitleMessage_html"><div class="ttname"><a href="classExerciseTitleMessage.html">ExerciseTitleMessage</a></div><div class="ttdef"><b>Definition:</b> exercisetitlemessage.h:34</div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
+<div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdef"><b>Definition:</b> types.h:191</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

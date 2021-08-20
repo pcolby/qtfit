@@ -1,5 +1,31 @@
 var classGoalMessage =
 [
     [ "GoalMessage", "classGoalMessage.html#a7fa899591830efe71af8d4393ffe4edc", null ],
-    [ "~GoalMessage", "classGoalMessage.html#aa2c69f41c80f48e893c1cf24d185e6a6", null ]
+    [ "~GoalMessage", "classGoalMessage.html#aa2c69f41c80f48e893c1cf24d185e6a6", null ],
+    [ "enabled", "classGoalMessage.html#a187f919c0d04883a2b669cbd9e5742d3", null ],
+    [ "endDate", "classGoalMessage.html#aefe4621299083429fb40efa1767bbc97", null ],
+    [ "messageIndex", "classGoalMessage.html#a1535265f54cdaf3a6d81aed7b35709a6", null ],
+    [ "recurrence", "classGoalMessage.html#a08a65e060b1d888213fd67899e34b311", null ],
+    [ "recurrenceValue", "classGoalMessage.html#a9669a8deea91d973aa97e4966ba55e2e", null ],
+    [ "repeat", "classGoalMessage.html#a4773cba84c918bdb2ca54d398efdc98a", null ],
+    [ "setEnabled", "classGoalMessage.html#ab4aa7ffe9506ae1d86a1d9fe217c54d8", null ],
+    [ "setEndDate", "classGoalMessage.html#a214248a97e42b403f448c73adad5c80d", null ],
+    [ "setMessageIndex", "classGoalMessage.html#ac1419eef8fe95b7e95fcc38d13ea3d77", null ],
+    [ "setRecurrence", "classGoalMessage.html#afee8f40fc25699bbc1d086abf384e5c3", null ],
+    [ "setRecurrenceValue", "classGoalMessage.html#aa4f00e8742fc6040ff560eeb2af87bbb", null ],
+    [ "setRepeat", "classGoalMessage.html#af000c82176a664763ba98a7f6e02a903", null ],
+    [ "setSource", "classGoalMessage.html#a7483a3d88c28d3aa5cd2f4a07daaa26b", null ],
+    [ "setSport", "classGoalMessage.html#a584bf7dc3816da514f6293fca0ec72b1", null ],
+    [ "setStartDate", "classGoalMessage.html#aeb400fff4f14e42c08cd2d2da8ed72da", null ],
+    [ "setSubSport", "classGoalMessage.html#ac753a77fefb4457a331783596dc49f3e", null ],
+    [ "setTargetValue", "classGoalMessage.html#ab13fbc38f1818ff174427249a75110ae", null ],
+    [ "setType", "classGoalMessage.html#acdec696d1c57e77ef8a807befd6f6bc6", null ],
+    [ "setValue", "classGoalMessage.html#ac7c63c8c992dfd89a0fd95f70095e82b", null ],
+    [ "source", "classGoalMessage.html#a44302bb0df361587b4e9fd10fbf4bb6f", null ],
+    [ "sport", "classGoalMessage.html#a44173747b82791a82b5e41992801e090", null ],
+    [ "startDate", "classGoalMessage.html#a34ad9ddbbd9077042b6f7bd6aafa13fd", null ],
+    [ "subSport", "classGoalMessage.html#a9be7748b3a5d646d4fcee2c04ba5e59c", null ],
+    [ "targetValue", "classGoalMessage.html#a2bea90f7f1f8cd08091ceeaec225b7c8", null ],
+    [ "type", "classGoalMessage.html#a76d49d9dbf3c4f3ff453e5aebf9d6299", null ],
+    [ "value", "classGoalMessage.html#a4d48b16f98020b836eb6ae6df37d694c", null ]
 ];

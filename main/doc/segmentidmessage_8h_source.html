@@ -127,25 +127,44 @@ $(document).ready(function(){initNavTree('segmentidmessage_8h_source.html',''); 
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /// @todo Generate getters/setters.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>(SegmentIdMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Q_DISABLE_COPY(SegmentIdMessage)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;QTFIT_END_NAMESPACE</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_SEGMENTIDMESSAGE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QString name() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QString uuid() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> enabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    quint32 userProfilePrimaryKey() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    quint32 deviceId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    quint8 defaultRaceLeader() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    SegmentDeleteStatus deleteStatus() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    SegmentSelectionType selectionType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> setName(<span class="keyword">const</span> QString name);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> setUuid(<span class="keyword">const</span> QString uuid);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> setSport(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> setEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> setUserProfilePrimaryKey(<span class="keyword">const</span> quint32 userProfilePrimaryKey);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> setDeviceId(<span class="keyword">const</span> quint32 deviceId);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> setDefaultRaceLeader(<span class="keyword">const</span> quint8 defaultRaceLeader);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> setDeleteStatus(<span class="keyword">const</span> SegmentDeleteStatus deleteStatus);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> setSelectionType(<span class="keyword">const</span> SegmentSelectionType selectionType);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>(SegmentIdMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">//Q_DISABLE_COPY(SegmentIdMessage)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;QTFIT_END_NAMESPACE</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_SEGMENTIDMESSAGE_H</span></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
 <div class="ttc" id="aclassSegmentIdMessage_html"><div class="ttname"><a href="classSegmentIdMessage.html">SegmentIdMessage</a></div><div class="ttdef"><b>Definition:</b> segmentidmessage.h:34</div></div>
+<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdef"><b>Definition:</b> types.h:479</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

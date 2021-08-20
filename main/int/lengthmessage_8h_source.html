@@ -127,23 +127,59 @@ $(document).ready(function(){initNavTree('lengthmessage_8h_source.html',''); ini
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classLengthMessage.html">LengthMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classLengthMessage.html#a066f4a40edc75f20d1a3a46a8873ec98">   38</a></span>&#160;    <a class="code" href="classLengthMessage.html#a066f4a40edc75f20d1a3a46a8873ec98">~LengthMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /// @todo Generate getters/setters.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classLengthMessage.html">LengthMessage</a>(<a class="code" href="classLengthMessagePrivate.html">LengthMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classLengthMessage.html">LengthMessage</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Q_DISABLE_COPY(LengthMessage)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_LENGTHMESSAGE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a> event() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="types_8h.html#a2628ea8d12e8b2563c32f05dc7fff6fa">EventType</a> eventType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> startTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    quint32 totalElapsedTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    quint32 totalTimerTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    quint16 totalStrokes() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    quint16 avgSpeed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a> swimStroke() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    quint8 avgSwimmingCadence() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    quint8 eventGroup() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    quint16 totalCalories() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="types_8h.html#ad017722f60d5dd9794ed6b42b4d39d82">LengthType</a> lengthType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    quint16 playerScore() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    quint16 opponentScore() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    quint16 strokeCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    quint16 zoneCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> setMessageIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> setTimestamp(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> setEvent(<span class="keyword">const</span> <a class="code" href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a> event);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setEventType(<span class="keyword">const</span> <a class="code" href="types_8h.html#a2628ea8d12e8b2563c32f05dc7fff6fa">EventType</a> eventType);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> setStartTime(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> startTime);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setTotalElapsedTime(<span class="keyword">const</span> quint32 totalElapsedTime);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setTotalTimerTime(<span class="keyword">const</span> quint32 totalTimerTime);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setTotalStrokes(<span class="keyword">const</span> quint16 totalStrokes);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setAvgSpeed(<span class="keyword">const</span> quint16 avgSpeed);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setSwimStroke(<span class="keyword">const</span> <a class="code" href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a> swimStroke);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> setAvgSwimmingCadence(<span class="keyword">const</span> quint8 avgSwimmingCadence);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setEventGroup(<span class="keyword">const</span> quint8 eventGroup);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setTotalCalories(<span class="keyword">const</span> quint16 totalCalories);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setLengthType(<span class="keyword">const</span> <a class="code" href="types_8h.html#ad017722f60d5dd9794ed6b42b4d39d82">LengthType</a> lengthType);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setPlayerScore(<span class="keyword">const</span> quint16 playerScore);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> setOpponentScore(<span class="keyword">const</span> quint16 opponentScore);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> setStrokeCount(<span class="keyword">const</span> quint16 strokeCount);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setZoneCount(<span class="keyword">const</span> quint16 zoneCount);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classLengthMessage.html">LengthMessage</a>(<a class="code" href="classLengthMessagePrivate.html">LengthMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classLengthMessage.html">LengthMessage</a>)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">//Q_DISABLE_COPY(LengthMessage)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_LENGTHMESSAGE_H</span></div>
 <div class="ttc" id="aQtFit__global_8h_html_a0e93dab66b5e7c93148056660a6c416c"><div class="ttname"><a href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a></div><div class="ttdeci">#define QTFIT_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00032">QtFit_global.h:32</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
@@ -152,6 +188,12 @@ $(document).ready(function(){initNavTree('lengthmessage_8h_source.html',''); ini
 <div class="ttc" id="aclassLengthMessage_html"><div class="ttname"><a href="classLengthMessage.html">LengthMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="lengthmessage_8h_source.html#l00034">lengthmessage.h:34</a></div></div>
 <div class="ttc" id="aclassLengthMessage_html_a066f4a40edc75f20d1a3a46a8873ec98"><div class="ttname"><a href="classLengthMessage.html#a066f4a40edc75f20d1a3a46a8873ec98">LengthMessage::~LengthMessage</a></div><div class="ttdeci">~LengthMessage()</div></div>
 <div class="ttc" id="afitdatamessage_8h_html"><div class="ttname"><a href="fitdatamessage_8h.html">fitdatamessage.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_a024199a3d93e059de66ed7ae51a7bea5"><div class="ttname"><a href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a></div><div class="ttdeci">SwimStroke</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01626">types.h:1626</a></div></div>
+<div class="ttc" id="atypes_8h_html_a2628ea8d12e8b2563c32f05dc7fff6fa"><div class="ttname"><a href="types_8h.html#a2628ea8d12e8b2563c32f05dc7fff6fa">EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00800">types.h:800</a></div></div>
+<div class="ttc" id="atypes_8h_html_a5667b805d857c6d28f83f6038a0272d3"><div class="ttname"><a href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a></div><div class="ttdeci">Event</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00760">types.h:760</a></div></div>
+<div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00191">types.h:191</a></div></div>
+<div class="ttc" id="atypes_8h_html_ad017722f60d5dd9794ed6b42b4d39d82"><div class="ttname"><a href="types_8h.html#ad017722f60d5dd9794ed6b42b4d39d82">LengthType</a></div><div class="ttdeci">LengthType</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01692">types.h:1692</a></div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00182">types.h:182</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

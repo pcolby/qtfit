@@ -1,5 +1,25 @@
 var classTotalsMessage =
 [
     [ "TotalsMessage", "classTotalsMessage.html#a05772995e6640ff7a74bff325a3907e7", null ],
-    [ "~TotalsMessage", "classTotalsMessage.html#aae9b5e29cff53ca5cfdda0f9dcdd2ce2", null ]
+    [ "~TotalsMessage", "classTotalsMessage.html#aae9b5e29cff53ca5cfdda0f9dcdd2ce2", null ],
+    [ "activeTime", "classTotalsMessage.html#a66990d919e8af49810caaf050ed35894", null ],
+    [ "calories", "classTotalsMessage.html#a07184263ad299ddb9dd8aa94a12f610c", null ],
+    [ "distance", "classTotalsMessage.html#a85aa280781c1660b697290cf72c24aaf", null ],
+    [ "elapsedTime", "classTotalsMessage.html#a77e12d1394266a76543f3c24456a9025", null ],
+    [ "messageIndex", "classTotalsMessage.html#a670c936168ddc199a6afd59a169eae1e", null ],
+    [ "sessions", "classTotalsMessage.html#ac17f7f768f5e4fa48e315ec36c66527f", null ],
+    [ "setActiveTime", "classTotalsMessage.html#a5c99fa5f638e020688aaffbf01f792d9", null ],
+    [ "setCalories", "classTotalsMessage.html#a7295507fadb24bcf3ee42df56b3fdd76", null ],
+    [ "setDistance", "classTotalsMessage.html#a4a9e05a1aa075d6724296775d3cc909f", null ],
+    [ "setElapsedTime", "classTotalsMessage.html#a679552ed040f3f38b74b74312f63f520", null ],
+    [ "setMessageIndex", "classTotalsMessage.html#a1ea073157fd03395c7f4118b034315be", null ],
+    [ "setSessions", "classTotalsMessage.html#ab643ff9205abbb7bcd57d2f76ff645ff", null ],
+    [ "setSport", "classTotalsMessage.html#a1e58ffb985990b75aeb8469d21336146", null ],
+    [ "setSportIndex", "classTotalsMessage.html#a013c096dd878c47f5bad64bb00a62df3", null ],
+    [ "setTimerTime", "classTotalsMessage.html#a900a611027d45f73eb5c626c4a49b9b3", null ],
+    [ "setTimestamp", "classTotalsMessage.html#a82acc0c3b3226a2174a17e440ec79d32", null ],
+    [ "sport", "classTotalsMessage.html#a74c00701a2c80299ed4486cd6d18e387", null ],
+    [ "sportIndex", "classTotalsMessage.html#a41cd71c6b588181641c2691e7e617a62", null ],
+    [ "timerTime", "classTotalsMessage.html#a91ce9b899f09250acd3072a0a663f19d", null ],
+    [ "timestamp", "classTotalsMessage.html#a3bdda8fc89834ade5c9c064fb963ebc7", null ]
 ];

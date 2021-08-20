@@ -113,6 +113,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab875c3beed99792508b839826a23506e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b028a498467329cdd846b7acfa4a45b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileCreatorMessage.html#a1b028a498467329cdd846b7acfa4a45b">~FileCreatorMessage</a> ()</td></tr>
 <tr class="separator:a1b028a498467329cdd846b7acfa4a45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a04fd8c52879ed2dd8b76fe07a6364b"><td class="memItemLeft" align="right" valign="top">quint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileCreatorMessage.html#a0a04fd8c52879ed2dd8b76fe07a6364b">softwareVersion</a> () const</td></tr>
+<tr class="separator:a0a04fd8c52879ed2dd8b76fe07a6364b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5301176cba60ddee7df3fba7741bef"><td class="memItemLeft" align="right" valign="top">quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileCreatorMessage.html#acb5301176cba60ddee7df3fba7741bef">hardwareVersion</a> () const</td></tr>
+<tr class="separator:acb5301176cba60ddee7df3fba7741bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fc1ffc22da717bb2d70921ccfe4173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileCreatorMessage.html#a44fc1ffc22da717bb2d70921ccfe4173">setSoftwareVersion</a> (const quint16 <a class="el" href="classFileCreatorMessage.html#a0a04fd8c52879ed2dd8b76fe07a6364b">softwareVersion</a>)</td></tr>
+<tr class="separator:a44fc1ffc22da717bb2d70921ccfe4173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4e0fdd26c855ddff3a3e860583ff4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileCreatorMessage.html#a1d4e0fdd26c855ddff3a3e860583ff4f">setHardwareVersion</a> (const quint8 <a class="el" href="classFileCreatorMessage.html#acb5301176cba60ddee7df3fba7741bef">hardwareVersion</a>)</td></tr>
+<tr class="separator:a1d4e0fdd26c855ddff3a3e860583ff4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classFitDataMessage"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFitDataMessage')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFitDataMessage.html">FitDataMessage</a></td></tr>
 <tr class="memitem:a6544fb3e56a84b8c588f735ecb4ebaa3 inherit pub_methods_classFitDataMessage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessage.html#a6544fb3e56a84b8c588f735ecb4ebaa3">FitDataMessage</a> ()</td></tr>
 <tr class="separator:a6544fb3e56a84b8c588f735ecb4ebaa3 inherit pub_methods_classFitDataMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +184,136 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acb5301176cba60ddee7df3fba7741bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5301176cba60ddee7df3fba7741bef">&#9670;&nbsp;</a></span>hardwareVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">quint8 FileCreatorMessage::hardwareVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="filecreatormessage_8cpp_source.html#l00041">41</a> of file <a class="el" href="filecreatormessage_8cpp_source.html">filecreatormessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFileCreatorMessage.html">FileCreatorMessage</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> d-&gt;hardwareVersion;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="ttc" id="aclassFileCreatorMessage_html"><div class="ttname"><a href="classFileCreatorMessage.html">FileCreatorMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="filecreatormessage_8h_source.html#l00034">filecreatormessage.h:34</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="filecreatormessage_8cpp_source.html#l00052">setHardwareVersion()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFileCreatorMessage_acb5301176cba60ddee7df3fba7741bef_icgraph.svg" width="371" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1d4e0fdd26c855ddff3a3e860583ff4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4e0fdd26c855ddff3a3e860583ff4f">&#9670;&nbsp;</a></span>setHardwareVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileCreatorMessage::setHardwareVersion </td>
+          <td>(</td>
+          <td class="paramtype">const quint8&#160;</td>
+          <td class="paramname"><em>hardwareVersion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="filecreatormessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="filecreatormessage_8cpp_source.html">filecreatormessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Q_D(<a class="code" href="classFileCreatorMessage.html">FileCreatorMessage</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    d-&gt;hardwareVersion = <a class="code" href="classFileCreatorMessage.html#acb5301176cba60ddee7df3fba7741bef">hardwareVersion</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="ttc" id="aclassFileCreatorMessage_html_acb5301176cba60ddee7df3fba7741bef"><div class="ttname"><a href="classFileCreatorMessage.html#acb5301176cba60ddee7df3fba7741bef">FileCreatorMessage::hardwareVersion</a></div><div class="ttdeci">quint8 hardwareVersion() const</div><div class="ttdef"><b>Definition:</b> <a href="filecreatormessage_8cpp_source.html#l00041">filecreatormessage.cpp:41</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="filecreatormessage_8cpp_source.html#l00041">hardwareVersion()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFileCreatorMessage_a1d4e0fdd26c855ddff3a3e860583ff4f_cgraph.svg" width="371" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a44fc1ffc22da717bb2d70921ccfe4173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44fc1ffc22da717bb2d70921ccfe4173">&#9670;&nbsp;</a></span>setSoftwareVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileCreatorMessage::setSoftwareVersion </td>
+          <td>(</td>
+          <td class="paramtype">const quint16&#160;</td>
+          <td class="paramname"><em>softwareVersion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="filecreatormessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="filecreatormessage_8cpp_source.html">filecreatormessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Q_D(<a class="code" href="classFileCreatorMessage.html">FileCreatorMessage</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    d-&gt;softwareVersion = <a class="code" href="classFileCreatorMessage.html#a0a04fd8c52879ed2dd8b76fe07a6364b">softwareVersion</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="aclassFileCreatorMessage_html_a0a04fd8c52879ed2dd8b76fe07a6364b"><div class="ttname"><a href="classFileCreatorMessage.html#a0a04fd8c52879ed2dd8b76fe07a6364b">FileCreatorMessage::softwareVersion</a></div><div class="ttdeci">quint16 softwareVersion() const</div><div class="ttdef"><b>Definition:</b> <a href="filecreatormessage_8cpp_source.html#l00035">filecreatormessage.cpp:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="filecreatormessage_8cpp_source.html#l00035">softwareVersion()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFileCreatorMessage_a44fc1ffc22da717bb2d70921ccfe4173_cgraph.svg" width="364" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0a04fd8c52879ed2dd8b76fe07a6364b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a04fd8c52879ed2dd8b76fe07a6364b">&#9670;&nbsp;</a></span>softwareVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">quint16 FileCreatorMessage::softwareVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="filecreatormessage_8cpp_source.html#l00035">35</a> of file <a class="el" href="filecreatormessage_8cpp_source.html">filecreatormessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classFileCreatorMessage.html">FileCreatorMessage</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> d-&gt;softwareVersion;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="filecreatormessage_8cpp_source.html#l00047">setSoftwareVersion()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFileCreatorMessage_a0a04fd8c52879ed2dd8b76fe07a6364b_icgraph.svg" width="364" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

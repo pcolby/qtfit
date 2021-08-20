@@ -127,23 +127,87 @@ $(document).ready(function(){initNavTree('bikeprofilemessage_8h_source.html','')
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classBikeProfileMessage.html">BikeProfileMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classBikeProfileMessage.html#a3a5beb493b9aa06e66fc0beb522a94f8">   38</a></span>&#160;    <a class="code" href="classBikeProfileMessage.html#a3a5beb493b9aa06e66fc0beb522a94f8">~BikeProfileMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /// @todo Generate getters/setters.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classBikeProfileMessage.html">BikeProfileMessage</a>(<a class="code" href="classBikeProfileMessagePrivate.html">BikeProfileMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classBikeProfileMessage.html">BikeProfileMessage</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Q_DISABLE_COPY(BikeProfileMessage)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_BIKEPROFILEMESSAGE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QString name() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> subSport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    quint32 odometer() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikeSpdAntId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikeCadAntId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikeSpdcadAntId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikePowerAntId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    quint16 customWheelsize() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    quint16 autoWheelsize() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    quint16 bikeWeight() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    quint16 powerCalFactor() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> autoWheelCal() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> autoPowerZero() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    quint8 id() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> spdEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> cadEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> spdcadEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> powerEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    quint8 crankLength() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> enabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikeSpdAntIdTransType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikeCadAntIdTransType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikeSpdcadAntIdTransType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikePowerAntIdTransType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    quint8 odometerRollover() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> frontGearNum() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> frontGear() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> rearGearNum() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> rearGear() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> shimanoDi2Enabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setMessageIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> setName(<span class="keyword">const</span> QString name);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> setSport(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setSubSport(<span class="keyword">const</span> <a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> subSport);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setOdometer(<span class="keyword">const</span> quint32 odometer);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setBikeSpdAntId(<span class="keyword">const</span> <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikeSpdAntId);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> setBikeCadAntId(<span class="keyword">const</span> <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikeCadAntId);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> setBikeSpdcadAntId(<span class="keyword">const</span> <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikeSpdcadAntId);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> setBikePowerAntId(<span class="keyword">const</span> <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> bikePowerAntId);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> setCustomWheelsize(<span class="keyword">const</span> quint16 customWheelsize);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> setAutoWheelsize(<span class="keyword">const</span> quint16 autoWheelsize);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> setBikeWeight(<span class="keyword">const</span> quint16 bikeWeight);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> setPowerCalFactor(<span class="keyword">const</span> quint16 powerCalFactor);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> setAutoWheelCal(<span class="keyword">const</span> <span class="keywordtype">bool</span> autoWheelCal);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> setAutoPowerZero(<span class="keyword">const</span> <span class="keywordtype">bool</span> autoPowerZero);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> setId(<span class="keyword">const</span> quint8 <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> setSpdEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> spdEnabled);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> setCadEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> cadEnabled);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> setSpdcadEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> spdcadEnabled);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> setPowerEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> powerEnabled);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> setCrankLength(<span class="keyword">const</span> quint8 crankLength);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> setEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> setBikeSpdAntIdTransType(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikeSpdAntIdTransType);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> setBikeCadAntIdTransType(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikeCadAntIdTransType);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> setBikeSpdcadAntIdTransType(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikeSpdcadAntIdTransType);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> setBikePowerAntIdTransType(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> bikePowerAntIdTransType);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> setOdometerRollover(<span class="keyword">const</span> quint8 odometerRollover);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> setFrontGearNum(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> frontGearNum);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> setFrontGear(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> frontGear);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> setRearGearNum(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> rearGearNum);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> setRearGear(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> rearGear);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> setShimanoDi2Enabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> shimanoDi2Enabled);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classBikeProfileMessage.html">BikeProfileMessage</a>(<a class="code" href="classBikeProfileMessagePrivate.html">BikeProfileMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classBikeProfileMessage.html">BikeProfileMessage</a>)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="comment">//Q_DISABLE_COPY(BikeProfileMessage)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_BIKEPROFILEMESSAGE_H</span></div>
 <div class="ttc" id="aQtFit__global_8h_html_a0e93dab66b5e7c93148056660a6c416c"><div class="ttname"><a href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a></div><div class="ttdeci">#define QTFIT_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00032">QtFit_global.h:32</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
@@ -152,6 +216,11 @@ $(document).ready(function(){initNavTree('bikeprofilemessage_8h_source.html','')
 <div class="ttc" id="aclassBikeProfileMessage_html_a3a5beb493b9aa06e66fc0beb522a94f8"><div class="ttname"><a href="classBikeProfileMessage.html#a3a5beb493b9aa06e66fc0beb522a94f8">BikeProfileMessage::~BikeProfileMessage</a></div><div class="ttdeci">~BikeProfileMessage()</div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="afitdatamessage_8h_html"><div class="ttname"><a href="fitdatamessage_8h.html">fitdatamessage.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00479">types.h:479</a></div></div>
+<div class="ttc" id="atypes_8h_html_ab1f19760ebc204816d39999628339d7c"><div class="ttname"><a href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a></div><div class="ttdeci">quint16 quint16z</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00044">types.h:44</a></div></div>
+<div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00191">types.h:191</a></div></div>
+<div class="ttc" id="atypes_8h_html_acf72d89cfaf9bb22ddf07c864153d0ec"><div class="ttname"><a href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a></div><div class="ttdeci">QTFIT_BEGIN_NAMESPACE typedef quint8 quint8z</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00043">types.h:43</a></div></div>
+<div class="ttc" id="atypes_8h_html_aed10717f0596999a72fa9b81a529b08b"><div class="ttname"><a href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a></div><div class="ttdeci">SubSport</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00610">types.h:610</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -123,36 +123,110 @@ $(document).ready(function(){initNavTree('hrmessage_8cpp_source.html',''); initR
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classHrMessagePrivate.html#a91b0cc940874be0ba1177a18a6727b4c">   35</a></span>&#160;<a class="code" href="classHrMessagePrivate.html#a8064174f1d7ce4d37a3261ac689b7d2c">HrMessagePrivate::HrMessagePrivate</a>(<a class="code" href="classHrMessage.html">HrMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca08ee99e4c183670239a50ae73fcd39d6">MesgNum::Hr</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classHrMessagePrivate.html#a41f9b05c9eb976fd9e26820657e4b841">   40</a></span>&#160;<a class="code" href="classHrMessagePrivate.html#a41f9b05c9eb976fd9e26820657e4b841">HrMessagePrivate::~HrMessagePrivate</a>()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/// @todo Generate implementation.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classHrMessagePrivate.html#a5ebc80e928896701e4f26d57311ebfdb">   46</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="classHrMessagePrivate.html#a5ebc80e928896701e4f26d57311ebfdb">HrMessagePrivate::setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray data, <span class="keywordtype">int</span> baseType)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//    switch fieldId {</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//        default:</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//            return false;</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classHrMessage.html#a729716591a58f0e3aaa9e16d125bae88">   35</a></span>&#160;<a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> <a class="code" href="classHrMessage.html#a729716591a58f0e3aaa9e16d125bae88">HrMessage::timestamp</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classHrMessage.html#ae225c77135dfcda02a541d9f807e523c">   41</a></span>&#160;quint16 <a class="code" href="classHrMessage.html#ae225c77135dfcda02a541d9f807e523c">HrMessage::fractionalTimestamp</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> d-&gt;fractionalTimestamp;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classHrMessage.html#a7bd1a9e9a09ab9229b1d3242203c73c1">   47</a></span>&#160;quint8 <a class="code" href="classHrMessage.html#a7bd1a9e9a09ab9229b1d3242203c73c1">HrMessage::time256</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> d-&gt;time256;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classHrMessage.html#a6e509cc15fc54540fc47283d7093843b">   53</a></span>&#160;quint8 <a class="code" href="classHrMessage.html#a6e509cc15fc54540fc47283d7093843b">HrMessage::filteredBpm</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> d-&gt;filteredBpm;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classHrMessage.html#a7b9d415b6e1ca01e71f0797118a0cd35">   59</a></span>&#160;quint32 <a class="code" href="classHrMessage.html#a7b9d415b6e1ca01e71f0797118a0cd35">HrMessage::eventTimestamp</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> d-&gt;eventTimestamp;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classHrMessage.html#a0fe581c365ed22ca3541fddea0853b7b">   65</a></span>&#160;quint8 <a class="code" href="classHrMessage.html#a0fe581c365ed22ca3541fddea0853b7b">HrMessage::eventTimestamp12</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> d-&gt;eventTimestamp12;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classHrMessage.html#a795ca0512b8c1d8b658aad76f44fd87d">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrMessage.html#a795ca0512b8c1d8b658aad76f44fd87d">HrMessage::setTimestamp</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    d-&gt;timestamp = <a class="code" href="classHrMessage.html#a729716591a58f0e3aaa9e16d125bae88">timestamp</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classHrMessage.html#ab5b0c3d980032d1ba9cd8854369d7243">   76</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrMessage.html#ab5b0c3d980032d1ba9cd8854369d7243">HrMessage::setFractionalTimestamp</a>(<span class="keyword">const</span> quint16 fractionalTimestamp)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    d-&gt;fractionalTimestamp = <a class="code" href="classHrMessage.html#ae225c77135dfcda02a541d9f807e523c">fractionalTimestamp</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classHrMessage.html#a83273a1ca922c6074486724643478070">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrMessage.html#a83273a1ca922c6074486724643478070">HrMessage::setTime256</a>(<span class="keyword">const</span> quint8 time256)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Q_D(<a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    d-&gt;time256 = <a class="code" href="classHrMessage.html#a7bd1a9e9a09ab9229b1d3242203c73c1">time256</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classHrMessage.html#a7d10db453b6a9adea1a1eb65043a4fff">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrMessage.html#a7d10db453b6a9adea1a1eb65043a4fff">HrMessage::setFilteredBpm</a>(<span class="keyword">const</span> quint8 filteredBpm)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Q_D(<a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    d-&gt;filteredBpm = <a class="code" href="classHrMessage.html#a6e509cc15fc54540fc47283d7093843b">filteredBpm</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classHrMessage.html#a3fd2d65f73bdd7cc097cc7740609086b">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrMessage.html#a3fd2d65f73bdd7cc097cc7740609086b">HrMessage::setEventTimestamp</a>(<span class="keyword">const</span> quint32 eventTimestamp)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    d-&gt;eventTimestamp = <a class="code" href="classHrMessage.html#a7b9d415b6e1ca01e71f0797118a0cd35">eventTimestamp</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classHrMessage.html#a2d1552995acfda160f7a86aeec46322e">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrMessage.html#a2d1552995acfda160f7a86aeec46322e">HrMessage::setEventTimestamp12</a>(<span class="keyword">const</span> quint8 eventTimestamp12)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<a class="code" href="classHrMessage.html">HrMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    d-&gt;eventTimestamp12 = <a class="code" href="classHrMessage.html#a0fe581c365ed22ca3541fddea0853b7b">eventTimestamp12</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classHrMessagePrivate.html#a91b0cc940874be0ba1177a18a6727b4c">  102</a></span>&#160;<a class="code" href="classHrMessagePrivate.html#a8064174f1d7ce4d37a3261ac689b7d2c">HrMessagePrivate::HrMessagePrivate</a>(<a class="code" href="classHrMessage.html">HrMessage</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  , timestamp(static_cast&lt;<a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a>&gt;(-1))</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  , fractionalTimestamp(0xFFFF)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  , time256(0xFF)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  , filteredBpm(0xFF)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  , eventTimestamp(0xFFFFFFFF)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  , eventTimestamp12(0xFF)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca08ee99e4c183670239a50ae73fcd39d6">MesgNum::Hr</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classHrMessagePrivate.html#a41f9b05c9eb976fd9e26820657e4b841">  114</a></span>&#160;<a class="code" href="classHrMessagePrivate.html#a41f9b05c9eb976fd9e26820657e4b841">HrMessagePrivate::~HrMessagePrivate</a>()</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">/// @todo Generate implementation.</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classHrMessagePrivate.html#a5ebc80e928896701e4f26d57311ebfdb">  120</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="classHrMessagePrivate.html#a5ebc80e928896701e4f26d57311ebfdb">HrMessagePrivate::setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray data, <span class="keywordtype">int</span> baseType)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">//    switch fieldId {</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//        default:</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//            return false;</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
@@ -160,14 +234,27 @@ $(document).ready(function(){initNavTree('hrmessage_8cpp_source.html',''); initR
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="aclassHrMessagePrivate_html"><div class="ttname"><a href="classHrMessagePrivate.html">HrMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="hrmessage__p_8h_source.html#l00034">hrmessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassHrMessagePrivate_html_a41f9b05c9eb976fd9e26820657e4b841"><div class="ttname"><a href="classHrMessagePrivate.html#a41f9b05c9eb976fd9e26820657e4b841">HrMessagePrivate::~HrMessagePrivate</a></div><div class="ttdeci">virtual ~HrMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00040">hrmessage.cpp:40</a></div></div>
-<div class="ttc" id="aclassHrMessagePrivate_html_a5ebc80e928896701e4f26d57311ebfdb"><div class="ttname"><a href="classHrMessagePrivate.html#a5ebc80e928896701e4f26d57311ebfdb">HrMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray data, int baseType) override</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00046">hrmessage.cpp:46</a></div></div>
+<div class="ttc" id="aclassHrMessagePrivate_html_a41f9b05c9eb976fd9e26820657e4b841"><div class="ttname"><a href="classHrMessagePrivate.html#a41f9b05c9eb976fd9e26820657e4b841">HrMessagePrivate::~HrMessagePrivate</a></div><div class="ttdeci">virtual ~HrMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00114">hrmessage.cpp:114</a></div></div>
+<div class="ttc" id="aclassHrMessagePrivate_html_a5ebc80e928896701e4f26d57311ebfdb"><div class="ttname"><a href="classHrMessagePrivate.html#a5ebc80e928896701e4f26d57311ebfdb">HrMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray data, int baseType) override</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00120">hrmessage.cpp:120</a></div></div>
 <div class="ttc" id="aclassHrMessagePrivate_html_a8064174f1d7ce4d37a3261ac689b7d2c"><div class="ttname"><a href="classHrMessagePrivate.html#a8064174f1d7ce4d37a3261ac689b7d2c">HrMessagePrivate::HrMessagePrivate</a></div><div class="ttdeci">HrMessagePrivate()=delete</div></div>
 <div class="ttc" id="aclassHrMessage_html"><div class="ttname"><a href="classHrMessage.html">HrMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8h_source.html#l00034">hrmessage.h:34</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a0fe581c365ed22ca3541fddea0853b7b"><div class="ttname"><a href="classHrMessage.html#a0fe581c365ed22ca3541fddea0853b7b">HrMessage::eventTimestamp12</a></div><div class="ttdeci">quint8 eventTimestamp12() const</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00065">hrmessage.cpp:65</a></div></div>
 <div class="ttc" id="aclassHrMessage_html_a221f93382beb4287b31c2252c5e78946"><div class="ttname"><a href="classHrMessage.html#a221f93382beb4287b31c2252c5e78946">HrMessage::HrMessage</a></div><div class="ttdeci">HrMessage()</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00030">hrmessage.cpp:30</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a2d1552995acfda160f7a86aeec46322e"><div class="ttname"><a href="classHrMessage.html#a2d1552995acfda160f7a86aeec46322e">HrMessage::setEventTimestamp12</a></div><div class="ttdeci">void setEventTimestamp12(const quint8 eventTimestamp12)</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00096">hrmessage.cpp:96</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a3fd2d65f73bdd7cc097cc7740609086b"><div class="ttname"><a href="classHrMessage.html#a3fd2d65f73bdd7cc097cc7740609086b">HrMessage::setEventTimestamp</a></div><div class="ttdeci">void setEventTimestamp(const quint32 eventTimestamp)</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00091">hrmessage.cpp:91</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a6e509cc15fc54540fc47283d7093843b"><div class="ttname"><a href="classHrMessage.html#a6e509cc15fc54540fc47283d7093843b">HrMessage::filteredBpm</a></div><div class="ttdeci">quint8 filteredBpm() const</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00053">hrmessage.cpp:53</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a729716591a58f0e3aaa9e16d125bae88"><div class="ttname"><a href="classHrMessage.html#a729716591a58f0e3aaa9e16d125bae88">HrMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00035">hrmessage.cpp:35</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a795ca0512b8c1d8b658aad76f44fd87d"><div class="ttname"><a href="classHrMessage.html#a795ca0512b8c1d8b658aad76f44fd87d">HrMessage::setTimestamp</a></div><div class="ttdeci">void setTimestamp(const DateTime timestamp)</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00071">hrmessage.cpp:71</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a7b9d415b6e1ca01e71f0797118a0cd35"><div class="ttname"><a href="classHrMessage.html#a7b9d415b6e1ca01e71f0797118a0cd35">HrMessage::eventTimestamp</a></div><div class="ttdeci">quint32 eventTimestamp() const</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00059">hrmessage.cpp:59</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a7bd1a9e9a09ab9229b1d3242203c73c1"><div class="ttname"><a href="classHrMessage.html#a7bd1a9e9a09ab9229b1d3242203c73c1">HrMessage::time256</a></div><div class="ttdeci">quint8 time256() const</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00047">hrmessage.cpp:47</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a7d10db453b6a9adea1a1eb65043a4fff"><div class="ttname"><a href="classHrMessage.html#a7d10db453b6a9adea1a1eb65043a4fff">HrMessage::setFilteredBpm</a></div><div class="ttdeci">void setFilteredBpm(const quint8 filteredBpm)</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00086">hrmessage.cpp:86</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_a83273a1ca922c6074486724643478070"><div class="ttname"><a href="classHrMessage.html#a83273a1ca922c6074486724643478070">HrMessage::setTime256</a></div><div class="ttdeci">void setTime256(const quint8 time256)</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00081">hrmessage.cpp:81</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_ab5b0c3d980032d1ba9cd8854369d7243"><div class="ttname"><a href="classHrMessage.html#ab5b0c3d980032d1ba9cd8854369d7243">HrMessage::setFractionalTimestamp</a></div><div class="ttdeci">void setFractionalTimestamp(const quint16 fractionalTimestamp)</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00076">hrmessage.cpp:76</a></div></div>
+<div class="ttc" id="aclassHrMessage_html_ae225c77135dfcda02a541d9f807e523c"><div class="ttname"><a href="classHrMessage.html#ae225c77135dfcda02a541d9f807e523c">HrMessage::fractionalTimestamp</a></div><div class="ttdeci">quint16 fractionalTimestamp() const</div><div class="ttdef"><b>Definition:</b> <a href="hrmessage_8cpp_source.html#l00041">hrmessage.cpp:41</a></div></div>
 <div class="ttc" id="ahrmessage_8h_html"><div class="ttname"><a href="hrmessage_8h.html">hrmessage.h</a></div></div>
 <div class="ttc" id="ahrmessage__p_8h_html"><div class="ttname"><a href="hrmessage__p_8h.html">hrmessage_p.h</a></div></div>
 <div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22ca08ee99e4c183670239a50ae73fcd39d6"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca08ee99e4c183670239a50ae73fcd39d6">MesgNum::Hr</a></div><div class="ttdeci">@ Hr</div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00182">types.h:182</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

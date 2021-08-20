@@ -127,25 +127,73 @@ $(document).ready(function(){initNavTree('divesettingsmessage_8h_source.html',''
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classDiveSettingsMessage.html">DiveSettingsMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classDiveSettingsMessage.html">DiveSettingsMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /// @todo Generate getters/setters.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classDiveSettingsMessage.html">DiveSettingsMessage</a>(DiveSettingsMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classDiveSettingsMessage.html">DiveSettingsMessage</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Q_DISABLE_COPY(DiveSettingsMessage)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;QTFIT_END_NAMESPACE</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_DIVESETTINGSMESSAGE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QString name() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a75ff45ad4b515d4d0470cc73653b0ce2">TissueModelType</a> model() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    quint8 gfLow() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    quint8 gfHigh() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    WaterType waterType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">float</span> waterDensity() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    quint8 po2Warn() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    quint8 po2Critical() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    quint8 po2Deco() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> safetyStopEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">float</span> bottomDepth() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    quint32 bottomTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> apneaCountdownEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    quint32 apneaCountdownTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    DiveBacklightMode backlightMode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    quint8 backlightBrightness() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="types_8h.html#aa69322d9ced39379dd197f99257c7781">BacklightTimeout</a> backlightTimeout() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    quint16 repeatDiveInterval() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    quint16 safetyStopTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="types_8h.html#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a> heartRateSourceType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    quint8 heartRateSource() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> setMessageIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setName(<span class="keyword">const</span> QString name);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setModel(<span class="keyword">const</span> <a class="code" href="types_8h.html#a75ff45ad4b515d4d0470cc73653b0ce2">TissueModelType</a> model);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setGfLow(<span class="keyword">const</span> quint8 gfLow);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setGfHigh(<span class="keyword">const</span> quint8 gfHigh);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setWaterType(<span class="keyword">const</span> WaterType waterType);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> setWaterDensity(<span class="keyword">const</span> <span class="keywordtype">float</span> waterDensity);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setPo2Warn(<span class="keyword">const</span> quint8 po2Warn);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setPo2Critical(<span class="keyword">const</span> quint8 po2Critical);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setPo2Deco(<span class="keyword">const</span> quint8 po2Deco);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setSafetyStopEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> safetyStopEnabled);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> setBottomDepth(<span class="keyword">const</span> <span class="keywordtype">float</span> bottomDepth);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> setBottomTime(<span class="keyword">const</span> quint32 bottomTime);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setApneaCountdownEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> apneaCountdownEnabled);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setApneaCountdownTime(<span class="keyword">const</span> quint32 apneaCountdownTime);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setBacklightMode(<span class="keyword">const</span> DiveBacklightMode backlightMode);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> setBacklightBrightness(<span class="keyword">const</span> quint8 backlightBrightness);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> setBacklightTimeout(<span class="keyword">const</span> <a class="code" href="types_8h.html#aa69322d9ced39379dd197f99257c7781">BacklightTimeout</a> backlightTimeout);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> setRepeatDiveInterval(<span class="keyword">const</span> quint16 repeatDiveInterval);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> setSafetyStopTime(<span class="keyword">const</span> quint16 safetyStopTime);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> setHeartRateSourceType(<span class="keyword">const</span> <a class="code" href="types_8h.html#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a> heartRateSourceType);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> setHeartRateSource(<span class="keyword">const</span> quint8 heartRateSource);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classDiveSettingsMessage.html">DiveSettingsMessage</a>(DiveSettingsMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classDiveSettingsMessage.html">DiveSettingsMessage</a>)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">//Q_DISABLE_COPY(DiveSettingsMessage)</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;QTFIT_END_NAMESPACE</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_DIVESETTINGSMESSAGE_H</span></div>
 <div class="ttc" id="aclassDiveSettingsMessage_html"><div class="ttname"><a href="classDiveSettingsMessage.html">DiveSettingsMessage</a></div><div class="ttdef"><b>Definition:</b> divesettingsmessage.h:34</div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
+<div class="ttc" id="atypes_8h_html_a3ae727773c367ac1041d72ac770a0ab1"><div class="ttname"><a href="types_8h.html#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a></div><div class="ttdeci">SourceType</div><div class="ttdef"><b>Definition:</b> types.h:1959</div></div>
+<div class="ttc" id="atypes_8h_html_a75ff45ad4b515d4d0470cc73653b0ce2"><div class="ttname"><a href="types_8h.html#a75ff45ad4b515d4d0470cc73653b0ce2">TissueModelType</a></div><div class="ttdeci">TissueModelType</div><div class="ttdef"><b>Definition:</b> types.h:3802</div></div>
+<div class="ttc" id="atypes_8h_html_aa69322d9ced39379dd197f99257c7781"><div class="ttname"><a href="types_8h.html#aa69322d9ced39379dd197f99257c7781">BacklightTimeout</a></div><div class="ttdeci">BacklightTimeout</div><div class="ttdoc">Timeout in seconds.</div><div class="ttdef"><b>Definition:</b> types.h:756</div></div>
+<div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdef"><b>Definition:</b> types.h:191</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -123,51 +123,139 @@ $(document).ready(function(){initNavTree('anttxmessage_8cpp_source.html',''); in
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classAntTxMessagePrivate.html#a8934b1701b7713b8cac5ac8e270c1f4a">   35</a></span>&#160;<a class="code" href="classAntTxMessagePrivate.html#ad3bb588e9b55361849e22512c83e1aa8">AntTxMessagePrivate::AntTxMessagePrivate</a>(<a class="code" href="classAntTxMessage.html">AntTxMessage</a> * <span class="keyword">const</span> q) : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca259005995ae2e8a8a6133a2764a46bc8">MesgNum::AntTx</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85">   40</a></span>&#160;<a class="code" href="classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85">AntTxMessagePrivate::~AntTxMessagePrivate</a>()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/// @todo Generate implementation.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classAntTxMessagePrivate.html#a1b1b8e29b340b230a5e11fb106d3f5ec">   46</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="classAntTxMessagePrivate.html#a1b1b8e29b340b230a5e11fb106d3f5ec">AntTxMessagePrivate::setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray data, <span class="keywordtype">int</span> baseType)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//    switch fieldId {</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//        default:</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//            return false;</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a32ea598b8b4eb88a957fd5b81038fa86">   35</a></span>&#160;<a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> <a class="code" href="classAntTxMessage.html#a32ea598b8b4eb88a957fd5b81038fa86">AntTxMessage::timestamp</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a6a79953eb683b2c83d5bdd7c52887ff0">   41</a></span>&#160;quint16 <a class="code" href="classAntTxMessage.html#a6a79953eb683b2c83d5bdd7c52887ff0">AntTxMessage::fractionalTimestamp</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> d-&gt;fractionalTimestamp;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a0e90f85dcd1d2bbcdf61a0ded2f008d0">   47</a></span>&#160;quint8 <a class="code" href="classAntTxMessage.html#a0e90f85dcd1d2bbcdf61a0ded2f008d0">AntTxMessage::mesgId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> d-&gt;mesgId;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#acefd5a2afe37b3e4c95d17a3872435e9">   53</a></span>&#160;quint8 <a class="code" href="classAntTxMessage.html#acefd5a2afe37b3e4c95d17a3872435e9">AntTxMessage::mesgData</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> d-&gt;mesgData;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a5fa5c7d1ccca23ad447af813508919d8">   59</a></span>&#160;quint8 <a class="code" href="classAntTxMessage.html#a5fa5c7d1ccca23ad447af813508919d8">AntTxMessage::channelNumber</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> d-&gt;channelNumber;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a2b52ec558faf005ed58024a7b5a26d86">   65</a></span>&#160;quint8 <a class="code" href="classAntTxMessage.html#a2b52ec558faf005ed58024a7b5a26d86">AntTxMessage::data</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> d-&gt;data;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#ab478652ae63ca402962c0e4f5f602520">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAntTxMessage.html#ab478652ae63ca402962c0e4f5f602520">AntTxMessage::setTimestamp</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    d-&gt;timestamp = <a class="code" href="classAntTxMessage.html#a32ea598b8b4eb88a957fd5b81038fa86">timestamp</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a1ba938a98d6bd1f748c5fa829933db65">   76</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAntTxMessage.html#a1ba938a98d6bd1f748c5fa829933db65">AntTxMessage::setFractionalTimestamp</a>(<span class="keyword">const</span> quint16 fractionalTimestamp)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    d-&gt;fractionalTimestamp = <a class="code" href="classAntTxMessage.html#a6a79953eb683b2c83d5bdd7c52887ff0">fractionalTimestamp</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a006b1a968f77764132c2a46088291baa">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAntTxMessage.html#a006b1a968f77764132c2a46088291baa">AntTxMessage::setMesgId</a>(<span class="keyword">const</span> quint8 mesgId)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Q_D(<a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    d-&gt;mesgId = <a class="code" href="classAntTxMessage.html#a0e90f85dcd1d2bbcdf61a0ded2f008d0">mesgId</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a8471e00d4c26061cf459c3f060dec702">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAntTxMessage.html#a8471e00d4c26061cf459c3f060dec702">AntTxMessage::setMesgData</a>(<span class="keyword">const</span> quint8 mesgData)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Q_D(<a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    d-&gt;mesgData = <a class="code" href="classAntTxMessage.html#acefd5a2afe37b3e4c95d17a3872435e9">mesgData</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a342f57a61bb074541951cd38de2da6dd">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAntTxMessage.html#a342f57a61bb074541951cd38de2da6dd">AntTxMessage::setChannelNumber</a>(<span class="keyword">const</span> quint8 channelNumber)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    d-&gt;channelNumber = <a class="code" href="classAntTxMessage.html#a5fa5c7d1ccca23ad447af813508919d8">channelNumber</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classAntTxMessage.html#a79b4b04b2b220fd84a0e1f8fc7d9daaa">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAntTxMessage.html#a79b4b04b2b220fd84a0e1f8fc7d9daaa">AntTxMessage::setData</a>(<span class="keyword">const</span> quint8 data)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<a class="code" href="classAntTxMessage.html">AntTxMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    d-&gt;data = <a class="code" href="classAntTxMessage.html#a2b52ec558faf005ed58024a7b5a26d86">data</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classAntTxMessagePrivate.html#a8934b1701b7713b8cac5ac8e270c1f4a">  102</a></span>&#160;<a class="code" href="classAntTxMessagePrivate.html#ad3bb588e9b55361849e22512c83e1aa8">AntTxMessagePrivate::AntTxMessagePrivate</a>(<a class="code" href="classAntTxMessage.html">AntTxMessage</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  , timestamp(static_cast&lt;<a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a>&gt;(-1))</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  , fractionalTimestamp(0xFFFF)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  , mesgId(0xFF)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  , mesgData(0xFF)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  , channelNumber(0xFF)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  , data(0xFF)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca259005995ae2e8a8a6133a2764a46bc8">MesgNum::AntTx</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85">  114</a></span>&#160;<a class="code" href="classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85">AntTxMessagePrivate::~AntTxMessagePrivate</a>()</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">/// @todo Generate implementation.</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classAntTxMessagePrivate.html#a1b1b8e29b340b230a5e11fb106d3f5ec">  120</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="classAntTxMessagePrivate.html#a1b1b8e29b340b230a5e11fb106d3f5ec">AntTxMessagePrivate::setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray data, <span class="keywordtype">int</span> baseType)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">//    switch fieldId {</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//        default:</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//            return false;</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, <a class="code" href="classAntTxMessagePrivate.html#a784b96ac4c046cd0bae2091d88177257">data</a>, baseType);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
 <div class="ttc" id="aanttxmessage_8h_html"><div class="ttname"><a href="anttxmessage_8h.html">anttxmessage.h</a></div></div>
 <div class="ttc" id="aanttxmessage__p_8h_html"><div class="ttname"><a href="anttxmessage__p_8h.html">anttxmessage_p.h</a></div></div>
 <div class="ttc" id="aclassAntTxMessagePrivate_html"><div class="ttname"><a href="classAntTxMessagePrivate.html">AntTxMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage__p_8h_source.html#l00034">anttxmessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassAntTxMessagePrivate_html_a1b1b8e29b340b230a5e11fb106d3f5ec"><div class="ttname"><a href="classAntTxMessagePrivate.html#a1b1b8e29b340b230a5e11fb106d3f5ec">AntTxMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray data, int baseType) override</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00046">anttxmessage.cpp:46</a></div></div>
-<div class="ttc" id="aclassAntTxMessagePrivate_html_a439ca6411c32ea597f98a46b56567f85"><div class="ttname"><a href="classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85">AntTxMessagePrivate::~AntTxMessagePrivate</a></div><div class="ttdeci">virtual ~AntTxMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00040">anttxmessage.cpp:40</a></div></div>
+<div class="ttc" id="aclassAntTxMessagePrivate_html_a1b1b8e29b340b230a5e11fb106d3f5ec"><div class="ttname"><a href="classAntTxMessagePrivate.html#a1b1b8e29b340b230a5e11fb106d3f5ec">AntTxMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray data, int baseType) override</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00120">anttxmessage.cpp:120</a></div></div>
+<div class="ttc" id="aclassAntTxMessagePrivate_html_a439ca6411c32ea597f98a46b56567f85"><div class="ttname"><a href="classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85">AntTxMessagePrivate::~AntTxMessagePrivate</a></div><div class="ttdeci">virtual ~AntTxMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00114">anttxmessage.cpp:114</a></div></div>
+<div class="ttc" id="aclassAntTxMessagePrivate_html_a784b96ac4c046cd0bae2091d88177257"><div class="ttname"><a href="classAntTxMessagePrivate.html#a784b96ac4c046cd0bae2091d88177257">AntTxMessagePrivate::data</a></div><div class="ttdeci">quint8 data</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage__p_8h_source.html#l00042">anttxmessage_p.h:42</a></div></div>
 <div class="ttc" id="aclassAntTxMessagePrivate_html_ad3bb588e9b55361849e22512c83e1aa8"><div class="ttname"><a href="classAntTxMessagePrivate.html#ad3bb588e9b55361849e22512c83e1aa8">AntTxMessagePrivate::AntTxMessagePrivate</a></div><div class="ttdeci">AntTxMessagePrivate()=delete</div></div>
 <div class="ttc" id="aclassAntTxMessage_html"><div class="ttname"><a href="classAntTxMessage.html">AntTxMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8h_source.html#l00034">anttxmessage.h:34</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a006b1a968f77764132c2a46088291baa"><div class="ttname"><a href="classAntTxMessage.html#a006b1a968f77764132c2a46088291baa">AntTxMessage::setMesgId</a></div><div class="ttdeci">void setMesgId(const quint8 mesgId)</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00081">anttxmessage.cpp:81</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a0e90f85dcd1d2bbcdf61a0ded2f008d0"><div class="ttname"><a href="classAntTxMessage.html#a0e90f85dcd1d2bbcdf61a0ded2f008d0">AntTxMessage::mesgId</a></div><div class="ttdeci">quint8 mesgId() const</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00047">anttxmessage.cpp:47</a></div></div>
 <div class="ttc" id="aclassAntTxMessage_html_a15d8974fc5799848c66507e68f8a0f81"><div class="ttname"><a href="classAntTxMessage.html#a15d8974fc5799848c66507e68f8a0f81">AntTxMessage::AntTxMessage</a></div><div class="ttdeci">AntTxMessage()</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00030">anttxmessage.cpp:30</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a1ba938a98d6bd1f748c5fa829933db65"><div class="ttname"><a href="classAntTxMessage.html#a1ba938a98d6bd1f748c5fa829933db65">AntTxMessage::setFractionalTimestamp</a></div><div class="ttdeci">void setFractionalTimestamp(const quint16 fractionalTimestamp)</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00076">anttxmessage.cpp:76</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a2b52ec558faf005ed58024a7b5a26d86"><div class="ttname"><a href="classAntTxMessage.html#a2b52ec558faf005ed58024a7b5a26d86">AntTxMessage::data</a></div><div class="ttdeci">quint8 data() const</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00065">anttxmessage.cpp:65</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a32ea598b8b4eb88a957fd5b81038fa86"><div class="ttname"><a href="classAntTxMessage.html#a32ea598b8b4eb88a957fd5b81038fa86">AntTxMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00035">anttxmessage.cpp:35</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a342f57a61bb074541951cd38de2da6dd"><div class="ttname"><a href="classAntTxMessage.html#a342f57a61bb074541951cd38de2da6dd">AntTxMessage::setChannelNumber</a></div><div class="ttdeci">void setChannelNumber(const quint8 channelNumber)</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00091">anttxmessage.cpp:91</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a5fa5c7d1ccca23ad447af813508919d8"><div class="ttname"><a href="classAntTxMessage.html#a5fa5c7d1ccca23ad447af813508919d8">AntTxMessage::channelNumber</a></div><div class="ttdeci">quint8 channelNumber() const</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00059">anttxmessage.cpp:59</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a6a79953eb683b2c83d5bdd7c52887ff0"><div class="ttname"><a href="classAntTxMessage.html#a6a79953eb683b2c83d5bdd7c52887ff0">AntTxMessage::fractionalTimestamp</a></div><div class="ttdeci">quint16 fractionalTimestamp() const</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00041">anttxmessage.cpp:41</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a79b4b04b2b220fd84a0e1f8fc7d9daaa"><div class="ttname"><a href="classAntTxMessage.html#a79b4b04b2b220fd84a0e1f8fc7d9daaa">AntTxMessage::setData</a></div><div class="ttdeci">void setData(const quint8 data)</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00096">anttxmessage.cpp:96</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_a8471e00d4c26061cf459c3f060dec702"><div class="ttname"><a href="classAntTxMessage.html#a8471e00d4c26061cf459c3f060dec702">AntTxMessage::setMesgData</a></div><div class="ttdeci">void setMesgData(const quint8 mesgData)</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00086">anttxmessage.cpp:86</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_ab478652ae63ca402962c0e4f5f602520"><div class="ttname"><a href="classAntTxMessage.html#ab478652ae63ca402962c0e4f5f602520">AntTxMessage::setTimestamp</a></div><div class="ttdeci">void setTimestamp(const DateTime timestamp)</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00071">anttxmessage.cpp:71</a></div></div>
+<div class="ttc" id="aclassAntTxMessage_html_acefd5a2afe37b3e4c95d17a3872435e9"><div class="ttname"><a href="classAntTxMessage.html#acefd5a2afe37b3e4c95d17a3872435e9">AntTxMessage::mesgData</a></div><div class="ttdeci">quint8 mesgData() const</div><div class="ttdef"><b>Definition:</b> <a href="anttxmessage_8cpp_source.html#l00053">anttxmessage.cpp:53</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22ca259005995ae2e8a8a6133a2764a46bc8"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca259005995ae2e8a8a6133a2764a46bc8">MesgNum::AntTx</a></div><div class="ttdeci">@ AntTx</div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00182">types.h:182</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

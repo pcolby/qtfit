@@ -1,5 +1,25 @@
 var classJumpMessage =
 [
     [ "JumpMessage", "classJumpMessage.html#a7a38ab170b3c9f5d6aaf0f78e5f3fd72", null ],
-    [ "~JumpMessage", "classJumpMessage.html#a6e592996bf64da7c1b19b70f4f9444d7", null ]
+    [ "~JumpMessage", "classJumpMessage.html#a6e592996bf64da7c1b19b70f4f9444d7", null ],
+    [ "distance", "classJumpMessage.html#a83dedfe4e14e782418493e1adc69b37c", null ],
+    [ "enhancedSpeed", "classJumpMessage.html#a40245a44d156f772374461d7b765f57a", null ],
+    [ "hangTime", "classJumpMessage.html#ae19ee8f06f8b532cb8e055d67a960355", null ],
+    [ "height", "classJumpMessage.html#a75f048a3d8e73cc9edebd359cc854c71", null ],
+    [ "positionLat", "classJumpMessage.html#aa369307ea0262c9de287f2c2b6527c9c", null ],
+    [ "positionLong", "classJumpMessage.html#a98bf69259f4d757ca6773c082f1af10f", null ],
+    [ "rotations", "classJumpMessage.html#a6e4292cada33f1a9219e49808104ed65", null ],
+    [ "score", "classJumpMessage.html#a37f481ed6f38d28ae349f89d42fbd1ef", null ],
+    [ "setDistance", "classJumpMessage.html#a1f951b25b6f1df560005cb6fa0172ba8", null ],
+    [ "setEnhancedSpeed", "classJumpMessage.html#ac71f4d34f1b0cc5e4bdc42d103a9dfbf", null ],
+    [ "setHangTime", "classJumpMessage.html#a366ea2f04ee4414082589999146125f4", null ],
+    [ "setHeight", "classJumpMessage.html#ae1a18c9a56afba820b82e33db42c486e", null ],
+    [ "setPositionLat", "classJumpMessage.html#ad705b232cf73889a3096af104bb8eced", null ],
+    [ "setPositionLong", "classJumpMessage.html#ade38fa31b38011fc8b841c4bd715cf08", null ],
+    [ "setRotations", "classJumpMessage.html#a55cc30cbb61b9a10ea6fe59470b8bb91", null ],
+    [ "setScore", "classJumpMessage.html#af2ad521621f4f7c05e9321e4840e4463", null ],
+    [ "setSpeed", "classJumpMessage.html#a88c59865a178158cdfff1b74c7c226c6", null ],
+    [ "setTimestamp", "classJumpMessage.html#a8f690d86a65d096d6878c1887d9ddfe9", null ],
+    [ "speed", "classJumpMessage.html#ad0c2cda0f173cdc36c3d4bfeea2b7c45", null ],
+    [ "timestamp", "classJumpMessage.html#a4d277f2fd9752896df2af79feccc6eca", null ]
 ];

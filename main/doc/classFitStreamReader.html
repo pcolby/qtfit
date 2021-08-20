@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classFitStreamReader.html" title="The FitStreamReader class provides a streaming parser for reading Garmin FIT files.">FitStreamReader</a> class provides a streaming parser for reading Garmin FIT files. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000068">Todo:</a></b></dt><dd>Mention that this is a lower-level class, a users should probably use some yet-to-be FitFile class, that wraps up the calls to this one.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd>Mention that this is a lower-level class, a users should probably use some yet-to-be FitFile class, that wraps up the calls to this one.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://developer.garmin.com/fit/protocol/">https://developer.garmin.com/fit/protocol/</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a800d071652f0d6e7a806f63a4514d620"></a>
@@ -289,9 +289,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns <code>true</code> if the reader has reached the end of the underlying data or device, or an error has occurred. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000069">Todo:</a></b></dt><dd>Implement this method.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd>Implement this method.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the reader has reached the end of the underlying data or device. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000070">Todo:</a></b></dt><dd>Implement this method. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000037">Todo:</a></b></dt><dd>Implement this method. </dd></dl>
 
 </div>
 </div>
@@ -408,7 +408,7 @@ Here is the caller graph for this function:</div>
 
 <p>Returns the next FIT data message from the underlying stream, or a null data message if none could be read. </p>
 <p>If FIT header has not been read yet, it will be read first. If any FIT definition messages are found, they will be parsed, and kept in a dictionary, to used for interpretation of subsequent data messages. Reading will continue until the next FIT data message is found, or no more bytes are available for reading.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000071">Todo:</a></b></dt><dd>Document how the caller should distinguish errors, from more-data-needed.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000038">Todo:</a></b></dt><dd>Document how the caller should distinguish errors, from more-data-needed.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the next FIT data message, or a null data message.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classFitStreamReader.html#aa76d454b0121334118da9ddc16d550fe" title="Adds more data to read.">addData</a> </dd></dl>
 

@@ -1,5 +1,31 @@
 var classConnectivityMessage =
 [
     [ "ConnectivityMessage", "classConnectivityMessage.html#afe6e2785b0af079a0ccf88daee8dc87c", null ],
-    [ "~ConnectivityMessage", "classConnectivityMessage.html#a97ea0d21a61762a1959e2359b12fe821", null ]
+    [ "~ConnectivityMessage", "classConnectivityMessage.html#a97ea0d21a61762a1959e2359b12fe821", null ],
+    [ "antEnabled", "classConnectivityMessage.html#a8f0b94bce88ea80f3ebd3dceee1101fa", null ],
+    [ "autoActivityUploadEnabled", "classConnectivityMessage.html#a4c03bbb539e27c1d90a73f5ed50bc898", null ],
+    [ "bluetoothEnabled", "classConnectivityMessage.html#a59da0d1023fe4a3c289213ced5ae8a81", null ],
+    [ "bluetoothLeEnabled", "classConnectivityMessage.html#ad559f61829f3eeb7546522f18e335c58", null ],
+    [ "courseDownloadEnabled", "classConnectivityMessage.html#ac5ede540031910e8c26596c3153291cc", null ],
+    [ "gpsEphemerisDownloadEnabled", "classConnectivityMessage.html#a822ab9f83832f65d6a34ce759305185d", null ],
+    [ "grouptrackEnabled", "classConnectivityMessage.html#a306788fc50004d0b138f450b9d3b753f", null ],
+    [ "incidentDetectionEnabled", "classConnectivityMessage.html#ae4ca39a251df9a77b6351c437867db99", null ],
+    [ "liveTrackingEnabled", "classConnectivityMessage.html#af0bc2d6530fbab825774e5961472a874", null ],
+    [ "name", "classConnectivityMessage.html#a8841c9b2887956c80c1e403a5ebbe82e", null ],
+    [ "setAntEnabled", "classConnectivityMessage.html#ab7b29e2af2b9f9d1fbe812f542b3571e", null ],
+    [ "setAutoActivityUploadEnabled", "classConnectivityMessage.html#a52cfe33905edac5af0985c6bb656a5b0", null ],
+    [ "setBluetoothEnabled", "classConnectivityMessage.html#a3679381f5baa422dbf08346011ca5e21", null ],
+    [ "setBluetoothLeEnabled", "classConnectivityMessage.html#ad00762a74f5a0fd237b4a1f5ee85f13d", null ],
+    [ "setCourseDownloadEnabled", "classConnectivityMessage.html#a1814817d218b39e4172a83e062a5df05", null ],
+    [ "setGpsEphemerisDownloadEnabled", "classConnectivityMessage.html#a57be963a0a3ed49a490073561caf194e", null ],
+    [ "setGrouptrackEnabled", "classConnectivityMessage.html#a02d0efef208323d1723c5fdd63e67a61", null ],
+    [ "setIncidentDetectionEnabled", "classConnectivityMessage.html#aebc4553a98894b73348697cd2135be45", null ],
+    [ "setLiveTrackingEnabled", "classConnectivityMessage.html#a76cadd89495dd4312f37c1dbe3c3517b", null ],
+    [ "setName", "classConnectivityMessage.html#ad36f5217bae42eb2f905c4a55b234848", null ],
+    [ "setWeatherAlertsEnabled", "classConnectivityMessage.html#a863163aa0e3915d204a23996e4842eb2", null ],
+    [ "setWeatherConditionsEnabled", "classConnectivityMessage.html#a0cfaf43a4763c3aba52f799009d4cfc5", null ],
+    [ "setWorkoutDownloadEnabled", "classConnectivityMessage.html#a520eed4020726b34b0862571eac1860c", null ],
+    [ "weatherAlertsEnabled", "classConnectivityMessage.html#ab57fbfc7d9527ceec07824a9ae314a03", null ],
+    [ "weatherConditionsEnabled", "classConnectivityMessage.html#ad1c0191e47a85ec88e403da4f42e39bf", null ],
+    [ "workoutDownloadEnabled", "classConnectivityMessage.html#a61c7412b5a64d8955a79602ad169b731", null ]
 ];

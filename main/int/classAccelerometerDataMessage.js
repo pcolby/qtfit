@@ -1,5 +1,29 @@
 var classAccelerometerDataMessage =
 [
     [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html#a80c9b31bc6cb09bc6912b3f7cd2557d8", null ],
-    [ "~AccelerometerDataMessage", "classAccelerometerDataMessage.html#a850b030dbaac1432df3af9bfaac3a3c1", null ]
+    [ "~AccelerometerDataMessage", "classAccelerometerDataMessage.html#a850b030dbaac1432df3af9bfaac3a3c1", null ],
+    [ "accelX", "classAccelerometerDataMessage.html#a7d789529e4f58b2a0b53d93f89bd823f", null ],
+    [ "accelY", "classAccelerometerDataMessage.html#adc90d693af5f515514e33e48242bfd67", null ],
+    [ "accelZ", "classAccelerometerDataMessage.html#a3fc1905be38628eff860b1bd6f94b5c8", null ],
+    [ "calibratedAccelX", "classAccelerometerDataMessage.html#a525a05505676e7eea6bca151fb28e7b6", null ],
+    [ "calibratedAccelY", "classAccelerometerDataMessage.html#a2205bc6c1fd7739dcfd81f83ba189fce", null ],
+    [ "calibratedAccelZ", "classAccelerometerDataMessage.html#a8a12441377ce9fee735ee64cdf0b9b0f", null ],
+    [ "compressedCalibratedAccelX", "classAccelerometerDataMessage.html#acb31c63febbe161f4d65c9116c98765f", null ],
+    [ "compressedCalibratedAccelY", "classAccelerometerDataMessage.html#a8921d8d8d26316343107145e06f04a39", null ],
+    [ "compressedCalibratedAccelZ", "classAccelerometerDataMessage.html#ac1fbb3a5e0de5a837e4d0d51d8cb524f", null ],
+    [ "sampleTimeOffset", "classAccelerometerDataMessage.html#a83a19717e23bfa34de1e6ea2ad460a5d", null ],
+    [ "setAccelX", "classAccelerometerDataMessage.html#a5482442ecb584144962783df2e7dac19", null ],
+    [ "setAccelY", "classAccelerometerDataMessage.html#a3e58c53104fe05a4b89210f88cf74e23", null ],
+    [ "setAccelZ", "classAccelerometerDataMessage.html#a4b2384fb5ac86de495bb039081b4d7b1", null ],
+    [ "setCalibratedAccelX", "classAccelerometerDataMessage.html#ad5ea7ddf310b5e7448e3d4113e7a585f", null ],
+    [ "setCalibratedAccelY", "classAccelerometerDataMessage.html#aa9282999f4497734011f8103648ea1fe", null ],
+    [ "setCalibratedAccelZ", "classAccelerometerDataMessage.html#a488ecc22ed54617cca869bd5330a799c", null ],
+    [ "setCompressedCalibratedAccelX", "classAccelerometerDataMessage.html#a7ba7aa6a8a919dec4b9c233fba63e29e", null ],
+    [ "setCompressedCalibratedAccelY", "classAccelerometerDataMessage.html#ad7bdcaa2fce8b732ddc916ac9369801d", null ],
+    [ "setCompressedCalibratedAccelZ", "classAccelerometerDataMessage.html#a853a034dc3b39f6dbadf6a07015e8dcf", null ],
+    [ "setSampleTimeOffset", "classAccelerometerDataMessage.html#a2b663adec1cfa1381727213657871a55", null ],
+    [ "setTimestamp", "classAccelerometerDataMessage.html#a2d0478d4b77b5ca628be90641c0fce8d", null ],
+    [ "setTimestampMs", "classAccelerometerDataMessage.html#a6a48bb93ed8c736f08aa952430b01a16", null ],
+    [ "timestamp", "classAccelerometerDataMessage.html#ae00276eda6422160ba77a46cd03780e4", null ],
+    [ "timestampMs", "classAccelerometerDataMessage.html#a6f5a28756c49260d3ca9cd877f87447b", null ]
 ];

@@ -1,6 +1,29 @@
 var searchData=
 [
-  ['recordcontent_4700',['recordContent',['../structDataMessage.html#aa0298d83f2279d17b763b47b948075be',1,'DataMessage']]],
-  ['recordsize_4701',['recordSize',['../structDataDefinition.html#a970e98ec5a59edbea60452eadb71231a',1,'DataDefinition']]],
-  ['recordsizes_4702',['recordSizes',['../classFitStreamReaderPrivate.html#afbbf3cc4771b3c86203adb7dbd0c58d3',1,'FitStreamReaderPrivate']]]
+  ['lactatethresholdautodetectenabled_7526',['lactateThresholdAutodetectEnabled',['../classDeviceSettingsMessagePrivate.html#a604124c741cf653768ea6465bf3e8c86',1,'DeviceSettingsMessagePrivate']]],
+  ['language_7527',['language',['../classUserProfileMessagePrivate.html#a587683d12b7ae11ab3ffc83ef8db065d',1,'UserProfileMessagePrivate']]],
+  ['languages_7528',['languages',['../classCapabilitiesMessagePrivate.html#a50d42d1c7f36bba294b29db346bcdeeb',1,'CapabilitiesMessagePrivate']]],
+  ['laptrigger_7529',['lapTrigger',['../classLapMessagePrivate.html#a52a1ae3e1abdad4f07da9e71616bdaa8',1,'LapMessagePrivate']]],
+  ['layout_7530',['layout',['../classExdScreenConfigurationMessagePrivate.html#a67359f3bcb9cc3616e1669cff253bd13',1,'ExdScreenConfigurationMessagePrivate::layout()'],['../classWatchfaceSettingsMessagePrivate.html#a431240c011307ba98671c549094b13ae',1,'WatchfaceSettingsMessagePrivate::layout()']]],
+  ['leaderactivityid_7531',['leaderActivityId',['../classSegmentFileMessagePrivate.html#a51528e9ec38916cd697d5d6c251da197',1,'SegmentFileMessagePrivate']]],
+  ['leaderactivityidstring_7532',['leaderActivityIdString',['../classSegmentFileMessagePrivate.html#a6c4c6a3e9cda9c8b7e6d29e7072c960e',1,'SegmentFileMessagePrivate']]],
+  ['leadergroupprimarykey_7533',['leaderGroupPrimaryKey',['../classSegmentFileMessagePrivate.html#a9f98fc67cbc0a6ad08b88e605e4ea6d9',1,'SegmentFileMessagePrivate']]],
+  ['leadertime_7534',['leaderTime',['../classSegmentPointMessagePrivate.html#a82e91794ac029316e01ce4c91b3273b8',1,'SegmentPointMessagePrivate']]],
+  ['leadertype_7535',['leaderType',['../classSegmentFileMessagePrivate.html#a2b64503836ba657c219cd7483c13a504',1,'SegmentFileMessagePrivate']]],
+  ['leftpco_7536',['leftPco',['../classRecordMessagePrivate.html#a4533ea761a094910bbb47ed7dc3f05d7',1,'RecordMessagePrivate']]],
+  ['leftpedalsmoothness_7537',['leftPedalSmoothness',['../classRecordMessagePrivate.html#af4aaf01088fc3c6b9873f3fe4077f609',1,'RecordMessagePrivate']]],
+  ['leftpowerphase_7538',['leftPowerPhase',['../classRecordMessagePrivate.html#abc1da1744c2a0c195a78e82e99fad701',1,'RecordMessagePrivate']]],
+  ['leftpowerphasepeak_7539',['leftPowerPhasePeak',['../classRecordMessagePrivate.html#ae4de23004943dc38556fc4f1ddc277c8',1,'RecordMessagePrivate']]],
+  ['leftrightbalance_7540',['leftRightBalance',['../classSessionMessagePrivate.html#a78f9fc53e2e88c3f25ff5b077ee57363',1,'SessionMessagePrivate::leftRightBalance()'],['../classSegmentLapMessagePrivate.html#a84e78d4f2dc074418624da4ad0a1a519',1,'SegmentLapMessagePrivate::leftRightBalance()'],['../classLapMessagePrivate.html#a15a3e81bf57b513702494e112ef5009b',1,'LapMessagePrivate::leftRightBalance()'],['../classRecordMessagePrivate.html#afdfcef2e4aed524bca35029cd618736c',1,'RecordMessagePrivate::leftRightBalance()']]],
+  ['lefttorqueeffectiveness_7541',['leftTorqueEffectiveness',['../classRecordMessagePrivate.html#a3c479636f61a0bf68a1e255411ab76bd',1,'RecordMessagePrivate']]],
+  ['lengthtype_7542',['lengthType',['../classLengthMessagePrivate.html#a909e453d7ac88cb7a90d25734a7a9c32',1,'LengthMessagePrivate']]],
+  ['levbatteryconsumption_7543',['levBatteryConsumption',['../classLapMessagePrivate.html#afed1ff949e80337bc6ade1c93b41ca24',1,'LapMessagePrivate::levBatteryConsumption()'],['../classSessionMessagePrivate.html#a09b2831f5cde32b3314f0e040cc7358b',1,'SessionMessagePrivate::levBatteryConsumption()']]],
+  ['levelshift_7544',['levelShift',['../classOneDSensorCalibrationMessagePrivate.html#abefc9b22cf71f09909e9021033a79650',1,'OneDSensorCalibrationMessagePrivate::levelShift()'],['../classThreeDSensorCalibrationMessagePrivate.html#adff07edd414d78f007e0e302c608c946',1,'ThreeDSensorCalibrationMessagePrivate::levelShift()']]],
+  ['livetrackingenabled_7545',['liveTrackingEnabled',['../classConnectivityMessagePrivate.html#ad9570e7287e91df946dea19112a7e459',1,'ConnectivityMessagePrivate']]],
+  ['localid_7546',['localId',['../classUserProfileMessagePrivate.html#accfb29bb239a2125759444b55b111f4a',1,'UserProfileMessagePrivate']]],
+  ['localmessagetype_7547',['localMessageType',['../structDataMessage.html#afbd12eded20976410fcefd666bf78f8b',1,'DataMessage']]],
+  ['localtimestamp_7548',['localTimestamp',['../classActivityMessagePrivate.html#afac170831c5312c03d8d83d10caad634',1,'ActivityMessagePrivate::localTimestamp()'],['../classMonitoringInfoMessagePrivate.html#ac835b3162741c2fe5215cae181494baa',1,'MonitoringInfoMessagePrivate::localTimestamp()'],['../classMonitoringMessagePrivate.html#a96896bffb2387c441c505e9d23dc4317',1,'MonitoringMessagePrivate::localTimestamp()'],['../classTimestampCorrelationMessagePrivate.html#ae3a113b8d4939ddadaccd9fc91dd16ea',1,'TimestampCorrelationMessagePrivate::localTimestamp()']]],
+  ['location_7549',['location',['../classWeatherConditionsMessagePrivate.html#a7fe80aa925a6ac718183f982d2f778e0',1,'WeatherConditionsMessagePrivate']]],
+  ['loghrv_7550',['logHrv',['../classHrmProfileMessagePrivate.html#a05ac0f07a10b763bbe37111cd63c36d5',1,'HrmProfileMessagePrivate']]],
+  ['lowtemperature_7551',['lowTemperature',['../classWeatherConditionsMessagePrivate.html#ae7098cff57b5710ff3f02c2e4f557dfb',1,'WeatherConditionsMessagePrivate']]]
 ];

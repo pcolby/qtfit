@@ -113,6 +113,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5c1e6c26a66f75e19d9a0ffefc3aa4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6b65be297b3ee39f107a76abca4b57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOhrSettingsMessage.html#a4e6b65be297b3ee39f107a76abca4b57">~OhrSettingsMessage</a> ()</td></tr>
 <tr class="separator:a4e6b65be297b3ee39f107a76abca4b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925b91a23ca1e446c430ec2e8d7fcf7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOhrSettingsMessage.html#a925b91a23ca1e446c430ec2e8d7fcf7b">timestamp</a> () const</td></tr>
+<tr class="separator:a925b91a23ca1e446c430ec2e8d7fcf7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadff3b1db28a7f82a9f08115e00ced36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOhrSettingsMessage.html#aadff3b1db28a7f82a9f08115e00ced36">enabled</a> () const</td></tr>
+<tr class="separator:aadff3b1db28a7f82a9f08115e00ced36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2eb76f2a2674e31243525029ce8e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOhrSettingsMessage.html#a5e2eb76f2a2674e31243525029ce8e89">setTimestamp</a> (const <a class="el" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> <a class="el" href="classOhrSettingsMessage.html#a925b91a23ca1e446c430ec2e8d7fcf7b">timestamp</a>)</td></tr>
+<tr class="separator:a5e2eb76f2a2674e31243525029ce8e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef7c348c29853cbc5b10eb43faefcb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOhrSettingsMessage.html#a0ef7c348c29853cbc5b10eb43faefcb5">setEnabled</a> (const <a class="el" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a> <a class="el" href="classOhrSettingsMessage.html#aadff3b1db28a7f82a9f08115e00ced36">enabled</a>)</td></tr>
+<tr class="separator:a0ef7c348c29853cbc5b10eb43faefcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classFitDataMessage"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFitDataMessage')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFitDataMessage.html">FitDataMessage</a></td></tr>
 <tr class="memitem:a6544fb3e56a84b8c588f735ecb4ebaa3 inherit pub_methods_classFitDataMessage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessage.html#a6544fb3e56a84b8c588f735ecb4ebaa3">FitDataMessage</a> ()</td></tr>
 <tr class="separator:a6544fb3e56a84b8c588f735ecb4ebaa3 inherit pub_methods_classFitDataMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +184,136 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aadff3b1db28a7f82a9f08115e00ced36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadff3b1db28a7f82a9f08115e00ced36">&#9670;&nbsp;</a></span>enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a> OhrSettingsMessage::enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00041">41</a> of file <a class="el" href="ohrsettingsmessage_8cpp_source.html">ohrsettingsmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOhrSettingsMessage.html">OhrSettingsMessage</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> d-&gt;enabled;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="ttc" id="aclassOhrSettingsMessage_html"><div class="ttname"><a href="classOhrSettingsMessage.html">OhrSettingsMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="ohrsettingsmessage_8h_source.html#l00034">ohrsettingsmessage.h:34</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00052">setEnabled()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classOhrSettingsMessage_aadff3b1db28a7f82a9f08115e00ced36_icgraph.svg" width="371" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0ef7c348c29853cbc5b10eb43faefcb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef7c348c29853cbc5b10eb43faefcb5">&#9670;&nbsp;</a></span>setEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OhrSettingsMessage::setEnabled </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a>&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="ohrsettingsmessage_8cpp_source.html">ohrsettingsmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Q_D(<a class="code" href="classOhrSettingsMessage.html">OhrSettingsMessage</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    d-&gt;enabled = <a class="code" href="classOhrSettingsMessage.html#aadff3b1db28a7f82a9f08115e00ced36">enabled</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="ttc" id="aclassOhrSettingsMessage_html_aadff3b1db28a7f82a9f08115e00ced36"><div class="ttname"><a href="classOhrSettingsMessage.html#aadff3b1db28a7f82a9f08115e00ced36">OhrSettingsMessage::enabled</a></div><div class="ttdeci">Switch enabled() const</div><div class="ttdef"><b>Definition:</b> <a href="ohrsettingsmessage_8cpp_source.html#l00041">ohrsettingsmessage.cpp:41</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00041">enabled()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classOhrSettingsMessage_a0ef7c348c29853cbc5b10eb43faefcb5_cgraph.svg" width="371" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5e2eb76f2a2674e31243525029ce8e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2eb76f2a2674e31243525029ce8e89">&#9670;&nbsp;</a></span>setTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OhrSettingsMessage::setTimestamp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a>&#160;</td>
+          <td class="paramname"><em>timestamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="ohrsettingsmessage_8cpp_source.html">ohrsettingsmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Q_D(<a class="code" href="classOhrSettingsMessage.html">OhrSettingsMessage</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    d-&gt;timestamp = <a class="code" href="classOhrSettingsMessage.html#a925b91a23ca1e446c430ec2e8d7fcf7b">timestamp</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="aclassOhrSettingsMessage_html_a925b91a23ca1e446c430ec2e8d7fcf7b"><div class="ttname"><a href="classOhrSettingsMessage.html#a925b91a23ca1e446c430ec2e8d7fcf7b">OhrSettingsMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdef"><b>Definition:</b> <a href="ohrsettingsmessage_8cpp_source.html#l00035">ohrsettingsmessage.cpp:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00035">timestamp()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classOhrSettingsMessage_a5e2eb76f2a2674e31243525029ce8e89_cgraph.svg" width="371" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a925b91a23ca1e446c430ec2e8d7fcf7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925b91a23ca1e446c430ec2e8d7fcf7b">&#9670;&nbsp;</a></span>timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> OhrSettingsMessage::timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00035">35</a> of file <a class="el" href="ohrsettingsmessage_8cpp_source.html">ohrsettingsmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOhrSettingsMessage.html">OhrSettingsMessage</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ohrsettingsmessage_8cpp_source.html#l00047">setTimestamp()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classOhrSettingsMessage_a925b91a23ca1e446c430ec2e8d7fcf7b_icgraph.svg" width="371" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

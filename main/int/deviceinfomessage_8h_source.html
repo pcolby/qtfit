@@ -127,23 +127,59 @@ $(document).ready(function(){initNavTree('deviceinfomessage_8h_source.html','');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classDeviceInfoMessage.html">DeviceInfoMessage</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classDeviceInfoMessage.html#acd956f4c619170c1ecd96e0ca718ed74">   38</a></span>&#160;    <a class="code" href="classDeviceInfoMessage.html#acd956f4c619170c1ecd96e0ca718ed74">~DeviceInfoMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /// @todo Generate getters/setters.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classDeviceInfoMessage.html">DeviceInfoMessage</a>(<a class="code" href="classDeviceInfoMessagePrivate.html">DeviceInfoMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classDeviceInfoMessage.html">DeviceInfoMessage</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Q_DISABLE_COPY(DeviceInfoMessage)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_DEVICEINFOMESSAGE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="types_8h.html#a490fe83ca1f85eab28e987e34be14292">DeviceIndex</a> deviceIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    quint8 deviceType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a> manufacturer() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="types_8h.html#af8923988212a718608f45e6ac0164095">quint32z</a> serialNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    quint16 product() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    quint16 softwareVersion() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    quint8 hardwareVersion() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    quint32 cumOperatingTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    quint16 batteryVoltage() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="types_8h.html#ad0a5248f7b91eae94b53d7b6d04219f9">BatteryStatus</a> batteryStatus() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="types_8h.html#a4cea131c826b8a26b33b1492369e389c">BodyLocation</a> sensorPosition() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QString descriptor() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> antTransmissionType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> antDeviceNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="types_8h.html#a96f638ec282ae762ebfd45688b7fd4f9">AntNetwork</a> antNetwork() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="types_8h.html#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a> sourceType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString productName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> setTimestamp(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> setDeviceIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#a490fe83ca1f85eab28e987e34be14292">DeviceIndex</a> deviceIndex);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> setDeviceType(<span class="keyword">const</span> quint8 deviceType);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setManufacturer(<span class="keyword">const</span> <a class="code" href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a> manufacturer);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> setSerialNumber(<span class="keyword">const</span> <a class="code" href="types_8h.html#af8923988212a718608f45e6ac0164095">quint32z</a> serialNumber);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setProduct(<span class="keyword">const</span> quint16 product);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setSoftwareVersion(<span class="keyword">const</span> quint16 softwareVersion);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setHardwareVersion(<span class="keyword">const</span> quint8 hardwareVersion);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setCumOperatingTime(<span class="keyword">const</span> quint32 cumOperatingTime);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setBatteryVoltage(<span class="keyword">const</span> quint16 batteryVoltage);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> setBatteryStatus(<span class="keyword">const</span> <a class="code" href="types_8h.html#ad0a5248f7b91eae94b53d7b6d04219f9">BatteryStatus</a> batteryStatus);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setSensorPosition(<span class="keyword">const</span> <a class="code" href="types_8h.html#a4cea131c826b8a26b33b1492369e389c">BodyLocation</a> sensorPosition);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setDescriptor(<span class="keyword">const</span> QString descriptor);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setAntTransmissionType(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> antTransmissionType);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setAntDeviceNumber(<span class="keyword">const</span> <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> antDeviceNumber);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> setAntNetwork(<span class="keyword">const</span> <a class="code" href="types_8h.html#a96f638ec282ae762ebfd45688b7fd4f9">AntNetwork</a> antNetwork);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> setSourceType(<span class="keyword">const</span> <a class="code" href="types_8h.html#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a> sourceType);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setProductName(<span class="keyword">const</span> QString productName);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classDeviceInfoMessage.html">DeviceInfoMessage</a>(<a class="code" href="classDeviceInfoMessagePrivate.html">DeviceInfoMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classDeviceInfoMessage.html">DeviceInfoMessage</a>)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">//Q_DISABLE_COPY(DeviceInfoMessage)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_DEVICEINFOMESSAGE_H</span></div>
 <div class="ttc" id="aQtFit__global_8h_html_a0e93dab66b5e7c93148056660a6c416c"><div class="ttname"><a href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a></div><div class="ttdeci">#define QTFIT_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00032">QtFit_global.h:32</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
@@ -152,6 +188,16 @@ $(document).ready(function(){initNavTree('deviceinfomessage_8h_source.html','');
 <div class="ttc" id="aclassDeviceInfoMessage_html_acd956f4c619170c1ecd96e0ca718ed74"><div class="ttname"><a href="classDeviceInfoMessage.html#acd956f4c619170c1ecd96e0ca718ed74">DeviceInfoMessage::~DeviceInfoMessage</a></div><div class="ttdeci">~DeviceInfoMessage()</div></div>
 <div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
 <div class="ttc" id="afitdatamessage_8h_html"><div class="ttname"><a href="fitdatamessage_8h.html">fitdatamessage.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_a3ae727773c367ac1041d72ac770a0ab1"><div class="ttname"><a href="types_8h.html#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a></div><div class="ttdeci">SourceType</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01959">types.h:1959</a></div></div>
+<div class="ttc" id="atypes_8h_html_a490fe83ca1f85eab28e987e34be14292"><div class="ttname"><a href="types_8h.html#a490fe83ca1f85eab28e987e34be14292">DeviceIndex</a></div><div class="ttdeci">DeviceIndex</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00197">types.h:197</a></div></div>
+<div class="ttc" id="atypes_8h_html_a4cea131c826b8a26b33b1492369e389c"><div class="ttname"><a href="types_8h.html#a4cea131c826b8a26b33b1492369e389c">BodyLocation</a></div><div class="ttdeci">BodyLocation</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01886">types.h:1886</a></div></div>
+<div class="ttc" id="atypes_8h_html_a96f638ec282ae762ebfd45688b7fd4f9"><div class="ttname"><a href="types_8h.html#a96f638ec282ae762ebfd45688b7fd4f9">AntNetwork</a></div><div class="ttdeci">AntNetwork</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01542">types.h:1542</a></div></div>
+<div class="ttc" id="atypes_8h_html_ab1f19760ebc204816d39999628339d7c"><div class="ttname"><a href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a></div><div class="ttdeci">quint16 quint16z</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00044">types.h:44</a></div></div>
+<div class="ttc" id="atypes_8h_html_abff0cc6077b6b352288453cfaef93f80"><div class="ttname"><a href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a></div><div class="ttdeci">Manufacturer</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00969">types.h:969</a></div></div>
+<div class="ttc" id="atypes_8h_html_acf72d89cfaf9bb22ddf07c864153d0ec"><div class="ttname"><a href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a></div><div class="ttdeci">QTFIT_BEGIN_NAMESPACE typedef quint8 quint8z</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00043">types.h:43</a></div></div>
+<div class="ttc" id="atypes_8h_html_ad0a5248f7b91eae94b53d7b6d04219f9"><div class="ttname"><a href="types_8h.html#ad0a5248f7b91eae94b53d7b6d04219f9">BatteryStatus</a></div><div class="ttdeci">BatteryStatus</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01566">types.h:1566</a></div></div>
+<div class="ttc" id="atypes_8h_html_af8923988212a718608f45e6ac0164095"><div class="ttname"><a href="types_8h.html#af8923988212a718608f45e6ac0164095">quint32z</a></div><div class="ttdeci">quint32 quint32z</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00045">types.h:45</a></div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00182">types.h:182</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

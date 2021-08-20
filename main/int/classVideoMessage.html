@@ -113,6 +113,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae2bf6a44b5e5cc5caff7f6c712f368da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27d21e2355f1880146d198eb7637223e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVideoMessage.html#a27d21e2355f1880146d198eb7637223e">~VideoMessage</a> ()</td></tr>
 <tr class="separator:a27d21e2355f1880146d198eb7637223e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4febf85ef16729c02535be27706bf88a"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVideoMessage.html#a4febf85ef16729c02535be27706bf88a">url</a> () const</td></tr>
+<tr class="separator:a4febf85ef16729c02535be27706bf88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b31d10c4bcc01dd988b560fb9855572"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVideoMessage.html#a6b31d10c4bcc01dd988b560fb9855572">hostingProvider</a> () const</td></tr>
+<tr class="separator:a6b31d10c4bcc01dd988b560fb9855572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22ec6db41bfa759cb04554ac1f7660a"><td class="memItemLeft" align="right" valign="top">quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVideoMessage.html#ad22ec6db41bfa759cb04554ac1f7660a">duration</a> () const</td></tr>
+<tr class="separator:ad22ec6db41bfa759cb04554ac1f7660a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb40e8eac5a296cb39d0ed3c36b093c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVideoMessage.html#a3cb40e8eac5a296cb39d0ed3c36b093c">setUrl</a> (const QString <a class="el" href="classVideoMessage.html#a4febf85ef16729c02535be27706bf88a">url</a>)</td></tr>
+<tr class="separator:a3cb40e8eac5a296cb39d0ed3c36b093c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843965d508424b1f1d16518ddf21636d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVideoMessage.html#a843965d508424b1f1d16518ddf21636d">setHostingProvider</a> (const QString <a class="el" href="classVideoMessage.html#a6b31d10c4bcc01dd988b560fb9855572">hostingProvider</a>)</td></tr>
+<tr class="separator:a843965d508424b1f1d16518ddf21636d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abacb652cfb3d3cc93645a9b7080c6665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVideoMessage.html#abacb652cfb3d3cc93645a9b7080c6665">setDuration</a> (const quint32 <a class="el" href="classVideoMessage.html#ad22ec6db41bfa759cb04554ac1f7660a">duration</a>)</td></tr>
+<tr class="separator:abacb652cfb3d3cc93645a9b7080c6665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classFitDataMessage"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classFitDataMessage')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classFitDataMessage.html">FitDataMessage</a></td></tr>
 <tr class="memitem:a6544fb3e56a84b8c588f735ecb4ebaa3 inherit pub_methods_classFitDataMessage"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessage.html#a6544fb3e56a84b8c588f735ecb4ebaa3">FitDataMessage</a> ()</td></tr>
 <tr class="separator:a6544fb3e56a84b8c588f735ecb4ebaa3 inherit pub_methods_classFitDataMessage"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +188,200 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad22ec6db41bfa759cb04554ac1f7660a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22ec6db41bfa759cb04554ac1f7660a">&#9670;&nbsp;</a></span>duration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">quint32 VideoMessage::duration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="videomessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="videomessage_8cpp_source.html">videomessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoMessage.html">VideoMessage</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> d-&gt;duration;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="aclassVideoMessage_html"><div class="ttname"><a href="classVideoMessage.html">VideoMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="videomessage_8h_source.html#l00034">videomessage.h:34</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="videomessage_8cpp_source.html#l00063">setDuration()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoMessage_ad22ec6db41bfa759cb04554ac1f7660a_icgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6b31d10c4bcc01dd988b560fb9855572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b31d10c4bcc01dd988b560fb9855572">&#9670;&nbsp;</a></span>hostingProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString VideoMessage::hostingProvider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="videomessage_8cpp_source.html#l00041">41</a> of file <a class="el" href="videomessage_8cpp_source.html">videomessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoMessage.html">VideoMessage</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> d-&gt;hostingProvider;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="videomessage_8cpp_source.html#l00058">setHostingProvider()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoMessage_a6b31d10c4bcc01dd988b560fb9855572_icgraph.svg" width="480" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abacb652cfb3d3cc93645a9b7080c6665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abacb652cfb3d3cc93645a9b7080c6665">&#9670;&nbsp;</a></span>setDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VideoMessage::setDuration </td>
+          <td>(</td>
+          <td class="paramtype">const quint32&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="videomessage_8cpp_source.html#l00063">63</a> of file <a class="el" href="videomessage_8cpp_source.html">videomessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Q_D(<a class="code" href="classVideoMessage.html">VideoMessage</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    d-&gt;duration = <a class="code" href="classVideoMessage.html#ad22ec6db41bfa759cb04554ac1f7660a">duration</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="ttc" id="aclassVideoMessage_html_ad22ec6db41bfa759cb04554ac1f7660a"><div class="ttname"><a href="classVideoMessage.html#ad22ec6db41bfa759cb04554ac1f7660a">VideoMessage::duration</a></div><div class="ttdeci">quint32 duration() const</div><div class="ttdef"><b>Definition:</b> <a href="videomessage_8cpp_source.html#l00047">videomessage.cpp:47</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="videomessage_8cpp_source.html#l00047">duration()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoMessage_abacb652cfb3d3cc93645a9b7080c6665_cgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a843965d508424b1f1d16518ddf21636d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843965d508424b1f1d16518ddf21636d">&#9670;&nbsp;</a></span>setHostingProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VideoMessage::setHostingProvider </td>
+          <td>(</td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>hostingProvider</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="videomessage_8cpp_source.html#l00058">58</a> of file <a class="el" href="videomessage_8cpp_source.html">videomessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Q_D(<a class="code" href="classVideoMessage.html">VideoMessage</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    d-&gt;hostingProvider = <a class="code" href="classVideoMessage.html#a6b31d10c4bcc01dd988b560fb9855572">hostingProvider</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="aclassVideoMessage_html_a6b31d10c4bcc01dd988b560fb9855572"><div class="ttname"><a href="classVideoMessage.html#a6b31d10c4bcc01dd988b560fb9855572">VideoMessage::hostingProvider</a></div><div class="ttdeci">QString hostingProvider() const</div><div class="ttdef"><b>Definition:</b> <a href="videomessage_8cpp_source.html#l00041">videomessage.cpp:41</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="videomessage_8cpp_source.html#l00041">hostingProvider()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoMessage_a843965d508424b1f1d16518ddf21636d_cgraph.svg" width="480" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3cb40e8eac5a296cb39d0ed3c36b093c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb40e8eac5a296cb39d0ed3c36b093c">&#9670;&nbsp;</a></span>setUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VideoMessage::setUrl </td>
+          <td>(</td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="videomessage_8cpp_source.html#l00053">53</a> of file <a class="el" href="videomessage_8cpp_source.html">videomessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Q_D(<a class="code" href="classVideoMessage.html">VideoMessage</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    d-&gt;url = <a class="code" href="classVideoMessage.html#a4febf85ef16729c02535be27706bf88a">url</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="aclassVideoMessage_html_a4febf85ef16729c02535be27706bf88a"><div class="ttname"><a href="classVideoMessage.html#a4febf85ef16729c02535be27706bf88a">VideoMessage::url</a></div><div class="ttdeci">QString url() const</div><div class="ttdef"><b>Definition:</b> <a href="videomessage_8cpp_source.html#l00035">videomessage.cpp:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="videomessage_8cpp_source.html#l00035">url()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoMessage_a3cb40e8eac5a296cb39d0ed3c36b093c_cgraph.svg" width="366" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4febf85ef16729c02535be27706bf88a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4febf85ef16729c02535be27706bf88a">&#9670;&nbsp;</a></span>url()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString VideoMessage::url </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="videomessage_8cpp_source.html#l00035">35</a> of file <a class="el" href="videomessage_8cpp_source.html">videomessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoMessage.html">VideoMessage</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> d-&gt;url;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="videomessage_8cpp_source.html#l00053">setUrl()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoMessage_a4febf85ef16729c02535be27706bf88a_icgraph.svg" width="366" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

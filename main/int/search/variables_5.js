@@ -1,4 +1,31 @@
 var searchData=
 [
-  ['isnull_4693',['isNull',['../classFitDataMessagePrivate.html#ae8f93ffb15d01fa19a0f194b56184793',1,'FitDataMessagePrivate']]]
+  ['fatcalories_7458',['fatCalories',['../classMetZoneMessagePrivate.html#af79f3bcab2a50d71d4a89853026ff755',1,'MetZoneMessagePrivate']]],
+  ['favorite_7459',['favorite',['../classCoursePointMessagePrivate.html#a2d477828bed7106c3e0652c7f0e5626a',1,'CoursePointMessagePrivate']]],
+  ['fieldcount_7460',['fieldCount',['../classExdScreenConfigurationMessagePrivate.html#a2c581c807077ee285352315da89b9594',1,'ExdScreenConfigurationMessagePrivate']]],
+  ['fielddefinitionnumber_7461',['fieldDefinitionNumber',['../classFieldDescriptionMessagePrivate.html#a5b9b3f51da41751d3cd3176ab59f67c8',1,'FieldDescriptionMessagePrivate']]],
+  ['fielddefinitions_7462',['fieldDefinitions',['../structDataDefinition.html#a365c81347c77b8bfa3963bf46061061e',1,'DataDefinition']]],
+  ['fieldid_7463',['fieldId',['../classExdDataConceptConfigurationMessagePrivate.html#ab2c9c6c91d5a9b27923c6527a4305e28',1,'ExdDataConceptConfigurationMessagePrivate::fieldId()'],['../classExdDataFieldConfigurationMessagePrivate.html#aa4184db0e0f0e364bb79e3e6c6197eef',1,'ExdDataFieldConfigurationMessagePrivate::fieldId()']]],
+  ['fieldname_7464',['fieldName',['../classFieldDescriptionMessagePrivate.html#a699b34c264000dce62ba5dbcecf61a06',1,'FieldDescriptionMessagePrivate']]],
+  ['fieldnum_7465',['fieldNum',['../classFieldCapabilitiesMessagePrivate.html#a69ef0f4eb335baef83c510fd658e634a',1,'FieldCapabilitiesMessagePrivate']]],
+  ['fieldnumber_7466',['fieldNumber',['../structDeveloperFieldDefinition.html#a0cdc4a4b6f65cafba216ff551f308001',1,'DeveloperFieldDefinition']]],
+  ['file_7467',['file',['../classFieldCapabilitiesMessagePrivate.html#af99ea5643802d2fbb85cec3c4cd8dd06',1,'FieldCapabilitiesMessagePrivate::file()'],['../classMesgCapabilitiesMessagePrivate.html#a0c220898866e2985a43888ea916100c6',1,'MesgCapabilitiesMessagePrivate::file()']]],
+  ['fileuuid_7468',['fileUuid',['../classSegmentFileMessagePrivate.html#a07e48c30e2a3bd6c3a5a5d8373172e52',1,'SegmentFileMessagePrivate']]],
+  ['filteredbpm_7469',['filteredBpm',['../classHrMessagePrivate.html#a40fb01dd6b7486094bff8b89c02ff40b',1,'HrMessagePrivate']]],
+  ['firstlapindex_7470',['firstLapIndex',['../classSessionMessagePrivate.html#a0568c5546045e27f4187d96bff0b0d33',1,'SessionMessagePrivate']]],
+  ['firstlengthindex_7471',['firstLengthIndex',['../classLapMessagePrivate.html#ad475b7e346562d8e96d90d74f3eb9a4f',1,'LapMessagePrivate']]],
+  ['firststepindex_7472',['firstStepIndex',['../classWorkoutSessionMessagePrivate.html#a9556fd6f84380ebeb8141da88826be48',1,'WorkoutSessionMessagePrivate']]],
+  ['fitbasetypeid_7473',['fitBaseTypeId',['../classFieldDescriptionMessagePrivate.html#a3d562269b4980a5071b30292006898cc',1,'FieldDescriptionMessagePrivate']]],
+  ['fitbaseunitid_7474',['fitBaseUnitId',['../classFieldDescriptionMessagePrivate.html#a3d16581c051e363f3567c000d351257f',1,'FieldDescriptionMessagePrivate']]],
+  ['flags_7475',['flags',['../classFileCapabilitiesMessagePrivate.html#a4d51f2d5672e82977dd3220bc57f087f',1,'FileCapabilitiesMessagePrivate']]],
+  ['flow_7476',['flow',['../classRecordMessagePrivate.html#a717ed255512757edf2fbc50dbee1e8dc',1,'RecordMessagePrivate']]],
+  ['fractionalcadence_7477',['fractionalCadence',['../classRecordMessagePrivate.html#a221598ef5a29628551416719d9fbd101',1,'RecordMessagePrivate']]],
+  ['fractionalsystemtimestamp_7478',['fractionalSystemTimestamp',['../classTimestampCorrelationMessagePrivate.html#a69f4c6686ce55f9e3afbb0adb47e7641',1,'TimestampCorrelationMessagePrivate']]],
+  ['fractionaltimestamp_7479',['fractionalTimestamp',['../classTimestampCorrelationMessagePrivate.html#a017633af36a6bbaa9fa2265497237e6b',1,'TimestampCorrelationMessagePrivate::fractionalTimestamp()'],['../classHrMessagePrivate.html#af7d82bbfb562dabc15e7a7e5c7f23f33',1,'HrMessagePrivate::fractionalTimestamp()'],['../classAntTxMessagePrivate.html#a5a04ca24339b5b6ea0f9f4d1b70149cb',1,'AntTxMessagePrivate::fractionalTimestamp()'],['../classAntRxMessagePrivate.html#a4617f97f5186bcee46a7f29ea70f2e12',1,'AntRxMessagePrivate::fractionalTimestamp()']]],
+  ['framenumber_7480',['frameNumber',['../classVideoFrameMessagePrivate.html#ae99d3e2a0503e795c03206ee54760748',1,'VideoFrameMessagePrivate']]],
+  ['friendlyname_7481',['friendlyName',['../classUserProfileMessagePrivate.html#afd381074309107a7effc3521e412ff6b',1,'UserProfileMessagePrivate']]],
+  ['frontgear_7482',['frontGear',['../classBikeProfileMessagePrivate.html#a6c06ff9673f8e5f170a10a63342778dc',1,'BikeProfileMessagePrivate::frontGear()'],['../classEventMessagePrivate.html#a88ff741840adf69f6312e0bc9e43063a',1,'EventMessagePrivate::frontGear()']]],
+  ['frontgearnum_7483',['frontGearNum',['../classBikeProfileMessagePrivate.html#a55cc385823a6e6dbd8d1b33b5940cfab',1,'BikeProfileMessagePrivate::frontGearNum()'],['../classEventMessagePrivate.html#a0595e67e01e988c28c48e77a6d1f4151',1,'EventMessagePrivate::frontGearNum()']]],
+  ['frontgearshiftcount_7484',['frontGearShiftCount',['../classSegmentLapMessagePrivate.html#aa971f314f4833a07a0ddcf2df2fa2fd3',1,'SegmentLapMessagePrivate']]],
+  ['functionalthresholdpower_7485',['functionalThresholdPower',['../classZonesTargetMessagePrivate.html#abf51b4383aac1a81cd119441cd65f1b5',1,'ZonesTargetMessagePrivate']]]
 ];
