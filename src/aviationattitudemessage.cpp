@@ -165,7 +165,20 @@ void AviationAttitudeMessage::setValidity(const AttitudeValidity validity)
     d->validity = validity;
 }
 
-AviationAttitudeMessagePrivate::AviationAttitudeMessagePrivate(AviationAttitudeMessage * const q) : FitDataMessagePrivate(q)
+AviationAttitudeMessagePrivate::AviationAttitudeMessagePrivate(AviationAttitudeMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , systemTime(0xFFFFFFFF)
+  , pitch(0x7FFF)
+  , roll(0x7FFF)
+  , accelLateral(0x7FFF)
+  , accelNormal(0x7FFF)
+  , turnRate(0x7FFF)
+  , stage(static_cast<AttitudeStage>(-1))
+  , attitudeStageComplete(0xFF)
+  , track(0xFFFF)
+  , validity(static_cast<AttitudeValidity>(-1))
 {
     globalMessageNumber = MesgNum::AviationAttitude;
 }

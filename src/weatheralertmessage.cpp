@@ -99,7 +99,13 @@ void WeatherAlertMessage::setType(const WeatherSevereType type)
     d->type = type;
 }
 
-WeatherAlertMessagePrivate::WeatherAlertMessagePrivate(WeatherAlertMessage * const q) : FitDataMessagePrivate(q)
+WeatherAlertMessagePrivate::WeatherAlertMessagePrivate(WeatherAlertMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , issueTime(static_cast<DateTime>(-1))
+  , expireTime(static_cast<DateTime>(-1))
+  , severity(static_cast<WeatherSeverity>(-1))
+  , type(static_cast<WeatherSevereType>(-1))
 {
     globalMessageNumber = MesgNum::WeatherAlert;
 }

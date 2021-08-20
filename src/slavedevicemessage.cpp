@@ -55,7 +55,10 @@ void SlaveDeviceMessage::setProduct(const quint16 product)
     d->product = product;
 }
 
-SlaveDeviceMessagePrivate::SlaveDeviceMessagePrivate(SlaveDeviceMessage * const q) : FitDataMessagePrivate(q)
+SlaveDeviceMessagePrivate::SlaveDeviceMessagePrivate(SlaveDeviceMessage * const q)
+  : FitDataMessagePrivate(q)
+  , manufacturer(static_cast<Manufacturer>(-1))
+  , product(0xFFFF)
 {
     globalMessageNumber = MesgNum::SlaveDevice;
 }

@@ -231,7 +231,24 @@ void DeviceInfoMessage::setProductName(const QString productName)
     d->productName = productName;
 }
 
-DeviceInfoMessagePrivate::DeviceInfoMessagePrivate(DeviceInfoMessage * const q) : FitDataMessagePrivate(q)
+DeviceInfoMessagePrivate::DeviceInfoMessagePrivate(DeviceInfoMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , deviceIndex(static_cast<DeviceIndex>(-1))
+  , deviceType(0xFF)
+  , manufacturer(static_cast<Manufacturer>(-1))
+  , serialNumber(0)
+  , product(0xFFFF)
+  , softwareVersion(0xFFFF)
+  , hardwareVersion(0xFF)
+  , cumOperatingTime(0xFFFFFFFF)
+  , batteryVoltage(0xFFFF)
+  , batteryStatus(static_cast<BatteryStatus>(-1))
+  , sensorPosition(static_cast<BodyLocation>(-1))
+  , antTransmissionType(static_cast<quint8z>(-1))
+  , antDeviceNumber(0)
+  , antNetwork(static_cast<AntNetwork>(-1))
+  , sourceType(static_cast<SourceType>(-1))
 {
     globalMessageNumber = MesgNum::DeviceInfo;
 }

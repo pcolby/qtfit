@@ -297,7 +297,32 @@ void DeviceSettingsMessage::setTapSensitivity(const TapSensitivity tapSensitivit
     d->tapSensitivity = tapSensitivity;
 }
 
-DeviceSettingsMessagePrivate::DeviceSettingsMessagePrivate(DeviceSettingsMessage * const q) : FitDataMessagePrivate(q)
+DeviceSettingsMessagePrivate::DeviceSettingsMessagePrivate(DeviceSettingsMessage * const q)
+  : FitDataMessagePrivate(q)
+  , activeTimeZone(0xFF)
+  , utcOffset(0xFFFFFFFF)
+  , timeOffset(0xFFFFFFFF)
+  , timeMode(static_cast<TimeMode>(-1))
+  , timeZoneOffset(0x7F)
+  , backlightMode(static_cast<BacklightMode>(-1))
+  , activityTrackerEnabled(static_cast<bool>(-1))
+  , clockTime(static_cast<DateTime>(-1))
+  , pagesEnabled(0xFFFF)
+  , moveAlertEnabled(static_cast<bool>(-1))
+  , dateMode(static_cast<DateMode>(-1))
+  , displayOrientation(static_cast<DisplayOrientation>(-1))
+  , mountingSide(static_cast<Side>(-1))
+  , defaultPage(0xFFFF)
+  , autosyncMinSteps(0xFFFF)
+  , autosyncMinTime(0xFFFF)
+  , lactateThresholdAutodetectEnabled(static_cast<bool>(-1))
+  , bleAutoUploadEnabled(static_cast<bool>(-1))
+  , autoSyncFrequency(static_cast<AutoSyncFrequency>(-1))
+  , autoActivityDetect(static_cast<AutoActivityDetect>(-1))
+  , numberOfScreens(0xFF)
+  , smartNotificationDisplayOrientation(static_cast<DisplayOrientation>(-1))
+  , tapInterface(static_cast<Switch>(-1))
+  , tapSensitivity(static_cast<TapSensitivity>(-1))
 {
     globalMessageNumber = MesgNum::DeviceSettings;
 }

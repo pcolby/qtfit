@@ -77,7 +77,11 @@ void CourseMessage::setSubSport(const SubSport subSport)
     d->subSport = subSport;
 }
 
-CourseMessagePrivate::CourseMessagePrivate(CourseMessage * const q) : FitDataMessagePrivate(q)
+CourseMessagePrivate::CourseMessagePrivate(CourseMessage * const q)
+  : FitDataMessagePrivate(q)
+  , sport(static_cast<Sport>(-1))
+  , capabilities(static_cast<CourseCapabilities>(-1))
+  , subSport(static_cast<SubSport>(-1))
 {
     globalMessageNumber = MesgNum::Course;
 }

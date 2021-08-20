@@ -66,7 +66,10 @@ void HrZoneMessage::setName(const QString name)
     d->name = name;
 }
 
-HrZoneMessagePrivate::HrZoneMessagePrivate(HrZoneMessage * const q) : FitDataMessagePrivate(q)
+HrZoneMessagePrivate::HrZoneMessagePrivate(HrZoneMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , highBpm(0xFF)
 {
     globalMessageNumber = MesgNum::HrZone;
 }

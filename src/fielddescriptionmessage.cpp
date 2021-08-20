@@ -187,7 +187,17 @@ void FieldDescriptionMessage::setNativeFieldNum(const quint8 nativeFieldNum)
     d->nativeFieldNum = nativeFieldNum;
 }
 
-FieldDescriptionMessagePrivate::FieldDescriptionMessagePrivate(FieldDescriptionMessage * const q) : FitDataMessagePrivate(q)
+FieldDescriptionMessagePrivate::FieldDescriptionMessagePrivate(FieldDescriptionMessage * const q)
+  : FitDataMessagePrivate(q)
+  , developerDataIndex(0xFF)
+  , fieldDefinitionNumber(0xFF)
+  , fitBaseTypeId(static_cast<FitBaseType>(-1))
+  , array(0xFF)
+  , scale(0xFF)
+  , offset(0x7F)
+  , fitBaseUnitId(static_cast<FitBaseUnit>(-1))
+  , nativeMesgNum(static_cast<MesgNum>(-1))
+  , nativeFieldNum(0xFF)
 {
     globalMessageNumber = MesgNum::FieldDescription;
 }

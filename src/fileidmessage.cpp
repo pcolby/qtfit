@@ -110,7 +110,14 @@ void FileIdMessage::setProductName(const QString productName)
     d->productName = productName;
 }
 
-FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q) : FitDataMessagePrivate(q)
+FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q)
+  : FitDataMessagePrivate(q)
+  , type(static_cast<File>(-1))
+  , manufacturer(static_cast<Manufacturer>(-1))
+  , product(0xFFFF)
+  , serialNumber(0)
+  , timeCreated(static_cast<DateTime>(-1))
+  , number(0xFFFF)
 {
     globalMessageNumber = MesgNum::FileId;
 }

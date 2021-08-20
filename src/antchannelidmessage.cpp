@@ -88,7 +88,13 @@ void AntChannelIdMessage::setDeviceIndex(const DeviceIndex deviceIndex)
     d->deviceIndex = deviceIndex;
 }
 
-AntChannelIdMessagePrivate::AntChannelIdMessagePrivate(AntChannelIdMessage * const q) : FitDataMessagePrivate(q)
+AntChannelIdMessagePrivate::AntChannelIdMessagePrivate(AntChannelIdMessage * const q)
+  : FitDataMessagePrivate(q)
+  , channelNumber(0xFF)
+  , deviceType(static_cast<quint8z>(-1))
+  , deviceNumber(0)
+  , transmissionType(static_cast<quint8z>(-1))
+  , deviceIndex(static_cast<DeviceIndex>(-1))
 {
     globalMessageNumber = MesgNum::AntChannelId;
 }

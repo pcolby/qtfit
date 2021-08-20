@@ -55,7 +55,10 @@ void OhrSettingsMessage::setEnabled(const Switch enabled)
     d->enabled = enabled;
 }
 
-OhrSettingsMessagePrivate::OhrSettingsMessagePrivate(OhrSettingsMessage * const q) : FitDataMessagePrivate(q)
+OhrSettingsMessagePrivate::OhrSettingsMessagePrivate(OhrSettingsMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , enabled(static_cast<Switch>(-1))
 {
     globalMessageNumber = MesgNum::OhrSettings;
 }

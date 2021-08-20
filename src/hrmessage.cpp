@@ -99,7 +99,14 @@ void HrMessage::setEventTimestamp12(const quint8 eventTimestamp12)
     d->eventTimestamp12 = eventTimestamp12;
 }
 
-HrMessagePrivate::HrMessagePrivate(HrMessage * const q) : FitDataMessagePrivate(q)
+HrMessagePrivate::HrMessagePrivate(HrMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , fractionalTimestamp(0xFFFF)
+  , time256(0xFF)
+  , filteredBpm(0xFF)
+  , eventTimestamp(0xFFFFFFFF)
+  , eventTimestamp12(0xFF)
 {
     globalMessageNumber = MesgNum::Hr;
 }

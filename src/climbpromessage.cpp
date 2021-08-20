@@ -110,7 +110,15 @@ void ClimbProMessage::setCurrentDist(const float currentDist)
     d->currentDist = currentDist;
 }
 
-ClimbProMessagePrivate::ClimbProMessagePrivate(ClimbProMessage * const q) : FitDataMessagePrivate(q)
+ClimbProMessagePrivate::ClimbProMessagePrivate(ClimbProMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , positionLat(0x7FFFFFFF)
+  , positionLong(0x7FFFFFFF)
+  , climbProEvent(static_cast<ClimbProEvent>(-1))
+  , climbNumber(0xFFFF)
+  , climbCategory(0xFF)
+  , currentDist(static_cast<float>(-1))
 {
     globalMessageNumber = MesgNum::ClimbPro;
 }

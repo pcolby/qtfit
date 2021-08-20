@@ -143,7 +143,18 @@ void JumpMessage::setEnhancedSpeed(const quint32 enhancedSpeed)
     d->enhancedSpeed = enhancedSpeed;
 }
 
-JumpMessagePrivate::JumpMessagePrivate(JumpMessage * const q) : FitDataMessagePrivate(q)
+JumpMessagePrivate::JumpMessagePrivate(JumpMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , distance(static_cast<float>(-1))
+  , height(static_cast<float>(-1))
+  , rotations(0xFF)
+  , hangTime(static_cast<float>(-1))
+  , score(static_cast<float>(-1))
+  , positionLat(0x7FFFFFFF)
+  , positionLong(0x7FFFFFFF)
+  , speed(0xFFFF)
+  , enhancedSpeed(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::Jump;
 }

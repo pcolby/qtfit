@@ -110,7 +110,15 @@ void DiveAlarmMessage::setDiveTypes(const SubSport diveTypes)
     d->diveTypes = diveTypes;
 }
 
-DiveAlarmMessagePrivate::DiveAlarmMessagePrivate(DiveAlarmMessage * const q) : FitDataMessagePrivate(q)
+DiveAlarmMessagePrivate::DiveAlarmMessagePrivate(DiveAlarmMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , depth(0xFFFFFFFF)
+  , time(0x7FFFFFFF)
+  , enabled(static_cast<bool>(-1))
+  , alarmType(static_cast<DiveAlarmType>(-1))
+  , sound(static_cast<Tone>(-1))
+  , diveTypes(static_cast<SubSport>(-1))
 {
     globalMessageNumber = MesgNum::DiveAlarm;
 }

@@ -66,7 +66,10 @@ void VideoDescriptionMessage::setText(const QString text)
     d->text = text;
 }
 
-VideoDescriptionMessagePrivate::VideoDescriptionMessagePrivate(VideoDescriptionMessage * const q) : FitDataMessagePrivate(q)
+VideoDescriptionMessagePrivate::VideoDescriptionMessagePrivate(VideoDescriptionMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , messageCount(0xFFFF)
 {
     globalMessageNumber = MesgNum::VideoDescription;
 }

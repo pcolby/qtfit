@@ -55,7 +55,10 @@ void FileCreatorMessage::setHardwareVersion(const quint8 hardwareVersion)
     d->hardwareVersion = hardwareVersion;
 }
 
-FileCreatorMessagePrivate::FileCreatorMessagePrivate(FileCreatorMessage * const q) : FitDataMessagePrivate(q)
+FileCreatorMessagePrivate::FileCreatorMessagePrivate(FileCreatorMessage * const q)
+  : FitDataMessagePrivate(q)
+  , softwareVersion(0xFFFF)
+  , hardwareVersion(0xFF)
 {
     globalMessageNumber = MesgNum::FileCreator;
 }

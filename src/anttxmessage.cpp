@@ -99,7 +99,14 @@ void AntTxMessage::setData(const quint8 data)
     d->data = data;
 }
 
-AntTxMessagePrivate::AntTxMessagePrivate(AntTxMessage * const q) : FitDataMessagePrivate(q)
+AntTxMessagePrivate::AntTxMessagePrivate(AntTxMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , fractionalTimestamp(0xFFFF)
+  , mesgId(0xFF)
+  , mesgData(0xFF)
+  , channelNumber(0xFF)
+  , data(0xFF)
 {
     globalMessageNumber = MesgNum::AntTx;
 }

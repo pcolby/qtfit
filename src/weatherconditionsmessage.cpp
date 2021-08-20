@@ -209,7 +209,23 @@ void WeatherConditionsMessage::setLowTemperature(const qint8 lowTemperature)
     d->lowTemperature = lowTemperature;
 }
 
-WeatherConditionsMessagePrivate::WeatherConditionsMessagePrivate(WeatherConditionsMessage * const q) : FitDataMessagePrivate(q)
+WeatherConditionsMessagePrivate::WeatherConditionsMessagePrivate(WeatherConditionsMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , weatherReport(static_cast<WeatherReport>(-1))
+  , temperature(0x7F)
+  , condition(static_cast<WeatherStatus>(-1))
+  , windDirection(0xFFFF)
+  , windSpeed(0xFFFF)
+  , precipitationProbability(0xFF)
+  , temperatureFeelsLike(0x7F)
+  , relativeHumidity(0xFF)
+  , observedAtTime(static_cast<DateTime>(-1))
+  , observedLocationLat(0x7FFFFFFF)
+  , observedLocationLong(0x7FFFFFFF)
+  , dayOfWeek(static_cast<DayOfWeek>(-1))
+  , highTemperature(0x7F)
+  , lowTemperature(0x7F)
 {
     globalMessageNumber = MesgNum::WeatherConditions;
 }

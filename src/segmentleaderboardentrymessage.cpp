@@ -110,7 +110,13 @@ void SegmentLeaderboardEntryMessage::setActivityIdString(const QString activityI
     d->activityIdString = activityIdString;
 }
 
-SegmentLeaderboardEntryMessagePrivate::SegmentLeaderboardEntryMessagePrivate(SegmentLeaderboardEntryMessage * const q) : FitDataMessagePrivate(q)
+SegmentLeaderboardEntryMessagePrivate::SegmentLeaderboardEntryMessagePrivate(SegmentLeaderboardEntryMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , type(static_cast<SegmentLeaderboardType>(-1))
+  , groupPrimaryKey(0xFFFFFFFF)
+  , activityId(0xFFFFFFFF)
+  , segmentTime(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::SegmentLeaderboardEntry;
 }

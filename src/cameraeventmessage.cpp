@@ -88,7 +88,12 @@ void CameraEventMessage::setCameraOrientation(const CameraOrientationType camera
     d->cameraOrientation = cameraOrientation;
 }
 
-CameraEventMessagePrivate::CameraEventMessagePrivate(CameraEventMessage * const q) : FitDataMessagePrivate(q)
+CameraEventMessagePrivate::CameraEventMessagePrivate(CameraEventMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , cameraEventType(static_cast<CameraEventType>(-1))
+  , cameraOrientation(static_cast<CameraOrientationType>(-1))
 {
     globalMessageNumber = MesgNum::CameraEvent;
 }

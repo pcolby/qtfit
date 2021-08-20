@@ -110,7 +110,15 @@ void WorkoutSessionMessage::setPoolLengthUnit(const DisplayMeasure poolLengthUni
     d->poolLengthUnit = poolLengthUnit;
 }
 
-WorkoutSessionMessagePrivate::WorkoutSessionMessagePrivate(WorkoutSessionMessage * const q) : FitDataMessagePrivate(q)
+WorkoutSessionMessagePrivate::WorkoutSessionMessagePrivate(WorkoutSessionMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , sport(static_cast<Sport>(-1))
+  , subSport(static_cast<SubSport>(-1))
+  , numValidSteps(0xFFFF)
+  , firstStepIndex(0xFFFF)
+  , poolLength(0xFFFF)
+  , poolLengthUnit(static_cast<DisplayMeasure>(-1))
 {
     globalMessageNumber = MesgNum::WorkoutSession;
 }

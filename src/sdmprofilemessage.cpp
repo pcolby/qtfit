@@ -121,7 +121,16 @@ void SdmProfileMessage::setOdometerRollover(const quint8 odometerRollover)
     d->odometerRollover = odometerRollover;
 }
 
-SdmProfileMessagePrivate::SdmProfileMessagePrivate(SdmProfileMessage * const q) : FitDataMessagePrivate(q)
+SdmProfileMessagePrivate::SdmProfileMessagePrivate(SdmProfileMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , enabled(static_cast<bool>(-1))
+  , sdmAntId(0)
+  , sdmCalFactor(0xFFFF)
+  , odometer(0xFFFFFFFF)
+  , speedSource(static_cast<bool>(-1))
+  , sdmAntIdTransType(static_cast<quint8z>(-1))
+  , odometerRollover(0xFF)
 {
     globalMessageNumber = MesgNum::SdmProfile;
 }

@@ -176,7 +176,21 @@ void DiveSummaryMessage::setBottomTime(const quint32 bottomTime)
     d->bottomTime = bottomTime;
 }
 
-DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const q) : FitDataMessagePrivate(q)
+DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , referenceMesg(static_cast<MesgNum>(-1))
+  , referenceIndex(static_cast<MessageIndex>(-1))
+  , avgDepth(0xFFFFFFFF)
+  , maxDepth(0xFFFFFFFF)
+  , surfaceInterval(0xFFFFFFFF)
+  , startCns(0xFF)
+  , endCns(0xFF)
+  , startN2(0xFFFF)
+  , endN2(0xFFFF)
+  , o2Toxicity(0xFFFF)
+  , diveNumber(0xFFFFFFFF)
+  , bottomTime(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::DiveSummary;
 }

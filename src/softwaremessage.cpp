@@ -66,7 +66,10 @@ void SoftwareMessage::setPartNumber(const QString partNumber)
     d->partNumber = partNumber;
 }
 
-SoftwareMessagePrivate::SoftwareMessagePrivate(SoftwareMessage * const q) : FitDataMessagePrivate(q)
+SoftwareMessagePrivate::SoftwareMessagePrivate(SoftwareMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , version(0xFFFF)
 {
     globalMessageNumber = MesgNum::Software;
 }

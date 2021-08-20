@@ -66,7 +66,9 @@ void VideoMessage::setDuration(const quint32 duration)
     d->duration = duration;
 }
 
-VideoMessagePrivate::VideoMessagePrivate(VideoMessage * const q) : FitDataMessagePrivate(q)
+VideoMessagePrivate::VideoMessagePrivate(VideoMessage * const q)
+  : FitDataMessagePrivate(q)
+  , duration(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::Video;
 }

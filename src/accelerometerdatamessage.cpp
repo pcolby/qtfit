@@ -165,7 +165,20 @@ void AccelerometerDataMessage::setCompressedCalibratedAccelZ(const qint16 compre
     d->compressedCalibratedAccelZ = compressedCalibratedAccelZ;
 }
 
-AccelerometerDataMessagePrivate::AccelerometerDataMessagePrivate(AccelerometerDataMessage * const q) : FitDataMessagePrivate(q)
+AccelerometerDataMessagePrivate::AccelerometerDataMessagePrivate(AccelerometerDataMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , sampleTimeOffset(0xFFFF)
+  , accelX(0xFFFF)
+  , accelY(0xFFFF)
+  , accelZ(0xFFFF)
+  , calibratedAccelX(static_cast<float>(-1))
+  , calibratedAccelY(static_cast<float>(-1))
+  , calibratedAccelZ(static_cast<float>(-1))
+  , compressedCalibratedAccelX(0x7FFF)
+  , compressedCalibratedAccelY(0x7FFF)
+  , compressedCalibratedAccelZ(0x7FFF)
 {
     globalMessageNumber = MesgNum::AccelerometerData;
 }

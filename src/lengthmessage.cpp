@@ -231,7 +231,26 @@ void LengthMessage::setZoneCount(const quint16 zoneCount)
     d->zoneCount = zoneCount;
 }
 
-LengthMessagePrivate::LengthMessagePrivate(LengthMessage * const q) : FitDataMessagePrivate(q)
+LengthMessagePrivate::LengthMessagePrivate(LengthMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , timestamp(static_cast<DateTime>(-1))
+  , event(static_cast<Event>(-1))
+  , eventType(static_cast<EventType>(-1))
+  , startTime(static_cast<DateTime>(-1))
+  , totalElapsedTime(0xFFFFFFFF)
+  , totalTimerTime(0xFFFFFFFF)
+  , totalStrokes(0xFFFF)
+  , avgSpeed(0xFFFF)
+  , swimStroke(static_cast<SwimStroke>(-1))
+  , avgSwimmingCadence(0xFF)
+  , eventGroup(0xFF)
+  , totalCalories(0xFFFF)
+  , lengthType(static_cast<LengthType>(-1))
+  , playerScore(0xFFFF)
+  , opponentScore(0xFFFF)
+  , strokeCount(0xFFFF)
+  , zoneCount(0xFFFF)
 {
     globalMessageNumber = MesgNum::Length;
 }

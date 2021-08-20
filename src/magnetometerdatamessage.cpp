@@ -132,7 +132,17 @@ void MagnetometerDataMessage::setCalibratedMagZ(const float calibratedMagZ)
     d->calibratedMagZ = calibratedMagZ;
 }
 
-MagnetometerDataMessagePrivate::MagnetometerDataMessagePrivate(MagnetometerDataMessage * const q) : FitDataMessagePrivate(q)
+MagnetometerDataMessagePrivate::MagnetometerDataMessagePrivate(MagnetometerDataMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , sampleTimeOffset(0xFFFF)
+  , magX(0xFFFF)
+  , magY(0xFFFF)
+  , magZ(0xFFFF)
+  , calibratedMagX(static_cast<float>(-1))
+  , calibratedMagY(static_cast<float>(-1))
+  , calibratedMagZ(static_cast<float>(-1))
 {
     globalMessageNumber = MesgNum::MagnetometerData;
 }

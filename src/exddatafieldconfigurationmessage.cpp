@@ -99,7 +99,13 @@ void ExdDataFieldConfigurationMessage::setTitle(const QString title)
     d->title = title;
 }
 
-ExdDataFieldConfigurationMessagePrivate::ExdDataFieldConfigurationMessagePrivate(ExdDataFieldConfigurationMessage * const q) : FitDataMessagePrivate(q)
+ExdDataFieldConfigurationMessagePrivate::ExdDataFieldConfigurationMessagePrivate(ExdDataFieldConfigurationMessage * const q)
+  : FitDataMessagePrivate(q)
+  , screenIndex(0xFF)
+  , conceptField(0xFF)
+  , fieldId(0xFF)
+  , conceptCount(0xFF)
+  , displayType(static_cast<ExdDisplayType>(-1))
 {
     globalMessageNumber = MesgNum::ExdDataFieldConfiguration;
 }

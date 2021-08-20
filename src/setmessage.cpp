@@ -154,7 +154,19 @@ void SetMessage::setWktStepIndex(const MessageIndex wktStepIndex)
     d->wktStepIndex = wktStepIndex;
 }
 
-SetMessagePrivate::SetMessagePrivate(SetMessage * const q) : FitDataMessagePrivate(q)
+SetMessagePrivate::SetMessagePrivate(SetMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , duration(0xFFFFFFFF)
+  , repetitions(0xFFFF)
+  , weight(0xFFFF)
+  , setType(static_cast<SetType>(-1))
+  , startTime(static_cast<DateTime>(-1))
+  , category(static_cast<ExerciseCategory>(-1))
+  , categorySubtype(0xFFFF)
+  , weightDisplayUnit(static_cast<FitBaseUnit>(-1))
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , wktStepIndex(static_cast<MessageIndex>(-1))
 {
     globalMessageNumber = MesgNum::Set;
 }

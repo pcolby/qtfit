@@ -88,7 +88,13 @@ void HrmProfileMessage::setHrmAntIdTransType(const quint8z hrmAntIdTransType)
     d->hrmAntIdTransType = hrmAntIdTransType;
 }
 
-HrmProfileMessagePrivate::HrmProfileMessagePrivate(HrmProfileMessage * const q) : FitDataMessagePrivate(q)
+HrmProfileMessagePrivate::HrmProfileMessagePrivate(HrmProfileMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , enabled(static_cast<bool>(-1))
+  , hrmAntId(0)
+  , logHrv(static_cast<bool>(-1))
+  , hrmAntIdTransType(static_cast<quint8z>(-1))
 {
     globalMessageNumber = MesgNum::HrmProfile;
 }

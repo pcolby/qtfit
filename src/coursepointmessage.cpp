@@ -121,7 +121,15 @@ void CoursePointMessage::setFavorite(const bool favorite)
     d->favorite = favorite;
 }
 
-CoursePointMessagePrivate::CoursePointMessagePrivate(CoursePointMessage * const q) : FitDataMessagePrivate(q)
+CoursePointMessagePrivate::CoursePointMessagePrivate(CoursePointMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , timestamp(static_cast<DateTime>(-1))
+  , positionLat(0x7FFFFFFF)
+  , positionLong(0x7FFFFFFF)
+  , distance(0xFFFFFFFF)
+  , type(static_cast<CoursePoint>(-1))
+  , favorite(static_cast<bool>(-1))
 {
     globalMessageNumber = MesgNum::CoursePoint;
 }

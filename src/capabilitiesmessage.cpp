@@ -77,7 +77,12 @@ void CapabilitiesMessage::setConnectivitySupported(const ConnectivityCapabilitie
     d->connectivitySupported = connectivitySupported;
 }
 
-CapabilitiesMessagePrivate::CapabilitiesMessagePrivate(CapabilitiesMessage * const q) : FitDataMessagePrivate(q)
+CapabilitiesMessagePrivate::CapabilitiesMessagePrivate(CapabilitiesMessage * const q)
+  : FitDataMessagePrivate(q)
+  , languages(static_cast<quint8z>(-1))
+  , sports(static_cast<SportBits0>(-1))
+  , workoutsSupported(static_cast<WorkoutCapabilities>(-1))
+  , connectivitySupported(static_cast<ConnectivityCapabilities>(-1))
 {
     globalMessageNumber = MesgNum::Capabilities;
 }

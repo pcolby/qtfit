@@ -143,7 +143,18 @@ void TotalsMessage::setSportIndex(const quint8 sportIndex)
     d->sportIndex = sportIndex;
 }
 
-TotalsMessagePrivate::TotalsMessagePrivate(TotalsMessage * const q) : FitDataMessagePrivate(q)
+TotalsMessagePrivate::TotalsMessagePrivate(TotalsMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , timestamp(static_cast<DateTime>(-1))
+  , timerTime(0xFFFFFFFF)
+  , distance(0xFFFFFFFF)
+  , calories(0xFFFFFFFF)
+  , sport(static_cast<Sport>(-1))
+  , elapsedTime(0xFFFFFFFF)
+  , sessions(0xFFFF)
+  , activeTime(0xFFFFFFFF)
+  , sportIndex(0xFF)
 {
     globalMessageNumber = MesgNum::Totals;
 }

@@ -132,7 +132,17 @@ void GyroscopeDataMessage::setCalibratedGyroZ(const float calibratedGyroZ)
     d->calibratedGyroZ = calibratedGyroZ;
 }
 
-GyroscopeDataMessagePrivate::GyroscopeDataMessagePrivate(GyroscopeDataMessage * const q) : FitDataMessagePrivate(q)
+GyroscopeDataMessagePrivate::GyroscopeDataMessagePrivate(GyroscopeDataMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , sampleTimeOffset(0xFFFF)
+  , gyroX(0xFFFF)
+  , gyroY(0xFFFF)
+  , gyroZ(0xFFFF)
+  , calibratedGyroX(static_cast<float>(-1))
+  , calibratedGyroY(static_cast<float>(-1))
+  , calibratedGyroZ(static_cast<float>(-1))
 {
     globalMessageNumber = MesgNum::GyroscopeData;
 }

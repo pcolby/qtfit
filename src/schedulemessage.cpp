@@ -110,7 +110,15 @@ void ScheduleMessage::setScheduledTime(const LocalDateTime scheduledTime)
     d->scheduledTime = scheduledTime;
 }
 
-ScheduleMessagePrivate::ScheduleMessagePrivate(ScheduleMessage * const q) : FitDataMessagePrivate(q)
+ScheduleMessagePrivate::ScheduleMessagePrivate(ScheduleMessage * const q)
+  : FitDataMessagePrivate(q)
+  , manufacturer(static_cast<Manufacturer>(-1))
+  , product(0xFFFF)
+  , serialNumber(0)
+  , timeCreated(static_cast<DateTime>(-1))
+  , completed(static_cast<bool>(-1))
+  , type(static_cast<Schedule>(-1))
+  , scheduledTime(static_cast<LocalDateTime>(-1))
 {
     globalMessageNumber = MesgNum::Schedule;
 }

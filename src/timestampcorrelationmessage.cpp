@@ -110,7 +110,15 @@ void TimestampCorrelationMessage::setSystemTimestampMs(const quint16 systemTimes
     d->systemTimestampMs = systemTimestampMs;
 }
 
-TimestampCorrelationMessagePrivate::TimestampCorrelationMessagePrivate(TimestampCorrelationMessage * const q) : FitDataMessagePrivate(q)
+TimestampCorrelationMessagePrivate::TimestampCorrelationMessagePrivate(TimestampCorrelationMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , fractionalTimestamp(0xFFFF)
+  , systemTimestamp(static_cast<DateTime>(-1))
+  , fractionalSystemTimestamp(0xFFFF)
+  , localTimestamp(static_cast<LocalDateTime>(-1))
+  , timestampMs(0xFFFF)
+  , systemTimestampMs(0xFFFF)
 {
     globalMessageNumber = MesgNum::TimestampCorrelation;
 }

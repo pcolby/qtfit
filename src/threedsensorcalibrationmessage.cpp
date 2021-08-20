@@ -110,7 +110,15 @@ void ThreeDSensorCalibrationMessage::setOrientationMatrix(const qint32 orientati
     d->orientationMatrix = orientationMatrix;
 }
 
-ThreeDSensorCalibrationMessagePrivate::ThreeDSensorCalibrationMessagePrivate(ThreeDSensorCalibrationMessage * const q) : FitDataMessagePrivate(q)
+ThreeDSensorCalibrationMessagePrivate::ThreeDSensorCalibrationMessagePrivate(ThreeDSensorCalibrationMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , sensorType(static_cast<SensorType>(-1))
+  , calibrationFactor(0xFFFFFFFF)
+  , calibrationDivisor(0xFFFFFFFF)
+  , levelShift(0xFFFFFFFF)
+  , offsetCal(0x7FFFFFFF)
+  , orientationMatrix(0x7FFFFFFF)
 {
     globalMessageNumber = MesgNum::ThreeDSensorCalibration;
 }

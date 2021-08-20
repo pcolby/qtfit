@@ -66,7 +66,10 @@ void SpeedZoneMessage::setName(const QString name)
     d->name = name;
 }
 
-SpeedZoneMessagePrivate::SpeedZoneMessagePrivate(SpeedZoneMessage * const q) : FitDataMessagePrivate(q)
+SpeedZoneMessagePrivate::SpeedZoneMessagePrivate(SpeedZoneMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , highValue(0xFFFF)
 {
     globalMessageNumber = MesgNum::SpeedZone;
 }

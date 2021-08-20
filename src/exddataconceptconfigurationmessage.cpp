@@ -154,7 +154,19 @@ void ExdDataConceptConfigurationMessage::setIsSigned(const bool isSigned)
     d->isSigned = isSigned;
 }
 
-ExdDataConceptConfigurationMessagePrivate::ExdDataConceptConfigurationMessagePrivate(ExdDataConceptConfigurationMessage * const q) : FitDataMessagePrivate(q)
+ExdDataConceptConfigurationMessagePrivate::ExdDataConceptConfigurationMessagePrivate(ExdDataConceptConfigurationMessage * const q)
+  : FitDataMessagePrivate(q)
+  , screenIndex(0xFF)
+  , conceptField(0xFF)
+  , fieldId(0xFF)
+  , conceptIndex(0xFF)
+  , dataPage(0xFF)
+  , conceptKey(0xFF)
+  , scaling(0xFF)
+  , dataUnits(static_cast<ExdDataUnits>(-1))
+  , qualifier(static_cast<ExdQualifiers>(-1))
+  , descriptor(static_cast<ExdDescriptors>(-1))
+  , isSigned(static_cast<bool>(-1))
 {
     globalMessageNumber = MesgNum::ExdDataConceptConfiguration;
 }

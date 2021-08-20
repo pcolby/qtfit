@@ -44,7 +44,9 @@ void HrvMessage::setTime(const quint16 time)
     d->time = time;
 }
 
-HrvMessagePrivate::HrvMessagePrivate(HrvMessage * const q) : FitDataMessagePrivate(q)
+HrvMessagePrivate::HrvMessagePrivate(HrvMessage * const q)
+  : FitDataMessagePrivate(q)
+  , time(0xFFFF)
 {
     globalMessageNumber = MesgNum::Hrv;
 }

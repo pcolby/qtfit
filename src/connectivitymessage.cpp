@@ -176,7 +176,20 @@ void ConnectivityMessage::setGrouptrackEnabled(const bool grouptrackEnabled)
     d->grouptrackEnabled = grouptrackEnabled;
 }
 
-ConnectivityMessagePrivate::ConnectivityMessagePrivate(ConnectivityMessage * const q) : FitDataMessagePrivate(q)
+ConnectivityMessagePrivate::ConnectivityMessagePrivate(ConnectivityMessage * const q)
+  : FitDataMessagePrivate(q)
+  , bluetoothEnabled(static_cast<bool>(-1))
+  , bluetoothLeEnabled(static_cast<bool>(-1))
+  , antEnabled(static_cast<bool>(-1))
+  , liveTrackingEnabled(static_cast<bool>(-1))
+  , weatherConditionsEnabled(static_cast<bool>(-1))
+  , weatherAlertsEnabled(static_cast<bool>(-1))
+  , autoActivityUploadEnabled(static_cast<bool>(-1))
+  , courseDownloadEnabled(static_cast<bool>(-1))
+  , workoutDownloadEnabled(static_cast<bool>(-1))
+  , gpsEphemerisDownloadEnabled(static_cast<bool>(-1))
+  , incidentDetectionEnabled(static_cast<bool>(-1))
+  , grouptrackEnabled(static_cast<bool>(-1))
 {
     globalMessageNumber = MesgNum::Connectivity;
 }

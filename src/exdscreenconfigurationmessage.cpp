@@ -77,7 +77,12 @@ void ExdScreenConfigurationMessage::setScreenEnabled(const bool screenEnabled)
     d->screenEnabled = screenEnabled;
 }
 
-ExdScreenConfigurationMessagePrivate::ExdScreenConfigurationMessagePrivate(ExdScreenConfigurationMessage * const q) : FitDataMessagePrivate(q)
+ExdScreenConfigurationMessagePrivate::ExdScreenConfigurationMessagePrivate(ExdScreenConfigurationMessage * const q)
+  : FitDataMessagePrivate(q)
+  , screenIndex(0xFF)
+  , fieldCount(0xFF)
+  , layout(static_cast<ExdLayout>(-1))
+  , screenEnabled(static_cast<bool>(-1))
 {
     globalMessageNumber = MesgNum::ExdScreenConfiguration;
 }

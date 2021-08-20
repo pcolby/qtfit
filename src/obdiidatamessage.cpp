@@ -132,7 +132,17 @@ void ObdiiDataMessage::setStartTimestampMs(const quint16 startTimestampMs)
     d->startTimestampMs = startTimestampMs;
 }
 
-ObdiiDataMessagePrivate::ObdiiDataMessagePrivate(ObdiiDataMessage * const q) : FitDataMessagePrivate(q)
+ObdiiDataMessagePrivate::ObdiiDataMessagePrivate(ObdiiDataMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , timeOffset(0xFFFF)
+  , pid(0xFF)
+  , rawData(0xFF)
+  , pidDataSize(0xFF)
+  , systemTime(0xFFFFFFFF)
+  , startTimestamp(static_cast<DateTime>(-1))
+  , startTimestampMs(0xFFFF)
 {
     globalMessageNumber = MesgNum::ObdiiData;
 }

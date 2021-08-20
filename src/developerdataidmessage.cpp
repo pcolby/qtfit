@@ -88,7 +88,13 @@ void DeveloperDataIdMessage::setApplicationVersion(const quint32 applicationVers
     d->applicationVersion = applicationVersion;
 }
 
-DeveloperDataIdMessagePrivate::DeveloperDataIdMessagePrivate(DeveloperDataIdMessage * const q) : FitDataMessagePrivate(q)
+DeveloperDataIdMessagePrivate::DeveloperDataIdMessagePrivate(DeveloperDataIdMessage * const q)
+  : FitDataMessagePrivate(q)
+  , developerId(0xFF)
+  , applicationId(0xFF)
+  , manufacturerId(static_cast<Manufacturer>(-1))
+  , developerDataIndex(0xFF)
+  , applicationVersion(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::DeveloperDataId;
 }

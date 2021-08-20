@@ -77,7 +77,11 @@ void ExerciseTitleMessage::setWktStepName(const QString wktStepName)
     d->wktStepName = wktStepName;
 }
 
-ExerciseTitleMessagePrivate::ExerciseTitleMessagePrivate(ExerciseTitleMessage * const q) : FitDataMessagePrivate(q)
+ExerciseTitleMessagePrivate::ExerciseTitleMessagePrivate(ExerciseTitleMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , exerciseCategory(static_cast<ExerciseCategory>(-1))
+  , exerciseName(0xFFFF)
 {
     globalMessageNumber = MesgNum::ExerciseTitle;
 }

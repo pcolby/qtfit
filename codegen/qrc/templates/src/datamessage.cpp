@@ -26,7 +26,13 @@ void {{ClassName}}::set{{field.name|capfirst}}(const {{field.type}} {{field.name
 }
 {% endfor %}
 
-{{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q) : FitDataMessagePrivate(q)
+{{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
+  : FitDataMessagePrivate(q)
+{% for field in fields %}
+{% if field.defaultValue %}
+  , {{field.name}}({{field.defaultValue}})
+{% endif %}
+{% endfor %}
 {
     globalMessageNumber = MesgNum::{{MesgNumLabel}};
 }

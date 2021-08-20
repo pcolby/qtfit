@@ -66,7 +66,10 @@ void CadenceZoneMessage::setName(const QString name)
     d->name = name;
 }
 
-CadenceZoneMessagePrivate::CadenceZoneMessagePrivate(CadenceZoneMessage * const q) : FitDataMessagePrivate(q)
+CadenceZoneMessagePrivate::CadenceZoneMessagePrivate(CadenceZoneMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , highValue(0xFF)
 {
     globalMessageNumber = MesgNum::CadenceZone;
 }

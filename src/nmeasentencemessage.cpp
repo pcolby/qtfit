@@ -66,7 +66,10 @@ void NmeaSentenceMessage::setSentence(const QString sentence)
     d->sentence = sentence;
 }
 
-NmeaSentenceMessagePrivate::NmeaSentenceMessagePrivate(NmeaSentenceMessage * const q) : FitDataMessagePrivate(q)
+NmeaSentenceMessagePrivate::NmeaSentenceMessagePrivate(NmeaSentenceMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
 {
     globalMessageNumber = MesgNum::NmeaSentence;
 }

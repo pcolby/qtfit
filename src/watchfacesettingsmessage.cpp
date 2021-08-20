@@ -66,7 +66,11 @@ void WatchfaceSettingsMessage::setLayout(const quint8 layout)
     d->layout = layout;
 }
 
-WatchfaceSettingsMessagePrivate::WatchfaceSettingsMessagePrivate(WatchfaceSettingsMessage * const q) : FitDataMessagePrivate(q)
+WatchfaceSettingsMessagePrivate::WatchfaceSettingsMessagePrivate(WatchfaceSettingsMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , mode(static_cast<WatchfaceMode>(-1))
+  , layout(0xFF)
 {
     globalMessageNumber = MesgNum::WatchfaceSettings;
 }

@@ -110,7 +110,15 @@ void VideoClipMessage::setClipEnd(const quint32 clipEnd)
     d->clipEnd = clipEnd;
 }
 
-VideoClipMessagePrivate::VideoClipMessagePrivate(VideoClipMessage * const q) : FitDataMessagePrivate(q)
+VideoClipMessagePrivate::VideoClipMessagePrivate(VideoClipMessage * const q)
+  : FitDataMessagePrivate(q)
+  , clipNumber(0xFFFF)
+  , startTimestamp(static_cast<DateTime>(-1))
+  , startTimestampMs(0xFFFF)
+  , endTimestamp(static_cast<DateTime>(-1))
+  , endTimestampMs(0xFFFF)
+  , clipStart(0xFFFFFFFF)
+  , clipEnd(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::VideoClip;
 }

@@ -77,7 +77,12 @@ void DiveGasMessage::setStatus(const DiveGasStatus status)
     d->status = status;
 }
 
-DiveGasMessagePrivate::DiveGasMessagePrivate(DiveGasMessage * const q) : FitDataMessagePrivate(q)
+DiveGasMessagePrivate::DiveGasMessagePrivate(DiveGasMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , heliumContent(0xFF)
+  , oxygenContent(0xFF)
+  , status(static_cast<DiveGasStatus>(-1))
 {
     globalMessageNumber = MesgNum::DiveGas;
 }

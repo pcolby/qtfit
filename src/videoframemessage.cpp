@@ -66,7 +66,11 @@ void VideoFrameMessage::setFrameNumber(const quint32 frameNumber)
     d->frameNumber = frameNumber;
 }
 
-VideoFrameMessagePrivate::VideoFrameMessagePrivate(VideoFrameMessage * const q) : FitDataMessagePrivate(q)
+VideoFrameMessagePrivate::VideoFrameMessagePrivate(VideoFrameMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , frameNumber(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::VideoFrame;
 }

@@ -88,7 +88,13 @@ void MesgCapabilitiesMessage::setCount(const quint16 count)
     d->count = count;
 }
 
-MesgCapabilitiesMessagePrivate::MesgCapabilitiesMessagePrivate(MesgCapabilitiesMessage * const q) : FitDataMessagePrivate(q)
+MesgCapabilitiesMessagePrivate::MesgCapabilitiesMessagePrivate(MesgCapabilitiesMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , file(static_cast<File>(-1))
+  , mesgNum(static_cast<MesgNum>(-1))
+  , countType(static_cast<MesgCount>(-1))
+  , count(0xFFFF)
 {
     globalMessageNumber = MesgNum::MesgCapabilities;
 }

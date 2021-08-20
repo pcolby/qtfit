@@ -275,7 +275,29 @@ void DiveSettingsMessage::setHeartRateSource(const quint8 heartRateSource)
     d->heartRateSource = heartRateSource;
 }
 
-DiveSettingsMessagePrivate::DiveSettingsMessagePrivate(DiveSettingsMessage * const q) : FitDataMessagePrivate(q)
+DiveSettingsMessagePrivate::DiveSettingsMessagePrivate(DiveSettingsMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , model(static_cast<TissueModelType>(-1))
+  , gfLow(0xFF)
+  , gfHigh(0xFF)
+  , waterType(static_cast<WaterType>(-1))
+  , waterDensity(static_cast<float>(-1))
+  , po2Warn(0xFF)
+  , po2Critical(0xFF)
+  , po2Deco(0xFF)
+  , safetyStopEnabled(static_cast<bool>(-1))
+  , bottomDepth(static_cast<float>(-1))
+  , bottomTime(0xFFFFFFFF)
+  , apneaCountdownEnabled(static_cast<bool>(-1))
+  , apneaCountdownTime(0xFFFFFFFF)
+  , backlightMode(static_cast<DiveBacklightMode>(-1))
+  , backlightBrightness(0xFF)
+  , backlightTimeout(static_cast<BacklightTimeout>(-1))
+  , repeatDiveInterval(0xFFFF)
+  , safetyStopTime(0xFFFF)
+  , heartRateSourceType(static_cast<SourceType>(-1))
+  , heartRateSource(0xFF)
 {
     globalMessageNumber = MesgNum::DiveSettings;
 }

@@ -132,7 +132,15 @@ void SegmentFileMessage::setDefaultRaceLeader(const quint8 defaultRaceLeader)
     d->defaultRaceLeader = defaultRaceLeader;
 }
 
-SegmentFileMessagePrivate::SegmentFileMessagePrivate(SegmentFileMessage * const q) : FitDataMessagePrivate(q)
+SegmentFileMessagePrivate::SegmentFileMessagePrivate(SegmentFileMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , enabled(static_cast<bool>(-1))
+  , userProfilePrimaryKey(0xFFFFFFFF)
+  , leaderType(static_cast<SegmentLeaderboardType>(-1))
+  , leaderGroupPrimaryKey(0xFFFFFFFF)
+  , leaderActivityId(0xFFFFFFFF)
+  , defaultRaceLeader(0xFF)
 {
     globalMessageNumber = MesgNum::SegmentFile;
 }

@@ -132,7 +132,17 @@ void GpsMetadataMessage::setVelocity(const qint16 velocity)
     d->velocity = velocity;
 }
 
-GpsMetadataMessagePrivate::GpsMetadataMessagePrivate(GpsMetadataMessage * const q) : FitDataMessagePrivate(q)
+GpsMetadataMessagePrivate::GpsMetadataMessagePrivate(GpsMetadataMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , positionLat(0x7FFFFFFF)
+  , positionLong(0x7FFFFFFF)
+  , enhancedAltitude(0xFFFFFFFF)
+  , enhancedSpeed(0xFFFFFFFF)
+  , heading(0xFFFF)
+  , utcTimestamp(static_cast<DateTime>(-1))
+  , velocity(0x7FFF)
 {
     globalMessageNumber = MesgNum::GpsMetadata;
 }

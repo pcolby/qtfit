@@ -176,7 +176,21 @@ void GoalMessage::setSource(const GoalSource source)
     d->source = source;
 }
 
-GoalMessagePrivate::GoalMessagePrivate(GoalMessage * const q) : FitDataMessagePrivate(q)
+GoalMessagePrivate::GoalMessagePrivate(GoalMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , sport(static_cast<Sport>(-1))
+  , subSport(static_cast<SubSport>(-1))
+  , startDate(static_cast<DateTime>(-1))
+  , endDate(static_cast<DateTime>(-1))
+  , type(static_cast<Goal>(-1))
+  , value(0xFFFFFFFF)
+  , repeat(static_cast<bool>(-1))
+  , targetValue(0xFFFFFFFF)
+  , recurrence(static_cast<GoalRecurrence>(-1))
+  , recurrenceValue(0xFFFF)
+  , enabled(static_cast<bool>(-1))
+  , source(static_cast<GoalSource>(-1))
 {
     globalMessageNumber = MesgNum::Goal;
 }

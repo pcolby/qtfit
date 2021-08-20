@@ -88,7 +88,13 @@ void ZonesTargetMessage::setPwrCalcType(const PwrZoneCalc pwrCalcType)
     d->pwrCalcType = pwrCalcType;
 }
 
-ZonesTargetMessagePrivate::ZonesTargetMessagePrivate(ZonesTargetMessage * const q) : FitDataMessagePrivate(q)
+ZonesTargetMessagePrivate::ZonesTargetMessagePrivate(ZonesTargetMessage * const q)
+  : FitDataMessagePrivate(q)
+  , maxHeartRate(0xFF)
+  , thresholdHeartRate(0xFF)
+  , functionalThresholdPower(0xFFFF)
+  , hrCalcType(static_cast<HrZoneCalc>(-1))
+  , pwrCalcType(static_cast<PwrZoneCalc>(-1))
 {
     globalMessageNumber = MesgNum::ZonesTarget;
 }

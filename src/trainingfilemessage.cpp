@@ -99,7 +99,14 @@ void TrainingFileMessage::setTimeCreated(const DateTime timeCreated)
     d->timeCreated = timeCreated;
 }
 
-TrainingFileMessagePrivate::TrainingFileMessagePrivate(TrainingFileMessage * const q) : FitDataMessagePrivate(q)
+TrainingFileMessagePrivate::TrainingFileMessagePrivate(TrainingFileMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , type(static_cast<File>(-1))
+  , manufacturer(static_cast<Manufacturer>(-1))
+  , product(0xFFFF)
+  , serialNumber(0)
+  , timeCreated(static_cast<DateTime>(-1))
 {
     globalMessageNumber = MesgNum::TrainingFile;
 }

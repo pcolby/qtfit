@@ -77,7 +77,12 @@ void BarometerDataMessage::setBaroPres(const quint32 baroPres)
     d->baroPres = baroPres;
 }
 
-BarometerDataMessagePrivate::BarometerDataMessagePrivate(BarometerDataMessage * const q) : FitDataMessagePrivate(q)
+BarometerDataMessagePrivate::BarometerDataMessagePrivate(BarometerDataMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , timestampMs(0xFFFF)
+  , sampleTimeOffset(0xFFFF)
+  , baroPres(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::BarometerData;
 }

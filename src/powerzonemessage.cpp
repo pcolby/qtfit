@@ -66,7 +66,10 @@ void PowerZoneMessage::setName(const QString name)
     d->name = name;
 }
 
-PowerZoneMessagePrivate::PowerZoneMessagePrivate(PowerZoneMessage * const q) : FitDataMessagePrivate(q)
+PowerZoneMessagePrivate::PowerZoneMessagePrivate(PowerZoneMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , highValue(0xFFFF)
 {
     globalMessageNumber = MesgNum::PowerZone;
 }

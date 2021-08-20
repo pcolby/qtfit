@@ -99,7 +99,14 @@ void MonitoringInfoMessage::setRestingMetabolicRate(const quint16 restingMetabol
     d->restingMetabolicRate = restingMetabolicRate;
 }
 
-MonitoringInfoMessagePrivate::MonitoringInfoMessagePrivate(MonitoringInfoMessage * const q) : FitDataMessagePrivate(q)
+MonitoringInfoMessagePrivate::MonitoringInfoMessagePrivate(MonitoringInfoMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , localTimestamp(static_cast<LocalDateTime>(-1))
+  , activityType(static_cast<ActivityType>(-1))
+  , cyclesToDistance(0xFFFF)
+  , cyclesToCalories(0xFFFF)
+  , restingMetabolicRate(0xFFFF)
 {
     globalMessageNumber = MesgNum::MonitoringInfo;
 }

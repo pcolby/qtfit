@@ -132,7 +132,15 @@ void SegmentIdMessage::setSelectionType(const SegmentSelectionType selectionType
     d->selectionType = selectionType;
 }
 
-SegmentIdMessagePrivate::SegmentIdMessagePrivate(SegmentIdMessage * const q) : FitDataMessagePrivate(q)
+SegmentIdMessagePrivate::SegmentIdMessagePrivate(SegmentIdMessage * const q)
+  : FitDataMessagePrivate(q)
+  , sport(static_cast<Sport>(-1))
+  , enabled(static_cast<bool>(-1))
+  , userProfilePrimaryKey(0xFFFFFFFF)
+  , deviceId(0xFFFFFFFF)
+  , defaultRaceLeader(0xFF)
+  , deleteStatus(static_cast<SegmentDeleteStatus>(-1))
+  , selectionType(static_cast<SegmentSelectionType>(-1))
 {
     globalMessageNumber = MesgNum::SegmentId;
 }

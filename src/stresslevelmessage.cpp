@@ -55,7 +55,10 @@ void StressLevelMessage::setStressLevelTime(const DateTime stressLevelTime)
     d->stressLevelTime = stressLevelTime;
 }
 
-StressLevelMessagePrivate::StressLevelMessagePrivate(StressLevelMessage * const q) : FitDataMessagePrivate(q)
+StressLevelMessagePrivate::StressLevelMessagePrivate(StressLevelMessage * const q)
+  : FitDataMessagePrivate(q)
+  , stressLevelValue(0x7FFF)
+  , stressLevelTime(static_cast<DateTime>(-1))
 {
     globalMessageNumber = MesgNum::StressLevel;
 }

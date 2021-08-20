@@ -176,7 +176,21 @@ void WeightScaleMessage::setUserProfileIndex(const MessageIndex userProfileIndex
     d->userProfileIndex = userProfileIndex;
 }
 
-WeightScaleMessagePrivate::WeightScaleMessagePrivate(WeightScaleMessage * const q) : FitDataMessagePrivate(q)
+WeightScaleMessagePrivate::WeightScaleMessagePrivate(WeightScaleMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , weight(static_cast<Weight>(-1))
+  , percentFat(0xFFFF)
+  , percentHydration(0xFFFF)
+  , visceralFatMass(0xFFFF)
+  , boneMass(0xFFFF)
+  , muscleMass(0xFFFF)
+  , basalMet(0xFFFF)
+  , physiqueRating(0xFF)
+  , activeMet(0xFFFF)
+  , metabolicAge(0xFF)
+  , visceralFatRating(0xFF)
+  , userProfileIndex(static_cast<MessageIndex>(-1))
 {
     globalMessageNumber = MesgNum::WeightScale;
 }

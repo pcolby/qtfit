@@ -88,7 +88,13 @@ void FieldCapabilitiesMessage::setCount(const quint16 count)
     d->count = count;
 }
 
-FieldCapabilitiesMessagePrivate::FieldCapabilitiesMessagePrivate(FieldCapabilitiesMessage * const q) : FitDataMessagePrivate(q)
+FieldCapabilitiesMessagePrivate::FieldCapabilitiesMessagePrivate(FieldCapabilitiesMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , file(static_cast<File>(-1))
+  , mesgNum(static_cast<MesgNum>(-1))
+  , fieldNum(0xFF)
+  , count(0xFFFF)
 {
     globalMessageNumber = MesgNum::FieldCapabilities;
 }

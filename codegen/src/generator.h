@@ -42,6 +42,7 @@ protected:
     bool renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
                           const QString &outputPathName, const QString className);
 
+    static QString invalidValue(const QString &type);
     static QString safeEnumLabel(const QString &string);
     static QString toCamelCase(const QString &string, const bool camelCase=false);
     static QString toFitType(const QString &string);

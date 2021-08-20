@@ -99,7 +99,13 @@ void FileCapabilitiesMessage::setMaxSize(const quint32 maxSize)
     d->maxSize = maxSize;
 }
 
-FileCapabilitiesMessagePrivate::FileCapabilitiesMessagePrivate(FileCapabilitiesMessage * const q) : FitDataMessagePrivate(q)
+FileCapabilitiesMessagePrivate::FileCapabilitiesMessagePrivate(FileCapabilitiesMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , type(static_cast<File>(-1))
+  , flags(static_cast<FileFlags>(-1))
+  , maxCount(0xFFFF)
+  , maxSize(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::FileCapabilities;
 }

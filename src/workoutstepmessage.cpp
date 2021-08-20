@@ -198,7 +198,21 @@ void WorkoutStepMessage::setWeightDisplayUnit(const FitBaseUnit weightDisplayUni
     d->weightDisplayUnit = weightDisplayUnit;
 }
 
-WorkoutStepMessagePrivate::WorkoutStepMessagePrivate(WorkoutStepMessage * const q) : FitDataMessagePrivate(q)
+WorkoutStepMessagePrivate::WorkoutStepMessagePrivate(WorkoutStepMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , durationType(static_cast<WktStepDuration>(-1))
+  , durationValue(0xFFFFFFFF)
+  , targetType(static_cast<WktStepTarget>(-1))
+  , targetValue(0xFFFFFFFF)
+  , customTargetValueLow(0xFFFFFFFF)
+  , customTargetValueHigh(0xFFFFFFFF)
+  , intensity(static_cast<Intensity>(-1))
+  , equipment(static_cast<WorkoutEquipment>(-1))
+  , exerciseCategory(static_cast<ExerciseCategory>(-1))
+  , exerciseName(0xFFFF)
+  , exerciseWeight(0xFFFF)
+  , weightDisplayUnit(static_cast<FitBaseUnit>(-1))
 {
     globalMessageNumber = MesgNum::WorkoutStep;
 }

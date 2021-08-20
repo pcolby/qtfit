@@ -99,7 +99,14 @@ void SegmentPointMessage::setLeaderTime(const quint32 leaderTime)
     d->leaderTime = leaderTime;
 }
 
-SegmentPointMessagePrivate::SegmentPointMessagePrivate(SegmentPointMessage * const q) : FitDataMessagePrivate(q)
+SegmentPointMessagePrivate::SegmentPointMessagePrivate(SegmentPointMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , positionLat(0x7FFFFFFF)
+  , positionLong(0x7FFFFFFF)
+  , distance(0xFFFFFFFF)
+  , altitude(0xFFFF)
+  , leaderTime(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::SegmentPoint;
 }

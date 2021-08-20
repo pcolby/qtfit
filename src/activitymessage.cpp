@@ -121,7 +121,16 @@ void ActivityMessage::setEventGroup(const quint8 eventGroup)
     d->eventGroup = eventGroup;
 }
 
-ActivityMessagePrivate::ActivityMessagePrivate(ActivityMessage * const q) : FitDataMessagePrivate(q)
+ActivityMessagePrivate::ActivityMessagePrivate(ActivityMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , totalTimerTime(0xFFFFFFFF)
+  , numSessions(0xFFFF)
+  , type(static_cast<Activity>(-1))
+  , event(static_cast<Event>(-1))
+  , eventType(static_cast<EventType>(-1))
+  , localTimestamp(static_cast<LocalDateTime>(-1))
+  , eventGroup(0xFF)
 {
     globalMessageNumber = MesgNum::Activity;
 }

@@ -352,7 +352,37 @@ void MonitoringMessage::setVigorousActivityMinutes(const quint16 vigorousActivit
     d->vigorousActivityMinutes = vigorousActivityMinutes;
 }
 
-MonitoringMessagePrivate::MonitoringMessagePrivate(MonitoringMessage * const q) : FitDataMessagePrivate(q)
+MonitoringMessagePrivate::MonitoringMessagePrivate(MonitoringMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , deviceIndex(static_cast<DeviceIndex>(-1))
+  , calories(0xFFFF)
+  , distance(0xFFFFFFFF)
+  , cycles(0xFFFFFFFF)
+  , activeTime(0xFFFFFFFF)
+  , activityType(static_cast<ActivityType>(-1))
+  , activitySubtype(static_cast<ActivitySubtype>(-1))
+  , activityLevel(static_cast<ActivityLevel>(-1))
+  , distance16(0xFFFF)
+  , cycles16(0xFFFF)
+  , activeTime16(0xFFFF)
+  , localTimestamp(static_cast<LocalDateTime>(-1))
+  , temperature(0x7FFF)
+  , temperatureMin(0x7FFF)
+  , temperatureMax(0x7FFF)
+  , activityTime(0xFFFF)
+  , activeCalories(0xFFFF)
+  , currentActivityTypeIntensity(0xFF)
+  , timestampMin8(0xFF)
+  , timestamp16(0xFFFF)
+  , heartRate(0xFF)
+  , intensity(0xFF)
+  , durationMin(0xFFFF)
+  , duration(0xFFFFFFFF)
+  , ascent(0xFFFFFFFF)
+  , descent(0xFFFFFFFF)
+  , moderateActivityMinutes(0xFFFF)
+  , vigorousActivityMinutes(0xFFFF)
 {
     globalMessageNumber = MesgNum::Monitoring;
 }

@@ -99,7 +99,14 @@ void OneDSensorCalibrationMessage::setOffsetCal(const qint32 offsetCal)
     d->offsetCal = offsetCal;
 }
 
-OneDSensorCalibrationMessagePrivate::OneDSensorCalibrationMessagePrivate(OneDSensorCalibrationMessage * const q) : FitDataMessagePrivate(q)
+OneDSensorCalibrationMessagePrivate::OneDSensorCalibrationMessagePrivate(OneDSensorCalibrationMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , sensorType(static_cast<SensorType>(-1))
+  , calibrationFactor(0xFFFFFFFF)
+  , calibrationDivisor(0xFFFFFFFF)
+  , levelShift(0xFFFFFFFF)
+  , offsetCal(0x7FFFFFFF)
 {
     globalMessageNumber = MesgNum::OneDSensorCalibration;
 }

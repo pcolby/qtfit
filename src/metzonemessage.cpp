@@ -77,7 +77,12 @@ void MetZoneMessage::setFatCalories(const quint8 fatCalories)
     d->fatCalories = fatCalories;
 }
 
-MetZoneMessagePrivate::MetZoneMessagePrivate(MetZoneMessage * const q) : FitDataMessagePrivate(q)
+MetZoneMessagePrivate::MetZoneMessagePrivate(MetZoneMessage * const q)
+  : FitDataMessagePrivate(q)
+  , messageIndex(static_cast<MessageIndex>(-1))
+  , highBpm(0xFF)
+  , calories(0xFFFF)
+  , fatCalories(0xFF)
 {
     globalMessageNumber = MesgNum::MetZone;
 }

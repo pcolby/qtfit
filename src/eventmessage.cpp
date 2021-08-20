@@ -198,7 +198,23 @@ void EventMessage::setRadarThreatCount(const quint8 radarThreatCount)
     d->radarThreatCount = radarThreatCount;
 }
 
-EventMessagePrivate::EventMessagePrivate(EventMessage * const q) : FitDataMessagePrivate(q)
+EventMessagePrivate::EventMessagePrivate(EventMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , event(static_cast<Event>(-1))
+  , eventType(static_cast<EventType>(-1))
+  , data16(0xFFFF)
+  , data(0xFFFFFFFF)
+  , eventGroup(0xFF)
+  , score(0xFFFF)
+  , opponentScore(0xFFFF)
+  , frontGearNum(static_cast<quint8z>(-1))
+  , frontGear(static_cast<quint8z>(-1))
+  , rearGearNum(static_cast<quint8z>(-1))
+  , rearGear(static_cast<quint8z>(-1))
+  , deviceIndex(static_cast<DeviceIndex>(-1))
+  , radarThreatLevelMax(static_cast<RadarThreatLevelType>(-1))
+  , radarThreatCount(0xFF)
 {
     globalMessageNumber = MesgNum::Event;
 }

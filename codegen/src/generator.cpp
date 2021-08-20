@@ -123,6 +123,7 @@ int Generator::processMessages(Grantlee::Context &context)
             }
             field.insert(QSL("name"), toCamelCase(QString::fromUtf8(columns.at(2)), true));
             field.insert(QSL("type"), toFitType(QString::fromUtf8(columns.at(3))));
+            field.insert(QSL("defaultValue"), invalidValue(field.value(QSL("type")).toString()));
             const QByteArray isArray = columns.at(4);        ///< \a todo
           //const QByteArray components = columns.at(5);     ///< \a todo
             const QByteArray scale = columns.at(6);          ///< \a todo
@@ -290,6 +291,27 @@ bool Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Cont
     }
     context.pop();
     return true;
+}
+
+// See FIT SDK Table 7. FIT Base Types and Invalid Values
+// See https://developer.garmin.com/fit/protocol/#basetype
+QString Generator::invalidValue(const QString &type)
+{
+    if (type == QSL(   "qint8")) return QSL("0x7F");
+    if (type == QSL(  "quint8")) return QSL("0xFF");
+    if (type == QSL(  "qint16")) return QSL("0x7FFF");
+    if (type == QSL( "quint16")) return QSL("0xFFFF");
+    if (type == QSL(  "qint32")) return QSL("0x7FFFFFFF");
+    if (type == QSL( "quint32")) return QSL("0xFFFFFFFF");
+    if (type == QSL( "float32")) return QSL("static_cast<float>(0xFFFFFFFF)");
+    if (type == QSL( "float64")) return QSL("static_cast<double>(0xFFFFFFFFFFFFFFFF)");
+    if (type == QSL("quint16z")) return QSL("0");
+    if (type == QSL("quint32z")) return QSL("0");
+    if (type == QSL(  "qint64")) return QSL("0x7FFFFFFFFFFFFFFF");
+    if (type == QSL( "quint64")) return QSL("0xFFFFFFFFFFFFFFFF");
+    if (type == QSL("quint64z")) return QSL("0");
+    if (type == QSL("QString"))  return QString(); // No initialisation necessary.
+    return QString::fromLatin1("static_cast<%1>(-1)").arg(type);
 }
 
 QString Generator::safeEnumLabel(const QString &string)

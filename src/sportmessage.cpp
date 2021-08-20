@@ -66,7 +66,10 @@ void SportMessage::setName(const QString name)
     d->name = name;
 }
 
-SportMessagePrivate::SportMessagePrivate(SportMessage * const q) : FitDataMessagePrivate(q)
+SportMessagePrivate::SportMessagePrivate(SportMessage * const q)
+  : FitDataMessagePrivate(q)
+  , sport(static_cast<Sport>(-1))
+  , subSport(static_cast<SubSport>(-1))
 {
     globalMessageNumber = MesgNum::Sport;
 }

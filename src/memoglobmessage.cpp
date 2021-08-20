@@ -77,7 +77,12 @@ void MemoGlobMessage::setMessageIndex(const MessageIndex messageIndex)
     d->messageIndex = messageIndex;
 }
 
-MemoGlobMessagePrivate::MemoGlobMessagePrivate(MemoGlobMessage * const q) : FitDataMessagePrivate(q)
+MemoGlobMessagePrivate::MemoGlobMessagePrivate(MemoGlobMessage * const q)
+  : FitDataMessagePrivate(q)
+  , partIndex(0xFFFFFFFF)
+  , memo(0xFF)
+  , messageNumber(0xFFFF)
+  , messageIndex(static_cast<MessageIndex>(-1))
 {
     globalMessageNumber = MesgNum::MemoGlob;
 }

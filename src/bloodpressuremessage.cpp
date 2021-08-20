@@ -154,7 +154,19 @@ void BloodPressureMessage::setUserProfileIndex(const MessageIndex userProfileInd
     d->userProfileIndex = userProfileIndex;
 }
 
-BloodPressureMessagePrivate::BloodPressureMessagePrivate(BloodPressureMessage * const q) : FitDataMessagePrivate(q)
+BloodPressureMessagePrivate::BloodPressureMessagePrivate(BloodPressureMessage * const q)
+  : FitDataMessagePrivate(q)
+  , timestamp(static_cast<DateTime>(-1))
+  , systolicPressure(0xFFFF)
+  , diastolicPressure(0xFFFF)
+  , meanArterialPressure(0xFFFF)
+  , map3SampleMean(0xFFFF)
+  , mapMorningValues(0xFFFF)
+  , mapEveningValues(0xFFFF)
+  , heartRate(0xFF)
+  , heartRateType(static_cast<HrType>(-1))
+  , status(static_cast<BpStatus>(-1))
+  , userProfileIndex(static_cast<MessageIndex>(-1))
 {
     globalMessageNumber = MesgNum::BloodPressure;
 }
