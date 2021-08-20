@@ -34,7 +34,18 @@ class AviationAttitudeMessage;
 class AviationAttitudeMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    quint32 systemTime;
+    qint16 pitch;
+    qint16 roll;
+    qint16 accelLateral;
+    qint16 accelNormal;
+    qint16 turnRate;
+    AttitudeStage stage;
+    quint8 attitudeStageComplete;
+    quint16 track;
+    AttitudeValidity validity;
 
     AviationAttitudeMessagePrivate() = delete;
     explicit AviationAttitudeMessagePrivate(AviationAttitudeMessage * const q);

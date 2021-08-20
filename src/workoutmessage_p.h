@@ -34,7 +34,13 @@ class WorkoutMessage;
 class WorkoutMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    Sport sport;
+    WorkoutCapabilities capabilities;
+    quint16 numValidSteps;
+    QString wktName;
+    SubSport subSport;
+    quint16 poolLength;
+    DisplayMeasure poolLengthUnit;
 
     WorkoutMessagePrivate() = delete;
     explicit WorkoutMessagePrivate(WorkoutMessage * const q);

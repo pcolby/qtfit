@@ -34,7 +34,15 @@ class SegmentIdMessage;
 class SegmentIdMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    QString name;
+    QString uuid;
+    Sport sport;
+    bool enabled;
+    quint32 userProfilePrimaryKey;
+    quint32 deviceId;
+    quint8 defaultRaceLeader;
+    SegmentDeleteStatus deleteStatus;
+    SegmentSelectionType selectionType;
 
     SegmentIdMessagePrivate() = delete;
     explicit SegmentIdMessagePrivate(SegmentIdMessage * const q);

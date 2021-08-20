@@ -34,7 +34,24 @@ class LengthMessage;
 class LengthMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    DateTime timestamp;
+    Event event;
+    EventType eventType;
+    DateTime startTime;
+    quint32 totalElapsedTime;
+    quint32 totalTimerTime;
+    quint16 totalStrokes;
+    quint16 avgSpeed;
+    SwimStroke swimStroke;
+    quint8 avgSwimmingCadence;
+    quint8 eventGroup;
+    quint16 totalCalories;
+    LengthType lengthType;
+    quint16 playerScore;
+    quint16 opponentScore;
+    quint16 strokeCount;
+    quint16 zoneCount;
 
     LengthMessagePrivate() = delete;
     explicit LengthMessagePrivate(LengthMessage * const q);

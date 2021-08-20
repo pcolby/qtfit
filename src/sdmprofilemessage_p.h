@@ -34,7 +34,14 @@ class SdmProfileMessage;
 class SdmProfileMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    bool enabled;
+    quint16z sdmAntId;
+    quint16 sdmCalFactor;
+    quint32 odometer;
+    bool speedSource;
+    quint8z sdmAntIdTransType;
+    quint8 odometerRollover;
 
     SdmProfileMessagePrivate() = delete;
     explicit SdmProfileMessagePrivate(SdmProfileMessage * const q);

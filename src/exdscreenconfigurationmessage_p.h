@@ -34,7 +34,10 @@ class ExdScreenConfigurationMessage;
 class ExdScreenConfigurationMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 screenIndex;
+    quint8 fieldCount;
+    ExdLayout layout;
+    bool screenEnabled;
 
     ExdScreenConfigurationMessagePrivate() = delete;
     explicit ExdScreenConfigurationMessagePrivate(ExdScreenConfigurationMessage * const q);

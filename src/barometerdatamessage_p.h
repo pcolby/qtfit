@@ -34,7 +34,10 @@ class BarometerDataMessage;
 class BarometerDataMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    quint16 sampleTimeOffset;
+    quint32 baroPres;
 
     BarometerDataMessagePrivate() = delete;
     explicit BarometerDataMessagePrivate(BarometerDataMessage * const q);

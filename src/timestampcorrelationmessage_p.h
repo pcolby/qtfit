@@ -34,7 +34,13 @@ class TimestampCorrelationMessage;
 class TimestampCorrelationMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 fractionalTimestamp;
+    DateTime systemTimestamp;
+    quint16 fractionalSystemTimestamp;
+    LocalDateTime localTimestamp;
+    quint16 timestampMs;
+    quint16 systemTimestampMs;
 
     TimestampCorrelationMessagePrivate() = delete;
     explicit TimestampCorrelationMessagePrivate(TimestampCorrelationMessage * const q);

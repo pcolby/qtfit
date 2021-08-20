@@ -34,7 +34,21 @@ class WorkoutStepMessage;
 class WorkoutStepMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    QString wktStepName;
+    WktStepDuration durationType;
+    quint32 durationValue;
+    WktStepTarget targetType;
+    quint32 targetValue;
+    quint32 customTargetValueLow;
+    quint32 customTargetValueHigh;
+    Intensity intensity;
+    QString notes;
+    WorkoutEquipment equipment;
+    ExerciseCategory exerciseCategory;
+    quint16 exerciseName;
+    quint16 exerciseWeight;
+    FitBaseUnit weightDisplayUnit;
 
     WorkoutStepMessagePrivate() = delete;
     explicit WorkoutStepMessagePrivate(WorkoutStepMessage * const q);

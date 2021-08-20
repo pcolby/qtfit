@@ -34,7 +34,11 @@ class MesgCapabilitiesMessage;
 class MesgCapabilitiesMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    File file;
+    MesgNum mesgNum;
+    MesgCount countType;
+    quint16 count;
 
     MesgCapabilitiesMessagePrivate() = delete;
     explicit MesgCapabilitiesMessagePrivate(MesgCapabilitiesMessage * const q);

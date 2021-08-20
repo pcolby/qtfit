@@ -34,7 +34,9 @@ class WatchfaceSettingsMessage;
 class WatchfaceSettingsMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    WatchfaceMode mode;
+    quint8 layout;
 
     WatchfaceSettingsMessagePrivate() = delete;
     explicit WatchfaceSettingsMessagePrivate(WatchfaceSettingsMessage * const q);

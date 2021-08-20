@@ -34,7 +34,13 @@ class ScheduleMessage;
 class ScheduleMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    Manufacturer manufacturer;
+    quint16 product;
+    quint32z serialNumber;
+    DateTime timeCreated;
+    bool completed;
+    Schedule type;
+    LocalDateTime scheduledTime;
 
     ScheduleMessagePrivate() = delete;
     explicit ScheduleMessagePrivate(ScheduleMessage * const q);

@@ -34,7 +34,13 @@ class FileIdMessage;
 class FileIdMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    File type;
+    Manufacturer manufacturer;
+    quint16 product;
+    quint32z serialNumber;
+    DateTime timeCreated;
+    quint16 number;
+    QString productName;
 
     FileIdMessagePrivate() = delete;
     explicit FileIdMessagePrivate(FileIdMessage * const q);

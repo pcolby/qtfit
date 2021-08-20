@@ -34,7 +34,12 @@ class HrMessage;
 class HrMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 fractionalTimestamp;
+    quint8 time256;
+    quint8 filteredBpm;
+    quint32 eventTimestamp;
+    quint8 eventTimestamp12;
 
     HrMessagePrivate() = delete;
     explicit HrMessagePrivate(HrMessage * const q);

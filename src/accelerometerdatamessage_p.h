@@ -34,7 +34,18 @@ class AccelerometerDataMessage;
 class AccelerometerDataMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    quint16 sampleTimeOffset;
+    quint16 accelX;
+    quint16 accelY;
+    quint16 accelZ;
+    float calibratedAccelX;
+    float calibratedAccelY;
+    float calibratedAccelZ;
+    qint16 compressedCalibratedAccelX;
+    qint16 compressedCalibratedAccelY;
+    qint16 compressedCalibratedAccelZ;
 
     AccelerometerDataMessagePrivate() = delete;
     explicit AccelerometerDataMessagePrivate(AccelerometerDataMessage * const q);

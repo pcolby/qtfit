@@ -34,7 +34,16 @@ class JumpMessage;
 class JumpMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    float distance;
+    float height;
+    quint8 rotations;
+    float hangTime;
+    float score;
+    qint32 positionLat;
+    qint32 positionLong;
+    quint16 speed;
+    quint32 enhancedSpeed;
 
     JumpMessagePrivate() = delete;
     explicit JumpMessagePrivate(JumpMessage * const q);

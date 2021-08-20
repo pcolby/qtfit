@@ -34,7 +34,19 @@ class GoalMessage;
 class GoalMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    Sport sport;
+    SubSport subSport;
+    DateTime startDate;
+    DateTime endDate;
+    Goal type;
+    quint32 value;
+    bool repeat;
+    quint32 targetValue;
+    GoalRecurrence recurrence;
+    quint16 recurrenceValue;
+    bool enabled;
+    GoalSource source;
 
     GoalMessagePrivate() = delete;
     explicit GoalMessagePrivate(GoalMessage * const q);

@@ -34,7 +34,12 @@ class AntTxMessage;
 class AntTxMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 fractionalTimestamp;
+    quint8 mesgId;
+    quint8 mesgData;
+    quint8 channelNumber;
+    quint8 data;
 
     AntTxMessagePrivate() = delete;
     explicit AntTxMessagePrivate(AntTxMessage * const q);

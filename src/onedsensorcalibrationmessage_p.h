@@ -34,7 +34,12 @@ class OneDSensorCalibrationMessage;
 class OneDSensorCalibrationMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    SensorType sensorType;
+    quint32 calibrationFactor;
+    quint32 calibrationDivisor;
+    quint32 levelShift;
+    qint32 offsetCal;
 
     OneDSensorCalibrationMessagePrivate() = delete;
     explicit OneDSensorCalibrationMessagePrivate(OneDSensorCalibrationMessage * const q);

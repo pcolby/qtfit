@@ -34,7 +34,15 @@ class MagnetometerDataMessage;
 class MagnetometerDataMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    quint16 sampleTimeOffset;
+    quint16 magX;
+    quint16 magY;
+    quint16 magZ;
+    float calibratedMagX;
+    float calibratedMagY;
+    float calibratedMagZ;
 
     MagnetometerDataMessagePrivate() = delete;
     explicit MagnetometerDataMessagePrivate(MagnetometerDataMessage * const q);

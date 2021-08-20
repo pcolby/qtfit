@@ -34,7 +34,15 @@ class GpsMetadataMessage;
 class GpsMetadataMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    qint32 positionLat;
+    qint32 positionLong;
+    quint32 enhancedAltitude;
+    quint32 enhancedSpeed;
+    quint16 heading;
+    DateTime utcTimestamp;
+    qint16 velocity;
 
     GpsMetadataMessagePrivate() = delete;
     explicit GpsMetadataMessagePrivate(GpsMetadataMessage * const q);

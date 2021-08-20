@@ -34,7 +34,10 @@ class CapabilitiesMessage;
 class CapabilitiesMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8z languages;
+    SportBits0 sports;
+    WorkoutCapabilities workoutsSupported;
+    ConnectivityCapabilities connectivitySupported;
 
     CapabilitiesMessagePrivate() = delete;
     explicit CapabilitiesMessagePrivate(CapabilitiesMessage * const q);

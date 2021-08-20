@@ -34,7 +34,13 @@ class ClimbProMessage;
 class ClimbProMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    qint32 positionLat;
+    qint32 positionLong;
+    ClimbProEvent climbProEvent;
+    quint16 climbNumber;
+    quint8 climbCategory;
+    float currentDist;
 
     ClimbProMessagePrivate() = delete;
     explicit ClimbProMessagePrivate(ClimbProMessage * const q);

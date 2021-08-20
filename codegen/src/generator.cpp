@@ -108,11 +108,52 @@ int Generator::processMessages(Grantlee::Context &context)
         if (!columns.at(0).isEmpty()) {
             messageName = QString::fromUtf8(columns.at(0));
         }
-        if (!columns.at(1).isEmpty()) {
+        if (!columns.at(2).isEmpty()) { // Field Name is not empty.
+            bool ok;
+            QVector<quint8> failures;
             QVariantMap field;
-            field.insert(QSL("number"), columns.at(1).toInt());
-            field.insert(QSL("name"), toCamelCase(QString::fromUtf8(columns.at(2))));
-            field.insert(QSL("type"), toCamelCase(QString::fromUtf8(columns.at(3))));
+            const QByteArray fieldNumber = columns.at(1);
+            if (!fieldNumber.isEmpty()) {
+                bool ok;
+                field.insert(QSL("number"), columns.at(1).toInt(&ok));
+                if (!ok) {
+                    qWarning() << "failed to convert field number to integer" << fieldNumber;
+                    return -1;
+                }
+            }
+            field.insert(QSL("name"), toCamelCase(QString::fromUtf8(columns.at(2)), true));
+            field.insert(QSL("type"), toFitType(QString::fromUtf8(columns.at(3))));
+            const QByteArray isArray = columns.at(4);        ///< \a todo
+          //const QByteArray components = columns.at(5);     ///< \a todo
+            const QByteArray scale = columns.at(6);          ///< \a todo
+            const int offset = columns.at(7).toInt(&ok); if (!ok) failures << 8; ///< \a todo
+            const QByteArray units = columns.at(8);          ///< \a todo
+            const QByteArray bits = columns.at(9);           ///< \a todo
+            const QByteArray accumulate = columns.at(10);    ///< \a todo
+            const QByteArray refFieldName = columns.at(11);  ///< \a todo
+            const QByteArray refFieldValue = columns.at(12); ///< \a todo
+            if (fieldNumber.isEmpty()) {
+                if (refFieldName.isEmpty() || refFieldValue.isEmpty()) {
+                    qWarning() << "missing both field number and ref fields";
+                    return -1;
+                }
+                qDebug() << "dynamic reference fields not implemented yet"; ///< \todo
+                continue;
+            } else if ((!refFieldName.isEmpty()) || (!refFieldValue.isEmpty())) {
+                qWarning() << "have both field number and ref field" << fieldNumber << refFieldName << refFieldValue;
+                return -1;
+            }
+            field.insert(QSL("comment"), QString::fromUtf8(columns.at(13)));
+            const QByteArray products = columns.at(14);
+            if (!products.isEmpty()) {
+                qWarning() << "column 14 (Products) is not empty" << products;
+            }
+            field.insert(QSL("example"), columns.at(15));
+            qDebug() << field << isArray << scale << offset << units << bits << accumulate << refFieldName << refFieldValue << products;
+//            if (!failures.isEmpty()) {
+//                qWarning() << "Some fields failed conversion" << failures;
+//                return -1;
+//            }
             /// \todo Lots more properties to consider here.
             fields.append(field);
         }
@@ -263,11 +304,23 @@ QString Generator::safeEnumLabel(const QString &string)
         .replace(QRegularExpression(QSL("^4")), QSL("Four"));
 }
 
-QString Generator::toCamelCase(const QString &string)
+QString Generator::toCamelCase(const QString &string, const bool camelCase)
 {
     QString result;
     for (const QString &fragment: string.split(QRegularExpression(QSL("[\\W_]+")))) {
         result += fragment.at(0).toUpper() + fragment.mid(1).toLower();
     }
-    return result;
+    return camelCase ? result.at(0).toLower() + result.mid(1) : result;
 }
+
+QString Generator::toFitType(const QString &string)
+{
+    if (string == QSL("bool"))    return string; // ie don't CamelCase it below.
+    if (string == QSL("byte"))    return QSL("quint8");
+    if (string == QSL("float32")) return QSL("float");
+    if (string == QSL("string"))  return QSL("QString");
+    if (string.startsWith(QSL("sint"))) return QSL("q") + string.mid(1);
+    if (string.startsWith(QSL("uint"))) return QSL("q") + string;
+    return toCamelCase(string);
+}
+

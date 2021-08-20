@@ -34,7 +34,15 @@ class ObdiiDataMessage;
 class ObdiiDataMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    quint16 timeOffset;
+    quint8 pid;
+    quint8 rawData;
+    quint8 pidDataSize;
+    quint32 systemTime;
+    DateTime startTimestamp;
+    quint16 startTimestampMs;
 
     ObdiiDataMessagePrivate() = delete;
     explicit ObdiiDataMessagePrivate(ObdiiDataMessage * const q);

@@ -34,7 +34,19 @@ class DiveSummaryMessage;
 class DiveSummaryMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    MesgNum referenceMesg;
+    MessageIndex referenceIndex;
+    quint32 avgDepth;
+    quint32 maxDepth;
+    quint32 surfaceInterval;
+    quint8 startCns;
+    quint8 endCns;
+    quint16 startN2;
+    quint16 endN2;
+    quint16 o2Toxicity;
+    quint32 diveNumber;
+    quint32 bottomTime;
 
     DiveSummaryMessagePrivate() = delete;
     explicit DiveSummaryMessagePrivate(DiveSummaryMessage * const q);

@@ -34,7 +34,11 @@ class AntChannelIdMessage;
 class AntChannelIdMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 channelNumber;
+    quint8z deviceType;
+    quint16z deviceNumber;
+    quint8z transmissionType;
+    DeviceIndex deviceIndex;
 
     AntChannelIdMessagePrivate() = delete;
     explicit AntChannelIdMessagePrivate(AntChannelIdMessage * const q);

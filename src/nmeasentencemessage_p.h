@@ -34,7 +34,9 @@ class NmeaSentenceMessage;
 class NmeaSentenceMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    QString sentence;
 
     NmeaSentenceMessagePrivate() = delete;
     explicit NmeaSentenceMessagePrivate(NmeaSentenceMessage * const q);

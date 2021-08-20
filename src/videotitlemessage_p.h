@@ -34,7 +34,9 @@ class VideoTitleMessage;
 class VideoTitleMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint16 messageCount;
+    QString text;
 
     VideoTitleMessagePrivate() = delete;
     explicit VideoTitleMessagePrivate(VideoTitleMessage * const q);

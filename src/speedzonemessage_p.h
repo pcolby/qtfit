@@ -34,7 +34,9 @@ class SpeedZoneMessage;
 class SpeedZoneMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint16 highValue;
+    QString name;
 
     SpeedZoneMessagePrivate() = delete;
     explicit SpeedZoneMessagePrivate(SpeedZoneMessage * const q);

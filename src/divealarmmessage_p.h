@@ -34,7 +34,13 @@ class DiveAlarmMessage;
 class DiveAlarmMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint32 depth;
+    qint32 time;
+    bool enabled;
+    DiveAlarmType alarmType;
+    Tone sound;
+    SubSport diveTypes;
 
     DiveAlarmMessagePrivate() = delete;
     explicit DiveAlarmMessagePrivate(DiveAlarmMessage * const q);

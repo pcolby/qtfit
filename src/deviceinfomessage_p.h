@@ -34,7 +34,24 @@ class DeviceInfoMessage;
 class DeviceInfoMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    DeviceIndex deviceIndex;
+    quint8 deviceType;
+    Manufacturer manufacturer;
+    quint32z serialNumber;
+    quint16 product;
+    quint16 softwareVersion;
+    quint8 hardwareVersion;
+    quint32 cumOperatingTime;
+    quint16 batteryVoltage;
+    BatteryStatus batteryStatus;
+    BodyLocation sensorPosition;
+    QString descriptor;
+    quint8z antTransmissionType;
+    quint16z antDeviceNumber;
+    AntNetwork antNetwork;
+    SourceType sourceType;
+    QString productName;
 
     DeviceInfoMessagePrivate() = delete;
     explicit DeviceInfoMessagePrivate(DeviceInfoMessage * const q);

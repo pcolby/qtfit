@@ -34,7 +34,11 @@ class CameraEventMessage;
 class CameraEventMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    CameraEventType cameraEventType;
+    QString cameraFileUuid;
+    CameraOrientationType cameraOrientation;
 
     CameraEventMessagePrivate() = delete;
     explicit CameraEventMessagePrivate(CameraEventMessage * const q);

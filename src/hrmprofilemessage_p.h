@@ -34,7 +34,11 @@ class HrmProfileMessage;
 class HrmProfileMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    bool enabled;
+    quint16z hrmAntId;
+    bool logHrv;
+    quint8z hrmAntIdTransType;
 
     HrmProfileMessagePrivate() = delete;
     explicit HrmProfileMessagePrivate(HrmProfileMessage * const q);

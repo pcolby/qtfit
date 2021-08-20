@@ -34,7 +34,13 @@ class SegmentLeaderboardEntryMessage;
 class SegmentLeaderboardEntryMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    QString name;
+    SegmentLeaderboardType type;
+    quint32 groupPrimaryKey;
+    quint32 activityId;
+    quint32 segmentTime;
+    QString activityIdString;
 
     SegmentLeaderboardEntryMessagePrivate() = delete;
     explicit SegmentLeaderboardEntryMessagePrivate(SegmentLeaderboardEntryMessage * const q);

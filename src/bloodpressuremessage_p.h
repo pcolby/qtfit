@@ -34,7 +34,17 @@ class BloodPressureMessage;
 class BloodPressureMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 systolicPressure;
+    quint16 diastolicPressure;
+    quint16 meanArterialPressure;
+    quint16 map3SampleMean;
+    quint16 mapMorningValues;
+    quint16 mapEveningValues;
+    quint8 heartRate;
+    HrType heartRateType;
+    BpStatus status;
+    MessageIndex userProfileIndex;
 
     BloodPressureMessagePrivate() = delete;
     explicit BloodPressureMessagePrivate(BloodPressureMessage * const q);

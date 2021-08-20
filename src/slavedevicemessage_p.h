@@ -34,7 +34,8 @@ class SlaveDeviceMessage;
 class SlaveDeviceMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    Manufacturer manufacturer;
+    quint16 product;
 
     SlaveDeviceMessagePrivate() = delete;
     explicit SlaveDeviceMessagePrivate(SlaveDeviceMessage * const q);

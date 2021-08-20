@@ -34,7 +34,9 @@ class VideoMessage;
 class VideoMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    QString url;
+    QString hostingProvider;
+    quint32 duration;
 
     VideoMessagePrivate() = delete;
     explicit VideoMessagePrivate(VideoMessage * const q);

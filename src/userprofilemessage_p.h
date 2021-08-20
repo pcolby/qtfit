@@ -34,7 +34,35 @@ class UserProfileMessage;
 class UserProfileMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    QString friendlyName;
+    Gender gender;
+    quint8 age;
+    quint8 height;
+    quint16 weight;
+    Language language;
+    DisplayMeasure elevSetting;
+    DisplayMeasure weightSetting;
+    quint8 restingHeartRate;
+    quint8 defaultMaxRunningHeartRate;
+    quint8 defaultMaxBikingHeartRate;
+    quint8 defaultMaxHeartRate;
+    DisplayHeart hrSetting;
+    DisplayMeasure speedSetting;
+    DisplayMeasure distSetting;
+    DisplayPower powerSetting;
+    ActivityClass activityClass;
+    DisplayPosition positionSetting;
+    DisplayMeasure temperatureSetting;
+    UserLocalId localId;
+    quint8 globalId;
+    LocaltimeIntoDay wakeTime;
+    LocaltimeIntoDay sleepTime;
+    DisplayMeasure heightSetting;
+    quint16 userRunningStepLength;
+    quint16 userWalkingStepLength;
+    DisplayMeasure depthSetting;
+    quint32 diveCount;
 
     UserProfileMessagePrivate() = delete;
     explicit UserProfileMessagePrivate(UserProfileMessage * const q);

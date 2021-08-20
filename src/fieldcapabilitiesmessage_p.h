@@ -34,7 +34,11 @@ class FieldCapabilitiesMessage;
 class FieldCapabilitiesMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    File file;
+    MesgNum mesgNum;
+    quint8 fieldNum;
+    quint16 count;
 
     FieldCapabilitiesMessagePrivate() = delete;
     explicit FieldCapabilitiesMessagePrivate(FieldCapabilitiesMessage * const q);

@@ -34,7 +34,12 @@ class MonitoringInfoMessage;
 class MonitoringInfoMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    LocalDateTime localTimestamp;
+    ActivityType activityType;
+    quint16 cyclesToDistance;
+    quint16 cyclesToCalories;
+    quint16 restingMetabolicRate;
 
     MonitoringInfoMessagePrivate() = delete;
     explicit MonitoringInfoMessagePrivate(MonitoringInfoMessage * const q);

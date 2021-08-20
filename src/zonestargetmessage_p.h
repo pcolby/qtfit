@@ -34,7 +34,11 @@ class ZonesTargetMessage;
 class ZonesTargetMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 maxHeartRate;
+    quint8 thresholdHeartRate;
+    quint16 functionalThresholdPower;
+    HrZoneCalc hrCalcType;
+    PwrZoneCalc pwrCalcType;
 
     ZonesTargetMessagePrivate() = delete;
     explicit ZonesTargetMessagePrivate(ZonesTargetMessage * const q);

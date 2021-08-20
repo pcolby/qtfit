@@ -34,7 +34,10 @@ class ExerciseTitleMessage;
 class ExerciseTitleMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    ExerciseCategory exerciseCategory;
+    quint16 exerciseName;
+    QString wktStepName;
 
     ExerciseTitleMessagePrivate() = delete;
     explicit ExerciseTitleMessagePrivate(ExerciseTitleMessage * const q);

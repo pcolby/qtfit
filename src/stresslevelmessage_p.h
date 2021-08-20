@@ -34,7 +34,8 @@ class StressLevelMessage;
 class StressLevelMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    qint16 stressLevelValue;
+    DateTime stressLevelTime;
 
     StressLevelMessagePrivate() = delete;
     explicit StressLevelMessagePrivate(StressLevelMessage * const q);

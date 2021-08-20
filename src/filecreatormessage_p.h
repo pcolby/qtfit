@@ -34,7 +34,8 @@ class FileCreatorMessage;
 class FileCreatorMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint16 softwareVersion;
+    quint8 hardwareVersion;
 
     FileCreatorMessagePrivate() = delete;
     explicit FileCreatorMessagePrivate(FileCreatorMessage * const q);

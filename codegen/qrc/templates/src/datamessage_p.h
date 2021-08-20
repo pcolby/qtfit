@@ -12,7 +12,9 @@ class {{ClassName}};
 class {{ClassName}}Private : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+{% for field in fields %}
+    {{field.type}} {{field.name}};
+{% endfor %}
 
     {{ClassName}}Private() = delete;
     explicit {{ClassName}}Private({{ClassName}} * const q);

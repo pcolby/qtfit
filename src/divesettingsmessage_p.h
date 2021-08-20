@@ -34,7 +34,28 @@ class DiveSettingsMessage;
 class DiveSettingsMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    QString name;
+    TissueModelType model;
+    quint8 gfLow;
+    quint8 gfHigh;
+    WaterType waterType;
+    float waterDensity;
+    quint8 po2Warn;
+    quint8 po2Critical;
+    quint8 po2Deco;
+    bool safetyStopEnabled;
+    float bottomDepth;
+    quint32 bottomTime;
+    bool apneaCountdownEnabled;
+    quint32 apneaCountdownTime;
+    DiveBacklightMode backlightMode;
+    quint8 backlightBrightness;
+    BacklightTimeout backlightTimeout;
+    quint16 repeatDiveInterval;
+    quint16 safetyStopTime;
+    SourceType heartRateSourceType;
+    quint8 heartRateSource;
 
     DiveSettingsMessagePrivate() = delete;
     explicit DiveSettingsMessagePrivate(DiveSettingsMessage * const q);

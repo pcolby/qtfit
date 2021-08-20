@@ -34,7 +34,21 @@ class EventMessage;
 class EventMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    Event event;
+    EventType eventType;
+    quint16 data16;
+    quint32 data;
+    quint8 eventGroup;
+    quint16 score;
+    quint16 opponentScore;
+    quint8z frontGearNum;
+    quint8z frontGear;
+    quint8z rearGearNum;
+    quint8z rearGear;
+    DeviceIndex deviceIndex;
+    RadarThreatLevelType radarThreatLevelMax;
+    quint8 radarThreatCount;
 
     EventMessagePrivate() = delete;
     explicit EventMessagePrivate(EventMessage * const q);

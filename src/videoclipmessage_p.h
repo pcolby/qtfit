@@ -34,7 +34,13 @@ class VideoClipMessage;
 class VideoClipMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint16 clipNumber;
+    DateTime startTimestamp;
+    quint16 startTimestampMs;
+    DateTime endTimestamp;
+    quint16 endTimestampMs;
+    quint32 clipStart;
+    quint32 clipEnd;
 
     VideoClipMessagePrivate() = delete;
     explicit VideoClipMessagePrivate(VideoClipMessage * const q);

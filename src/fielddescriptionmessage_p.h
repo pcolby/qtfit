@@ -34,7 +34,20 @@ class FieldDescriptionMessage;
 class FieldDescriptionMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 developerDataIndex;
+    quint8 fieldDefinitionNumber;
+    FitBaseType fitBaseTypeId;
+    QString fieldName;
+    quint8 array;
+    QString components;
+    quint8 scale;
+    qint8 offset;
+    QString units;
+    QString bits;
+    QString accumulate;
+    FitBaseUnit fitBaseUnitId;
+    MesgNum nativeMesgNum;
+    quint8 nativeFieldNum;
 
     FieldDescriptionMessagePrivate() = delete;
     explicit FieldDescriptionMessagePrivate(FieldDescriptionMessage * const q);

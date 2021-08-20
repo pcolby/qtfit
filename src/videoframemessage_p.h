@@ -34,7 +34,9 @@ class VideoFrameMessage;
 class VideoFrameMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    quint32 frameNumber;
 
     VideoFrameMessagePrivate() = delete;
     explicit VideoFrameMessagePrivate(VideoFrameMessage * const q);

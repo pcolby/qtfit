@@ -34,7 +34,9 @@ class VideoDescriptionMessage;
 class VideoDescriptionMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint16 messageCount;
+    QString text;
 
     VideoDescriptionMessagePrivate() = delete;
     explicit VideoDescriptionMessagePrivate(VideoDescriptionMessage * const q);

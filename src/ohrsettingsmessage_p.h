@@ -34,7 +34,8 @@ class OhrSettingsMessage;
 class OhrSettingsMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    Switch enabled;
 
     OhrSettingsMessagePrivate() = delete;
     explicit OhrSettingsMessagePrivate(OhrSettingsMessage * const q);

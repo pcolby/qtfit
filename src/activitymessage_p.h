@@ -34,7 +34,14 @@ class ActivityMessage;
 class ActivityMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint32 totalTimerTime;
+    quint16 numSessions;
+    Activity type;
+    Event event;
+    EventType eventType;
+    LocalDateTime localTimestamp;
+    quint8 eventGroup;
 
     ActivityMessagePrivate() = delete;
     explicit ActivityMessagePrivate(ActivityMessage * const q);

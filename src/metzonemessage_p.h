@@ -34,7 +34,10 @@ class MetZoneMessage;
 class MetZoneMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint8 highBpm;
+    quint16 calories;
+    quint8 fatCalories;
 
     MetZoneMessagePrivate() = delete;
     explicit MetZoneMessagePrivate(MetZoneMessage * const q);

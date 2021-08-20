@@ -34,7 +34,17 @@ class ExdDataConceptConfigurationMessage;
 class ExdDataConceptConfigurationMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 screenIndex;
+    quint8 conceptField;
+    quint8 fieldId;
+    quint8 conceptIndex;
+    quint8 dataPage;
+    quint8 conceptKey;
+    quint8 scaling;
+    ExdDataUnits dataUnits;
+    ExdQualifiers qualifier;
+    ExdDescriptors descriptor;
+    bool isSigned;
 
     ExdDataConceptConfigurationMessagePrivate() = delete;
     explicit ExdDataConceptConfigurationMessagePrivate(ExdDataConceptConfigurationMessage * const q);

@@ -43,7 +43,8 @@ protected:
                           const QString &outputPathName, const QString className);
 
     static QString safeEnumLabel(const QString &string);
-    static QString toCamelCase(const QString &string);
+    static QString toCamelCase(const QString &string, const bool camelCase=false);
+    static QString toFitType(const QString &string);
 
 private:
     const QDir outputDir;

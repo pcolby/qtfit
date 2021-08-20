@@ -34,7 +34,7 @@ class HrvMessage;
 class HrvMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint16 time;
 
     HrvMessagePrivate() = delete;
     explicit HrvMessagePrivate(HrvMessage * const q);

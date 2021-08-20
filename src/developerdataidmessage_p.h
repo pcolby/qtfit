@@ -34,7 +34,11 @@ class DeveloperDataIdMessage;
 class DeveloperDataIdMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 developerId;
+    quint8 applicationId;
+    Manufacturer manufacturerId;
+    quint8 developerDataIndex;
+    quint32 applicationVersion;
 
     DeveloperDataIdMessagePrivate() = delete;
     explicit DeveloperDataIdMessagePrivate(DeveloperDataIdMessage * const q);

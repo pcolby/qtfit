@@ -34,7 +34,9 @@ class SoftwareMessage;
 class SoftwareMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint16 version;
+    QString partNumber;
 
     SoftwareMessagePrivate() = delete;
     explicit SoftwareMessagePrivate(SoftwareMessage * const q);

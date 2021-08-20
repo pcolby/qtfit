@@ -34,7 +34,14 @@ class CoursePointMessage;
 class CoursePointMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    DateTime timestamp;
+    qint32 positionLat;
+    qint32 positionLong;
+    quint32 distance;
+    CoursePoint type;
+    QString name;
+    bool favorite;
 
     CoursePointMessagePrivate() = delete;
     explicit CoursePointMessagePrivate(CoursePointMessage * const q);

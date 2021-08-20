@@ -34,7 +34,10 @@ class CourseMessage;
 class CourseMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    Sport sport;
+    QString name;
+    CourseCapabilities capabilities;
+    SubSport subSport;
 
     CourseMessagePrivate() = delete;
     explicit CourseMessagePrivate(CourseMessage * const q);

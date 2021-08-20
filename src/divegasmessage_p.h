@@ -34,7 +34,10 @@ class DiveGasMessage;
 class DiveGasMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint8 heliumContent;
+    quint8 oxygenContent;
+    DiveGasStatus status;
 
     DiveGasMessagePrivate() = delete;
     explicit DiveGasMessagePrivate(DiveGasMessage * const q);

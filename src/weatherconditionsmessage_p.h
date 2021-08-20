@@ -34,7 +34,22 @@ class WeatherConditionsMessage;
 class WeatherConditionsMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    WeatherReport weatherReport;
+    qint8 temperature;
+    WeatherStatus condition;
+    quint16 windDirection;
+    quint16 windSpeed;
+    quint8 precipitationProbability;
+    qint8 temperatureFeelsLike;
+    quint8 relativeHumidity;
+    QString location;
+    DateTime observedAtTime;
+    qint32 observedLocationLat;
+    qint32 observedLocationLong;
+    DayOfWeek dayOfWeek;
+    qint8 highTemperature;
+    qint8 lowTemperature;
 
     WeatherConditionsMessagePrivate() = delete;
     explicit WeatherConditionsMessagePrivate(WeatherConditionsMessage * const q);

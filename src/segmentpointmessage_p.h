@@ -34,7 +34,12 @@ class SegmentPointMessage;
 class SegmentPointMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    qint32 positionLat;
+    qint32 positionLong;
+    quint32 distance;
+    quint16 altitude;
+    quint32 leaderTime;
 
     SegmentPointMessagePrivate() = delete;
     explicit SegmentPointMessagePrivate(SegmentPointMessage * const q);

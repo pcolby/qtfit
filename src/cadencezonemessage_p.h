@@ -34,7 +34,9 @@ class CadenceZoneMessage;
 class CadenceZoneMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint8 highValue;
+    QString name;
 
     CadenceZoneMessagePrivate() = delete;
     explicit CadenceZoneMessagePrivate(CadenceZoneMessage * const q);

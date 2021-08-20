@@ -34,7 +34,13 @@ class ThreeDSensorCalibrationMessage;
 class ThreeDSensorCalibrationMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    SensorType sensorType;
+    quint32 calibrationFactor;
+    quint32 calibrationDivisor;
+    quint32 levelShift;
+    qint32 offsetCal;
+    qint32 orientationMatrix;
 
     ThreeDSensorCalibrationMessagePrivate() = delete;
     explicit ThreeDSensorCalibrationMessagePrivate(ThreeDSensorCalibrationMessage * const q);

@@ -34,7 +34,16 @@ class TotalsMessage;
 class TotalsMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    DateTime timestamp;
+    quint32 timerTime;
+    quint32 distance;
+    quint32 calories;
+    Sport sport;
+    quint32 elapsedTime;
+    quint16 sessions;
+    quint32 activeTime;
+    quint8 sportIndex;
 
     TotalsMessagePrivate() = delete;
     explicit TotalsMessagePrivate(TotalsMessage * const q);

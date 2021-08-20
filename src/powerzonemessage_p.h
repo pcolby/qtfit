@@ -34,7 +34,9 @@ class PowerZoneMessage;
 class PowerZoneMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint16 highValue;
+    QString name;
 
     PowerZoneMessagePrivate() = delete;
     explicit PowerZoneMessagePrivate(PowerZoneMessage * const q);

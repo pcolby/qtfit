@@ -34,7 +34,17 @@ class SetMessage;
 class SetMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint32 duration;
+    quint16 repetitions;
+    quint16 weight;
+    SetType setType;
+    DateTime startTime;
+    ExerciseCategory category;
+    quint16 categorySubtype;
+    FitBaseUnit weightDisplayUnit;
+    MessageIndex messageIndex;
+    MessageIndex wktStepIndex;
 
     SetMessagePrivate() = delete;
     explicit SetMessagePrivate(SetMessage * const q);

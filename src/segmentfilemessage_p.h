@@ -34,7 +34,15 @@ class SegmentFileMessage;
 class SegmentFileMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    QString fileUuid;
+    bool enabled;
+    quint32 userProfilePrimaryKey;
+    SegmentLeaderboardType leaderType;
+    quint32 leaderGroupPrimaryKey;
+    quint32 leaderActivityId;
+    QString leaderActivityIdString;
+    quint8 defaultRaceLeader;
 
     SegmentFileMessagePrivate() = delete;
     explicit SegmentFileMessagePrivate(SegmentFileMessage * const q);

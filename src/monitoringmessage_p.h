@@ -34,7 +34,35 @@ class MonitoringMessage;
 class MonitoringMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    DeviceIndex deviceIndex;
+    quint16 calories;
+    quint32 distance;
+    quint32 cycles;
+    quint32 activeTime;
+    ActivityType activityType;
+    ActivitySubtype activitySubtype;
+    ActivityLevel activityLevel;
+    quint16 distance16;
+    quint16 cycles16;
+    quint16 activeTime16;
+    LocalDateTime localTimestamp;
+    qint16 temperature;
+    qint16 temperatureMin;
+    qint16 temperatureMax;
+    quint16 activityTime;
+    quint16 activeCalories;
+    quint8 currentActivityTypeIntensity;
+    quint8 timestampMin8;
+    quint16 timestamp16;
+    quint8 heartRate;
+    quint8 intensity;
+    quint16 durationMin;
+    quint32 duration;
+    quint32 ascent;
+    quint32 descent;
+    quint16 moderateActivityMinutes;
+    quint16 vigorousActivityMinutes;
 
     MonitoringMessagePrivate() = delete;
     explicit MonitoringMessagePrivate(MonitoringMessage * const q);

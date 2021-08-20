@@ -34,7 +34,19 @@ class WeightScaleMessage;
 class WeightScaleMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    Weight weight;
+    quint16 percentFat;
+    quint16 percentHydration;
+    quint16 visceralFatMass;
+    quint16 boneMass;
+    quint16 muscleMass;
+    quint16 basalMet;
+    quint8 physiqueRating;
+    quint16 activeMet;
+    quint8 metabolicAge;
+    quint8 visceralFatRating;
+    MessageIndex userProfileIndex;
 
     WeightScaleMessagePrivate() = delete;
     explicit WeightScaleMessagePrivate(WeightScaleMessage * const q);

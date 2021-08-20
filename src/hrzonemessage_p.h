@@ -34,7 +34,9 @@ class HrZoneMessage;
 class HrZoneMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    quint8 highBpm;
+    QString name;
 
     HrZoneMessagePrivate() = delete;
     explicit HrZoneMessagePrivate(HrZoneMessage * const q);

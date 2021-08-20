@@ -34,7 +34,15 @@ class GyroscopeDataMessage;
 class GyroscopeDataMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    quint16 timestampMs;
+    quint16 sampleTimeOffset;
+    quint16 gyroX;
+    quint16 gyroY;
+    quint16 gyroZ;
+    float calibratedGyroX;
+    float calibratedGyroY;
+    float calibratedGyroZ;
 
     GyroscopeDataMessagePrivate() = delete;
     explicit GyroscopeDataMessagePrivate(GyroscopeDataMessage * const q);

@@ -34,7 +34,10 @@ class MemoGlobMessage;
 class MemoGlobMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint32 partIndex;
+    quint8 memo;
+    quint16 messageNumber;
+    MessageIndex messageIndex;
 
     MemoGlobMessagePrivate() = delete;
     explicit MemoGlobMessagePrivate(MemoGlobMessage * const q);

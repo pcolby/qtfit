@@ -34,7 +34,12 @@ class WeatherAlertMessage;
 class WeatherAlertMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    QString reportId;
+    DateTime issueTime;
+    DateTime expireTime;
+    WeatherSeverity severity;
+    WeatherSevereType type;
 
     WeatherAlertMessagePrivate() = delete;
     explicit WeatherAlertMessagePrivate(WeatherAlertMessage * const q);

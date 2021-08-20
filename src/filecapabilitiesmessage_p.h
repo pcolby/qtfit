@@ -34,7 +34,12 @@ class FileCapabilitiesMessage;
 class FileCapabilitiesMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    MessageIndex messageIndex;
+    File type;
+    FileFlags flags;
+    QString directory;
+    quint16 maxCount;
+    quint32 maxSize;
 
     FileCapabilitiesMessagePrivate() = delete;
     explicit FileCapabilitiesMessagePrivate(FileCapabilitiesMessage * const q);

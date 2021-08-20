@@ -34,7 +34,19 @@ class ConnectivityMessage;
 class ConnectivityMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    bool bluetoothEnabled;
+    bool bluetoothLeEnabled;
+    bool antEnabled;
+    QString name;
+    bool liveTrackingEnabled;
+    bool weatherConditionsEnabled;
+    bool weatherAlertsEnabled;
+    bool autoActivityUploadEnabled;
+    bool courseDownloadEnabled;
+    bool workoutDownloadEnabled;
+    bool gpsEphemerisDownloadEnabled;
+    bool incidentDetectionEnabled;
+    bool grouptrackEnabled;
 
     ConnectivityMessagePrivate() = delete;
     explicit ConnectivityMessagePrivate(ConnectivityMessage * const q);

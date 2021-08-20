@@ -34,7 +34,12 @@ class ExdDataFieldConfigurationMessage;
 class ExdDataFieldConfigurationMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 screenIndex;
+    quint8 conceptField;
+    quint8 fieldId;
+    quint8 conceptCount;
+    ExdDisplayType displayType;
+    QString title;
 
     ExdDataFieldConfigurationMessagePrivate() = delete;
     explicit ExdDataFieldConfigurationMessagePrivate(ExdDataFieldConfigurationMessage * const q);

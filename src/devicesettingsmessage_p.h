@@ -34,7 +34,30 @@ class DeviceSettingsMessage;
 class DeviceSettingsMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    quint8 activeTimeZone;
+    quint32 utcOffset;
+    quint32 timeOffset;
+    TimeMode timeMode;
+    qint8 timeZoneOffset;
+    BacklightMode backlightMode;
+    bool activityTrackerEnabled;
+    DateTime clockTime;
+    quint16 pagesEnabled;
+    bool moveAlertEnabled;
+    DateMode dateMode;
+    DisplayOrientation displayOrientation;
+    Side mountingSide;
+    quint16 defaultPage;
+    quint16 autosyncMinSteps;
+    quint16 autosyncMinTime;
+    bool lactateThresholdAutodetectEnabled;
+    bool bleAutoUploadEnabled;
+    AutoSyncFrequency autoSyncFrequency;
+    AutoActivityDetect autoActivityDetect;
+    quint8 numberOfScreens;
+    DisplayOrientation smartNotificationDisplayOrientation;
+    Switch tapInterface;
+    TapSensitivity tapSensitivity;
 
     DeviceSettingsMessagePrivate() = delete;
     explicit DeviceSettingsMessagePrivate(DeviceSettingsMessage * const q);

@@ -34,7 +34,12 @@ class TrainingFileMessage;
 class TrainingFileMessagePrivate : public FitDataMessagePrivate {
 
 public:
-    /// @todo Generate members.
+    DateTime timestamp;
+    File type;
+    Manufacturer manufacturer;
+    quint16 product;
+    quint32z serialNumber;
+    DateTime timeCreated;
 
     TrainingFileMessagePrivate() = delete;
     explicit TrainingFileMessagePrivate(TrainingFileMessage * const q);
