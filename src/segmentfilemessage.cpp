@@ -167,7 +167,7 @@ bool SegmentFileMessagePrivate::setField(
             qWarning() << "segment_file.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:segment_file.fileUuid
         if (baseType != FitBaseType::String) {

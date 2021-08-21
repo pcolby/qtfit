@@ -143,7 +143,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:segment_leaderboard_entry.name
         if (baseType != FitBaseType::String) {

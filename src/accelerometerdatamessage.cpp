@@ -205,7 +205,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:accelerometer_data.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -313,7 +313,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.compressedCalibratedAccelX size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->compressedCalibratedAccelX = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->compressedCalibratedAccelX = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 9: // See Profile.xlsx::Messages:accelerometer_data.compressedCalibratedAccelY
         if (baseType != FitBaseType::Sint16) {
@@ -325,7 +325,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.compressedCalibratedAccelY size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->compressedCalibratedAccelY = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->compressedCalibratedAccelY = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:accelerometer_data.compressedCalibratedAccelZ
         if (baseType != FitBaseType::Sint16) {
@@ -337,7 +337,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.compressedCalibratedAccelZ size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->compressedCalibratedAccelZ = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->compressedCalibratedAccelZ = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     default:
         qWarning() << "unknown accelerometer_data message field number" << fieldId;

@@ -145,7 +145,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:timestamp_correlation.fractionalTimestamp
         if (baseType != FitBaseType::Uint16) {
@@ -169,7 +169,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.systemTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->systemTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->systemTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:timestamp_correlation.fractionalSystemTimestamp
         if (baseType != FitBaseType::Uint16) {
@@ -193,7 +193,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.localTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:timestamp_correlation.timestampMs
         if (baseType != FitBaseType::Uint16) {

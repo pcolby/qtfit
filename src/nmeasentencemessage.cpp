@@ -96,7 +96,7 @@ bool NmeaSentenceMessagePrivate::setField(
             qWarning() << "nmea_sentence.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:nmea_sentence.timestampMs
         if (baseType != FitBaseType::Uint16) {

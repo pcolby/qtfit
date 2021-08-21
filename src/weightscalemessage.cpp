@@ -217,7 +217,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:weight_scale.weight
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.weight size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->weight = static_cast<Weight>(bigEndian ? qFromBigEndian<Weight>(data) : qFromLittleEndian<Weight>(data));
+        this->weight = static_cast<Weight>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:weight_scale.percentFat
         if (baseType != FitBaseType::Uint16) {
@@ -361,7 +361,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.userProfileIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown weight_scale message field number" << fieldId;

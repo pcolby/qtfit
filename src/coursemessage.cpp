@@ -132,7 +132,7 @@ bool CourseMessagePrivate::setField(
             qWarning() << "course.capabilities size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->capabilities = static_cast<CourseCapabilities>(bigEndian ? qFromBigEndian<CourseCapabilities>(data) : qFromLittleEndian<CourseCapabilities>(data));
+        this->capabilities = static_cast<CourseCapabilities>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:course.subSport
         if (baseType != FitBaseType::Enum) {

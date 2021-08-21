@@ -205,7 +205,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:aviation_attitude.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -241,7 +241,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.pitch size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->pitch = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->pitch = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:aviation_attitude.roll
         if (baseType != FitBaseType::Sint16) {
@@ -253,7 +253,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.roll size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->roll = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->roll = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:aviation_attitude.accelLateral
         if (baseType != FitBaseType::Sint16) {
@@ -265,7 +265,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.accelLateral size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->accelLateral = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->accelLateral = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:aviation_attitude.accelNormal
         if (baseType != FitBaseType::Sint16) {
@@ -277,7 +277,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.accelNormal size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->accelNormal = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->accelNormal = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:aviation_attitude.turnRate
         if (baseType != FitBaseType::Sint16) {
@@ -289,7 +289,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.turnRate size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->turnRate = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->turnRate = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:aviation_attitude.stage
         if (baseType != FitBaseType::Enum) {
@@ -337,7 +337,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.validity size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->validity = static_cast<AttitudeValidity>(bigEndian ? qFromBigEndian<AttitudeValidity>(data) : qFromLittleEndian<AttitudeValidity>(data));
+        this->validity = static_cast<AttitudeValidity>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown aviation_attitude message field number" << fieldId;

@@ -217,7 +217,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:dive_summary.referenceMesg
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.referenceMesg size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->referenceMesg = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
+        this->referenceMesg = static_cast<MesgNum>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:dive_summary.referenceIndex
         if (baseType != FitBaseType::Uint16) {
@@ -241,7 +241,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.referenceIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->referenceIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->referenceIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:dive_summary.avgDepth
         if (baseType != FitBaseType::Uint32) {

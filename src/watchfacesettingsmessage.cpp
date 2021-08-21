@@ -97,7 +97,7 @@ bool WatchfaceSettingsMessagePrivate::setField(
             qWarning() << "watchface_settings.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:watchface_settings.mode
         if (baseType != FitBaseType::Enum) {

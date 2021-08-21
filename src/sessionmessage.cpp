@@ -1620,7 +1620,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 253: // See Profile.xlsx::Messages:session.timestamp
         if (baseType != FitBaseType::Uint32) {
@@ -1632,7 +1632,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:session.event
         if (baseType != FitBaseType::Enum) {
@@ -1668,7 +1668,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.startTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:session.startPositionLat
         if (baseType != FitBaseType::Sint32) {
@@ -1680,7 +1680,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.startPositionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->startPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:session.startPositionLong
         if (baseType != FitBaseType::Sint32) {
@@ -1692,7 +1692,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.startPositionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->startPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:session.sport
         if (baseType != FitBaseType::Enum) {
@@ -1980,7 +1980,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.necLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->necLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->necLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 30: // See Profile.xlsx::Messages:session.necLong
         if (baseType != FitBaseType::Sint32) {
@@ -1992,7 +1992,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.necLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->necLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->necLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 31: // See Profile.xlsx::Messages:session.swcLat
         if (baseType != FitBaseType::Sint32) {
@@ -2004,7 +2004,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.swcLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->swcLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->swcLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 32: // See Profile.xlsx::Messages:session.swcLong
         if (baseType != FitBaseType::Sint32) {
@@ -2016,7 +2016,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.swcLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->swcLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->swcLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 33: // See Profile.xlsx::Messages:session.numLengths
         if (baseType != FitBaseType::Uint16) {
@@ -2076,7 +2076,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.leftRightBalance size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->leftRightBalance = static_cast<LeftRightBalance100>(bigEndian ? qFromBigEndian<LeftRightBalance100>(data) : qFromLittleEndian<LeftRightBalance100>(data));
+        this->leftRightBalance = static_cast<LeftRightBalance100>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 41: // See Profile.xlsx::Messages:session.avgStrokeCount
         if (baseType != FitBaseType::Uint32) {
@@ -2220,7 +2220,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.avgGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 53: // See Profile.xlsx::Messages:session.avgPosGrade
         if (baseType != FitBaseType::Sint16) {
@@ -2232,7 +2232,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.avgPosGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 54: // See Profile.xlsx::Messages:session.avgNegGrade
         if (baseType != FitBaseType::Sint16) {
@@ -2244,7 +2244,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.avgNegGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 55: // See Profile.xlsx::Messages:session.maxPosGrade
         if (baseType != FitBaseType::Sint16) {
@@ -2256,7 +2256,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.maxPosGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 56: // See Profile.xlsx::Messages:session.maxNegGrade
         if (baseType != FitBaseType::Sint16) {
@@ -2268,7 +2268,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.maxNegGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 57: // See Profile.xlsx::Messages:session.avgTemperature
         if (baseType != FitBaseType::Sint8) {
@@ -2316,7 +2316,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.avgPosVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 61: // See Profile.xlsx::Messages:session.avgNegVerticalSpeed
         if (baseType != FitBaseType::Sint16) {
@@ -2328,7 +2328,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.avgNegVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 62: // See Profile.xlsx::Messages:session.maxPosVerticalSpeed
         if (baseType != FitBaseType::Sint16) {
@@ -2340,7 +2340,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.maxPosVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 63: // See Profile.xlsx::Messages:session.maxNegVerticalSpeed
         if (baseType != FitBaseType::Sint16) {
@@ -2352,7 +2352,7 @@ bool SessionMessagePrivate::setField(
             qWarning() << "session.maxNegVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 64: // See Profile.xlsx::Messages:session.minHeartRate
         if (baseType != FitBaseType::Uint8) {

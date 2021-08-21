@@ -408,7 +408,7 @@ bool UserProfileMessagePrivate::setField(
             qWarning() << "user_profile.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:user_profile.friendlyName
         if (baseType != FitBaseType::String) {
@@ -648,7 +648,7 @@ bool UserProfileMessagePrivate::setField(
             qWarning() << "user_profile.localId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->localId = static_cast<UserLocalId>(bigEndian ? qFromBigEndian<UserLocalId>(data) : qFromLittleEndian<UserLocalId>(data));
+        this->localId = static_cast<UserLocalId>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 23: // See Profile.xlsx::Messages:user_profile.globalId
         if (baseType != FitBaseType::Byte) {
@@ -672,7 +672,7 @@ bool UserProfileMessagePrivate::setField(
             qWarning() << "user_profile.wakeTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->wakeTime = static_cast<LocaltimeIntoDay>(bigEndian ? qFromBigEndian<LocaltimeIntoDay>(data) : qFromLittleEndian<LocaltimeIntoDay>(data));
+        this->wakeTime = static_cast<LocaltimeIntoDay>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 29: // See Profile.xlsx::Messages:user_profile.sleepTime
         if (baseType != FitBaseType::Uint32) {
@@ -684,7 +684,7 @@ bool UserProfileMessagePrivate::setField(
             qWarning() << "user_profile.sleepTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->sleepTime = static_cast<LocaltimeIntoDay>(bigEndian ? qFromBigEndian<LocaltimeIntoDay>(data) : qFromLittleEndian<LocaltimeIntoDay>(data));
+        this->sleepTime = static_cast<LocaltimeIntoDay>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 30: // See Profile.xlsx::Messages:user_profile.heightSetting
         if (baseType != FitBaseType::Enum) {

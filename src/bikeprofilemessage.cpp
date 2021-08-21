@@ -444,7 +444,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:bike_profile.name
         if (baseType != FitBaseType::String) {
@@ -504,7 +504,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikeSpdAntId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->bikeSpdAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->bikeSpdAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:bike_profile.bikeCadAntId
         if (baseType != FitBaseType::Uint16z) {
@@ -516,7 +516,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikeCadAntId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->bikeCadAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->bikeCadAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:bike_profile.bikeSpdcadAntId
         if (baseType != FitBaseType::Uint16z) {
@@ -528,7 +528,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikeSpdcadAntId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->bikeSpdcadAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->bikeSpdcadAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:bike_profile.bikePowerAntId
         if (baseType != FitBaseType::Uint16z) {
@@ -540,7 +540,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikePowerAntId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->bikePowerAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->bikePowerAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:bike_profile.customWheelsize
         if (baseType != FitBaseType::Uint16) {
@@ -708,7 +708,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikeSpdAntIdTransType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->bikeSpdAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->bikeSpdAntIdTransType = static_cast<quint8z>(data.at(0));
         break;
     case 22: // See Profile.xlsx::Messages:bike_profile.bikeCadAntIdTransType
         if (baseType != FitBaseType::Uint8z) {
@@ -720,7 +720,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikeCadAntIdTransType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->bikeCadAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->bikeCadAntIdTransType = static_cast<quint8z>(data.at(0));
         break;
     case 23: // See Profile.xlsx::Messages:bike_profile.bikeSpdcadAntIdTransType
         if (baseType != FitBaseType::Uint8z) {
@@ -732,7 +732,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikeSpdcadAntIdTransType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->bikeSpdcadAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->bikeSpdcadAntIdTransType = static_cast<quint8z>(data.at(0));
         break;
     case 24: // See Profile.xlsx::Messages:bike_profile.bikePowerAntIdTransType
         if (baseType != FitBaseType::Uint8z) {
@@ -744,7 +744,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.bikePowerAntIdTransType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->bikePowerAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->bikePowerAntIdTransType = static_cast<quint8z>(data.at(0));
         break;
     case 37: // See Profile.xlsx::Messages:bike_profile.odometerRollover
         if (baseType != FitBaseType::Uint8) {
@@ -768,7 +768,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.frontGearNum size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->frontGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->frontGearNum = static_cast<quint8z>(data.at(0));
         break;
     case 39: // See Profile.xlsx::Messages:bike_profile.frontGear
         if (baseType != FitBaseType::Uint8z) {
@@ -780,7 +780,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.frontGear size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->frontGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->frontGear = static_cast<quint8z>(data.at(0));
         break;
     case 40: // See Profile.xlsx::Messages:bike_profile.rearGearNum
         if (baseType != FitBaseType::Uint8z) {
@@ -792,7 +792,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.rearGearNum size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->rearGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->rearGearNum = static_cast<quint8z>(data.at(0));
         break;
     case 41: // See Profile.xlsx::Messages:bike_profile.rearGear
         if (baseType != FitBaseType::Uint8z) {
@@ -804,7 +804,7 @@ bool BikeProfileMessagePrivate::setField(
             qWarning() << "bike_profile.rearGear size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->rearGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->rearGear = static_cast<quint8z>(data.at(0));
         break;
     case 44: // See Profile.xlsx::Messages:bike_profile.shimanoDi2Enabled
         if (baseType != FitBaseType::Byte) {

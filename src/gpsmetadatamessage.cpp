@@ -169,7 +169,7 @@ bool GpsMetadataMessagePrivate::setField(
             qWarning() << "gps_metadata.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:gps_metadata.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -193,7 +193,7 @@ bool GpsMetadataMessagePrivate::setField(
             qWarning() << "gps_metadata.positionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:gps_metadata.positionLong
         if (baseType != FitBaseType::Sint32) {
@@ -205,7 +205,7 @@ bool GpsMetadataMessagePrivate::setField(
             qWarning() << "gps_metadata.positionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:gps_metadata.enhancedAltitude
         if (baseType != FitBaseType::Uint32) {
@@ -253,7 +253,7 @@ bool GpsMetadataMessagePrivate::setField(
             qWarning() << "gps_metadata.utcTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->utcTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->utcTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:gps_metadata.velocity
         if (baseType != FitBaseType::Sint16) {
@@ -265,7 +265,7 @@ bool GpsMetadataMessagePrivate::setField(
             qWarning() << "gps_metadata.velocity size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->velocity = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->velocity = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     default:
         qWarning() << "unknown gps_metadata message field number" << fieldId;

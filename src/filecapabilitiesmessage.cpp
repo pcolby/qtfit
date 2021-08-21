@@ -132,7 +132,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:file_capabilities.type
         if (baseType != FitBaseType::Enum) {
@@ -156,7 +156,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.flags size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->flags = static_cast<FileFlags>(bigEndian ? qFromBigEndian<FileFlags>(data) : qFromLittleEndian<FileFlags>(data));
+        this->flags = static_cast<FileFlags>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:file_capabilities.directory
         if (baseType != FitBaseType::String) {

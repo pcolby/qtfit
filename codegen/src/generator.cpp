@@ -332,18 +332,20 @@ int Generator::baseTypeSize(const QString &fitBaseType)
 
 // See FIT SDK Table 7. FIT Base Types and Invalid Values
 // See https://developer.garmin.com/fit/protocol/#basetype
-bool Generator::endianAbility(const QString &fitBaseType)
+QString Generator::endianAbility(const QString &fitBaseType)
 {
-    /// Note, 'bool' is not a valid FIT base type (nor a valid FIT complex type), yet the
-    /// Profiles.xlsx::Message sheet contains some fields with Field Type 'bool'. \d todo Check what
-    /// base type FIT files really use.
-    if (fitBaseType == QSL("bool"  )) return false;
-    if (fitBaseType == QSL("enum"  )) return false;
-    if (fitBaseType == QSL("sint8" )) return false;
-    if (fitBaseType == QSL("uint8" )) return false;
-    if (fitBaseType == QSL("string")) return false;
-    if (fitBaseType == QSL("byte"  )) return false;
-    return true; // All other types have endianness.
+    if (fitBaseType == QSL("sint16" )) return QSL(" qint16");
+    if (fitBaseType == QSL("uint16" )) return QSL("quint16");
+    if (fitBaseType == QSL("uint16z")) return QSL("quint16");
+    if (fitBaseType == QSL("sint32" )) return QSL(" qint32");
+    if (fitBaseType == QSL("uint32" )) return QSL("quint32");
+    if (fitBaseType == QSL("uint32z")) return QSL("quint32");
+    if (fitBaseType == QSL("sint64" )) return QSL(" qint64");
+    if (fitBaseType == QSL("uint64" )) return QSL("quint64");
+    if (fitBaseType == QSL("uint64z")) return QSL("quint64");
+    if (fitBaseType == QSL("float32")) return QSL("float");
+    if (fitBaseType == QSL("float64")) return QSL("double");
+    return QString(); // Type has no endian ability (as defined by Table 7).
 }
 
 // See FIT SDK Table 7. FIT Base Types and Invalid Values

@@ -252,7 +252,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:weather_conditions.weatherReport
         if (baseType != FitBaseType::Enum) {
@@ -372,7 +372,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.observedAtTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->observedAtTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->observedAtTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 10: // See Profile.xlsx::Messages:weather_conditions.observedLocationLat
         if (baseType != FitBaseType::Sint32) {
@@ -384,7 +384,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.observedLocationLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->observedLocationLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->observedLocationLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 11: // See Profile.xlsx::Messages:weather_conditions.observedLocationLong
         if (baseType != FitBaseType::Sint32) {
@@ -396,7 +396,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.observedLocationLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->observedLocationLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->observedLocationLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 12: // See Profile.xlsx::Messages:weather_conditions.dayOfWeek
         if (baseType != FitBaseType::Enum) {

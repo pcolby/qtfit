@@ -85,7 +85,7 @@ bool SlaveDeviceMessagePrivate::setField(
             qWarning() << "slave_device.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:slave_device.product
         if (baseType != FitBaseType::Uint16) {

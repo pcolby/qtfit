@@ -121,7 +121,7 @@ bool MesgCapabilitiesMessagePrivate::setField(
             qWarning() << "mesg_capabilities.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:mesg_capabilities.file
         if (baseType != FitBaseType::Enum) {
@@ -145,7 +145,7 @@ bool MesgCapabilitiesMessagePrivate::setField(
             qWarning() << "mesg_capabilities.mesgNum size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->mesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
+        this->mesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:mesg_capabilities.countType
         if (baseType != FitBaseType::Enum) {

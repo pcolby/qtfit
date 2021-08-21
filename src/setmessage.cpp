@@ -193,7 +193,7 @@ bool SetMessagePrivate::setField(
             qWarning() << "set.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:set.duration
         if (baseType != FitBaseType::Uint32) {
@@ -253,7 +253,7 @@ bool SetMessagePrivate::setField(
             qWarning() << "set.startTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:set.category
         if (baseType != FitBaseType::Uint16) {
@@ -265,7 +265,7 @@ bool SetMessagePrivate::setField(
             qWarning() << "set.category size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->category = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<ExerciseCategory>(data) : qFromLittleEndian<ExerciseCategory>(data));
+        this->category = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:set.categorySubtype
         if (baseType != FitBaseType::Uint16) {
@@ -289,7 +289,7 @@ bool SetMessagePrivate::setField(
             qWarning() << "set.weightDisplayUnit size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        this->weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:set.messageIndex
         if (baseType != FitBaseType::Uint16) {
@@ -301,7 +301,7 @@ bool SetMessagePrivate::setField(
             qWarning() << "set.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 11: // See Profile.xlsx::Messages:set.wktStepIndex
         if (baseType != FitBaseType::Uint16) {
@@ -313,7 +313,7 @@ bool SetMessagePrivate::setField(
             qWarning() << "set.wktStepIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->wktStepIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->wktStepIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown set message field number" << fieldId;

@@ -241,7 +241,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:event.event
         if (baseType != FitBaseType::Enum) {
@@ -337,7 +337,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.frontGearNum size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->frontGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->frontGearNum = static_cast<quint8z>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:event.frontGear
         if (baseType != FitBaseType::Uint8z) {
@@ -349,7 +349,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.frontGear size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->frontGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->frontGear = static_cast<quint8z>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:event.rearGearNum
         if (baseType != FitBaseType::Uint8z) {
@@ -361,7 +361,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.rearGearNum size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->rearGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->rearGearNum = static_cast<quint8z>(data.at(0));
         break;
     case 12: // See Profile.xlsx::Messages:event.rearGear
         if (baseType != FitBaseType::Uint8z) {
@@ -373,7 +373,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.rearGear size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->rearGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->rearGear = static_cast<quint8z>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:event.deviceIndex
         if (baseType != FitBaseType::Uint8) {

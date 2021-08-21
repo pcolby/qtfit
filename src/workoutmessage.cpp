@@ -156,7 +156,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.capabilities size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->capabilities = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<WorkoutCapabilities>(data) : qFromLittleEndian<WorkoutCapabilities>(data));
+        this->capabilities = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:workout.numValidSteps
         if (baseType != FitBaseType::Uint16) {

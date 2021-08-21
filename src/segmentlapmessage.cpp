@@ -1163,7 +1163,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 253: // See Profile.xlsx::Messages:segment_lap.timestamp
         if (baseType != FitBaseType::Uint32) {
@@ -1175,7 +1175,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:segment_lap.event
         if (baseType != FitBaseType::Enum) {
@@ -1211,7 +1211,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.startTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:segment_lap.startPositionLat
         if (baseType != FitBaseType::Sint32) {
@@ -1223,7 +1223,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.startPositionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->startPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:segment_lap.startPositionLong
         if (baseType != FitBaseType::Sint32) {
@@ -1235,7 +1235,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.startPositionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->startPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:segment_lap.endPositionLat
         if (baseType != FitBaseType::Sint32) {
@@ -1247,7 +1247,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.endPositionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->endPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->endPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:segment_lap.endPositionLong
         if (baseType != FitBaseType::Sint32) {
@@ -1259,7 +1259,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.endPositionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->endPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->endPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:segment_lap.totalElapsedTime
         if (baseType != FitBaseType::Uint32) {
@@ -1487,7 +1487,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.necLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->necLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->necLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 26: // See Profile.xlsx::Messages:segment_lap.necLong
         if (baseType != FitBaseType::Sint32) {
@@ -1499,7 +1499,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.necLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->necLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->necLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 27: // See Profile.xlsx::Messages:segment_lap.swcLat
         if (baseType != FitBaseType::Sint32) {
@@ -1511,7 +1511,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.swcLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->swcLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->swcLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 28: // See Profile.xlsx::Messages:segment_lap.swcLong
         if (baseType != FitBaseType::Sint32) {
@@ -1523,7 +1523,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.swcLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->swcLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->swcLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 29: // See Profile.xlsx::Messages:segment_lap.name
         if (baseType != FitBaseType::String) {
@@ -1559,7 +1559,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.leftRightBalance size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->leftRightBalance = static_cast<LeftRightBalance100>(bigEndian ? qFromBigEndian<LeftRightBalance100>(data) : qFromLittleEndian<LeftRightBalance100>(data));
+        this->leftRightBalance = static_cast<LeftRightBalance100>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 32: // See Profile.xlsx::Messages:segment_lap.subSport
         if (baseType != FitBaseType::Enum) {
@@ -1631,7 +1631,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.avgGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 38: // See Profile.xlsx::Messages:segment_lap.avgPosGrade
         if (baseType != FitBaseType::Sint16) {
@@ -1643,7 +1643,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.avgPosGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 39: // See Profile.xlsx::Messages:segment_lap.avgNegGrade
         if (baseType != FitBaseType::Sint16) {
@@ -1655,7 +1655,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.avgNegGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 40: // See Profile.xlsx::Messages:segment_lap.maxPosGrade
         if (baseType != FitBaseType::Sint16) {
@@ -1667,7 +1667,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.maxPosGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 41: // See Profile.xlsx::Messages:segment_lap.maxNegGrade
         if (baseType != FitBaseType::Sint16) {
@@ -1679,7 +1679,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.maxNegGrade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 42: // See Profile.xlsx::Messages:segment_lap.avgTemperature
         if (baseType != FitBaseType::Sint8) {
@@ -1727,7 +1727,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.avgPosVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 46: // See Profile.xlsx::Messages:segment_lap.avgNegVerticalSpeed
         if (baseType != FitBaseType::Sint16) {
@@ -1739,7 +1739,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.avgNegVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->avgNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->avgNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 47: // See Profile.xlsx::Messages:segment_lap.maxPosVerticalSpeed
         if (baseType != FitBaseType::Sint16) {
@@ -1751,7 +1751,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.maxPosVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 48: // See Profile.xlsx::Messages:segment_lap.maxNegVerticalSpeed
         if (baseType != FitBaseType::Sint16) {
@@ -1763,7 +1763,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.maxNegVerticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->maxNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->maxNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 49: // See Profile.xlsx::Messages:segment_lap.timeInHrZone
         if (baseType != FitBaseType::Uint32) {
@@ -1871,7 +1871,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.wktStepIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->wktStepIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->wktStepIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 58: // See Profile.xlsx::Messages:segment_lap.sportEvent
         if (baseType != FitBaseType::Enum) {
@@ -2183,7 +2183,7 @@ bool SegmentLapMessagePrivate::setField(
             qWarning() << "segment_lap.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 84: // See Profile.xlsx::Messages:segment_lap.totalGrit
         if (baseType != FitBaseType::Float32) {

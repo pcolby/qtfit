@@ -275,7 +275,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:device_info.deviceIndex
         if (baseType != FitBaseType::Uint8) {
@@ -311,7 +311,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:device_info.serialNumber
         if (baseType != FitBaseType::Uint32z) {
@@ -323,7 +323,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.serialNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
+        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:device_info.product
         if (baseType != FitBaseType::Uint16) {
@@ -431,7 +431,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.antTransmissionType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->antTransmissionType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->antTransmissionType = static_cast<quint8z>(data.at(0));
         break;
     case 21: // See Profile.xlsx::Messages:device_info.antDeviceNumber
         if (baseType != FitBaseType::Uint16z) {
@@ -443,7 +443,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.antDeviceNumber size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->antDeviceNumber = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->antDeviceNumber = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 22: // See Profile.xlsx::Messages:device_info.antNetwork
         if (baseType != FitBaseType::Enum) {

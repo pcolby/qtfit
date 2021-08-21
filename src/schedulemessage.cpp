@@ -145,7 +145,7 @@ bool ScheduleMessagePrivate::setField(
             qWarning() << "schedule.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:schedule.product
         if (baseType != FitBaseType::Uint16) {
@@ -169,7 +169,7 @@ bool ScheduleMessagePrivate::setField(
             qWarning() << "schedule.serialNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
+        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:schedule.timeCreated
         if (baseType != FitBaseType::Uint32) {
@@ -181,7 +181,7 @@ bool ScheduleMessagePrivate::setField(
             qWarning() << "schedule.timeCreated size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:schedule.completed
         if (baseType != FitBaseType::Byte) {
@@ -217,7 +217,7 @@ bool ScheduleMessagePrivate::setField(
             qWarning() << "schedule.scheduledTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->scheduledTime = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        this->scheduledTime = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown schedule message field number" << fieldId;

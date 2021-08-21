@@ -145,7 +145,7 @@ bool ThreeDSensorCalibrationMessagePrivate::setField(
             qWarning() << "three_d_sensor_calibration.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:three_d_sensor_calibration.sensorType
         if (baseType != FitBaseType::Enum) {
@@ -205,7 +205,7 @@ bool ThreeDSensorCalibrationMessagePrivate::setField(
             qWarning() << "three_d_sensor_calibration.offsetCal size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->offsetCal = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->offsetCal = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:three_d_sensor_calibration.orientationMatrix
         if (baseType != FitBaseType::Sint32) {
@@ -217,7 +217,7 @@ bool ThreeDSensorCalibrationMessagePrivate::setField(
             qWarning() << "three_d_sensor_calibration.orientationMatrix size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->orientationMatrix = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->orientationMatrix = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     default:
         qWarning() << "unknown three_d_sensor_calibration message field number" << fieldId;

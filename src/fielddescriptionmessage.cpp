@@ -356,7 +356,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.fitBaseUnitId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->fitBaseUnitId = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        this->fitBaseUnitId = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 14: // See Profile.xlsx::Messages:field_description.nativeMesgNum
         if (baseType != FitBaseType::Uint16) {
@@ -368,7 +368,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.nativeMesgNum size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->nativeMesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
+        this->nativeMesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 15: // See Profile.xlsx::Messages:field_description.nativeFieldNum
         if (baseType != FitBaseType::Uint8) {

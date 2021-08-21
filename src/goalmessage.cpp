@@ -217,7 +217,7 @@ bool GoalMessagePrivate::setField(
             qWarning() << "goal.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:goal.sport
         if (baseType != FitBaseType::Enum) {
@@ -253,7 +253,7 @@ bool GoalMessagePrivate::setField(
             qWarning() << "goal.startDate size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->startDate = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->startDate = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:goal.endDate
         if (baseType != FitBaseType::Uint32) {
@@ -265,7 +265,7 @@ bool GoalMessagePrivate::setField(
             qWarning() << "goal.endDate size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->endDate = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->endDate = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:goal.type
         if (baseType != FitBaseType::Enum) {

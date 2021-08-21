@@ -193,7 +193,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:blood_pressure.systolicPressure
         if (baseType != FitBaseType::Uint16) {
@@ -313,7 +313,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.userProfileIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown blood_pressure message field number" << fieldId;

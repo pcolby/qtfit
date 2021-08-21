@@ -156,7 +156,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:course_point.timestamp
         if (baseType != FitBaseType::Uint32) {
@@ -168,7 +168,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:course_point.positionLat
         if (baseType != FitBaseType::Sint32) {
@@ -180,7 +180,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.positionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:course_point.positionLong
         if (baseType != FitBaseType::Sint32) {
@@ -192,7 +192,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.positionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:course_point.distance
         if (baseType != FitBaseType::Uint32) {

@@ -133,7 +133,7 @@ bool SegmentPointMessagePrivate::setField(
             qWarning() << "segment_point.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:segment_point.positionLat
         if (baseType != FitBaseType::Sint32) {
@@ -145,7 +145,7 @@ bool SegmentPointMessagePrivate::setField(
             qWarning() << "segment_point.positionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:segment_point.positionLong
         if (baseType != FitBaseType::Sint32) {
@@ -157,7 +157,7 @@ bool SegmentPointMessagePrivate::setField(
             qWarning() << "segment_point.positionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:segment_point.distance
         if (baseType != FitBaseType::Uint32) {

@@ -409,7 +409,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:monitoring.deviceIndex
         if (baseType != FitBaseType::Uint8) {
@@ -553,7 +553,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.localTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 12: // See Profile.xlsx::Messages:monitoring.temperature
         if (baseType != FitBaseType::Sint16) {
@@ -565,7 +565,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.temperature size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->temperature = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->temperature = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 14: // See Profile.xlsx::Messages:monitoring.temperatureMin
         if (baseType != FitBaseType::Sint16) {
@@ -577,7 +577,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.temperatureMin size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->temperatureMin = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->temperatureMin = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 15: // See Profile.xlsx::Messages:monitoring.temperatureMax
         if (baseType != FitBaseType::Sint16) {
@@ -589,7 +589,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.temperatureMax size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->temperatureMax = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->temperatureMax = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 16: // See Profile.xlsx::Messages:monitoring.activityTime
         if (baseType != FitBaseType::Uint16) {

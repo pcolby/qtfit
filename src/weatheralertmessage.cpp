@@ -132,7 +132,7 @@ bool WeatherAlertMessagePrivate::setField(
             qWarning() << "weather_alert.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:weather_alert.reportId
         if (baseType != FitBaseType::String) {
@@ -156,7 +156,7 @@ bool WeatherAlertMessagePrivate::setField(
             qWarning() << "weather_alert.issueTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->issueTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->issueTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:weather_alert.expireTime
         if (baseType != FitBaseType::Uint32) {
@@ -168,7 +168,7 @@ bool WeatherAlertMessagePrivate::setField(
             qWarning() << "weather_alert.expireTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->expireTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->expireTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:weather_alert.severity
         if (baseType != FitBaseType::Enum) {

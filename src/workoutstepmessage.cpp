@@ -239,7 +239,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:workout_step.wktStepName
         if (baseType != FitBaseType::String) {
@@ -371,7 +371,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.exerciseCategory size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->exerciseCategory = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<ExerciseCategory>(data) : qFromLittleEndian<ExerciseCategory>(data));
+        this->exerciseCategory = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 11: // See Profile.xlsx::Messages:workout_step.exerciseName
         if (baseType != FitBaseType::Uint16) {
@@ -407,7 +407,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.weightDisplayUnit size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        this->weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown workout_step message field number" << fieldId;

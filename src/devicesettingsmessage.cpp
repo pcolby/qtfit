@@ -433,7 +433,7 @@ bool DeviceSettingsMessagePrivate::setField(
             qWarning() << "device_settings.clockTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->clockTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->clockTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 40: // See Profile.xlsx::Messages:device_settings.pagesEnabled
         if (baseType != FitBaseType::Uint16) {
@@ -577,7 +577,7 @@ bool DeviceSettingsMessagePrivate::setField(
             qWarning() << "device_settings.autoActivityDetect size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->autoActivityDetect = static_cast<AutoActivityDetect>(bigEndian ? qFromBigEndian<AutoActivityDetect>(data) : qFromLittleEndian<AutoActivityDetect>(data));
+        this->autoActivityDetect = static_cast<AutoActivityDetect>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 94: // See Profile.xlsx::Messages:device_settings.numberOfScreens
         if (baseType != FitBaseType::Uint8) {

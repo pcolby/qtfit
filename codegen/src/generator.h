@@ -43,7 +43,7 @@ protected:
                           const QString &outputPathName, const QString className);
 
     static int baseTypeSize(const QString &fitBaseType);
-    static bool endianAbility(const QString &fitBaseType);
+    static QString endianAbility(const QString &fitBaseType);
     static QString invalidValue(const QString &type);
     static QString safeEnumLabel(const QString &string);
     static QString toCamelCase(const QString &string, const bool camelCase=false);

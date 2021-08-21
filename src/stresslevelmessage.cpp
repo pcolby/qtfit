@@ -85,7 +85,7 @@ bool StressLevelMessagePrivate::setField(
             qWarning() << "stress_level.stressLevelValue size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->stressLevelValue = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->stressLevelValue = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:stress_level.stressLevelTime
         if (baseType != FitBaseType::Uint32) {
@@ -97,7 +97,7 @@ bool StressLevelMessagePrivate::setField(
             qWarning() << "stress_level.stressLevelTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->stressLevelTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->stressLevelTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown stress_level message field number" << fieldId;

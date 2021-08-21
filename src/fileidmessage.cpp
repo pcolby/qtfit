@@ -156,7 +156,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:file_id.product
         if (baseType != FitBaseType::Uint16) {
@@ -180,7 +180,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.serialNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
+        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:file_id.timeCreated
         if (baseType != FitBaseType::Uint32) {
@@ -192,7 +192,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.timeCreated size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:file_id.number
         if (baseType != FitBaseType::Uint16) {

@@ -133,7 +133,7 @@ bool MonitoringInfoMessagePrivate::setField(
             qWarning() << "monitoring_info.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:monitoring_info.localTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -145,7 +145,7 @@ bool MonitoringInfoMessagePrivate::setField(
             qWarning() << "monitoring_info.localTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 1: // See Profile.xlsx::Messages:monitoring_info.activityType
         if (baseType != FitBaseType::Enum) {

@@ -85,7 +85,7 @@ bool OhrSettingsMessagePrivate::setField(
             qWarning() << "ohr_settings.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:ohr_settings.enabled
         if (baseType != FitBaseType::Enum) {

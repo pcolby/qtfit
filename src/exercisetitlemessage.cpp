@@ -108,7 +108,7 @@ bool ExerciseTitleMessagePrivate::setField(
             qWarning() << "exercise_title.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:exercise_title.exerciseCategory
         if (baseType != FitBaseType::Uint16) {
@@ -120,7 +120,7 @@ bool ExerciseTitleMessagePrivate::setField(
             qWarning() << "exercise_title.exerciseCategory size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->exerciseCategory = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<ExerciseCategory>(data) : qFromLittleEndian<ExerciseCategory>(data));
+        this->exerciseCategory = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:exercise_title.exerciseName
         if (baseType != FitBaseType::Uint16) {

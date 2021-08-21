@@ -157,7 +157,7 @@ bool SdmProfileMessagePrivate::setField(
             qWarning() << "sdm_profile.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:sdm_profile.enabled
         if (baseType != FitBaseType::Byte) {
@@ -181,7 +181,7 @@ bool SdmProfileMessagePrivate::setField(
             qWarning() << "sdm_profile.sdmAntId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->sdmAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->sdmAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:sdm_profile.sdmCalFactor
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool SdmProfileMessagePrivate::setField(
             qWarning() << "sdm_profile.sdmAntIdTransType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        this->sdmAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->sdmAntIdTransType = static_cast<quint8z>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:sdm_profile.odometerRollover
         if (baseType != FitBaseType::Uint8) {

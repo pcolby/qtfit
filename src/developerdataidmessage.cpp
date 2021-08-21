@@ -145,7 +145,7 @@ bool DeveloperDataIdMessagePrivate::setField(
             qWarning() << "developer_data_id.manufacturerId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        this->manufacturerId = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturerId = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:developer_data_id.developerDataIndex
         if (baseType != FitBaseType::Uint8) {
