@@ -133,7 +133,7 @@ bool TrainingFileMessagePrivate::setField(
             qWarning() << "training_file.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:training_file.type
         if (baseType != FitBaseType::Enum) {
@@ -145,7 +145,7 @@ bool TrainingFileMessagePrivate::setField(
             qWarning() << "training_file.type size is" << data.size() << "but should be" << 1;
             return false;
         }
-        type = static_cast<File>(data.at(0));
+        this->type = static_cast<File>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:training_file.manufacturer
         if (baseType != FitBaseType::Uint16) {
@@ -157,7 +157,7 @@ bool TrainingFileMessagePrivate::setField(
             qWarning() << "training_file.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
         break;
     case 2: // See Profile.xlsx::Messages:training_file.product
         if (baseType != FitBaseType::Uint16) {
@@ -169,7 +169,7 @@ bool TrainingFileMessagePrivate::setField(
             qWarning() << "training_file.product size is" << data.size() << "but should be" << 2;
             return false;
         }
-        product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:training_file.serialNumber
         if (baseType != FitBaseType::Uint32z) {
@@ -181,7 +181,7 @@ bool TrainingFileMessagePrivate::setField(
             qWarning() << "training_file.serialNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
+        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
         break;
     case 4: // See Profile.xlsx::Messages:training_file.timeCreated
         if (baseType != FitBaseType::Uint32) {
@@ -193,7 +193,7 @@ bool TrainingFileMessagePrivate::setField(
             qWarning() << "training_file.timeCreated size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     default:
         qWarning() << "unknown training_file message field number" << fieldId;

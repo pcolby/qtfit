@@ -217,7 +217,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:weight_scale.weight
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.weight size is" << data.size() << "but should be" << 2;
             return false;
         }
-        weight = static_cast<Weight>(bigEndian ? qFromBigEndian<Weight>(data) : qFromLittleEndian<Weight>(data));
+        this->weight = static_cast<Weight>(bigEndian ? qFromBigEndian<Weight>(data) : qFromLittleEndian<Weight>(data));
         break;
     case 1: // See Profile.xlsx::Messages:weight_scale.percentFat
         if (baseType != FitBaseType::Uint16) {
@@ -241,7 +241,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.percentFat size is" << data.size() << "but should be" << 2;
             return false;
         }
-        percentFat = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->percentFat = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:weight_scale.percentHydration
         if (baseType != FitBaseType::Uint16) {
@@ -253,7 +253,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.percentHydration size is" << data.size() << "but should be" << 2;
             return false;
         }
-        percentHydration = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->percentHydration = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:weight_scale.visceralFatMass
         if (baseType != FitBaseType::Uint16) {
@@ -265,7 +265,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.visceralFatMass size is" << data.size() << "but should be" << 2;
             return false;
         }
-        visceralFatMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->visceralFatMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:weight_scale.boneMass
         if (baseType != FitBaseType::Uint16) {
@@ -277,7 +277,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.boneMass size is" << data.size() << "but should be" << 2;
             return false;
         }
-        boneMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->boneMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:weight_scale.muscleMass
         if (baseType != FitBaseType::Uint16) {
@@ -289,7 +289,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.muscleMass size is" << data.size() << "but should be" << 2;
             return false;
         }
-        muscleMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->muscleMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:weight_scale.basalMet
         if (baseType != FitBaseType::Uint16) {
@@ -301,7 +301,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.basalMet size is" << data.size() << "but should be" << 2;
             return false;
         }
-        basalMet = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->basalMet = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:weight_scale.physiqueRating
         if (baseType != FitBaseType::Uint8) {
@@ -313,7 +313,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.physiqueRating size is" << data.size() << "but should be" << 1;
             return false;
         }
-        physiqueRating = static_cast<quint8>(data.at(0));
+        this->physiqueRating = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:weight_scale.activeMet
         if (baseType != FitBaseType::Uint16) {
@@ -325,7 +325,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.activeMet size is" << data.size() << "but should be" << 2;
             return false;
         }
-        activeMet = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->activeMet = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:weight_scale.metabolicAge
         if (baseType != FitBaseType::Uint8) {
@@ -337,7 +337,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.metabolicAge size is" << data.size() << "but should be" << 1;
             return false;
         }
-        metabolicAge = static_cast<quint8>(data.at(0));
+        this->metabolicAge = static_cast<quint8>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:weight_scale.visceralFatRating
         if (baseType != FitBaseType::Uint8) {
@@ -349,7 +349,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.visceralFatRating size is" << data.size() << "but should be" << 1;
             return false;
         }
-        visceralFatRating = static_cast<quint8>(data.at(0));
+        this->visceralFatRating = static_cast<quint8>(data.at(0));
         break;
     case 12: // See Profile.xlsx::Messages:weight_scale.userProfileIndex
         if (baseType != FitBaseType::Uint16) {
@@ -361,7 +361,7 @@ bool WeightScaleMessagePrivate::setField(
             qWarning() << "weight_scale.userProfileIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     default:
         qWarning() << "unknown weight_scale message field number" << fieldId;

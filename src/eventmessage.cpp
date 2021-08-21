@@ -241,7 +241,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:event.event
         if (baseType != FitBaseType::Enum) {
@@ -253,7 +253,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.event size is" << data.size() << "but should be" << 1;
             return false;
         }
-        event = static_cast<Event>(data.at(0));
+        this->event = static_cast<Event>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:event.eventType
         if (baseType != FitBaseType::Enum) {
@@ -265,7 +265,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.eventType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        eventType = static_cast<EventType>(data.at(0));
+        this->eventType = static_cast<EventType>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:event.data16
         if (baseType != FitBaseType::Uint16) {
@@ -277,7 +277,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.data16 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        data16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->data16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:event.data
         if (baseType != FitBaseType::Uint32) {
@@ -289,7 +289,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.data size is" << data.size() << "but should be" << 4;
             return false;
         }
-        data = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->data = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:event.eventGroup
         if (baseType != FitBaseType::Uint8) {
@@ -301,7 +301,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.eventGroup size is" << data.size() << "but should be" << 1;
             return false;
         }
-        eventGroup = static_cast<quint8>(data.at(0));
+        this->eventGroup = static_cast<quint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:event.score
         if (baseType != FitBaseType::Uint16) {
@@ -313,7 +313,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.score size is" << data.size() << "but should be" << 2;
             return false;
         }
-        score = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->score = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:event.opponentScore
         if (baseType != FitBaseType::Uint16) {
@@ -325,7 +325,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.opponentScore size is" << data.size() << "but should be" << 2;
             return false;
         }
-        opponentScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->opponentScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 9: // See Profile.xlsx::Messages:event.frontGearNum
         if (baseType != FitBaseType::Uint8z) {
@@ -337,7 +337,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.frontGearNum size is" << data.size() << "but should be" << 1;
             return false;
         }
-        frontGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->frontGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     case 10: // See Profile.xlsx::Messages:event.frontGear
         if (baseType != FitBaseType::Uint8z) {
@@ -349,7 +349,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.frontGear size is" << data.size() << "but should be" << 1;
             return false;
         }
-        frontGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->frontGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     case 11: // See Profile.xlsx::Messages:event.rearGearNum
         if (baseType != FitBaseType::Uint8z) {
@@ -361,7 +361,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.rearGearNum size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rearGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->rearGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     case 12: // See Profile.xlsx::Messages:event.rearGear
         if (baseType != FitBaseType::Uint8z) {
@@ -373,7 +373,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.rearGear size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rearGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->rearGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     case 13: // See Profile.xlsx::Messages:event.deviceIndex
         if (baseType != FitBaseType::Uint8) {
@@ -385,7 +385,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.deviceIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        deviceIndex = static_cast<DeviceIndex>(data.at(0));
+        this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     case 21: // See Profile.xlsx::Messages:event.radarThreatLevelMax
         if (baseType != FitBaseType::Enum) {
@@ -397,7 +397,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.radarThreatLevelMax size is" << data.size() << "but should be" << 1;
             return false;
         }
-        radarThreatLevelMax = static_cast<RadarThreatLevelType>(data.at(0));
+        this->radarThreatLevelMax = static_cast<RadarThreatLevelType>(data.at(0));
         break;
     case 22: // See Profile.xlsx::Messages:event.radarThreatCount
         if (baseType != FitBaseType::Uint8) {
@@ -409,7 +409,7 @@ bool EventMessagePrivate::setField(
             qWarning() << "event.radarThreatCount size is" << data.size() << "but should be" << 1;
             return false;
         }
-        radarThreatCount = static_cast<quint8>(data.at(0));
+        this->radarThreatCount = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown event message field number" << fieldId;

@@ -96,7 +96,7 @@ bool VideoDescriptionMessagePrivate::setField(
             qWarning() << "video_description.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:video_description.messageCount
         if (baseType != FitBaseType::Uint16) {
@@ -108,7 +108,7 @@ bool VideoDescriptionMessagePrivate::setField(
             qWarning() << "video_description.messageCount size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->messageCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:video_description.text
         if (baseType != FitBaseType::String) {
@@ -120,7 +120,7 @@ bool VideoDescriptionMessagePrivate::setField(
             qWarning() << "video_description.text size is" << data.size() << "but should be" << 1;
             return false;
         }
-        text = QString::fromUtf8(data);
+        this->text = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown video_description message field number" << fieldId;

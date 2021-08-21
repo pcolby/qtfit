@@ -239,7 +239,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:workout_step.wktStepName
         if (baseType != FitBaseType::String) {
@@ -251,7 +251,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.wktStepName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        wktStepName = QString::fromUtf8(data);
+        this->wktStepName = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:workout_step.durationType
         if (baseType != FitBaseType::Enum) {
@@ -263,7 +263,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.durationType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        durationType = static_cast<WktStepDuration>(data.at(0));
+        this->durationType = static_cast<WktStepDuration>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:workout_step.durationValue
         if (baseType != FitBaseType::Uint32) {
@@ -275,7 +275,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.durationValue size is" << data.size() << "but should be" << 4;
             return false;
         }
-        durationValue = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->durationValue = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:workout_step.targetType
         if (baseType != FitBaseType::Enum) {
@@ -287,7 +287,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.targetType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        targetType = static_cast<WktStepTarget>(data.at(0));
+        this->targetType = static_cast<WktStepTarget>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:workout_step.targetValue
         if (baseType != FitBaseType::Uint32) {
@@ -299,7 +299,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.targetValue size is" << data.size() << "but should be" << 4;
             return false;
         }
-        targetValue = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->targetValue = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:workout_step.customTargetValueLow
         if (baseType != FitBaseType::Uint32) {
@@ -311,7 +311,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.customTargetValueLow size is" << data.size() << "but should be" << 4;
             return false;
         }
-        customTargetValueLow = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->customTargetValueLow = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:workout_step.customTargetValueHigh
         if (baseType != FitBaseType::Uint32) {
@@ -323,7 +323,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.customTargetValueHigh size is" << data.size() << "but should be" << 4;
             return false;
         }
-        customTargetValueHigh = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->customTargetValueHigh = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:workout_step.intensity
         if (baseType != FitBaseType::Enum) {
@@ -335,7 +335,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.intensity size is" << data.size() << "but should be" << 1;
             return false;
         }
-        intensity = static_cast<Intensity>(data.at(0));
+        this->intensity = static_cast<Intensity>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:workout_step.notes
         if (baseType != FitBaseType::String) {
@@ -347,7 +347,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.notes size is" << data.size() << "but should be" << 1;
             return false;
         }
-        notes = QString::fromUtf8(data);
+        this->notes = QString::fromUtf8(data);
         break;
     case 9: // See Profile.xlsx::Messages:workout_step.equipment
         if (baseType != FitBaseType::Enum) {
@@ -359,7 +359,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.equipment size is" << data.size() << "but should be" << 1;
             return false;
         }
-        equipment = static_cast<WorkoutEquipment>(data.at(0));
+        this->equipment = static_cast<WorkoutEquipment>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:workout_step.exerciseCategory
         if (baseType != FitBaseType::Uint16) {
@@ -371,7 +371,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.exerciseCategory size is" << data.size() << "but should be" << 2;
             return false;
         }
-        exerciseCategory = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<ExerciseCategory>(data) : qFromLittleEndian<ExerciseCategory>(data));
+        this->exerciseCategory = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<ExerciseCategory>(data) : qFromLittleEndian<ExerciseCategory>(data));
         break;
     case 11: // See Profile.xlsx::Messages:workout_step.exerciseName
         if (baseType != FitBaseType::Uint16) {
@@ -383,7 +383,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.exerciseName size is" << data.size() << "but should be" << 2;
             return false;
         }
-        exerciseName = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->exerciseName = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 12: // See Profile.xlsx::Messages:workout_step.exerciseWeight
         if (baseType != FitBaseType::Uint16) {
@@ -395,7 +395,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.exerciseWeight size is" << data.size() << "but should be" << 2;
             return false;
         }
-        exerciseWeight = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->exerciseWeight = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 13: // See Profile.xlsx::Messages:workout_step.weightDisplayUnit
         if (baseType != FitBaseType::Uint16) {
@@ -407,7 +407,7 @@ bool WorkoutStepMessagePrivate::setField(
             qWarning() << "workout_step.weightDisplayUnit size is" << data.size() << "but should be" << 2;
             return false;
         }
-        weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        this->weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
         break;
     default:
         qWarning() << "unknown workout_step message field number" << fieldId;

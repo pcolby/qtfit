@@ -85,7 +85,7 @@ bool OhrSettingsMessagePrivate::setField(
             qWarning() << "ohr_settings.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:ohr_settings.enabled
         if (baseType != FitBaseType::Enum) {
@@ -97,7 +97,7 @@ bool OhrSettingsMessagePrivate::setField(
             qWarning() << "ohr_settings.enabled size is" << data.size() << "but should be" << 1;
             return false;
         }
-        enabled = static_cast<Switch>(data.at(0));
+        this->enabled = static_cast<Switch>(data.at(0));
         break;
     default:
         qWarning() << "unknown ohr_settings message field number" << fieldId;

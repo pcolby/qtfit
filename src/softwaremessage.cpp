@@ -96,7 +96,7 @@ bool SoftwareMessagePrivate::setField(
             qWarning() << "software.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 3: // See Profile.xlsx::Messages:software.version
         if (baseType != FitBaseType::Uint16) {
@@ -108,7 +108,7 @@ bool SoftwareMessagePrivate::setField(
             qWarning() << "software.version size is" << data.size() << "but should be" << 2;
             return false;
         }
-        version = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->version = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:software.partNumber
         if (baseType != FitBaseType::String) {
@@ -120,7 +120,7 @@ bool SoftwareMessagePrivate::setField(
             qWarning() << "software.partNumber size is" << data.size() << "but should be" << 1;
             return false;
         }
-        partNumber = QString::fromUtf8(data);
+        this->partNumber = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown software message field number" << fieldId;

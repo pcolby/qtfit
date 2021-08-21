@@ -205,7 +205,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:aviation_attitude.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -217,7 +217,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:aviation_attitude.systemTime
         if (baseType != FitBaseType::Uint32) {
@@ -229,7 +229,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.systemTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        systemTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->systemTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:aviation_attitude.pitch
         if (baseType != FitBaseType::Sint16) {
@@ -241,7 +241,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.pitch size is" << data.size() << "but should be" << 2;
             return false;
         }
-        pitch = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->pitch = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:aviation_attitude.roll
         if (baseType != FitBaseType::Sint16) {
@@ -253,7 +253,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.roll size is" << data.size() << "but should be" << 2;
             return false;
         }
-        roll = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->roll = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:aviation_attitude.accelLateral
         if (baseType != FitBaseType::Sint16) {
@@ -265,7 +265,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.accelLateral size is" << data.size() << "but should be" << 2;
             return false;
         }
-        accelLateral = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->accelLateral = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:aviation_attitude.accelNormal
         if (baseType != FitBaseType::Sint16) {
@@ -277,7 +277,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.accelNormal size is" << data.size() << "but should be" << 2;
             return false;
         }
-        accelNormal = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->accelNormal = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:aviation_attitude.turnRate
         if (baseType != FitBaseType::Sint16) {
@@ -289,7 +289,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.turnRate size is" << data.size() << "but should be" << 2;
             return false;
         }
-        turnRate = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->turnRate = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:aviation_attitude.stage
         if (baseType != FitBaseType::Enum) {
@@ -301,7 +301,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.stage size is" << data.size() << "but should be" << 1;
             return false;
         }
-        stage = static_cast<AttitudeStage>(data.at(0));
+        this->stage = static_cast<AttitudeStage>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:aviation_attitude.attitudeStageComplete
         if (baseType != FitBaseType::Uint8) {
@@ -313,7 +313,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.attitudeStageComplete size is" << data.size() << "but should be" << 1;
             return false;
         }
-        attitudeStageComplete = static_cast<quint8>(data.at(0));
+        this->attitudeStageComplete = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:aviation_attitude.track
         if (baseType != FitBaseType::Uint16) {
@@ -325,7 +325,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.track size is" << data.size() << "but should be" << 2;
             return false;
         }
-        track = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->track = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:aviation_attitude.validity
         if (baseType != FitBaseType::Uint16) {
@@ -337,7 +337,7 @@ bool AviationAttitudeMessagePrivate::setField(
             qWarning() << "aviation_attitude.validity size is" << data.size() << "but should be" << 2;
             return false;
         }
-        validity = static_cast<AttitudeValidity>(bigEndian ? qFromBigEndian<AttitudeValidity>(data) : qFromLittleEndian<AttitudeValidity>(data));
+        this->validity = static_cast<AttitudeValidity>(bigEndian ? qFromBigEndian<AttitudeValidity>(data) : qFromLittleEndian<AttitudeValidity>(data));
         break;
     default:
         qWarning() << "unknown aviation_attitude message field number" << fieldId;

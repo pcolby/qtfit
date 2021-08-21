@@ -169,7 +169,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:gyroscope_data.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -181,7 +181,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:gyroscope_data.sampleTimeOffset
         if (baseType != FitBaseType::Uint16) {
@@ -193,7 +193,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.sampleTimeOffset size is" << data.size() << "but should be" << 2;
             return false;
         }
-        sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:gyroscope_data.gyroX
         if (baseType != FitBaseType::Uint16) {
@@ -205,7 +205,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.gyroX size is" << data.size() << "but should be" << 2;
             return false;
         }
-        gyroX = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->gyroX = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:gyroscope_data.gyroY
         if (baseType != FitBaseType::Uint16) {
@@ -217,7 +217,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.gyroY size is" << data.size() << "but should be" << 2;
             return false;
         }
-        gyroY = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->gyroY = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:gyroscope_data.gyroZ
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.gyroZ size is" << data.size() << "but should be" << 2;
             return false;
         }
-        gyroZ = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->gyroZ = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroX
         if (baseType != FitBaseType::Float32) {
@@ -241,7 +241,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.calibratedGyroX size is" << data.size() << "but should be" << 4;
             return false;
         }
-        calibratedGyroX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->calibratedGyroX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 6: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroY
         if (baseType != FitBaseType::Float32) {
@@ -253,7 +253,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.calibratedGyroY size is" << data.size() << "but should be" << 4;
             return false;
         }
-        calibratedGyroY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->calibratedGyroY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 7: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroZ
         if (baseType != FitBaseType::Float32) {
@@ -265,7 +265,7 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.calibratedGyroZ size is" << data.size() << "but should be" << 4;
             return false;
         }
-        calibratedGyroZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->calibratedGyroZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     default:
         qWarning() << "unknown gyroscope_data message field number" << fieldId;

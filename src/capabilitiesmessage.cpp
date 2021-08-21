@@ -109,7 +109,7 @@ bool CapabilitiesMessagePrivate::setField(
             qWarning() << "capabilities.languages size is" << data.size() << "but should be" << 1;
             return false;
         }
-        languages = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->languages = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     case 1: // See Profile.xlsx::Messages:capabilities.sports
         if (baseType != FitBaseType::Uint8z) {
@@ -121,7 +121,7 @@ bool CapabilitiesMessagePrivate::setField(
             qWarning() << "capabilities.sports size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sports = static_cast<SportBits0>(bigEndian ? qFromBigEndian<SportBits0>(data) : qFromLittleEndian<SportBits0>(data));
+        this->sports = static_cast<SportBits0>(bigEndian ? qFromBigEndian<SportBits0>(data) : qFromLittleEndian<SportBits0>(data));
         break;
     case 21: // See Profile.xlsx::Messages:capabilities.workoutsSupported
         if (baseType != FitBaseType::Uint32z) {
@@ -133,7 +133,7 @@ bool CapabilitiesMessagePrivate::setField(
             qWarning() << "capabilities.workoutsSupported size is" << data.size() << "but should be" << 4;
             return false;
         }
-        workoutsSupported = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<WorkoutCapabilities>(data) : qFromLittleEndian<WorkoutCapabilities>(data));
+        this->workoutsSupported = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<WorkoutCapabilities>(data) : qFromLittleEndian<WorkoutCapabilities>(data));
         break;
     case 23: // See Profile.xlsx::Messages:capabilities.connectivitySupported
         if (baseType != FitBaseType::Uint32z) {
@@ -145,7 +145,7 @@ bool CapabilitiesMessagePrivate::setField(
             qWarning() << "capabilities.connectivitySupported size is" << data.size() << "but should be" << 4;
             return false;
         }
-        connectivitySupported = static_cast<ConnectivityCapabilities>(bigEndian ? qFromBigEndian<ConnectivityCapabilities>(data) : qFromLittleEndian<ConnectivityCapabilities>(data));
+        this->connectivitySupported = static_cast<ConnectivityCapabilities>(bigEndian ? qFromBigEndian<ConnectivityCapabilities>(data) : qFromLittleEndian<ConnectivityCapabilities>(data));
         break;
     default:
         qWarning() << "unknown capabilities message field number" << fieldId;

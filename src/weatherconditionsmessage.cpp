@@ -252,7 +252,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:weather_conditions.weatherReport
         if (baseType != FitBaseType::Enum) {
@@ -264,7 +264,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.weatherReport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        weatherReport = static_cast<WeatherReport>(data.at(0));
+        this->weatherReport = static_cast<WeatherReport>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:weather_conditions.temperature
         if (baseType != FitBaseType::Sint8) {
@@ -276,7 +276,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.temperature size is" << data.size() << "but should be" << 1;
             return false;
         }
-        temperature = static_cast<qint8>(data.at(0));
+        this->temperature = static_cast<qint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:weather_conditions.condition
         if (baseType != FitBaseType::Enum) {
@@ -288,7 +288,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.condition size is" << data.size() << "but should be" << 1;
             return false;
         }
-        condition = static_cast<WeatherStatus>(data.at(0));
+        this->condition = static_cast<WeatherStatus>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:weather_conditions.windDirection
         if (baseType != FitBaseType::Uint16) {
@@ -300,7 +300,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.windDirection size is" << data.size() << "but should be" << 2;
             return false;
         }
-        windDirection = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->windDirection = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:weather_conditions.windSpeed
         if (baseType != FitBaseType::Uint16) {
@@ -312,7 +312,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.windSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        windSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->windSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:weather_conditions.precipitationProbability
         if (baseType != FitBaseType::Uint8) {
@@ -324,7 +324,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.precipitationProbability size is" << data.size() << "but should be" << 1;
             return false;
         }
-        precipitationProbability = static_cast<quint8>(data.at(0));
+        this->precipitationProbability = static_cast<quint8>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:weather_conditions.temperatureFeelsLike
         if (baseType != FitBaseType::Sint8) {
@@ -336,7 +336,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.temperatureFeelsLike size is" << data.size() << "but should be" << 1;
             return false;
         }
-        temperatureFeelsLike = static_cast<qint8>(data.at(0));
+        this->temperatureFeelsLike = static_cast<qint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:weather_conditions.relativeHumidity
         if (baseType != FitBaseType::Uint8) {
@@ -348,7 +348,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.relativeHumidity size is" << data.size() << "but should be" << 1;
             return false;
         }
-        relativeHumidity = static_cast<quint8>(data.at(0));
+        this->relativeHumidity = static_cast<quint8>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:weather_conditions.location
         if (baseType != FitBaseType::String) {
@@ -360,7 +360,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.location size is" << data.size() << "but should be" << 1;
             return false;
         }
-        location = QString::fromUtf8(data);
+        this->location = QString::fromUtf8(data);
         break;
     case 9: // See Profile.xlsx::Messages:weather_conditions.observedAtTime
         if (baseType != FitBaseType::Uint32) {
@@ -372,7 +372,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.observedAtTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        observedAtTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->observedAtTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 10: // See Profile.xlsx::Messages:weather_conditions.observedLocationLat
         if (baseType != FitBaseType::Sint32) {
@@ -384,7 +384,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.observedLocationLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        observedLocationLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->observedLocationLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 11: // See Profile.xlsx::Messages:weather_conditions.observedLocationLong
         if (baseType != FitBaseType::Sint32) {
@@ -396,7 +396,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.observedLocationLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        observedLocationLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->observedLocationLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 12: // See Profile.xlsx::Messages:weather_conditions.dayOfWeek
         if (baseType != FitBaseType::Enum) {
@@ -408,7 +408,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.dayOfWeek size is" << data.size() << "but should be" << 1;
             return false;
         }
-        dayOfWeek = static_cast<DayOfWeek>(data.at(0));
+        this->dayOfWeek = static_cast<DayOfWeek>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:weather_conditions.highTemperature
         if (baseType != FitBaseType::Sint8) {
@@ -420,7 +420,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.highTemperature size is" << data.size() << "but should be" << 1;
             return false;
         }
-        highTemperature = static_cast<qint8>(data.at(0));
+        this->highTemperature = static_cast<qint8>(data.at(0));
         break;
     case 14: // See Profile.xlsx::Messages:weather_conditions.lowTemperature
         if (baseType != FitBaseType::Sint8) {
@@ -432,7 +432,7 @@ bool WeatherConditionsMessagePrivate::setField(
             qWarning() << "weather_conditions.lowTemperature size is" << data.size() << "but should be" << 1;
             return false;
         }
-        lowTemperature = static_cast<qint8>(data.at(0));
+        this->lowTemperature = static_cast<qint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown weather_conditions message field number" << fieldId;

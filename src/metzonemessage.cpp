@@ -109,7 +109,7 @@ bool MetZoneMessagePrivate::setField(
             qWarning() << "met_zone.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 1: // See Profile.xlsx::Messages:met_zone.highBpm
         if (baseType != FitBaseType::Uint8) {
@@ -121,7 +121,7 @@ bool MetZoneMessagePrivate::setField(
             qWarning() << "met_zone.highBpm size is" << data.size() << "but should be" << 1;
             return false;
         }
-        highBpm = static_cast<quint8>(data.at(0));
+        this->highBpm = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:met_zone.calories
         if (baseType != FitBaseType::Uint16) {
@@ -133,7 +133,7 @@ bool MetZoneMessagePrivate::setField(
             qWarning() << "met_zone.calories size is" << data.size() << "but should be" << 2;
             return false;
         }
-        calories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->calories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:met_zone.fatCalories
         if (baseType != FitBaseType::Uint8) {
@@ -145,7 +145,7 @@ bool MetZoneMessagePrivate::setField(
             qWarning() << "met_zone.fatCalories size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fatCalories = static_cast<quint8>(data.at(0));
+        this->fatCalories = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown met_zone message field number" << fieldId;

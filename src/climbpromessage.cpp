@@ -145,7 +145,7 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:climb_pro.positionLat
         if (baseType != FitBaseType::Sint32) {
@@ -157,7 +157,7 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.positionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 1: // See Profile.xlsx::Messages:climb_pro.positionLong
         if (baseType != FitBaseType::Sint32) {
@@ -169,7 +169,7 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.positionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:climb_pro.climbProEvent
         if (baseType != FitBaseType::Enum) {
@@ -181,7 +181,7 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.climbProEvent size is" << data.size() << "but should be" << 1;
             return false;
         }
-        climbProEvent = static_cast<ClimbProEvent>(data.at(0));
+        this->climbProEvent = static_cast<ClimbProEvent>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:climb_pro.climbNumber
         if (baseType != FitBaseType::Uint16) {
@@ -193,7 +193,7 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.climbNumber size is" << data.size() << "but should be" << 2;
             return false;
         }
-        climbNumber = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->climbNumber = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:climb_pro.climbCategory
         if (baseType != FitBaseType::Uint8) {
@@ -205,7 +205,7 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.climbCategory size is" << data.size() << "but should be" << 1;
             return false;
         }
-        climbCategory = static_cast<quint8>(data.at(0));
+        this->climbCategory = static_cast<quint8>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:climb_pro.currentDist
         if (baseType != FitBaseType::Float32) {
@@ -217,7 +217,7 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.currentDist size is" << data.size() << "but should be" << 4;
             return false;
         }
-        currentDist = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->currentDist = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     default:
         qWarning() << "unknown climb_pro message field number" << fieldId;

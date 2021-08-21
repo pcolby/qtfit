@@ -121,7 +121,7 @@ bool ZonesTargetMessagePrivate::setField(
             qWarning() << "zones_target.maxHeartRate size is" << data.size() << "but should be" << 1;
             return false;
         }
-        maxHeartRate = static_cast<quint8>(data.at(0));
+        this->maxHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:zones_target.thresholdHeartRate
         if (baseType != FitBaseType::Uint8) {
@@ -133,7 +133,7 @@ bool ZonesTargetMessagePrivate::setField(
             qWarning() << "zones_target.thresholdHeartRate size is" << data.size() << "but should be" << 1;
             return false;
         }
-        thresholdHeartRate = static_cast<quint8>(data.at(0));
+        this->thresholdHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:zones_target.functionalThresholdPower
         if (baseType != FitBaseType::Uint16) {
@@ -145,7 +145,7 @@ bool ZonesTargetMessagePrivate::setField(
             qWarning() << "zones_target.functionalThresholdPower size is" << data.size() << "but should be" << 2;
             return false;
         }
-        functionalThresholdPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->functionalThresholdPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:zones_target.hrCalcType
         if (baseType != FitBaseType::Enum) {
@@ -157,7 +157,7 @@ bool ZonesTargetMessagePrivate::setField(
             qWarning() << "zones_target.hrCalcType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        hrCalcType = static_cast<HrZoneCalc>(data.at(0));
+        this->hrCalcType = static_cast<HrZoneCalc>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:zones_target.pwrCalcType
         if (baseType != FitBaseType::Enum) {
@@ -169,7 +169,7 @@ bool ZonesTargetMessagePrivate::setField(
             qWarning() << "zones_target.pwrCalcType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        pwrCalcType = static_cast<PwrZoneCalc>(data.at(0));
+        this->pwrCalcType = static_cast<PwrZoneCalc>(data.at(0));
         break;
     default:
         qWarning() << "unknown zones_target message field number" << fieldId;

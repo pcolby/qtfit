@@ -193,7 +193,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.screenIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        screenIndex = static_cast<quint8>(data.at(0));
+        this->screenIndex = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:exd_data_concept_configuration.conceptField
         if (baseType != FitBaseType::Byte) {
@@ -205,7 +205,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.conceptField size is" << data.size() << "but should be" << 1;
             return false;
         }
-        conceptField = static_cast<quint8>(data.at(0));
+        this->conceptField = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:exd_data_concept_configuration.fieldId
         if (baseType != FitBaseType::Uint8) {
@@ -217,7 +217,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.fieldId size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fieldId = static_cast<quint8>(data.at(0));
+        this->fieldId = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:exd_data_concept_configuration.conceptIndex
         if (baseType != FitBaseType::Uint8) {
@@ -229,7 +229,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.conceptIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        conceptIndex = static_cast<quint8>(data.at(0));
+        this->conceptIndex = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:exd_data_concept_configuration.dataPage
         if (baseType != FitBaseType::Uint8) {
@@ -241,7 +241,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.dataPage size is" << data.size() << "but should be" << 1;
             return false;
         }
-        dataPage = static_cast<quint8>(data.at(0));
+        this->dataPage = static_cast<quint8>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:exd_data_concept_configuration.conceptKey
         if (baseType != FitBaseType::Uint8) {
@@ -253,7 +253,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.conceptKey size is" << data.size() << "but should be" << 1;
             return false;
         }
-        conceptKey = static_cast<quint8>(data.at(0));
+        this->conceptKey = static_cast<quint8>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:exd_data_concept_configuration.scaling
         if (baseType != FitBaseType::Uint8) {
@@ -265,7 +265,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.scaling size is" << data.size() << "but should be" << 1;
             return false;
         }
-        scaling = static_cast<quint8>(data.at(0));
+        this->scaling = static_cast<quint8>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:exd_data_concept_configuration.dataUnits
         if (baseType != FitBaseType::Enum) {
@@ -277,7 +277,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.dataUnits size is" << data.size() << "but should be" << 1;
             return false;
         }
-        dataUnits = static_cast<ExdDataUnits>(data.at(0));
+        this->dataUnits = static_cast<ExdDataUnits>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:exd_data_concept_configuration.qualifier
         if (baseType != FitBaseType::Enum) {
@@ -289,7 +289,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.qualifier size is" << data.size() << "but should be" << 1;
             return false;
         }
-        qualifier = static_cast<ExdQualifiers>(data.at(0));
+        this->qualifier = static_cast<ExdQualifiers>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:exd_data_concept_configuration.descriptor
         if (baseType != FitBaseType::Enum) {
@@ -301,7 +301,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.descriptor size is" << data.size() << "but should be" << 1;
             return false;
         }
-        descriptor = static_cast<ExdDescriptors>(data.at(0));
+        this->descriptor = static_cast<ExdDescriptors>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:exd_data_concept_configuration.isSigned
         if (baseType != FitBaseType::Bool) {
@@ -313,7 +313,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_concept_configuration.isSigned size is" << data.size() << "but should be" << 0;
             return false;
         }
-        isSigned = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->isSigned = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
         break;
     default:
         qWarning() << "unknown exd_data_concept_configuration message field number" << fieldId;

@@ -73,7 +73,7 @@ bool HrvMessagePrivate::setField(
             qWarning() << "hrv.time size is" << data.size() << "but should be" << 2;
             return false;
         }
-        time = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->time = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown hrv message field number" << fieldId;

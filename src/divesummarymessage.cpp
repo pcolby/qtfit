@@ -217,7 +217,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:dive_summary.referenceMesg
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.referenceMesg size is" << data.size() << "but should be" << 2;
             return false;
         }
-        referenceMesg = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
+        this->referenceMesg = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
         break;
     case 1: // See Profile.xlsx::Messages:dive_summary.referenceIndex
         if (baseType != FitBaseType::Uint16) {
@@ -241,7 +241,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.referenceIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        referenceIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->referenceIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 2: // See Profile.xlsx::Messages:dive_summary.avgDepth
         if (baseType != FitBaseType::Uint32) {
@@ -253,7 +253,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.avgDepth size is" << data.size() << "but should be" << 4;
             return false;
         }
-        avgDepth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->avgDepth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:dive_summary.maxDepth
         if (baseType != FitBaseType::Uint32) {
@@ -265,7 +265,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.maxDepth size is" << data.size() << "but should be" << 4;
             return false;
         }
-        maxDepth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->maxDepth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:dive_summary.surfaceInterval
         if (baseType != FitBaseType::Uint32) {
@@ -277,7 +277,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.surfaceInterval size is" << data.size() << "but should be" << 4;
             return false;
         }
-        surfaceInterval = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->surfaceInterval = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:dive_summary.startCns
         if (baseType != FitBaseType::Uint8) {
@@ -289,7 +289,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.startCns size is" << data.size() << "but should be" << 1;
             return false;
         }
-        startCns = static_cast<quint8>(data.at(0));
+        this->startCns = static_cast<quint8>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:dive_summary.endCns
         if (baseType != FitBaseType::Uint8) {
@@ -301,7 +301,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.endCns size is" << data.size() << "but should be" << 1;
             return false;
         }
-        endCns = static_cast<quint8>(data.at(0));
+        this->endCns = static_cast<quint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:dive_summary.startN2
         if (baseType != FitBaseType::Uint16) {
@@ -313,7 +313,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.startN2 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        startN2 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->startN2 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:dive_summary.endN2
         if (baseType != FitBaseType::Uint16) {
@@ -325,7 +325,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.endN2 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        endN2 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->endN2 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 9: // See Profile.xlsx::Messages:dive_summary.o2Toxicity
         if (baseType != FitBaseType::Uint16) {
@@ -337,7 +337,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.o2Toxicity size is" << data.size() << "but should be" << 2;
             return false;
         }
-        o2Toxicity = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->o2Toxicity = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:dive_summary.diveNumber
         if (baseType != FitBaseType::Uint32) {
@@ -349,7 +349,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.diveNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        diveNumber = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->diveNumber = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 11: // See Profile.xlsx::Messages:dive_summary.bottomTime
         if (baseType != FitBaseType::Uint32) {
@@ -361,7 +361,7 @@ bool DiveSummaryMessagePrivate::setField(
             qWarning() << "dive_summary.bottomTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        bottomTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->bottomTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown dive_summary message field number" << fieldId;

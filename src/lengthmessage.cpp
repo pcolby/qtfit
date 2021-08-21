@@ -277,7 +277,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 253: // See Profile.xlsx::Messages:length.timestamp
         if (baseType != FitBaseType::Uint32) {
@@ -289,7 +289,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:length.event
         if (baseType != FitBaseType::Enum) {
@@ -301,7 +301,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.event size is" << data.size() << "but should be" << 1;
             return false;
         }
-        event = static_cast<Event>(data.at(0));
+        this->event = static_cast<Event>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:length.eventType
         if (baseType != FitBaseType::Enum) {
@@ -313,7 +313,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.eventType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        eventType = static_cast<EventType>(data.at(0));
+        this->eventType = static_cast<EventType>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:length.startTime
         if (baseType != FitBaseType::Uint32) {
@@ -325,7 +325,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.startTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 3: // See Profile.xlsx::Messages:length.totalElapsedTime
         if (baseType != FitBaseType::Uint32) {
@@ -337,7 +337,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.totalElapsedTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        totalElapsedTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->totalElapsedTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:length.totalTimerTime
         if (baseType != FitBaseType::Uint32) {
@@ -349,7 +349,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.totalTimerTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        totalTimerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->totalTimerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:length.totalStrokes
         if (baseType != FitBaseType::Uint16) {
@@ -361,7 +361,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.totalStrokes size is" << data.size() << "but should be" << 2;
             return false;
         }
-        totalStrokes = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->totalStrokes = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:length.avgSpeed
         if (baseType != FitBaseType::Uint16) {
@@ -373,7 +373,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.avgSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        avgSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->avgSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:length.swimStroke
         if (baseType != FitBaseType::Enum) {
@@ -385,7 +385,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.swimStroke size is" << data.size() << "but should be" << 1;
             return false;
         }
-        swimStroke = static_cast<SwimStroke>(data.at(0));
+        this->swimStroke = static_cast<SwimStroke>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:length.avgSwimmingCadence
         if (baseType != FitBaseType::Uint8) {
@@ -397,7 +397,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.avgSwimmingCadence size is" << data.size() << "but should be" << 1;
             return false;
         }
-        avgSwimmingCadence = static_cast<quint8>(data.at(0));
+        this->avgSwimmingCadence = static_cast<quint8>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:length.eventGroup
         if (baseType != FitBaseType::Uint8) {
@@ -409,7 +409,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.eventGroup size is" << data.size() << "but should be" << 1;
             return false;
         }
-        eventGroup = static_cast<quint8>(data.at(0));
+        this->eventGroup = static_cast<quint8>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:length.totalCalories
         if (baseType != FitBaseType::Uint16) {
@@ -421,7 +421,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.totalCalories size is" << data.size() << "but should be" << 2;
             return false;
         }
-        totalCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->totalCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 12: // See Profile.xlsx::Messages:length.lengthType
         if (baseType != FitBaseType::Enum) {
@@ -433,7 +433,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.lengthType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        lengthType = static_cast<LengthType>(data.at(0));
+        this->lengthType = static_cast<LengthType>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:length.playerScore
         if (baseType != FitBaseType::Uint16) {
@@ -445,7 +445,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.playerScore size is" << data.size() << "but should be" << 2;
             return false;
         }
-        playerScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->playerScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 19: // See Profile.xlsx::Messages:length.opponentScore
         if (baseType != FitBaseType::Uint16) {
@@ -457,7 +457,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.opponentScore size is" << data.size() << "but should be" << 2;
             return false;
         }
-        opponentScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->opponentScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 20: // See Profile.xlsx::Messages:length.strokeCount
         if (baseType != FitBaseType::Uint16) {
@@ -469,7 +469,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.strokeCount size is" << data.size() << "but should be" << 2;
             return false;
         }
-        strokeCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->strokeCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 21: // See Profile.xlsx::Messages:length.zoneCount
         if (baseType != FitBaseType::Uint16) {
@@ -481,7 +481,7 @@ bool LengthMessagePrivate::setField(
             qWarning() << "length.zoneCount size is" << data.size() << "but should be" << 2;
             return false;
         }
-        zoneCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->zoneCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown length message field number" << fieldId;

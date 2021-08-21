@@ -205,7 +205,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:accelerometer_data.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -217,7 +217,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:accelerometer_data.sampleTimeOffset
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.sampleTimeOffset size is" << data.size() << "but should be" << 2;
             return false;
         }
-        sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:accelerometer_data.accelX
         if (baseType != FitBaseType::Uint16) {
@@ -241,7 +241,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.accelX size is" << data.size() << "but should be" << 2;
             return false;
         }
-        accelX = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->accelX = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:accelerometer_data.accelY
         if (baseType != FitBaseType::Uint16) {
@@ -253,7 +253,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.accelY size is" << data.size() << "but should be" << 2;
             return false;
         }
-        accelY = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->accelY = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:accelerometer_data.accelZ
         if (baseType != FitBaseType::Uint16) {
@@ -265,7 +265,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.accelZ size is" << data.size() << "but should be" << 2;
             return false;
         }
-        accelZ = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->accelZ = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:accelerometer_data.calibratedAccelX
         if (baseType != FitBaseType::Float32) {
@@ -277,7 +277,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.calibratedAccelX size is" << data.size() << "but should be" << 4;
             return false;
         }
-        calibratedAccelX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->calibratedAccelX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 6: // See Profile.xlsx::Messages:accelerometer_data.calibratedAccelY
         if (baseType != FitBaseType::Float32) {
@@ -289,7 +289,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.calibratedAccelY size is" << data.size() << "but should be" << 4;
             return false;
         }
-        calibratedAccelY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->calibratedAccelY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 7: // See Profile.xlsx::Messages:accelerometer_data.calibratedAccelZ
         if (baseType != FitBaseType::Float32) {
@@ -301,7 +301,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.calibratedAccelZ size is" << data.size() << "but should be" << 4;
             return false;
         }
-        calibratedAccelZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->calibratedAccelZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 8: // See Profile.xlsx::Messages:accelerometer_data.compressedCalibratedAccelX
         if (baseType != FitBaseType::Sint16) {
@@ -313,7 +313,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.compressedCalibratedAccelX size is" << data.size() << "but should be" << 2;
             return false;
         }
-        compressedCalibratedAccelX = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->compressedCalibratedAccelX = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 9: // See Profile.xlsx::Messages:accelerometer_data.compressedCalibratedAccelY
         if (baseType != FitBaseType::Sint16) {
@@ -325,7 +325,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.compressedCalibratedAccelY size is" << data.size() << "but should be" << 2;
             return false;
         }
-        compressedCalibratedAccelY = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->compressedCalibratedAccelY = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:accelerometer_data.compressedCalibratedAccelZ
         if (baseType != FitBaseType::Sint16) {
@@ -337,7 +337,7 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.compressedCalibratedAccelZ size is" << data.size() << "but should be" << 2;
             return false;
         }
-        compressedCalibratedAccelZ = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->compressedCalibratedAccelZ = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     default:
         qWarning() << "unknown accelerometer_data message field number" << fieldId;

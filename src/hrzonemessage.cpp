@@ -96,7 +96,7 @@ bool HrZoneMessagePrivate::setField(
             qWarning() << "hr_zone.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 1: // See Profile.xlsx::Messages:hr_zone.highBpm
         if (baseType != FitBaseType::Uint8) {
@@ -108,7 +108,7 @@ bool HrZoneMessagePrivate::setField(
             qWarning() << "hr_zone.highBpm size is" << data.size() << "but should be" << 1;
             return false;
         }
-        highBpm = static_cast<quint8>(data.at(0));
+        this->highBpm = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:hr_zone.name
         if (baseType != FitBaseType::String) {
@@ -120,7 +120,7 @@ bool HrZoneMessagePrivate::setField(
             qWarning() << "hr_zone.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = QString::fromUtf8(data);
+        this->name = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown hr_zone message field number" << fieldId;

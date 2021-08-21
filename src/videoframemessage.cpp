@@ -97,7 +97,7 @@ bool VideoFrameMessagePrivate::setField(
             qWarning() << "video_frame.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:video_frame.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -109,7 +109,7 @@ bool VideoFrameMessagePrivate::setField(
             qWarning() << "video_frame.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:video_frame.frameNumber
         if (baseType != FitBaseType::Uint32) {
@@ -121,7 +121,7 @@ bool VideoFrameMessagePrivate::setField(
             qWarning() << "video_frame.frameNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        frameNumber = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->frameNumber = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown video_frame message field number" << fieldId;

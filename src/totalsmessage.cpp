@@ -181,7 +181,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 253: // See Profile.xlsx::Messages:totals.timestamp
         if (baseType != FitBaseType::Uint32) {
@@ -193,7 +193,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:totals.timerTime
         if (baseType != FitBaseType::Uint32) {
@@ -205,7 +205,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.timerTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->timerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 1: // See Profile.xlsx::Messages:totals.distance
         if (baseType != FitBaseType::Uint32) {
@@ -217,7 +217,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.distance size is" << data.size() << "but should be" << 4;
             return false;
         }
-        distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:totals.calories
         if (baseType != FitBaseType::Uint32) {
@@ -229,7 +229,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.calories size is" << data.size() << "but should be" << 4;
             return false;
         }
-        calories = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->calories = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:totals.sport
         if (baseType != FitBaseType::Enum) {
@@ -241,7 +241,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.sport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sport = static_cast<Sport>(data.at(0));
+        this->sport = static_cast<Sport>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:totals.elapsedTime
         if (baseType != FitBaseType::Uint32) {
@@ -253,7 +253,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.elapsedTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        elapsedTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->elapsedTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:totals.sessions
         if (baseType != FitBaseType::Uint16) {
@@ -265,7 +265,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.sessions size is" << data.size() << "but should be" << 2;
             return false;
         }
-        sessions = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->sessions = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:totals.activeTime
         if (baseType != FitBaseType::Uint32) {
@@ -277,7 +277,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.activeTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        activeTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->activeTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 9: // See Profile.xlsx::Messages:totals.sportIndex
         if (baseType != FitBaseType::Uint8) {
@@ -289,7 +289,7 @@ bool TotalsMessagePrivate::setField(
             qWarning() << "totals.sportIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sportIndex = static_cast<quint8>(data.at(0));
+        this->sportIndex = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown totals message field number" << fieldId;

@@ -61,11 +61,11 @@ bool {{ClassName}}Private::setField(
             return false;
         }
 {% if field.endianAbility %}
-        {{field.name}} = static_cast<{{field.cppType}}>(bigEndian ? qFromBigEndian<{{field.cppType}}>(data) : qFromLittleEndian<{{field.cppType}}>(data));
+        this->{{field.name}} = static_cast<{{field.cppType}}>(bigEndian ? qFromBigEndian<{{field.cppType}}>(data) : qFromLittleEndian<{{field.cppType}}>(data));
 {% elif field.baseType == "string" %}
-        {{field.name}} = QString::fromUtf8(data);
+        this->{{field.name}} = QString::fromUtf8(data);
 {% else %}
-        {{field.name}} = static_cast<{{field.cppType}}>(data.at(0));
+        this->{{field.name}} = static_cast<{{field.cppType}}>(data.at(0));
 {% endif %}
         break;
 {% endfor %}

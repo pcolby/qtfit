@@ -109,7 +109,7 @@ bool DiveGasMessagePrivate::setField(
             qWarning() << "dive_gas.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:dive_gas.heliumContent
         if (baseType != FitBaseType::Uint8) {
@@ -121,7 +121,7 @@ bool DiveGasMessagePrivate::setField(
             qWarning() << "dive_gas.heliumContent size is" << data.size() << "but should be" << 1;
             return false;
         }
-        heliumContent = static_cast<quint8>(data.at(0));
+        this->heliumContent = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:dive_gas.oxygenContent
         if (baseType != FitBaseType::Uint8) {
@@ -133,7 +133,7 @@ bool DiveGasMessagePrivate::setField(
             qWarning() << "dive_gas.oxygenContent size is" << data.size() << "but should be" << 1;
             return false;
         }
-        oxygenContent = static_cast<quint8>(data.at(0));
+        this->oxygenContent = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:dive_gas.status
         if (baseType != FitBaseType::Enum) {
@@ -145,7 +145,7 @@ bool DiveGasMessagePrivate::setField(
             qWarning() << "dive_gas.status size is" << data.size() << "but should be" << 1;
             return false;
         }
-        status = static_cast<DiveGasStatus>(data.at(0));
+        this->status = static_cast<DiveGasStatus>(data.at(0));
         break;
     default:
         qWarning() << "unknown dive_gas message field number" << fieldId;

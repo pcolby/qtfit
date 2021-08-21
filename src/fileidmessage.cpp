@@ -144,7 +144,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.type size is" << data.size() << "but should be" << 1;
             return false;
         }
-        type = static_cast<File>(data.at(0));
+        this->type = static_cast<File>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:file_id.manufacturer
         if (baseType != FitBaseType::Uint16) {
@@ -156,7 +156,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
         break;
     case 2: // See Profile.xlsx::Messages:file_id.product
         if (baseType != FitBaseType::Uint16) {
@@ -168,7 +168,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.product size is" << data.size() << "but should be" << 2;
             return false;
         }
-        product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:file_id.serialNumber
         if (baseType != FitBaseType::Uint32z) {
@@ -180,7 +180,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.serialNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
+        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
         break;
     case 4: // See Profile.xlsx::Messages:file_id.timeCreated
         if (baseType != FitBaseType::Uint32) {
@@ -192,7 +192,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.timeCreated size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 5: // See Profile.xlsx::Messages:file_id.number
         if (baseType != FitBaseType::Uint16) {
@@ -204,7 +204,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.number size is" << data.size() << "but should be" << 2;
             return false;
         }
-        number = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->number = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:file_id.productName
         if (baseType != FitBaseType::String) {
@@ -216,7 +216,7 @@ bool FileIdMessagePrivate::setField(
             qWarning() << "file_id.productName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        productName = QString::fromUtf8(data);
+        this->productName = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown file_id message field number" << fieldId;

@@ -949,7 +949,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:record.positionLat
         if (baseType != FitBaseType::Sint32) {
@@ -961,7 +961,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.positionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 1: // See Profile.xlsx::Messages:record.positionLong
         if (baseType != FitBaseType::Sint32) {
@@ -973,7 +973,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.positionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:record.altitude
         if (baseType != FitBaseType::Uint16) {
@@ -985,7 +985,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.altitude size is" << data.size() << "but should be" << 2;
             return false;
         }
-        altitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->altitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:record.heartRate
         if (baseType != FitBaseType::Uint8) {
@@ -997,7 +997,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.heartRate size is" << data.size() << "but should be" << 1;
             return false;
         }
-        heartRate = static_cast<quint8>(data.at(0));
+        this->heartRate = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:record.cadence
         if (baseType != FitBaseType::Uint8) {
@@ -1009,7 +1009,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.cadence size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cadence = static_cast<quint8>(data.at(0));
+        this->cadence = static_cast<quint8>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:record.distance
         if (baseType != FitBaseType::Uint32) {
@@ -1021,7 +1021,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.distance size is" << data.size() << "but should be" << 4;
             return false;
         }
-        distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:record.speed
         if (baseType != FitBaseType::Uint16) {
@@ -1033,7 +1033,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.speed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        speed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->speed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:record.power
         if (baseType != FitBaseType::Uint16) {
@@ -1045,7 +1045,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.power size is" << data.size() << "but should be" << 2;
             return false;
         }
-        power = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->power = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:record.compressedSpeedDistance
         if (baseType != FitBaseType::Byte) {
@@ -1057,7 +1057,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.compressedSpeedDistance size is" << data.size() << "but should be" << 1;
             return false;
         }
-        compressedSpeedDistance = static_cast<quint8>(data.at(0));
+        this->compressedSpeedDistance = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:record.grade
         if (baseType != FitBaseType::Sint16) {
@@ -1069,7 +1069,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.grade size is" << data.size() << "but should be" << 2;
             return false;
         }
-        grade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->grade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:record.resistance
         if (baseType != FitBaseType::Uint8) {
@@ -1081,7 +1081,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.resistance size is" << data.size() << "but should be" << 1;
             return false;
         }
-        resistance = static_cast<quint8>(data.at(0));
+        this->resistance = static_cast<quint8>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:record.timeFromCourse
         if (baseType != FitBaseType::Sint32) {
@@ -1093,7 +1093,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.timeFromCourse size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timeFromCourse = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->timeFromCourse = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 12: // See Profile.xlsx::Messages:record.cycleLength
         if (baseType != FitBaseType::Uint8) {
@@ -1105,7 +1105,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.cycleLength size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cycleLength = static_cast<quint8>(data.at(0));
+        this->cycleLength = static_cast<quint8>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:record.temperature
         if (baseType != FitBaseType::Sint8) {
@@ -1117,7 +1117,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.temperature size is" << data.size() << "but should be" << 1;
             return false;
         }
-        temperature = static_cast<qint8>(data.at(0));
+        this->temperature = static_cast<qint8>(data.at(0));
         break;
     case 17: // See Profile.xlsx::Messages:record.speed1s
         if (baseType != FitBaseType::Uint8) {
@@ -1129,7 +1129,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.speed1s size is" << data.size() << "but should be" << 1;
             return false;
         }
-        speed1s = static_cast<quint8>(data.at(0));
+        this->speed1s = static_cast<quint8>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:record.cycles
         if (baseType != FitBaseType::Uint8) {
@@ -1141,7 +1141,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.cycles size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cycles = static_cast<quint8>(data.at(0));
+        this->cycles = static_cast<quint8>(data.at(0));
         break;
     case 19: // See Profile.xlsx::Messages:record.totalCycles
         if (baseType != FitBaseType::Uint32) {
@@ -1153,7 +1153,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.totalCycles size is" << data.size() << "but should be" << 4;
             return false;
         }
-        totalCycles = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->totalCycles = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 28: // See Profile.xlsx::Messages:record.compressedAccumulatedPower
         if (baseType != FitBaseType::Uint16) {
@@ -1165,7 +1165,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.compressedAccumulatedPower size is" << data.size() << "but should be" << 2;
             return false;
         }
-        compressedAccumulatedPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->compressedAccumulatedPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 29: // See Profile.xlsx::Messages:record.accumulatedPower
         if (baseType != FitBaseType::Uint32) {
@@ -1177,7 +1177,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.accumulatedPower size is" << data.size() << "but should be" << 4;
             return false;
         }
-        accumulatedPower = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->accumulatedPower = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 30: // See Profile.xlsx::Messages:record.leftRightBalance
         if (baseType != FitBaseType::Uint8) {
@@ -1189,7 +1189,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.leftRightBalance size is" << data.size() << "but should be" << 1;
             return false;
         }
-        leftRightBalance = static_cast<LeftRightBalance>(data.at(0));
+        this->leftRightBalance = static_cast<LeftRightBalance>(data.at(0));
         break;
     case 31: // See Profile.xlsx::Messages:record.gpsAccuracy
         if (baseType != FitBaseType::Uint8) {
@@ -1201,7 +1201,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.gpsAccuracy size is" << data.size() << "but should be" << 1;
             return false;
         }
-        gpsAccuracy = static_cast<quint8>(data.at(0));
+        this->gpsAccuracy = static_cast<quint8>(data.at(0));
         break;
     case 32: // See Profile.xlsx::Messages:record.verticalSpeed
         if (baseType != FitBaseType::Sint16) {
@@ -1213,7 +1213,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.verticalSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        verticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->verticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 33: // See Profile.xlsx::Messages:record.calories
         if (baseType != FitBaseType::Uint16) {
@@ -1225,7 +1225,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.calories size is" << data.size() << "but should be" << 2;
             return false;
         }
-        calories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->calories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 39: // See Profile.xlsx::Messages:record.verticalOscillation
         if (baseType != FitBaseType::Uint16) {
@@ -1237,7 +1237,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.verticalOscillation size is" << data.size() << "but should be" << 2;
             return false;
         }
-        verticalOscillation = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->verticalOscillation = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 40: // See Profile.xlsx::Messages:record.stanceTimePercent
         if (baseType != FitBaseType::Uint16) {
@@ -1249,7 +1249,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.stanceTimePercent size is" << data.size() << "but should be" << 2;
             return false;
         }
-        stanceTimePercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->stanceTimePercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 41: // See Profile.xlsx::Messages:record.stanceTime
         if (baseType != FitBaseType::Uint16) {
@@ -1261,7 +1261,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.stanceTime size is" << data.size() << "but should be" << 2;
             return false;
         }
-        stanceTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->stanceTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 42: // See Profile.xlsx::Messages:record.activityType
         if (baseType != FitBaseType::Enum) {
@@ -1273,7 +1273,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.activityType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        activityType = static_cast<ActivityType>(data.at(0));
+        this->activityType = static_cast<ActivityType>(data.at(0));
         break;
     case 43: // See Profile.xlsx::Messages:record.leftTorqueEffectiveness
         if (baseType != FitBaseType::Uint8) {
@@ -1285,7 +1285,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.leftTorqueEffectiveness size is" << data.size() << "but should be" << 1;
             return false;
         }
-        leftTorqueEffectiveness = static_cast<quint8>(data.at(0));
+        this->leftTorqueEffectiveness = static_cast<quint8>(data.at(0));
         break;
     case 44: // See Profile.xlsx::Messages:record.rightTorqueEffectiveness
         if (baseType != FitBaseType::Uint8) {
@@ -1297,7 +1297,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.rightTorqueEffectiveness size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rightTorqueEffectiveness = static_cast<quint8>(data.at(0));
+        this->rightTorqueEffectiveness = static_cast<quint8>(data.at(0));
         break;
     case 45: // See Profile.xlsx::Messages:record.leftPedalSmoothness
         if (baseType != FitBaseType::Uint8) {
@@ -1309,7 +1309,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.leftPedalSmoothness size is" << data.size() << "but should be" << 1;
             return false;
         }
-        leftPedalSmoothness = static_cast<quint8>(data.at(0));
+        this->leftPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 46: // See Profile.xlsx::Messages:record.rightPedalSmoothness
         if (baseType != FitBaseType::Uint8) {
@@ -1321,7 +1321,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.rightPedalSmoothness size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rightPedalSmoothness = static_cast<quint8>(data.at(0));
+        this->rightPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 47: // See Profile.xlsx::Messages:record.combinedPedalSmoothness
         if (baseType != FitBaseType::Uint8) {
@@ -1333,7 +1333,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.combinedPedalSmoothness size is" << data.size() << "but should be" << 1;
             return false;
         }
-        combinedPedalSmoothness = static_cast<quint8>(data.at(0));
+        this->combinedPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 48: // See Profile.xlsx::Messages:record.time128
         if (baseType != FitBaseType::Uint8) {
@@ -1345,7 +1345,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.time128 size is" << data.size() << "but should be" << 1;
             return false;
         }
-        time128 = static_cast<quint8>(data.at(0));
+        this->time128 = static_cast<quint8>(data.at(0));
         break;
     case 49: // See Profile.xlsx::Messages:record.strokeType
         if (baseType != FitBaseType::Enum) {
@@ -1357,7 +1357,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.strokeType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        strokeType = static_cast<StrokeType>(data.at(0));
+        this->strokeType = static_cast<StrokeType>(data.at(0));
         break;
     case 50: // See Profile.xlsx::Messages:record.zone
         if (baseType != FitBaseType::Uint8) {
@@ -1369,7 +1369,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.zone size is" << data.size() << "but should be" << 1;
             return false;
         }
-        zone = static_cast<quint8>(data.at(0));
+        this->zone = static_cast<quint8>(data.at(0));
         break;
     case 51: // See Profile.xlsx::Messages:record.ballSpeed
         if (baseType != FitBaseType::Uint16) {
@@ -1381,7 +1381,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.ballSpeed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        ballSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->ballSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 52: // See Profile.xlsx::Messages:record.cadence256
         if (baseType != FitBaseType::Uint16) {
@@ -1393,7 +1393,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.cadence256 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        cadence256 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->cadence256 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 53: // See Profile.xlsx::Messages:record.fractionalCadence
         if (baseType != FitBaseType::Uint8) {
@@ -1405,7 +1405,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.fractionalCadence size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fractionalCadence = static_cast<quint8>(data.at(0));
+        this->fractionalCadence = static_cast<quint8>(data.at(0));
         break;
     case 54: // See Profile.xlsx::Messages:record.totalHemoglobinConc
         if (baseType != FitBaseType::Uint16) {
@@ -1417,7 +1417,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.totalHemoglobinConc size is" << data.size() << "but should be" << 2;
             return false;
         }
-        totalHemoglobinConc = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->totalHemoglobinConc = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 55: // See Profile.xlsx::Messages:record.totalHemoglobinConcMin
         if (baseType != FitBaseType::Uint16) {
@@ -1429,7 +1429,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.totalHemoglobinConcMin size is" << data.size() << "but should be" << 2;
             return false;
         }
-        totalHemoglobinConcMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->totalHemoglobinConcMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 56: // See Profile.xlsx::Messages:record.totalHemoglobinConcMax
         if (baseType != FitBaseType::Uint16) {
@@ -1441,7 +1441,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.totalHemoglobinConcMax size is" << data.size() << "but should be" << 2;
             return false;
         }
-        totalHemoglobinConcMax = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->totalHemoglobinConcMax = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 57: // See Profile.xlsx::Messages:record.saturatedHemoglobinPercent
         if (baseType != FitBaseType::Uint16) {
@@ -1453,7 +1453,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.saturatedHemoglobinPercent size is" << data.size() << "but should be" << 2;
             return false;
         }
-        saturatedHemoglobinPercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->saturatedHemoglobinPercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 58: // See Profile.xlsx::Messages:record.saturatedHemoglobinPercentMin
         if (baseType != FitBaseType::Uint16) {
@@ -1465,7 +1465,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.saturatedHemoglobinPercentMin size is" << data.size() << "but should be" << 2;
             return false;
         }
-        saturatedHemoglobinPercentMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->saturatedHemoglobinPercentMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 59: // See Profile.xlsx::Messages:record.saturatedHemoglobinPercentMax
         if (baseType != FitBaseType::Uint16) {
@@ -1477,7 +1477,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.saturatedHemoglobinPercentMax size is" << data.size() << "but should be" << 2;
             return false;
         }
-        saturatedHemoglobinPercentMax = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->saturatedHemoglobinPercentMax = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 62: // See Profile.xlsx::Messages:record.deviceIndex
         if (baseType != FitBaseType::Uint8) {
@@ -1489,7 +1489,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.deviceIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        deviceIndex = static_cast<DeviceIndex>(data.at(0));
+        this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     case 67: // See Profile.xlsx::Messages:record.leftPco
         if (baseType != FitBaseType::Sint8) {
@@ -1501,7 +1501,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.leftPco size is" << data.size() << "but should be" << 1;
             return false;
         }
-        leftPco = static_cast<qint8>(data.at(0));
+        this->leftPco = static_cast<qint8>(data.at(0));
         break;
     case 68: // See Profile.xlsx::Messages:record.rightPco
         if (baseType != FitBaseType::Sint8) {
@@ -1513,7 +1513,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.rightPco size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rightPco = static_cast<qint8>(data.at(0));
+        this->rightPco = static_cast<qint8>(data.at(0));
         break;
     case 69: // See Profile.xlsx::Messages:record.leftPowerPhase
         if (baseType != FitBaseType::Uint8) {
@@ -1525,7 +1525,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.leftPowerPhase size is" << data.size() << "but should be" << 1;
             return false;
         }
-        leftPowerPhase = static_cast<quint8>(data.at(0));
+        this->leftPowerPhase = static_cast<quint8>(data.at(0));
         break;
     case 70: // See Profile.xlsx::Messages:record.leftPowerPhasePeak
         if (baseType != FitBaseType::Uint8) {
@@ -1537,7 +1537,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.leftPowerPhasePeak size is" << data.size() << "but should be" << 1;
             return false;
         }
-        leftPowerPhasePeak = static_cast<quint8>(data.at(0));
+        this->leftPowerPhasePeak = static_cast<quint8>(data.at(0));
         break;
     case 71: // See Profile.xlsx::Messages:record.rightPowerPhase
         if (baseType != FitBaseType::Uint8) {
@@ -1549,7 +1549,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.rightPowerPhase size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rightPowerPhase = static_cast<quint8>(data.at(0));
+        this->rightPowerPhase = static_cast<quint8>(data.at(0));
         break;
     case 72: // See Profile.xlsx::Messages:record.rightPowerPhasePeak
         if (baseType != FitBaseType::Uint8) {
@@ -1561,7 +1561,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.rightPowerPhasePeak size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rightPowerPhasePeak = static_cast<quint8>(data.at(0));
+        this->rightPowerPhasePeak = static_cast<quint8>(data.at(0));
         break;
     case 73: // See Profile.xlsx::Messages:record.enhancedSpeed
         if (baseType != FitBaseType::Uint32) {
@@ -1573,7 +1573,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.enhancedSpeed size is" << data.size() << "but should be" << 4;
             return false;
         }
-        enhancedSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->enhancedSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 78: // See Profile.xlsx::Messages:record.enhancedAltitude
         if (baseType != FitBaseType::Uint32) {
@@ -1585,7 +1585,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.enhancedAltitude size is" << data.size() << "but should be" << 4;
             return false;
         }
-        enhancedAltitude = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->enhancedAltitude = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 81: // See Profile.xlsx::Messages:record.batterySoc
         if (baseType != FitBaseType::Uint8) {
@@ -1597,7 +1597,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.batterySoc size is" << data.size() << "but should be" << 1;
             return false;
         }
-        batterySoc = static_cast<quint8>(data.at(0));
+        this->batterySoc = static_cast<quint8>(data.at(0));
         break;
     case 82: // See Profile.xlsx::Messages:record.motorPower
         if (baseType != FitBaseType::Uint16) {
@@ -1609,7 +1609,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.motorPower size is" << data.size() << "but should be" << 2;
             return false;
         }
-        motorPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->motorPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 83: // See Profile.xlsx::Messages:record.verticalRatio
         if (baseType != FitBaseType::Uint16) {
@@ -1621,7 +1621,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.verticalRatio size is" << data.size() << "but should be" << 2;
             return false;
         }
-        verticalRatio = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->verticalRatio = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 84: // See Profile.xlsx::Messages:record.stanceTimeBalance
         if (baseType != FitBaseType::Uint16) {
@@ -1633,7 +1633,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.stanceTimeBalance size is" << data.size() << "but should be" << 2;
             return false;
         }
-        stanceTimeBalance = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->stanceTimeBalance = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 85: // See Profile.xlsx::Messages:record.stepLength
         if (baseType != FitBaseType::Uint16) {
@@ -1645,7 +1645,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.stepLength size is" << data.size() << "but should be" << 2;
             return false;
         }
-        stepLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->stepLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 91: // See Profile.xlsx::Messages:record.absolutePressure
         if (baseType != FitBaseType::Uint32) {
@@ -1657,7 +1657,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.absolutePressure size is" << data.size() << "but should be" << 4;
             return false;
         }
-        absolutePressure = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->absolutePressure = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 92: // See Profile.xlsx::Messages:record.depth
         if (baseType != FitBaseType::Uint32) {
@@ -1669,7 +1669,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.depth size is" << data.size() << "but should be" << 4;
             return false;
         }
-        depth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->depth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 93: // See Profile.xlsx::Messages:record.nextStopDepth
         if (baseType != FitBaseType::Uint32) {
@@ -1681,7 +1681,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.nextStopDepth size is" << data.size() << "but should be" << 4;
             return false;
         }
-        nextStopDepth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->nextStopDepth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 94: // See Profile.xlsx::Messages:record.nextStopTime
         if (baseType != FitBaseType::Uint32) {
@@ -1693,7 +1693,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.nextStopTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        nextStopTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->nextStopTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 95: // See Profile.xlsx::Messages:record.timeToSurface
         if (baseType != FitBaseType::Uint32) {
@@ -1705,7 +1705,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.timeToSurface size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timeToSurface = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->timeToSurface = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 96: // See Profile.xlsx::Messages:record.ndlTime
         if (baseType != FitBaseType::Uint32) {
@@ -1717,7 +1717,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.ndlTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        ndlTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->ndlTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 97: // See Profile.xlsx::Messages:record.cnsLoad
         if (baseType != FitBaseType::Uint8) {
@@ -1729,7 +1729,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.cnsLoad size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cnsLoad = static_cast<quint8>(data.at(0));
+        this->cnsLoad = static_cast<quint8>(data.at(0));
         break;
     case 98: // See Profile.xlsx::Messages:record.n2Load
         if (baseType != FitBaseType::Uint16) {
@@ -1741,7 +1741,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.n2Load size is" << data.size() << "but should be" << 2;
             return false;
         }
-        n2Load = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->n2Load = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 114: // See Profile.xlsx::Messages:record.grit
         if (baseType != FitBaseType::Float32) {
@@ -1753,7 +1753,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.grit size is" << data.size() << "but should be" << 4;
             return false;
         }
-        grit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->grit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 115: // See Profile.xlsx::Messages:record.flow
         if (baseType != FitBaseType::Float32) {
@@ -1765,7 +1765,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.flow size is" << data.size() << "but should be" << 4;
             return false;
         }
-        flow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->flow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 117: // See Profile.xlsx::Messages:record.ebikeTravelRange
         if (baseType != FitBaseType::Uint16) {
@@ -1777,7 +1777,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.ebikeTravelRange size is" << data.size() << "but should be" << 2;
             return false;
         }
-        ebikeTravelRange = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->ebikeTravelRange = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 118: // See Profile.xlsx::Messages:record.ebikeBatteryLevel
         if (baseType != FitBaseType::Uint8) {
@@ -1789,7 +1789,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.ebikeBatteryLevel size is" << data.size() << "but should be" << 1;
             return false;
         }
-        ebikeBatteryLevel = static_cast<quint8>(data.at(0));
+        this->ebikeBatteryLevel = static_cast<quint8>(data.at(0));
         break;
     case 119: // See Profile.xlsx::Messages:record.ebikeAssistMode
         if (baseType != FitBaseType::Uint8) {
@@ -1801,7 +1801,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.ebikeAssistMode size is" << data.size() << "but should be" << 1;
             return false;
         }
-        ebikeAssistMode = static_cast<quint8>(data.at(0));
+        this->ebikeAssistMode = static_cast<quint8>(data.at(0));
         break;
     case 120: // See Profile.xlsx::Messages:record.ebikeAssistLevelPercent
         if (baseType != FitBaseType::Uint8) {
@@ -1813,7 +1813,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.ebikeAssistLevelPercent size is" << data.size() << "but should be" << 1;
             return false;
         }
-        ebikeAssistLevelPercent = static_cast<quint8>(data.at(0));
+        this->ebikeAssistLevelPercent = static_cast<quint8>(data.at(0));
         break;
     case 139: // See Profile.xlsx::Messages:record.coreTemperature
         if (baseType != FitBaseType::Uint16) {
@@ -1825,7 +1825,7 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.coreTemperature size is" << data.size() << "but should be" << 2;
             return false;
         }
-        coreTemperature = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->coreTemperature = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown record message field number" << fieldId;

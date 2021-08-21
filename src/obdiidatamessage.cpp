@@ -169,7 +169,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:obdii_data.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -181,7 +181,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:obdii_data.timeOffset
         if (baseType != FitBaseType::Uint16) {
@@ -193,7 +193,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.timeOffset size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:obdii_data.pid
         if (baseType != FitBaseType::Byte) {
@@ -205,7 +205,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.pid size is" << data.size() << "but should be" << 1;
             return false;
         }
-        pid = static_cast<quint8>(data.at(0));
+        this->pid = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:obdii_data.rawData
         if (baseType != FitBaseType::Byte) {
@@ -217,7 +217,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.rawData size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rawData = static_cast<quint8>(data.at(0));
+        this->rawData = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:obdii_data.pidDataSize
         if (baseType != FitBaseType::Uint8) {
@@ -229,7 +229,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.pidDataSize size is" << data.size() << "but should be" << 1;
             return false;
         }
-        pidDataSize = static_cast<quint8>(data.at(0));
+        this->pidDataSize = static_cast<quint8>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:obdii_data.systemTime
         if (baseType != FitBaseType::Uint32) {
@@ -241,7 +241,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.systemTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        systemTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->systemTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:obdii_data.startTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -253,7 +253,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.startTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        startTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->startTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 7: // See Profile.xlsx::Messages:obdii_data.startTimestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -265,7 +265,7 @@ bool ObdiiDataMessagePrivate::setField(
             qWarning() << "obdii_data.startTimestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        startTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->startTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown obdii_data message field number" << fieldId;

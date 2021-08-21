@@ -120,7 +120,7 @@ bool CameraEventMessagePrivate::setField(
             qWarning() << "camera_event.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:camera_event.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -132,7 +132,7 @@ bool CameraEventMessagePrivate::setField(
             qWarning() << "camera_event.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:camera_event.cameraEventType
         if (baseType != FitBaseType::Enum) {
@@ -144,7 +144,7 @@ bool CameraEventMessagePrivate::setField(
             qWarning() << "camera_event.cameraEventType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cameraEventType = static_cast<CameraEventType>(data.at(0));
+        this->cameraEventType = static_cast<CameraEventType>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:camera_event.cameraFileUuid
         if (baseType != FitBaseType::String) {
@@ -156,7 +156,7 @@ bool CameraEventMessagePrivate::setField(
             qWarning() << "camera_event.cameraFileUuid size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cameraFileUuid = QString::fromUtf8(data);
+        this->cameraFileUuid = QString::fromUtf8(data);
         break;
     case 3: // See Profile.xlsx::Messages:camera_event.cameraOrientation
         if (baseType != FitBaseType::Enum) {
@@ -168,7 +168,7 @@ bool CameraEventMessagePrivate::setField(
             qWarning() << "camera_event.cameraOrientation size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cameraOrientation = static_cast<CameraOrientationType>(data.at(0));
+        this->cameraOrientation = static_cast<CameraOrientationType>(data.at(0));
         break;
     default:
         qWarning() << "unknown camera_event message field number" << fieldId;

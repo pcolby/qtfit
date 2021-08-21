@@ -133,7 +133,7 @@ bool AntRxMessagePrivate::setField(
             qWarning() << "ant_rx.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:ant_rx.fractionalTimestamp
         if (baseType != FitBaseType::Uint16) {
@@ -145,7 +145,7 @@ bool AntRxMessagePrivate::setField(
             qWarning() << "ant_rx.fractionalTimestamp size is" << data.size() << "but should be" << 2;
             return false;
         }
-        fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:ant_rx.mesgId
         if (baseType != FitBaseType::Byte) {
@@ -157,7 +157,7 @@ bool AntRxMessagePrivate::setField(
             qWarning() << "ant_rx.mesgId size is" << data.size() << "but should be" << 1;
             return false;
         }
-        mesgId = static_cast<quint8>(data.at(0));
+        this->mesgId = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:ant_rx.mesgData
         if (baseType != FitBaseType::Byte) {
@@ -169,7 +169,7 @@ bool AntRxMessagePrivate::setField(
             qWarning() << "ant_rx.mesgData size is" << data.size() << "but should be" << 1;
             return false;
         }
-        mesgData = static_cast<quint8>(data.at(0));
+        this->mesgData = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:ant_rx.channelNumber
         if (baseType != FitBaseType::Uint8) {
@@ -181,7 +181,7 @@ bool AntRxMessagePrivate::setField(
             qWarning() << "ant_rx.channelNumber size is" << data.size() << "but should be" << 1;
             return false;
         }
-        channelNumber = static_cast<quint8>(data.at(0));
+        this->channelNumber = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:ant_rx.data
         if (baseType != FitBaseType::Byte) {
@@ -193,7 +193,7 @@ bool AntRxMessagePrivate::setField(
             qWarning() << "ant_rx.data size is" << data.size() << "but should be" << 1;
             return false;
         }
-        data = static_cast<quint8>(data.at(0));
+        this->data = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown ant_rx message field number" << fieldId;

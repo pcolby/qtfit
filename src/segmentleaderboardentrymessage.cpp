@@ -143,7 +143,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:segment_leaderboard_entry.name
         if (baseType != FitBaseType::String) {
@@ -155,7 +155,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = QString::fromUtf8(data);
+        this->name = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:segment_leaderboard_entry.type
         if (baseType != FitBaseType::Enum) {
@@ -167,7 +167,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.type size is" << data.size() << "but should be" << 1;
             return false;
         }
-        type = static_cast<SegmentLeaderboardType>(data.at(0));
+        this->type = static_cast<SegmentLeaderboardType>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:segment_leaderboard_entry.groupPrimaryKey
         if (baseType != FitBaseType::Uint32) {
@@ -179,7 +179,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.groupPrimaryKey size is" << data.size() << "but should be" << 4;
             return false;
         }
-        groupPrimaryKey = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->groupPrimaryKey = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:segment_leaderboard_entry.activityId
         if (baseType != FitBaseType::Uint32) {
@@ -191,7 +191,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.activityId size is" << data.size() << "but should be" << 4;
             return false;
         }
-        activityId = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->activityId = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:segment_leaderboard_entry.segmentTime
         if (baseType != FitBaseType::Uint32) {
@@ -203,7 +203,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.segmentTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        segmentTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->segmentTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:segment_leaderboard_entry.activityIdString
         if (baseType != FitBaseType::String) {
@@ -215,7 +215,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
             qWarning() << "segment_leaderboard_entry.activityIdString size is" << data.size() << "but should be" << 1;
             return false;
         }
-        activityIdString = QString::fromUtf8(data);
+        this->activityIdString = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown segment_leaderboard_entry message field number" << fieldId;

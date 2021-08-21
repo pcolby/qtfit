@@ -144,7 +144,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.sport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sport = static_cast<Sport>(data.at(0));
+        this->sport = static_cast<Sport>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:workout.capabilities
         if (baseType != FitBaseType::Uint32z) {
@@ -156,7 +156,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.capabilities size is" << data.size() << "but should be" << 4;
             return false;
         }
-        capabilities = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<WorkoutCapabilities>(data) : qFromLittleEndian<WorkoutCapabilities>(data));
+        this->capabilities = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<WorkoutCapabilities>(data) : qFromLittleEndian<WorkoutCapabilities>(data));
         break;
     case 6: // See Profile.xlsx::Messages:workout.numValidSteps
         if (baseType != FitBaseType::Uint16) {
@@ -168,7 +168,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.numValidSteps size is" << data.size() << "but should be" << 2;
             return false;
         }
-        numValidSteps = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->numValidSteps = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:workout.wktName
         if (baseType != FitBaseType::String) {
@@ -180,7 +180,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.wktName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        wktName = QString::fromUtf8(data);
+        this->wktName = QString::fromUtf8(data);
         break;
     case 11: // See Profile.xlsx::Messages:workout.subSport
         if (baseType != FitBaseType::Enum) {
@@ -192,7 +192,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.subSport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        subSport = static_cast<SubSport>(data.at(0));
+        this->subSport = static_cast<SubSport>(data.at(0));
         break;
     case 14: // See Profile.xlsx::Messages:workout.poolLength
         if (baseType != FitBaseType::Uint16) {
@@ -204,7 +204,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.poolLength size is" << data.size() << "but should be" << 2;
             return false;
         }
-        poolLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->poolLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 15: // See Profile.xlsx::Messages:workout.poolLengthUnit
         if (baseType != FitBaseType::Enum) {
@@ -216,7 +216,7 @@ bool WorkoutMessagePrivate::setField(
             qWarning() << "workout.poolLengthUnit size is" << data.size() << "but should be" << 1;
             return false;
         }
-        poolLengthUnit = static_cast<DisplayMeasure>(data.at(0));
+        this->poolLengthUnit = static_cast<DisplayMeasure>(data.at(0));
         break;
     default:
         qWarning() << "unknown workout message field number" << fieldId;

@@ -96,7 +96,7 @@ bool SportMessagePrivate::setField(
             qWarning() << "sport.sport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sport = static_cast<Sport>(data.at(0));
+        this->sport = static_cast<Sport>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:sport.subSport
         if (baseType != FitBaseType::Enum) {
@@ -108,7 +108,7 @@ bool SportMessagePrivate::setField(
             qWarning() << "sport.subSport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        subSport = static_cast<SubSport>(data.at(0));
+        this->subSport = static_cast<SubSport>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:sport.name
         if (baseType != FitBaseType::String) {
@@ -120,7 +120,7 @@ bool SportMessagePrivate::setField(
             qWarning() << "sport.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = QString::fromUtf8(data);
+        this->name = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown sport message field number" << fieldId;

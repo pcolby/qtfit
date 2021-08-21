@@ -97,7 +97,7 @@ bool WatchfaceSettingsMessagePrivate::setField(
             qWarning() << "watchface_settings.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:watchface_settings.mode
         if (baseType != FitBaseType::Enum) {
@@ -109,7 +109,7 @@ bool WatchfaceSettingsMessagePrivate::setField(
             qWarning() << "watchface_settings.mode size is" << data.size() << "but should be" << 1;
             return false;
         }
-        mode = static_cast<WatchfaceMode>(data.at(0));
+        this->mode = static_cast<WatchfaceMode>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:watchface_settings.layout
         if (baseType != FitBaseType::Byte) {
@@ -121,7 +121,7 @@ bool WatchfaceSettingsMessagePrivate::setField(
             qWarning() << "watchface_settings.layout size is" << data.size() << "but should be" << 1;
             return false;
         }
-        layout = static_cast<quint8>(data.at(0));
+        this->layout = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown watchface_settings message field number" << fieldId;

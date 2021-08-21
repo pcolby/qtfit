@@ -132,7 +132,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_field_configuration.screenIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        screenIndex = static_cast<quint8>(data.at(0));
+        this->screenIndex = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:exd_data_field_configuration.conceptField
         if (baseType != FitBaseType::Byte) {
@@ -144,7 +144,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_field_configuration.conceptField size is" << data.size() << "but should be" << 1;
             return false;
         }
-        conceptField = static_cast<quint8>(data.at(0));
+        this->conceptField = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:exd_data_field_configuration.fieldId
         if (baseType != FitBaseType::Uint8) {
@@ -156,7 +156,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_field_configuration.fieldId size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fieldId = static_cast<quint8>(data.at(0));
+        this->fieldId = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:exd_data_field_configuration.conceptCount
         if (baseType != FitBaseType::Uint8) {
@@ -168,7 +168,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_field_configuration.conceptCount size is" << data.size() << "but should be" << 1;
             return false;
         }
-        conceptCount = static_cast<quint8>(data.at(0));
+        this->conceptCount = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:exd_data_field_configuration.displayType
         if (baseType != FitBaseType::Enum) {
@@ -180,7 +180,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_field_configuration.displayType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        displayType = static_cast<ExdDisplayType>(data.at(0));
+        this->displayType = static_cast<ExdDisplayType>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:exd_data_field_configuration.title
         if (baseType != FitBaseType::String) {
@@ -192,7 +192,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
             qWarning() << "exd_data_field_configuration.title size is" << data.size() << "but should be" << 1;
             return false;
         }
-        title = QString::fromUtf8(data);
+        this->title = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown exd_data_field_configuration message field number" << fieldId;

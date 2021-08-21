@@ -109,7 +109,7 @@ bool BarometerDataMessagePrivate::setField(
             qWarning() << "barometer_data.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:barometer_data.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -121,7 +121,7 @@ bool BarometerDataMessagePrivate::setField(
             qWarning() << "barometer_data.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:barometer_data.sampleTimeOffset
         if (baseType != FitBaseType::Uint16) {
@@ -133,7 +133,7 @@ bool BarometerDataMessagePrivate::setField(
             qWarning() << "barometer_data.sampleTimeOffset size is" << data.size() << "but should be" << 2;
             return false;
         }
-        sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:barometer_data.baroPres
         if (baseType != FitBaseType::Uint32) {
@@ -145,7 +145,7 @@ bool BarometerDataMessagePrivate::setField(
             qWarning() << "barometer_data.baroPres size is" << data.size() << "but should be" << 4;
             return false;
         }
-        baroPres = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->baroPres = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown barometer_data message field number" << fieldId;

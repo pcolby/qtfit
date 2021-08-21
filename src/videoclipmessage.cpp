@@ -145,7 +145,7 @@ bool VideoClipMessagePrivate::setField(
             qWarning() << "video_clip.clipNumber size is" << data.size() << "but should be" << 2;
             return false;
         }
-        clipNumber = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->clipNumber = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:video_clip.startTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -157,7 +157,7 @@ bool VideoClipMessagePrivate::setField(
             qWarning() << "video_clip.startTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        startTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->startTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 2: // See Profile.xlsx::Messages:video_clip.startTimestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -169,7 +169,7 @@ bool VideoClipMessagePrivate::setField(
             qWarning() << "video_clip.startTimestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        startTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->startTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:video_clip.endTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -181,7 +181,7 @@ bool VideoClipMessagePrivate::setField(
             qWarning() << "video_clip.endTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        endTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->endTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 4: // See Profile.xlsx::Messages:video_clip.endTimestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -193,7 +193,7 @@ bool VideoClipMessagePrivate::setField(
             qWarning() << "video_clip.endTimestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        endTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->endTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:video_clip.clipStart
         if (baseType != FitBaseType::Uint32) {
@@ -205,7 +205,7 @@ bool VideoClipMessagePrivate::setField(
             qWarning() << "video_clip.clipStart size is" << data.size() << "but should be" << 4;
             return false;
         }
-        clipStart = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->clipStart = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:video_clip.clipEnd
         if (baseType != FitBaseType::Uint32) {
@@ -217,7 +217,7 @@ bool VideoClipMessagePrivate::setField(
             qWarning() << "video_clip.clipEnd size is" << data.size() << "but should be" << 4;
             return false;
         }
-        clipEnd = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->clipEnd = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown video_clip message field number" << fieldId;

@@ -145,7 +145,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:timestamp_correlation.fractionalTimestamp
         if (baseType != FitBaseType::Uint16) {
@@ -157,7 +157,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.fractionalTimestamp size is" << data.size() << "but should be" << 2;
             return false;
         }
-        fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:timestamp_correlation.systemTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -169,7 +169,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.systemTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        systemTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->systemTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 2: // See Profile.xlsx::Messages:timestamp_correlation.fractionalSystemTimestamp
         if (baseType != FitBaseType::Uint16) {
@@ -181,7 +181,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.fractionalSystemTimestamp size is" << data.size() << "but should be" << 2;
             return false;
         }
-        fractionalSystemTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->fractionalSystemTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:timestamp_correlation.localTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -193,7 +193,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.localTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
         break;
     case 4: // See Profile.xlsx::Messages:timestamp_correlation.timestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -205,7 +205,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.timestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:timestamp_correlation.systemTimestampMs
         if (baseType != FitBaseType::Uint16) {
@@ -217,7 +217,7 @@ bool TimestampCorrelationMessagePrivate::setField(
             qWarning() << "timestamp_correlation.systemTimestampMs size is" << data.size() << "but should be" << 2;
             return false;
         }
-        systemTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->systemTimestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown timestamp_correlation message field number" << fieldId;

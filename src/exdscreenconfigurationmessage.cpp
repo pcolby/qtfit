@@ -109,7 +109,7 @@ bool ExdScreenConfigurationMessagePrivate::setField(
             qWarning() << "exd_screen_configuration.screenIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        screenIndex = static_cast<quint8>(data.at(0));
+        this->screenIndex = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:exd_screen_configuration.fieldCount
         if (baseType != FitBaseType::Uint8) {
@@ -121,7 +121,7 @@ bool ExdScreenConfigurationMessagePrivate::setField(
             qWarning() << "exd_screen_configuration.fieldCount size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fieldCount = static_cast<quint8>(data.at(0));
+        this->fieldCount = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:exd_screen_configuration.layout
         if (baseType != FitBaseType::Enum) {
@@ -133,7 +133,7 @@ bool ExdScreenConfigurationMessagePrivate::setField(
             qWarning() << "exd_screen_configuration.layout size is" << data.size() << "but should be" << 1;
             return false;
         }
-        layout = static_cast<ExdLayout>(data.at(0));
+        this->layout = static_cast<ExdLayout>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:exd_screen_configuration.screenEnabled
         if (baseType != FitBaseType::Bool) {
@@ -145,7 +145,7 @@ bool ExdScreenConfigurationMessagePrivate::setField(
             qWarning() << "exd_screen_configuration.screenEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        screenEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->screenEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
         break;
     default:
         qWarning() << "unknown exd_screen_configuration message field number" << fieldId;

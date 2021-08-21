@@ -95,7 +95,7 @@ bool VideoMessagePrivate::setField(
             qWarning() << "video.url size is" << data.size() << "but should be" << 1;
             return false;
         }
-        url = QString::fromUtf8(data);
+        this->url = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:video.hostingProvider
         if (baseType != FitBaseType::String) {
@@ -107,7 +107,7 @@ bool VideoMessagePrivate::setField(
             qWarning() << "video.hostingProvider size is" << data.size() << "but should be" << 1;
             return false;
         }
-        hostingProvider = QString::fromUtf8(data);
+        this->hostingProvider = QString::fromUtf8(data);
         break;
     case 2: // See Profile.xlsx::Messages:video.duration
         if (baseType != FitBaseType::Uint32) {
@@ -119,7 +119,7 @@ bool VideoMessagePrivate::setField(
             qWarning() << "video.duration size is" << data.size() << "but should be" << 4;
             return false;
         }
-        duration = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->duration = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown video message field number" << fieldId;

@@ -409,7 +409,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:monitoring.deviceIndex
         if (baseType != FitBaseType::Uint8) {
@@ -421,7 +421,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.deviceIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        deviceIndex = static_cast<DeviceIndex>(data.at(0));
+        this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:monitoring.calories
         if (baseType != FitBaseType::Uint16) {
@@ -433,7 +433,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.calories size is" << data.size() << "but should be" << 2;
             return false;
         }
-        calories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->calories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:monitoring.distance
         if (baseType != FitBaseType::Uint32) {
@@ -445,7 +445,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.distance size is" << data.size() << "but should be" << 4;
             return false;
         }
-        distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:monitoring.cycles
         if (baseType != FitBaseType::Uint32) {
@@ -457,7 +457,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.cycles size is" << data.size() << "but should be" << 4;
             return false;
         }
-        cycles = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->cycles = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:monitoring.activeTime
         if (baseType != FitBaseType::Uint32) {
@@ -469,7 +469,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.activeTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        activeTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->activeTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:monitoring.activityType
         if (baseType != FitBaseType::Enum) {
@@ -481,7 +481,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.activityType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        activityType = static_cast<ActivityType>(data.at(0));
+        this->activityType = static_cast<ActivityType>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:monitoring.activitySubtype
         if (baseType != FitBaseType::Enum) {
@@ -493,7 +493,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.activitySubtype size is" << data.size() << "but should be" << 1;
             return false;
         }
-        activitySubtype = static_cast<ActivitySubtype>(data.at(0));
+        this->activitySubtype = static_cast<ActivitySubtype>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:monitoring.activityLevel
         if (baseType != FitBaseType::Enum) {
@@ -505,7 +505,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.activityLevel size is" << data.size() << "but should be" << 1;
             return false;
         }
-        activityLevel = static_cast<ActivityLevel>(data.at(0));
+        this->activityLevel = static_cast<ActivityLevel>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:monitoring.distance16
         if (baseType != FitBaseType::Uint16) {
@@ -517,7 +517,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.distance16 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        distance16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->distance16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 9: // See Profile.xlsx::Messages:monitoring.cycles16
         if (baseType != FitBaseType::Uint16) {
@@ -529,7 +529,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.cycles16 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        cycles16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->cycles16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:monitoring.activeTime16
         if (baseType != FitBaseType::Uint16) {
@@ -541,7 +541,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.activeTime16 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        activeTime16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->activeTime16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 11: // See Profile.xlsx::Messages:monitoring.localTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -553,7 +553,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.localTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
         break;
     case 12: // See Profile.xlsx::Messages:monitoring.temperature
         if (baseType != FitBaseType::Sint16) {
@@ -565,7 +565,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.temperature size is" << data.size() << "but should be" << 2;
             return false;
         }
-        temperature = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->temperature = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 14: // See Profile.xlsx::Messages:monitoring.temperatureMin
         if (baseType != FitBaseType::Sint16) {
@@ -577,7 +577,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.temperatureMin size is" << data.size() << "but should be" << 2;
             return false;
         }
-        temperatureMin = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->temperatureMin = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 15: // See Profile.xlsx::Messages:monitoring.temperatureMax
         if (baseType != FitBaseType::Sint16) {
@@ -589,7 +589,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.temperatureMax size is" << data.size() << "but should be" << 2;
             return false;
         }
-        temperatureMax = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        this->temperatureMax = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
         break;
     case 16: // See Profile.xlsx::Messages:monitoring.activityTime
         if (baseType != FitBaseType::Uint16) {
@@ -601,7 +601,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.activityTime size is" << data.size() << "but should be" << 2;
             return false;
         }
-        activityTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->activityTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 19: // See Profile.xlsx::Messages:monitoring.activeCalories
         if (baseType != FitBaseType::Uint16) {
@@ -613,7 +613,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.activeCalories size is" << data.size() << "but should be" << 2;
             return false;
         }
-        activeCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->activeCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 24: // See Profile.xlsx::Messages:monitoring.currentActivityTypeIntensity
         if (baseType != FitBaseType::Byte) {
@@ -625,7 +625,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.currentActivityTypeIntensity size is" << data.size() << "but should be" << 1;
             return false;
         }
-        currentActivityTypeIntensity = static_cast<quint8>(data.at(0));
+        this->currentActivityTypeIntensity = static_cast<quint8>(data.at(0));
         break;
     case 25: // See Profile.xlsx::Messages:monitoring.timestampMin8
         if (baseType != FitBaseType::Uint8) {
@@ -637,7 +637,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.timestampMin8 size is" << data.size() << "but should be" << 1;
             return false;
         }
-        timestampMin8 = static_cast<quint8>(data.at(0));
+        this->timestampMin8 = static_cast<quint8>(data.at(0));
         break;
     case 26: // See Profile.xlsx::Messages:monitoring.timestamp16
         if (baseType != FitBaseType::Uint16) {
@@ -649,7 +649,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.timestamp16 size is" << data.size() << "but should be" << 2;
             return false;
         }
-        timestamp16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->timestamp16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 27: // See Profile.xlsx::Messages:monitoring.heartRate
         if (baseType != FitBaseType::Uint8) {
@@ -661,7 +661,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.heartRate size is" << data.size() << "but should be" << 1;
             return false;
         }
-        heartRate = static_cast<quint8>(data.at(0));
+        this->heartRate = static_cast<quint8>(data.at(0));
         break;
     case 28: // See Profile.xlsx::Messages:monitoring.intensity
         if (baseType != FitBaseType::Uint8) {
@@ -673,7 +673,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.intensity size is" << data.size() << "but should be" << 1;
             return false;
         }
-        intensity = static_cast<quint8>(data.at(0));
+        this->intensity = static_cast<quint8>(data.at(0));
         break;
     case 29: // See Profile.xlsx::Messages:monitoring.durationMin
         if (baseType != FitBaseType::Uint16) {
@@ -685,7 +685,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.durationMin size is" << data.size() << "but should be" << 2;
             return false;
         }
-        durationMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->durationMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 30: // See Profile.xlsx::Messages:monitoring.duration
         if (baseType != FitBaseType::Uint32) {
@@ -697,7 +697,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.duration size is" << data.size() << "but should be" << 4;
             return false;
         }
-        duration = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->duration = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 31: // See Profile.xlsx::Messages:monitoring.ascent
         if (baseType != FitBaseType::Uint32) {
@@ -709,7 +709,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.ascent size is" << data.size() << "but should be" << 4;
             return false;
         }
-        ascent = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->ascent = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 32: // See Profile.xlsx::Messages:monitoring.descent
         if (baseType != FitBaseType::Uint32) {
@@ -721,7 +721,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.descent size is" << data.size() << "but should be" << 4;
             return false;
         }
-        descent = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->descent = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 33: // See Profile.xlsx::Messages:monitoring.moderateActivityMinutes
         if (baseType != FitBaseType::Uint16) {
@@ -733,7 +733,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.moderateActivityMinutes size is" << data.size() << "but should be" << 2;
             return false;
         }
-        moderateActivityMinutes = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->moderateActivityMinutes = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 34: // See Profile.xlsx::Messages:monitoring.vigorousActivityMinutes
         if (baseType != FitBaseType::Uint16) {
@@ -745,7 +745,7 @@ bool MonitoringMessagePrivate::setField(
             qWarning() << "monitoring.vigorousActivityMinutes size is" << data.size() << "but should be" << 2;
             return false;
         }
-        vigorousActivityMinutes = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->vigorousActivityMinutes = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:
         qWarning() << "unknown monitoring message field number" << fieldId;

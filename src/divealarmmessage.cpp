@@ -145,7 +145,7 @@ bool DiveAlarmMessagePrivate::setField(
             qWarning() << "dive_alarm.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:dive_alarm.depth
         if (baseType != FitBaseType::Uint32) {
@@ -157,7 +157,7 @@ bool DiveAlarmMessagePrivate::setField(
             qWarning() << "dive_alarm.depth size is" << data.size() << "but should be" << 4;
             return false;
         }
-        depth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->depth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 1: // See Profile.xlsx::Messages:dive_alarm.time
         if (baseType != FitBaseType::Sint32) {
@@ -169,7 +169,7 @@ bool DiveAlarmMessagePrivate::setField(
             qWarning() << "dive_alarm.time size is" << data.size() << "but should be" << 4;
             return false;
         }
-        time = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->time = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:dive_alarm.enabled
         if (baseType != FitBaseType::Bool) {
@@ -181,7 +181,7 @@ bool DiveAlarmMessagePrivate::setField(
             qWarning() << "dive_alarm.enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
         break;
     case 3: // See Profile.xlsx::Messages:dive_alarm.alarmType
         if (baseType != FitBaseType::Enum) {
@@ -193,7 +193,7 @@ bool DiveAlarmMessagePrivate::setField(
             qWarning() << "dive_alarm.alarmType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        alarmType = static_cast<DiveAlarmType>(data.at(0));
+        this->alarmType = static_cast<DiveAlarmType>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:dive_alarm.sound
         if (baseType != FitBaseType::Enum) {
@@ -205,7 +205,7 @@ bool DiveAlarmMessagePrivate::setField(
             qWarning() << "dive_alarm.sound size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sound = static_cast<Tone>(data.at(0));
+        this->sound = static_cast<Tone>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:dive_alarm.diveTypes
         if (baseType != FitBaseType::Enum) {
@@ -217,7 +217,7 @@ bool DiveAlarmMessagePrivate::setField(
             qWarning() << "dive_alarm.diveTypes size is" << data.size() << "but should be" << 1;
             return false;
         }
-        diveTypes = static_cast<SubSport>(data.at(0));
+        this->diveTypes = static_cast<SubSport>(data.at(0));
         break;
     default:
         qWarning() << "unknown dive_alarm message field number" << fieldId;

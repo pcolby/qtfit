@@ -85,7 +85,7 @@ bool FileCreatorMessagePrivate::setField(
             qWarning() << "file_creator.softwareVersion size is" << data.size() << "but should be" << 2;
             return false;
         }
-        softwareVersion = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->softwareVersion = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:file_creator.hardwareVersion
         if (baseType != FitBaseType::Uint8) {
@@ -97,7 +97,7 @@ bool FileCreatorMessagePrivate::setField(
             qWarning() << "file_creator.hardwareVersion size is" << data.size() << "but should be" << 1;
             return false;
         }
-        hardwareVersion = static_cast<quint8>(data.at(0));
+        this->hardwareVersion = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown file_creator message field number" << fieldId;

@@ -275,7 +275,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:device_info.deviceIndex
         if (baseType != FitBaseType::Uint8) {
@@ -287,7 +287,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.deviceIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        deviceIndex = static_cast<DeviceIndex>(data.at(0));
+        this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:device_info.deviceType
         if (baseType != FitBaseType::Uint8) {
@@ -299,7 +299,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.deviceType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        deviceType = static_cast<quint8>(data.at(0));
+        this->deviceType = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:device_info.manufacturer
         if (baseType != FitBaseType::Uint16) {
@@ -311,7 +311,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.manufacturer size is" << data.size() << "but should be" << 2;
             return false;
         }
-        manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
         break;
     case 3: // See Profile.xlsx::Messages:device_info.serialNumber
         if (baseType != FitBaseType::Uint32z) {
@@ -323,7 +323,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.serialNumber size is" << data.size() << "but should be" << 4;
             return false;
         }
-        serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
+        this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
         break;
     case 4: // See Profile.xlsx::Messages:device_info.product
         if (baseType != FitBaseType::Uint16) {
@@ -335,7 +335,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.product size is" << data.size() << "but should be" << 2;
             return false;
         }
-        product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:device_info.softwareVersion
         if (baseType != FitBaseType::Uint16) {
@@ -347,7 +347,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.softwareVersion size is" << data.size() << "but should be" << 2;
             return false;
         }
-        softwareVersion = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->softwareVersion = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:device_info.hardwareVersion
         if (baseType != FitBaseType::Uint8) {
@@ -359,7 +359,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.hardwareVersion size is" << data.size() << "but should be" << 1;
             return false;
         }
-        hardwareVersion = static_cast<quint8>(data.at(0));
+        this->hardwareVersion = static_cast<quint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:device_info.cumOperatingTime
         if (baseType != FitBaseType::Uint32) {
@@ -371,7 +371,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.cumOperatingTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        cumOperatingTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->cumOperatingTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 10: // See Profile.xlsx::Messages:device_info.batteryVoltage
         if (baseType != FitBaseType::Uint16) {
@@ -383,7 +383,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.batteryVoltage size is" << data.size() << "but should be" << 2;
             return false;
         }
-        batteryVoltage = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->batteryVoltage = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 11: // See Profile.xlsx::Messages:device_info.batteryStatus
         if (baseType != FitBaseType::Uint8) {
@@ -395,7 +395,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.batteryStatus size is" << data.size() << "but should be" << 1;
             return false;
         }
-        batteryStatus = static_cast<BatteryStatus>(data.at(0));
+        this->batteryStatus = static_cast<BatteryStatus>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:device_info.sensorPosition
         if (baseType != FitBaseType::Enum) {
@@ -407,7 +407,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.sensorPosition size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sensorPosition = static_cast<BodyLocation>(data.at(0));
+        this->sensorPosition = static_cast<BodyLocation>(data.at(0));
         break;
     case 19: // See Profile.xlsx::Messages:device_info.descriptor
         if (baseType != FitBaseType::String) {
@@ -419,7 +419,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.descriptor size is" << data.size() << "but should be" << 1;
             return false;
         }
-        descriptor = QString::fromUtf8(data);
+        this->descriptor = QString::fromUtf8(data);
         break;
     case 20: // See Profile.xlsx::Messages:device_info.antTransmissionType
         if (baseType != FitBaseType::Uint8z) {
@@ -431,7 +431,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.antTransmissionType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        antTransmissionType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->antTransmissionType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     case 21: // See Profile.xlsx::Messages:device_info.antDeviceNumber
         if (baseType != FitBaseType::Uint16z) {
@@ -443,7 +443,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.antDeviceNumber size is" << data.size() << "but should be" << 2;
             return false;
         }
-        antDeviceNumber = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->antDeviceNumber = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
         break;
     case 22: // See Profile.xlsx::Messages:device_info.antNetwork
         if (baseType != FitBaseType::Enum) {
@@ -455,7 +455,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.antNetwork size is" << data.size() << "but should be" << 1;
             return false;
         }
-        antNetwork = static_cast<AntNetwork>(data.at(0));
+        this->antNetwork = static_cast<AntNetwork>(data.at(0));
         break;
     case 25: // See Profile.xlsx::Messages:device_info.sourceType
         if (baseType != FitBaseType::Enum) {
@@ -467,7 +467,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.sourceType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sourceType = static_cast<SourceType>(data.at(0));
+        this->sourceType = static_cast<SourceType>(data.at(0));
         break;
     case 27: // See Profile.xlsx::Messages:device_info.productName
         if (baseType != FitBaseType::String) {
@@ -479,7 +479,7 @@ bool DeviceInfoMessagePrivate::setField(
             qWarning() << "device_info.productName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        productName = QString::fromUtf8(data);
+        this->productName = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown device_info message field number" << fieldId;

@@ -193,7 +193,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:blood_pressure.systolicPressure
         if (baseType != FitBaseType::Uint16) {
@@ -205,7 +205,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.systolicPressure size is" << data.size() << "but should be" << 2;
             return false;
         }
-        systolicPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->systolicPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:blood_pressure.diastolicPressure
         if (baseType != FitBaseType::Uint16) {
@@ -217,7 +217,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.diastolicPressure size is" << data.size() << "but should be" << 2;
             return false;
         }
-        diastolicPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->diastolicPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:blood_pressure.meanArterialPressure
         if (baseType != FitBaseType::Uint16) {
@@ -229,7 +229,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.meanArterialPressure size is" << data.size() << "but should be" << 2;
             return false;
         }
-        meanArterialPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->meanArterialPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:blood_pressure.map3SampleMean
         if (baseType != FitBaseType::Uint16) {
@@ -241,7 +241,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.map3SampleMean size is" << data.size() << "but should be" << 2;
             return false;
         }
-        map3SampleMean = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->map3SampleMean = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:blood_pressure.mapMorningValues
         if (baseType != FitBaseType::Uint16) {
@@ -253,7 +253,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.mapMorningValues size is" << data.size() << "but should be" << 2;
             return false;
         }
-        mapMorningValues = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->mapMorningValues = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:blood_pressure.mapEveningValues
         if (baseType != FitBaseType::Uint16) {
@@ -265,7 +265,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.mapEveningValues size is" << data.size() << "but should be" << 2;
             return false;
         }
-        mapEveningValues = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->mapEveningValues = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:blood_pressure.heartRate
         if (baseType != FitBaseType::Uint8) {
@@ -277,7 +277,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.heartRate size is" << data.size() << "but should be" << 1;
             return false;
         }
-        heartRate = static_cast<quint8>(data.at(0));
+        this->heartRate = static_cast<quint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:blood_pressure.heartRateType
         if (baseType != FitBaseType::Enum) {
@@ -289,7 +289,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.heartRateType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        heartRateType = static_cast<HrType>(data.at(0));
+        this->heartRateType = static_cast<HrType>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:blood_pressure.status
         if (baseType != FitBaseType::Enum) {
@@ -301,7 +301,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.status size is" << data.size() << "but should be" << 1;
             return false;
         }
-        status = static_cast<BpStatus>(data.at(0));
+        this->status = static_cast<BpStatus>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:blood_pressure.userProfileIndex
         if (baseType != FitBaseType::Uint16) {
@@ -313,7 +313,7 @@ bool BloodPressureMessagePrivate::setField(
             qWarning() << "blood_pressure.userProfileIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     default:
         qWarning() << "unknown blood_pressure message field number" << fieldId;

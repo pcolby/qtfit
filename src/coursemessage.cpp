@@ -108,7 +108,7 @@ bool CourseMessagePrivate::setField(
             qWarning() << "course.sport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sport = static_cast<Sport>(data.at(0));
+        this->sport = static_cast<Sport>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:course.name
         if (baseType != FitBaseType::String) {
@@ -120,7 +120,7 @@ bool CourseMessagePrivate::setField(
             qWarning() << "course.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = QString::fromUtf8(data);
+        this->name = QString::fromUtf8(data);
         break;
     case 6: // See Profile.xlsx::Messages:course.capabilities
         if (baseType != FitBaseType::Uint32z) {
@@ -132,7 +132,7 @@ bool CourseMessagePrivate::setField(
             qWarning() << "course.capabilities size is" << data.size() << "but should be" << 4;
             return false;
         }
-        capabilities = static_cast<CourseCapabilities>(bigEndian ? qFromBigEndian<CourseCapabilities>(data) : qFromLittleEndian<CourseCapabilities>(data));
+        this->capabilities = static_cast<CourseCapabilities>(bigEndian ? qFromBigEndian<CourseCapabilities>(data) : qFromLittleEndian<CourseCapabilities>(data));
         break;
     case 7: // See Profile.xlsx::Messages:course.subSport
         if (baseType != FitBaseType::Enum) {
@@ -144,7 +144,7 @@ bool CourseMessagePrivate::setField(
             qWarning() << "course.subSport size is" << data.size() << "but should be" << 1;
             return false;
         }
-        subSport = static_cast<SubSport>(data.at(0));
+        this->subSport = static_cast<SubSport>(data.at(0));
         break;
     default:
         qWarning() << "unknown course message field number" << fieldId;

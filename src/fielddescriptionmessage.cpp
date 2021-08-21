@@ -224,7 +224,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.developerDataIndex size is" << data.size() << "but should be" << 1;
             return false;
         }
-        developerDataIndex = static_cast<quint8>(data.at(0));
+        this->developerDataIndex = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:field_description.fieldDefinitionNumber
         if (baseType != FitBaseType::Uint8) {
@@ -236,7 +236,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.fieldDefinitionNumber size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fieldDefinitionNumber = static_cast<quint8>(data.at(0));
+        this->fieldDefinitionNumber = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:field_description.fitBaseTypeId
         if (baseType != FitBaseType::Uint8) {
@@ -248,7 +248,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.fitBaseTypeId size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fitBaseTypeId = static_cast<FitBaseType>(data.at(0));
+        this->fitBaseTypeId = static_cast<FitBaseType>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:field_description.fieldName
         if (baseType != FitBaseType::String) {
@@ -260,7 +260,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.fieldName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fieldName = QString::fromUtf8(data);
+        this->fieldName = QString::fromUtf8(data);
         break;
     case 4: // See Profile.xlsx::Messages:field_description.array
         if (baseType != FitBaseType::Uint8) {
@@ -272,7 +272,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.array size is" << data.size() << "but should be" << 1;
             return false;
         }
-        array = static_cast<quint8>(data.at(0));
+        this->array = static_cast<quint8>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:field_description.components
         if (baseType != FitBaseType::String) {
@@ -284,7 +284,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.components size is" << data.size() << "but should be" << 1;
             return false;
         }
-        components = QString::fromUtf8(data);
+        this->components = QString::fromUtf8(data);
         break;
     case 6: // See Profile.xlsx::Messages:field_description.scale
         if (baseType != FitBaseType::Uint8) {
@@ -296,7 +296,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.scale size is" << data.size() << "but should be" << 1;
             return false;
         }
-        scale = static_cast<quint8>(data.at(0));
+        this->scale = static_cast<quint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:field_description.offset
         if (baseType != FitBaseType::Sint8) {
@@ -308,7 +308,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.offset size is" << data.size() << "but should be" << 1;
             return false;
         }
-        offset = static_cast<qint8>(data.at(0));
+        this->offset = static_cast<qint8>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:field_description.units
         if (baseType != FitBaseType::String) {
@@ -320,7 +320,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.units size is" << data.size() << "but should be" << 1;
             return false;
         }
-        units = QString::fromUtf8(data);
+        this->units = QString::fromUtf8(data);
         break;
     case 9: // See Profile.xlsx::Messages:field_description.bits
         if (baseType != FitBaseType::String) {
@@ -332,7 +332,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.bits size is" << data.size() << "but should be" << 1;
             return false;
         }
-        bits = QString::fromUtf8(data);
+        this->bits = QString::fromUtf8(data);
         break;
     case 10: // See Profile.xlsx::Messages:field_description.accumulate
         if (baseType != FitBaseType::String) {
@@ -344,7 +344,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.accumulate size is" << data.size() << "but should be" << 1;
             return false;
         }
-        accumulate = QString::fromUtf8(data);
+        this->accumulate = QString::fromUtf8(data);
         break;
     case 13: // See Profile.xlsx::Messages:field_description.fitBaseUnitId
         if (baseType != FitBaseType::Uint16) {
@@ -356,7 +356,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.fitBaseUnitId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        fitBaseUnitId = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        this->fitBaseUnitId = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
         break;
     case 14: // See Profile.xlsx::Messages:field_description.nativeMesgNum
         if (baseType != FitBaseType::Uint16) {
@@ -368,7 +368,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.nativeMesgNum size is" << data.size() << "but should be" << 2;
             return false;
         }
-        nativeMesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
+        this->nativeMesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
         break;
     case 15: // See Profile.xlsx::Messages:field_description.nativeFieldNum
         if (baseType != FitBaseType::Uint8) {
@@ -380,7 +380,7 @@ bool FieldDescriptionMessagePrivate::setField(
             qWarning() << "field_description.nativeFieldNum size is" << data.size() << "but should be" << 1;
             return false;
         }
-        nativeFieldNum = static_cast<quint8>(data.at(0));
+        this->nativeFieldNum = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown field_description message field number" << fieldId;

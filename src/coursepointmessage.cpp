@@ -156,7 +156,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 1: // See Profile.xlsx::Messages:course_point.timestamp
         if (baseType != FitBaseType::Uint32) {
@@ -168,7 +168,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 2: // See Profile.xlsx::Messages:course_point.positionLat
         if (baseType != FitBaseType::Sint32) {
@@ -180,7 +180,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.positionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:course_point.positionLong
         if (baseType != FitBaseType::Sint32) {
@@ -192,7 +192,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.positionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:course_point.distance
         if (baseType != FitBaseType::Uint32) {
@@ -204,7 +204,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.distance size is" << data.size() << "but should be" << 4;
             return false;
         }
-        distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:course_point.type
         if (baseType != FitBaseType::Enum) {
@@ -216,7 +216,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.type size is" << data.size() << "but should be" << 1;
             return false;
         }
-        type = static_cast<CoursePoint>(data.at(0));
+        this->type = static_cast<CoursePoint>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:course_point.name
         if (baseType != FitBaseType::String) {
@@ -228,7 +228,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = QString::fromUtf8(data);
+        this->name = QString::fromUtf8(data);
         break;
     case 8: // See Profile.xlsx::Messages:course_point.favorite
         if (baseType != FitBaseType::Bool) {
@@ -240,7 +240,7 @@ bool CoursePointMessagePrivate::setField(
             qWarning() << "course_point.favorite size is" << data.size() << "but should be" << 0;
             return false;
         }
-        favorite = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->favorite = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
         break;
     default:
         qWarning() << "unknown course_point message field number" << fieldId;

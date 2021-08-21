@@ -121,7 +121,7 @@ bool HrmProfileMessagePrivate::setField(
             qWarning() << "hrm_profile.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:hrm_profile.enabled
         if (baseType != FitBaseType::Bool) {
@@ -133,7 +133,7 @@ bool HrmProfileMessagePrivate::setField(
             qWarning() << "hrm_profile.enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
         break;
     case 1: // See Profile.xlsx::Messages:hrm_profile.hrmAntId
         if (baseType != FitBaseType::Uint16z) {
@@ -145,7 +145,7 @@ bool HrmProfileMessagePrivate::setField(
             qWarning() << "hrm_profile.hrmAntId size is" << data.size() << "but should be" << 2;
             return false;
         }
-        hrmAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        this->hrmAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
         break;
     case 2: // See Profile.xlsx::Messages:hrm_profile.logHrv
         if (baseType != FitBaseType::Bool) {
@@ -157,7 +157,7 @@ bool HrmProfileMessagePrivate::setField(
             qWarning() << "hrm_profile.logHrv size is" << data.size() << "but should be" << 0;
             return false;
         }
-        logHrv = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->logHrv = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
         break;
     case 3: // See Profile.xlsx::Messages:hrm_profile.hrmAntIdTransType
         if (baseType != FitBaseType::Uint8z) {
@@ -169,7 +169,7 @@ bool HrmProfileMessagePrivate::setField(
             qWarning() << "hrm_profile.hrmAntIdTransType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        hrmAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        this->hrmAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     default:
         qWarning() << "unknown hrm_profile message field number" << fieldId;

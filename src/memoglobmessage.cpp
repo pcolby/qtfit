@@ -109,7 +109,7 @@ bool MemoGlobMessagePrivate::setField(
             qWarning() << "memo_glob.partIndex size is" << data.size() << "but should be" << 4;
             return false;
         }
-        partIndex = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->partIndex = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:memo_glob.memo
         if (baseType != FitBaseType::Byte) {
@@ -121,7 +121,7 @@ bool MemoGlobMessagePrivate::setField(
             qWarning() << "memo_glob.memo size is" << data.size() << "but should be" << 1;
             return false;
         }
-        memo = static_cast<quint8>(data.at(0));
+        this->memo = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:memo_glob.messageNumber
         if (baseType != FitBaseType::Uint16) {
@@ -133,7 +133,7 @@ bool MemoGlobMessagePrivate::setField(
             qWarning() << "memo_glob.messageNumber size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageNumber = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->messageNumber = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:memo_glob.messageIndex
         if (baseType != FitBaseType::Uint16) {
@@ -145,7 +145,7 @@ bool MemoGlobMessagePrivate::setField(
             qWarning() << "memo_glob.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     default:
         qWarning() << "unknown memo_glob message field number" << fieldId;

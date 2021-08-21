@@ -96,7 +96,7 @@ bool SpeedZoneMessagePrivate::setField(
             qWarning() << "speed_zone.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:speed_zone.highValue
         if (baseType != FitBaseType::Uint16) {
@@ -108,7 +108,7 @@ bool SpeedZoneMessagePrivate::setField(
             qWarning() << "speed_zone.highValue size is" << data.size() << "but should be" << 2;
             return false;
         }
-        highValue = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->highValue = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:speed_zone.name
         if (baseType != FitBaseType::String) {
@@ -120,7 +120,7 @@ bool SpeedZoneMessagePrivate::setField(
             qWarning() << "speed_zone.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = QString::fromUtf8(data);
+        this->name = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown speed_zone message field number" << fieldId;

@@ -132,7 +132,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.messageIndex size is" << data.size() << "but should be" << 2;
             return false;
         }
-        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:file_capabilities.type
         if (baseType != FitBaseType::Enum) {
@@ -144,7 +144,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.type size is" << data.size() << "but should be" << 1;
             return false;
         }
-        type = static_cast<File>(data.at(0));
+        this->type = static_cast<File>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:file_capabilities.flags
         if (baseType != FitBaseType::Uint8z) {
@@ -156,7 +156,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.flags size is" << data.size() << "but should be" << 1;
             return false;
         }
-        flags = static_cast<FileFlags>(bigEndian ? qFromBigEndian<FileFlags>(data) : qFromLittleEndian<FileFlags>(data));
+        this->flags = static_cast<FileFlags>(bigEndian ? qFromBigEndian<FileFlags>(data) : qFromLittleEndian<FileFlags>(data));
         break;
     case 2: // See Profile.xlsx::Messages:file_capabilities.directory
         if (baseType != FitBaseType::String) {
@@ -168,7 +168,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.directory size is" << data.size() << "but should be" << 1;
             return false;
         }
-        directory = QString::fromUtf8(data);
+        this->directory = QString::fromUtf8(data);
         break;
     case 3: // See Profile.xlsx::Messages:file_capabilities.maxCount
         if (baseType != FitBaseType::Uint16) {
@@ -180,7 +180,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.maxCount size is" << data.size() << "but should be" << 2;
             return false;
         }
-        maxCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->maxCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:file_capabilities.maxSize
         if (baseType != FitBaseType::Uint32) {
@@ -192,7 +192,7 @@ bool FileCapabilitiesMessagePrivate::setField(
             qWarning() << "file_capabilities.maxSize size is" << data.size() << "but should be" << 4;
             return false;
         }
-        maxSize = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->maxSize = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown file_capabilities message field number" << fieldId;

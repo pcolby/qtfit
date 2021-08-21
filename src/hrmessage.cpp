@@ -133,7 +133,7 @@ bool HrMessagePrivate::setField(
             qWarning() << "hr.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:hr.fractionalTimestamp
         if (baseType != FitBaseType::Uint16) {
@@ -145,7 +145,7 @@ bool HrMessagePrivate::setField(
             qWarning() << "hr.fractionalTimestamp size is" << data.size() << "but should be" << 2;
             return false;
         }
-        fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:hr.time256
         if (baseType != FitBaseType::Uint8) {
@@ -157,7 +157,7 @@ bool HrMessagePrivate::setField(
             qWarning() << "hr.time256 size is" << data.size() << "but should be" << 1;
             return false;
         }
-        time256 = static_cast<quint8>(data.at(0));
+        this->time256 = static_cast<quint8>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:hr.filteredBpm
         if (baseType != FitBaseType::Uint8) {
@@ -169,7 +169,7 @@ bool HrMessagePrivate::setField(
             qWarning() << "hr.filteredBpm size is" << data.size() << "but should be" << 1;
             return false;
         }
-        filteredBpm = static_cast<quint8>(data.at(0));
+        this->filteredBpm = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:hr.eventTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -181,7 +181,7 @@ bool HrMessagePrivate::setField(
             qWarning() << "hr.eventTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        eventTimestamp = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->eventTimestamp = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 10: // See Profile.xlsx::Messages:hr.eventTimestamp12
         if (baseType != FitBaseType::Byte) {
@@ -193,7 +193,7 @@ bool HrMessagePrivate::setField(
             qWarning() << "hr.eventTimestamp12 size is" << data.size() << "but should be" << 1;
             return false;
         }
-        eventTimestamp12 = static_cast<quint8>(data.at(0));
+        this->eventTimestamp12 = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown hr message field number" << fieldId;

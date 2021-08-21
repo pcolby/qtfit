@@ -181,7 +181,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:jump.distance
         if (baseType != FitBaseType::Float32) {
@@ -193,7 +193,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.distance size is" << data.size() << "but should be" << 4;
             return false;
         }
-        distance = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->distance = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 1: // See Profile.xlsx::Messages:jump.height
         if (baseType != FitBaseType::Float32) {
@@ -205,7 +205,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.height size is" << data.size() << "but should be" << 4;
             return false;
         }
-        height = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->height = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 2: // See Profile.xlsx::Messages:jump.rotations
         if (baseType != FitBaseType::Uint8) {
@@ -217,7 +217,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.rotations size is" << data.size() << "but should be" << 1;
             return false;
         }
-        rotations = static_cast<quint8>(data.at(0));
+        this->rotations = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:jump.hangTime
         if (baseType != FitBaseType::Float32) {
@@ -229,7 +229,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.hangTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        hangTime = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->hangTime = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 4: // See Profile.xlsx::Messages:jump.score
         if (baseType != FitBaseType::Float32) {
@@ -241,7 +241,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.score size is" << data.size() << "but should be" << 4;
             return false;
         }
-        score = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        this->score = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
         break;
     case 5: // See Profile.xlsx::Messages:jump.positionLat
         if (baseType != FitBaseType::Sint32) {
@@ -253,7 +253,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.positionLat size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:jump.positionLong
         if (baseType != FitBaseType::Sint32) {
@@ -265,7 +265,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.positionLong size is" << data.size() << "but should be" << 4;
             return false;
         }
-        positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:jump.speed
         if (baseType != FitBaseType::Uint16) {
@@ -277,7 +277,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.speed size is" << data.size() << "but should be" << 2;
             return false;
         }
-        speed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->speed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:jump.enhancedSpeed
         if (baseType != FitBaseType::Uint32) {
@@ -289,7 +289,7 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.enhancedSpeed size is" << data.size() << "but should be" << 4;
             return false;
         }
-        enhancedSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->enhancedSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "unknown jump message field number" << fieldId;

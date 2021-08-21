@@ -157,7 +157,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.timestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 0: // See Profile.xlsx::Messages:activity.totalTimerTime
         if (baseType != FitBaseType::Uint32) {
@@ -169,7 +169,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.totalTimerTime size is" << data.size() << "but should be" << 4;
             return false;
         }
-        totalTimerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        this->totalTimerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 1: // See Profile.xlsx::Messages:activity.numSessions
         if (baseType != FitBaseType::Uint16) {
@@ -181,7 +181,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.numSessions size is" << data.size() << "but should be" << 2;
             return false;
         }
-        numSessions = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        this->numSessions = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:activity.type
         if (baseType != FitBaseType::Enum) {
@@ -193,7 +193,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.type size is" << data.size() << "but should be" << 1;
             return false;
         }
-        type = static_cast<Activity>(data.at(0));
+        this->type = static_cast<Activity>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:activity.event
         if (baseType != FitBaseType::Enum) {
@@ -205,7 +205,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.event size is" << data.size() << "but should be" << 1;
             return false;
         }
-        event = static_cast<Event>(data.at(0));
+        this->event = static_cast<Event>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:activity.eventType
         if (baseType != FitBaseType::Enum) {
@@ -217,7 +217,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.eventType size is" << data.size() << "but should be" << 1;
             return false;
         }
-        eventType = static_cast<EventType>(data.at(0));
+        this->eventType = static_cast<EventType>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:activity.localTimestamp
         if (baseType != FitBaseType::Uint32) {
@@ -229,7 +229,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.localTimestamp size is" << data.size() << "but should be" << 4;
             return false;
         }
-        localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        this->localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
         break;
     case 6: // See Profile.xlsx::Messages:activity.eventGroup
         if (baseType != FitBaseType::Uint8) {
@@ -241,7 +241,7 @@ bool ActivityMessagePrivate::setField(
             qWarning() << "activity.eventGroup size is" << data.size() << "but should be" << 1;
             return false;
         }
-        eventGroup = static_cast<quint8>(data.at(0));
+        this->eventGroup = static_cast<quint8>(data.at(0));
         break;
     default:
         qWarning() << "unknown activity message field number" << fieldId;
