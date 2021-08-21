@@ -308,16 +308,23 @@ $(document).ready(function(){initNavTree('climbpromessage_8cpp_source.html','');
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;climb_pro.currentDist size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 4;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown climb_pro message field number&quot;</span> &lt;&lt; fieldId;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a> = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">float</span> *<span class="keyword">&gt;</span>(&amp;localEndian);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown climb_pro message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
 <div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
 <div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
 <div class="ttc" id="aclassClimbProMessagePrivate_html"><div class="ttname"><a href="classClimbProMessagePrivate.html">ClimbProMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="climbpromessage__p_8h_source.html#l00034">climbpromessage_p.h:34</a></div></div>
