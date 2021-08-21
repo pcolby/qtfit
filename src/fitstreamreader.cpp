@@ -402,10 +402,10 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
         FieldDefinition field;
         field.number = record.at(pos);
         field.size = record.at(pos+1);
-        field.type = record.at(pos+2);
+        field.baseType = static_cast<FitBaseType>(record.at(pos+2));
         qDebug() << __func__ << "field" << i << "number" << field.number;
         qDebug() << __func__ << "field" << i << "size" << field.size;
-        qDebug() << __func__ << "field" << i << "type" << field.type;
+        qDebug() << __func__ << "field" << i << "type" << static_cast<quint8>(field.baseType);
         defn.fieldDefinitions.append(field);
         defn.recordSize += field.size;
     }
