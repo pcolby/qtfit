@@ -167,7 +167,7 @@ bool SegmentIdMessagePrivate::setField(const int fieldId, const QByteArray &data
             qWarning() << "segment_id.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = static_cast<QString>(data.at(0));
+        name = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:segment_id.uuid
         if (baseType != FitBaseType::String) {
@@ -179,7 +179,7 @@ bool SegmentIdMessagePrivate::setField(const int fieldId, const QByteArray &data
             qWarning() << "segment_id.uuid size is" << data.size() << "but should be" << 1;
             return false;
         }
-        uuid = static_cast<QString>(data.at(0));
+        uuid = QString::fromUtf8(data);
         break;
     case 2: // See Profile.xlsx::Messages:segment_id.sport
         if (baseType != FitBaseType::Enum) {

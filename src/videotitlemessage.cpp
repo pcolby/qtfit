@@ -120,7 +120,7 @@ bool VideoTitleMessagePrivate::setField(const int fieldId, const QByteArray &dat
             qWarning() << "video_title.text size is" << data.size() << "but should be" << 1;
             return false;
         }
-        text = static_cast<QString>(data.at(0));
+        text = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown video_title message field number" << fieldId;

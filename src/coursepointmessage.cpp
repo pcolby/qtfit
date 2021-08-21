@@ -228,7 +228,7 @@ bool CoursePointMessagePrivate::setField(const int fieldId, const QByteArray &da
             qWarning() << "course_point.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = static_cast<QString>(data.at(0));
+        name = QString::fromUtf8(data);
         break;
     case 8: // See Profile.xlsx::Messages:course_point.favorite
         if (baseType != FitBaseType::Bool) {

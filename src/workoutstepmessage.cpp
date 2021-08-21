@@ -251,7 +251,7 @@ bool WorkoutStepMessagePrivate::setField(const int fieldId, const QByteArray &da
             qWarning() << "workout_step.wktStepName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        wktStepName = static_cast<QString>(data.at(0));
+        wktStepName = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:workout_step.durationType
         if (baseType != FitBaseType::Enum) {
@@ -347,7 +347,7 @@ bool WorkoutStepMessagePrivate::setField(const int fieldId, const QByteArray &da
             qWarning() << "workout_step.notes size is" << data.size() << "but should be" << 1;
             return false;
         }
-        notes = static_cast<QString>(data.at(0));
+        notes = QString::fromUtf8(data);
         break;
     case 9: // See Profile.xlsx::Messages:workout_step.equipment
         if (baseType != FitBaseType::Enum) {

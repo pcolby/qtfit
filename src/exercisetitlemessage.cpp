@@ -144,7 +144,7 @@ bool ExerciseTitleMessagePrivate::setField(const int fieldId, const QByteArray &
             qWarning() << "exercise_title.wktStepName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        wktStepName = static_cast<QString>(data.at(0));
+        wktStepName = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown exercise_title message field number" << fieldId;

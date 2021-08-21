@@ -180,7 +180,7 @@ bool WorkoutMessagePrivate::setField(const int fieldId, const QByteArray &data,
             qWarning() << "workout.wktName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        wktName = static_cast<QString>(data.at(0));
+        wktName = QString::fromUtf8(data);
         break;
     case 11: // See Profile.xlsx::Messages:workout.subSport
         if (baseType != FitBaseType::Enum) {

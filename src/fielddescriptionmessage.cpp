@@ -260,7 +260,7 @@ bool FieldDescriptionMessagePrivate::setField(const int fieldId, const QByteArra
             qWarning() << "field_description.fieldName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        fieldName = static_cast<QString>(data.at(0));
+        fieldName = QString::fromUtf8(data);
         break;
     case 4: // See Profile.xlsx::Messages:field_description.array
         if (baseType != FitBaseType::Uint8) {
@@ -284,7 +284,7 @@ bool FieldDescriptionMessagePrivate::setField(const int fieldId, const QByteArra
             qWarning() << "field_description.components size is" << data.size() << "but should be" << 1;
             return false;
         }
-        components = static_cast<QString>(data.at(0));
+        components = QString::fromUtf8(data);
         break;
     case 6: // See Profile.xlsx::Messages:field_description.scale
         if (baseType != FitBaseType::Uint8) {
@@ -320,7 +320,7 @@ bool FieldDescriptionMessagePrivate::setField(const int fieldId, const QByteArra
             qWarning() << "field_description.units size is" << data.size() << "but should be" << 1;
             return false;
         }
-        units = static_cast<QString>(data.at(0));
+        units = QString::fromUtf8(data);
         break;
     case 9: // See Profile.xlsx::Messages:field_description.bits
         if (baseType != FitBaseType::String) {
@@ -332,7 +332,7 @@ bool FieldDescriptionMessagePrivate::setField(const int fieldId, const QByteArra
             qWarning() << "field_description.bits size is" << data.size() << "but should be" << 1;
             return false;
         }
-        bits = static_cast<QString>(data.at(0));
+        bits = QString::fromUtf8(data);
         break;
     case 10: // See Profile.xlsx::Messages:field_description.accumulate
         if (baseType != FitBaseType::String) {
@@ -344,7 +344,7 @@ bool FieldDescriptionMessagePrivate::setField(const int fieldId, const QByteArra
             qWarning() << "field_description.accumulate size is" << data.size() << "but should be" << 1;
             return false;
         }
-        accumulate = static_cast<QString>(data.at(0));
+        accumulate = QString::fromUtf8(data);
         break;
     case 13: // See Profile.xlsx::Messages:field_description.fitBaseUnitId
         if (baseType != FitBaseType::Uint16) {

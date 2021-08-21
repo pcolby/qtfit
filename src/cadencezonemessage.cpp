@@ -120,7 +120,7 @@ bool CadenceZoneMessagePrivate::setField(const int fieldId, const QByteArray &da
             qWarning() << "cadence_zone.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = static_cast<QString>(data.at(0));
+        name = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown cadence_zone message field number" << fieldId;

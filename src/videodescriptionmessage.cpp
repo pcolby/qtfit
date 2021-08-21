@@ -120,7 +120,7 @@ bool VideoDescriptionMessagePrivate::setField(const int fieldId, const QByteArra
             qWarning() << "video_description.text size is" << data.size() << "but should be" << 1;
             return false;
         }
-        text = static_cast<QString>(data.at(0));
+        text = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown video_description message field number" << fieldId;

@@ -155,7 +155,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(const int fieldId, const QB
             qWarning() << "segment_leaderboard_entry.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = static_cast<QString>(data.at(0));
+        name = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:segment_leaderboard_entry.type
         if (baseType != FitBaseType::Enum) {
@@ -215,7 +215,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(const int fieldId, const QB
             qWarning() << "segment_leaderboard_entry.activityIdString size is" << data.size() << "but should be" << 1;
             return false;
         }
-        activityIdString = static_cast<QString>(data.at(0));
+        activityIdString = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown segment_leaderboard_entry message field number" << fieldId;

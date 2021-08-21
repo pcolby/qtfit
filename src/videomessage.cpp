@@ -95,7 +95,7 @@ bool VideoMessagePrivate::setField(const int fieldId, const QByteArray &data,
             qWarning() << "video.url size is" << data.size() << "but should be" << 1;
             return false;
         }
-        url = static_cast<QString>(data.at(0));
+        url = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:video.hostingProvider
         if (baseType != FitBaseType::String) {
@@ -107,7 +107,7 @@ bool VideoMessagePrivate::setField(const int fieldId, const QByteArray &data,
             qWarning() << "video.hostingProvider size is" << data.size() << "but should be" << 1;
             return false;
         }
-        hostingProvider = static_cast<QString>(data.at(0));
+        hostingProvider = QString::fromUtf8(data);
         break;
     case 2: // See Profile.xlsx::Messages:video.duration
         if (baseType != FitBaseType::Uint32) {

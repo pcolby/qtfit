@@ -156,7 +156,7 @@ bool CameraEventMessagePrivate::setField(const int fieldId, const QByteArray &da
             qWarning() << "camera_event.cameraFileUuid size is" << data.size() << "but should be" << 1;
             return false;
         }
-        cameraFileUuid = static_cast<QString>(data.at(0));
+        cameraFileUuid = QString::fromUtf8(data);
         break;
     case 3: // See Profile.xlsx::Messages:camera_event.cameraOrientation
         if (baseType != FitBaseType::Enum) {

@@ -192,7 +192,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(const int fieldId, const 
             qWarning() << "exd_data_field_configuration.title size is" << data.size() << "but should be" << 1;
             return false;
         }
-        title = static_cast<QString>(data.at(0));
+        title = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown exd_data_field_configuration message field number" << fieldId;

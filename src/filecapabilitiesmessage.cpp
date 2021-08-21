@@ -168,7 +168,7 @@ bool FileCapabilitiesMessagePrivate::setField(const int fieldId, const QByteArra
             qWarning() << "file_capabilities.directory size is" << data.size() << "but should be" << 1;
             return false;
         }
-        directory = static_cast<QString>(data.at(0));
+        directory = QString::fromUtf8(data);
         break;
     case 3: // See Profile.xlsx::Messages:file_capabilities.maxCount
         if (baseType != FitBaseType::Uint16) {

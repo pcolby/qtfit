@@ -120,7 +120,7 @@ bool CourseMessagePrivate::setField(const int fieldId, const QByteArray &data,
             qWarning() << "course.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = static_cast<QString>(data.at(0));
+        name = QString::fromUtf8(data);
         break;
     case 6: // See Profile.xlsx::Messages:course.capabilities
         if (baseType != FitBaseType::Uint32z) {

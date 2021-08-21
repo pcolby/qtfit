@@ -2484,7 +2484,7 @@ bool SessionMessagePrivate::setField(const int fieldId, const QByteArray &data,
             qWarning() << "session.opponentName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        opponentName = static_cast<QString>(data.at(0));
+        opponentName = QString::fromUtf8(data);
         break;
     case 85: // See Profile.xlsx::Messages:session.strokeCount
         if (baseType != FitBaseType::Uint16) {

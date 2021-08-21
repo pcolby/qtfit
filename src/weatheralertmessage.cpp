@@ -144,7 +144,7 @@ bool WeatherAlertMessagePrivate::setField(const int fieldId, const QByteArray &d
             qWarning() << "weather_alert.reportId size is" << data.size() << "but should be" << 1;
             return false;
         }
-        reportId = static_cast<QString>(data.at(0));
+        reportId = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:weather_alert.issueTime
         if (baseType != FitBaseType::Uint32) {

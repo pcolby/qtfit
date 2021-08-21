@@ -420,7 +420,7 @@ bool UserProfileMessagePrivate::setField(const int fieldId, const QByteArray &da
             qWarning() << "user_profile.friendlyName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        friendlyName = static_cast<QString>(data.at(0));
+        friendlyName = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:user_profile.gender
         if (baseType != FitBaseType::Enum) {

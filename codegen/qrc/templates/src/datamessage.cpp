@@ -62,8 +62,8 @@ bool {{ClassName}}Private::setField(const int fieldId, const QByteArray &data,
         }
 {% if field.endianAbility %}
         {{field.name}} = static_cast<{{field.cppType}}>(bigEndian ? qFromBigEndian<{{field.cppType}}>(data) : qFromLittleEndian<{{field.cppType}}>(data));
-{% elif field.baseType == "enum" %}
-        {{field.name}} = static_cast<{{field.cppType}}>(data.at(0));
+{% elif field.baseType == "string" %}
+        {{field.name}} = QString::fromUtf8(data);
 {% else %}
         {{field.name}} = static_cast<{{field.cppType}}>(data.at(0));
 {% endif %}

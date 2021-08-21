@@ -120,7 +120,7 @@ bool SoftwareMessagePrivate::setField(const int fieldId, const QByteArray &data,
             qWarning() << "software.partNumber size is" << data.size() << "but should be" << 1;
             return false;
         }
-        partNumber = static_cast<QString>(data.at(0));
+        partNumber = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown software message field number" << fieldId;

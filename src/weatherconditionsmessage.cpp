@@ -360,7 +360,7 @@ bool WeatherConditionsMessagePrivate::setField(const int fieldId, const QByteArr
             qWarning() << "weather_conditions.location size is" << data.size() << "but should be" << 1;
             return false;
         }
-        location = static_cast<QString>(data.at(0));
+        location = QString::fromUtf8(data);
         break;
     case 9: // See Profile.xlsx::Messages:weather_conditions.observedAtTime
         if (baseType != FitBaseType::Uint32) {

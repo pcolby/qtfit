@@ -120,7 +120,7 @@ bool NmeaSentenceMessagePrivate::setField(const int fieldId, const QByteArray &d
             qWarning() << "nmea_sentence.sentence size is" << data.size() << "but should be" << 1;
             return false;
         }
-        sentence = static_cast<QString>(data.at(0));
+        sentence = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown nmea_sentence message field number" << fieldId;

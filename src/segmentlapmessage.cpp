@@ -1535,7 +1535,7 @@ bool SegmentLapMessagePrivate::setField(const int fieldId, const QByteArray &dat
             qWarning() << "segment_lap.name size is" << data.size() << "but should be" << 1;
             return false;
         }
-        name = static_cast<QString>(data.at(0));
+        name = QString::fromUtf8(data);
         break;
     case 30: // See Profile.xlsx::Messages:segment_lap.normalizedPower
         if (baseType != FitBaseType::Uint16) {
@@ -1967,7 +1967,7 @@ bool SegmentLapMessagePrivate::setField(const int fieldId, const QByteArray &dat
             qWarning() << "segment_lap.uuid size is" << data.size() << "but should be" << 1;
             return false;
         }
-        uuid = static_cast<QString>(data.at(0));
+        uuid = QString::fromUtf8(data);
         break;
     case 66: // See Profile.xlsx::Messages:segment_lap.avgFractionalCadence
         if (baseType != FitBaseType::Uint8) {

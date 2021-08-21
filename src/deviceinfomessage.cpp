@@ -419,7 +419,7 @@ bool DeviceInfoMessagePrivate::setField(const int fieldId, const QByteArray &dat
             qWarning() << "device_info.descriptor size is" << data.size() << "but should be" << 1;
             return false;
         }
-        descriptor = static_cast<QString>(data.at(0));
+        descriptor = QString::fromUtf8(data);
         break;
     case 20: // See Profile.xlsx::Messages:device_info.antTransmissionType
         if (baseType != FitBaseType::Uint8z) {
@@ -479,7 +479,7 @@ bool DeviceInfoMessagePrivate::setField(const int fieldId, const QByteArray &dat
             qWarning() << "device_info.productName size is" << data.size() << "but should be" << 1;
             return false;
         }
-        productName = static_cast<QString>(data.at(0));
+        productName = QString::fromUtf8(data);
         break;
     default:
         qWarning() << "unknown device_info message field number" << fieldId;
