@@ -3,7 +3,7 @@ var classBikeProfileMessagePrivate =
     [ "BikeProfileMessagePrivate", "classBikeProfileMessagePrivate.html#a3d8a39f9adb70575345810140582faa4", null ],
     [ "BikeProfileMessagePrivate", "classBikeProfileMessagePrivate.html#a6c4038ceb286d3c93bd1ae970fb61035", null ],
     [ "~BikeProfileMessagePrivate", "classBikeProfileMessagePrivate.html#af5929c495057d94638179b611d6f1586", null ],
-    [ "setField", "classBikeProfileMessagePrivate.html#a3c5bc6a980aa26377391f7d70e1995e3", null ],
+    [ "setField", "classBikeProfileMessagePrivate.html#ad34ac1f2c7a31b62f55d56e1ff353c32", null ],
     [ "autoPowerZero", "classBikeProfileMessagePrivate.html#abfbdb88d7106ac3a05a35c00c9e1dec7", null ],
     [ "autoWheelCal", "classBikeProfileMessagePrivate.html#a5a785659920b270378f3537418bfe9f4", null ],
     [ "autoWheelsize", "classBikeProfileMessagePrivate.html#af7a23d3fd1795fe6605a434bcc596453", null ],

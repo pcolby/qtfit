@@ -151,8 +151,8 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4e07c444e498df9f62babe69b334dcbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorkoutMessagePrivate.html#a4e07c444e498df9f62babe69b334dcbd">setField</a> (const int fieldId, const QByteArray data, int baseType) override</td></tr>
-<tr class="separator:a4e07c444e498df9f62babe69b334dcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f49d5cc7471141e269a1c49609e9e87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorkoutMessagePrivate.html#a1f49d5cc7471141e269a1c49609e9e87">setField</a> (const int fieldId, const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, const bool bigEndian) override</td></tr>
+<tr class="separator:a1f49d5cc7471141e269a1c49609e9e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -214,17 +214,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="workoutmessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="workoutmessage_8cpp_source.html">workoutmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a7c569412c9131bd10905510918396242">sport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a2e07d238ac8703b0bbf5443e3e25b6b9">capabilities</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ac76b47805040089da0368a7273a87655">WorkoutCapabilities</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#afe52aca133868cc6cd1f7be0f4d7b433">numValidSteps</a>(0xFFFF)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#ab231a605da525e22e98586d114d5671e">subSport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a44a0e5f753b0b253444d98d3b85545a5">poolLength</a>(0xFFFF)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a4a1fe18c2e49d61743306b95ec5c82db">poolLengthUnit</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ababb7084028ea18b035b04e325e6015a">DisplayMeasure</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca1430b92a76961a293db0170266a1541d">MesgNum::Workout</a>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="workoutmessage_8cpp_source.html#l00116">116</a> of file <a class="el" href="workoutmessage_8cpp_source.html">workoutmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a7c569412c9131bd10905510918396242">sport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a2e07d238ac8703b0bbf5443e3e25b6b9">capabilities</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ac76b47805040089da0368a7273a87655">WorkoutCapabilities</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#afe52aca133868cc6cd1f7be0f4d7b433">numValidSteps</a>(0xFFFF)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#ab231a605da525e22e98586d114d5671e">subSport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a44a0e5f753b0b253444d98d3b85545a5">poolLength</a>(0xFFFF)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  , <a class="code" href="classWorkoutMessagePrivate.html#a4a1fe18c2e49d61743306b95ec5c82db">poolLengthUnit</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ababb7084028ea18b035b04e325e6015a">DisplayMeasure</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca1430b92a76961a293db0170266a1541d">MesgNum::Workout</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ae71d76b1cc2ca639b8ba6f4c213a81c1"><div class="ttname"><a href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate::FitDataMessagePrivate</a></div><div class="ttdeci">FitDataMessagePrivate()=delete</div></div>
 <div class="ttc" id="aclassWorkoutMessagePrivate_html_a2e07d238ac8703b0bbf5443e3e25b6b9"><div class="ttname"><a href="classWorkoutMessagePrivate.html#a2e07d238ac8703b0bbf5443e3e25b6b9">WorkoutMessagePrivate::capabilities</a></div><div class="ttdeci">WorkoutCapabilities capabilities</div><div class="ttdef"><b>Definition:</b> <a href="workoutmessage__p_8h_source.html#l00038">workoutmessage_p.h:38</a></div></div>
@@ -266,16 +266,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="workoutmessage_8cpp_source.html#l00125">125</a> of file <a class="el" href="workoutmessage_8cpp_source.html">workoutmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="workoutmessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="workoutmessage_8cpp_source.html">workoutmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4e07c444e498df9f62babe69b334dcbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e07c444e498df9f62babe69b334dcbd">&#9670;&nbsp;</a></span>setField()</h2>
+<a id="a1f49d5cc7471141e269a1c49609e9e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f49d5cc7471141e269a1c49609e9e87">&#9670;&nbsp;</a></span>setField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,14 +292,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QByteArray&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>baseType</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a>&#160;</td>
+          <td class="paramname"><em>baseType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bigEndian</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -313,35 +319,121 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000182">Todo:</a></b></dt><dd>Make base type enum. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000181">Todo:</a></b></dt><dd>Generate implementation. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001074">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001075">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001076">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001077">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001078">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001079">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001080">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate</a>.</p>
+<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="workoutmessage_8cpp_source.html#l00131">131</a> of file <a class="el" href="workoutmessage_8cpp_source.html">workoutmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">//    switch fieldId {</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">//        default:</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">//            return false;</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="workoutmessage_8cpp_source.html#l00133">133</a> of file <a class="el" href="workoutmessage_8cpp_source.html">workoutmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:workout.sport</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.sport has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Enum&quot;</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.sport size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        this-&gt;<a class="code" href="classWorkoutMessagePrivate.html#a7c569412c9131bd10905510918396242">sport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:workout.capabilities</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a18d2aaf1aa7e75a538679722853c8fd5">FitBaseType::Uint32z</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.capabilities has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint32z&quot;</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (data.size() != 4) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.capabilities size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 4;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        this-&gt;<a class="code" href="classWorkoutMessagePrivate.html#a2e07d238ac8703b0bbf5443e3e25b6b9">capabilities</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ac76b47805040089da0368a7273a87655">WorkoutCapabilities</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:workout.numValidSteps</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.numValidSteps has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.numValidSteps size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        this-&gt;<a class="code" href="classWorkoutMessagePrivate.html#afe52aca133868cc6cd1f7be0f4d7b433">numValidSteps</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">case</span> 8: <span class="comment">// See Profile.xlsx::Messages:workout.wktName</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.wktName has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be String&quot;</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.wktName size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        this-&gt;<a class="code" href="classWorkoutMessagePrivate.html#a31c97122c688be40e50138c0f97e3be5">wktName</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">case</span> 11: <span class="comment">// See Profile.xlsx::Messages:workout.subSport</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.subSport has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Enum&quot;</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.subSport size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        this-&gt;<a class="code" href="classWorkoutMessagePrivate.html#ab231a605da525e22e98586d114d5671e">subSport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">case</span> 14: <span class="comment">// See Profile.xlsx::Messages:workout.poolLength</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.poolLength has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.poolLength size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        this-&gt;<a class="code" href="classWorkoutMessagePrivate.html#a44a0e5f753b0b253444d98d3b85545a5">poolLength</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">case</span> 15: <span class="comment">// See Profile.xlsx::Messages:workout.poolLengthUnit</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.poolLengthUnit has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Enum&quot;</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;workout.poolLengthUnit size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        this-&gt;<a class="code" href="classWorkoutMessagePrivate.html#a4a1fe18c2e49d61743306b95ec5c82db">poolLengthUnit</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ababb7084028ea18b035b04e325e6015a">DisplayMeasure</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown workout message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<div class="ttc" id="aclassWorkoutMessagePrivate_html_a31c97122c688be40e50138c0f97e3be5"><div class="ttname"><a href="classWorkoutMessagePrivate.html#a31c97122c688be40e50138c0f97e3be5">WorkoutMessagePrivate::wktName</a></div><div class="ttdeci">QString wktName</div><div class="ttdef"><b>Definition:</b> <a href="workoutmessage__p_8h_source.html#l00040">workoutmessage_p.h:40</a></div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a18d2aaf1aa7e75a538679722853c8fd5"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a18d2aaf1aa7e75a538679722853c8fd5">FitBaseType::Uint32z</a></div><div class="ttdeci">@ Uint32z</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a></div><div class="ttdeci">@ String</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a></div><div class="ttdeci">@ Enum</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitdatamessage_8cpp_source.html#l00091">FitDataMessagePrivate::setField()</a>.</p>
+<p class="reference">References <a class="el" href="workoutmessage__p_8h_source.html#l00038">capabilities</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="workoutmessage__p_8h_source.html#l00039">numValidSteps</a>, <a class="el" href="workoutmessage__p_8h_source.html#l00042">poolLength</a>, <a class="el" href="workoutmessage__p_8h_source.html#l00043">poolLengthUnit</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="workoutmessage__p_8h_source.html#l00037">sport</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">String</a>, <a class="el" href="workoutmessage__p_8h_source.html#l00041">subSport</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a18d2aaf1aa7e75a538679722853c8fd5">Uint32z</a>, and <a class="el" href="workoutmessage__p_8h_source.html#l00040">wktName</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classWorkoutMessagePrivate_a4e07c444e498df9f62babe69b334dcbd_cgraph.svg" width="411" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorkoutMessagePrivate_a1f49d5cc7471141e269a1c49609e9e87_cgraph.svg" width="411" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -362,6 +454,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="workoutmessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="workoutmessage__p_8h_source.html">workoutmessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="workoutmessage_8cpp_source.html#l00133">setField()</a>.</p>
+
 </div>
 </div>
 <a id="afe52aca133868cc6cd1f7be0f4d7b433"></a>
@@ -377,6 +471,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="workoutmessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="workoutmessage__p_8h_source.html">workoutmessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="workoutmessage_8cpp_source.html#l00133">setField()</a>.</p>
 
 </div>
 </div>
@@ -394,6 +490,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="workoutmessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="workoutmessage__p_8h_source.html">workoutmessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="workoutmessage_8cpp_source.html#l00133">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a4a1fe18c2e49d61743306b95ec5c82db"></a>
@@ -409,6 +507,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="workoutmessage__p_8h_source.html#l00043">43</a> of file <a class="el" href="workoutmessage__p_8h_source.html">workoutmessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="workoutmessage_8cpp_source.html#l00133">setField()</a>.</p>
 
 </div>
 </div>
@@ -426,6 +526,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="workoutmessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="workoutmessage__p_8h_source.html">workoutmessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="workoutmessage_8cpp_source.html#l00133">setField()</a>.</p>
+
 </div>
 </div>
 <a id="ab231a605da525e22e98586d114d5671e"></a>
@@ -442,6 +544,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="workoutmessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="workoutmessage__p_8h_source.html">workoutmessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="workoutmessage_8cpp_source.html#l00133">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a31c97122c688be40e50138c0f97e3be5"></a>
@@ -457,6 +561,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="workoutmessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="workoutmessage__p_8h_source.html">workoutmessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="workoutmessage_8cpp_source.html#l00133">setField()</a>.</p>
 
 </div>
 </div>

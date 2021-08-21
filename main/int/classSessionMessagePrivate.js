@@ -3,7 +3,7 @@ var classSessionMessagePrivate =
     [ "SessionMessagePrivate", "classSessionMessagePrivate.html#acdccd1f41fdd1f26975e8201b9629008", null ],
     [ "SessionMessagePrivate", "classSessionMessagePrivate.html#a620b1431739200b8bb036a483db1f829", null ],
     [ "~SessionMessagePrivate", "classSessionMessagePrivate.html#aaa7d0d50a5c84091626060fe9b7c7715", null ],
-    [ "setField", "classSessionMessagePrivate.html#a206cd612f20364a6a4233f6716e6a80a", null ],
+    [ "setField", "classSessionMessagePrivate.html#ab1e441282d8295ab451aab4db5a1c069", null ],
     [ "avgAltitude", "classSessionMessagePrivate.html#a46f0a62d1f142a2f7181cde1fafc96ad", null ],
     [ "avgBallSpeed", "classSessionMessagePrivate.html#ad4be764122a487136cec5a5a4f3d17fe", null ],
     [ "avgCadence", "classSessionMessagePrivate.html#aea471e25e30b473d8a87e5f0b717d13f", null ],

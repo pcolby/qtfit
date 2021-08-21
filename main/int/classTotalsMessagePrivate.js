@@ -3,7 +3,7 @@ var classTotalsMessagePrivate =
     [ "TotalsMessagePrivate", "classTotalsMessagePrivate.html#a683dceb42ef67d4d8ab2921a389a469d", null ],
     [ "TotalsMessagePrivate", "classTotalsMessagePrivate.html#a4db67e6d6b1d2b33b3f9290eefabc8de", null ],
     [ "~TotalsMessagePrivate", "classTotalsMessagePrivate.html#a684f33a689288769df4005bc2d299ce2", null ],
-    [ "setField", "classTotalsMessagePrivate.html#ad424f5f0d12818ea1eb91a9e13f64ef9", null ],
+    [ "setField", "classTotalsMessagePrivate.html#af599a6649b3157a6aed094d1639e479d", null ],
     [ "activeTime", "classTotalsMessagePrivate.html#a2efad71b46cfeb580c9aee9b215075a3", null ],
     [ "calories", "classTotalsMessagePrivate.html#a9f0891b70a292b361ed56ad6953f9151", null ],
     [ "distance", "classTotalsMessagePrivate.html#a4ccaae1da1d08a89c3e23b8b19a2e83c", null ],

@@ -3,7 +3,7 @@ var classDiveSummaryMessagePrivate =
     [ "DiveSummaryMessagePrivate", "classDiveSummaryMessagePrivate.html#a033d5c5f98a5ef9ceb6d37961c025afc", null ],
     [ "DiveSummaryMessagePrivate", "classDiveSummaryMessagePrivate.html#a8fa991861f43c32edb17ebfdea7e46ca", null ],
     [ "~DiveSummaryMessagePrivate", "classDiveSummaryMessagePrivate.html#a6ac0acbbe524d51b104c8b117d5bf8f1", null ],
-    [ "setField", "classDiveSummaryMessagePrivate.html#a43c62aefe001d03ac6fa3fb760f9c8f7", null ],
+    [ "setField", "classDiveSummaryMessagePrivate.html#ada2d2382d7efcaf75858135440a60552", null ],
     [ "avgDepth", "classDiveSummaryMessagePrivate.html#a59db8eabeeec17eac687786db89baea6", null ],
     [ "bottomTime", "classDiveSummaryMessagePrivate.html#a31218ea5dc6978330e72302c4443b326", null ],
     [ "diveNumber", "classDiveSummaryMessagePrivate.html#a526fbcffa56e2d6e9050b1f0d8c0deae", null ],

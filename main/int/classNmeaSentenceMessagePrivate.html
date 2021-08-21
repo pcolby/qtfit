@@ -143,8 +143,8 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:abb5504c5bcb59b4e7ac6f94168f0d833"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNmeaSentenceMessagePrivate.html#abb5504c5bcb59b4e7ac6f94168f0d833">setField</a> (const int fieldId, const QByteArray data, int baseType) override</td></tr>
-<tr class="separator:abb5504c5bcb59b4e7ac6f94168f0d833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac11f0fd87d6901f06f09675ecf4869"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNmeaSentenceMessagePrivate.html#a6ac11f0fd87d6901f06f09675ecf4869">setField</a> (const int fieldId, const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, const bool bigEndian) override</td></tr>
+<tr class="separator:a6ac11f0fd87d6901f06f09675ecf4869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -206,13 +206,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="nmeasentencemessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="nmeasentencemessage_8cpp_source.html">nmeasentencemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  , <a class="code" href="classNmeaSentenceMessagePrivate.html#a3ee016619cdae5fc50e6246323483b68">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  , <a class="code" href="classNmeaSentenceMessagePrivate.html#a7a6fc04edddedc0399a56bf0479d8393">timestampMs</a>(0xFFFF)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22cae582c92ce5b56532735427d1f67f4877">MesgNum::NmeaSentence</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="nmeasentencemessage_8cpp_source.html#l00072">72</a> of file <a class="el" href="nmeasentencemessage_8cpp_source.html">nmeasentencemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  , <a class="code" href="classNmeaSentenceMessagePrivate.html#a3ee016619cdae5fc50e6246323483b68">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  , <a class="code" href="classNmeaSentenceMessagePrivate.html#a7a6fc04edddedc0399a56bf0479d8393">timestampMs</a>(0xFFFF)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22cae582c92ce5b56532735427d1f67f4877">MesgNum::NmeaSentence</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ae71d76b1cc2ca639b8ba6f4c213a81c1"><div class="ttname"><a href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate::FitDataMessagePrivate</a></div><div class="ttdeci">FitDataMessagePrivate()=delete</div></div>
 <div class="ttc" id="aclassNmeaSentenceMessagePrivate_html_a3ee016619cdae5fc50e6246323483b68"><div class="ttname"><a href="classNmeaSentenceMessagePrivate.html#a3ee016619cdae5fc50e6246323483b68">NmeaSentenceMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdef"><b>Definition:</b> <a href="nmeasentencemessage__p_8h_source.html#l00037">nmeasentencemessage_p.h:37</a></div></div>
@@ -247,16 +247,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="nmeasentencemessage_8cpp_source.html#l00077">77</a> of file <a class="el" href="nmeasentencemessage_8cpp_source.html">nmeasentencemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="nmeasentencemessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="nmeasentencemessage_8cpp_source.html">nmeasentencemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abb5504c5bcb59b4e7ac6f94168f0d833"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb5504c5bcb59b4e7ac6f94168f0d833">&#9670;&nbsp;</a></span>setField()</h2>
+<a id="a6ac11f0fd87d6901f06f09675ecf4869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac11f0fd87d6901f06f09675ecf4869">&#9670;&nbsp;</a></span>setField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,14 +273,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QByteArray&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>baseType</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a>&#160;</td>
+          <td class="paramname"><em>baseType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bigEndian</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -294,35 +300,68 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000113">Todo:</a></b></dt><dd>Make base type enum. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000112">Todo:</a></b></dt><dd>Generate implementation. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000568">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000569">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000570">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate</a>.</p>
+<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="nmeasentencemessage_8cpp_source.html#l00083">83</a> of file <a class="el" href="nmeasentencemessage_8cpp_source.html">nmeasentencemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//    switch fieldId {</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//        default:</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//            return false;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nmeasentencemessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="nmeasentencemessage_8cpp_source.html">nmeasentencemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:nmea_sentence.timestamp</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;nmea_sentence.timestamp has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint32&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (data.size() != 4) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;nmea_sentence.timestamp size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 4;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        this-&gt;<a class="code" href="classNmeaSentenceMessagePrivate.html#a3ee016619cdae5fc50e6246323483b68">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:nmea_sentence.timestampMs</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;nmea_sentence.timestampMs has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;nmea_sentence.timestampMs size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        this-&gt;<a class="code" href="classNmeaSentenceMessagePrivate.html#a7a6fc04edddedc0399a56bf0479d8393">timestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:nmea_sentence.sentence</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;nmea_sentence.sentence has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be String&quot;</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;nmea_sentence.sentence size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        this-&gt;<a class="code" href="classNmeaSentenceMessagePrivate.html#ad6eb3c7c80aad2896e4ea62c77143c66">sentence</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown nmea_sentence message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<div class="ttc" id="aclassNmeaSentenceMessagePrivate_html_ad6eb3c7c80aad2896e4ea62c77143c66"><div class="ttname"><a href="classNmeaSentenceMessagePrivate.html#ad6eb3c7c80aad2896e4ea62c77143c66">NmeaSentenceMessagePrivate::sentence</a></div><div class="ttdeci">QString sentence</div><div class="ttdef"><b>Definition:</b> <a href="nmeasentencemessage__p_8h_source.html#l00039">nmeasentencemessage_p.h:39</a></div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a></div><div class="ttdeci">@ String</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitdatamessage_8cpp_source.html#l00091">FitDataMessagePrivate::setField()</a>.</p>
+<p class="reference">References <a class="el" href="nmeasentencemessage__p_8h_source.html#l00039">sentence</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">String</a>, <a class="el" href="nmeasentencemessage__p_8h_source.html#l00037">timestamp</a>, <a class="el" href="nmeasentencemessage__p_8h_source.html#l00038">timestampMs</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, and <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classNmeaSentenceMessagePrivate_abb5504c5bcb59b4e7ac6f94168f0d833_cgraph.svg" width="458" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classNmeaSentenceMessagePrivate_a6ac11f0fd87d6901f06f09675ecf4869_cgraph.svg" width="458" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -343,6 +382,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="nmeasentencemessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="nmeasentencemessage__p_8h_source.html">nmeasentencemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="nmeasentencemessage_8cpp_source.html#l00085">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a3ee016619cdae5fc50e6246323483b68"></a>
@@ -359,6 +400,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="nmeasentencemessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="nmeasentencemessage__p_8h_source.html">nmeasentencemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="nmeasentencemessage_8cpp_source.html#l00085">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a7a6fc04edddedc0399a56bf0479d8393"></a>
@@ -374,6 +417,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="nmeasentencemessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="nmeasentencemessage__p_8h_source.html">nmeasentencemessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="nmeasentencemessage_8cpp_source.html#l00085">setField()</a>.</p>
 
 </div>
 </div>

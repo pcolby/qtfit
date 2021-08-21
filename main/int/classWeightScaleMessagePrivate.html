@@ -163,8 +163,8 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa5b865a5297ae1f935ea2fea35879b40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeightScaleMessagePrivate.html#aa5b865a5297ae1f935ea2fea35879b40">setField</a> (const int fieldId, const QByteArray data, int baseType) override</td></tr>
-<tr class="separator:aa5b865a5297ae1f935ea2fea35879b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597253580027ccca9dc9ae0c847b02cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWeightScaleMessagePrivate.html#a597253580027ccca9dc9ae0c847b02cd">setField</a> (const int fieldId, const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, const bool bigEndian) override</td></tr>
+<tr class="separator:a597253580027ccca9dc9ae0c847b02cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -226,24 +226,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="weightscalemessage_8cpp_source.html#l00179">179</a> of file <a class="el" href="weightscalemessage_8cpp_source.html">weightscalemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ab4cfc3eeb7134b121f248872f2219bd7">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#adba09f41e22eb483c38e86eb99482e07">weight</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a1ac156d4d8a1db912df45f6dc9b3aaf2">Weight</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a00856242eb1e03b78f454e25c4c56820">percentFat</a>(0xFFFF)</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ad1136b8b9750bb0e15e636beff2b796f">percentHydration</a>(0xFFFF)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#acc806d704121e4a9a5469573e4e2fa81">visceralFatMass</a>(0xFFFF)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ac67d706a5be772e76622633931b50e02">boneMass</a>(0xFFFF)</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ac16fea8e1d219311dcdef1916004ec1c">muscleMass</a>(0xFFFF)</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ad855668d95152ba7e10f0a611adf5760">basalMet</a>(0xFFFF)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#aa9186532a6d0fd0186bfd04ba5282b14">physiqueRating</a>(0xFF)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ac7ab164846130b8ee09eb6d3415c9fc1">activeMet</a>(0xFFFF)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a75895ad7c6c767da6d245796ba26a683">metabolicAge</a>(0xFF)</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a2710a1c2c28afa09916e51af89de4286">visceralFatRating</a>(0xFF)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a5b0239102a059d6f8f8b618fcd5d2d71">userProfileIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;{</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22caac426d1145b36408485f2ab118ed267b">MesgNum::WeightScale</a>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="weightscalemessage_8cpp_source.html#l00182">182</a> of file <a class="el" href="weightscalemessage_8cpp_source.html">weightscalemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ab4cfc3eeb7134b121f248872f2219bd7">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#adba09f41e22eb483c38e86eb99482e07">weight</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a1ac156d4d8a1db912df45f6dc9b3aaf2">Weight</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a00856242eb1e03b78f454e25c4c56820">percentFat</a>(0xFFFF)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ad1136b8b9750bb0e15e636beff2b796f">percentHydration</a>(0xFFFF)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#acc806d704121e4a9a5469573e4e2fa81">visceralFatMass</a>(0xFFFF)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ac67d706a5be772e76622633931b50e02">boneMass</a>(0xFFFF)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ac16fea8e1d219311dcdef1916004ec1c">muscleMass</a>(0xFFFF)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ad855668d95152ba7e10f0a611adf5760">basalMet</a>(0xFFFF)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#aa9186532a6d0fd0186bfd04ba5282b14">physiqueRating</a>(0xFF)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#ac7ab164846130b8ee09eb6d3415c9fc1">activeMet</a>(0xFFFF)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a75895ad7c6c767da6d245796ba26a683">metabolicAge</a>(0xFF)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a2710a1c2c28afa09916e51af89de4286">visceralFatRating</a>(0xFF)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  , <a class="code" href="classWeightScaleMessagePrivate.html#a5b0239102a059d6f8f8b618fcd5d2d71">userProfileIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22caac426d1145b36408485f2ab118ed267b">MesgNum::WeightScale</a>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassFitDataMessagePrivate_html_ae71d76b1cc2ca639b8ba6f4c213a81c1"><div class="ttname"><a href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate::FitDataMessagePrivate</a></div><div class="ttdeci">FitDataMessagePrivate()=delete</div></div>
 <div class="ttc" id="aclassWeightScaleMessagePrivate_html_a00856242eb1e03b78f454e25c4c56820"><div class="ttname"><a href="classWeightScaleMessagePrivate.html#a00856242eb1e03b78f454e25c4c56820">WeightScaleMessagePrivate::percentFat</a></div><div class="ttdeci">quint16 percentFat</div><div class="ttdef"><b>Definition:</b> <a href="weightscalemessage__p_8h_source.html#l00039">weightscalemessage_p.h:39</a></div></div>
@@ -291,16 +291,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="weightscalemessage_8cpp_source.html#l00198">198</a> of file <a class="el" href="weightscalemessage_8cpp_source.html">weightscalemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="weightscalemessage_8cpp_source.html#l00201">201</a> of file <a class="el" href="weightscalemessage_8cpp_source.html">weightscalemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa5b865a5297ae1f935ea2fea35879b40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5b865a5297ae1f935ea2fea35879b40">&#9670;&nbsp;</a></span>setField()</h2>
+<a id="a597253580027ccca9dc9ae0c847b02cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597253580027ccca9dc9ae0c847b02cd">&#9670;&nbsp;</a></span>setField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,14 +317,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QByteArray&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>baseType</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a>&#160;</td>
+          <td class="paramname"><em>baseType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bigEndian</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -338,35 +344,197 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000180">Todo:</a></b></dt><dd>Make base type enum. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000179">Todo:</a></b></dt><dd>Generate implementation. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001061">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001062">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001063">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001064">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001065">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001066">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001067">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001068">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001069">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001070">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001071">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001072">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo001073">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate</a>.</p>
+<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="weightscalemessage_8cpp_source.html#l00204">204</a> of file <a class="el" href="weightscalemessage_8cpp_source.html">weightscalemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;{</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">//    switch fieldId {</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">//        default:</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">//            return false;</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="weightscalemessage_8cpp_source.html#l00206">206</a> of file <a class="el" href="weightscalemessage_8cpp_source.html">weightscalemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:weight_scale.timestamp</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.timestamp has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint32&quot;</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> (data.size() != 4) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.timestamp size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 4;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#ab4cfc3eeb7134b121f248872f2219bd7">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:weight_scale.weight</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.weight has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.weight size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#adba09f41e22eb483c38e86eb99482e07">weight</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a1ac156d4d8a1db912df45f6dc9b3aaf2">Weight</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:weight_scale.percentFat</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.percentFat has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.percentFat size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#a00856242eb1e03b78f454e25c4c56820">percentFat</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:weight_scale.percentHydration</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.percentHydration has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.percentHydration size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#ad1136b8b9750bb0e15e636beff2b796f">percentHydration</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:weight_scale.visceralFatMass</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.visceralFatMass has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.visceralFatMass size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#acc806d704121e4a9a5469573e4e2fa81">visceralFatMass</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:weight_scale.boneMass</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.boneMass has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.boneMass size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#ac67d706a5be772e76622633931b50e02">boneMass</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:weight_scale.muscleMass</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.muscleMass has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.muscleMass size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#ac16fea8e1d219311dcdef1916004ec1c">muscleMass</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">case</span> 7: <span class="comment">// See Profile.xlsx::Messages:weight_scale.basalMet</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.basalMet has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.basalMet size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#ad855668d95152ba7e10f0a611adf5760">basalMet</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">case</span> 8: <span class="comment">// See Profile.xlsx::Messages:weight_scale.physiqueRating</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.physiqueRating has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint8&quot;</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.physiqueRating size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#aa9186532a6d0fd0186bfd04ba5282b14">physiqueRating</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">case</span> 9: <span class="comment">// See Profile.xlsx::Messages:weight_scale.activeMet</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.activeMet has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.activeMet size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#ac7ab164846130b8ee09eb6d3415c9fc1">activeMet</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">case</span> 10: <span class="comment">// See Profile.xlsx::Messages:weight_scale.metabolicAge</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.metabolicAge has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint8&quot;</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.metabolicAge size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#a75895ad7c6c767da6d245796ba26a683">metabolicAge</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">case</span> 11: <span class="comment">// See Profile.xlsx::Messages:weight_scale.visceralFatRating</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.visceralFatRating has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint8&quot;</span>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.visceralFatRating size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#a2710a1c2c28afa09916e51af89de4286">visceralFatRating</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">case</span> 12: <span class="comment">// See Profile.xlsx::Messages:weight_scale.userProfileIndex</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.userProfileIndex has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;weight_scale.userProfileIndex size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        this-&gt;<a class="code" href="classWeightScaleMessagePrivate.html#a5b0239102a059d6f8f8b618fcd5d2d71">userProfileIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown weight_scale message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a></div><div class="ttdeci">@ Uint8</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitdatamessage_8cpp_source.html#l00091">FitDataMessagePrivate::setField()</a>.</p>
+<p class="reference">References <a class="el" href="weightscalemessage__p_8h_source.html#l00046">activeMet</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00044">basalMet</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00042">boneMass</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00047">metabolicAge</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00043">muscleMass</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00039">percentFat</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00040">percentHydration</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00045">physiqueRating</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00037">timestamp</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00049">userProfileIndex</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00041">visceralFatMass</a>, <a class="el" href="weightscalemessage__p_8h_source.html#l00048">visceralFatRating</a>, and <a class="el" href="weightscalemessage__p_8h_source.html#l00038">weight</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classWeightScaleMessagePrivate_aa5b865a5297ae1f935ea2fea35879b40_cgraph.svg" width="439" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWeightScaleMessagePrivate_a597253580027ccca9dc9ae0c847b02cd_cgraph.svg" width="439" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -387,6 +555,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
+
 </div>
 </div>
 <a id="ad855668d95152ba7e10f0a611adf5760"></a>
@@ -402,6 +572,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00044">44</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
 
 </div>
 </div>
@@ -419,6 +591,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a75895ad7c6c767da6d245796ba26a683"></a>
@@ -434,6 +608,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00047">47</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
 
 </div>
 </div>
@@ -451,6 +627,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00043">43</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a00856242eb1e03b78f454e25c4c56820"></a>
@@ -466,6 +644,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
 
 </div>
 </div>
@@ -483,6 +663,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
+
 </div>
 </div>
 <a id="aa9186532a6d0fd0186bfd04ba5282b14"></a>
@@ -498,6 +680,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00045">45</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
 
 </div>
 </div>
@@ -515,6 +699,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a5b0239102a059d6f8f8b618fcd5d2d71"></a>
@@ -530,6 +716,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
 
 </div>
 </div>
@@ -547,6 +735,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a2710a1c2c28afa09916e51af89de4286"></a>
@@ -563,6 +753,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00048">48</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
+
 </div>
 </div>
 <a id="adba09f41e22eb483c38e86eb99482e07"></a>
@@ -578,6 +770,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="weightscalemessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="weightscalemessage__p_8h_source.html">weightscalemessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="weightscalemessage_8cpp_source.html#l00206">setField()</a>.</p>
 
 </div>
 </div>

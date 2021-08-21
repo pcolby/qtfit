@@ -1,7 +1,9 @@
 <map id="exddataconceptconfigurationmessage.cpp" name="exddataconceptconfigurationmessage.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="154,5,451,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="417,5,714,32"/>
 <area shape="rect" id="node2" href="$exddataconceptconfigurationmessage_8h.html" title=" " alt="" coords="5,80,288,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="311,80,609,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="633,80,708,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="733,80,814,107"/>
 <area shape="rect" id="node3" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="79,155,214,181"/>
 <area shape="rect" id="node4" href="$QtFit__global_8h_source.html" title=" " alt="" coords="91,304,203,331"/>
 <area shape="rect" id="node6" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="149,229,219,256"/>

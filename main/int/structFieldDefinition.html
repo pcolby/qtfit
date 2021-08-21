@@ -98,16 +98,39 @@ $(document).ready(function(){initNavTree('structFieldDefinition.html',''); initR
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a62afa0ec7bb936c3a543949b7cd2a2af"><td class="memItemLeft" align="right" valign="top">quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFieldDefinition.html#a62afa0ec7bb936c3a543949b7cd2a2af">number</a></td></tr>
+<tr class="memdesc:a62afa0ec7bb936c3a543949b7cd2a2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique ID for the FIT field within a given FIT data message.  <a href="structFieldDefinition.html#a62afa0ec7bb936c3a543949b7cd2a2af">More...</a><br /></td></tr>
 <tr class="separator:a62afa0ec7bb936c3a543949b7cd2a2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad2191d20cf144ff378cda5b32ca1a4e"><td class="memItemLeft" align="right" valign="top">quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFieldDefinition.html#aad2191d20cf144ff378cda5b32ca1a4e">size</a></td></tr>
+<tr class="memdesc:aad2191d20cf144ff378cda5b32ca1a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size (in bytes) of the field.  <a href="structFieldDefinition.html#aad2191d20cf144ff378cda5b32ca1a4e">More...</a><br /></td></tr>
 <tr class="separator:aad2191d20cf144ff378cda5b32ca1a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cfd3d8873436081e7b51f77141c45f4"><td class="memItemLeft" align="right" valign="top">quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFieldDefinition.html#a7cfd3d8873436081e7b51f77141c45f4">type</a></td></tr>
-<tr class="separator:a7cfd3d8873436081e7b51f77141c45f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3856a9546c68e23d961f1727aa9da60b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFieldDefinition.html#a3856a9546c68e23d961f1727aa9da60b">baseType</a></td></tr>
+<tr class="memdesc:a3856a9546c68e23d961f1727aa9da60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base type for interpreting unknown fields.  <a href="structFieldDefinition.html#a3856a9546c68e23d961f1727aa9da60b">More...</a><br /></td></tr>
+<tr class="separator:a3856a9546c68e23d961f1727aa9da60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00040">40</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3856a9546c68e23d961f1727aa9da60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3856a9546c68e23d961f1727aa9da60b">&#9670;&nbsp;</a></span>baseType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> FieldDefinition::baseType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Base type for interpreting unknown fields. </p>
+
+<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00043">43</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00348">FitStreamReaderPrivate::parseDefinitionMessage()</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00079">FitDataMessagePrivate::setFields()</a>.</p>
+
+</div>
+</div>
 <a id="a62afa0ec7bb936c3a543949b7cd2a2af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62afa0ec7bb936c3a543949b7cd2a2af">&#9670;&nbsp;</a></span>number</h2>
 
@@ -119,6 +142,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Unique ID for the FIT field within a given FIT data message. </p>
 
 <p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00041">41</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
 
@@ -138,25 +163,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Size (in bytes) of the field. </p>
+
 <p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00042">42</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00348">FitStreamReaderPrivate::parseDefinitionMessage()</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00079">FitDataMessagePrivate::setFields()</a>.</p>
-
-</div>
-</div>
-<a id="a7cfd3d8873436081e7b51f77141c45f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cfd3d8873436081e7b51f77141c45f4">&#9670;&nbsp;</a></span>type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">quint8 FieldDefinition::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00043">43</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00348">FitStreamReaderPrivate::parseDefinitionMessage()</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00079">FitDataMessagePrivate::setFields()</a>.</p>
 

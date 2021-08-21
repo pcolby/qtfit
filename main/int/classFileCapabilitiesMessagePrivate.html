@@ -149,8 +149,8 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae9b93783aada10e0effa1a2891031b99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileCapabilitiesMessagePrivate.html#ae9b93783aada10e0effa1a2891031b99">setField</a> (const int fieldId, const QByteArray data, int baseType) override</td></tr>
-<tr class="separator:ae9b93783aada10e0effa1a2891031b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba21877c3152872815a2b6a31ccbfe4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileCapabilitiesMessagePrivate.html#a1ba21877c3152872815a2b6a31ccbfe4">setField</a> (const int fieldId, const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, const bool bigEndian) override</td></tr>
+<tr class="separator:a1ba21877c3152872815a2b6a31ccbfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -212,16 +212,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="filecapabilitiesmessage_8cpp_source.html">filecapabilitiesmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a7358a181543f46375a9068672a476b96">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a7e78a2f17154afa2e8d730b08991c5aa">type</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#af10f27103f941f5cbafc9d21d6554e56">File</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a4d51f2d5672e82977dd3220bc57f087f">flags</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#adf19e36b8f3500a5a34b035dc56010a6">FileFlags</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a43554eee5274366b5cd099358f5c2692">maxCount</a>(0xFFFF)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#adc51969cce37077d4f17c551c5919302">maxSize</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca83cae5dc89641510fa3681fe596e34f7">MesgNum::FileCapabilities</a>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00105">105</a> of file <a class="el" href="filecapabilitiesmessage_8cpp_source.html">filecapabilitiesmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a7358a181543f46375a9068672a476b96">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a7e78a2f17154afa2e8d730b08991c5aa">type</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#af10f27103f941f5cbafc9d21d6554e56">File</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a4d51f2d5672e82977dd3220bc57f087f">flags</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#adf19e36b8f3500a5a34b035dc56010a6">FileFlags</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#a43554eee5274366b5cd099358f5c2692">maxCount</a>(0xFFFF)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  , <a class="code" href="classFileCapabilitiesMessagePrivate.html#adc51969cce37077d4f17c551c5919302">maxSize</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca83cae5dc89641510fa3681fe596e34f7">MesgNum::FileCapabilities</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
 <div class="ttc" id="aclassFileCapabilitiesMessagePrivate_html_a43554eee5274366b5cd099358f5c2692"><div class="ttname"><a href="classFileCapabilitiesMessagePrivate.html#a43554eee5274366b5cd099358f5c2692">FileCapabilitiesMessagePrivate::maxCount</a></div><div class="ttdeci">quint16 maxCount</div><div class="ttdef"><b>Definition:</b> <a href="filecapabilitiesmessage__p_8h_source.html#l00041">filecapabilitiesmessage_p.h:41</a></div></div>
 <div class="ttc" id="aclassFileCapabilitiesMessagePrivate_html_a4d51f2d5672e82977dd3220bc57f087f"><div class="ttname"><a href="classFileCapabilitiesMessagePrivate.html#a4d51f2d5672e82977dd3220bc57f087f">FileCapabilitiesMessagePrivate::flags</a></div><div class="ttdeci">FileFlags flags</div><div class="ttdef"><b>Definition:</b> <a href="filecapabilitiesmessage__p_8h_source.html#l00039">filecapabilitiesmessage_p.h:39</a></div></div>
 <div class="ttc" id="aclassFileCapabilitiesMessagePrivate_html_a7358a181543f46375a9068672a476b96"><div class="ttname"><a href="classFileCapabilitiesMessagePrivate.html#a7358a181543f46375a9068672a476b96">FileCapabilitiesMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdef"><b>Definition:</b> <a href="filecapabilitiesmessage__p_8h_source.html#l00037">filecapabilitiesmessage_p.h:37</a></div></div>
@@ -261,16 +261,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="filecapabilitiesmessage_8cpp_source.html">filecapabilitiesmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00116">116</a> of file <a class="el" href="filecapabilitiesmessage_8cpp_source.html">filecapabilitiesmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae9b93783aada10e0effa1a2891031b99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9b93783aada10e0effa1a2891031b99">&#9670;&nbsp;</a></span>setField()</h2>
+<a id="a1ba21877c3152872815a2b6a31ccbfe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba21877c3152872815a2b6a31ccbfe4">&#9670;&nbsp;</a></span>setField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,14 +287,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QByteArray&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>baseType</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a>&#160;</td>
+          <td class="paramname"><em>baseType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bigEndian</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -308,35 +314,109 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000062">Todo:</a></b></dt><dd>Make base type enum. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Todo:</a></b></dt><dd>Generate implementation. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000293">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000294">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000295">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000296">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000297">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000298">Todo:</a></b></dt><dd>Add toString function for baseType. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate</a>.</p>
+<p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00119">119</a> of file <a class="el" href="filecapabilitiesmessage_8cpp_source.html">filecapabilitiesmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">//    #define SET_FIELD(id,name,type)</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">//      case id: name = fromFitValue&lt;type&gt;(data, baseType)</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">//    switch fieldId {</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">//        case 0: type         = fromFitValue&lt;quint8 &gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">//        case 1: manufactuter = fromFitValue&lt;quint16&gt;(data, baseType); break;</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//        default:</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//            qWarning() &lt;&lt; &quot;Unknown field definition number&quot; &lt;&lt; fieldId</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">//                       &lt;&lt; &quot;for&quot; &lt;&lt; messageName();</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">//            return false;</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a>(fieldId, data, baseType);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_ade21442996aea5f5a4e5825c0fcfc232"><div class="ttname"><a href="classFitDataMessagePrivate.html#ade21442996aea5f5a4e5825c0fcfc232">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray data, int baseType)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00091">fitdatamessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00121">121</a> of file <a class="el" href="filecapabilitiesmessage_8cpp_source.html">filecapabilitiesmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:file_capabilities.messageIndex</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.messageIndex has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.messageIndex size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        this-&gt;<a class="code" href="classFileCapabilitiesMessagePrivate.html#a7358a181543f46375a9068672a476b96">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:file_capabilities.type</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.type has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Enum&quot;</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.type size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        this-&gt;<a class="code" href="classFileCapabilitiesMessagePrivate.html#a7e78a2f17154afa2e8d730b08991c5aa">type</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#af10f27103f941f5cbafc9d21d6554e56">File</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:file_capabilities.flags</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.flags has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint8z&quot;</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.flags size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        this-&gt;<a class="code" href="classFileCapabilitiesMessagePrivate.html#a4d51f2d5672e82977dd3220bc57f087f">flags</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#adf19e36b8f3500a5a34b035dc56010a6">FileFlags</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:file_capabilities.directory</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.directory has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be String&quot;</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">if</span> (data.size() != 1) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.directory size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 1;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        this-&gt;<a class="code" href="classFileCapabilitiesMessagePrivate.html#a267d3c419db67d55a520629ddde226e0">directory</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:file_capabilities.maxCount</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.maxCount has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint16&quot;</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span> (data.size() != 2) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.maxCount size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 2;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        this-&gt;<a class="code" href="classFileCapabilitiesMessagePrivate.html#a43554eee5274366b5cd099358f5c2692">maxCount</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:file_capabilities.maxSize</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> (baseType != <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>) {<span class="comment"></span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">            /// \todo Add toString function for baseType.</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment"></span>            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.maxSize has base type&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(baseType) &lt;&lt; <span class="stringliteral">&quot;but should be Uint32&quot;</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">if</span> (data.size() != 4) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;file_capabilities.maxSize size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; 4;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        this-&gt;<a class="code" href="classFileCapabilitiesMessagePrivate.html#adc51969cce37077d4f17c551c5919302">maxSize</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown file_capabilities message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+<div class="ttc" id="aclassFileCapabilitiesMessagePrivate_html_a267d3c419db67d55a520629ddde226e0"><div class="ttname"><a href="classFileCapabilitiesMessagePrivate.html#a267d3c419db67d55a520629ddde226e0">FileCapabilitiesMessagePrivate::directory</a></div><div class="ttdeci">QString directory</div><div class="ttdef"><b>Definition:</b> <a href="filecapabilitiesmessage__p_8h_source.html#l00040">filecapabilitiesmessage_p.h:40</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a></div><div class="ttdeci">@ String</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a></div><div class="ttdeci">@ Uint8z</div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a></div><div class="ttdeci">@ Enum</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="fitdatamessage_8cpp_source.html#l00091">FitDataMessagePrivate::setField()</a>.</p>
+<p class="reference">References <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00040">directory</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00039">flags</a>, <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00041">maxCount</a>, <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00042">maxSize</a>, <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00037">messageIndex</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">String</a>, <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00038">type</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, and <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">Uint8z</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classFileCapabilitiesMessagePrivate_ae9b93783aada10e0effa1a2891031b99_cgraph.svg" width="459" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFileCapabilitiesMessagePrivate_a1ba21877c3152872815a2b6a31ccbfe4_cgraph.svg" width="459" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -357,6 +437,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="filecapabilitiesmessage__p_8h_source.html">filecapabilitiesmessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00121">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a4d51f2d5672e82977dd3220bc57f087f"></a>
@@ -372,6 +454,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="filecapabilitiesmessage__p_8h_source.html">filecapabilitiesmessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00121">setField()</a>.</p>
 
 </div>
 </div>
@@ -389,6 +473,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="filecapabilitiesmessage__p_8h_source.html">filecapabilitiesmessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00121">setField()</a>.</p>
+
 </div>
 </div>
 <a id="adc51969cce37077d4f17c551c5919302"></a>
@@ -404,6 +490,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="filecapabilitiesmessage__p_8h_source.html">filecapabilitiesmessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00121">setField()</a>.</p>
 
 </div>
 </div>
@@ -421,6 +509,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="filecapabilitiesmessage__p_8h_source.html">filecapabilitiesmessage_p.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00121">setField()</a>.</p>
+
 </div>
 </div>
 <a id="a7e78a2f17154afa2e8d730b08991c5aa"></a>
@@ -436,6 +526,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="filecapabilitiesmessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="filecapabilitiesmessage__p_8h_source.html">filecapabilitiesmessage_p.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="filecapabilitiesmessage_8cpp_source.html#l00121">setField()</a>.</p>
 
 </div>
 </div>

@@ -3,7 +3,7 @@ var classDeviceInfoMessagePrivate =
     [ "DeviceInfoMessagePrivate", "classDeviceInfoMessagePrivate.html#a3f6d9c79359b2f96527ab5dc33674445", null ],
     [ "DeviceInfoMessagePrivate", "classDeviceInfoMessagePrivate.html#a99ecac05775420237a6a28b6e32394e1", null ],
     [ "~DeviceInfoMessagePrivate", "classDeviceInfoMessagePrivate.html#a90fbdb63055c0c102082124db94a2e42", null ],
-    [ "setField", "classDeviceInfoMessagePrivate.html#a278854a0cc835687f584ecfd873b0227", null ],
+    [ "setField", "classDeviceInfoMessagePrivate.html#a774c41581b2b6e72b9d68a8755f24ae6", null ],
     [ "antDeviceNumber", "classDeviceInfoMessagePrivate.html#a1361f9ed2febd63781f8f1b197535454", null ],
     [ "antNetwork", "classDeviceInfoMessagePrivate.html#a0647f21a13c1842e203654db1c81af6d", null ],
     [ "antTransmissionType", "classDeviceInfoMessagePrivate.html#a6c595fce0d358bb2bd3de44acbbb28a8", null ],

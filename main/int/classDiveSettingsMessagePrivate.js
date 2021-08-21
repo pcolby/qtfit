@@ -3,7 +3,7 @@ var classDiveSettingsMessagePrivate =
     [ "DiveSettingsMessagePrivate", "classDiveSettingsMessagePrivate.html#ad209aedfc59e478144880d76707f7c21", null ],
     [ "DiveSettingsMessagePrivate", "classDiveSettingsMessagePrivate.html#a3150f3e1ccfc6506e89c5c088728605b", null ],
     [ "~DiveSettingsMessagePrivate", "classDiveSettingsMessagePrivate.html#ad7f965b7690e2d8497943b0079950176", null ],
-    [ "setField", "classDiveSettingsMessagePrivate.html#a42523854b65c754b00dc9ffcd835ff10", null ],
+    [ "setField", "classDiveSettingsMessagePrivate.html#a16e471a6deb0fe3be12b135c41a9c559", null ],
     [ "apneaCountdownEnabled", "classDiveSettingsMessagePrivate.html#afdf6f95c7cf5f4e68cc11d16e4daf576", null ],
     [ "apneaCountdownTime", "classDiveSettingsMessagePrivate.html#a8d9f27cf3c70c6b154e44700cc842650", null ],
     [ "backlightBrightness", "classDiveSettingsMessagePrivate.html#ad352daecd2eaa21285c620c8764fcfc0", null ],

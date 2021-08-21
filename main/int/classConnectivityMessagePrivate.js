@@ -3,7 +3,7 @@ var classConnectivityMessagePrivate =
     [ "ConnectivityMessagePrivate", "classConnectivityMessagePrivate.html#a27287ebd6639c24a0353b18ecb62c928", null ],
     [ "ConnectivityMessagePrivate", "classConnectivityMessagePrivate.html#a330f1f08af6a7f0e4fdd69cebcdc3326", null ],
     [ "~ConnectivityMessagePrivate", "classConnectivityMessagePrivate.html#ab139feb1f76f8975dfd1734534bb276f", null ],
-    [ "setField", "classConnectivityMessagePrivate.html#a9843913a6dc8a989755c9528475b84c4", null ],
+    [ "setField", "classConnectivityMessagePrivate.html#a52522eb607495357786e6cdd68c28b86", null ],
     [ "antEnabled", "classConnectivityMessagePrivate.html#a0a2c57e0ea733b644070c1aee8ec8945", null ],
     [ "autoActivityUploadEnabled", "classConnectivityMessagePrivate.html#abf78e178df3c958e29ee835df4b3291d", null ],
     [ "bluetoothEnabled", "classConnectivityMessagePrivate.html#abcfc9493e750d448441c094d0b4cb09d", null ],

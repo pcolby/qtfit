@@ -3,7 +3,7 @@ var classSegmentLapMessagePrivate =
     [ "SegmentLapMessagePrivate", "classSegmentLapMessagePrivate.html#a8ca5b1f6f79b054f72dc0617018e7e71", null ],
     [ "SegmentLapMessagePrivate", "classSegmentLapMessagePrivate.html#aaf56305bfccfeeaa5253908d1eccc2d6", null ],
     [ "~SegmentLapMessagePrivate", "classSegmentLapMessagePrivate.html#a50f989400b794eba6fddf6e144b46af0", null ],
-    [ "setField", "classSegmentLapMessagePrivate.html#a1848fe3af4fda30d4b01c1bb0faa7156", null ],
+    [ "setField", "classSegmentLapMessagePrivate.html#a4d038bb4b68f6b1d9c044928d2976aa1", null ],
     [ "activeTime", "classSegmentLapMessagePrivate.html#a13bf6ffab79526a12e8bd2e549fe2f8e", null ],
     [ "avgAltitude", "classSegmentLapMessagePrivate.html#a1494541e5533e54eb51657a8e3a78a0f", null ],
     [ "avgCadence", "classSegmentLapMessagePrivate.html#a24be6b08ddeb523ee025ddc5e34edb5e", null ],

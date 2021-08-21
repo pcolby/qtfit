@@ -3,7 +3,7 @@ var classAntTxMessagePrivate =
     [ "AntTxMessagePrivate", "classAntTxMessagePrivate.html#ad3bb588e9b55361849e22512c83e1aa8", null ],
     [ "AntTxMessagePrivate", "classAntTxMessagePrivate.html#a8934b1701b7713b8cac5ac8e270c1f4a", null ],
     [ "~AntTxMessagePrivate", "classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85", null ],
-    [ "setField", "classAntTxMessagePrivate.html#a1b1b8e29b340b230a5e11fb106d3f5ec", null ],
+    [ "setField", "classAntTxMessagePrivate.html#a28a7dcb5c25cb0c9e15dedce628a5390", null ],
     [ "channelNumber", "classAntTxMessagePrivate.html#aebcf1a205044e5ec5fd3a48c722ee0ee", null ],
     [ "data", "classAntTxMessagePrivate.html#a784b96ac4c046cd0bae2091d88177257", null ],
     [ "fractionalTimestamp", "classAntTxMessagePrivate.html#a5a04ca24339b5b6ea0f9f4d1b70149cb", null ],

@@ -3,7 +3,7 @@ var classDeviceSettingsMessagePrivate =
     [ "DeviceSettingsMessagePrivate", "classDeviceSettingsMessagePrivate.html#a5530052e0cc8c465a20524b352fb5d15", null ],
     [ "DeviceSettingsMessagePrivate", "classDeviceSettingsMessagePrivate.html#abfc895125ea02dfe7eabf2d817f288c6", null ],
     [ "~DeviceSettingsMessagePrivate", "classDeviceSettingsMessagePrivate.html#a4c2454e9d172a1d856682dd9ec713be2", null ],
-    [ "setField", "classDeviceSettingsMessagePrivate.html#a1044324f9978c96227d6e8afbe177507", null ],
+    [ "setField", "classDeviceSettingsMessagePrivate.html#a0e73a776b795f34ff94b789d306623bd", null ],
     [ "activeTimeZone", "classDeviceSettingsMessagePrivate.html#a88c05a56389ce63cfc96ba55fdf13e18", null ],
     [ "activityTrackerEnabled", "classDeviceSettingsMessagePrivate.html#a43e58e1a299634047efee16ea679ee60", null ],
     [ "autoActivityDetect", "classDeviceSettingsMessagePrivate.html#afa7d47976a18911afa6ff74202d16abc", null ],

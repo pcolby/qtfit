@@ -3,7 +3,7 @@ var classWorkoutStepMessagePrivate =
     [ "WorkoutStepMessagePrivate", "classWorkoutStepMessagePrivate.html#a388c6010baec933e16615ccc69674221", null ],
     [ "WorkoutStepMessagePrivate", "classWorkoutStepMessagePrivate.html#abede7b166a507e2a4ecb5839dc924e66", null ],
     [ "~WorkoutStepMessagePrivate", "classWorkoutStepMessagePrivate.html#ace6b3906a2784ec0a0db795f01eb4177", null ],
-    [ "setField", "classWorkoutStepMessagePrivate.html#a64b5fe39f5db09268a5defb29ed8b0b6", null ],
+    [ "setField", "classWorkoutStepMessagePrivate.html#a2a633dbced2dc7120c49ef0ed04d3c9d", null ],
     [ "customTargetValueHigh", "classWorkoutStepMessagePrivate.html#af33dd44f68c6661f838de1af532c9807", null ],
     [ "customTargetValueLow", "classWorkoutStepMessagePrivate.html#a444b8aed654ac147c04f2d4a55786ad5", null ],
     [ "durationType", "classWorkoutStepMessagePrivate.html#af97edb5a9cfed86dea15dbc707c0dea3", null ],

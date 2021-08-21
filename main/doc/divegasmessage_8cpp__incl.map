@@ -1,7 +1,9 @@
 <map id="divegasmessage.cpp" name="divegasmessage.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="86,5,245,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="245,5,403,32"/>
 <area shape="rect" id="node2" href="$divegasmessage_8h.html" title=" " alt="" coords="5,80,149,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="174,80,333,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="357,80,432,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="457,80,538,107"/>
 <area shape="rect" id="node3" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="10,155,145,181"/>
 <area shape="rect" id="node4" href="$QtFit__global_8h_source.html" title=" " alt="" coords="21,304,133,331"/>
 <area shape="rect" id="node6" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="79,229,150,256"/>

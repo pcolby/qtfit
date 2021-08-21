@@ -3,7 +3,7 @@ var classAntChannelIdMessagePrivate =
     [ "AntChannelIdMessagePrivate", "classAntChannelIdMessagePrivate.html#a4ae86d8f3b866d44b2f6f75acc22cc6d", null ],
     [ "AntChannelIdMessagePrivate", "classAntChannelIdMessagePrivate.html#add62a1fed1e0ffcc81b25d16fbaafedc", null ],
     [ "~AntChannelIdMessagePrivate", "classAntChannelIdMessagePrivate.html#aabd9dbf7bd79e724ddce40ed821e79bb", null ],
-    [ "setField", "classAntChannelIdMessagePrivate.html#af218ff10ce848b90ecb194d75b170d13", null ],
+    [ "setField", "classAntChannelIdMessagePrivate.html#a8ff077987f68a986d0d9ae30065a4bf6", null ],
     [ "channelNumber", "classAntChannelIdMessagePrivate.html#a7e6fc47d287521d726b8a88770d62458", null ],
     [ "deviceIndex", "classAntChannelIdMessagePrivate.html#a03bfc781b52381be96f8bc0805f66ba5", null ],
     [ "deviceNumber", "classAntChannelIdMessagePrivate.html#a13523a8d5809f26bab8263212b967669", null ],
