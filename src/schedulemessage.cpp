@@ -184,16 +184,16 @@ bool ScheduleMessagePrivate::setField(
         this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
         break;
     case 4: // See Profile.xlsx::Messages:schedule.completed
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "schedule.completed has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "schedule.completed has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "schedule.completed size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->completed = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->completed = static_cast<bool>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:schedule.type
         if (baseType != FitBaseType::Enum) {

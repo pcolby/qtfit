@@ -591,28 +591,28 @@ bool BikeProfileMessagePrivate::setField(
         this->powerCalFactor = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 12: // See Profile.xlsx::Messages:bike_profile.autoWheelCal
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.autoWheelCal has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.autoWheelCal has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.autoWheelCal size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->autoWheelCal = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->autoWheelCal = static_cast<bool>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:bike_profile.autoPowerZero
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.autoPowerZero has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.autoPowerZero has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.autoPowerZero size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->autoPowerZero = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->autoPowerZero = static_cast<bool>(data.at(0));
         break;
     case 14: // See Profile.xlsx::Messages:bike_profile.id
         if (baseType != FitBaseType::Uint8) {
@@ -627,52 +627,52 @@ bool BikeProfileMessagePrivate::setField(
         this->id = static_cast<quint8>(data.at(0));
         break;
     case 15: // See Profile.xlsx::Messages:bike_profile.spdEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.spdEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.spdEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.spdEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->spdEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->spdEnabled = static_cast<bool>(data.at(0));
         break;
     case 16: // See Profile.xlsx::Messages:bike_profile.cadEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.cadEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.cadEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.cadEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->cadEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->cadEnabled = static_cast<bool>(data.at(0));
         break;
     case 17: // See Profile.xlsx::Messages:bike_profile.spdcadEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.spdcadEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.spdcadEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.spdcadEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->spdcadEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->spdcadEnabled = static_cast<bool>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:bike_profile.powerEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.powerEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.powerEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.powerEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->powerEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->powerEnabled = static_cast<bool>(data.at(0));
         break;
     case 19: // See Profile.xlsx::Messages:bike_profile.crankLength
         if (baseType != FitBaseType::Uint8) {
@@ -687,16 +687,16 @@ bool BikeProfileMessagePrivate::setField(
         this->crankLength = static_cast<quint8>(data.at(0));
         break;
     case 20: // See Profile.xlsx::Messages:bike_profile.enabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->enabled = static_cast<bool>(data.at(0));
         break;
     case 21: // See Profile.xlsx::Messages:bike_profile.bikeSpdAntIdTransType
         if (baseType != FitBaseType::Uint8z) {
@@ -807,16 +807,16 @@ bool BikeProfileMessagePrivate::setField(
         this->rearGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
         break;
     case 44: // See Profile.xlsx::Messages:bike_profile.shimanoDi2Enabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "bike_profile.shimanoDi2Enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "bike_profile.shimanoDi2Enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "bike_profile.shimanoDi2Enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->shimanoDi2Enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->shimanoDi2Enabled = static_cast<bool>(data.at(0));
         break;
     default:
         qWarning() << "unknown bike_profile message field number" << fieldId;

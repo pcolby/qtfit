@@ -292,16 +292,16 @@ bool GoalMessagePrivate::setField(
         this->value = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:goal.repeat
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "goal.repeat has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "goal.repeat has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "goal.repeat size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->repeat = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->repeat = static_cast<bool>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:goal.targetValue
         if (baseType != FitBaseType::Uint32) {
@@ -340,16 +340,16 @@ bool GoalMessagePrivate::setField(
         this->recurrenceValue = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:goal.enabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "goal.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "goal.enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "goal.enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->enabled = static_cast<bool>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:goal.source
         if (baseType != FitBaseType::Enum) {

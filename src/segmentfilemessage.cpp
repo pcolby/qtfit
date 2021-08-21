@@ -182,16 +182,16 @@ bool SegmentFileMessagePrivate::setField(
         this->fileUuid = QString::fromUtf8(data);
         break;
     case 3: // See Profile.xlsx::Messages:segment_file.enabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "segment_file.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "segment_file.enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "segment_file.enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->enabled = static_cast<bool>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:segment_file.userProfilePrimaryKey
         if (baseType != FitBaseType::Uint32) {

@@ -165,8 +165,14 @@ int Generator::processMessages(Grantlee::Context &context)
             if (baseType == fitType) {
                 qDebug() << "assuming" << fitType << "is a base type";
             }
+
+            /// Note, 'bool' is not a valid FIT type, yet the Profiles.xlsx::Message sheet contains
+            /// some fields with Field Type 'bool'. \d todo Check what base type FIT files really use.
+            const QString baseTypeEnumLabel = safeEnumLabel(toCamelCase(
+                (baseType == QSL("bool")) ? QSL("byte") : baseType));
+
             field.insert(QSL("baseType"), baseType); ///< \todo Do we need this sperately?
-            field.insert(QSL("baseTypeEnumLabel"), safeEnumLabel(toCamelCase(baseType)));
+            field.insert(QSL("baseTypeEnumLabel"), baseTypeEnumLabel);
             field.insert(QSL("baseTypeSize"), baseTypeSize(baseType));
             field.insert(QSL("endianAbility"), endianAbility(baseType));
             fields.append(field);
@@ -328,6 +334,10 @@ int Generator::baseTypeSize(const QString &fitBaseType)
 // See https://developer.garmin.com/fit/protocol/#basetype
 bool Generator::endianAbility(const QString &fitBaseType)
 {
+    /// Note, 'bool' is not a valid FIT base type (nor a valid FIT complex type), yet the
+    /// Profiles.xlsx::Message sheet contains some fields with Field Type 'bool'. \d todo Check what
+    /// base type FIT files really use.
+    if (fitBaseType == QSL("bool"  )) return false;
     if (fitBaseType == QSL("enum"  )) return false;
     if (fitBaseType == QSL("sint8" )) return false;
     if (fitBaseType == QSL("uint8" )) return false;

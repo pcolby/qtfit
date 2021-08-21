@@ -412,16 +412,16 @@ bool DeviceSettingsMessagePrivate::setField(
         this->backlightMode = static_cast<BacklightMode>(data.at(0));
         break;
     case 36: // See Profile.xlsx::Messages:device_settings.activityTrackerEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "device_settings.activityTrackerEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "device_settings.activityTrackerEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "device_settings.activityTrackerEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->activityTrackerEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->activityTrackerEnabled = static_cast<bool>(data.at(0));
         break;
     case 39: // See Profile.xlsx::Messages:device_settings.clockTime
         if (baseType != FitBaseType::Uint32) {
@@ -448,16 +448,16 @@ bool DeviceSettingsMessagePrivate::setField(
         this->pagesEnabled = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 46: // See Profile.xlsx::Messages:device_settings.moveAlertEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "device_settings.moveAlertEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "device_settings.moveAlertEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "device_settings.moveAlertEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->moveAlertEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->moveAlertEnabled = static_cast<bool>(data.at(0));
         break;
     case 47: // See Profile.xlsx::Messages:device_settings.dateMode
         if (baseType != FitBaseType::Enum) {
@@ -532,28 +532,28 @@ bool DeviceSettingsMessagePrivate::setField(
         this->autosyncMinTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 80: // See Profile.xlsx::Messages:device_settings.lactateThresholdAutodetectEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "device_settings.lactateThresholdAutodetectEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "device_settings.lactateThresholdAutodetectEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "device_settings.lactateThresholdAutodetectEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->lactateThresholdAutodetectEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->lactateThresholdAutodetectEnabled = static_cast<bool>(data.at(0));
         break;
     case 86: // See Profile.xlsx::Messages:device_settings.bleAutoUploadEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "device_settings.bleAutoUploadEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "device_settings.bleAutoUploadEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "device_settings.bleAutoUploadEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->bleAutoUploadEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->bleAutoUploadEnabled = static_cast<bool>(data.at(0));
         break;
     case 89: // See Profile.xlsx::Messages:device_settings.autoSyncFrequency
         if (baseType != FitBaseType::Enum) {

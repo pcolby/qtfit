@@ -160,16 +160,16 @@ bool SdmProfileMessagePrivate::setField(
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
         break;
     case 0: // See Profile.xlsx::Messages:sdm_profile.enabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "sdm_profile.enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "sdm_profile.enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->enabled = static_cast<bool>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:sdm_profile.sdmAntId
         if (baseType != FitBaseType::Uint16z) {
@@ -208,16 +208,16 @@ bool SdmProfileMessagePrivate::setField(
         this->odometer = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:sdm_profile.speedSource
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.speedSource has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "sdm_profile.speedSource has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "sdm_profile.speedSource size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->speedSource = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->speedSource = static_cast<bool>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:sdm_profile.sdmAntIdTransType
         if (baseType != FitBaseType::Uint8z) {

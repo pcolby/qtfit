@@ -435,16 +435,16 @@ bool DiveSettingsMessagePrivate::setField(
         this->po2Deco = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:dive_settings.safetyStopEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "dive_settings.safetyStopEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "dive_settings.safetyStopEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "dive_settings.safetyStopEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->safetyStopEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->safetyStopEnabled = static_cast<bool>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:dive_settings.bottomDepth
         if (baseType != FitBaseType::Float32) {
@@ -471,16 +471,16 @@ bool DiveSettingsMessagePrivate::setField(
         this->bottomTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 12: // See Profile.xlsx::Messages:dive_settings.apneaCountdownEnabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "dive_settings.apneaCountdownEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "dive_settings.apneaCountdownEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "dive_settings.apneaCountdownEnabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->apneaCountdownEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->apneaCountdownEnabled = static_cast<bool>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:dive_settings.apneaCountdownTime
         if (baseType != FitBaseType::Uint32) {

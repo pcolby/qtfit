@@ -231,16 +231,16 @@ bool CoursePointMessagePrivate::setField(
         this->name = QString::fromUtf8(data);
         break;
     case 8: // See Profile.xlsx::Messages:course_point.favorite
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "course_point.favorite has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "course_point.favorite has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "course_point.favorite size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->favorite = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->favorite = static_cast<bool>(data.at(0));
         break;
     default:
         qWarning() << "unknown course_point message field number" << fieldId;

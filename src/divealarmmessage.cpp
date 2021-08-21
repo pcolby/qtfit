@@ -172,16 +172,16 @@ bool DiveAlarmMessagePrivate::setField(
         this->time = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:dive_alarm.enabled
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "dive_alarm.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "dive_alarm.enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "dive_alarm.enabled size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->enabled = static_cast<bool>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:dive_alarm.alarmType
         if (baseType != FitBaseType::Enum) {

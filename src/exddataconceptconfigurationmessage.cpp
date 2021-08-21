@@ -304,16 +304,16 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
         this->descriptor = static_cast<ExdDescriptors>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:exd_data_concept_configuration.isSigned
-        if (baseType != FitBaseType::Bool) {
+        if (baseType != FitBaseType::Byte) {
             /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.isSigned has base type" << static_cast<int>(baseType) << "but should be Bool";
+            qWarning() << "exd_data_concept_configuration.isSigned has base type" << static_cast<int>(baseType) << "but should be Byte";
             return false;
         }
         if (data.size() != 0) {
             qWarning() << "exd_data_concept_configuration.isSigned size is" << data.size() << "but should be" << 0;
             return false;
         }
-        this->isSigned = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        this->isSigned = static_cast<bool>(data.at(0));
         break;
     default:
         qWarning() << "unknown exd_data_concept_configuration message field number" << fieldId;
