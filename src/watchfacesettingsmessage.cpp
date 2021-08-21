@@ -25,6 +25,9 @@
 #include "watchfacesettingsmessage.h"
 #include "watchfacesettingsmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 WatchfaceSettingsMessage::WatchfaceSettingsMessage() : FitDataMessage(new WatchfaceSettingsMessagePrivate(this))
@@ -80,23 +83,51 @@ WatchfaceSettingsMessagePrivate::~WatchfaceSettingsMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool WatchfaceSettingsMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool WatchfaceSettingsMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:watchface_settings.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "watchface_settings.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "watchface_settings.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:watchface_settings.mode
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "watchface_settings.mode has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "watchface_settings.mode size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        mode = static_cast<WatchfaceMode>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:watchface_settings.layout
+        if (baseType != FitBaseType::Byte) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "watchface_settings.layout has base type" << static_cast<int>(baseType) << "but should be Byte";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "watchface_settings.layout size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        layout = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown watchface_settings message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

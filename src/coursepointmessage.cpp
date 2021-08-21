@@ -25,6 +25,9 @@
 #include "coursepointmessage.h"
 #include "coursepointmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 CoursePointMessage::CoursePointMessage() : FitDataMessage(new CoursePointMessagePrivate(this))
@@ -139,23 +142,111 @@ CoursePointMessagePrivate::~CoursePointMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool CoursePointMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool CoursePointMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:course_point.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "course_point.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:course_point.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "course_point.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:course_point.positionLat
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.positionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "course_point.positionLat size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:course_point.positionLong
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.positionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "course_point.positionLong size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:course_point.distance
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.distance has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "course_point.distance size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:course_point.type
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.type has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "course_point.type size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        type = static_cast<CoursePoint>(data.at(0));
+        break;
+    case 6: // See Profile.xlsx::Messages:course_point.name
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.name has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "course_point.name size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        name = static_cast<QString>(data.at(0));
+        break;
+    case 8: // See Profile.xlsx::Messages:course_point.favorite
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course_point.favorite has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "course_point.favorite size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        favorite = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    default:
+        qWarning() << "unknown course_point message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

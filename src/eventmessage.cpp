@@ -25,6 +25,9 @@
 #include "eventmessage.h"
 #include "eventmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 EventMessage::EventMessage() : FitDataMessage(new EventMessagePrivate(this))
@@ -224,23 +227,195 @@ EventMessagePrivate::~EventMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool EventMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool EventMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:event.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "event.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:event.event
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.event has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.event size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        event = static_cast<Event>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:event.eventType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.eventType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.eventType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        eventType = static_cast<EventType>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:event.data16
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.data16 has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "event.data16 size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        data16 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:event.data
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.data has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "event.data size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        data = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:event.eventGroup
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.eventGroup has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.eventGroup size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        eventGroup = static_cast<quint8>(data.at(0));
+        break;
+    case 7: // See Profile.xlsx::Messages:event.score
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.score has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "event.score size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        score = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 8: // See Profile.xlsx::Messages:event.opponentScore
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.opponentScore has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "event.opponentScore size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        opponentScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 9: // See Profile.xlsx::Messages:event.frontGearNum
+        if (baseType != FitBaseType::Uint8z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.frontGearNum has base type" << static_cast<int>(baseType) << "but should be Uint8z";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.frontGearNum size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        frontGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        break;
+    case 10: // See Profile.xlsx::Messages:event.frontGear
+        if (baseType != FitBaseType::Uint8z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.frontGear has base type" << static_cast<int>(baseType) << "but should be Uint8z";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.frontGear size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        frontGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        break;
+    case 11: // See Profile.xlsx::Messages:event.rearGearNum
+        if (baseType != FitBaseType::Uint8z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.rearGearNum has base type" << static_cast<int>(baseType) << "but should be Uint8z";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.rearGearNum size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        rearGearNum = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        break;
+    case 12: // See Profile.xlsx::Messages:event.rearGear
+        if (baseType != FitBaseType::Uint8z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.rearGear has base type" << static_cast<int>(baseType) << "but should be Uint8z";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.rearGear size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        rearGear = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        break;
+    case 13: // See Profile.xlsx::Messages:event.deviceIndex
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.deviceIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.deviceIndex size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        deviceIndex = static_cast<DeviceIndex>(data.at(0));
+        break;
+    case 21: // See Profile.xlsx::Messages:event.radarThreatLevelMax
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.radarThreatLevelMax has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.radarThreatLevelMax size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        radarThreatLevelMax = static_cast<RadarThreatLevelType>(data.at(0));
+        break;
+    case 22: // See Profile.xlsx::Messages:event.radarThreatCount
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "event.radarThreatCount has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "event.radarThreatCount size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        radarThreatCount = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown event message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

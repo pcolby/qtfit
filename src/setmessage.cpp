@@ -25,6 +25,9 @@
 #include "setmessage.h"
 #include "setmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 SetMessage::SetMessage() : FitDataMessage(new SetMessagePrivate(this))
@@ -176,23 +179,147 @@ SetMessagePrivate::~SetMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool SetMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool SetMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:set.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "set.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:set.duration
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.duration has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "set.duration size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        duration = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:set.repetitions
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.repetitions has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "set.repetitions size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        repetitions = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:set.weight
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.weight has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "set.weight size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        weight = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:set.setType
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.setType has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "set.setType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        setType = static_cast<SetType>(data.at(0));
+        break;
+    case 6: // See Profile.xlsx::Messages:set.startTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.startTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "set.startTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 7: // See Profile.xlsx::Messages:set.category
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.category has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "set.category size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        category = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<ExerciseCategory>(data) : qFromLittleEndian<ExerciseCategory>(data));
+        break;
+    case 8: // See Profile.xlsx::Messages:set.categorySubtype
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.categorySubtype has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "set.categorySubtype size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        categorySubtype = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 9: // See Profile.xlsx::Messages:set.weightDisplayUnit
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.weightDisplayUnit has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "set.weightDisplayUnit size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        break;
+    case 10: // See Profile.xlsx::Messages:set.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "set.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 11: // See Profile.xlsx::Messages:set.wktStepIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "set.wktStepIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "set.wktStepIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        wktStepIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    default:
+        qWarning() << "unknown set message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

@@ -25,6 +25,9 @@
 #include "goalmessage.h"
 #include "goalmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 GoalMessage::GoalMessage() : FitDataMessage(new GoalMessagePrivate(this))
@@ -200,23 +203,171 @@ GoalMessagePrivate::~GoalMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool GoalMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool GoalMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:goal.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "goal.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:goal.sport
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.sport has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "goal.sport size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sport = static_cast<Sport>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:goal.subSport
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.subSport has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "goal.subSport size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        subSport = static_cast<SubSport>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:goal.startDate
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.startDate has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "goal.startDate size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        startDate = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:goal.endDate
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.endDate has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "goal.endDate size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        endDate = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:goal.type
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.type has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "goal.type size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        type = static_cast<Goal>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:goal.value
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.value has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "goal.value size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        value = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 6: // See Profile.xlsx::Messages:goal.repeat
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.repeat has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "goal.repeat size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        repeat = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 7: // See Profile.xlsx::Messages:goal.targetValue
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.targetValue has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "goal.targetValue size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        targetValue = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 8: // See Profile.xlsx::Messages:goal.recurrence
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.recurrence has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "goal.recurrence size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        recurrence = static_cast<GoalRecurrence>(data.at(0));
+        break;
+    case 9: // See Profile.xlsx::Messages:goal.recurrenceValue
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.recurrenceValue has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "goal.recurrenceValue size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        recurrenceValue = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 10: // See Profile.xlsx::Messages:goal.enabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "goal.enabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 11: // See Profile.xlsx::Messages:goal.source
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "goal.source has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "goal.source size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        source = static_cast<GoalSource>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown goal message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

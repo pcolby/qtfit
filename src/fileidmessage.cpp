@@ -25,6 +25,9 @@
 #include "fileidmessage.h"
 #include "fileidmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 FileIdMessage::FileIdMessage() : FitDataMessage(new FileIdMessagePrivate(this))
@@ -127,23 +130,99 @@ FileIdMessagePrivate::~FileIdMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool FileIdMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool FileIdMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:file_id.type
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_id.type has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "file_id.type size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        type = static_cast<File>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:file_id.manufacturer
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_id.manufacturer has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "file_id.manufacturer size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<Manufacturer>(data) : qFromLittleEndian<Manufacturer>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:file_id.product
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_id.product has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "file_id.product size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:file_id.serialNumber
+        if (baseType != FitBaseType::Uint32z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_id.serialNumber has base type" << static_cast<int>(baseType) << "but should be Uint32z";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "file_id.serialNumber size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32z>(data) : qFromLittleEndian<quint32z>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:file_id.timeCreated
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_id.timeCreated has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "file_id.timeCreated size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:file_id.number
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_id.number has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "file_id.number size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        number = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 8: // See Profile.xlsx::Messages:file_id.productName
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_id.productName has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "file_id.productName size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        productName = static_cast<QString>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown file_id message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

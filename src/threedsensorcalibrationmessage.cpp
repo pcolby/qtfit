@@ -25,6 +25,9 @@
 #include "threedsensorcalibrationmessage.h"
 #include "threedsensorcalibrationmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : FitDataMessage(new ThreeDSensorCalibrationMessagePrivate(this))
@@ -128,23 +131,99 @@ ThreeDSensorCalibrationMessagePrivate::~ThreeDSensorCalibrationMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool ThreeDSensorCalibrationMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool ThreeDSensorCalibrationMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:three_d_sensor_calibration.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "three_d_sensor_calibration.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "three_d_sensor_calibration.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:three_d_sensor_calibration.sensorType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "three_d_sensor_calibration.sensorType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "three_d_sensor_calibration.sensorType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sensorType = static_cast<SensorType>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:three_d_sensor_calibration.calibrationFactor
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "three_d_sensor_calibration.calibrationFactor has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "three_d_sensor_calibration.calibrationFactor size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        calibrationFactor = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:three_d_sensor_calibration.calibrationDivisor
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "three_d_sensor_calibration.calibrationDivisor has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "three_d_sensor_calibration.calibrationDivisor size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        calibrationDivisor = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:three_d_sensor_calibration.levelShift
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "three_d_sensor_calibration.levelShift has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "three_d_sensor_calibration.levelShift size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        levelShift = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:three_d_sensor_calibration.offsetCal
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "three_d_sensor_calibration.offsetCal has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "three_d_sensor_calibration.offsetCal size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        offsetCal = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:three_d_sensor_calibration.orientationMatrix
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "three_d_sensor_calibration.orientationMatrix has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "three_d_sensor_calibration.orientationMatrix size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        orientationMatrix = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    default:
+        qWarning() << "unknown three_d_sensor_calibration message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

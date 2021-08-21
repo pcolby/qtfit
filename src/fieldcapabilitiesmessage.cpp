@@ -25,6 +25,9 @@
 #include "fieldcapabilitiesmessage.h"
 #include "fieldcapabilitiesmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 FieldCapabilitiesMessage::FieldCapabilitiesMessage() : FitDataMessage(new FieldCapabilitiesMessagePrivate(this))
@@ -104,23 +107,75 @@ FieldCapabilitiesMessagePrivate::~FieldCapabilitiesMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool FieldCapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool FieldCapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:field_capabilities.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_capabilities.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "field_capabilities.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:field_capabilities.file
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_capabilities.file has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_capabilities.file size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        file = static_cast<File>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:field_capabilities.mesgNum
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_capabilities.mesgNum has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "field_capabilities.mesgNum size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        mesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:field_capabilities.fieldNum
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_capabilities.fieldNum has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_capabilities.fieldNum size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        fieldNum = static_cast<quint8>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:field_capabilities.count
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_capabilities.count has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "field_capabilities.count size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        count = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    default:
+        qWarning() << "unknown field_capabilities message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

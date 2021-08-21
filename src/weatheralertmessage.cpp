@@ -25,6 +25,9 @@
 #include "weatheralertmessage.h"
 #include "weatheralertmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 WeatherAlertMessage::WeatherAlertMessage() : FitDataMessage(new WeatherAlertMessagePrivate(this))
@@ -115,23 +118,87 @@ WeatherAlertMessagePrivate::~WeatherAlertMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool WeatherAlertMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool WeatherAlertMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:weather_alert.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "weather_alert.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "weather_alert.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:weather_alert.reportId
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "weather_alert.reportId has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "weather_alert.reportId size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        reportId = static_cast<QString>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:weather_alert.issueTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "weather_alert.issueTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "weather_alert.issueTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        issueTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:weather_alert.expireTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "weather_alert.expireTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "weather_alert.expireTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        expireTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:weather_alert.severity
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "weather_alert.severity has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "weather_alert.severity size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        severity = static_cast<WeatherSeverity>(data.at(0));
+        break;
+    case 4: // See Profile.xlsx::Messages:weather_alert.type
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "weather_alert.type has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "weather_alert.type size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        type = static_cast<WeatherSevereType>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown weather_alert message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

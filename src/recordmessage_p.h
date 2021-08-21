@@ -114,8 +114,8 @@ public:
     virtual ~RecordMessagePrivate();
 
 protected:
-    /// @todo Make base type enum.
-    bool setField(const int fieldId, const QByteArray data, int baseType) override;
+    bool setField(const int fieldId, const QByteArray &data,
+                  const FitBaseType baseType, const bool bigEndian) override;
 
 private:
     Q_DECLARE_PUBLIC(RecordMessage)

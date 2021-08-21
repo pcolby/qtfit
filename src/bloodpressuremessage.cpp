@@ -25,6 +25,9 @@
 #include "bloodpressuremessage.h"
 #include "bloodpressuremessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 BloodPressureMessage::BloodPressureMessage() : FitDataMessage(new BloodPressureMessagePrivate(this))
@@ -176,23 +179,147 @@ BloodPressureMessagePrivate::~BloodPressureMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool BloodPressureMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool BloodPressureMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:blood_pressure.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "blood_pressure.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:blood_pressure.systolicPressure
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.systolicPressure has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "blood_pressure.systolicPressure size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        systolicPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:blood_pressure.diastolicPressure
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.diastolicPressure has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "blood_pressure.diastolicPressure size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        diastolicPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:blood_pressure.meanArterialPressure
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.meanArterialPressure has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "blood_pressure.meanArterialPressure size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        meanArterialPressure = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:blood_pressure.map3SampleMean
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.map3SampleMean has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "blood_pressure.map3SampleMean size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        map3SampleMean = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:blood_pressure.mapMorningValues
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.mapMorningValues has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "blood_pressure.mapMorningValues size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        mapMorningValues = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:blood_pressure.mapEveningValues
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.mapEveningValues has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "blood_pressure.mapEveningValues size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        mapEveningValues = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 6: // See Profile.xlsx::Messages:blood_pressure.heartRate
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.heartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "blood_pressure.heartRate size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        heartRate = static_cast<quint8>(data.at(0));
+        break;
+    case 7: // See Profile.xlsx::Messages:blood_pressure.heartRateType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.heartRateType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "blood_pressure.heartRateType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        heartRateType = static_cast<HrType>(data.at(0));
+        break;
+    case 8: // See Profile.xlsx::Messages:blood_pressure.status
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.status has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "blood_pressure.status size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        status = static_cast<BpStatus>(data.at(0));
+        break;
+    case 9: // See Profile.xlsx::Messages:blood_pressure.userProfileIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "blood_pressure.userProfileIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "blood_pressure.userProfileIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    default:
+        qWarning() << "unknown blood_pressure message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

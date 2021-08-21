@@ -25,6 +25,9 @@
 #include "hrzonemessage.h"
 #include "hrzonemessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 HrZoneMessage::HrZoneMessage() : FitDataMessage(new HrZoneMessagePrivate(this))
@@ -79,23 +82,51 @@ HrZoneMessagePrivate::~HrZoneMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool HrZoneMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool HrZoneMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:hr_zone.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr_zone.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "hr_zone.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:hr_zone.highBpm
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr_zone.highBpm has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "hr_zone.highBpm size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        highBpm = static_cast<quint8>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:hr_zone.name
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr_zone.name has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "hr_zone.name size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        name = static_cast<QString>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown hr_zone message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

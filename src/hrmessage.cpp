@@ -25,6 +25,9 @@
 #include "hrmessage.h"
 #include "hrmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 HrMessage::HrMessage() : FitDataMessage(new HrMessagePrivate(this))
@@ -116,23 +119,87 @@ HrMessagePrivate::~HrMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool HrMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool HrMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:hr.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "hr.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:hr.fractionalTimestamp
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr.fractionalTimestamp has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "hr.fractionalTimestamp size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:hr.time256
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr.time256 has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "hr.time256 size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        time256 = static_cast<quint8>(data.at(0));
+        break;
+    case 6: // See Profile.xlsx::Messages:hr.filteredBpm
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr.filteredBpm has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "hr.filteredBpm size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        filteredBpm = static_cast<quint8>(data.at(0));
+        break;
+    case 9: // See Profile.xlsx::Messages:hr.eventTimestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr.eventTimestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "hr.eventTimestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        eventTimestamp = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 10: // See Profile.xlsx::Messages:hr.eventTimestamp12
+        if (baseType != FitBaseType::Byte) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hr.eventTimestamp12 has base type" << static_cast<int>(baseType) << "but should be Byte";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "hr.eventTimestamp12 size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        eventTimestamp12 = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown hr message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

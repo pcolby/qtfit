@@ -25,6 +25,9 @@
 #include "fielddescriptionmessage.h"
 #include "fielddescriptionmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 FieldDescriptionMessage::FieldDescriptionMessage() : FitDataMessage(new FieldDescriptionMessagePrivate(this))
@@ -207,23 +210,183 @@ FieldDescriptionMessagePrivate::~FieldDescriptionMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool FieldDescriptionMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool FieldDescriptionMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:field_description.developerDataIndex
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.developerDataIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.developerDataIndex size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        developerDataIndex = static_cast<quint8>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:field_description.fieldDefinitionNumber
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.fieldDefinitionNumber has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.fieldDefinitionNumber size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        fieldDefinitionNumber = static_cast<quint8>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:field_description.fitBaseTypeId
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.fitBaseTypeId has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.fitBaseTypeId size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        fitBaseTypeId = static_cast<FitBaseType>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:field_description.fieldName
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.fieldName has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.fieldName size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        fieldName = static_cast<QString>(data.at(0));
+        break;
+    case 4: // See Profile.xlsx::Messages:field_description.array
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.array has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.array size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        array = static_cast<quint8>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:field_description.components
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.components has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.components size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        components = static_cast<QString>(data.at(0));
+        break;
+    case 6: // See Profile.xlsx::Messages:field_description.scale
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.scale has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.scale size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        scale = static_cast<quint8>(data.at(0));
+        break;
+    case 7: // See Profile.xlsx::Messages:field_description.offset
+        if (baseType != FitBaseType::Sint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.offset has base type" << static_cast<int>(baseType) << "but should be Sint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.offset size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        offset = static_cast<qint8>(data.at(0));
+        break;
+    case 8: // See Profile.xlsx::Messages:field_description.units
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.units has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.units size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        units = static_cast<QString>(data.at(0));
+        break;
+    case 9: // See Profile.xlsx::Messages:field_description.bits
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.bits has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.bits size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        bits = static_cast<QString>(data.at(0));
+        break;
+    case 10: // See Profile.xlsx::Messages:field_description.accumulate
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.accumulate has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.accumulate size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        accumulate = static_cast<QString>(data.at(0));
+        break;
+    case 13: // See Profile.xlsx::Messages:field_description.fitBaseUnitId
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.fitBaseUnitId has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "field_description.fitBaseUnitId size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        fitBaseUnitId = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        break;
+    case 14: // See Profile.xlsx::Messages:field_description.nativeMesgNum
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.nativeMesgNum has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "field_description.nativeMesgNum size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        nativeMesgNum = static_cast<MesgNum>(bigEndian ? qFromBigEndian<MesgNum>(data) : qFromLittleEndian<MesgNum>(data));
+        break;
+    case 15: // See Profile.xlsx::Messages:field_description.nativeFieldNum
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "field_description.nativeFieldNum has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "field_description.nativeFieldNum size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        nativeFieldNum = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown field_description message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

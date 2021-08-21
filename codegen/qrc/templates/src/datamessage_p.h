@@ -13,7 +13,7 @@ class {{ClassName}}Private : public FitDataMessagePrivate {
 
 public:
 {% for field in fields %}
-    {{field.type}} {{field.name}};
+    {{field.cppType}} {{field.name}};
 {% endfor %}
 
     {{ClassName}}Private() = delete;
@@ -21,8 +21,8 @@ public:
     virtual ~{{ClassName}}Private();
 
 protected:
-    /// @todo Make base type enum.
-    bool setField(const int fieldId, const QByteArray data, int baseType) override;
+    bool setField(const int fieldId, const QByteArray &data,
+                  const FitBaseType baseType, const bool bigEndian) override;
 
 private:
     Q_DECLARE_PUBLIC({{ClassName}})

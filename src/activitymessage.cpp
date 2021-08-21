@@ -25,6 +25,9 @@
 #include "activitymessage.h"
 #include "activitymessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 ActivityMessage::ActivityMessage() : FitDataMessage(new ActivityMessagePrivate(this))
@@ -140,23 +143,111 @@ ActivityMessagePrivate::~ActivityMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool ActivityMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool ActivityMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:activity.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "activity.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:activity.totalTimerTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.totalTimerTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "activity.totalTimerTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalTimerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:activity.numSessions
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.numSessions has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "activity.numSessions size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        numSessions = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:activity.type
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.type has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "activity.type size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        type = static_cast<Activity>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:activity.event
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.event has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "activity.event size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        event = static_cast<Event>(data.at(0));
+        break;
+    case 4: // See Profile.xlsx::Messages:activity.eventType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.eventType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "activity.eventType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        eventType = static_cast<EventType>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:activity.localTimestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.localTimestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "activity.localTimestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        localTimestamp = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<LocalDateTime>(data) : qFromLittleEndian<LocalDateTime>(data));
+        break;
+    case 6: // See Profile.xlsx::Messages:activity.eventGroup
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "activity.eventGroup has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "activity.eventGroup size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        eventGroup = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown activity message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

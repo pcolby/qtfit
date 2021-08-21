@@ -25,6 +25,9 @@
 #include "segmentidmessage.h"
 #include "segmentidmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 SegmentIdMessage::SegmentIdMessage() : FitDataMessage(new SegmentIdMessagePrivate(this))
@@ -150,23 +153,123 @@ SegmentIdMessagePrivate::~SegmentIdMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool SegmentIdMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool SegmentIdMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:segment_id.name
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.name has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_id.name size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        name = static_cast<QString>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:segment_id.uuid
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.uuid has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_id.uuid size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        uuid = static_cast<QString>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:segment_id.sport
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.sport has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_id.sport size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sport = static_cast<Sport>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:segment_id.enabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "segment_id.enabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:segment_id.userProfilePrimaryKey
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.userProfilePrimaryKey has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_id.userProfilePrimaryKey size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        userProfilePrimaryKey = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:segment_id.deviceId
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.deviceId has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_id.deviceId size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        deviceId = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 6: // See Profile.xlsx::Messages:segment_id.defaultRaceLeader
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.defaultRaceLeader has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_id.defaultRaceLeader size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        defaultRaceLeader = static_cast<quint8>(data.at(0));
+        break;
+    case 7: // See Profile.xlsx::Messages:segment_id.deleteStatus
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.deleteStatus has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_id.deleteStatus size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        deleteStatus = static_cast<SegmentDeleteStatus>(data.at(0));
+        break;
+    case 8: // See Profile.xlsx::Messages:segment_id.selectionType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_id.selectionType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_id.selectionType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        selectionType = static_cast<SegmentSelectionType>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown segment_id message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

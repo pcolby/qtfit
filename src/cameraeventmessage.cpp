@@ -25,6 +25,9 @@
 #include "cameraeventmessage.h"
 #include "cameraeventmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 CameraEventMessage::CameraEventMessage() : FitDataMessage(new CameraEventMessagePrivate(this))
@@ -103,23 +106,75 @@ CameraEventMessagePrivate::~CameraEventMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool CameraEventMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool CameraEventMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:camera_event.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "camera_event.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "camera_event.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:camera_event.timestampMs
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "camera_event.timestampMs has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "camera_event.timestampMs size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:camera_event.cameraEventType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "camera_event.cameraEventType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "camera_event.cameraEventType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        cameraEventType = static_cast<CameraEventType>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:camera_event.cameraFileUuid
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "camera_event.cameraFileUuid has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "camera_event.cameraFileUuid size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        cameraFileUuid = static_cast<QString>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:camera_event.cameraOrientation
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "camera_event.cameraOrientation has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "camera_event.cameraOrientation size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        cameraOrientation = static_cast<CameraOrientationType>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown camera_event message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

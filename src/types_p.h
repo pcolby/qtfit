@@ -38,9 +38,9 @@ struct DeveloperFieldDefinition {
 };
 
 struct FieldDefinition {
-    quint8 number; // FieldDefNum is what the cpp sdk uses.
-    quint8 size;
-    quint8 type; // make enum
+    quint8 number;        ///< Unique ID for the FIT field within a given FIT data message.
+    quint8 size;          ///< Size (in bytes) of the field.
+    FitBaseType baseType; ///< Base type for interpreting unknown fields.
 };
 
 struct DataDefinition {
@@ -51,19 +51,11 @@ struct DataDefinition {
     int recordSize; ///< Sum of all sizes in fieldDefinitions and developerFieldDefintions.
 };
 
-//typedef QList<FieldDefinition> FieldDefinitionList;
-
 struct DataMessage {
     quint8 localMessageType; // 0xFF == invalid
     quint8 timestampOffset; // Valid range is 0 to 31; anything outside this is invalid.
     QByteArray recordContent; // empty -> invalid.
 };
-
-//struct MessageDefintion {
-//    MesgNum globalType;
-//    Architecture arch;
-//    FieldDefinitionList defns;
-//};
 
 QTFIT_END_NAMESPACE
 

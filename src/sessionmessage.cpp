@@ -25,6 +25,9 @@
 #include "sessionmessage.h"
 #include "sessionmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 SessionMessage::SessionMessage() : FitDataMessage(new SessionMessagePrivate(this))
@@ -1603,23 +1606,1575 @@ SessionMessagePrivate::~SessionMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool SessionMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool SessionMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:session.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 253: // See Profile.xlsx::Messages:session.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:session.event
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.event has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.event size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        event = static_cast<Event>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:session.eventType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.eventType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.eventType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        eventType = static_cast<EventType>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:session.startTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.startTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.startTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:session.startPositionLat
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.startPositionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.startPositionLat size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        startPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:session.startPositionLong
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.startPositionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.startPositionLong size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        startPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:session.sport
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.sport has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.sport size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sport = static_cast<Sport>(data.at(0));
+        break;
+    case 6: // See Profile.xlsx::Messages:session.subSport
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.subSport has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.subSport size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        subSport = static_cast<SubSport>(data.at(0));
+        break;
+    case 7: // See Profile.xlsx::Messages:session.totalElapsedTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalElapsedTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalElapsedTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalElapsedTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 8: // See Profile.xlsx::Messages:session.totalTimerTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalTimerTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalTimerTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalTimerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 9: // See Profile.xlsx::Messages:session.totalDistance
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalDistance has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalDistance size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalDistance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 10: // See Profile.xlsx::Messages:session.totalCycles
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalCycles has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalCycles size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalCycles = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 11: // See Profile.xlsx::Messages:session.totalCalories
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalCalories has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.totalCalories size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        totalCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 13: // See Profile.xlsx::Messages:session.totalFatCalories
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalFatCalories has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.totalFatCalories size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        totalFatCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 14: // See Profile.xlsx::Messages:session.avgSpeed
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 15: // See Profile.xlsx::Messages:session.maxSpeed
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 16: // See Profile.xlsx::Messages:session.avgHeartRate
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgHeartRate size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgHeartRate = static_cast<quint8>(data.at(0));
+        break;
+    case 17: // See Profile.xlsx::Messages:session.maxHeartRate
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.maxHeartRate size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        maxHeartRate = static_cast<quint8>(data.at(0));
+        break;
+    case 18: // See Profile.xlsx::Messages:session.avgCadence
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgCadence size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgCadence = static_cast<quint8>(data.at(0));
+        break;
+    case 19: // See Profile.xlsx::Messages:session.maxCadence
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.maxCadence size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        maxCadence = static_cast<quint8>(data.at(0));
+        break;
+    case 20: // See Profile.xlsx::Messages:session.avgPower
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgPower size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 21: // See Profile.xlsx::Messages:session.maxPower
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxPower size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 22: // See Profile.xlsx::Messages:session.totalAscent
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalAscent has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.totalAscent size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        totalAscent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 23: // See Profile.xlsx::Messages:session.totalDescent
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalDescent has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.totalDescent size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        totalDescent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 24: // See Profile.xlsx::Messages:session.totalTrainingEffect
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalTrainingEffect has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.totalTrainingEffect size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        totalTrainingEffect = static_cast<quint8>(data.at(0));
+        break;
+    case 25: // See Profile.xlsx::Messages:session.firstLapIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.firstLapIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.firstLapIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        firstLapIndex = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 26: // See Profile.xlsx::Messages:session.numLaps
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.numLaps has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.numLaps size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        numLaps = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 27: // See Profile.xlsx::Messages:session.eventGroup
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.eventGroup has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.eventGroup size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        eventGroup = static_cast<quint8>(data.at(0));
+        break;
+    case 28: // See Profile.xlsx::Messages:session.trigger
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.trigger has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.trigger size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        trigger = static_cast<SessionTrigger>(data.at(0));
+        break;
+    case 29: // See Profile.xlsx::Messages:session.necLat
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.necLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.necLat size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        necLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 30: // See Profile.xlsx::Messages:session.necLong
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.necLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.necLong size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        necLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 31: // See Profile.xlsx::Messages:session.swcLat
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.swcLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.swcLat size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        swcLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 32: // See Profile.xlsx::Messages:session.swcLong
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.swcLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.swcLong size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        swcLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 33: // See Profile.xlsx::Messages:session.numLengths
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.numLengths has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.numLengths size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        numLengths = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 34: // See Profile.xlsx::Messages:session.normalizedPower
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.normalizedPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.normalizedPower size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        normalizedPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 35: // See Profile.xlsx::Messages:session.trainingStressScore
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.trainingStressScore has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.trainingStressScore size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        trainingStressScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 36: // See Profile.xlsx::Messages:session.intensityFactor
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.intensityFactor has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.intensityFactor size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        intensityFactor = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 37: // See Profile.xlsx::Messages:session.leftRightBalance
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.leftRightBalance has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.leftRightBalance size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        leftRightBalance = static_cast<LeftRightBalance100>(bigEndian ? qFromBigEndian<LeftRightBalance100>(data) : qFromLittleEndian<LeftRightBalance100>(data));
+        break;
+    case 41: // See Profile.xlsx::Messages:session.avgStrokeCount
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgStrokeCount has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.avgStrokeCount size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        avgStrokeCount = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 42: // See Profile.xlsx::Messages:session.avgStrokeDistance
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgStrokeDistance has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgStrokeDistance size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgStrokeDistance = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 43: // See Profile.xlsx::Messages:session.swimStroke
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.swimStroke has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.swimStroke size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        swimStroke = static_cast<SwimStroke>(data.at(0));
+        break;
+    case 44: // See Profile.xlsx::Messages:session.poolLength
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.poolLength has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.poolLength size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        poolLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 45: // See Profile.xlsx::Messages:session.thresholdPower
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.thresholdPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.thresholdPower size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        thresholdPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 46: // See Profile.xlsx::Messages:session.poolLengthUnit
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.poolLengthUnit has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.poolLengthUnit size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        poolLengthUnit = static_cast<DisplayMeasure>(data.at(0));
+        break;
+    case 47: // See Profile.xlsx::Messages:session.numActiveLengths
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.numActiveLengths has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.numActiveLengths size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        numActiveLengths = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 48: // See Profile.xlsx::Messages:session.totalWork
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalWork has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalWork size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalWork = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 49: // See Profile.xlsx::Messages:session.avgAltitude
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgAltitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgAltitude size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgAltitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 50: // See Profile.xlsx::Messages:session.maxAltitude
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxAltitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxAltitude size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxAltitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 51: // See Profile.xlsx::Messages:session.gpsAccuracy
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.gpsAccuracy has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.gpsAccuracy size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        gpsAccuracy = static_cast<quint8>(data.at(0));
+        break;
+    case 52: // See Profile.xlsx::Messages:session.avgGrade
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgGrade size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 53: // See Profile.xlsx::Messages:session.avgPosGrade
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgPosGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgPosGrade size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 54: // See Profile.xlsx::Messages:session.avgNegGrade
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgNegGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgNegGrade size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 55: // See Profile.xlsx::Messages:session.maxPosGrade
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxPosGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxPosGrade size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 56: // See Profile.xlsx::Messages:session.maxNegGrade
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxNegGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxNegGrade size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 57: // See Profile.xlsx::Messages:session.avgTemperature
+        if (baseType != FitBaseType::Sint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgTemperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgTemperature size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgTemperature = static_cast<qint8>(data.at(0));
+        break;
+    case 58: // See Profile.xlsx::Messages:session.maxTemperature
+        if (baseType != FitBaseType::Sint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxTemperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.maxTemperature size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        maxTemperature = static_cast<qint8>(data.at(0));
+        break;
+    case 59: // See Profile.xlsx::Messages:session.totalMovingTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalMovingTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalMovingTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalMovingTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 60: // See Profile.xlsx::Messages:session.avgPosVerticalSpeed
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgPosVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgPosVerticalSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 61: // See Profile.xlsx::Messages:session.avgNegVerticalSpeed
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgNegVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgNegVerticalSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 62: // See Profile.xlsx::Messages:session.maxPosVerticalSpeed
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxPosVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxPosVerticalSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 63: // See Profile.xlsx::Messages:session.maxNegVerticalSpeed
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxNegVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxNegVerticalSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 64: // See Profile.xlsx::Messages:session.minHeartRate
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.minHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.minHeartRate size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        minHeartRate = static_cast<quint8>(data.at(0));
+        break;
+    case 65: // See Profile.xlsx::Messages:session.timeInHrZone
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.timeInHrZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.timeInHrZone size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timeInHrZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 66: // See Profile.xlsx::Messages:session.timeInSpeedZone
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.timeInSpeedZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.timeInSpeedZone size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timeInSpeedZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 67: // See Profile.xlsx::Messages:session.timeInCadenceZone
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.timeInCadenceZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.timeInCadenceZone size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timeInCadenceZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 68: // See Profile.xlsx::Messages:session.timeInPowerZone
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.timeInPowerZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.timeInPowerZone size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timeInPowerZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 69: // See Profile.xlsx::Messages:session.avgLapTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgLapTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.avgLapTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        avgLapTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 70: // See Profile.xlsx::Messages:session.bestLapIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.bestLapIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.bestLapIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        bestLapIndex = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 71: // See Profile.xlsx::Messages:session.minAltitude
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.minAltitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.minAltitude size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        minAltitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 82: // See Profile.xlsx::Messages:session.playerScore
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.playerScore has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.playerScore size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        playerScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 83: // See Profile.xlsx::Messages:session.opponentScore
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.opponentScore has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.opponentScore size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        opponentScore = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 84: // See Profile.xlsx::Messages:session.opponentName
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.opponentName has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.opponentName size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        opponentName = static_cast<QString>(data.at(0));
+        break;
+    case 85: // See Profile.xlsx::Messages:session.strokeCount
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.strokeCount has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.strokeCount size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        strokeCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 86: // See Profile.xlsx::Messages:session.zoneCount
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.zoneCount has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.zoneCount size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        zoneCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 87: // See Profile.xlsx::Messages:session.maxBallSpeed
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxBallSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxBallSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxBallSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 88: // See Profile.xlsx::Messages:session.avgBallSpeed
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgBallSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgBallSpeed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgBallSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 89: // See Profile.xlsx::Messages:session.avgVerticalOscillation
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgVerticalOscillation has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgVerticalOscillation size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgVerticalOscillation = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 90: // See Profile.xlsx::Messages:session.avgStanceTimePercent
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgStanceTimePercent has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgStanceTimePercent size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgStanceTimePercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 91: // See Profile.xlsx::Messages:session.avgStanceTime
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgStanceTime has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgStanceTime size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgStanceTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 92: // See Profile.xlsx::Messages:session.avgFractionalCadence
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgFractionalCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgFractionalCadence size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgFractionalCadence = static_cast<quint8>(data.at(0));
+        break;
+    case 93: // See Profile.xlsx::Messages:session.maxFractionalCadence
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxFractionalCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.maxFractionalCadence size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        maxFractionalCadence = static_cast<quint8>(data.at(0));
+        break;
+    case 94: // See Profile.xlsx::Messages:session.totalFractionalCycles
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalFractionalCycles has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.totalFractionalCycles size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        totalFractionalCycles = static_cast<quint8>(data.at(0));
+        break;
+    case 95: // See Profile.xlsx::Messages:session.avgTotalHemoglobinConc
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgTotalHemoglobinConc has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgTotalHemoglobinConc size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgTotalHemoglobinConc = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 96: // See Profile.xlsx::Messages:session.minTotalHemoglobinConc
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.minTotalHemoglobinConc has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.minTotalHemoglobinConc size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        minTotalHemoglobinConc = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 97: // See Profile.xlsx::Messages:session.maxTotalHemoglobinConc
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxTotalHemoglobinConc has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxTotalHemoglobinConc size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxTotalHemoglobinConc = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 98: // See Profile.xlsx::Messages:session.avgSaturatedHemoglobinPercent
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgSaturatedHemoglobinPercent has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgSaturatedHemoglobinPercent size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgSaturatedHemoglobinPercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 99: // See Profile.xlsx::Messages:session.minSaturatedHemoglobinPercent
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.minSaturatedHemoglobinPercent has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.minSaturatedHemoglobinPercent size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        minSaturatedHemoglobinPercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 100: // See Profile.xlsx::Messages:session.maxSaturatedHemoglobinPercent
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxSaturatedHemoglobinPercent has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxSaturatedHemoglobinPercent size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxSaturatedHemoglobinPercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 101: // See Profile.xlsx::Messages:session.avgLeftTorqueEffectiveness
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgLeftTorqueEffectiveness has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgLeftTorqueEffectiveness size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgLeftTorqueEffectiveness = static_cast<quint8>(data.at(0));
+        break;
+    case 102: // See Profile.xlsx::Messages:session.avgRightTorqueEffectiveness
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgRightTorqueEffectiveness has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgRightTorqueEffectiveness size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgRightTorqueEffectiveness = static_cast<quint8>(data.at(0));
+        break;
+    case 103: // See Profile.xlsx::Messages:session.avgLeftPedalSmoothness
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgLeftPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgLeftPedalSmoothness size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgLeftPedalSmoothness = static_cast<quint8>(data.at(0));
+        break;
+    case 104: // See Profile.xlsx::Messages:session.avgRightPedalSmoothness
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgRightPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgRightPedalSmoothness size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgRightPedalSmoothness = static_cast<quint8>(data.at(0));
+        break;
+    case 105: // See Profile.xlsx::Messages:session.avgCombinedPedalSmoothness
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgCombinedPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgCombinedPedalSmoothness size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgCombinedPedalSmoothness = static_cast<quint8>(data.at(0));
+        break;
+    case 111: // See Profile.xlsx::Messages:session.sportIndex
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.sportIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.sportIndex size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sportIndex = static_cast<quint8>(data.at(0));
+        break;
+    case 112: // See Profile.xlsx::Messages:session.timeStanding
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.timeStanding has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.timeStanding size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timeStanding = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 113: // See Profile.xlsx::Messages:session.standCount
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.standCount has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.standCount size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        standCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 114: // See Profile.xlsx::Messages:session.avgLeftPco
+        if (baseType != FitBaseType::Sint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgLeftPco has base type" << static_cast<int>(baseType) << "but should be Sint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgLeftPco size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgLeftPco = static_cast<qint8>(data.at(0));
+        break;
+    case 115: // See Profile.xlsx::Messages:session.avgRightPco
+        if (baseType != FitBaseType::Sint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgRightPco has base type" << static_cast<int>(baseType) << "but should be Sint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgRightPco size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgRightPco = static_cast<qint8>(data.at(0));
+        break;
+    case 116: // See Profile.xlsx::Messages:session.avgLeftPowerPhase
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgLeftPowerPhase has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgLeftPowerPhase size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgLeftPowerPhase = static_cast<quint8>(data.at(0));
+        break;
+    case 117: // See Profile.xlsx::Messages:session.avgLeftPowerPhasePeak
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgLeftPowerPhasePeak has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgLeftPowerPhasePeak size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgLeftPowerPhasePeak = static_cast<quint8>(data.at(0));
+        break;
+    case 118: // See Profile.xlsx::Messages:session.avgRightPowerPhase
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgRightPowerPhase has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgRightPowerPhase size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgRightPowerPhase = static_cast<quint8>(data.at(0));
+        break;
+    case 119: // See Profile.xlsx::Messages:session.avgRightPowerPhasePeak
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgRightPowerPhasePeak has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgRightPowerPhasePeak size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgRightPowerPhasePeak = static_cast<quint8>(data.at(0));
+        break;
+    case 120: // See Profile.xlsx::Messages:session.avgPowerPosition
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgPowerPosition has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgPowerPosition size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgPowerPosition = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 121: // See Profile.xlsx::Messages:session.maxPowerPosition
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxPowerPosition has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxPowerPosition size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxPowerPosition = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 122: // See Profile.xlsx::Messages:session.avgCadencePosition
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgCadencePosition has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.avgCadencePosition size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        avgCadencePosition = static_cast<quint8>(data.at(0));
+        break;
+    case 123: // See Profile.xlsx::Messages:session.maxCadencePosition
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxCadencePosition has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.maxCadencePosition size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        maxCadencePosition = static_cast<quint8>(data.at(0));
+        break;
+    case 124: // See Profile.xlsx::Messages:session.enhancedAvgSpeed
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.enhancedAvgSpeed has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.enhancedAvgSpeed size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        enhancedAvgSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 125: // See Profile.xlsx::Messages:session.enhancedMaxSpeed
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.enhancedMaxSpeed has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.enhancedMaxSpeed size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        enhancedMaxSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 126: // See Profile.xlsx::Messages:session.enhancedAvgAltitude
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.enhancedAvgAltitude has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.enhancedAvgAltitude size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        enhancedAvgAltitude = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 127: // See Profile.xlsx::Messages:session.enhancedMinAltitude
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.enhancedMinAltitude has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.enhancedMinAltitude size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        enhancedMinAltitude = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 128: // See Profile.xlsx::Messages:session.enhancedMaxAltitude
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.enhancedMaxAltitude has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.enhancedMaxAltitude size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        enhancedMaxAltitude = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 129: // See Profile.xlsx::Messages:session.avgLevMotorPower
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgLevMotorPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgLevMotorPower size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgLevMotorPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 130: // See Profile.xlsx::Messages:session.maxLevMotorPower
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxLevMotorPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxLevMotorPower size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxLevMotorPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 131: // See Profile.xlsx::Messages:session.levBatteryConsumption
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.levBatteryConsumption has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.levBatteryConsumption size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        levBatteryConsumption = static_cast<quint8>(data.at(0));
+        break;
+    case 132: // See Profile.xlsx::Messages:session.avgVerticalRatio
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgVerticalRatio has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgVerticalRatio size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgVerticalRatio = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 133: // See Profile.xlsx::Messages:session.avgStanceTimeBalance
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgStanceTimeBalance has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgStanceTimeBalance size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgStanceTimeBalance = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 134: // See Profile.xlsx::Messages:session.avgStepLength
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgStepLength has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgStepLength size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgStepLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 137: // See Profile.xlsx::Messages:session.totalAnaerobicTrainingEffect
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalAnaerobicTrainingEffect has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.totalAnaerobicTrainingEffect size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        totalAnaerobicTrainingEffect = static_cast<quint8>(data.at(0));
+        break;
+    case 139: // See Profile.xlsx::Messages:session.avgVam
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgVam has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgVam size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgVam = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 181: // See Profile.xlsx::Messages:session.totalGrit
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalGrit has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalGrit size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalGrit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 182: // See Profile.xlsx::Messages:session.totalFlow
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalFlow has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.totalFlow size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        totalFlow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 183: // See Profile.xlsx::Messages:session.jumpCount
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.jumpCount has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.jumpCount size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        jumpCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 186: // See Profile.xlsx::Messages:session.avgGrit
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgGrit has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.avgGrit size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        avgGrit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 187: // See Profile.xlsx::Messages:session.avgFlow
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgFlow has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "session.avgFlow size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        avgFlow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 199: // See Profile.xlsx::Messages:session.totalFractionalAscent
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalFractionalAscent has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.totalFractionalAscent size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        totalFractionalAscent = static_cast<quint8>(data.at(0));
+        break;
+    case 200: // See Profile.xlsx::Messages:session.totalFractionalDescent
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.totalFractionalDescent has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "session.totalFractionalDescent size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        totalFractionalDescent = static_cast<quint8>(data.at(0));
+        break;
+    case 208: // See Profile.xlsx::Messages:session.avgCoreTemperature
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.avgCoreTemperature has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.avgCoreTemperature size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        avgCoreTemperature = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 209: // See Profile.xlsx::Messages:session.minCoreTemperature
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.minCoreTemperature has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.minCoreTemperature size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        minCoreTemperature = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 210: // See Profile.xlsx::Messages:session.maxCoreTemperature
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "session.maxCoreTemperature has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "session.maxCoreTemperature size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        maxCoreTemperature = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    default:
+        qWarning() << "unknown session message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

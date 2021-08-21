@@ -25,6 +25,9 @@
 #include "capabilitiesmessage.h"
 #include "capabilitiesmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 CapabilitiesMessage::CapabilitiesMessage() : FitDataMessage(new CapabilitiesMessagePrivate(this))
@@ -92,23 +95,63 @@ CapabilitiesMessagePrivate::~CapabilitiesMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool CapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool CapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:capabilities.languages
+        if (baseType != FitBaseType::Uint8z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "capabilities.languages has base type" << static_cast<int>(baseType) << "but should be Uint8z";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "capabilities.languages size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        languages = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:capabilities.sports
+        if (baseType != FitBaseType::Uint8z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "capabilities.sports has base type" << static_cast<int>(baseType) << "but should be Uint8z";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "capabilities.sports size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sports = static_cast<SportBits0>(bigEndian ? qFromBigEndian<SportBits0>(data) : qFromLittleEndian<SportBits0>(data));
+        break;
+    case 21: // See Profile.xlsx::Messages:capabilities.workoutsSupported
+        if (baseType != FitBaseType::Uint32z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "capabilities.workoutsSupported has base type" << static_cast<int>(baseType) << "but should be Uint32z";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "capabilities.workoutsSupported size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        workoutsSupported = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<WorkoutCapabilities>(data) : qFromLittleEndian<WorkoutCapabilities>(data));
+        break;
+    case 23: // See Profile.xlsx::Messages:capabilities.connectivitySupported
+        if (baseType != FitBaseType::Uint32z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "capabilities.connectivitySupported has base type" << static_cast<int>(baseType) << "but should be Uint32z";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "capabilities.connectivitySupported size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        connectivitySupported = static_cast<ConnectivityCapabilities>(bigEndian ? qFromBigEndian<ConnectivityCapabilities>(data) : qFromLittleEndian<ConnectivityCapabilities>(data));
+        break;
+    default:
+        qWarning() << "unknown capabilities message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

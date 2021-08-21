@@ -25,6 +25,9 @@
 #include "segmentpointmessage.h"
 #include "segmentpointmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 SegmentPointMessage::SegmentPointMessage() : FitDataMessage(new SegmentPointMessagePrivate(this))
@@ -116,23 +119,87 @@ SegmentPointMessagePrivate::~SegmentPointMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool SegmentPointMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool SegmentPointMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:segment_point.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_point.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "segment_point.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:segment_point.positionLat
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_point.positionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_point.positionLat size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:segment_point.positionLong
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_point.positionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_point.positionLong size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:segment_point.distance
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_point.distance has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_point.distance size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:segment_point.altitude
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_point.altitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "segment_point.altitude size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        altitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:segment_point.leaderTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_point.leaderTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_point.leaderTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        leaderTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    default:
+        qWarning() << "unknown segment_point message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

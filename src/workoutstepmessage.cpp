@@ -25,6 +25,9 @@
 #include "workoutstepmessage.h"
 #include "workoutstepmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 WorkoutStepMessage::WorkoutStepMessage() : FitDataMessage(new WorkoutStepMessagePrivate(this))
@@ -222,23 +225,195 @@ WorkoutStepMessagePrivate::~WorkoutStepMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool WorkoutStepMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool WorkoutStepMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:workout_step.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "workout_step.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:workout_step.wktStepName
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.wktStepName has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "workout_step.wktStepName size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        wktStepName = static_cast<QString>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:workout_step.durationType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.durationType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "workout_step.durationType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        durationType = static_cast<WktStepDuration>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:workout_step.durationValue
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.durationValue has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "workout_step.durationValue size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        durationValue = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:workout_step.targetType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.targetType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "workout_step.targetType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        targetType = static_cast<WktStepTarget>(data.at(0));
+        break;
+    case 4: // See Profile.xlsx::Messages:workout_step.targetValue
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.targetValue has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "workout_step.targetValue size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        targetValue = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:workout_step.customTargetValueLow
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.customTargetValueLow has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "workout_step.customTargetValueLow size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        customTargetValueLow = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 6: // See Profile.xlsx::Messages:workout_step.customTargetValueHigh
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.customTargetValueHigh has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "workout_step.customTargetValueHigh size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        customTargetValueHigh = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 7: // See Profile.xlsx::Messages:workout_step.intensity
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.intensity has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "workout_step.intensity size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        intensity = static_cast<Intensity>(data.at(0));
+        break;
+    case 8: // See Profile.xlsx::Messages:workout_step.notes
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.notes has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "workout_step.notes size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        notes = static_cast<QString>(data.at(0));
+        break;
+    case 9: // See Profile.xlsx::Messages:workout_step.equipment
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.equipment has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "workout_step.equipment size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        equipment = static_cast<WorkoutEquipment>(data.at(0));
+        break;
+    case 10: // See Profile.xlsx::Messages:workout_step.exerciseCategory
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.exerciseCategory has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "workout_step.exerciseCategory size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        exerciseCategory = static_cast<ExerciseCategory>(bigEndian ? qFromBigEndian<ExerciseCategory>(data) : qFromLittleEndian<ExerciseCategory>(data));
+        break;
+    case 11: // See Profile.xlsx::Messages:workout_step.exerciseName
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.exerciseName has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "workout_step.exerciseName size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        exerciseName = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 12: // See Profile.xlsx::Messages:workout_step.exerciseWeight
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.exerciseWeight has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "workout_step.exerciseWeight size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        exerciseWeight = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 13: // See Profile.xlsx::Messages:workout_step.weightDisplayUnit
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "workout_step.weightDisplayUnit has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "workout_step.weightDisplayUnit size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        weightDisplayUnit = static_cast<FitBaseUnit>(bigEndian ? qFromBigEndian<FitBaseUnit>(data) : qFromLittleEndian<FitBaseUnit>(data));
+        break;
+    default:
+        qWarning() << "unknown workout_step message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

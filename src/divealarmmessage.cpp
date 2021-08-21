@@ -25,6 +25,9 @@
 #include "divealarmmessage.h"
 #include "divealarmmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 DiveAlarmMessage::DiveAlarmMessage() : FitDataMessage(new DiveAlarmMessagePrivate(this))
@@ -128,23 +131,99 @@ DiveAlarmMessagePrivate::~DiveAlarmMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool DiveAlarmMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool DiveAlarmMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:dive_alarm.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_alarm.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "dive_alarm.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:dive_alarm.depth
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_alarm.depth has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "dive_alarm.depth size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        depth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:dive_alarm.time
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_alarm.time has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "dive_alarm.time size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        time = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:dive_alarm.enabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_alarm.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "dive_alarm.enabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:dive_alarm.alarmType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_alarm.alarmType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_alarm.alarmType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        alarmType = static_cast<DiveAlarmType>(data.at(0));
+        break;
+    case 4: // See Profile.xlsx::Messages:dive_alarm.sound
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_alarm.sound has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_alarm.sound size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sound = static_cast<Tone>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:dive_alarm.diveTypes
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_alarm.diveTypes has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_alarm.diveTypes size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        diveTypes = static_cast<SubSport>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown dive_alarm message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

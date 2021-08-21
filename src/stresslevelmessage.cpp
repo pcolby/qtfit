@@ -25,6 +25,9 @@
 #include "stresslevelmessage.h"
 #include "stresslevelmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 StressLevelMessage::StressLevelMessage() : FitDataMessage(new StressLevelMessagePrivate(this))
@@ -68,23 +71,39 @@ StressLevelMessagePrivate::~StressLevelMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool StressLevelMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool StressLevelMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:stress_level.stressLevelValue
+        if (baseType != FitBaseType::Sint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "stress_level.stressLevelValue has base type" << static_cast<int>(baseType) << "but should be Sint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "stress_level.stressLevelValue size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        stressLevelValue = static_cast<qint16>(bigEndian ? qFromBigEndian<qint16>(data) : qFromLittleEndian<qint16>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:stress_level.stressLevelTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "stress_level.stressLevelTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "stress_level.stressLevelTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        stressLevelTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    default:
+        qWarning() << "unknown stress_level message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

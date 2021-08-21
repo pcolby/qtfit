@@ -25,6 +25,9 @@
 #include "segmentfilemessage.h"
 #include "segmentfilemessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 SegmentFileMessage::SegmentFileMessage() : FitDataMessage(new SegmentFileMessagePrivate(this))
@@ -150,23 +153,123 @@ SegmentFileMessagePrivate::~SegmentFileMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool SegmentFileMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool SegmentFileMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:segment_file.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "segment_file.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:segment_file.fileUuid
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.fileUuid has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_file.fileUuid size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        fileUuid = static_cast<QString>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:segment_file.enabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "segment_file.enabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:segment_file.userProfilePrimaryKey
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.userProfilePrimaryKey has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_file.userProfilePrimaryKey size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        userProfilePrimaryKey = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 7: // See Profile.xlsx::Messages:segment_file.leaderType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.leaderType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_file.leaderType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        leaderType = static_cast<SegmentLeaderboardType>(data.at(0));
+        break;
+    case 8: // See Profile.xlsx::Messages:segment_file.leaderGroupPrimaryKey
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.leaderGroupPrimaryKey has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_file.leaderGroupPrimaryKey size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        leaderGroupPrimaryKey = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 9: // See Profile.xlsx::Messages:segment_file.leaderActivityId
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.leaderActivityId has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_file.leaderActivityId size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        leaderActivityId = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 10: // See Profile.xlsx::Messages:segment_file.leaderActivityIdString
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.leaderActivityIdString has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_file.leaderActivityIdString size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        leaderActivityIdString = static_cast<QString>(data.at(0));
+        break;
+    case 11: // See Profile.xlsx::Messages:segment_file.defaultRaceLeader
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_file.defaultRaceLeader has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_file.defaultRaceLeader size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        defaultRaceLeader = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown segment_file message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

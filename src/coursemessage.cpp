@@ -25,6 +25,9 @@
 #include "coursemessage.h"
 #include "coursemessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 CourseMessage::CourseMessage() : FitDataMessage(new CourseMessagePrivate(this))
@@ -91,23 +94,63 @@ CourseMessagePrivate::~CourseMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool CourseMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool CourseMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 4: // See Profile.xlsx::Messages:course.sport
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course.sport has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "course.sport size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        sport = static_cast<Sport>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:course.name
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course.name has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "course.name size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        name = static_cast<QString>(data.at(0));
+        break;
+    case 6: // See Profile.xlsx::Messages:course.capabilities
+        if (baseType != FitBaseType::Uint32z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course.capabilities has base type" << static_cast<int>(baseType) << "but should be Uint32z";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "course.capabilities size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        capabilities = static_cast<CourseCapabilities>(bigEndian ? qFromBigEndian<CourseCapabilities>(data) : qFromLittleEndian<CourseCapabilities>(data));
+        break;
+    case 7: // See Profile.xlsx::Messages:course.subSport
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "course.subSport has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "course.subSport size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        subSport = static_cast<SubSport>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown course message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

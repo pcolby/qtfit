@@ -25,6 +25,9 @@
 #include "hrmprofilemessage.h"
 #include "hrmprofilemessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 HrmProfileMessage::HrmProfileMessage() : FitDataMessage(new HrmProfileMessagePrivate(this))
@@ -104,23 +107,75 @@ HrmProfileMessagePrivate::~HrmProfileMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool HrmProfileMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool HrmProfileMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:hrm_profile.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hrm_profile.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "hrm_profile.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:hrm_profile.enabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hrm_profile.enabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "hrm_profile.enabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        enabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:hrm_profile.hrmAntId
+        if (baseType != FitBaseType::Uint16z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hrm_profile.hrmAntId has base type" << static_cast<int>(baseType) << "but should be Uint16z";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "hrm_profile.hrmAntId size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        hrmAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16z>(data) : qFromLittleEndian<quint16z>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:hrm_profile.logHrv
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hrm_profile.logHrv has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "hrm_profile.logHrv size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        logHrv = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:hrm_profile.hrmAntIdTransType
+        if (baseType != FitBaseType::Uint8z) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "hrm_profile.hrmAntIdTransType has base type" << static_cast<int>(baseType) << "but should be Uint8z";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "hrm_profile.hrmAntIdTransType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        hrmAntIdTransType = static_cast<quint8z>(bigEndian ? qFromBigEndian<quint8z>(data) : qFromLittleEndian<quint8z>(data));
+        break;
+    default:
+        qWarning() << "unknown hrm_profile message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

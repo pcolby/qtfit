@@ -25,6 +25,9 @@
 #include "zonestargetmessage.h"
 #include "zonestargetmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 ZonesTargetMessage::ZonesTargetMessage() : FitDataMessage(new ZonesTargetMessagePrivate(this))
@@ -104,23 +107,75 @@ ZonesTargetMessagePrivate::~ZonesTargetMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool ZonesTargetMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool ZonesTargetMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 1: // See Profile.xlsx::Messages:zones_target.maxHeartRate
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "zones_target.maxHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "zones_target.maxHeartRate size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        maxHeartRate = static_cast<quint8>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:zones_target.thresholdHeartRate
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "zones_target.thresholdHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "zones_target.thresholdHeartRate size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        thresholdHeartRate = static_cast<quint8>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:zones_target.functionalThresholdPower
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "zones_target.functionalThresholdPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "zones_target.functionalThresholdPower size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        functionalThresholdPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:zones_target.hrCalcType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "zones_target.hrCalcType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "zones_target.hrCalcType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        hrCalcType = static_cast<HrZoneCalc>(data.at(0));
+        break;
+    case 7: // See Profile.xlsx::Messages:zones_target.pwrCalcType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "zones_target.pwrCalcType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "zones_target.pwrCalcType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        pwrCalcType = static_cast<PwrZoneCalc>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown zones_target message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

@@ -25,6 +25,9 @@
 #include "exddatafieldconfigurationmessage.h"
 #include "exddatafieldconfigurationmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 ExdDataFieldConfigurationMessage::ExdDataFieldConfigurationMessage() : FitDataMessage(new ExdDataFieldConfigurationMessagePrivate(this))
@@ -115,23 +118,87 @@ ExdDataFieldConfigurationMessagePrivate::~ExdDataFieldConfigurationMessagePrivat
 
 }
 
-/// @todo Generate implementation.
-bool ExdDataFieldConfigurationMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool ExdDataFieldConfigurationMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:exd_data_field_configuration.screenIndex
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_data_field_configuration.screenIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_data_field_configuration.screenIndex size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        screenIndex = static_cast<quint8>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:exd_data_field_configuration.conceptField
+        if (baseType != FitBaseType::Byte) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_data_field_configuration.conceptField has base type" << static_cast<int>(baseType) << "but should be Byte";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_data_field_configuration.conceptField size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        conceptField = static_cast<quint8>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:exd_data_field_configuration.fieldId
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_data_field_configuration.fieldId has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_data_field_configuration.fieldId size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        fieldId = static_cast<quint8>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:exd_data_field_configuration.conceptCount
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_data_field_configuration.conceptCount has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_data_field_configuration.conceptCount size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        conceptCount = static_cast<quint8>(data.at(0));
+        break;
+    case 4: // See Profile.xlsx::Messages:exd_data_field_configuration.displayType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_data_field_configuration.displayType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_data_field_configuration.displayType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        displayType = static_cast<ExdDisplayType>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:exd_data_field_configuration.title
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_data_field_configuration.title has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_data_field_configuration.title size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        title = static_cast<QString>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown exd_data_field_configuration message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

@@ -25,6 +25,9 @@
 #include "devicesettingsmessage.h"
 #include "devicesettingsmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 DeviceSettingsMessage::DeviceSettingsMessage() : FitDataMessage(new DeviceSettingsMessagePrivate(this))
@@ -332,23 +335,303 @@ DeviceSettingsMessagePrivate::~DeviceSettingsMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool DeviceSettingsMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool DeviceSettingsMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:device_settings.activeTimeZone
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.activeTimeZone has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.activeTimeZone size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        activeTimeZone = static_cast<quint8>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:device_settings.utcOffset
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.utcOffset has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "device_settings.utcOffset size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        utcOffset = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:device_settings.timeOffset
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.timeOffset has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "device_settings.timeOffset size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timeOffset = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:device_settings.timeMode
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.timeMode has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.timeMode size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        timeMode = static_cast<TimeMode>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:device_settings.timeZoneOffset
+        if (baseType != FitBaseType::Sint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.timeZoneOffset has base type" << static_cast<int>(baseType) << "but should be Sint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.timeZoneOffset size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        timeZoneOffset = static_cast<qint8>(data.at(0));
+        break;
+    case 12: // See Profile.xlsx::Messages:device_settings.backlightMode
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.backlightMode has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.backlightMode size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        backlightMode = static_cast<BacklightMode>(data.at(0));
+        break;
+    case 36: // See Profile.xlsx::Messages:device_settings.activityTrackerEnabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.activityTrackerEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "device_settings.activityTrackerEnabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        activityTrackerEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 39: // See Profile.xlsx::Messages:device_settings.clockTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.clockTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "device_settings.clockTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        clockTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 40: // See Profile.xlsx::Messages:device_settings.pagesEnabled
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.pagesEnabled has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "device_settings.pagesEnabled size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        pagesEnabled = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 46: // See Profile.xlsx::Messages:device_settings.moveAlertEnabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.moveAlertEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "device_settings.moveAlertEnabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        moveAlertEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 47: // See Profile.xlsx::Messages:device_settings.dateMode
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.dateMode has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.dateMode size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        dateMode = static_cast<DateMode>(data.at(0));
+        break;
+    case 55: // See Profile.xlsx::Messages:device_settings.displayOrientation
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.displayOrientation has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.displayOrientation size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        displayOrientation = static_cast<DisplayOrientation>(data.at(0));
+        break;
+    case 56: // See Profile.xlsx::Messages:device_settings.mountingSide
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.mountingSide has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.mountingSide size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        mountingSide = static_cast<Side>(data.at(0));
+        break;
+    case 57: // See Profile.xlsx::Messages:device_settings.defaultPage
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.defaultPage has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "device_settings.defaultPage size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        defaultPage = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 58: // See Profile.xlsx::Messages:device_settings.autosyncMinSteps
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.autosyncMinSteps has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "device_settings.autosyncMinSteps size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        autosyncMinSteps = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 59: // See Profile.xlsx::Messages:device_settings.autosyncMinTime
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.autosyncMinTime has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "device_settings.autosyncMinTime size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        autosyncMinTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 80: // See Profile.xlsx::Messages:device_settings.lactateThresholdAutodetectEnabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.lactateThresholdAutodetectEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "device_settings.lactateThresholdAutodetectEnabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        lactateThresholdAutodetectEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 86: // See Profile.xlsx::Messages:device_settings.bleAutoUploadEnabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.bleAutoUploadEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "device_settings.bleAutoUploadEnabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        bleAutoUploadEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 89: // See Profile.xlsx::Messages:device_settings.autoSyncFrequency
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.autoSyncFrequency has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.autoSyncFrequency size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        autoSyncFrequency = static_cast<AutoSyncFrequency>(data.at(0));
+        break;
+    case 90: // See Profile.xlsx::Messages:device_settings.autoActivityDetect
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.autoActivityDetect has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "device_settings.autoActivityDetect size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        autoActivityDetect = static_cast<AutoActivityDetect>(bigEndian ? qFromBigEndian<AutoActivityDetect>(data) : qFromLittleEndian<AutoActivityDetect>(data));
+        break;
+    case 94: // See Profile.xlsx::Messages:device_settings.numberOfScreens
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.numberOfScreens has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.numberOfScreens size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        numberOfScreens = static_cast<quint8>(data.at(0));
+        break;
+    case 95: // See Profile.xlsx::Messages:device_settings.smartNotificationDisplayOrientation
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.smartNotificationDisplayOrientation has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.smartNotificationDisplayOrientation size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        smartNotificationDisplayOrientation = static_cast<DisplayOrientation>(data.at(0));
+        break;
+    case 134: // See Profile.xlsx::Messages:device_settings.tapInterface
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.tapInterface has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.tapInterface size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        tapInterface = static_cast<Switch>(data.at(0));
+        break;
+    case 174: // See Profile.xlsx::Messages:device_settings.tapSensitivity
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "device_settings.tapSensitivity has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "device_settings.tapSensitivity size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        tapSensitivity = static_cast<TapSensitivity>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown device_settings message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

@@ -55,10 +55,15 @@ int Generator::generate()
 {
     Grantlee::Context context;
     context.insert(QSL("ProjectName"), QSL("QtFit"));
-    int counts[2];
-    if ((counts[0] = processMessages(context)) < 0) return counts[0];
-    if ((counts[1] = processTypes(context)) < 0) return counts[1];
-    return counts[0] + counts[1];
+
+    // Process the Types list first, because it builds the baseTypes list as a side-effect.
+    const int typesFileCount = processTypes(context);
+    if (typesFileCount < 0) return -1;
+
+    const int messagesFileCount = processMessages(context);
+    if (messagesFileCount < 0) return -1;
+
+    return typesFileCount + messagesFileCount;
 }
 
 /// \todo Generate test classes too.
@@ -94,6 +99,7 @@ int Generator::processMessages(Grantlee::Context &context)
             const QString className = toCamelCase(messageName) + QSL("Message");
             classNames.append(className);
             context.push();
+            context.insert(QSL("messageName"), messageName);
             context.insert(QSL("fields"), fields);
             context.insert(QSL("MesgNumLabel"), toCamelCase(messageName));
             const bool result = renderClassFiles(QSL("src/datamessage"), context,
@@ -122,8 +128,10 @@ int Generator::processMessages(Grantlee::Context &context)
                 }
             }
             field.insert(QSL("name"), toCamelCase(QString::fromUtf8(columns.at(2)), true));
-            field.insert(QSL("type"), toFitType(QString::fromUtf8(columns.at(3))));
-            field.insert(QSL("defaultValue"), invalidValue(field.value(QSL("type")).toString()));
+            const QString fitType = QString::fromUtf8(columns.at(3));
+            const QString cppType = toCppType(fitType);
+            field.insert(QSL("cppType"), cppType);
+            field.insert(QSL("defaultValue"), invalidValue(cppType));
             const QByteArray isArray = columns.at(4);        ///< \a todo
           //const QByteArray components = columns.at(5);     ///< \a todo
             const QByteArray scale = columns.at(6);          ///< \a todo
@@ -151,11 +159,16 @@ int Generator::processMessages(Grantlee::Context &context)
             }
             field.insert(QSL("example"), columns.at(15));
             qDebug() << field << isArray << scale << offset << units << bits << accumulate << refFieldName << refFieldValue << products;
-//            if (!failures.isEmpty()) {
-//                qWarning() << "Some fields failed conversion" << failures;
-//                return -1;
-//            }
             /// \todo Lots more properties to consider here.
+
+            const QString baseType = baseTypes.value(fitType, fitType);
+            if (baseType == fitType) {
+                qDebug() << "assuming" << fitType << "is a base type";
+            }
+            field.insert(QSL("baseType"), baseType); ///< \todo Do we need this sperately?
+            field.insert(QSL("baseTypeEnumLabel"), safeEnumLabel(toCamelCase(baseType)));
+            field.insert(QSL("baseTypeSize"), baseTypeSize(baseType));
+            field.insert(QSL("endianAbility"), endianAbility(baseType));
             fields.append(field);
         }
     }
@@ -206,9 +219,12 @@ int Generator::processTypes(Grantlee::Context &context)
         }
         if (line.isEmpty()) continue; // Skip empty lines (usually just the final trailing line).
         if (!columns.at(0).isEmpty()) {
-            type.insert(QSL("typeName"), toCamelCase(QString::fromUtf8(columns.at(0))));
-            type.insert(QSL("baseType"), QString::fromUtf8(columns.at(1)));
+            const QString typeName = QString::fromUtf8(columns.at(0));
+            const QString baseType = QString::fromUtf8(columns.at(1));
+            type.insert(QSL("typeName"), toCamelCase(typeName));
+            type.insert(QSL("baseType"), baseType);
             type.insert(QSL("comment"), QString::fromUtf8(columns.at(4)));
+            baseTypes.insert(typeName, baseType);
         }
         if ((columns.size() >= 4) && (!columns.at(2).isEmpty())) {
             const QString valueName = safeEnumLabel(toCamelCase(QString::fromUtf8(columns.at(2))));
@@ -295,6 +311,33 @@ bool Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Cont
 
 // See FIT SDK Table 7. FIT Base Types and Invalid Values
 // See https://developer.garmin.com/fit/protocol/#basetype
+int Generator::baseTypeSize(const QString &fitBaseType)
+{
+    if (fitBaseType == QSL("byte"))   return 1;
+    if (fitBaseType == QSL("enum"))   return 1;
+    if (fitBaseType == QSL("string")) return 1; ///< \todo Understand the semantics of this one.
+    if (fitBaseType.endsWith(QSL("8" ))||fitBaseType.endsWith(QSL("8z" ))) return 1;
+    if (fitBaseType.endsWith(QSL("16"))||fitBaseType.endsWith(QSL("16z"))) return 2;
+    if (fitBaseType.endsWith(QSL("32"))||fitBaseType.endsWith(QSL("32z"))) return 4;
+    if (fitBaseType.endsWith(QSL("64"))||fitBaseType.endsWith(QSL("64z"))) return 8;
+    qWarning() << "no way to know size of unknown FIT base type" << fitBaseType;
+    return 0;
+}
+
+// See FIT SDK Table 7. FIT Base Types and Invalid Values
+// See https://developer.garmin.com/fit/protocol/#basetype
+bool Generator::endianAbility(const QString &fitBaseType)
+{
+    if (fitBaseType == QSL("enum"  )) return false;
+    if (fitBaseType == QSL("sint8" )) return false;
+    if (fitBaseType == QSL("uint8" )) return false;
+    if (fitBaseType == QSL("string")) return false;
+    if (fitBaseType == QSL("byte"  )) return false;
+    return true; // All other types have endianness.
+}
+
+// See FIT SDK Table 7. FIT Base Types and Invalid Values
+// See https://developer.garmin.com/fit/protocol/#basetype
 QString Generator::invalidValue(const QString &type)
 {
     if (type == QSL(   "qint8")) return QSL("0x7F");
@@ -335,14 +378,14 @@ QString Generator::toCamelCase(const QString &string, const bool camelCase)
     return camelCase ? result.at(0).toLower() + result.mid(1) : result;
 }
 
-QString Generator::toFitType(const QString &string)
+QString Generator::toCppType(const QString &fitType)
 {
-    if (string == QSL("bool"))    return string; // ie don't CamelCase it below.
-    if (string == QSL("byte"))    return QSL("quint8");
-    if (string == QSL("float32")) return QSL("float");
-    if (string == QSL("string"))  return QSL("QString");
-    if (string.startsWith(QSL("sint"))) return QSL("q") + string.mid(1);
-    if (string.startsWith(QSL("uint"))) return QSL("q") + string;
-    return toCamelCase(string);
+    if (fitType == QSL("bool"))    return fitType; // ie don't CamelCase it below.
+    if (fitType == QSL("byte"))    return QSL("quint8");
+    if (fitType == QSL("float32")) return QSL("float");
+    if (fitType == QSL("string"))  return QSL("QString");
+    if (fitType.startsWith(QSL("sint"))) return QSL("q") + fitType.mid(1);
+    if (fitType.startsWith(QSL("uint"))) return QSL("q") + fitType;
+    return toCamelCase(fitType);
 }
 

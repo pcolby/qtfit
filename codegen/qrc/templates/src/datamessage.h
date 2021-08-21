@@ -16,11 +16,11 @@ public:
     ~{{ClassName}}();
 
 {% for field in fields %}
-    {{field.type}} {{field.name}}() const;
+    {{field.cppType}} {{field.name}}() const;
 {% endfor %}
 
 {% for field in fields %}
-    void set{{field.name|capfirst}}(const {{field.type}} {{field.name}});
+    void set{{field.name|capfirst}}(const {{field.cppType}} {{field.name}});
 {% endfor %}
 
 protected:

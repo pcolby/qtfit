@@ -25,6 +25,9 @@
 #include "memoglobmessage.h"
 #include "memoglobmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 MemoGlobMessage::MemoGlobMessage() : FitDataMessage(new MemoGlobMessagePrivate(this))
@@ -92,23 +95,63 @@ MemoGlobMessagePrivate::~MemoGlobMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool MemoGlobMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool MemoGlobMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 250: // See Profile.xlsx::Messages:memo_glob.partIndex
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "memo_glob.partIndex has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "memo_glob.partIndex size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        partIndex = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:memo_glob.memo
+        if (baseType != FitBaseType::Byte) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "memo_glob.memo has base type" << static_cast<int>(baseType) << "but should be Byte";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "memo_glob.memo size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        memo = static_cast<quint8>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:memo_glob.messageNumber
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "memo_glob.messageNumber has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "memo_glob.messageNumber size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageNumber = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:memo_glob.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "memo_glob.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "memo_glob.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    default:
+        qWarning() << "unknown memo_glob message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

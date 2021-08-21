@@ -25,6 +25,9 @@
 #include "exdscreenconfigurationmessage.h"
 #include "exdscreenconfigurationmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 ExdScreenConfigurationMessage::ExdScreenConfigurationMessage() : FitDataMessage(new ExdScreenConfigurationMessagePrivate(this))
@@ -92,23 +95,63 @@ ExdScreenConfigurationMessagePrivate::~ExdScreenConfigurationMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool ExdScreenConfigurationMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool ExdScreenConfigurationMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:exd_screen_configuration.screenIndex
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_screen_configuration.screenIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_screen_configuration.screenIndex size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        screenIndex = static_cast<quint8>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:exd_screen_configuration.fieldCount
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_screen_configuration.fieldCount has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_screen_configuration.fieldCount size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        fieldCount = static_cast<quint8>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:exd_screen_configuration.layout
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_screen_configuration.layout has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "exd_screen_configuration.layout size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        layout = static_cast<ExdLayout>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:exd_screen_configuration.screenEnabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "exd_screen_configuration.screenEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "exd_screen_configuration.screenEnabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        screenEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    default:
+        qWarning() << "unknown exd_screen_configuration message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

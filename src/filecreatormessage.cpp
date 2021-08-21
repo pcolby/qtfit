@@ -25,6 +25,9 @@
 #include "filecreatormessage.h"
 #include "filecreatormessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 FileCreatorMessage::FileCreatorMessage() : FitDataMessage(new FileCreatorMessagePrivate(this))
@@ -68,23 +71,39 @@ FileCreatorMessagePrivate::~FileCreatorMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool FileCreatorMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool FileCreatorMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 0: // See Profile.xlsx::Messages:file_creator.softwareVersion
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_creator.softwareVersion has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "file_creator.softwareVersion size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        softwareVersion = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:file_creator.hardwareVersion
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "file_creator.hardwareVersion has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "file_creator.hardwareVersion size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        hardwareVersion = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown file_creator message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

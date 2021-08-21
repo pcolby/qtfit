@@ -43,8 +43,8 @@ public:
 protected:
     FitDataMessage * const q_ptr; ///< Internal q-pointer.
 
-    /// @todo Make base type enum.
-    virtual bool setField(const int fieldId, const QByteArray data, int baseType);
+    virtual bool setField(const int fieldId, const QByteArray &data,
+                          const FitBaseType baseType, const bool bigEndian);
 
 private:
     Q_DECLARE_PUBLIC(FitDataMessage)

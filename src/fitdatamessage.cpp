@@ -81,18 +81,20 @@ bool FitDataMessagePrivate::setFields(const DataDefinition * const defn, const Q
     Q_ASSERT(defn->globalMessageNumber == this->globalMessageNumber);
     int dataOffset=0; // Next field's offset within dataRecord.
     for (const FieldDefinition &field: defn->fieldDefinitions) {
-        if (!setField(field.number, record.mid(dataOffset,field.size), field.type))
+        if (!setField(field.number, record.mid(dataOffset,field.size), field.baseType,
+                      (defn->architecture == Architecture::BigEndian)))
             return false;
         dataOffset += field.size;
     }
     return true;
 }
 
-bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                     const FitBaseType baseType, const bool bigEndian)
 {
-    Q_UNUSED(fieldId)
-    Q_UNUSED(data)
-    Q_UNUSED(baseType)
+    Q_UNUSED(bigEndian)
+    /// \todo Add a toString(const FitBaseType type) function.
+    qWarning() << "ignoring unknown field" << fieldId << data << static_cast<int>(baseType);
     return false;
 }
 

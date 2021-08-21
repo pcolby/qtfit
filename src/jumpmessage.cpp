@@ -25,6 +25,9 @@
 #include "jumpmessage.h"
 #include "jumpmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 JumpMessage::JumpMessage() : FitDataMessage(new JumpMessagePrivate(this))
@@ -164,23 +167,135 @@ JumpMessagePrivate::~JumpMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool JumpMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool JumpMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 253: // See Profile.xlsx::Messages:jump.timestamp
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.timestamp size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<DateTime>(data) : qFromLittleEndian<DateTime>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:jump.distance
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.distance has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.distance size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        distance = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 1: // See Profile.xlsx::Messages:jump.height
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.height has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.height size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        height = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 2: // See Profile.xlsx::Messages:jump.rotations
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.rotations has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "jump.rotations size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        rotations = static_cast<quint8>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:jump.hangTime
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.hangTime has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.hangTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        hangTime = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:jump.score
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.score has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.score size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        score = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:jump.positionLat
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.positionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.positionLat size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 6: // See Profile.xlsx::Messages:jump.positionLong
+        if (baseType != FitBaseType::Sint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.positionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.positionLong size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian<qint32>(data) : qFromLittleEndian<qint32>(data));
+        break;
+    case 7: // See Profile.xlsx::Messages:jump.speed
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.speed has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "jump.speed size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        speed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 8: // See Profile.xlsx::Messages:jump.enhancedSpeed
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "jump.enhancedSpeed has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "jump.enhancedSpeed size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        enhancedSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    default:
+        qWarning() << "unknown jump message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

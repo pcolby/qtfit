@@ -25,6 +25,9 @@
 #include "divesettingsmessage.h"
 #include "divesettingsmessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 DiveSettingsMessage::DiveSettingsMessage() : FitDataMessage(new DiveSettingsMessagePrivate(this))
@@ -307,23 +310,279 @@ DiveSettingsMessagePrivate::~DiveSettingsMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool DiveSettingsMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool DiveSettingsMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:dive_settings.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "dive_settings.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:dive_settings.name
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.name has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.name size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        name = static_cast<QString>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:dive_settings.model
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.model has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.model size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        model = static_cast<TissueModelType>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:dive_settings.gfLow
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.gfLow has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.gfLow size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        gfLow = static_cast<quint8>(data.at(0));
+        break;
+    case 3: // See Profile.xlsx::Messages:dive_settings.gfHigh
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.gfHigh has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.gfHigh size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        gfHigh = static_cast<quint8>(data.at(0));
+        break;
+    case 4: // See Profile.xlsx::Messages:dive_settings.waterType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.waterType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.waterType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        waterType = static_cast<WaterType>(data.at(0));
+        break;
+    case 5: // See Profile.xlsx::Messages:dive_settings.waterDensity
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.waterDensity has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "dive_settings.waterDensity size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        waterDensity = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 6: // See Profile.xlsx::Messages:dive_settings.po2Warn
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.po2Warn has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.po2Warn size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        po2Warn = static_cast<quint8>(data.at(0));
+        break;
+    case 7: // See Profile.xlsx::Messages:dive_settings.po2Critical
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.po2Critical has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.po2Critical size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        po2Critical = static_cast<quint8>(data.at(0));
+        break;
+    case 8: // See Profile.xlsx::Messages:dive_settings.po2Deco
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.po2Deco has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.po2Deco size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        po2Deco = static_cast<quint8>(data.at(0));
+        break;
+    case 9: // See Profile.xlsx::Messages:dive_settings.safetyStopEnabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.safetyStopEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "dive_settings.safetyStopEnabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        safetyStopEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 10: // See Profile.xlsx::Messages:dive_settings.bottomDepth
+        if (baseType != FitBaseType::Float32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.bottomDepth has base type" << static_cast<int>(baseType) << "but should be Float32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "dive_settings.bottomDepth size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        bottomDepth = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        break;
+    case 11: // See Profile.xlsx::Messages:dive_settings.bottomTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.bottomTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "dive_settings.bottomTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        bottomTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 12: // See Profile.xlsx::Messages:dive_settings.apneaCountdownEnabled
+        if (baseType != FitBaseType::Bool) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.apneaCountdownEnabled has base type" << static_cast<int>(baseType) << "but should be Bool";
+            return false;
+        }
+        if (data.size() != 0) {
+            qWarning() << "dive_settings.apneaCountdownEnabled size is" << data.size() << "but should be" << 0;
+            return false;
+        }
+        apneaCountdownEnabled = static_cast<bool>(bigEndian ? qFromBigEndian<bool>(data) : qFromLittleEndian<bool>(data));
+        break;
+    case 13: // See Profile.xlsx::Messages:dive_settings.apneaCountdownTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.apneaCountdownTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "dive_settings.apneaCountdownTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        apneaCountdownTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 14: // See Profile.xlsx::Messages:dive_settings.backlightMode
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.backlightMode has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.backlightMode size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        backlightMode = static_cast<DiveBacklightMode>(data.at(0));
+        break;
+    case 15: // See Profile.xlsx::Messages:dive_settings.backlightBrightness
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.backlightBrightness has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.backlightBrightness size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        backlightBrightness = static_cast<quint8>(data.at(0));
+        break;
+    case 16: // See Profile.xlsx::Messages:dive_settings.backlightTimeout
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.backlightTimeout has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.backlightTimeout size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        backlightTimeout = static_cast<BacklightTimeout>(data.at(0));
+        break;
+    case 17: // See Profile.xlsx::Messages:dive_settings.repeatDiveInterval
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.repeatDiveInterval has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "dive_settings.repeatDiveInterval size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        repeatDiveInterval = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 18: // See Profile.xlsx::Messages:dive_settings.safetyStopTime
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.safetyStopTime has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "dive_settings.safetyStopTime size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        safetyStopTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
+        break;
+    case 19: // See Profile.xlsx::Messages:dive_settings.heartRateSourceType
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.heartRateSourceType has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.heartRateSourceType size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        heartRateSourceType = static_cast<SourceType>(data.at(0));
+        break;
+    case 20: // See Profile.xlsx::Messages:dive_settings.heartRateSource
+        if (baseType != FitBaseType::Uint8) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "dive_settings.heartRateSource has base type" << static_cast<int>(baseType) << "but should be Uint8";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "dive_settings.heartRateSource size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        heartRateSource = static_cast<quint8>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown dive_settings message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE

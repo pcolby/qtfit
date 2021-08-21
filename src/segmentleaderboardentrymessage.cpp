@@ -25,6 +25,9 @@
 #include "segmentleaderboardentrymessage.h"
 #include "segmentleaderboardentrymessage_p.h"
 
+#include <QDebug>
+#include <QtEndian>
+
 QTFIT_BEGIN_NAMESPACE
 
 SegmentLeaderboardEntryMessage::SegmentLeaderboardEntryMessage() : FitDataMessage(new SegmentLeaderboardEntryMessagePrivate(this))
@@ -126,23 +129,99 @@ SegmentLeaderboardEntryMessagePrivate::~SegmentLeaderboardEntryMessagePrivate()
 
 }
 
-/// @todo Generate implementation.
-bool SegmentLeaderboardEntryMessagePrivate::setField(const int fieldId, const QByteArray data, int baseType)
+bool SegmentLeaderboardEntryMessagePrivate::setField(const int fieldId, const QByteArray &data,
+                                    const FitBaseType baseType, const bool bigEndian)
 {
-//    #define SET_FIELD(id,name,type)
-//      case id: name = fromFitValue<type>(data, baseType)
-
-//    switch fieldId {
-//        case 0: type         = fromFitValue<quint8 >(data, baseType); break;
-//        case 1: manufactuter = fromFitValue<quint16>(data, baseType); break;
-//        SET_FIT_MESSAGE_FIELD(0, type,        quint8 ); break;
-//        SET_FIT_MESSAGE_FIELD(1, manufacture, quint16); break;
-//        default:
-//            qWarning() << "Unknown field definition number" << fieldId
-//                       << "for" << messageName();
-//            return false;
-//    }
-    return FitDataMessagePrivate::setField(fieldId, data, baseType);
+    switch (fieldId) {
+    case 254: // See Profile.xlsx::Messages:segment_leaderboard_entry.messageIndex
+        if (baseType != FitBaseType::Uint16) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_leaderboard_entry.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
+            return false;
+        }
+        if (data.size() != 2) {
+            qWarning() << "segment_leaderboard_entry.messageIndex size is" << data.size() << "but should be" << 2;
+            return false;
+        }
+        messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<MessageIndex>(data) : qFromLittleEndian<MessageIndex>(data));
+        break;
+    case 0: // See Profile.xlsx::Messages:segment_leaderboard_entry.name
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_leaderboard_entry.name has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_leaderboard_entry.name size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        name = static_cast<QString>(data.at(0));
+        break;
+    case 1: // See Profile.xlsx::Messages:segment_leaderboard_entry.type
+        if (baseType != FitBaseType::Enum) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_leaderboard_entry.type has base type" << static_cast<int>(baseType) << "but should be Enum";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_leaderboard_entry.type size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        type = static_cast<SegmentLeaderboardType>(data.at(0));
+        break;
+    case 2: // See Profile.xlsx::Messages:segment_leaderboard_entry.groupPrimaryKey
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_leaderboard_entry.groupPrimaryKey has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_leaderboard_entry.groupPrimaryKey size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        groupPrimaryKey = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 3: // See Profile.xlsx::Messages:segment_leaderboard_entry.activityId
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_leaderboard_entry.activityId has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_leaderboard_entry.activityId size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        activityId = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 4: // See Profile.xlsx::Messages:segment_leaderboard_entry.segmentTime
+        if (baseType != FitBaseType::Uint32) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_leaderboard_entry.segmentTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
+            return false;
+        }
+        if (data.size() != 4) {
+            qWarning() << "segment_leaderboard_entry.segmentTime size is" << data.size() << "but should be" << 4;
+            return false;
+        }
+        segmentTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 5: // See Profile.xlsx::Messages:segment_leaderboard_entry.activityIdString
+        if (baseType != FitBaseType::String) {
+            /// \todo Add toString function for baseType.
+            qWarning() << "segment_leaderboard_entry.activityIdString has base type" << static_cast<int>(baseType) << "but should be String";
+            return false;
+        }
+        if (data.size() != 1) {
+            qWarning() << "segment_leaderboard_entry.activityIdString size is" << data.size() << "but should be" << 1;
+            return false;
+        }
+        activityIdString = static_cast<QString>(data.at(0));
+        break;
+    default:
+        qWarning() << "unknown segment_leaderboard_entry message field number" << fieldId;
+        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+    }
+    return true;
 }
 
 QTFIT_END_NAMESPACE
