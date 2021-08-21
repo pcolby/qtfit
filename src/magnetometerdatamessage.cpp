@@ -241,7 +241,14 @@ bool MagnetometerDataMessagePrivate::setField(
             qWarning() << "magnetometer_data.calibratedMagX size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedMagX = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedMagX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 6: // See Profile.xlsx::Messages:magnetometer_data.calibratedMagY
         if (baseType != FitBaseType::Float32) {
@@ -253,7 +260,14 @@ bool MagnetometerDataMessagePrivate::setField(
             qWarning() << "magnetometer_data.calibratedMagY size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedMagY = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedMagY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 7: // See Profile.xlsx::Messages:magnetometer_data.calibratedMagZ
         if (baseType != FitBaseType::Float32) {
@@ -265,7 +279,14 @@ bool MagnetometerDataMessagePrivate::setField(
             qWarning() << "magnetometer_data.calibratedMagZ size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedMagZ = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedMagZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     default:
         qWarning() << "unknown magnetometer_data message field number" << fieldId;

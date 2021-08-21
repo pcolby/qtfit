@@ -193,7 +193,14 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.distance size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->distance = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->distance = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 1: // See Profile.xlsx::Messages:jump.height
         if (baseType != FitBaseType::Float32) {
@@ -205,7 +212,14 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.height size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->height = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->height = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 2: // See Profile.xlsx::Messages:jump.rotations
         if (baseType != FitBaseType::Uint8) {
@@ -229,7 +243,14 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.hangTime size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->hangTime = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->hangTime = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 4: // See Profile.xlsx::Messages:jump.score
         if (baseType != FitBaseType::Float32) {
@@ -241,7 +262,14 @@ bool JumpMessagePrivate::setField(
             qWarning() << "jump.score size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->score = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->score = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 5: // See Profile.xlsx::Messages:jump.positionLat
         if (baseType != FitBaseType::Sint32) {

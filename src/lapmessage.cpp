@@ -2725,7 +2725,14 @@ bool LapMessagePrivate::setField(
             qWarning() << "lap.totalGrit size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->totalGrit = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->totalGrit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 150: // See Profile.xlsx::Messages:lap.totalFlow
         if (baseType != FitBaseType::Float32) {
@@ -2737,7 +2744,14 @@ bool LapMessagePrivate::setField(
             qWarning() << "lap.totalFlow size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->totalFlow = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->totalFlow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 151: // See Profile.xlsx::Messages:lap.jumpCount
         if (baseType != FitBaseType::Uint16) {
@@ -2761,7 +2775,14 @@ bool LapMessagePrivate::setField(
             qWarning() << "lap.avgGrit size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->avgGrit = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->avgGrit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 154: // See Profile.xlsx::Messages:lap.avgFlow
         if (baseType != FitBaseType::Float32) {
@@ -2773,7 +2794,14 @@ bool LapMessagePrivate::setField(
             qWarning() << "lap.avgFlow size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->avgFlow = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->avgFlow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 156: // See Profile.xlsx::Messages:lap.totalFractionalAscent
         if (baseType != FitBaseType::Uint8) {

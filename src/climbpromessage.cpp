@@ -217,7 +217,14 @@ bool ClimbProMessagePrivate::setField(
             qWarning() << "climb_pro.currentDist size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->currentDist = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->currentDist = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     default:
         qWarning() << "unknown climb_pro message field number" << fieldId;

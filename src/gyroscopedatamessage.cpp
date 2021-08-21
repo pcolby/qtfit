@@ -241,7 +241,14 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.calibratedGyroX size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedGyroX = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedGyroX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 6: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroY
         if (baseType != FitBaseType::Float32) {
@@ -253,7 +260,14 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.calibratedGyroY size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedGyroY = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedGyroY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 7: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroZ
         if (baseType != FitBaseType::Float32) {
@@ -265,7 +279,14 @@ bool GyroscopeDataMessagePrivate::setField(
             qWarning() << "gyroscope_data.calibratedGyroZ size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedGyroZ = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedGyroZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     default:
         qWarning() << "unknown gyroscope_data message field number" << fieldId;

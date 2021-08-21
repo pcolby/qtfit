@@ -1753,7 +1753,14 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.grit size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->grit = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->grit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 115: // See Profile.xlsx::Messages:record.flow
         if (baseType != FitBaseType::Float32) {
@@ -1765,7 +1772,14 @@ bool RecordMessagePrivate::setField(
             qWarning() << "record.flow size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->flow = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->flow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 117: // See Profile.xlsx::Messages:record.ebikeTravelRange
         if (baseType != FitBaseType::Uint16) {

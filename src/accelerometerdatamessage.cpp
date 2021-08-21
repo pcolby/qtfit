@@ -277,7 +277,14 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.calibratedAccelX size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedAccelX = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedAccelX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 6: // See Profile.xlsx::Messages:accelerometer_data.calibratedAccelY
         if (baseType != FitBaseType::Float32) {
@@ -289,7 +296,14 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.calibratedAccelY size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedAccelY = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedAccelY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 7: // See Profile.xlsx::Messages:accelerometer_data.calibratedAccelZ
         if (baseType != FitBaseType::Float32) {
@@ -301,7 +315,14 @@ bool AccelerometerDataMessagePrivate::setField(
             qWarning() << "accelerometer_data.calibratedAccelZ size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->calibratedAccelZ = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->calibratedAccelZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 8: // See Profile.xlsx::Messages:accelerometer_data.compressedCalibratedAccelX
         if (baseType != FitBaseType::Sint16) {

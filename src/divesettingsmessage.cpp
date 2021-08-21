@@ -396,7 +396,14 @@ bool DiveSettingsMessagePrivate::setField(
             qWarning() << "dive_settings.waterDensity size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->waterDensity = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->waterDensity = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 6: // See Profile.xlsx::Messages:dive_settings.po2Warn
         if (baseType != FitBaseType::Uint8) {
@@ -456,7 +463,14 @@ bool DiveSettingsMessagePrivate::setField(
             qWarning() << "dive_settings.bottomDepth size is" << data.size() << "but should be" << 4;
             return false;
         }
+        #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
+        {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
+            const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
+            this->bottomDepth = *reinterpret_cast<const float *>(&localEndian);
+        }
+        #else
         this->bottomDepth = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
+        #endif
         break;
     case 11: // See Profile.xlsx::Messages:dive_settings.bottomTime
         if (baseType != FitBaseType::Uint32) {
