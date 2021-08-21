@@ -1756,7 +1756,9 @@ bool RecordMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->grit = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->grit) == 4, "src and dst not the same size");
+            memcpy(&this->grit, &localEndian, data.size());
         }
         #else
         this->grit = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -1775,7 +1777,9 @@ bool RecordMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->flow = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->flow) == 4, "src and dst not the same size");
+            memcpy(&this->flow, &localEndian, data.size());
         }
         #else
         this->flow = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));

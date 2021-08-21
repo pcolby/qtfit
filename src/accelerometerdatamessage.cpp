@@ -280,7 +280,9 @@ bool AccelerometerDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedAccelX = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedAccelX) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedAccelX, &localEndian, data.size());
         }
         #else
         this->calibratedAccelX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -299,7 +301,9 @@ bool AccelerometerDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedAccelY = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedAccelY) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedAccelY, &localEndian, data.size());
         }
         #else
         this->calibratedAccelY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -318,7 +322,9 @@ bool AccelerometerDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedAccelZ = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedAccelZ) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedAccelZ, &localEndian, data.size());
         }
         #else
         this->calibratedAccelZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));

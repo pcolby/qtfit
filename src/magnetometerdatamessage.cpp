@@ -244,7 +244,9 @@ bool MagnetometerDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedMagX = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedMagX) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedMagX, &localEndian, data.size());
         }
         #else
         this->calibratedMagX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -263,7 +265,9 @@ bool MagnetometerDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedMagY = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedMagY) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedMagY, &localEndian, data.size());
         }
         #else
         this->calibratedMagY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -282,7 +286,9 @@ bool MagnetometerDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedMagZ = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedMagZ) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedMagZ, &localEndian, data.size());
         }
         #else
         this->calibratedMagZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));

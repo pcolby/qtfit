@@ -65,7 +65,9 @@ bool {{ClassName}}Private::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint{% if field.endianAbility == "float" %}32{% else %}64{% endif %} localEndian = bigEndian ? qFromBigEndian<quint{% if field.endianAbility == "float" %}32{% else %}64{% endif %}>(data) : qFromLittleEndian<quint{% if field.endianAbility == "float" %}32{% else %}64{% endif %}>(data);
-            this->{{field.name}} = *reinterpret_cast<const {{field.endianAbility}} *>(&localEndian);
+            static_assert(sizeof(localEndian) == {{field.baseTypeSize}}, "src not expected size");
+            static_assert(sizeof(this->{{field.name}}) == {{field.baseTypeSize}}, "src and dst not the same size");
+            memcpy(&this->{{field.name}}, &localEndian, data.size());
         }
         #else
   {% endif %}

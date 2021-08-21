@@ -196,7 +196,9 @@ bool JumpMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->distance = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->distance) == 4, "src and dst not the same size");
+            memcpy(&this->distance, &localEndian, data.size());
         }
         #else
         this->distance = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -215,7 +217,9 @@ bool JumpMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->height = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->height) == 4, "src and dst not the same size");
+            memcpy(&this->height, &localEndian, data.size());
         }
         #else
         this->height = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -246,7 +250,9 @@ bool JumpMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->hangTime = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->hangTime) == 4, "src and dst not the same size");
+            memcpy(&this->hangTime, &localEndian, data.size());
         }
         #else
         this->hangTime = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -265,7 +271,9 @@ bool JumpMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->score = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->score) == 4, "src and dst not the same size");
+            memcpy(&this->score, &localEndian, data.size());
         }
         #else
         this->score = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));

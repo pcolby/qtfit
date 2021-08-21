@@ -244,7 +244,9 @@ bool GyroscopeDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedGyroX = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedGyroX) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedGyroX, &localEndian, data.size());
         }
         #else
         this->calibratedGyroX = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -263,7 +265,9 @@ bool GyroscopeDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedGyroY = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedGyroY) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedGyroY, &localEndian, data.size());
         }
         #else
         this->calibratedGyroY = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
@@ -282,7 +286,9 @@ bool GyroscopeDataMessagePrivate::setField(
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
-            this->calibratedGyroZ = *reinterpret_cast<const float *>(&localEndian);
+            static_assert(sizeof(localEndian) == 4, "src not expected size");
+            static_assert(sizeof(this->calibratedGyroZ) == 4, "src and dst not the same size");
+            memcpy(&this->calibratedGyroZ, &localEndian, data.size());
         }
         #else
         this->calibratedGyroZ = static_cast<float>(bigEndian ? qFromBigEndian<float>(data) : qFromLittleEndian<float>(data));
