@@ -107,8 +107,8 @@ ZonesTargetMessagePrivate::~ZonesTargetMessagePrivate()
 
 }
 
-bool ZonesTargetMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool ZonesTargetMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 1: // See Profile.xlsx::Messages:zones_target.maxHeartRate
@@ -173,7 +173,7 @@ bool ZonesTargetMessagePrivate::setField(const int fieldId, const QByteArray &da
         break;
     default:
         qWarning() << "unknown zones_target message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

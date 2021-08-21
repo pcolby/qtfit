@@ -95,8 +95,8 @@ CapabilitiesMessagePrivate::~CapabilitiesMessagePrivate()
 
 }
 
-bool CapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool CapabilitiesMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:capabilities.languages
@@ -149,7 +149,7 @@ bool CapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray &d
         break;
     default:
         qWarning() << "unknown capabilities message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

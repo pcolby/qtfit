@@ -107,8 +107,8 @@ MesgCapabilitiesMessagePrivate::~MesgCapabilitiesMessagePrivate()
 
 }
 
-bool MesgCapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool MesgCapabilitiesMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:mesg_capabilities.messageIndex
@@ -173,7 +173,7 @@ bool MesgCapabilitiesMessagePrivate::setField(const int fieldId, const QByteArra
         break;
     default:
         qWarning() << "unknown mesg_capabilities message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

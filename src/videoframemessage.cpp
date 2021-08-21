@@ -83,8 +83,8 @@ VideoFrameMessagePrivate::~VideoFrameMessagePrivate()
 
 }
 
-bool VideoFrameMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool VideoFrameMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:video_frame.timestamp
@@ -125,7 +125,7 @@ bool VideoFrameMessagePrivate::setField(const int fieldId, const QByteArray &dat
         break;
     default:
         qWarning() << "unknown video_frame message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

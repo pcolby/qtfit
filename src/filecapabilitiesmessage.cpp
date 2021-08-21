@@ -118,8 +118,8 @@ FileCapabilitiesMessagePrivate::~FileCapabilitiesMessagePrivate()
 
 }
 
-bool FileCapabilitiesMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool FileCapabilitiesMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:file_capabilities.messageIndex
@@ -196,7 +196,7 @@ bool FileCapabilitiesMessagePrivate::setField(const int fieldId, const QByteArra
         break;
     default:
         qWarning() << "unknown file_capabilities message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

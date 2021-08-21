@@ -118,8 +118,8 @@ ExdDataFieldConfigurationMessagePrivate::~ExdDataFieldConfigurationMessagePrivat
 
 }
 
-bool ExdDataFieldConfigurationMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool ExdDataFieldConfigurationMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:exd_data_field_configuration.screenIndex
@@ -196,7 +196,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(const int fieldId, const 
         break;
     default:
         qWarning() << "unknown exd_data_field_configuration message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

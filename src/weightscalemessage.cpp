@@ -203,8 +203,8 @@ WeightScaleMessagePrivate::~WeightScaleMessagePrivate()
 
 }
 
-bool WeightScaleMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool WeightScaleMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:weight_scale.timestamp
@@ -365,7 +365,7 @@ bool WeightScaleMessagePrivate::setField(const int fieldId, const QByteArray &da
         break;
     default:
         qWarning() << "unknown weight_scale message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

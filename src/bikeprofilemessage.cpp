@@ -430,8 +430,8 @@ BikeProfileMessagePrivate::~BikeProfileMessagePrivate()
 
 }
 
-bool BikeProfileMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool BikeProfileMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:bike_profile.messageIndex
@@ -820,7 +820,7 @@ bool BikeProfileMessagePrivate::setField(const int fieldId, const QByteArray &da
         break;
     default:
         qWarning() << "unknown bike_profile message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

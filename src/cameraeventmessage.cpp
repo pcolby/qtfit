@@ -106,8 +106,8 @@ CameraEventMessagePrivate::~CameraEventMessagePrivate()
 
 }
 
-bool CameraEventMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool CameraEventMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:camera_event.timestamp
@@ -172,7 +172,7 @@ bool CameraEventMessagePrivate::setField(const int fieldId, const QByteArray &da
         break;
     default:
         qWarning() << "unknown camera_event message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

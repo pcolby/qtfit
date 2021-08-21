@@ -71,8 +71,8 @@ SlaveDeviceMessagePrivate::~SlaveDeviceMessagePrivate()
 
 }
 
-bool SlaveDeviceMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool SlaveDeviceMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:slave_device.manufacturer
@@ -101,7 +101,7 @@ bool SlaveDeviceMessagePrivate::setField(const int fieldId, const QByteArray &da
         break;
     default:
         qWarning() << "unknown slave_device message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

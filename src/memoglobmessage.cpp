@@ -95,8 +95,8 @@ MemoGlobMessagePrivate::~MemoGlobMessagePrivate()
 
 }
 
-bool MemoGlobMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool MemoGlobMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 250: // See Profile.xlsx::Messages:memo_glob.partIndex
@@ -149,7 +149,7 @@ bool MemoGlobMessagePrivate::setField(const int fieldId, const QByteArray &data,
         break;
     default:
         qWarning() << "unknown memo_glob message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

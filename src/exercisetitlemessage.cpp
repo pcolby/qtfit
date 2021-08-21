@@ -94,8 +94,8 @@ ExerciseTitleMessagePrivate::~ExerciseTitleMessagePrivate()
 
 }
 
-bool ExerciseTitleMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool ExerciseTitleMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:exercise_title.messageIndex
@@ -148,7 +148,7 @@ bool ExerciseTitleMessagePrivate::setField(const int fieldId, const QByteArray &
         break;
     default:
         qWarning() << "unknown exercise_title message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

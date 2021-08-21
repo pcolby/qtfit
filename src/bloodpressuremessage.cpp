@@ -179,8 +179,8 @@ BloodPressureMessagePrivate::~BloodPressureMessagePrivate()
 
 }
 
-bool BloodPressureMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool BloodPressureMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:blood_pressure.timestamp
@@ -317,7 +317,7 @@ bool BloodPressureMessagePrivate::setField(const int fieldId, const QByteArray &
         break;
     default:
         qWarning() << "unknown blood_pressure message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

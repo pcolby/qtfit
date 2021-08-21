@@ -71,8 +71,8 @@ StressLevelMessagePrivate::~StressLevelMessagePrivate()
 
 }
 
-bool StressLevelMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool StressLevelMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:stress_level.stressLevelValue
@@ -101,7 +101,7 @@ bool StressLevelMessagePrivate::setField(const int fieldId, const QByteArray &da
         break;
     default:
         qWarning() << "unknown stress_level message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

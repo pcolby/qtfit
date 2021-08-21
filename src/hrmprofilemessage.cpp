@@ -107,8 +107,8 @@ HrmProfileMessagePrivate::~HrmProfileMessagePrivate()
 
 }
 
-bool HrmProfileMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool HrmProfileMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:hrm_profile.messageIndex
@@ -173,7 +173,7 @@ bool HrmProfileMessagePrivate::setField(const int fieldId, const QByteArray &dat
         break;
     default:
         qWarning() << "unknown hrm_profile message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

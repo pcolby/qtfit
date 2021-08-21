@@ -203,8 +203,8 @@ GoalMessagePrivate::~GoalMessagePrivate()
 
 }
 
-bool GoalMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool GoalMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:goal.messageIndex
@@ -365,7 +365,7 @@ bool GoalMessagePrivate::setField(const int fieldId, const QByteArray &data,
         break;
     default:
         qWarning() << "unknown goal message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

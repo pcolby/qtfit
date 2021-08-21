@@ -71,8 +71,8 @@ OhrSettingsMessagePrivate::~OhrSettingsMessagePrivate()
 
 }
 
-bool OhrSettingsMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool OhrSettingsMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:ohr_settings.timestamp
@@ -101,7 +101,7 @@ bool OhrSettingsMessagePrivate::setField(const int fieldId, const QByteArray &da
         break;
     default:
         qWarning() << "unknown ohr_settings message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

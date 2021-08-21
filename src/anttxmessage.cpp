@@ -119,8 +119,8 @@ AntTxMessagePrivate::~AntTxMessagePrivate()
 
 }
 
-bool AntTxMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool AntTxMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:ant_tx.timestamp
@@ -197,7 +197,7 @@ bool AntTxMessagePrivate::setField(const int fieldId, const QByteArray &data,
         break;
     default:
         qWarning() << "unknown ant_tx message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

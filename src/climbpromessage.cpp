@@ -131,8 +131,8 @@ ClimbProMessagePrivate::~ClimbProMessagePrivate()
 
 }
 
-bool ClimbProMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool ClimbProMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:climb_pro.timestamp
@@ -221,7 +221,7 @@ bool ClimbProMessagePrivate::setField(const int fieldId, const QByteArray &data,
         break;
     default:
         qWarning() << "unknown climb_pro message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

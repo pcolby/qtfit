@@ -130,8 +130,8 @@ WorkoutMessagePrivate::~WorkoutMessagePrivate()
 
 }
 
-bool WorkoutMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool WorkoutMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 4: // See Profile.xlsx::Messages:workout.sport
@@ -220,7 +220,7 @@ bool WorkoutMessagePrivate::setField(const int fieldId, const QByteArray &data,
         break;
     default:
         qWarning() << "unknown workout message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

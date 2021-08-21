@@ -202,8 +202,8 @@ ConnectivityMessagePrivate::~ConnectivityMessagePrivate()
 
 }
 
-bool ConnectivityMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool ConnectivityMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:connectivity.bluetoothEnabled
@@ -364,7 +364,7 @@ bool ConnectivityMessagePrivate::setField(const int fieldId, const QByteArray &d
         break;
     default:
         qWarning() << "unknown connectivity message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

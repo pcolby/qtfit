@@ -107,8 +107,8 @@ AntChannelIdMessagePrivate::~AntChannelIdMessagePrivate()
 
 }
 
-bool AntChannelIdMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool AntChannelIdMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:ant_channel_id.channelNumber
@@ -173,7 +173,7 @@ bool AntChannelIdMessagePrivate::setField(const int fieldId, const QByteArray &d
         break;
     default:
         qWarning() << "unknown ant_channel_id message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

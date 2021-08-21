@@ -82,8 +82,8 @@ SpeedZoneMessagePrivate::~SpeedZoneMessagePrivate()
 
 }
 
-bool SpeedZoneMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool SpeedZoneMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:speed_zone.messageIndex
@@ -124,7 +124,7 @@ bool SpeedZoneMessagePrivate::setField(const int fieldId, const QByteArray &data
         break;
     default:
         qWarning() << "unknown speed_zone message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

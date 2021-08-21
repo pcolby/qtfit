@@ -107,8 +107,8 @@ DeveloperDataIdMessagePrivate::~DeveloperDataIdMessagePrivate()
 
 }
 
-bool DeveloperDataIdMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool DeveloperDataIdMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:developer_data_id.developerId
@@ -173,7 +173,7 @@ bool DeveloperDataIdMessagePrivate::setField(const int fieldId, const QByteArray
         break;
     default:
         qWarning() << "unknown developer_data_id message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

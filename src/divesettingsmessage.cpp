@@ -310,8 +310,8 @@ DiveSettingsMessagePrivate::~DiveSettingsMessagePrivate()
 
 }
 
-bool DiveSettingsMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool DiveSettingsMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:dive_settings.messageIndex
@@ -580,7 +580,7 @@ bool DiveSettingsMessagePrivate::setField(const int fieldId, const QByteArray &d
         break;
     default:
         qWarning() << "unknown dive_settings message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

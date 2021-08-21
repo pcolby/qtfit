@@ -131,8 +131,8 @@ VideoClipMessagePrivate::~VideoClipMessagePrivate()
 
 }
 
-bool VideoClipMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool VideoClipMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:video_clip.clipNumber
@@ -221,7 +221,7 @@ bool VideoClipMessagePrivate::setField(const int fieldId, const QByteArray &data
         break;
     default:
         qWarning() << "unknown video_clip message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

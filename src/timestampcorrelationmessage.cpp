@@ -131,8 +131,8 @@ TimestampCorrelationMessagePrivate::~TimestampCorrelationMessagePrivate()
 
 }
 
-bool TimestampCorrelationMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool TimestampCorrelationMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:timestamp_correlation.timestamp
@@ -221,7 +221,7 @@ bool TimestampCorrelationMessagePrivate::setField(const int fieldId, const QByte
         break;
     default:
         qWarning() << "unknown timestamp_correlation message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

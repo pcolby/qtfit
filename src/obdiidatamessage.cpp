@@ -155,8 +155,8 @@ ObdiiDataMessagePrivate::~ObdiiDataMessagePrivate()
 
 }
 
-bool ObdiiDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool ObdiiDataMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:obdii_data.timestamp
@@ -269,7 +269,7 @@ bool ObdiiDataMessagePrivate::setField(const int fieldId, const QByteArray &data
         break;
     default:
         qWarning() << "unknown obdii_data message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

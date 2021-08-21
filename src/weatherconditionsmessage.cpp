@@ -238,8 +238,8 @@ WeatherConditionsMessagePrivate::~WeatherConditionsMessagePrivate()
 
 }
 
-bool WeatherConditionsMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool WeatherConditionsMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:weather_conditions.timestamp
@@ -436,7 +436,7 @@ bool WeatherConditionsMessagePrivate::setField(const int fieldId, const QByteArr
         break;
     default:
         qWarning() << "unknown weather_conditions message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

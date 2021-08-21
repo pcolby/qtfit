@@ -155,8 +155,8 @@ MagnetometerDataMessagePrivate::~MagnetometerDataMessagePrivate()
 
 }
 
-bool MagnetometerDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool MagnetometerDataMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:magnetometer_data.timestamp
@@ -269,7 +269,7 @@ bool MagnetometerDataMessagePrivate::setField(const int fieldId, const QByteArra
         break;
     default:
         qWarning() << "unknown magnetometer_data message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

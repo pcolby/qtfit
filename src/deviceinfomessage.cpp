@@ -261,8 +261,8 @@ DeviceInfoMessagePrivate::~DeviceInfoMessagePrivate()
 
 }
 
-bool DeviceInfoMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool DeviceInfoMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:device_info.timestamp
@@ -483,7 +483,7 @@ bool DeviceInfoMessagePrivate::setField(const int fieldId, const QByteArray &dat
         break;
     default:
         qWarning() << "unknown device_info message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

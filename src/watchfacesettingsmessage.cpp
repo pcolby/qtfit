@@ -83,8 +83,8 @@ WatchfaceSettingsMessagePrivate::~WatchfaceSettingsMessagePrivate()
 
 }
 
-bool WatchfaceSettingsMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool WatchfaceSettingsMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:watchface_settings.messageIndex
@@ -125,7 +125,7 @@ bool WatchfaceSettingsMessagePrivate::setField(const int fieldId, const QByteArr
         break;
     default:
         qWarning() << "unknown watchface_settings message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

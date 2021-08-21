@@ -82,8 +82,8 @@ NmeaSentenceMessagePrivate::~NmeaSentenceMessagePrivate()
 
 }
 
-bool NmeaSentenceMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                    const FitBaseType baseType, const bool bigEndian)
+bool NmeaSentenceMessagePrivate::setField(
+    const int fieldId, const QByteArray &data, const FitBaseType baseType, const bool bigEndian)
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:nmea_sentence.timestamp
@@ -124,7 +124,7 @@ bool NmeaSentenceMessagePrivate::setField(const int fieldId, const QByteArray &d
         break;
     default:
         qWarning() << "unknown nmea_sentence message field number" << fieldId;
-        return FitDataMessagePrivate::setField(number, data, baseType, bigEndian);
+        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }
