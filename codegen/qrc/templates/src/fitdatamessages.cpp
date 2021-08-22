@@ -3,7 +3,10 @@
 /*!
  * \file
  *
- * \todo Document this.
+ * Provides the FitDataMessage::fromData implementation.
+ *
+ * This is kept in a separate file so it can be safely code-generated. And also to avoid polluting
+ * the fitdatamessage.cpp file with #includes for the ~100 or so FitDataMessage-derived classes.
  */
 
 #include "fitdatamessage.h"
@@ -19,6 +22,14 @@
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
+/*!
+ * Constructs the relevant FitDataMessage-derived class to parse \a record according to \a defn.
+ *
+ * \param defn   Definition data describing the FIT \a record.
+ * \param record FIT data record to parse.
+ *
+ * \return an instance of a FitDataMessage-derived class, or \c nullptr if \a record could not be parsed.
+ */
 FitDataMessage * FitDataMessage::fromData(const DataDefinition * const defn, const QByteArray &record)
 {
     Q_ASSERT(defn);

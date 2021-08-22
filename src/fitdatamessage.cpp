@@ -45,7 +45,7 @@ FitDataMessage::FitDataMessage() : d_ptr(new FitDataMessagePrivate(this))
  *
  * Constructs a FitDataMessage which private implementation \a q.
  *
- * \a q Pointer to private implementation.
+ * \param q Pointer to private implementation.
  */
 FitDataMessage::FitDataMessage(FitDataMessagePrivate * const d) : d_ptr(d)
 {
@@ -55,7 +55,7 @@ FitDataMessage::FitDataMessage(FitDataMessagePrivate * const d) : d_ptr(d)
 /*!
  * Copies a FitDataMessage.
  *
- * \a other The data message to copy.
+ * \param other The data message to copy.
  */
 FitDataMessage::FitDataMessage(const FitDataMessage &other) : d_ptr(new FitDataMessagePrivate(this))
 {
@@ -67,7 +67,9 @@ FitDataMessage::FitDataMessage(const FitDataMessage &other) : d_ptr(new FitDataM
 /*!
  * Assigns a FitDataMessage to this one.
  *
- * \a other The data message from which to assign.
+ * \param other The data message from which to assign.
+ *
+ * \return a reference to self.
  */
 FitDataMessage &FitDataMessage::operator=(const FitDataMessage &other)
 {
