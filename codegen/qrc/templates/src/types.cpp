@@ -14,8 +14,15 @@
 #include "types.h"
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
-
 {% for type in types %}{% if type.values %}{% with type as enum %}
+/*!
+ * Writes the {{enum.typeName}} \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const {{enum.typeName}} value)
 {
     switch (value) {

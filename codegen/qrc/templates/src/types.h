@@ -20,12 +20,21 @@
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
-typedef quint8  quint8z;
-typedef quint16 quint16z;
-typedef quint32 quint32z;
-typedef quint64 quint64z;
-{% for type in types %}{% if type.comment %}
-/// {{type.comment}}{% endif %}
+typedef quint8  quint8z;  ///<  8-bit unsigned integer, with 0-is-invalid semantics.
+typedef quint16 quint16z; ///< 16-bit unsigned integer, with 0-is-invalid semantics.
+typedef quint32 quint32z; ///< 32-bit unsigned integer, with 0-is-invalid semantics.
+typedef quint64 quint64z; ///< 64-bit unsigned integer, with 0-is-invalid semantics.
+
+{% for type in types %}
+/*!
+ * {% if type.comment %}{{type.comment|capfirst}}{% else %}Garmin FIT {{type.typeName}} type.{% endif %}
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 {% if type.values %}{% with type as enum %}enum class {{enum.typeName}} {% if enum.baseType != "enum" %}: q{{enum.baseType}} {% endif %}{
 {% for value in enum.values %}
     {{value.valueName|ljust:enum.maxValueNameLength}} = {{value.value|rjust:enum.maxValueValueLength}},{% if value.comment %} ///< {{value.comment}}{% endif %}

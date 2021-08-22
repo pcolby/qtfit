@@ -37,7 +37,14 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-
+/*!
+ * Writes the File \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const File value)
 {
     switch (value) {
@@ -66,6 +73,14 @@ QDebug operator<<(QDebug debug, const File value)
     return debug;
 }
 
+/*!
+ * Writes the MesgNum \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const MesgNum value)
 {
     switch (value) {
@@ -164,6 +179,14 @@ QDebug operator<<(QDebug debug, const MesgNum value)
     return debug;
 }
 
+/*!
+ * Writes the Checksum \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Checksum value)
 {
     switch (value) {
@@ -174,6 +197,14 @@ QDebug operator<<(QDebug debug, const Checksum value)
     return debug;
 }
 
+/*!
+ * Writes the FileFlags \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const FileFlags value)
 {
     switch (value) {
@@ -185,6 +216,14 @@ QDebug operator<<(QDebug debug, const FileFlags value)
     return debug;
 }
 
+/*!
+ * Writes the MesgCount \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const MesgCount value)
 {
     switch (value) {
@@ -196,6 +235,14 @@ QDebug operator<<(QDebug debug, const MesgCount value)
     return debug;
 }
 
+/*!
+ * Writes the DateTime \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DateTime value)
 {
     switch (value) {
@@ -205,6 +252,14 @@ QDebug operator<<(QDebug debug, const DateTime value)
     return debug;
 }
 
+/*!
+ * Writes the LocalDateTime \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LocalDateTime value)
 {
     switch (value) {
@@ -214,6 +269,14 @@ QDebug operator<<(QDebug debug, const LocalDateTime value)
     return debug;
 }
 
+/*!
+ * Writes the MessageIndex \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const MessageIndex value)
 {
     switch (value) {
@@ -225,6 +288,14 @@ QDebug operator<<(QDebug debug, const MessageIndex value)
     return debug;
 }
 
+/*!
+ * Writes the DeviceIndex \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DeviceIndex value)
 {
     switch (value) {
@@ -234,6 +305,14 @@ QDebug operator<<(QDebug debug, const DeviceIndex value)
     return debug;
 }
 
+/*!
+ * Writes the Gender \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Gender value)
 {
     switch (value) {
@@ -244,6 +323,14 @@ QDebug operator<<(QDebug debug, const Gender value)
     return debug;
 }
 
+/*!
+ * Writes the Language \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Language value)
 {
     switch (value) {
@@ -291,6 +378,14 @@ QDebug operator<<(QDebug debug, const Language value)
     return debug;
 }
 
+/*!
+ * Writes the LanguageBits0 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LanguageBits0 value)
 {
     switch (value) {
@@ -307,6 +402,14 @@ QDebug operator<<(QDebug debug, const LanguageBits0 value)
     return debug;
 }
 
+/*!
+ * Writes the LanguageBits1 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LanguageBits1 value)
 {
     switch (value) {
@@ -323,6 +426,14 @@ QDebug operator<<(QDebug debug, const LanguageBits1 value)
     return debug;
 }
 
+/*!
+ * Writes the LanguageBits2 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LanguageBits2 value)
 {
     switch (value) {
@@ -339,6 +450,14 @@ QDebug operator<<(QDebug debug, const LanguageBits2 value)
     return debug;
 }
 
+/*!
+ * Writes the LanguageBits3 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LanguageBits3 value)
 {
     switch (value) {
@@ -355,6 +474,14 @@ QDebug operator<<(QDebug debug, const LanguageBits3 value)
     return debug;
 }
 
+/*!
+ * Writes the LanguageBits4 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LanguageBits4 value)
 {
     switch (value) {
@@ -369,6 +496,14 @@ QDebug operator<<(QDebug debug, const LanguageBits4 value)
     return debug;
 }
 
+/*!
+ * Writes the TimeZone \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TimeZone value)
 {
     switch (value) {
@@ -483,6 +618,14 @@ QDebug operator<<(QDebug debug, const TimeZone value)
     return debug;
 }
 
+/*!
+ * Writes the DisplayMeasure \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DisplayMeasure value)
 {
     switch (value) {
@@ -494,6 +637,14 @@ QDebug operator<<(QDebug debug, const DisplayMeasure value)
     return debug;
 }
 
+/*!
+ * Writes the DisplayHeart \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DisplayHeart value)
 {
     switch (value) {
@@ -505,6 +656,14 @@ QDebug operator<<(QDebug debug, const DisplayHeart value)
     return debug;
 }
 
+/*!
+ * Writes the DisplayPower \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DisplayPower value)
 {
     switch (value) {
@@ -515,6 +674,14 @@ QDebug operator<<(QDebug debug, const DisplayPower value)
     return debug;
 }
 
+/*!
+ * Writes the DisplayPosition \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DisplayPosition value)
 {
     switch (value) {
@@ -565,6 +732,14 @@ QDebug operator<<(QDebug debug, const DisplayPosition value)
     return debug;
 }
 
+/*!
+ * Writes the Switch \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Switch value)
 {
     switch (value) {
@@ -576,6 +751,14 @@ QDebug operator<<(QDebug debug, const Switch value)
     return debug;
 }
 
+/*!
+ * Writes the Sport \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Sport value)
 {
     switch (value) {
@@ -635,6 +818,14 @@ QDebug operator<<(QDebug debug, const Sport value)
     return debug;
 }
 
+/*!
+ * Writes the SportBits0 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportBits0 value)
 {
     switch (value) {
@@ -651,6 +842,14 @@ QDebug operator<<(QDebug debug, const SportBits0 value)
     return debug;
 }
 
+/*!
+ * Writes the SportBits1 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportBits1 value)
 {
     switch (value) {
@@ -667,6 +866,14 @@ QDebug operator<<(QDebug debug, const SportBits1 value)
     return debug;
 }
 
+/*!
+ * Writes the SportBits2 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportBits2 value)
 {
     switch (value) {
@@ -683,6 +890,14 @@ QDebug operator<<(QDebug debug, const SportBits2 value)
     return debug;
 }
 
+/*!
+ * Writes the SportBits3 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportBits3 value)
 {
     switch (value) {
@@ -699,6 +914,14 @@ QDebug operator<<(QDebug debug, const SportBits3 value)
     return debug;
 }
 
+/*!
+ * Writes the SportBits4 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportBits4 value)
 {
     switch (value) {
@@ -715,6 +938,14 @@ QDebug operator<<(QDebug debug, const SportBits4 value)
     return debug;
 }
 
+/*!
+ * Writes the SportBits5 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportBits5 value)
 {
     switch (value) {
@@ -731,6 +962,14 @@ QDebug operator<<(QDebug debug, const SportBits5 value)
     return debug;
 }
 
+/*!
+ * Writes the SportBits6 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportBits6 value)
 {
     switch (value) {
@@ -740,6 +979,14 @@ QDebug operator<<(QDebug debug, const SportBits6 value)
     return debug;
 }
 
+/*!
+ * Writes the SubSport \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SubSport value)
 {
     switch (value) {
@@ -810,6 +1057,14 @@ QDebug operator<<(QDebug debug, const SubSport value)
     return debug;
 }
 
+/*!
+ * Writes the SportEvent \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SportEvent value)
 {
     switch (value) {
@@ -827,6 +1082,14 @@ QDebug operator<<(QDebug debug, const SportEvent value)
     return debug;
 }
 
+/*!
+ * Writes the Activity \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Activity value)
 {
     switch (value) {
@@ -837,6 +1100,14 @@ QDebug operator<<(QDebug debug, const Activity value)
     return debug;
 }
 
+/*!
+ * Writes the Intensity \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Intensity value)
 {
     switch (value) {
@@ -852,6 +1123,14 @@ QDebug operator<<(QDebug debug, const Intensity value)
     return debug;
 }
 
+/*!
+ * Writes the SessionTrigger \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SessionTrigger value)
 {
     switch (value) {
@@ -864,6 +1143,14 @@ QDebug operator<<(QDebug debug, const SessionTrigger value)
     return debug;
 }
 
+/*!
+ * Writes the AutolapTrigger \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AutolapTrigger value)
 {
     switch (value) {
@@ -879,6 +1166,14 @@ QDebug operator<<(QDebug debug, const AutolapTrigger value)
     return debug;
 }
 
+/*!
+ * Writes the LapTrigger \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LapTrigger value)
 {
     switch (value) {
@@ -896,6 +1191,14 @@ QDebug operator<<(QDebug debug, const LapTrigger value)
     return debug;
 }
 
+/*!
+ * Writes the TimeMode \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TimeMode value)
 {
     switch (value) {
@@ -910,6 +1213,14 @@ QDebug operator<<(QDebug debug, const TimeMode value)
     return debug;
 }
 
+/*!
+ * Writes the BacklightMode \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BacklightMode value)
 {
     switch (value) {
@@ -925,6 +1236,14 @@ QDebug operator<<(QDebug debug, const BacklightMode value)
     return debug;
 }
 
+/*!
+ * Writes the DateMode \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DateMode value)
 {
     switch (value) {
@@ -935,6 +1254,14 @@ QDebug operator<<(QDebug debug, const DateMode value)
     return debug;
 }
 
+/*!
+ * Writes the BacklightTimeout \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BacklightTimeout value)
 {
     switch (value) {
@@ -944,6 +1271,14 @@ QDebug operator<<(QDebug debug, const BacklightTimeout value)
     return debug;
 }
 
+/*!
+ * Writes the Event \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Event value)
 {
     switch (value) {
@@ -989,6 +1324,14 @@ QDebug operator<<(QDebug debug, const Event value)
     return debug;
 }
 
+/*!
+ * Writes the EventType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const EventType value)
 {
     switch (value) {
@@ -1007,6 +1350,14 @@ QDebug operator<<(QDebug debug, const EventType value)
     return debug;
 }
 
+/*!
+ * Writes the TimerTrigger \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TimerTrigger value)
 {
     switch (value) {
@@ -1018,6 +1369,14 @@ QDebug operator<<(QDebug debug, const TimerTrigger value)
     return debug;
 }
 
+/*!
+ * Writes the FitnessEquipmentState \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const FitnessEquipmentState value)
 {
     switch (value) {
@@ -1030,6 +1389,14 @@ QDebug operator<<(QDebug debug, const FitnessEquipmentState value)
     return debug;
 }
 
+/*!
+ * Writes the Tone \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Tone value)
 {
     switch (value) {
@@ -1042,6 +1409,14 @@ QDebug operator<<(QDebug debug, const Tone value)
     return debug;
 }
 
+/*!
+ * Writes the Autoscroll \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Autoscroll value)
 {
     switch (value) {
@@ -1054,6 +1429,14 @@ QDebug operator<<(QDebug debug, const Autoscroll value)
     return debug;
 }
 
+/*!
+ * Writes the ActivityClass \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ActivityClass value)
 {
     switch (value) {
@@ -1065,6 +1448,14 @@ QDebug operator<<(QDebug debug, const ActivityClass value)
     return debug;
 }
 
+/*!
+ * Writes the HrZoneCalc \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const HrZoneCalc value)
 {
     switch (value) {
@@ -1076,6 +1467,14 @@ QDebug operator<<(QDebug debug, const HrZoneCalc value)
     return debug;
 }
 
+/*!
+ * Writes the PwrZoneCalc \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const PwrZoneCalc value)
 {
     switch (value) {
@@ -1086,6 +1485,14 @@ QDebug operator<<(QDebug debug, const PwrZoneCalc value)
     return debug;
 }
 
+/*!
+ * Writes the WktStepDuration \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WktStepDuration value)
 {
     switch (value) {
@@ -1125,6 +1532,14 @@ QDebug operator<<(QDebug debug, const WktStepDuration value)
     return debug;
 }
 
+/*!
+ * Writes the WktStepTarget \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WktStepTarget value)
 {
     switch (value) {
@@ -1147,6 +1562,14 @@ QDebug operator<<(QDebug debug, const WktStepTarget value)
     return debug;
 }
 
+/*!
+ * Writes the Goal \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Goal value)
 {
     switch (value) {
@@ -1162,6 +1585,14 @@ QDebug operator<<(QDebug debug, const Goal value)
     return debug;
 }
 
+/*!
+ * Writes the GoalRecurrence \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const GoalRecurrence value)
 {
     switch (value) {
@@ -1176,6 +1607,14 @@ QDebug operator<<(QDebug debug, const GoalRecurrence value)
     return debug;
 }
 
+/*!
+ * Writes the GoalSource \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const GoalSource value)
 {
     switch (value) {
@@ -1187,6 +1626,14 @@ QDebug operator<<(QDebug debug, const GoalSource value)
     return debug;
 }
 
+/*!
+ * Writes the Schedule \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Schedule value)
 {
     switch (value) {
@@ -1197,6 +1644,14 @@ QDebug operator<<(QDebug debug, const Schedule value)
     return debug;
 }
 
+/*!
+ * Writes the CoursePoint \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CoursePoint value)
 {
     switch (value) {
@@ -1231,6 +1686,14 @@ QDebug operator<<(QDebug debug, const CoursePoint value)
     return debug;
 }
 
+/*!
+ * Writes the Manufacturer \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Manufacturer value)
 {
     switch (value) {
@@ -1429,6 +1892,14 @@ QDebug operator<<(QDebug debug, const Manufacturer value)
     return debug;
 }
 
+/*!
+ * Writes the GarminProduct \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const GarminProduct value)
 {
     switch (value) {
@@ -1787,6 +2258,14 @@ QDebug operator<<(QDebug debug, const GarminProduct value)
     return debug;
 }
 
+/*!
+ * Writes the AntplusDeviceType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AntplusDeviceType value)
 {
     switch (value) {
@@ -1819,6 +2298,14 @@ QDebug operator<<(QDebug debug, const AntplusDeviceType value)
     return debug;
 }
 
+/*!
+ * Writes the AntNetwork \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AntNetwork value)
 {
     switch (value) {
@@ -1831,6 +2318,14 @@ QDebug operator<<(QDebug debug, const AntNetwork value)
     return debug;
 }
 
+/*!
+ * Writes the WorkoutCapabilities \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WorkoutCapabilities value)
 {
     switch (value) {
@@ -1853,6 +2348,14 @@ QDebug operator<<(QDebug debug, const WorkoutCapabilities value)
     return debug;
 }
 
+/*!
+ * Writes the BatteryStatus \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BatteryStatus value)
 {
     switch (value) {
@@ -1868,6 +2371,14 @@ QDebug operator<<(QDebug debug, const BatteryStatus value)
     return debug;
 }
 
+/*!
+ * Writes the HrType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const HrType value)
 {
     switch (value) {
@@ -1878,6 +2389,14 @@ QDebug operator<<(QDebug debug, const HrType value)
     return debug;
 }
 
+/*!
+ * Writes the CourseCapabilities \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CourseCapabilities value)
 {
     switch (value) {
@@ -1897,6 +2416,14 @@ QDebug operator<<(QDebug debug, const CourseCapabilities value)
     return debug;
 }
 
+/*!
+ * Writes the Weight \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Weight value)
 {
     switch (value) {
@@ -1906,6 +2433,14 @@ QDebug operator<<(QDebug debug, const Weight value)
     return debug;
 }
 
+/*!
+ * Writes the WorkoutHr \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WorkoutHr value)
 {
     switch (value) {
@@ -1915,6 +2450,14 @@ QDebug operator<<(QDebug debug, const WorkoutHr value)
     return debug;
 }
 
+/*!
+ * Writes the WorkoutPower \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WorkoutPower value)
 {
     switch (value) {
@@ -1924,6 +2467,14 @@ QDebug operator<<(QDebug debug, const WorkoutPower value)
     return debug;
 }
 
+/*!
+ * Writes the BpStatus \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BpStatus value)
 {
     switch (value) {
@@ -1937,6 +2488,14 @@ QDebug operator<<(QDebug debug, const BpStatus value)
     return debug;
 }
 
+/*!
+ * Writes the UserLocalId \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const UserLocalId value)
 {
     switch (value) {
@@ -1951,6 +2510,14 @@ QDebug operator<<(QDebug debug, const UserLocalId value)
     return debug;
 }
 
+/*!
+ * Writes the SwimStroke \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SwimStroke value)
 {
     switch (value) {
@@ -1966,6 +2533,14 @@ QDebug operator<<(QDebug debug, const SwimStroke value)
     return debug;
 }
 
+/*!
+ * Writes the ActivityType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ActivityType value)
 {
     switch (value) {
@@ -1983,6 +2558,14 @@ QDebug operator<<(QDebug debug, const ActivityType value)
     return debug;
 }
 
+/*!
+ * Writes the ActivitySubtype \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ActivitySubtype value)
 {
     switch (value) {
@@ -2011,6 +2594,14 @@ QDebug operator<<(QDebug debug, const ActivitySubtype value)
     return debug;
 }
 
+/*!
+ * Writes the ActivityLevel \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ActivityLevel value)
 {
     switch (value) {
@@ -2022,6 +2613,14 @@ QDebug operator<<(QDebug debug, const ActivityLevel value)
     return debug;
 }
 
+/*!
+ * Writes the Side \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const Side value)
 {
     switch (value) {
@@ -2032,6 +2631,14 @@ QDebug operator<<(QDebug debug, const Side value)
     return debug;
 }
 
+/*!
+ * Writes the LeftRightBalance \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LeftRightBalance value)
 {
     switch (value) {
@@ -2042,6 +2649,14 @@ QDebug operator<<(QDebug debug, const LeftRightBalance value)
     return debug;
 }
 
+/*!
+ * Writes the LeftRightBalance100 \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LeftRightBalance100 value)
 {
     switch (value) {
@@ -2052,6 +2667,14 @@ QDebug operator<<(QDebug debug, const LeftRightBalance100 value)
     return debug;
 }
 
+/*!
+ * Writes the LengthType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LengthType value)
 {
     switch (value) {
@@ -2062,6 +2685,14 @@ QDebug operator<<(QDebug debug, const LengthType value)
     return debug;
 }
 
+/*!
+ * Writes the DayOfWeek \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DayOfWeek value)
 {
     switch (value) {
@@ -2077,6 +2708,14 @@ QDebug operator<<(QDebug debug, const DayOfWeek value)
     return debug;
 }
 
+/*!
+ * Writes the ConnectivityCapabilities \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ConnectivityCapabilities value)
 {
     switch (value) {
@@ -2117,6 +2756,14 @@ QDebug operator<<(QDebug debug, const ConnectivityCapabilities value)
     return debug;
 }
 
+/*!
+ * Writes the WeatherReport \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WeatherReport value)
 {
     switch (value) {
@@ -2128,6 +2775,14 @@ QDebug operator<<(QDebug debug, const WeatherReport value)
     return debug;
 }
 
+/*!
+ * Writes the WeatherStatus \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WeatherStatus value)
 {
     switch (value) {
@@ -2157,6 +2812,14 @@ QDebug operator<<(QDebug debug, const WeatherStatus value)
     return debug;
 }
 
+/*!
+ * Writes the WeatherSeverity \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WeatherSeverity value)
 {
     switch (value) {
@@ -2170,6 +2833,14 @@ QDebug operator<<(QDebug debug, const WeatherSeverity value)
     return debug;
 }
 
+/*!
+ * Writes the WeatherSevereType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WeatherSevereType value)
 {
     switch (value) {
@@ -2263,6 +2934,14 @@ QDebug operator<<(QDebug debug, const WeatherSevereType value)
     return debug;
 }
 
+/*!
+ * Writes the StrokeType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const StrokeType value)
 {
     switch (value) {
@@ -2277,6 +2956,14 @@ QDebug operator<<(QDebug debug, const StrokeType value)
     return debug;
 }
 
+/*!
+ * Writes the BodyLocation \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BodyLocation value)
 {
     switch (value) {
@@ -2325,6 +3012,14 @@ QDebug operator<<(QDebug debug, const BodyLocation value)
     return debug;
 }
 
+/*!
+ * Writes the SegmentLapStatus \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SegmentLapStatus value)
 {
     switch (value) {
@@ -2335,6 +3030,14 @@ QDebug operator<<(QDebug debug, const SegmentLapStatus value)
     return debug;
 }
 
+/*!
+ * Writes the SegmentLeaderboardType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SegmentLeaderboardType value)
 {
     switch (value) {
@@ -2354,6 +3057,14 @@ QDebug operator<<(QDebug debug, const SegmentLeaderboardType value)
     return debug;
 }
 
+/*!
+ * Writes the SegmentDeleteStatus \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SegmentDeleteStatus value)
 {
     switch (value) {
@@ -2365,6 +3076,14 @@ QDebug operator<<(QDebug debug, const SegmentDeleteStatus value)
     return debug;
 }
 
+/*!
+ * Writes the SegmentSelectionType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SegmentSelectionType value)
 {
     switch (value) {
@@ -2375,6 +3094,14 @@ QDebug operator<<(QDebug debug, const SegmentSelectionType value)
     return debug;
 }
 
+/*!
+ * Writes the SourceType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SourceType value)
 {
     switch (value) {
@@ -2389,6 +3116,14 @@ QDebug operator<<(QDebug debug, const SourceType value)
     return debug;
 }
 
+/*!
+ * Writes the DisplayOrientation \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DisplayOrientation value)
 {
     switch (value) {
@@ -2402,6 +3137,14 @@ QDebug operator<<(QDebug debug, const DisplayOrientation value)
     return debug;
 }
 
+/*!
+ * Writes the WorkoutEquipment \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WorkoutEquipment value)
 {
     switch (value) {
@@ -2416,6 +3159,14 @@ QDebug operator<<(QDebug debug, const WorkoutEquipment value)
     return debug;
 }
 
+/*!
+ * Writes the WatchfaceMode \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WatchfaceMode value)
 {
     switch (value) {
@@ -2428,6 +3179,14 @@ QDebug operator<<(QDebug debug, const WatchfaceMode value)
     return debug;
 }
 
+/*!
+ * Writes the DigitalWatchfaceLayout \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DigitalWatchfaceLayout value)
 {
     switch (value) {
@@ -2439,6 +3198,14 @@ QDebug operator<<(QDebug debug, const DigitalWatchfaceLayout value)
     return debug;
 }
 
+/*!
+ * Writes the AnalogWatchfaceLayout \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AnalogWatchfaceLayout value)
 {
     switch (value) {
@@ -2450,6 +3217,14 @@ QDebug operator<<(QDebug debug, const AnalogWatchfaceLayout value)
     return debug;
 }
 
+/*!
+ * Writes the RiderPositionType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const RiderPositionType value)
 {
     switch (value) {
@@ -2462,6 +3237,14 @@ QDebug operator<<(QDebug debug, const RiderPositionType value)
     return debug;
 }
 
+/*!
+ * Writes the PowerPhaseType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const PowerPhaseType value)
 {
     switch (value) {
@@ -2474,6 +3257,14 @@ QDebug operator<<(QDebug debug, const PowerPhaseType value)
     return debug;
 }
 
+/*!
+ * Writes the CameraEventType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CameraEventType value)
 {
     switch (value) {
@@ -2495,6 +3286,14 @@ QDebug operator<<(QDebug debug, const CameraEventType value)
     return debug;
 }
 
+/*!
+ * Writes the SensorType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SensorType value)
 {
     switch (value) {
@@ -2507,6 +3306,14 @@ QDebug operator<<(QDebug debug, const SensorType value)
     return debug;
 }
 
+/*!
+ * Writes the BikeLightNetworkConfigType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BikeLightNetworkConfigType value)
 {
     switch (value) {
@@ -2519,6 +3326,14 @@ QDebug operator<<(QDebug debug, const BikeLightNetworkConfigType value)
     return debug;
 }
 
+/*!
+ * Writes the CommTimeoutType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CommTimeoutType value)
 {
     switch (value) {
@@ -2531,6 +3346,14 @@ QDebug operator<<(QDebug debug, const CommTimeoutType value)
     return debug;
 }
 
+/*!
+ * Writes the CameraOrientationType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CameraOrientationType value)
 {
     switch (value) {
@@ -2543,6 +3366,14 @@ QDebug operator<<(QDebug debug, const CameraOrientationType value)
     return debug;
 }
 
+/*!
+ * Writes the AttitudeStage \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AttitudeStage value)
 {
     switch (value) {
@@ -2555,6 +3386,14 @@ QDebug operator<<(QDebug debug, const AttitudeStage value)
     return debug;
 }
 
+/*!
+ * Writes the AttitudeValidity \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AttitudeValidity value)
 {
     switch (value) {
@@ -2576,6 +3415,14 @@ QDebug operator<<(QDebug debug, const AttitudeValidity value)
     return debug;
 }
 
+/*!
+ * Writes the AutoSyncFrequency \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AutoSyncFrequency value)
 {
     switch (value) {
@@ -2589,6 +3436,14 @@ QDebug operator<<(QDebug debug, const AutoSyncFrequency value)
     return debug;
 }
 
+/*!
+ * Writes the ExdLayout \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ExdLayout value)
 {
     switch (value) {
@@ -2606,6 +3461,14 @@ QDebug operator<<(QDebug debug, const ExdLayout value)
     return debug;
 }
 
+/*!
+ * Writes the ExdDisplayType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ExdDisplayType value)
 {
     switch (value) {
@@ -2625,6 +3488,14 @@ QDebug operator<<(QDebug debug, const ExdDisplayType value)
     return debug;
 }
 
+/*!
+ * Writes the ExdDataUnits \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ExdDataUnits value)
 {
     switch (value) {
@@ -2683,6 +3554,14 @@ QDebug operator<<(QDebug debug, const ExdDataUnits value)
     return debug;
 }
 
+/*!
+ * Writes the ExdQualifiers \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ExdQualifiers value)
 {
     switch (value) {
@@ -2735,6 +3614,14 @@ QDebug operator<<(QDebug debug, const ExdQualifiers value)
     return debug;
 }
 
+/*!
+ * Writes the ExdDescriptors \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ExdDescriptors value)
 {
     switch (value) {
@@ -2840,6 +3727,14 @@ QDebug operator<<(QDebug debug, const ExdDescriptors value)
     return debug;
 }
 
+/*!
+ * Writes the AutoActivityDetect \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const AutoActivityDetect value)
 {
     switch (value) {
@@ -2855,6 +3750,14 @@ QDebug operator<<(QDebug debug, const AutoActivityDetect value)
     return debug;
 }
 
+/*!
+ * Writes the SupportedExdScreenLayouts \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SupportedExdScreenLayouts value)
 {
     switch (value) {
@@ -2871,6 +3774,14 @@ QDebug operator<<(QDebug debug, const SupportedExdScreenLayouts value)
     return debug;
 }
 
+/*!
+ * Writes the FitBaseType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const FitBaseType value)
 {
     switch (value) {
@@ -2896,6 +3807,14 @@ QDebug operator<<(QDebug debug, const FitBaseType value)
     return debug;
 }
 
+/*!
+ * Writes the TurnType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TurnType value)
 {
     switch (value) {
@@ -2942,6 +3861,14 @@ QDebug operator<<(QDebug debug, const TurnType value)
     return debug;
 }
 
+/*!
+ * Writes the BikeLightBeamAngleMode \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BikeLightBeamAngleMode value)
 {
     switch (value) {
@@ -2952,6 +3879,14 @@ QDebug operator<<(QDebug debug, const BikeLightBeamAngleMode value)
     return debug;
 }
 
+/*!
+ * Writes the FitBaseUnit \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const FitBaseUnit value)
 {
     switch (value) {
@@ -2963,6 +3898,14 @@ QDebug operator<<(QDebug debug, const FitBaseUnit value)
     return debug;
 }
 
+/*!
+ * Writes the SetType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SetType value)
 {
     switch (value) {
@@ -2973,6 +3916,14 @@ QDebug operator<<(QDebug debug, const SetType value)
     return debug;
 }
 
+/*!
+ * Writes the ExerciseCategory \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ExerciseCategory value)
 {
     switch (value) {
@@ -3015,6 +3966,14 @@ QDebug operator<<(QDebug debug, const ExerciseCategory value)
     return debug;
 }
 
+/*!
+ * Writes the BenchPressExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const BenchPressExerciseName value)
 {
     switch (value) {
@@ -3050,6 +4009,14 @@ QDebug operator<<(QDebug debug, const BenchPressExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the CalfRaiseExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CalfRaiseExerciseName value)
 {
     switch (value) {
@@ -3079,6 +4046,14 @@ QDebug operator<<(QDebug debug, const CalfRaiseExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the CardioExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CardioExerciseName value)
 {
     switch (value) {
@@ -3109,6 +4084,14 @@ QDebug operator<<(QDebug debug, const CardioExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the CarryExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CarryExerciseName value)
 {
     switch (value) {
@@ -3122,6 +4105,14 @@ QDebug operator<<(QDebug debug, const CarryExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the ChopExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ChopExerciseName value)
 {
     switch (value) {
@@ -3153,6 +4144,14 @@ QDebug operator<<(QDebug debug, const ChopExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the CoreExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CoreExerciseName value)
 {
     switch (value) {
@@ -3234,6 +4233,14 @@ QDebug operator<<(QDebug debug, const CoreExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the CrunchExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CrunchExerciseName value)
 {
     switch (value) {
@@ -3327,6 +4334,14 @@ QDebug operator<<(QDebug debug, const CrunchExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the CurlExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const CurlExerciseName value)
 {
     switch (value) {
@@ -3379,6 +4394,14 @@ QDebug operator<<(QDebug debug, const CurlExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the DeadliftExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DeadliftExerciseName value)
 {
     switch (value) {
@@ -3406,6 +4429,14 @@ QDebug operator<<(QDebug debug, const DeadliftExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the FlyeExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const FlyeExerciseName value)
 {
     switch (value) {
@@ -3424,6 +4455,14 @@ QDebug operator<<(QDebug debug, const FlyeExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the HipRaiseExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const HipRaiseExerciseName value)
 {
     switch (value) {
@@ -3482,6 +4521,14 @@ QDebug operator<<(QDebug debug, const HipRaiseExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the HipStabilityExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const HipStabilityExerciseName value)
 {
     switch (value) {
@@ -3524,6 +4571,14 @@ QDebug operator<<(QDebug debug, const HipStabilityExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the HipSwingExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const HipSwingExerciseName value)
 {
     switch (value) {
@@ -3535,6 +4590,14 @@ QDebug operator<<(QDebug debug, const HipSwingExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the HyperextensionExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const HyperextensionExerciseName value)
 {
     switch (value) {
@@ -3583,6 +4646,14 @@ QDebug operator<<(QDebug debug, const HyperextensionExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the LateralRaiseExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LateralRaiseExerciseName value)
 {
     switch (value) {
@@ -3625,6 +4696,14 @@ QDebug operator<<(QDebug debug, const LateralRaiseExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the LegCurlExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LegCurlExerciseName value)
 {
     switch (value) {
@@ -3645,6 +4724,14 @@ QDebug operator<<(QDebug debug, const LegCurlExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the LegRaiseExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LegRaiseExerciseName value)
 {
     switch (value) {
@@ -3675,6 +4762,14 @@ QDebug operator<<(QDebug debug, const LegRaiseExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the LungeExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const LungeExerciseName value)
 {
     switch (value) {
@@ -3764,6 +4859,14 @@ QDebug operator<<(QDebug debug, const LungeExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the OlympicLiftExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const OlympicLiftExerciseName value)
 {
     switch (value) {
@@ -3793,6 +4896,14 @@ QDebug operator<<(QDebug debug, const OlympicLiftExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the PlankExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const PlankExerciseName value)
 {
     switch (value) {
@@ -3936,6 +5047,14 @@ QDebug operator<<(QDebug debug, const PlankExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the PlyoExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const PlyoExerciseName value)
 {
     switch (value) {
@@ -3977,6 +5096,14 @@ QDebug operator<<(QDebug debug, const PlyoExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the PullUpExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const PullUpExerciseName value)
 {
     switch (value) {
@@ -4024,6 +5151,14 @@ QDebug operator<<(QDebug debug, const PullUpExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the PushUpExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const PushUpExerciseName value)
 {
     switch (value) {
@@ -4111,6 +5246,14 @@ QDebug operator<<(QDebug debug, const PushUpExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the RowExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const RowExerciseName value)
 {
     switch (value) {
@@ -4153,6 +5296,14 @@ QDebug operator<<(QDebug debug, const RowExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the ShoulderPressExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ShoulderPressExerciseName value)
 {
     switch (value) {
@@ -4185,6 +5336,14 @@ QDebug operator<<(QDebug debug, const ShoulderPressExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the ShoulderStabilityExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ShoulderStabilityExerciseName value)
 {
     switch (value) {
@@ -4226,6 +5385,14 @@ QDebug operator<<(QDebug debug, const ShoulderStabilityExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the ShrugExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ShrugExerciseName value)
 {
     switch (value) {
@@ -4251,6 +5418,14 @@ QDebug operator<<(QDebug debug, const ShrugExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the SitUpExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SitUpExerciseName value)
 {
     switch (value) {
@@ -4297,6 +5472,14 @@ QDebug operator<<(QDebug debug, const SitUpExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the SquatExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const SquatExerciseName value)
 {
     switch (value) {
@@ -4397,6 +5580,14 @@ QDebug operator<<(QDebug debug, const SquatExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the TotalBodyExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TotalBodyExerciseName value)
 {
     switch (value) {
@@ -4418,6 +5609,14 @@ QDebug operator<<(QDebug debug, const TotalBodyExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the TricepsExtensionExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TricepsExtensionExerciseName value)
 {
     switch (value) {
@@ -4467,6 +5666,14 @@ QDebug operator<<(QDebug debug, const TricepsExtensionExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the WarmUpExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WarmUpExerciseName value)
 {
     switch (value) {
@@ -4506,6 +5713,14 @@ QDebug operator<<(QDebug debug, const WarmUpExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the RunExerciseName \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const RunExerciseName value)
 {
     switch (value) {
@@ -4518,6 +5733,14 @@ QDebug operator<<(QDebug debug, const RunExerciseName value)
     return debug;
 }
 
+/*!
+ * Writes the WaterType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const WaterType value)
 {
     switch (value) {
@@ -4530,6 +5753,14 @@ QDebug operator<<(QDebug debug, const WaterType value)
     return debug;
 }
 
+/*!
+ * Writes the TissueModelType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TissueModelType value)
 {
     switch (value) {
@@ -4539,6 +5770,14 @@ QDebug operator<<(QDebug debug, const TissueModelType value)
     return debug;
 }
 
+/*!
+ * Writes the DiveGasStatus \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DiveGasStatus value)
 {
     switch (value) {
@@ -4550,6 +5789,14 @@ QDebug operator<<(QDebug debug, const DiveGasStatus value)
     return debug;
 }
 
+/*!
+ * Writes the DiveAlarmType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DiveAlarmType value)
 {
     switch (value) {
@@ -4560,6 +5807,14 @@ QDebug operator<<(QDebug debug, const DiveAlarmType value)
     return debug;
 }
 
+/*!
+ * Writes the DiveBacklightMode \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const DiveBacklightMode value)
 {
     switch (value) {
@@ -4570,6 +5825,14 @@ QDebug operator<<(QDebug debug, const DiveBacklightMode value)
     return debug;
 }
 
+/*!
+ * Writes the FaveroProduct \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const FaveroProduct value)
 {
     switch (value) {
@@ -4580,6 +5843,14 @@ QDebug operator<<(QDebug debug, const FaveroProduct value)
     return debug;
 }
 
+/*!
+ * Writes the ClimbProEvent \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const ClimbProEvent value)
 {
     switch (value) {
@@ -4591,6 +5862,14 @@ QDebug operator<<(QDebug debug, const ClimbProEvent value)
     return debug;
 }
 
+/*!
+ * Writes the TapSensitivity \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const TapSensitivity value)
 {
     switch (value) {
@@ -4602,6 +5881,14 @@ QDebug operator<<(QDebug debug, const TapSensitivity value)
     return debug;
 }
 
+/*!
+ * Writes the RadarThreatLevelType \a value to the \a debug stream and returns a reference to the stream.
+ *
+ * \param debug Debug stream to write \a value to.
+ * \param value Value to write to \a debug.
+ *
+ * \return a reference to the \a debug stream.
+ */
 QDebug operator<<(QDebug debug, const RadarThreatLevelType value)
 {
     switch (value) {

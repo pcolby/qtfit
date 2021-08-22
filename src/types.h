@@ -42,11 +42,20 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-typedef quint8  quint8z;
-typedef quint16 quint16z;
-typedef quint32 quint32z;
-typedef quint64 quint64z;
+typedef quint8  quint8z;  ///<  8-bit unsigned integer, with 0-is-invalid semantics.
+typedef quint16 quint16z; ///< 16-bit unsigned integer, with 0-is-invalid semantics.
+typedef quint32 quint32z; ///< 32-bit unsigned integer, with 0-is-invalid semantics.
+typedef quint64 quint64z; ///< 64-bit unsigned integer, with 0-is-invalid semantics.
 
+/*!
+ * Garmin FIT File type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class File {
     Device           =    1, ///< Read only, single file. Must be in root directory.
     Settings         =    2, ///< Read/write, single file. Directory=Settings
@@ -70,6 +79,15 @@ enum class File {
     MfgRangeMax      = 0xFE, ///< 0xF7 - 0xFE reserved for manufacturer specific file types
 };
 
+/*!
+ * Garmin FIT MesgNum type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class MesgNum : quint16 {
     FileId                      =      0,
     Capabilities                =      1,
@@ -163,48 +181,127 @@ enum class MesgNum : quint16 {
     MfgRangeMax                 = 0xFFFE, ///< 0xFF00 - 0xFFFE reserved for manufacturer specific messages
 };
 
+/*!
+ * Garmin FIT Checksum type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Checksum : quint8 {
     Clear = 0, ///< Allows clear of checksum for flash memory where can only write 1 to 0 without erasing sector.
     Ok    = 1, ///< Set to mark checksum as valid if computes to invalid values 0 or 0xFF.  Checksum can also be set to ok to save encoding computation time.
 };
 
+/*!
+ * Garmin FIT FileFlags type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class FileFlags : quint8z {
     Read  = 0x02,
     Write = 0x04,
     Erase = 0x08,
 };
 
+/*!
+ * Garmin FIT MesgCount type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class MesgCount {
     NumPerFile     = 0,
     MaxPerFile     = 1,
     MaxPerFileType = 2,
 };
 
-/// seconds since UTC 00:00 Dec 31 1989
+/*!
+ * Seconds since UTC 00:00 Dec 31 1989
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DateTime : quint32 {
     Min = 0x10000000, ///< if date_time is < 0x10000000 then it is system time (seconds from device power on)
 };
 
-/// seconds since 00:00 Dec 31 1989 in local time zone
+/*!
+ * Seconds since 00:00 Dec 31 1989 in local time zone
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LocalDateTime : quint32 {
     Min = 0x10000000, ///< if date_time is < 0x10000000 then it is system time (seconds from device power on)
 };
 
+/*!
+ * Garmin FIT MessageIndex type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class MessageIndex : quint16 {
     Selected = 0x8000, ///< message is selected if set
     Reserved = 0x7000, ///< reserved (default 0)
     Mask     = 0x0FFF, ///< index
 };
 
+/*!
+ * Garmin FIT DeviceIndex type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DeviceIndex : quint8 {
     Creator = 0, ///< Creator of the file is always device index 0.
 };
 
+/*!
+ * Garmin FIT Gender type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Gender {
     Female = 0,
     Male   = 1,
 };
 
+/*!
+ * Garmin FIT Language type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Language {
     English             =   0,
     French              =   1,
@@ -247,7 +344,15 @@ enum class Language {
     Custom              = 254,
 };
 
-/// Bit field corresponding to language enum type (1 << language).
+/*!
+ * Bit field corresponding to language enum type (1 << language).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LanguageBits0 : quint8z {
     English  = 0x01,
     French   = 0x02,
@@ -259,6 +364,15 @@ enum class LanguageBits0 : quint8z {
     Danish   = 0x80,
 };
 
+/*!
+ * Garmin FIT LanguageBits1 type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LanguageBits1 : quint8z {
     Dutch      = 0x01,
     Finnish    = 0x02,
@@ -270,6 +384,15 @@ enum class LanguageBits1 : quint8z {
     Slovakian  = 0x80,
 };
 
+/*!
+ * Garmin FIT LanguageBits2 type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LanguageBits2 : quint8z {
     Slovenian = 0x01,
     Swedish   = 0x02,
@@ -281,6 +404,15 @@ enum class LanguageBits2 : quint8z {
     Farsi     = 0x80,
 };
 
+/*!
+ * Garmin FIT LanguageBits3 type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LanguageBits3 : quint8z {
     Bulgarian = 0x01,
     Romanian  = 0x02,
@@ -292,6 +424,15 @@ enum class LanguageBits3 : quint8z {
     Hebrew    = 0x80,
 };
 
+/*!
+ * Garmin FIT LanguageBits4 type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LanguageBits4 : quint8z {
     BrazilianPortuguese = 0x01,
     Indonesian          = 0x02,
@@ -301,6 +442,15 @@ enum class LanguageBits4 : quint8z {
     Mongolian           = 0x20,
 };
 
+/*!
+ * Garmin FIT TimeZone type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TimeZone {
     Almaty                   =   0,
     Bangkok                  =   1,
@@ -410,23 +560,59 @@ enum class TimeZone {
     Automatic                = 254,
 };
 
+/*!
+ * Garmin FIT DisplayMeasure type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DisplayMeasure {
     Metric   = 0,
     Statute  = 1,
     Nautical = 2,
 };
 
+/*!
+ * Garmin FIT DisplayHeart type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DisplayHeart {
     Bpm     = 0,
     Max     = 1,
     Reserve = 2,
 };
 
+/*!
+ * Garmin FIT DisplayPower type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DisplayPower {
     Watts      = 0,
     PercentFtp = 1,
 };
 
+/*!
+ * Garmin FIT DisplayPosition type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DisplayPosition {
     Degree               =  0, ///< dd.dddddd
     DegreeMinute         =  1, ///< dddmm.mmm
@@ -472,12 +658,30 @@ enum class DisplayPosition {
     SwedishRef99Grid     = 41, ///< Reference Grid 99 TM (Swedish)
 };
 
+/*!
+ * Garmin FIT Switch type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Switch {
     Off  = 0,
     On   = 1,
     Auto = 2,
 };
 
+/*!
+ * Garmin FIT Sport type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Sport {
     Generic               =   0,
     Running               =   1,
@@ -532,7 +736,15 @@ enum class Sport {
     All                   = 254, ///< All is for goals only to include all sports.
 };
 
-/// Bit field corresponding to sport enum type (1 << sport).
+/*!
+ * Bit field corresponding to sport enum type (1 << sport).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportBits0 : quint8z {
     Generic          = 0x01,
     Running          = 0x02,
@@ -544,7 +756,15 @@ enum class SportBits0 : quint8z {
     Soccer           = 0x80,
 };
 
-/// Bit field corresponding to sport enum type (1 << (sport-8)).
+/*!
+ * Bit field corresponding to sport enum type (1 << (sport-8)).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportBits1 : quint8z {
     Tennis             = 0x01,
     AmericanFootball   = 0x02,
@@ -556,7 +776,15 @@ enum class SportBits1 : quint8z {
     Rowing             = 0x80,
 };
 
-/// Bit field corresponding to sport enum type (1 << (sport-16)).
+/*!
+ * Bit field corresponding to sport enum type (1 << (sport-16)).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportBits2 : quint8z {
     Mountaineering = 0x01,
     Hiking         = 0x02,
@@ -568,7 +796,15 @@ enum class SportBits2 : quint8z {
     Boating        = 0x80,
 };
 
-/// Bit field corresponding to sport enum type (1 << (sport-24)).
+/*!
+ * Bit field corresponding to sport enum type (1 << (sport-24)).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportBits3 : quint8z {
     Driving         = 0x01,
     Golf            = 0x02,
@@ -580,7 +816,15 @@ enum class SportBits3 : quint8z {
     RockClimbing    = 0x80,
 };
 
-/// Bit field corresponding to sport enum type (1 << (sport-32)).
+/*!
+ * Bit field corresponding to sport enum type (1 << (sport-32)).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportBits4 : quint8z {
     Sailing               = 0x01,
     IceSkating            = 0x02,
@@ -592,7 +836,15 @@ enum class SportBits4 : quint8z {
     Wakeboarding          = 0x80,
 };
 
-/// Bit field corresponding to sport enum type (1 << (sport-40)).
+/*!
+ * Bit field corresponding to sport enum type (1 << (sport-40)).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportBits5 : quint8z {
     WaterSkiing = 0x01,
     Kayaking    = 0x02,
@@ -604,11 +856,28 @@ enum class SportBits5 : quint8z {
     Boxing      = 0x80,
 };
 
-/// Bit field corresponding to sport enum type (1 << (sport-48)).
+/*!
+ * Bit field corresponding to sport enum type (1 << (sport-48)).
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportBits6 : quint8z {
     FloorClimbing = 0x01,
 };
 
+/*!
+ * Garmin FIT SubSport type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SubSport {
     Generic              =   0,
     Treadmill            =   1, ///< Run/Fitness Equipment
@@ -674,6 +943,15 @@ enum class SubSport {
     All                  = 254,
 };
 
+/*!
+ * Garmin FIT SportEvent type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SportEvent {
     Uncategorized  = 0,
     Geocaching     = 1,
@@ -686,11 +964,29 @@ enum class SportEvent {
     Touring        = 8,
 };
 
+/*!
+ * Garmin FIT Activity type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Activity {
     Manual         = 0,
     AutoMultiSport = 1,
 };
 
+/*!
+ * Garmin FIT Intensity type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Intensity {
     Active   = 0,
     Rest     = 1,
@@ -701,6 +997,15 @@ enum class Intensity {
     Other    = 6,
 };
 
+/*!
+ * Garmin FIT SessionTrigger type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SessionTrigger {
     ActivityEnd      = 0,
     Manual           = 1, ///< User changed sport.
@@ -708,6 +1013,15 @@ enum class SessionTrigger {
     FitnessEquipment = 3, ///< Auto sport change caused by user linking to fitness equipment.
 };
 
+/*!
+ * Garmin FIT AutolapTrigger type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AutolapTrigger {
     Time             = 0,
     Distance         = 1,
@@ -718,6 +1032,15 @@ enum class AutolapTrigger {
     Off              = 6,
 };
 
+/*!
+ * Garmin FIT LapTrigger type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LapTrigger {
     Manual           = 0,
     Time             = 1,
@@ -730,6 +1053,15 @@ enum class LapTrigger {
     FitnessEquipment = 8,
 };
 
+/*!
+ * Garmin FIT TimeMode type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TimeMode {
     Hour12            = 0,
     Hour24            = 1, ///< Does not use a leading zero and has a colon
@@ -739,6 +1071,15 @@ enum class TimeMode {
     Utc               = 5,
 };
 
+/*!
+ * Garmin FIT BacklightMode type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BacklightMode {
     Off                                 = 0,
     Manual                              = 1,
@@ -749,16 +1090,42 @@ enum class BacklightMode {
     KeyAndMessagesAndSmartNotifications = 6,
 };
 
+/*!
+ * Garmin FIT DateMode type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DateMode {
     DayMonth = 0,
     MonthDay = 1,
 };
 
-/// Timeout in seconds.
+/*!
+ * Timeout in seconds.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BacklightTimeout : quint8 {
     Infinite = 0, ///< Backlight stays on forever.
 };
 
+/*!
+ * Garmin FIT Event type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Event {
     Timer                 =  0, ///< Group 0.  Start / stop_all
     Workout               =  3, ///< start / stop
@@ -799,6 +1166,15 @@ enum class Event {
     RadarThreatAlert      = 75, ///< start/stop/marker
 };
 
+/*!
+ * Garmin FIT EventType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class EventType {
     Start                  = 0,
     Stop                   = 1,
@@ -812,14 +1188,30 @@ enum class EventType {
     StopDisableAll         = 9,
 };
 
-/// timer event data
+/*!
+ * Timer event data
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TimerTrigger {
     Manual           = 0,
     Auto             = 1,
     FitnessEquipment = 2,
 };
 
-/// fitness equipment event data
+/*!
+ * Fitness equipment event data
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class FitnessEquipmentState {
     Ready   = 0,
     InUse   = 1,
@@ -827,6 +1219,15 @@ enum class FitnessEquipmentState {
     Unknown = 3, ///< lost connection to fitness equipment
 };
 
+/*!
+ * Garmin FIT Tone type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Tone {
     Off            = 0,
     Tone           = 1,
@@ -834,6 +1235,15 @@ enum class Tone {
     ToneAndVibrate = 3,
 };
 
+/*!
+ * Garmin FIT Autoscroll type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Autoscroll {
     None   = 0,
     Slow   = 1,
@@ -841,23 +1251,59 @@ enum class Autoscroll {
     Fast   = 3,
 };
 
+/*!
+ * Garmin FIT ActivityClass type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ActivityClass {
     Level    = 0x7F, ///< 0 to 100
     LevelMax =  100,
     Athlete  = 0x80,
 };
 
+/*!
+ * Garmin FIT HrZoneCalc type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class HrZoneCalc {
     Custom       = 0,
     PercentMaxHr = 1,
     PercentHrr   = 2,
 };
 
+/*!
+ * Garmin FIT PwrZoneCalc type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class PwrZoneCalc {
     Custom     = 0,
     PercentFtp = 1,
 };
 
+/*!
+ * Garmin FIT WktStepDuration type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WktStepDuration {
     Time                               =  0,
     Distance                           =  1,
@@ -892,6 +1338,15 @@ enum class WktStepDuration {
     TimeOnly                           = 31,
 };
 
+/*!
+ * Garmin FIT WktStepTarget type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WktStepTarget {
     Speed        =  0,
     HeartRate    =  1,
@@ -909,6 +1364,15 @@ enum class WktStepTarget {
     HeartRateLap = 13,
 };
 
+/*!
+ * Garmin FIT Goal type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Goal {
     Time          = 0,
     Distance      = 1,
@@ -919,6 +1383,15 @@ enum class Goal {
     ActiveMinutes = 6,
 };
 
+/*!
+ * Garmin FIT GoalRecurrence type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class GoalRecurrence {
     Off     = 0,
     Daily   = 1,
@@ -928,17 +1401,44 @@ enum class GoalRecurrence {
     Custom  = 5,
 };
 
+/*!
+ * Garmin FIT GoalSource type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class GoalSource {
     Auto      = 0, ///< Device generated
     Community = 1, ///< Social network sourced goal
     User      = 2, ///< Manually generated
 };
 
+/*!
+ * Garmin FIT Schedule type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Schedule {
     Workout = 0,
     Course  = 1,
 };
 
+/*!
+ * Garmin FIT CoursePoint type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CoursePoint {
     Generic        =  0,
     Summit         =  1,
@@ -968,6 +1468,15 @@ enum class CoursePoint {
     SegmentEnd     = 25,
 };
 
+/*!
+ * Garmin FIT Manufacturer type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Manufacturer : quint16 {
     Garmin                 =    1,
     GarminFr405Antfs       =    2, ///< Do not use.  Used by FR405 for ANTFS man id.
@@ -1161,6 +1670,15 @@ enum class Manufacturer : quint16 {
     Actigraphcorp          = 5759,
 };
 
+/*!
+ * Garmin FIT GarminProduct type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class GarminProduct : quint16 {
     Hrm1                       =     1,
     Axh01                      =     2, ///< AXH01 HRM chipset
@@ -1514,6 +2032,15 @@ enum class GarminProduct : quint16 {
     Connect                    = 65534, ///< Garmin Connect website
 };
 
+/*!
+ * Garmin FIT AntplusDeviceType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AntplusDeviceType : quint8 {
     Antfs                   =   1,
     BikePower               =  11,
@@ -1541,6 +2068,15 @@ enum class AntplusDeviceType : quint8 {
     StrideSpeedDistance     = 124,
 };
 
+/*!
+ * Garmin FIT AntNetwork type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AntNetwork {
     Public  = 0,
     Antplus = 1,
@@ -1548,6 +2084,15 @@ enum class AntNetwork {
     Private = 3,
 };
 
+/*!
+ * Garmin FIT WorkoutCapabilities type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WorkoutCapabilities : quint32z {
     Interval         = 0x00000001,
     Custom           = 0x00000002,
@@ -1565,6 +2110,15 @@ enum class WorkoutCapabilities : quint32z {
     Protected        = 0x00004000,
 };
 
+/*!
+ * Garmin FIT BatteryStatus type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BatteryStatus : quint8 {
     New      = 1,
     Good     = 2,
@@ -1575,11 +2129,29 @@ enum class BatteryStatus : quint8 {
     Unknown  = 7,
 };
 
+/*!
+ * Garmin FIT HrType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class HrType {
     Normal    = 0,
     Irregular = 1,
 };
 
+/*!
+ * Garmin FIT CourseCapabilities type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CourseCapabilities : quint32z {
     Processed  = 0x00000001,
     Valid      = 0x00000002,
@@ -1594,20 +2166,54 @@ enum class CourseCapabilities : quint32z {
     Bikeway    = 0x00000400,
 };
 
+/*!
+ * Garmin FIT Weight type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Weight : quint16 {
     Calculating = 0xFFFE,
 };
 
-/// 0 - 100 indicates% of max hr; >100 indicates bpm (255 max) plus 100
+/*!
+ * 0 - 100 indicates% of max hr; >100 indicates bpm (255 max) plus 100
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WorkoutHr : quint32 {
     BpmOffset = 100,
 };
 
-/// 0 - 1000 indicates % of functional threshold power; >1000 indicates watts plus 1000.
+/*!
+ * 0 - 1000 indicates % of functional threshold power; >1000 indicates watts plus 1000.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WorkoutPower : quint32 {
     WattsOffset = 1000,
 };
 
+/*!
+ * Garmin FIT BpStatus type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BpStatus {
     NoError                 = 0,
     ErrorIncompleteData     = 1,
@@ -1616,6 +2222,15 @@ enum class BpStatus {
     ErrorIrregularHeartRate = 4,
 };
 
+/*!
+ * Garmin FIT UserLocalId type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class UserLocalId : quint16 {
     LocalMin      = 0x0000,
     LocalMax      = 0x000F,
@@ -1625,6 +2240,15 @@ enum class UserLocalId : quint16 {
     PortableMax   = 0xFFFE,
 };
 
+/*!
+ * Garmin FIT SwimStroke type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SwimStroke {
     Freestyle    = 0,
     Backstroke   = 1,
@@ -1635,6 +2259,15 @@ enum class SwimStroke {
     Im           = 6, ///< IM is a mixed interval containing the same number of lengths for each of: Butterfly, Backstroke, Breaststroke, Freestyle, swam in that order.
 };
 
+/*!
+ * Garmin FIT ActivityType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ActivityType {
     Generic          =   0,
     Running          =   1,
@@ -1647,6 +2280,15 @@ enum class ActivityType {
     All              = 254, ///< All is for goals only to include all sports.
 };
 
+/*!
+ * Garmin FIT ActivitySubtype type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ActivitySubtype {
     Generic       =   0,
     Treadmill     =   1, ///< Run
@@ -1670,32 +2312,86 @@ enum class ActivitySubtype {
     All           = 254,
 };
 
+/*!
+ * Garmin FIT ActivityLevel type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ActivityLevel {
     Low    = 0,
     Medium = 1,
     High   = 2,
 };
 
+/*!
+ * Garmin FIT Side type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class Side {
     Right = 0,
     Left  = 1,
 };
 
+/*!
+ * Garmin FIT LeftRightBalance type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LeftRightBalance : quint8 {
     Mask  = 0x7F, ///< % contribution
     Right = 0x80, ///< data corresponds to right if set, otherwise unknown
 };
 
+/*!
+ * Garmin FIT LeftRightBalance100 type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LeftRightBalance100 : quint16 {
     Mask  = 0x3FFF, ///< % contribution scaled by 100
     Right = 0x8000, ///< data corresponds to right if set, otherwise unknown
 };
 
+/*!
+ * Garmin FIT LengthType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LengthType {
     Idle   = 0, ///< Rest period. Length with no strokes
     Active = 1, ///< Length with strokes.
 };
 
+/*!
+ * Garmin FIT DayOfWeek type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DayOfWeek {
     Sunday    = 0,
     Monday    = 1,
@@ -1706,6 +2402,15 @@ enum class DayOfWeek {
     Saturday  = 6,
 };
 
+/*!
+ * Garmin FIT ConnectivityCapabilities type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ConnectivityCapabilities : quint32z {
     Bluetooth                       = 0x00000001,
     BluetoothLe                     = 0x00000002,
@@ -1741,6 +2446,15 @@ enum class ConnectivityCapabilities : quint32z {
     InstantInput                    = 0x80000000, ///< Device supports instant input feature
 };
 
+/*!
+ * Garmin FIT WeatherReport type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WeatherReport {
     Current        = 0,
     Forecast       = 1, ///< Deprecated use hourly_forecast instead
@@ -1748,6 +2462,15 @@ enum class WeatherReport {
     DailyForecast  = 2,
 };
 
+/*!
+ * Garmin FIT WeatherStatus type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WeatherStatus {
     Clear                  =  0,
     PartlyCloudy           =  1,
@@ -1772,6 +2495,15 @@ enum class WeatherStatus {
     Cloudy                 = 22,
 };
 
+/*!
+ * Garmin FIT WeatherSeverity type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WeatherSeverity {
     Unknown   = 0,
     Warning   = 1,
@@ -1780,6 +2512,15 @@ enum class WeatherSeverity {
     Statement = 4,
 };
 
+/*!
+ * Garmin FIT WeatherSevereType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WeatherSevereType {
     Unspecified             =  0,
     Tornado                 =  1,
@@ -1868,12 +2609,37 @@ enum class WeatherSevereType {
     SpecialWeather          = 84,
 };
 
-/// number of seconds into the day since 00:00:00 UTC
+/*!
+ * Number of seconds into the day since 00:00:00 UTC
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 typedef quint32 TimeIntoDay;
 
-/// number of seconds into the day since local 00:00:00
+/*!
+ * Number of seconds into the day since local 00:00:00
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 typedef quint32 LocaltimeIntoDay;
 
+/*!
+ * Garmin FIT StrokeType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class StrokeType {
     NoEvent  = 0,
     Other    = 1, ///< stroke was detected but cannot be identified
@@ -1883,6 +2649,15 @@ enum class StrokeType {
     Smash    = 5,
 };
 
+/*!
+ * Garmin FIT BodyLocation type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BodyLocation {
     LeftLeg               =  0,
     LeftCalf              =  1,
@@ -1926,11 +2701,29 @@ enum class BodyLocation {
     WaistRight            = 39,
 };
 
+/*!
+ * Garmin FIT SegmentLapStatus type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SegmentLapStatus {
     End  = 0,
     Fail = 1,
 };
 
+/*!
+ * Garmin FIT SegmentLeaderboardType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SegmentLeaderboardType {
     Overall      =  0,
     PersonalBest =  1,
@@ -1945,17 +2738,44 @@ enum class SegmentLeaderboardType {
     ClubLeader   = 10,
 };
 
+/*!
+ * Garmin FIT SegmentDeleteStatus type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SegmentDeleteStatus {
     DoNotDelete = 0,
     DeleteOne   = 1,
     DeleteAll   = 2,
 };
 
+/*!
+ * Garmin FIT SegmentSelectionType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SegmentSelectionType {
     Starred   = 0,
     Suggested = 1,
 };
 
+/*!
+ * Garmin FIT SourceType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SourceType {
     Ant                = 0, ///< External device connected with ANT
     Antplus            = 1, ///< External device connected with ANT+
@@ -1965,8 +2785,26 @@ enum class SourceType {
     Local              = 5, ///< Onboard device
 };
 
+/*!
+ * Garmin FIT LocalDeviceType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 typedef quint8 LocalDeviceType;
 
+/*!
+ * Garmin FIT DisplayOrientation type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DisplayOrientation {
     Auto             = 0, ///< automatic if the device supports it
     Portrait         = 1,
@@ -1975,6 +2813,15 @@ enum class DisplayOrientation {
     LandscapeFlipped = 4, ///< landscape mode but rotated 180 degrees
 };
 
+/*!
+ * Garmin FIT WorkoutEquipment type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WorkoutEquipment {
     None          = 0,
     SwimFins      = 1,
@@ -1984,6 +2831,15 @@ enum class WorkoutEquipment {
     SwimSnorkel   = 5,
 };
 
+/*!
+ * Garmin FIT WatchfaceMode type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WatchfaceMode {
     Digital   = 0,
     Analog    = 1,
@@ -1991,18 +2847,45 @@ enum class WatchfaceMode {
     Disabled  = 3,
 };
 
+/*!
+ * Garmin FIT DigitalWatchfaceLayout type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DigitalWatchfaceLayout {
     Traditional = 0,
     Modern      = 1,
     Bold        = 2,
 };
 
+/*!
+ * Garmin FIT AnalogWatchfaceLayout type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AnalogWatchfaceLayout {
     Minimal     = 0,
     Traditional = 1,
     Modern      = 2,
 };
 
+/*!
+ * Garmin FIT RiderPositionType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class RiderPositionType {
     Seated               = 0,
     Standing             = 1,
@@ -2010,6 +2893,15 @@ enum class RiderPositionType {
     TransitionToStanding = 3,
 };
 
+/*!
+ * Garmin FIT PowerPhaseType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class PowerPhaseType {
     PowerPhaseStartAngle = 0,
     PowerPhaseEndAngle   = 1,
@@ -2017,6 +2909,15 @@ enum class PowerPhaseType {
     PowerPhaseCenter     = 3,
 };
 
+/*!
+ * Garmin FIT CameraEventType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CameraEventType {
     VideoStart                  =  0, ///< Start of video recording
     VideoSplit                  =  1, ///< Mark of video file split (end of one file, beginning of the other)
@@ -2033,6 +2934,15 @@ enum class CameraEventType {
     VideoSecondStreamResume     = 14,
 };
 
+/*!
+ * Garmin FIT SensorType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SensorType {
     Accelerometer = 0,
     Gyroscope     = 1,
@@ -2040,6 +2950,15 @@ enum class SensorType {
     Barometer     = 3,
 };
 
+/*!
+ * Garmin FIT BikeLightNetworkConfigType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BikeLightNetworkConfigType {
     Auto           = 0,
     Individual     = 4,
@@ -2047,6 +2966,15 @@ enum class BikeLightNetworkConfigType {
     Trail          = 6,
 };
 
+/*!
+ * Garmin FIT CommTimeoutType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CommTimeoutType : quint16 {
     WildcardPairingTimeout = 0, ///< Timeout pairing to any device
     PairingTimeout         = 1, ///< Timeout pairing to previously paired device
@@ -2054,6 +2982,15 @@ enum class CommTimeoutType : quint16 {
     ConnectionTimeout      = 3, ///< Connection closed due to extended bad communications
 };
 
+/*!
+ * Garmin FIT CameraOrientationType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CameraOrientationType {
     CameraOrientation0   = 0,
     CameraOrientation90  = 1,
@@ -2061,6 +2998,15 @@ enum class CameraOrientationType {
     CameraOrientation270 = 3,
 };
 
+/*!
+ * Garmin FIT AttitudeStage type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AttitudeStage {
     Failed   = 0,
     Aligning = 1,
@@ -2068,6 +3014,15 @@ enum class AttitudeStage {
     Valid    = 3,
 };
 
+/*!
+ * Garmin FIT AttitudeValidity type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AttitudeValidity : quint16 {
     TrackAngleHeadingValid = 0x0001,
     PitchValid             = 0x0002,
@@ -2084,6 +3039,15 @@ enum class AttitudeValidity : quint16 {
     MagneticHeading        = 0x1000,
 };
 
+/*!
+ * Garmin FIT AutoSyncFrequency type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AutoSyncFrequency {
     Never        = 0,
     Occasionally = 1,
@@ -2092,6 +3056,15 @@ enum class AutoSyncFrequency {
     Remote       = 4,
 };
 
+/*!
+ * Garmin FIT ExdLayout type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ExdLayout {
     FullScreen                = 0,
     HalfVertical              = 1,
@@ -2104,6 +3077,15 @@ enum class ExdLayout {
     Dynamic                   = 8, ///< The EXD may display the configured concepts in any layout it sees fit.
 };
 
+/*!
+ * Garmin FIT ExdDisplayType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ExdDisplayType {
     Numerical         =  0,
     Simple            =  1,
@@ -2118,6 +3100,15 @@ enum class ExdDisplayType {
     Gauge             = 10,
 };
 
+/*!
+ * Garmin FIT ExdDataUnits type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ExdDataUnits {
     NoUnits                        =  0,
     Laps                           =  1,
@@ -2171,6 +3162,15 @@ enum class ExdDataUnits {
     EightCardinal                  = 49,
 };
 
+/*!
+ * Garmin FIT ExdQualifiers type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ExdQualifiers {
     NoQualifier              =   0,
     Instantaneous            =   1,
@@ -2218,6 +3218,15 @@ enum class ExdQualifiers {
     Zone1                    = 250,
 };
 
+/*!
+ * Garmin FIT ExdDescriptors type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ExdDescriptors {
     BikeLightBatteryStatus           =  0,
     BeamAngleStatus                  =  1,
@@ -2318,6 +3327,15 @@ enum class ExdDescriptors {
     Vam                              = 96,
 };
 
+/*!
+ * Garmin FIT AutoActivityDetect type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class AutoActivityDetect : quint32 {
     None       = 0x00000000,
     Running    = 0x00000001,
@@ -2328,6 +3346,15 @@ enum class AutoActivityDetect : quint32 {
     Sedentary  = 0x00000400,
 };
 
+/*!
+ * Garmin FIT SupportedExdScreenLayouts type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SupportedExdScreenLayouts : quint32z {
     FullScreen                = 0x00000001,
     HalfVertical              = 0x00000002,
@@ -2339,6 +3366,15 @@ enum class SupportedExdScreenLayouts : quint32z {
     HalfHorizontalTopSplit    = 0x00000080,
 };
 
+/*!
+ * Garmin FIT FitBaseType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class FitBaseType : quint8 {
     Enum    =   0,
     Sint8   =   1,
@@ -2359,6 +3395,15 @@ enum class FitBaseType : quint8 {
     Uint64z = 144,
 };
 
+/*!
+ * Garmin FIT TurnType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TurnType {
     ArrivingIdx             =  0,
     ArrivingLeftIdx         =  1,
@@ -2400,22 +3445,58 @@ enum class TurnType {
     IconIdxCnt              = 37,
 };
 
+/*!
+ * Garmin FIT BikeLightBeamAngleMode type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BikeLightBeamAngleMode : quint8 {
     Manual = 0,
     Auto   = 1,
 };
 
+/*!
+ * Garmin FIT FitBaseUnit type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class FitBaseUnit : quint16 {
     Other    = 0,
     Kilogram = 1,
     Pound    = 2,
 };
 
+/*!
+ * Garmin FIT SetType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SetType : quint8 {
     Rest   = 0,
     Active = 1,
 };
 
+/*!
+ * Garmin FIT ExerciseCategory type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ExerciseCategory : quint16 {
     BenchPress        =     0,
     CalfRaise         =     1,
@@ -2453,6 +3534,15 @@ enum class ExerciseCategory : quint16 {
     Unknown           = 65534,
 };
 
+/*!
+ * Garmin FIT BenchPressExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class BenchPressExerciseName : quint16 {
     AlternatingDumbbellChestPressOnSwissBall =  0,
     BarbellBenchPress                        =  1,
@@ -2483,6 +3573,15 @@ enum class BenchPressExerciseName : quint16 {
     AlternatingDumbbellChestPress            = 26,
 };
 
+/*!
+ * Garmin FIT CalfRaiseExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CalfRaiseExerciseName : quint16 {
     ThreeWayCalfRaise                  =  0,
     ThreeWayWeightedCalfRaise          =  1,
@@ -2507,6 +3606,15 @@ enum class CalfRaiseExerciseName : quint16 {
     StandingDumbbellCalfRaise          = 20,
 };
 
+/*!
+ * Garmin FIT CardioExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CardioExerciseName : quint16 {
     BobAndWeaveCircle         =  0,
     WeightedBobAndWeaveCircle =  1,
@@ -2532,6 +3640,15 @@ enum class CardioExerciseName : quint16 {
     WeightedTripleUnder       = 21,
 };
 
+/*!
+ * Garmin FIT CarryExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CarryExerciseName : quint16 {
     BarHolds          = 0,
     FarmersWalk       = 1,
@@ -2540,6 +3657,15 @@ enum class CarryExerciseName : quint16 {
     OverheadCarry     = 4,
 };
 
+/*!
+ * Garmin FIT ChopExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ChopExerciseName : quint16 {
     CablePullThrough                   =  0,
     CableRotationalLift                =  1,
@@ -2566,6 +3692,15 @@ enum class ChopExerciseName : quint16 {
     StandingStabilityReverseChop       = 22,
 };
 
+/*!
+ * Garmin FIT CoreExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CoreExerciseName : quint16 {
     AbsJabs                          =  0,
     WeightedAbsJabs                  =  1,
@@ -2642,6 +3777,15 @@ enum class CoreExerciseName : quint16 {
     TheHundred                       = 72,
 };
 
+/*!
+ * Garmin FIT CrunchExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CrunchExerciseName : quint16 {
     BicycleCrunch                           =  0,
     CableCrunch                             =  1,
@@ -2730,6 +3874,15 @@ enum class CrunchExerciseName : quint16 {
     StraightLegCrunchWithBall               = 84,
 };
 
+/*!
+ * Garmin FIT CurlExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class CurlExerciseName : quint16 {
     AlternatingDumbbellBicepsCurl             =  0,
     AlternatingDumbbellBicepsCurlOnSwissBall  =  1,
@@ -2777,6 +3930,15 @@ enum class CurlExerciseName : quint16 {
     WideGripEzBarBicepsCurl                   = 43,
 };
 
+/*!
+ * Garmin FIT DeadliftExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DeadliftExerciseName : quint16 {
     BarbellDeadlift                       =  0,
     BarbellStraightLegDeadlift            =  1,
@@ -2799,6 +3961,15 @@ enum class DeadliftExerciseName : quint16 {
     WideGripBarbellDeadlift               = 18,
 };
 
+/*!
+ * Garmin FIT FlyeExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class FlyeExerciseName : quint16 {
     CableCrossover                    = 0,
     DeclineDumbbellFlye               = 1,
@@ -2812,6 +3983,15 @@ enum class FlyeExerciseName : quint16 {
     HugATree                          = 9,
 };
 
+/*!
+ * Garmin FIT HipRaiseExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class HipRaiseExerciseName : quint16 {
     BarbellHipThrustOnFloor                         =  0,
     BarbellHipThrustWithBench                       =  1,
@@ -2865,6 +4045,15 @@ enum class HipRaiseExerciseName : quint16 {
     LegLiftInExternalRotation                       = 49,
 };
 
+/*!
+ * Garmin FIT HipStabilityExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class HipStabilityExerciseName : quint16 {
     BandSideLyingLegRaise             =  0,
     DeadBug                           =  1,
@@ -2902,12 +4091,30 @@ enum class HipStabilityExerciseName : quint16 {
     WeightedSupineHipInternalRotation = 33,
 };
 
+/*!
+ * Garmin FIT HipSwingExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class HipSwingExerciseName : quint16 {
     SingleArmKettlebellSwing = 0,
     SingleArmDumbbellSwing   = 1,
     StepOutSwing             = 2,
 };
 
+/*!
+ * Garmin FIT HyperextensionExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class HyperextensionExerciseName : quint16 {
     BackExtensionWithOppositeArmAndLegReach         =  0,
     WeightedBackExtensionWithOppositeArmAndLegReach =  1,
@@ -2951,6 +4158,15 @@ enum class HyperextensionExerciseName : quint16 {
     SupineFloorBarre                                = 39, ///< Deprecated do not use
 };
 
+/*!
+ * Garmin FIT LateralRaiseExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LateralRaiseExerciseName : quint16 {
     FortyFiveDegreeCableExternalRotation  =  0,
     AlternatingLateralRaiseWithStaticHold =  1,
@@ -2988,6 +4204,15 @@ enum class LateralRaiseExerciseName : quint16 {
     ShavingTheHead                        = 33,
 };
 
+/*!
+ * Garmin FIT LegCurlExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LegCurlExerciseName : quint16 {
     LegCurl                     =  0,
     WeightedLegCurl             =  1,
@@ -3003,6 +4228,15 @@ enum class LegCurlExerciseName : quint16 {
     ZercherGoodMorning          = 11,
 };
 
+/*!
+ * Garmin FIT LegRaiseExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LegRaiseExerciseName : quint16 {
     HangingKneeRaise                   =  0,
     HangingLegRaise                    =  1,
@@ -3028,6 +4262,15 @@ enum class LegRaiseExerciseName : quint16 {
     WeightedLateralStepover            = 21,
 };
 
+/*!
+ * Garmin FIT LungeExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class LungeExerciseName : quint16 {
     OverheadLunge                                 =  0,
     LungeMatrix                                   =  1,
@@ -3112,6 +4355,15 @@ enum class LungeExerciseName : quint16 {
     WideGripOverheadBarbellSplitSquat             = 80,
 };
 
+/*!
+ * Garmin FIT OlympicLiftExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class OlympicLiftExerciseName : quint16 {
     BarbellHangPowerClean      =  0,
     BarbellHangSquatClean      =  1,
@@ -3136,6 +4388,15 @@ enum class OlympicLiftExerciseName : quint16 {
     SquatCleanAndJerk          = 20,
 };
 
+/*!
+ * Garmin FIT PlankExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class PlankExerciseName : quint16 {
     FortyFiveDegreePlank                             =   0,
     Weighted45DegreePlank                            =   1,
@@ -3274,6 +4535,15 @@ enum class PlankExerciseName : quint16 {
     ReversePlankWithLegPull                          = 134,
 };
 
+/*!
+ * Garmin FIT PlyoExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class PlyoExerciseName : quint16 {
     AlternatingJumpLunge                  =  0,
     WeightedAlternatingJumpLunge          =  1,
@@ -3310,6 +4580,15 @@ enum class PlyoExerciseName : quint16 {
     WeightedSquatJumpsInAndOut            = 32,
 };
 
+/*!
+ * Garmin FIT PullUpExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class PullUpExerciseName : quint16 {
     BandedPullUps                    =  0,
     ThirtyDegreeLatPulldown          =  1,
@@ -3352,6 +4631,15 @@ enum class PullUpExerciseName : quint16 {
     PullUp                           = 38,
 };
 
+/*!
+ * Garmin FIT PushUpExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class PushUpExerciseName : quint16 {
     ChestPressWithBand                         =  0,
     AlternatingStaggeredPushUp                 =  1,
@@ -3434,6 +4722,15 @@ enum class PushUpExerciseName : quint16 {
     PilatesPushup                              = 78,
 };
 
+/*!
+ * Garmin FIT RowExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class RowExerciseName : quint16 {
     BarbellStraightLegDeadliftToRow            =  0,
     CableRowStanding                           =  1,
@@ -3471,6 +4768,15 @@ enum class RowExerciseName : quint16 {
     WideGripSeatedCableRow                     = 33,
 };
 
+/*!
+ * Garmin FIT ShoulderPressExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ShoulderPressExerciseName : quint16 {
     AlternatingDumbbellShoulderPress         =  0,
     ArnoldPress                              =  1,
@@ -3498,6 +4804,15 @@ enum class ShoulderPressExerciseName : quint16 {
     WeightPlateFrontRaise                    = 23,
 };
 
+/*!
+ * Garmin FIT ShoulderStabilityExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ShoulderStabilityExerciseName : quint16 {
     NinetyDegreeCableExternalRotation      =  0,
     BandExternalRotation                   =  1,
@@ -3534,6 +4849,15 @@ enum class ShoulderStabilityExerciseName : quint16 {
     WeightedSwissBallYRaise                = 32,
 };
 
+/*!
+ * Garmin FIT ShrugExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ShrugExerciseName : quint16 {
     BarbellJumpShrug               =  0,
     BarbellShrug                   =  1,
@@ -3554,6 +4878,15 @@ enum class ShrugExerciseName : quint16 {
     WideGripJumpShrug              = 16,
 };
 
+/*!
+ * Garmin FIT SitUpExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SitUpExerciseName : quint16 {
     AlternatingSitUp                    =  0,
     WeightedAlternatingSitUp            =  1,
@@ -3595,6 +4928,15 @@ enum class SitUpExerciseName : quint16 {
     SitUp                               = 37,
 };
 
+/*!
+ * Garmin FIT SquatExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class SquatExerciseName : quint16 {
     LegPress                                        =  0,
     BackSquatWithBodyBar                            =  1,
@@ -3690,6 +5032,15 @@ enum class SquatExerciseName : quint16 {
     ReleveStraightLegAndKneeBentWithOneLegVariation = 91,
 };
 
+/*!
+ * Garmin FIT TotalBodyExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TotalBodyExerciseName : quint16 {
     Burpee                           =  0,
     WeightedBurpee                   =  1,
@@ -3706,6 +5057,15 @@ enum class TotalBodyExerciseName : quint16 {
     WeightedStandingTRotationBalance = 12,
 };
 
+/*!
+ * Garmin FIT TricepsExtensionExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TricepsExtensionExerciseName : quint16 {
     BenchDip                                     =  0,
     WeightedBenchDip                             =  1,
@@ -3750,6 +5110,15 @@ enum class TricepsExtensionExerciseName : quint16 {
     WeightedDip                                  = 40,
 };
 
+/*!
+ * Garmin FIT WarmUpExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WarmUpExerciseName : quint16 {
     QuadrupedRocking            =  0,
     NeckTilts                   =  1,
@@ -3784,6 +5153,15 @@ enum class WarmUpExerciseName : quint16 {
     WalkoutFromPushUpPosition   = 30,
 };
 
+/*!
+ * Garmin FIT RunExerciseName type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class RunExerciseName : quint16 {
     Run    = 0,
     Walk   = 1,
@@ -3791,6 +5169,15 @@ enum class RunExerciseName : quint16 {
     Sprint = 3,
 };
 
+/*!
+ * Garmin FIT WaterType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class WaterType {
     Fresh   = 0,
     Salt    = 1,
@@ -3798,43 +5185,115 @@ enum class WaterType {
     Custom  = 3,
 };
 
+/*!
+ * Garmin FIT TissueModelType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TissueModelType {
     Zhl16c = 0, ///< Buhlmann's decompression algorithm, version C
 };
 
+/*!
+ * Garmin FIT DiveGasStatus type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DiveGasStatus {
     Disabled   = 0,
     Enabled    = 1,
     BackupOnly = 2,
 };
 
+/*!
+ * Garmin FIT DiveAlarmType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DiveAlarmType {
     Depth = 0,
     Time  = 1,
 };
 
+/*!
+ * Garmin FIT DiveBacklightMode type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class DiveBacklightMode {
     AtDepth  = 0,
     AlwaysOn = 1,
 };
 
+/*!
+ * Garmin FIT FaveroProduct type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class FaveroProduct : quint16 {
     AssiomaUno = 10,
     AssiomaDuo = 12,
 };
 
+/*!
+ * Garmin FIT ClimbProEvent type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class ClimbProEvent {
     Approach = 0,
     Start    = 1,
     Complete = 2,
 };
 
+/*!
+ * Garmin FIT TapSensitivity type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class TapSensitivity {
     High   = 0,
     Medium = 1,
     Low    = 2,
 };
 
+/*!
+ * Garmin FIT RadarThreatLevelType type.
+ *
+ * This type was auto-extracted from the Types worksheet in the Garmin FIT SDK's Profiles.xlsx
+ * spreadsheet. More information of the definition and semantics of this type may be available in
+ * the Garmin FIT SDK.
+ *
+ * \sa [Garmin FIT SDK](https://developer.garmin.com/fit/)
+ */
 enum class RadarThreatLevelType {
     ThreatUnknown         = 0,
     ThreatNone            = 1,
