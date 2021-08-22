@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SportMessage
+ *
+ * The SportMessage class represents a FIT SportMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SportMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SportMessage::SportMessage() : FitDataMessage(new SportMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SportMessage data message's \c sport field's current value.
+ *
+ * \return the \c sport field value.
+ */
 Sport SportMessage::sport() const
 {
     Q_D(const SportMessage);
     return d->sport;
 }
 
+/*!
+ * Returns the SportMessage data message's \c subSport field's current value.
+ *
+ * \return the \c subSport field value.
+ */
 SubSport SportMessage::subSport() const
 {
     Q_D(const SportMessage);
     return d->subSport;
 }
 
+/*!
+ * Returns the SportMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString SportMessage::name() const
 {
     Q_D(const SportMessage);
     return d->name;
 }
 
+/*!
+ * Sets the \c sport field to \a sport.
+ *
+ * \param sport The field value to set.
+ */
 void SportMessage::setSport(const Sport sport)
 {
     Q_D(SportMessage);
     d->sport = sport;
 }
+/*!
+ * Sets the \c subSport field to \a subSport.
+ *
+ * \param subSport The field value to set.
+ */
 void SportMessage::setSubSport(const SubSport subSport)
 {
     Q_D(SportMessage);
     d->subSport = subSport;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void SportMessage::setName(const QString name)
 {
     Q_D(SportMessage);
     d->name = name;
 }
 
+/*!
+ * \internal
+ *
+ * \class SportMessagePrivate
+ *
+ * The SportMessagePrivate class provides private implementation for the SportMessage.
+ *
+ * \sa SportMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SportMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SportMessagePrivate::SportMessagePrivate(SportMessage * const q)
   : FitDataMessagePrivate(q)
   , sport(static_cast<Sport>(-1))
@@ -77,6 +138,11 @@ SportMessagePrivate::SportMessagePrivate(SportMessage * const q)
     globalMessageNumber = MesgNum::Sport;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SportMessagePrivate object.
+ */
 SportMessagePrivate::~SportMessagePrivate()
 {
 

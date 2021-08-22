@@ -30,111 +30,232 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SegmentIdMessage
+ *
+ * The SegmentIdMessage class represents a FIT SegmentIdMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SegmentIdMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SegmentIdMessage::SegmentIdMessage() : FitDataMessage(new SegmentIdMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString SegmentIdMessage::name() const
 {
     Q_D(const SegmentIdMessage);
     return d->name;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c uuid field's current value.
+ *
+ * \return the \c uuid field value.
+ */
 QString SegmentIdMessage::uuid() const
 {
     Q_D(const SegmentIdMessage);
     return d->uuid;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c sport field's current value.
+ *
+ * \return the \c sport field value.
+ */
 Sport SegmentIdMessage::sport() const
 {
     Q_D(const SegmentIdMessage);
     return d->sport;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c enabled field's current value.
+ *
+ * \return the \c enabled field value.
+ */
 bool SegmentIdMessage::enabled() const
 {
     Q_D(const SegmentIdMessage);
     return d->enabled;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c userProfilePrimaryKey field's current value.
+ *
+ * \return the \c userProfilePrimaryKey field value.
+ */
 quint32 SegmentIdMessage::userProfilePrimaryKey() const
 {
     Q_D(const SegmentIdMessage);
     return d->userProfilePrimaryKey;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c deviceId field's current value.
+ *
+ * \return the \c deviceId field value.
+ */
 quint32 SegmentIdMessage::deviceId() const
 {
     Q_D(const SegmentIdMessage);
     return d->deviceId;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c defaultRaceLeader field's current value.
+ *
+ * \return the \c defaultRaceLeader field value.
+ */
 quint8 SegmentIdMessage::defaultRaceLeader() const
 {
     Q_D(const SegmentIdMessage);
     return d->defaultRaceLeader;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c deleteStatus field's current value.
+ *
+ * \return the \c deleteStatus field value.
+ */
 SegmentDeleteStatus SegmentIdMessage::deleteStatus() const
 {
     Q_D(const SegmentIdMessage);
     return d->deleteStatus;
 }
 
+/*!
+ * Returns the SegmentIdMessage data message's \c selectionType field's current value.
+ *
+ * \return the \c selectionType field value.
+ */
 SegmentSelectionType SegmentIdMessage::selectionType() const
 {
     Q_D(const SegmentIdMessage);
     return d->selectionType;
 }
 
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void SegmentIdMessage::setName(const QString name)
 {
     Q_D(SegmentIdMessage);
     d->name = name;
 }
+/*!
+ * Sets the \c uuid field to \a uuid.
+ *
+ * \param uuid The field value to set.
+ */
 void SegmentIdMessage::setUuid(const QString uuid)
 {
     Q_D(SegmentIdMessage);
     d->uuid = uuid;
 }
+/*!
+ * Sets the \c sport field to \a sport.
+ *
+ * \param sport The field value to set.
+ */
 void SegmentIdMessage::setSport(const Sport sport)
 {
     Q_D(SegmentIdMessage);
     d->sport = sport;
 }
+/*!
+ * Sets the \c enabled field to \a enabled.
+ *
+ * \param enabled The field value to set.
+ */
 void SegmentIdMessage::setEnabled(const bool enabled)
 {
     Q_D(SegmentIdMessage);
     d->enabled = enabled;
 }
+/*!
+ * Sets the \c userProfilePrimaryKey field to \a userProfilePrimaryKey.
+ *
+ * \param userProfilePrimaryKey The field value to set.
+ */
 void SegmentIdMessage::setUserProfilePrimaryKey(const quint32 userProfilePrimaryKey)
 {
     Q_D(SegmentIdMessage);
     d->userProfilePrimaryKey = userProfilePrimaryKey;
 }
+/*!
+ * Sets the \c deviceId field to \a deviceId.
+ *
+ * \param deviceId The field value to set.
+ */
 void SegmentIdMessage::setDeviceId(const quint32 deviceId)
 {
     Q_D(SegmentIdMessage);
     d->deviceId = deviceId;
 }
+/*!
+ * Sets the \c defaultRaceLeader field to \a defaultRaceLeader.
+ *
+ * \param defaultRaceLeader The field value to set.
+ */
 void SegmentIdMessage::setDefaultRaceLeader(const quint8 defaultRaceLeader)
 {
     Q_D(SegmentIdMessage);
     d->defaultRaceLeader = defaultRaceLeader;
 }
+/*!
+ * Sets the \c deleteStatus field to \a deleteStatus.
+ *
+ * \param deleteStatus The field value to set.
+ */
 void SegmentIdMessage::setDeleteStatus(const SegmentDeleteStatus deleteStatus)
 {
     Q_D(SegmentIdMessage);
     d->deleteStatus = deleteStatus;
 }
+/*!
+ * Sets the \c selectionType field to \a selectionType.
+ *
+ * \param selectionType The field value to set.
+ */
 void SegmentIdMessage::setSelectionType(const SegmentSelectionType selectionType)
 {
     Q_D(SegmentIdMessage);
     d->selectionType = selectionType;
 }
 
+/*!
+ * \internal
+ *
+ * \class SegmentIdMessagePrivate
+ *
+ * The SegmentIdMessagePrivate class provides private implementation for the SegmentIdMessage.
+ *
+ * \sa SegmentIdMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SegmentIdMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SegmentIdMessagePrivate::SegmentIdMessagePrivate(SegmentIdMessage * const q)
   : FitDataMessagePrivate(q)
   , sport(static_cast<Sport>(-1))
@@ -148,6 +269,11 @@ SegmentIdMessagePrivate::SegmentIdMessagePrivate(SegmentIdMessage * const q)
     globalMessageNumber = MesgNum::SegmentId;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SegmentIdMessagePrivate object.
+ */
 SegmentIdMessagePrivate::~SegmentIdMessagePrivate()
 {
 

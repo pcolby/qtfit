@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class VideoDescriptionMessage
+ *
+ * The VideoDescriptionMessage class represents a FIT VideoDescriptionMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid VideoDescriptionMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 VideoDescriptionMessage::VideoDescriptionMessage() : FitDataMessage(new VideoDescriptionMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the VideoDescriptionMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex VideoDescriptionMessage::messageIndex() const
 {
     Q_D(const VideoDescriptionMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the VideoDescriptionMessage data message's \c messageCount field's current value.
+ *
+ * \return the \c messageCount field value.
+ */
 quint16 VideoDescriptionMessage::messageCount() const
 {
     Q_D(const VideoDescriptionMessage);
     return d->messageCount;
 }
 
+/*!
+ * Returns the VideoDescriptionMessage data message's \c text field's current value.
+ *
+ * \return the \c text field value.
+ */
 QString VideoDescriptionMessage::text() const
 {
     Q_D(const VideoDescriptionMessage);
     return d->text;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void VideoDescriptionMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(VideoDescriptionMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c messageCount field to \a messageCount.
+ *
+ * \param messageCount The field value to set.
+ */
 void VideoDescriptionMessage::setMessageCount(const quint16 messageCount)
 {
     Q_D(VideoDescriptionMessage);
     d->messageCount = messageCount;
 }
+/*!
+ * Sets the \c text field to \a text.
+ *
+ * \param text The field value to set.
+ */
 void VideoDescriptionMessage::setText(const QString text)
 {
     Q_D(VideoDescriptionMessage);
     d->text = text;
 }
 
+/*!
+ * \internal
+ *
+ * \class VideoDescriptionMessagePrivate
+ *
+ * The VideoDescriptionMessagePrivate class provides private implementation for the VideoDescriptionMessage.
+ *
+ * \sa VideoDescriptionMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a VideoDescriptionMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 VideoDescriptionMessagePrivate::VideoDescriptionMessagePrivate(VideoDescriptionMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -77,6 +138,11 @@ VideoDescriptionMessagePrivate::VideoDescriptionMessagePrivate(VideoDescriptionM
     globalMessageNumber = MesgNum::VideoDescription;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the VideoDescriptionMessagePrivate object.
+ */
 VideoDescriptionMessagePrivate::~VideoDescriptionMessagePrivate()
 {
 

@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class VideoFrameMessage
+ *
+ * The VideoFrameMessage class represents a FIT VideoFrameMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid VideoFrameMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 VideoFrameMessage::VideoFrameMessage() : FitDataMessage(new VideoFrameMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the VideoFrameMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime VideoFrameMessage::timestamp() const
 {
     Q_D(const VideoFrameMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the VideoFrameMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 VideoFrameMessage::timestampMs() const
 {
     Q_D(const VideoFrameMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the VideoFrameMessage data message's \c frameNumber field's current value.
+ *
+ * \return the \c frameNumber field value.
+ */
 quint32 VideoFrameMessage::frameNumber() const
 {
     Q_D(const VideoFrameMessage);
     return d->frameNumber;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void VideoFrameMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(VideoFrameMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void VideoFrameMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(VideoFrameMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c frameNumber field to \a frameNumber.
+ *
+ * \param frameNumber The field value to set.
+ */
 void VideoFrameMessage::setFrameNumber(const quint32 frameNumber)
 {
     Q_D(VideoFrameMessage);
     d->frameNumber = frameNumber;
 }
 
+/*!
+ * \internal
+ *
+ * \class VideoFrameMessagePrivate
+ *
+ * The VideoFrameMessagePrivate class provides private implementation for the VideoFrameMessage.
+ *
+ * \sa VideoFrameMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a VideoFrameMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 VideoFrameMessagePrivate::VideoFrameMessagePrivate(VideoFrameMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -78,6 +139,11 @@ VideoFrameMessagePrivate::VideoFrameMessagePrivate(VideoFrameMessage * const q)
     globalMessageNumber = MesgNum::VideoFrame;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the VideoFrameMessagePrivate object.
+ */
 VideoFrameMessagePrivate::~VideoFrameMessagePrivate()
 {
 

@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class VideoMessage
+ *
+ * The VideoMessage class represents a FIT VideoMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid VideoMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 VideoMessage::VideoMessage() : FitDataMessage(new VideoMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the VideoMessage data message's \c url field's current value.
+ *
+ * \return the \c url field value.
+ */
 QString VideoMessage::url() const
 {
     Q_D(const VideoMessage);
     return d->url;
 }
 
+/*!
+ * Returns the VideoMessage data message's \c hostingProvider field's current value.
+ *
+ * \return the \c hostingProvider field value.
+ */
 QString VideoMessage::hostingProvider() const
 {
     Q_D(const VideoMessage);
     return d->hostingProvider;
 }
 
+/*!
+ * Returns the VideoMessage data message's \c duration field's current value.
+ *
+ * \return the \c duration field value.
+ */
 quint32 VideoMessage::duration() const
 {
     Q_D(const VideoMessage);
     return d->duration;
 }
 
+/*!
+ * Sets the \c url field to \a url.
+ *
+ * \param url The field value to set.
+ */
 void VideoMessage::setUrl(const QString url)
 {
     Q_D(VideoMessage);
     d->url = url;
 }
+/*!
+ * Sets the \c hostingProvider field to \a hostingProvider.
+ *
+ * \param hostingProvider The field value to set.
+ */
 void VideoMessage::setHostingProvider(const QString hostingProvider)
 {
     Q_D(VideoMessage);
     d->hostingProvider = hostingProvider;
 }
+/*!
+ * Sets the \c duration field to \a duration.
+ *
+ * \param duration The field value to set.
+ */
 void VideoMessage::setDuration(const quint32 duration)
 {
     Q_D(VideoMessage);
     d->duration = duration;
 }
 
+/*!
+ * \internal
+ *
+ * \class VideoMessagePrivate
+ *
+ * The VideoMessagePrivate class provides private implementation for the VideoMessage.
+ *
+ * \sa VideoMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a VideoMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 VideoMessagePrivate::VideoMessagePrivate(VideoMessage * const q)
   : FitDataMessagePrivate(q)
   , duration(0xFFFFFFFF)
@@ -76,6 +137,11 @@ VideoMessagePrivate::VideoMessagePrivate(VideoMessage * const q)
     globalMessageNumber = MesgNum::Video;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the VideoMessagePrivate object.
+ */
 VideoMessagePrivate::~VideoMessagePrivate()
 {
 

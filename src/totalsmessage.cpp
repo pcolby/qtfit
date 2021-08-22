@@ -30,122 +30,253 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class TotalsMessage
+ *
+ * The TotalsMessage class represents a FIT TotalsMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid TotalsMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 TotalsMessage::TotalsMessage() : FitDataMessage(new TotalsMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex TotalsMessage::messageIndex() const
 {
     Q_D(const TotalsMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime TotalsMessage::timestamp() const
 {
     Q_D(const TotalsMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c timerTime field's current value.
+ *
+ * \return the \c timerTime field value.
+ */
 quint32 TotalsMessage::timerTime() const
 {
     Q_D(const TotalsMessage);
     return d->timerTime;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c distance field's current value.
+ *
+ * \return the \c distance field value.
+ */
 quint32 TotalsMessage::distance() const
 {
     Q_D(const TotalsMessage);
     return d->distance;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c calories field's current value.
+ *
+ * \return the \c calories field value.
+ */
 quint32 TotalsMessage::calories() const
 {
     Q_D(const TotalsMessage);
     return d->calories;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c sport field's current value.
+ *
+ * \return the \c sport field value.
+ */
 Sport TotalsMessage::sport() const
 {
     Q_D(const TotalsMessage);
     return d->sport;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c elapsedTime field's current value.
+ *
+ * \return the \c elapsedTime field value.
+ */
 quint32 TotalsMessage::elapsedTime() const
 {
     Q_D(const TotalsMessage);
     return d->elapsedTime;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c sessions field's current value.
+ *
+ * \return the \c sessions field value.
+ */
 quint16 TotalsMessage::sessions() const
 {
     Q_D(const TotalsMessage);
     return d->sessions;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c activeTime field's current value.
+ *
+ * \return the \c activeTime field value.
+ */
 quint32 TotalsMessage::activeTime() const
 {
     Q_D(const TotalsMessage);
     return d->activeTime;
 }
 
+/*!
+ * Returns the TotalsMessage data message's \c sportIndex field's current value.
+ *
+ * \return the \c sportIndex field value.
+ */
 quint8 TotalsMessage::sportIndex() const
 {
     Q_D(const TotalsMessage);
     return d->sportIndex;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void TotalsMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(TotalsMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void TotalsMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(TotalsMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timerTime field to \a timerTime.
+ *
+ * \param timerTime The field value to set.
+ */
 void TotalsMessage::setTimerTime(const quint32 timerTime)
 {
     Q_D(TotalsMessage);
     d->timerTime = timerTime;
 }
+/*!
+ * Sets the \c distance field to \a distance.
+ *
+ * \param distance The field value to set.
+ */
 void TotalsMessage::setDistance(const quint32 distance)
 {
     Q_D(TotalsMessage);
     d->distance = distance;
 }
+/*!
+ * Sets the \c calories field to \a calories.
+ *
+ * \param calories The field value to set.
+ */
 void TotalsMessage::setCalories(const quint32 calories)
 {
     Q_D(TotalsMessage);
     d->calories = calories;
 }
+/*!
+ * Sets the \c sport field to \a sport.
+ *
+ * \param sport The field value to set.
+ */
 void TotalsMessage::setSport(const Sport sport)
 {
     Q_D(TotalsMessage);
     d->sport = sport;
 }
+/*!
+ * Sets the \c elapsedTime field to \a elapsedTime.
+ *
+ * \param elapsedTime The field value to set.
+ */
 void TotalsMessage::setElapsedTime(const quint32 elapsedTime)
 {
     Q_D(TotalsMessage);
     d->elapsedTime = elapsedTime;
 }
+/*!
+ * Sets the \c sessions field to \a sessions.
+ *
+ * \param sessions The field value to set.
+ */
 void TotalsMessage::setSessions(const quint16 sessions)
 {
     Q_D(TotalsMessage);
     d->sessions = sessions;
 }
+/*!
+ * Sets the \c activeTime field to \a activeTime.
+ *
+ * \param activeTime The field value to set.
+ */
 void TotalsMessage::setActiveTime(const quint32 activeTime)
 {
     Q_D(TotalsMessage);
     d->activeTime = activeTime;
 }
+/*!
+ * Sets the \c sportIndex field to \a sportIndex.
+ *
+ * \param sportIndex The field value to set.
+ */
 void TotalsMessage::setSportIndex(const quint8 sportIndex)
 {
     Q_D(TotalsMessage);
     d->sportIndex = sportIndex;
 }
 
+/*!
+ * \internal
+ *
+ * \class TotalsMessagePrivate
+ *
+ * The TotalsMessagePrivate class provides private implementation for the TotalsMessage.
+ *
+ * \sa TotalsMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a TotalsMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 TotalsMessagePrivate::TotalsMessagePrivate(TotalsMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -162,6 +293,11 @@ TotalsMessagePrivate::TotalsMessagePrivate(TotalsMessage * const q)
     globalMessageNumber = MesgNum::Totals;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the TotalsMessagePrivate object.
+ */
 TotalsMessagePrivate::~TotalsMessagePrivate()
 {
 

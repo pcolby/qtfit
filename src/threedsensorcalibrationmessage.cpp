@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ThreeDSensorCalibrationMessage
+ *
+ * The ThreeDSensorCalibrationMessage class represents a FIT ThreeDSensorCalibrationMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ThreeDSensorCalibrationMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : FitDataMessage(new ThreeDSensorCalibrationMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ThreeDSensorCalibrationMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime ThreeDSensorCalibrationMessage::timestamp() const
 {
     Q_D(const ThreeDSensorCalibrationMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the ThreeDSensorCalibrationMessage data message's \c sensorType field's current value.
+ *
+ * \return the \c sensorType field value.
+ */
 SensorType ThreeDSensorCalibrationMessage::sensorType() const
 {
     Q_D(const ThreeDSensorCalibrationMessage);
     return d->sensorType;
 }
 
+/*!
+ * Returns the ThreeDSensorCalibrationMessage data message's \c calibrationFactor field's current value.
+ *
+ * \return the \c calibrationFactor field value.
+ */
 quint32 ThreeDSensorCalibrationMessage::calibrationFactor() const
 {
     Q_D(const ThreeDSensorCalibrationMessage);
     return d->calibrationFactor;
 }
 
+/*!
+ * Returns the ThreeDSensorCalibrationMessage data message's \c calibrationDivisor field's current value.
+ *
+ * \return the \c calibrationDivisor field value.
+ */
 quint32 ThreeDSensorCalibrationMessage::calibrationDivisor() const
 {
     Q_D(const ThreeDSensorCalibrationMessage);
     return d->calibrationDivisor;
 }
 
+/*!
+ * Returns the ThreeDSensorCalibrationMessage data message's \c levelShift field's current value.
+ *
+ * \return the \c levelShift field value.
+ */
 quint32 ThreeDSensorCalibrationMessage::levelShift() const
 {
     Q_D(const ThreeDSensorCalibrationMessage);
     return d->levelShift;
 }
 
+/*!
+ * Returns the ThreeDSensorCalibrationMessage data message's \c offsetCal field's current value.
+ *
+ * \return the \c offsetCal field value.
+ */
 qint32 ThreeDSensorCalibrationMessage::offsetCal() const
 {
     Q_D(const ThreeDSensorCalibrationMessage);
     return d->offsetCal;
 }
 
+/*!
+ * Returns the ThreeDSensorCalibrationMessage data message's \c orientationMatrix field's current value.
+ *
+ * \return the \c orientationMatrix field value.
+ */
 qint32 ThreeDSensorCalibrationMessage::orientationMatrix() const
 {
     Q_D(const ThreeDSensorCalibrationMessage);
     return d->orientationMatrix;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void ThreeDSensorCalibrationMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(ThreeDSensorCalibrationMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c sensorType field to \a sensorType.
+ *
+ * \param sensorType The field value to set.
+ */
 void ThreeDSensorCalibrationMessage::setSensorType(const SensorType sensorType)
 {
     Q_D(ThreeDSensorCalibrationMessage);
     d->sensorType = sensorType;
 }
+/*!
+ * Sets the \c calibrationFactor field to \a calibrationFactor.
+ *
+ * \param calibrationFactor The field value to set.
+ */
 void ThreeDSensorCalibrationMessage::setCalibrationFactor(const quint32 calibrationFactor)
 {
     Q_D(ThreeDSensorCalibrationMessage);
     d->calibrationFactor = calibrationFactor;
 }
+/*!
+ * Sets the \c calibrationDivisor field to \a calibrationDivisor.
+ *
+ * \param calibrationDivisor The field value to set.
+ */
 void ThreeDSensorCalibrationMessage::setCalibrationDivisor(const quint32 calibrationDivisor)
 {
     Q_D(ThreeDSensorCalibrationMessage);
     d->calibrationDivisor = calibrationDivisor;
 }
+/*!
+ * Sets the \c levelShift field to \a levelShift.
+ *
+ * \param levelShift The field value to set.
+ */
 void ThreeDSensorCalibrationMessage::setLevelShift(const quint32 levelShift)
 {
     Q_D(ThreeDSensorCalibrationMessage);
     d->levelShift = levelShift;
 }
+/*!
+ * Sets the \c offsetCal field to \a offsetCal.
+ *
+ * \param offsetCal The field value to set.
+ */
 void ThreeDSensorCalibrationMessage::setOffsetCal(const qint32 offsetCal)
 {
     Q_D(ThreeDSensorCalibrationMessage);
     d->offsetCal = offsetCal;
 }
+/*!
+ * Sets the \c orientationMatrix field to \a orientationMatrix.
+ *
+ * \param orientationMatrix The field value to set.
+ */
 void ThreeDSensorCalibrationMessage::setOrientationMatrix(const qint32 orientationMatrix)
 {
     Q_D(ThreeDSensorCalibrationMessage);
     d->orientationMatrix = orientationMatrix;
 }
 
+/*!
+ * \internal
+ *
+ * \class ThreeDSensorCalibrationMessagePrivate
+ *
+ * The ThreeDSensorCalibrationMessagePrivate class provides private implementation for the ThreeDSensorCalibrationMessage.
+ *
+ * \sa ThreeDSensorCalibrationMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ThreeDSensorCalibrationMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ThreeDSensorCalibrationMessagePrivate::ThreeDSensorCalibrationMessagePrivate(ThreeDSensorCalibrationMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -126,6 +227,11 @@ ThreeDSensorCalibrationMessagePrivate::ThreeDSensorCalibrationMessagePrivate(Thr
     globalMessageNumber = MesgNum::ThreeDSensorCalibration;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ThreeDSensorCalibrationMessagePrivate object.
+ */
 ThreeDSensorCalibrationMessagePrivate::~ThreeDSensorCalibrationMessagePrivate()
 {
 

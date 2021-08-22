@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class WatchfaceSettingsMessage
+ *
+ * The WatchfaceSettingsMessage class represents a FIT WatchfaceSettingsMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid WatchfaceSettingsMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 WatchfaceSettingsMessage::WatchfaceSettingsMessage() : FitDataMessage(new WatchfaceSettingsMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the WatchfaceSettingsMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex WatchfaceSettingsMessage::messageIndex() const
 {
     Q_D(const WatchfaceSettingsMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the WatchfaceSettingsMessage data message's \c mode field's current value.
+ *
+ * \return the \c mode field value.
+ */
 WatchfaceMode WatchfaceSettingsMessage::mode() const
 {
     Q_D(const WatchfaceSettingsMessage);
     return d->mode;
 }
 
+/*!
+ * Returns the WatchfaceSettingsMessage data message's \c layout field's current value.
+ *
+ * \return the \c layout field value.
+ */
 quint8 WatchfaceSettingsMessage::layout() const
 {
     Q_D(const WatchfaceSettingsMessage);
     return d->layout;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void WatchfaceSettingsMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(WatchfaceSettingsMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c mode field to \a mode.
+ *
+ * \param mode The field value to set.
+ */
 void WatchfaceSettingsMessage::setMode(const WatchfaceMode mode)
 {
     Q_D(WatchfaceSettingsMessage);
     d->mode = mode;
 }
+/*!
+ * Sets the \c layout field to \a layout.
+ *
+ * \param layout The field value to set.
+ */
 void WatchfaceSettingsMessage::setLayout(const quint8 layout)
 {
     Q_D(WatchfaceSettingsMessage);
     d->layout = layout;
 }
 
+/*!
+ * \internal
+ *
+ * \class WatchfaceSettingsMessagePrivate
+ *
+ * The WatchfaceSettingsMessagePrivate class provides private implementation for the WatchfaceSettingsMessage.
+ *
+ * \sa WatchfaceSettingsMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a WatchfaceSettingsMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 WatchfaceSettingsMessagePrivate::WatchfaceSettingsMessagePrivate(WatchfaceSettingsMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -78,6 +139,11 @@ WatchfaceSettingsMessagePrivate::WatchfaceSettingsMessagePrivate(WatchfaceSettin
     globalMessageNumber = MesgNum::WatchfaceSettings;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the WatchfaceSettingsMessagePrivate object.
+ */
 WatchfaceSettingsMessagePrivate::~WatchfaceSettingsMessagePrivate()
 {
 

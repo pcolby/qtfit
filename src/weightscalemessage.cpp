@@ -30,155 +30,316 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class WeightScaleMessage
+ *
+ * The WeightScaleMessage class represents a FIT WeightScaleMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid WeightScaleMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 WeightScaleMessage::WeightScaleMessage() : FitDataMessage(new WeightScaleMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime WeightScaleMessage::timestamp() const
 {
     Q_D(const WeightScaleMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c weight field's current value.
+ *
+ * \return the \c weight field value.
+ */
 Weight WeightScaleMessage::weight() const
 {
     Q_D(const WeightScaleMessage);
     return d->weight;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c percentFat field's current value.
+ *
+ * \return the \c percentFat field value.
+ */
 quint16 WeightScaleMessage::percentFat() const
 {
     Q_D(const WeightScaleMessage);
     return d->percentFat;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c percentHydration field's current value.
+ *
+ * \return the \c percentHydration field value.
+ */
 quint16 WeightScaleMessage::percentHydration() const
 {
     Q_D(const WeightScaleMessage);
     return d->percentHydration;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c visceralFatMass field's current value.
+ *
+ * \return the \c visceralFatMass field value.
+ */
 quint16 WeightScaleMessage::visceralFatMass() const
 {
     Q_D(const WeightScaleMessage);
     return d->visceralFatMass;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c boneMass field's current value.
+ *
+ * \return the \c boneMass field value.
+ */
 quint16 WeightScaleMessage::boneMass() const
 {
     Q_D(const WeightScaleMessage);
     return d->boneMass;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c muscleMass field's current value.
+ *
+ * \return the \c muscleMass field value.
+ */
 quint16 WeightScaleMessage::muscleMass() const
 {
     Q_D(const WeightScaleMessage);
     return d->muscleMass;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c basalMet field's current value.
+ *
+ * \return the \c basalMet field value.
+ */
 quint16 WeightScaleMessage::basalMet() const
 {
     Q_D(const WeightScaleMessage);
     return d->basalMet;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c physiqueRating field's current value.
+ *
+ * \return the \c physiqueRating field value.
+ */
 quint8 WeightScaleMessage::physiqueRating() const
 {
     Q_D(const WeightScaleMessage);
     return d->physiqueRating;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c activeMet field's current value.
+ *
+ * \return the \c activeMet field value.
+ */
 quint16 WeightScaleMessage::activeMet() const
 {
     Q_D(const WeightScaleMessage);
     return d->activeMet;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c metabolicAge field's current value.
+ *
+ * \return the \c metabolicAge field value.
+ */
 quint8 WeightScaleMessage::metabolicAge() const
 {
     Q_D(const WeightScaleMessage);
     return d->metabolicAge;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c visceralFatRating field's current value.
+ *
+ * \return the \c visceralFatRating field value.
+ */
 quint8 WeightScaleMessage::visceralFatRating() const
 {
     Q_D(const WeightScaleMessage);
     return d->visceralFatRating;
 }
 
+/*!
+ * Returns the WeightScaleMessage data message's \c userProfileIndex field's current value.
+ *
+ * \return the \c userProfileIndex field value.
+ */
 MessageIndex WeightScaleMessage::userProfileIndex() const
 {
     Q_D(const WeightScaleMessage);
     return d->userProfileIndex;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void WeightScaleMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(WeightScaleMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c weight field to \a weight.
+ *
+ * \param weight The field value to set.
+ */
 void WeightScaleMessage::setWeight(const Weight weight)
 {
     Q_D(WeightScaleMessage);
     d->weight = weight;
 }
+/*!
+ * Sets the \c percentFat field to \a percentFat.
+ *
+ * \param percentFat The field value to set.
+ */
 void WeightScaleMessage::setPercentFat(const quint16 percentFat)
 {
     Q_D(WeightScaleMessage);
     d->percentFat = percentFat;
 }
+/*!
+ * Sets the \c percentHydration field to \a percentHydration.
+ *
+ * \param percentHydration The field value to set.
+ */
 void WeightScaleMessage::setPercentHydration(const quint16 percentHydration)
 {
     Q_D(WeightScaleMessage);
     d->percentHydration = percentHydration;
 }
+/*!
+ * Sets the \c visceralFatMass field to \a visceralFatMass.
+ *
+ * \param visceralFatMass The field value to set.
+ */
 void WeightScaleMessage::setVisceralFatMass(const quint16 visceralFatMass)
 {
     Q_D(WeightScaleMessage);
     d->visceralFatMass = visceralFatMass;
 }
+/*!
+ * Sets the \c boneMass field to \a boneMass.
+ *
+ * \param boneMass The field value to set.
+ */
 void WeightScaleMessage::setBoneMass(const quint16 boneMass)
 {
     Q_D(WeightScaleMessage);
     d->boneMass = boneMass;
 }
+/*!
+ * Sets the \c muscleMass field to \a muscleMass.
+ *
+ * \param muscleMass The field value to set.
+ */
 void WeightScaleMessage::setMuscleMass(const quint16 muscleMass)
 {
     Q_D(WeightScaleMessage);
     d->muscleMass = muscleMass;
 }
+/*!
+ * Sets the \c basalMet field to \a basalMet.
+ *
+ * \param basalMet The field value to set.
+ */
 void WeightScaleMessage::setBasalMet(const quint16 basalMet)
 {
     Q_D(WeightScaleMessage);
     d->basalMet = basalMet;
 }
+/*!
+ * Sets the \c physiqueRating field to \a physiqueRating.
+ *
+ * \param physiqueRating The field value to set.
+ */
 void WeightScaleMessage::setPhysiqueRating(const quint8 physiqueRating)
 {
     Q_D(WeightScaleMessage);
     d->physiqueRating = physiqueRating;
 }
+/*!
+ * Sets the \c activeMet field to \a activeMet.
+ *
+ * \param activeMet The field value to set.
+ */
 void WeightScaleMessage::setActiveMet(const quint16 activeMet)
 {
     Q_D(WeightScaleMessage);
     d->activeMet = activeMet;
 }
+/*!
+ * Sets the \c metabolicAge field to \a metabolicAge.
+ *
+ * \param metabolicAge The field value to set.
+ */
 void WeightScaleMessage::setMetabolicAge(const quint8 metabolicAge)
 {
     Q_D(WeightScaleMessage);
     d->metabolicAge = metabolicAge;
 }
+/*!
+ * Sets the \c visceralFatRating field to \a visceralFatRating.
+ *
+ * \param visceralFatRating The field value to set.
+ */
 void WeightScaleMessage::setVisceralFatRating(const quint8 visceralFatRating)
 {
     Q_D(WeightScaleMessage);
     d->visceralFatRating = visceralFatRating;
 }
+/*!
+ * Sets the \c userProfileIndex field to \a userProfileIndex.
+ *
+ * \param userProfileIndex The field value to set.
+ */
 void WeightScaleMessage::setUserProfileIndex(const MessageIndex userProfileIndex)
 {
     Q_D(WeightScaleMessage);
     d->userProfileIndex = userProfileIndex;
 }
 
+/*!
+ * \internal
+ *
+ * \class WeightScaleMessagePrivate
+ *
+ * The WeightScaleMessagePrivate class provides private implementation for the WeightScaleMessage.
+ *
+ * \sa WeightScaleMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a WeightScaleMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 WeightScaleMessagePrivate::WeightScaleMessagePrivate(WeightScaleMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -198,6 +359,11 @@ WeightScaleMessagePrivate::WeightScaleMessagePrivate(WeightScaleMessage * const 
     globalMessageNumber = MesgNum::WeightScale;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the WeightScaleMessagePrivate object.
+ */
 WeightScaleMessagePrivate::~WeightScaleMessagePrivate()
 {
 

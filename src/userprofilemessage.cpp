@@ -30,331 +30,652 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class UserProfileMessage
+ *
+ * The UserProfileMessage class represents a FIT UserProfileMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid UserProfileMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 UserProfileMessage::UserProfileMessage() : FitDataMessage(new UserProfileMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex UserProfileMessage::messageIndex() const
 {
     Q_D(const UserProfileMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c friendlyName field's current value.
+ *
+ * \return the \c friendlyName field value.
+ */
 QString UserProfileMessage::friendlyName() const
 {
     Q_D(const UserProfileMessage);
     return d->friendlyName;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c gender field's current value.
+ *
+ * \return the \c gender field value.
+ */
 Gender UserProfileMessage::gender() const
 {
     Q_D(const UserProfileMessage);
     return d->gender;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c age field's current value.
+ *
+ * \return the \c age field value.
+ */
 quint8 UserProfileMessage::age() const
 {
     Q_D(const UserProfileMessage);
     return d->age;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c height field's current value.
+ *
+ * \return the \c height field value.
+ */
 quint8 UserProfileMessage::height() const
 {
     Q_D(const UserProfileMessage);
     return d->height;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c weight field's current value.
+ *
+ * \return the \c weight field value.
+ */
 quint16 UserProfileMessage::weight() const
 {
     Q_D(const UserProfileMessage);
     return d->weight;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c language field's current value.
+ *
+ * \return the \c language field value.
+ */
 Language UserProfileMessage::language() const
 {
     Q_D(const UserProfileMessage);
     return d->language;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c elevSetting field's current value.
+ *
+ * \return the \c elevSetting field value.
+ */
 DisplayMeasure UserProfileMessage::elevSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->elevSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c weightSetting field's current value.
+ *
+ * \return the \c weightSetting field value.
+ */
 DisplayMeasure UserProfileMessage::weightSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->weightSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c restingHeartRate field's current value.
+ *
+ * \return the \c restingHeartRate field value.
+ */
 quint8 UserProfileMessage::restingHeartRate() const
 {
     Q_D(const UserProfileMessage);
     return d->restingHeartRate;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c defaultMaxRunningHeartRate field's current value.
+ *
+ * \return the \c defaultMaxRunningHeartRate field value.
+ */
 quint8 UserProfileMessage::defaultMaxRunningHeartRate() const
 {
     Q_D(const UserProfileMessage);
     return d->defaultMaxRunningHeartRate;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c defaultMaxBikingHeartRate field's current value.
+ *
+ * \return the \c defaultMaxBikingHeartRate field value.
+ */
 quint8 UserProfileMessage::defaultMaxBikingHeartRate() const
 {
     Q_D(const UserProfileMessage);
     return d->defaultMaxBikingHeartRate;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c defaultMaxHeartRate field's current value.
+ *
+ * \return the \c defaultMaxHeartRate field value.
+ */
 quint8 UserProfileMessage::defaultMaxHeartRate() const
 {
     Q_D(const UserProfileMessage);
     return d->defaultMaxHeartRate;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c hrSetting field's current value.
+ *
+ * \return the \c hrSetting field value.
+ */
 DisplayHeart UserProfileMessage::hrSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->hrSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c speedSetting field's current value.
+ *
+ * \return the \c speedSetting field value.
+ */
 DisplayMeasure UserProfileMessage::speedSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->speedSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c distSetting field's current value.
+ *
+ * \return the \c distSetting field value.
+ */
 DisplayMeasure UserProfileMessage::distSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->distSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c powerSetting field's current value.
+ *
+ * \return the \c powerSetting field value.
+ */
 DisplayPower UserProfileMessage::powerSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->powerSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c activityClass field's current value.
+ *
+ * \return the \c activityClass field value.
+ */
 ActivityClass UserProfileMessage::activityClass() const
 {
     Q_D(const UserProfileMessage);
     return d->activityClass;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c positionSetting field's current value.
+ *
+ * \return the \c positionSetting field value.
+ */
 DisplayPosition UserProfileMessage::positionSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->positionSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c temperatureSetting field's current value.
+ *
+ * \return the \c temperatureSetting field value.
+ */
 DisplayMeasure UserProfileMessage::temperatureSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->temperatureSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c localId field's current value.
+ *
+ * \return the \c localId field value.
+ */
 UserLocalId UserProfileMessage::localId() const
 {
     Q_D(const UserProfileMessage);
     return d->localId;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c globalId field's current value.
+ *
+ * \return the \c globalId field value.
+ */
 quint8 UserProfileMessage::globalId() const
 {
     Q_D(const UserProfileMessage);
     return d->globalId;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c wakeTime field's current value.
+ *
+ * \return the \c wakeTime field value.
+ */
 LocaltimeIntoDay UserProfileMessage::wakeTime() const
 {
     Q_D(const UserProfileMessage);
     return d->wakeTime;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c sleepTime field's current value.
+ *
+ * \return the \c sleepTime field value.
+ */
 LocaltimeIntoDay UserProfileMessage::sleepTime() const
 {
     Q_D(const UserProfileMessage);
     return d->sleepTime;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c heightSetting field's current value.
+ *
+ * \return the \c heightSetting field value.
+ */
 DisplayMeasure UserProfileMessage::heightSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->heightSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c userRunningStepLength field's current value.
+ *
+ * \return the \c userRunningStepLength field value.
+ */
 quint16 UserProfileMessage::userRunningStepLength() const
 {
     Q_D(const UserProfileMessage);
     return d->userRunningStepLength;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c userWalkingStepLength field's current value.
+ *
+ * \return the \c userWalkingStepLength field value.
+ */
 quint16 UserProfileMessage::userWalkingStepLength() const
 {
     Q_D(const UserProfileMessage);
     return d->userWalkingStepLength;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c depthSetting field's current value.
+ *
+ * \return the \c depthSetting field value.
+ */
 DisplayMeasure UserProfileMessage::depthSetting() const
 {
     Q_D(const UserProfileMessage);
     return d->depthSetting;
 }
 
+/*!
+ * Returns the UserProfileMessage data message's \c diveCount field's current value.
+ *
+ * \return the \c diveCount field value.
+ */
 quint32 UserProfileMessage::diveCount() const
 {
     Q_D(const UserProfileMessage);
     return d->diveCount;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void UserProfileMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(UserProfileMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c friendlyName field to \a friendlyName.
+ *
+ * \param friendlyName The field value to set.
+ */
 void UserProfileMessage::setFriendlyName(const QString friendlyName)
 {
     Q_D(UserProfileMessage);
     d->friendlyName = friendlyName;
 }
+/*!
+ * Sets the \c gender field to \a gender.
+ *
+ * \param gender The field value to set.
+ */
 void UserProfileMessage::setGender(const Gender gender)
 {
     Q_D(UserProfileMessage);
     d->gender = gender;
 }
+/*!
+ * Sets the \c age field to \a age.
+ *
+ * \param age The field value to set.
+ */
 void UserProfileMessage::setAge(const quint8 age)
 {
     Q_D(UserProfileMessage);
     d->age = age;
 }
+/*!
+ * Sets the \c height field to \a height.
+ *
+ * \param height The field value to set.
+ */
 void UserProfileMessage::setHeight(const quint8 height)
 {
     Q_D(UserProfileMessage);
     d->height = height;
 }
+/*!
+ * Sets the \c weight field to \a weight.
+ *
+ * \param weight The field value to set.
+ */
 void UserProfileMessage::setWeight(const quint16 weight)
 {
     Q_D(UserProfileMessage);
     d->weight = weight;
 }
+/*!
+ * Sets the \c language field to \a language.
+ *
+ * \param language The field value to set.
+ */
 void UserProfileMessage::setLanguage(const Language language)
 {
     Q_D(UserProfileMessage);
     d->language = language;
 }
+/*!
+ * Sets the \c elevSetting field to \a elevSetting.
+ *
+ * \param elevSetting The field value to set.
+ */
 void UserProfileMessage::setElevSetting(const DisplayMeasure elevSetting)
 {
     Q_D(UserProfileMessage);
     d->elevSetting = elevSetting;
 }
+/*!
+ * Sets the \c weightSetting field to \a weightSetting.
+ *
+ * \param weightSetting The field value to set.
+ */
 void UserProfileMessage::setWeightSetting(const DisplayMeasure weightSetting)
 {
     Q_D(UserProfileMessage);
     d->weightSetting = weightSetting;
 }
+/*!
+ * Sets the \c restingHeartRate field to \a restingHeartRate.
+ *
+ * \param restingHeartRate The field value to set.
+ */
 void UserProfileMessage::setRestingHeartRate(const quint8 restingHeartRate)
 {
     Q_D(UserProfileMessage);
     d->restingHeartRate = restingHeartRate;
 }
+/*!
+ * Sets the \c defaultMaxRunningHeartRate field to \a defaultMaxRunningHeartRate.
+ *
+ * \param defaultMaxRunningHeartRate The field value to set.
+ */
 void UserProfileMessage::setDefaultMaxRunningHeartRate(const quint8 defaultMaxRunningHeartRate)
 {
     Q_D(UserProfileMessage);
     d->defaultMaxRunningHeartRate = defaultMaxRunningHeartRate;
 }
+/*!
+ * Sets the \c defaultMaxBikingHeartRate field to \a defaultMaxBikingHeartRate.
+ *
+ * \param defaultMaxBikingHeartRate The field value to set.
+ */
 void UserProfileMessage::setDefaultMaxBikingHeartRate(const quint8 defaultMaxBikingHeartRate)
 {
     Q_D(UserProfileMessage);
     d->defaultMaxBikingHeartRate = defaultMaxBikingHeartRate;
 }
+/*!
+ * Sets the \c defaultMaxHeartRate field to \a defaultMaxHeartRate.
+ *
+ * \param defaultMaxHeartRate The field value to set.
+ */
 void UserProfileMessage::setDefaultMaxHeartRate(const quint8 defaultMaxHeartRate)
 {
     Q_D(UserProfileMessage);
     d->defaultMaxHeartRate = defaultMaxHeartRate;
 }
+/*!
+ * Sets the \c hrSetting field to \a hrSetting.
+ *
+ * \param hrSetting The field value to set.
+ */
 void UserProfileMessage::setHrSetting(const DisplayHeart hrSetting)
 {
     Q_D(UserProfileMessage);
     d->hrSetting = hrSetting;
 }
+/*!
+ * Sets the \c speedSetting field to \a speedSetting.
+ *
+ * \param speedSetting The field value to set.
+ */
 void UserProfileMessage::setSpeedSetting(const DisplayMeasure speedSetting)
 {
     Q_D(UserProfileMessage);
     d->speedSetting = speedSetting;
 }
+/*!
+ * Sets the \c distSetting field to \a distSetting.
+ *
+ * \param distSetting The field value to set.
+ */
 void UserProfileMessage::setDistSetting(const DisplayMeasure distSetting)
 {
     Q_D(UserProfileMessage);
     d->distSetting = distSetting;
 }
+/*!
+ * Sets the \c powerSetting field to \a powerSetting.
+ *
+ * \param powerSetting The field value to set.
+ */
 void UserProfileMessage::setPowerSetting(const DisplayPower powerSetting)
 {
     Q_D(UserProfileMessage);
     d->powerSetting = powerSetting;
 }
+/*!
+ * Sets the \c activityClass field to \a activityClass.
+ *
+ * \param activityClass The field value to set.
+ */
 void UserProfileMessage::setActivityClass(const ActivityClass activityClass)
 {
     Q_D(UserProfileMessage);
     d->activityClass = activityClass;
 }
+/*!
+ * Sets the \c positionSetting field to \a positionSetting.
+ *
+ * \param positionSetting The field value to set.
+ */
 void UserProfileMessage::setPositionSetting(const DisplayPosition positionSetting)
 {
     Q_D(UserProfileMessage);
     d->positionSetting = positionSetting;
 }
+/*!
+ * Sets the \c temperatureSetting field to \a temperatureSetting.
+ *
+ * \param temperatureSetting The field value to set.
+ */
 void UserProfileMessage::setTemperatureSetting(const DisplayMeasure temperatureSetting)
 {
     Q_D(UserProfileMessage);
     d->temperatureSetting = temperatureSetting;
 }
+/*!
+ * Sets the \c localId field to \a localId.
+ *
+ * \param localId The field value to set.
+ */
 void UserProfileMessage::setLocalId(const UserLocalId localId)
 {
     Q_D(UserProfileMessage);
     d->localId = localId;
 }
+/*!
+ * Sets the \c globalId field to \a globalId.
+ *
+ * \param globalId The field value to set.
+ */
 void UserProfileMessage::setGlobalId(const quint8 globalId)
 {
     Q_D(UserProfileMessage);
     d->globalId = globalId;
 }
+/*!
+ * Sets the \c wakeTime field to \a wakeTime.
+ *
+ * \param wakeTime The field value to set.
+ */
 void UserProfileMessage::setWakeTime(const LocaltimeIntoDay wakeTime)
 {
     Q_D(UserProfileMessage);
     d->wakeTime = wakeTime;
 }
+/*!
+ * Sets the \c sleepTime field to \a sleepTime.
+ *
+ * \param sleepTime The field value to set.
+ */
 void UserProfileMessage::setSleepTime(const LocaltimeIntoDay sleepTime)
 {
     Q_D(UserProfileMessage);
     d->sleepTime = sleepTime;
 }
+/*!
+ * Sets the \c heightSetting field to \a heightSetting.
+ *
+ * \param heightSetting The field value to set.
+ */
 void UserProfileMessage::setHeightSetting(const DisplayMeasure heightSetting)
 {
     Q_D(UserProfileMessage);
     d->heightSetting = heightSetting;
 }
+/*!
+ * Sets the \c userRunningStepLength field to \a userRunningStepLength.
+ *
+ * \param userRunningStepLength The field value to set.
+ */
 void UserProfileMessage::setUserRunningStepLength(const quint16 userRunningStepLength)
 {
     Q_D(UserProfileMessage);
     d->userRunningStepLength = userRunningStepLength;
 }
+/*!
+ * Sets the \c userWalkingStepLength field to \a userWalkingStepLength.
+ *
+ * \param userWalkingStepLength The field value to set.
+ */
 void UserProfileMessage::setUserWalkingStepLength(const quint16 userWalkingStepLength)
 {
     Q_D(UserProfileMessage);
     d->userWalkingStepLength = userWalkingStepLength;
 }
+/*!
+ * Sets the \c depthSetting field to \a depthSetting.
+ *
+ * \param depthSetting The field value to set.
+ */
 void UserProfileMessage::setDepthSetting(const DisplayMeasure depthSetting)
 {
     Q_D(UserProfileMessage);
     d->depthSetting = depthSetting;
 }
+/*!
+ * Sets the \c diveCount field to \a diveCount.
+ *
+ * \param diveCount The field value to set.
+ */
 void UserProfileMessage::setDiveCount(const quint32 diveCount)
 {
     Q_D(UserProfileMessage);
     d->diveCount = diveCount;
 }
 
+/*!
+ * \internal
+ *
+ * \class UserProfileMessagePrivate
+ *
+ * The UserProfileMessagePrivate class provides private implementation for the UserProfileMessage.
+ *
+ * \sa UserProfileMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a UserProfileMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 UserProfileMessagePrivate::UserProfileMessagePrivate(UserProfileMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -389,6 +710,11 @@ UserProfileMessagePrivate::UserProfileMessagePrivate(UserProfileMessage * const 
     globalMessageNumber = MesgNum::UserProfile;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the UserProfileMessagePrivate object.
+ */
 UserProfileMessagePrivate::~UserProfileMessagePrivate()
 {
 

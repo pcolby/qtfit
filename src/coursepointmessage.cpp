@@ -30,100 +30,211 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class CoursePointMessage
+ *
+ * The CoursePointMessage class represents a FIT CoursePointMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid CoursePointMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 CoursePointMessage::CoursePointMessage() : FitDataMessage(new CoursePointMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex CoursePointMessage::messageIndex() const
 {
     Q_D(const CoursePointMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime CoursePointMessage::timestamp() const
 {
     Q_D(const CoursePointMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c positionLat field's current value.
+ *
+ * \return the \c positionLat field value.
+ */
 qint32 CoursePointMessage::positionLat() const
 {
     Q_D(const CoursePointMessage);
     return d->positionLat;
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c positionLong field's current value.
+ *
+ * \return the \c positionLong field value.
+ */
 qint32 CoursePointMessage::positionLong() const
 {
     Q_D(const CoursePointMessage);
     return d->positionLong;
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c distance field's current value.
+ *
+ * \return the \c distance field value.
+ */
 quint32 CoursePointMessage::distance() const
 {
     Q_D(const CoursePointMessage);
     return d->distance;
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 CoursePoint CoursePointMessage::type() const
 {
     Q_D(const CoursePointMessage);
     return d->type;
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString CoursePointMessage::name() const
 {
     Q_D(const CoursePointMessage);
     return d->name;
 }
 
+/*!
+ * Returns the CoursePointMessage data message's \c favorite field's current value.
+ *
+ * \return the \c favorite field value.
+ */
 bool CoursePointMessage::favorite() const
 {
     Q_D(const CoursePointMessage);
     return d->favorite;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void CoursePointMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(CoursePointMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void CoursePointMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(CoursePointMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c positionLat field to \a positionLat.
+ *
+ * \param positionLat The field value to set.
+ */
 void CoursePointMessage::setPositionLat(const qint32 positionLat)
 {
     Q_D(CoursePointMessage);
     d->positionLat = positionLat;
 }
+/*!
+ * Sets the \c positionLong field to \a positionLong.
+ *
+ * \param positionLong The field value to set.
+ */
 void CoursePointMessage::setPositionLong(const qint32 positionLong)
 {
     Q_D(CoursePointMessage);
     d->positionLong = positionLong;
 }
+/*!
+ * Sets the \c distance field to \a distance.
+ *
+ * \param distance The field value to set.
+ */
 void CoursePointMessage::setDistance(const quint32 distance)
 {
     Q_D(CoursePointMessage);
     d->distance = distance;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void CoursePointMessage::setType(const CoursePoint type)
 {
     Q_D(CoursePointMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void CoursePointMessage::setName(const QString name)
 {
     Q_D(CoursePointMessage);
     d->name = name;
 }
+/*!
+ * Sets the \c favorite field to \a favorite.
+ *
+ * \param favorite The field value to set.
+ */
 void CoursePointMessage::setFavorite(const bool favorite)
 {
     Q_D(CoursePointMessage);
     d->favorite = favorite;
 }
 
+/*!
+ * \internal
+ *
+ * \class CoursePointMessagePrivate
+ *
+ * The CoursePointMessagePrivate class provides private implementation for the CoursePointMessage.
+ *
+ * \sa CoursePointMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a CoursePointMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 CoursePointMessagePrivate::CoursePointMessagePrivate(CoursePointMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -137,6 +248,11 @@ CoursePointMessagePrivate::CoursePointMessagePrivate(CoursePointMessage * const 
     globalMessageNumber = MesgNum::CoursePoint;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the CoursePointMessagePrivate object.
+ */
 CoursePointMessagePrivate::~CoursePointMessagePrivate()
 {
 

@@ -30,67 +30,148 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class AntChannelIdMessage
+ *
+ * The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid AntChannelIdMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 AntChannelIdMessage::AntChannelIdMessage() : FitDataMessage(new AntChannelIdMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the AntChannelIdMessage data message's \c channelNumber field's current value.
+ *
+ * \return the \c channelNumber field value.
+ */
 quint8 AntChannelIdMessage::channelNumber() const
 {
     Q_D(const AntChannelIdMessage);
     return d->channelNumber;
 }
 
+/*!
+ * Returns the AntChannelIdMessage data message's \c deviceType field's current value.
+ *
+ * \return the \c deviceType field value.
+ */
 quint8z AntChannelIdMessage::deviceType() const
 {
     Q_D(const AntChannelIdMessage);
     return d->deviceType;
 }
 
+/*!
+ * Returns the AntChannelIdMessage data message's \c deviceNumber field's current value.
+ *
+ * \return the \c deviceNumber field value.
+ */
 quint16z AntChannelIdMessage::deviceNumber() const
 {
     Q_D(const AntChannelIdMessage);
     return d->deviceNumber;
 }
 
+/*!
+ * Returns the AntChannelIdMessage data message's \c transmissionType field's current value.
+ *
+ * \return the \c transmissionType field value.
+ */
 quint8z AntChannelIdMessage::transmissionType() const
 {
     Q_D(const AntChannelIdMessage);
     return d->transmissionType;
 }
 
+/*!
+ * Returns the AntChannelIdMessage data message's \c deviceIndex field's current value.
+ *
+ * \return the \c deviceIndex field value.
+ */
 DeviceIndex AntChannelIdMessage::deviceIndex() const
 {
     Q_D(const AntChannelIdMessage);
     return d->deviceIndex;
 }
 
+/*!
+ * Sets the \c channelNumber field to \a channelNumber.
+ *
+ * \param channelNumber The field value to set.
+ */
 void AntChannelIdMessage::setChannelNumber(const quint8 channelNumber)
 {
     Q_D(AntChannelIdMessage);
     d->channelNumber = channelNumber;
 }
+/*!
+ * Sets the \c deviceType field to \a deviceType.
+ *
+ * \param deviceType The field value to set.
+ */
 void AntChannelIdMessage::setDeviceType(const quint8z deviceType)
 {
     Q_D(AntChannelIdMessage);
     d->deviceType = deviceType;
 }
+/*!
+ * Sets the \c deviceNumber field to \a deviceNumber.
+ *
+ * \param deviceNumber The field value to set.
+ */
 void AntChannelIdMessage::setDeviceNumber(const quint16z deviceNumber)
 {
     Q_D(AntChannelIdMessage);
     d->deviceNumber = deviceNumber;
 }
+/*!
+ * Sets the \c transmissionType field to \a transmissionType.
+ *
+ * \param transmissionType The field value to set.
+ */
 void AntChannelIdMessage::setTransmissionType(const quint8z transmissionType)
 {
     Q_D(AntChannelIdMessage);
     d->transmissionType = transmissionType;
 }
+/*!
+ * Sets the \c deviceIndex field to \a deviceIndex.
+ *
+ * \param deviceIndex The field value to set.
+ */
 void AntChannelIdMessage::setDeviceIndex(const DeviceIndex deviceIndex)
 {
     Q_D(AntChannelIdMessage);
     d->deviceIndex = deviceIndex;
 }
 
+/*!
+ * \internal
+ *
+ * \class AntChannelIdMessagePrivate
+ *
+ * The AntChannelIdMessagePrivate class provides private implementation for the AntChannelIdMessage.
+ *
+ * \sa AntChannelIdMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a AntChannelIdMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 AntChannelIdMessagePrivate::AntChannelIdMessagePrivate(AntChannelIdMessage * const q)
   : FitDataMessagePrivate(q)
   , channelNumber(0xFF)
@@ -102,6 +183,11 @@ AntChannelIdMessagePrivate::AntChannelIdMessagePrivate(AntChannelIdMessage * con
     globalMessageNumber = MesgNum::AntChannelId;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the AntChannelIdMessagePrivate object.
+ */
 AntChannelIdMessagePrivate::~AntChannelIdMessagePrivate()
 {
 

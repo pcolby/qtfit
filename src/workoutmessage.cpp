@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class WorkoutMessage
+ *
+ * The WorkoutMessage class represents a FIT WorkoutMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid WorkoutMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 WorkoutMessage::WorkoutMessage() : FitDataMessage(new WorkoutMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the WorkoutMessage data message's \c sport field's current value.
+ *
+ * \return the \c sport field value.
+ */
 Sport WorkoutMessage::sport() const
 {
     Q_D(const WorkoutMessage);
     return d->sport;
 }
 
+/*!
+ * Returns the WorkoutMessage data message's \c capabilities field's current value.
+ *
+ * \return the \c capabilities field value.
+ */
 WorkoutCapabilities WorkoutMessage::capabilities() const
 {
     Q_D(const WorkoutMessage);
     return d->capabilities;
 }
 
+/*!
+ * Returns the WorkoutMessage data message's \c numValidSteps field's current value.
+ *
+ * \return the \c numValidSteps field value.
+ */
 quint16 WorkoutMessage::numValidSteps() const
 {
     Q_D(const WorkoutMessage);
     return d->numValidSteps;
 }
 
+/*!
+ * Returns the WorkoutMessage data message's \c wktName field's current value.
+ *
+ * \return the \c wktName field value.
+ */
 QString WorkoutMessage::wktName() const
 {
     Q_D(const WorkoutMessage);
     return d->wktName;
 }
 
+/*!
+ * Returns the WorkoutMessage data message's \c subSport field's current value.
+ *
+ * \return the \c subSport field value.
+ */
 SubSport WorkoutMessage::subSport() const
 {
     Q_D(const WorkoutMessage);
     return d->subSport;
 }
 
+/*!
+ * Returns the WorkoutMessage data message's \c poolLength field's current value.
+ *
+ * \return the \c poolLength field value.
+ */
 quint16 WorkoutMessage::poolLength() const
 {
     Q_D(const WorkoutMessage);
     return d->poolLength;
 }
 
+/*!
+ * Returns the WorkoutMessage data message's \c poolLengthUnit field's current value.
+ *
+ * \return the \c poolLengthUnit field value.
+ */
 DisplayMeasure WorkoutMessage::poolLengthUnit() const
 {
     Q_D(const WorkoutMessage);
     return d->poolLengthUnit;
 }
 
+/*!
+ * Sets the \c sport field to \a sport.
+ *
+ * \param sport The field value to set.
+ */
 void WorkoutMessage::setSport(const Sport sport)
 {
     Q_D(WorkoutMessage);
     d->sport = sport;
 }
+/*!
+ * Sets the \c capabilities field to \a capabilities.
+ *
+ * \param capabilities The field value to set.
+ */
 void WorkoutMessage::setCapabilities(const WorkoutCapabilities capabilities)
 {
     Q_D(WorkoutMessage);
     d->capabilities = capabilities;
 }
+/*!
+ * Sets the \c numValidSteps field to \a numValidSteps.
+ *
+ * \param numValidSteps The field value to set.
+ */
 void WorkoutMessage::setNumValidSteps(const quint16 numValidSteps)
 {
     Q_D(WorkoutMessage);
     d->numValidSteps = numValidSteps;
 }
+/*!
+ * Sets the \c wktName field to \a wktName.
+ *
+ * \param wktName The field value to set.
+ */
 void WorkoutMessage::setWktName(const QString wktName)
 {
     Q_D(WorkoutMessage);
     d->wktName = wktName;
 }
+/*!
+ * Sets the \c subSport field to \a subSport.
+ *
+ * \param subSport The field value to set.
+ */
 void WorkoutMessage::setSubSport(const SubSport subSport)
 {
     Q_D(WorkoutMessage);
     d->subSport = subSport;
 }
+/*!
+ * Sets the \c poolLength field to \a poolLength.
+ *
+ * \param poolLength The field value to set.
+ */
 void WorkoutMessage::setPoolLength(const quint16 poolLength)
 {
     Q_D(WorkoutMessage);
     d->poolLength = poolLength;
 }
+/*!
+ * Sets the \c poolLengthUnit field to \a poolLengthUnit.
+ *
+ * \param poolLengthUnit The field value to set.
+ */
 void WorkoutMessage::setPoolLengthUnit(const DisplayMeasure poolLengthUnit)
 {
     Q_D(WorkoutMessage);
     d->poolLengthUnit = poolLengthUnit;
 }
 
+/*!
+ * \internal
+ *
+ * \class WorkoutMessagePrivate
+ *
+ * The WorkoutMessagePrivate class provides private implementation for the WorkoutMessage.
+ *
+ * \sa WorkoutMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a WorkoutMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 WorkoutMessagePrivate::WorkoutMessagePrivate(WorkoutMessage * const q)
   : FitDataMessagePrivate(q)
   , sport(static_cast<Sport>(-1))
@@ -125,6 +226,11 @@ WorkoutMessagePrivate::WorkoutMessagePrivate(WorkoutMessage * const q)
     globalMessageNumber = MesgNum::Workout;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the WorkoutMessagePrivate object.
+ */
 WorkoutMessagePrivate::~WorkoutMessagePrivate()
 {
 

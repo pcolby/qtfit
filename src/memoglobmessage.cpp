@@ -30,56 +30,127 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class MemoGlobMessage
+ *
+ * The MemoGlobMessage class represents a FIT MemoGlobMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid MemoGlobMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 MemoGlobMessage::MemoGlobMessage() : FitDataMessage(new MemoGlobMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the MemoGlobMessage data message's \c partIndex field's current value.
+ *
+ * \return the \c partIndex field value.
+ */
 quint32 MemoGlobMessage::partIndex() const
 {
     Q_D(const MemoGlobMessage);
     return d->partIndex;
 }
 
+/*!
+ * Returns the MemoGlobMessage data message's \c memo field's current value.
+ *
+ * \return the \c memo field value.
+ */
 quint8 MemoGlobMessage::memo() const
 {
     Q_D(const MemoGlobMessage);
     return d->memo;
 }
 
+/*!
+ * Returns the MemoGlobMessage data message's \c messageNumber field's current value.
+ *
+ * \return the \c messageNumber field value.
+ */
 quint16 MemoGlobMessage::messageNumber() const
 {
     Q_D(const MemoGlobMessage);
     return d->messageNumber;
 }
 
+/*!
+ * Returns the MemoGlobMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex MemoGlobMessage::messageIndex() const
 {
     Q_D(const MemoGlobMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Sets the \c partIndex field to \a partIndex.
+ *
+ * \param partIndex The field value to set.
+ */
 void MemoGlobMessage::setPartIndex(const quint32 partIndex)
 {
     Q_D(MemoGlobMessage);
     d->partIndex = partIndex;
 }
+/*!
+ * Sets the \c memo field to \a memo.
+ *
+ * \param memo The field value to set.
+ */
 void MemoGlobMessage::setMemo(const quint8 memo)
 {
     Q_D(MemoGlobMessage);
     d->memo = memo;
 }
+/*!
+ * Sets the \c messageNumber field to \a messageNumber.
+ *
+ * \param messageNumber The field value to set.
+ */
 void MemoGlobMessage::setMessageNumber(const quint16 messageNumber)
 {
     Q_D(MemoGlobMessage);
     d->messageNumber = messageNumber;
 }
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void MemoGlobMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(MemoGlobMessage);
     d->messageIndex = messageIndex;
 }
 
+/*!
+ * \internal
+ *
+ * \class MemoGlobMessagePrivate
+ *
+ * The MemoGlobMessagePrivate class provides private implementation for the MemoGlobMessage.
+ *
+ * \sa MemoGlobMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a MemoGlobMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 MemoGlobMessagePrivate::MemoGlobMessagePrivate(MemoGlobMessage * const q)
   : FitDataMessagePrivate(q)
   , partIndex(0xFFFFFFFF)
@@ -90,6 +161,11 @@ MemoGlobMessagePrivate::MemoGlobMessagePrivate(MemoGlobMessage * const q)
     globalMessageNumber = MesgNum::MemoGlob;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the MemoGlobMessagePrivate object.
+ */
 MemoGlobMessagePrivate::~MemoGlobMessagePrivate()
 {
 

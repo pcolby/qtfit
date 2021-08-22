@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class TimestampCorrelationMessage
+ *
+ * The TimestampCorrelationMessage class represents a FIT TimestampCorrelationMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid TimestampCorrelationMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 TimestampCorrelationMessage::TimestampCorrelationMessage() : FitDataMessage(new TimestampCorrelationMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the TimestampCorrelationMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime TimestampCorrelationMessage::timestamp() const
 {
     Q_D(const TimestampCorrelationMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the TimestampCorrelationMessage data message's \c fractionalTimestamp field's current value.
+ *
+ * \return the \c fractionalTimestamp field value.
+ */
 quint16 TimestampCorrelationMessage::fractionalTimestamp() const
 {
     Q_D(const TimestampCorrelationMessage);
     return d->fractionalTimestamp;
 }
 
+/*!
+ * Returns the TimestampCorrelationMessage data message's \c systemTimestamp field's current value.
+ *
+ * \return the \c systemTimestamp field value.
+ */
 DateTime TimestampCorrelationMessage::systemTimestamp() const
 {
     Q_D(const TimestampCorrelationMessage);
     return d->systemTimestamp;
 }
 
+/*!
+ * Returns the TimestampCorrelationMessage data message's \c fractionalSystemTimestamp field's current value.
+ *
+ * \return the \c fractionalSystemTimestamp field value.
+ */
 quint16 TimestampCorrelationMessage::fractionalSystemTimestamp() const
 {
     Q_D(const TimestampCorrelationMessage);
     return d->fractionalSystemTimestamp;
 }
 
+/*!
+ * Returns the TimestampCorrelationMessage data message's \c localTimestamp field's current value.
+ *
+ * \return the \c localTimestamp field value.
+ */
 LocalDateTime TimestampCorrelationMessage::localTimestamp() const
 {
     Q_D(const TimestampCorrelationMessage);
     return d->localTimestamp;
 }
 
+/*!
+ * Returns the TimestampCorrelationMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 TimestampCorrelationMessage::timestampMs() const
 {
     Q_D(const TimestampCorrelationMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the TimestampCorrelationMessage data message's \c systemTimestampMs field's current value.
+ *
+ * \return the \c systemTimestampMs field value.
+ */
 quint16 TimestampCorrelationMessage::systemTimestampMs() const
 {
     Q_D(const TimestampCorrelationMessage);
     return d->systemTimestampMs;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void TimestampCorrelationMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(TimestampCorrelationMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c fractionalTimestamp field to \a fractionalTimestamp.
+ *
+ * \param fractionalTimestamp The field value to set.
+ */
 void TimestampCorrelationMessage::setFractionalTimestamp(const quint16 fractionalTimestamp)
 {
     Q_D(TimestampCorrelationMessage);
     d->fractionalTimestamp = fractionalTimestamp;
 }
+/*!
+ * Sets the \c systemTimestamp field to \a systemTimestamp.
+ *
+ * \param systemTimestamp The field value to set.
+ */
 void TimestampCorrelationMessage::setSystemTimestamp(const DateTime systemTimestamp)
 {
     Q_D(TimestampCorrelationMessage);
     d->systemTimestamp = systemTimestamp;
 }
+/*!
+ * Sets the \c fractionalSystemTimestamp field to \a fractionalSystemTimestamp.
+ *
+ * \param fractionalSystemTimestamp The field value to set.
+ */
 void TimestampCorrelationMessage::setFractionalSystemTimestamp(const quint16 fractionalSystemTimestamp)
 {
     Q_D(TimestampCorrelationMessage);
     d->fractionalSystemTimestamp = fractionalSystemTimestamp;
 }
+/*!
+ * Sets the \c localTimestamp field to \a localTimestamp.
+ *
+ * \param localTimestamp The field value to set.
+ */
 void TimestampCorrelationMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
 {
     Q_D(TimestampCorrelationMessage);
     d->localTimestamp = localTimestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void TimestampCorrelationMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(TimestampCorrelationMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c systemTimestampMs field to \a systemTimestampMs.
+ *
+ * \param systemTimestampMs The field value to set.
+ */
 void TimestampCorrelationMessage::setSystemTimestampMs(const quint16 systemTimestampMs)
 {
     Q_D(TimestampCorrelationMessage);
     d->systemTimestampMs = systemTimestampMs;
 }
 
+/*!
+ * \internal
+ *
+ * \class TimestampCorrelationMessagePrivate
+ *
+ * The TimestampCorrelationMessagePrivate class provides private implementation for the TimestampCorrelationMessage.
+ *
+ * \sa TimestampCorrelationMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a TimestampCorrelationMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 TimestampCorrelationMessagePrivate::TimestampCorrelationMessagePrivate(TimestampCorrelationMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -126,6 +227,11 @@ TimestampCorrelationMessagePrivate::TimestampCorrelationMessagePrivate(Timestamp
     globalMessageNumber = MesgNum::TimestampCorrelation;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the TimestampCorrelationMessagePrivate object.
+ */
 TimestampCorrelationMessagePrivate::~TimestampCorrelationMessagePrivate()
 {
 

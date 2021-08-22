@@ -30,34 +30,85 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class StressLevelMessage
+ *
+ * The StressLevelMessage class represents a FIT StressLevelMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid StressLevelMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 StressLevelMessage::StressLevelMessage() : FitDataMessage(new StressLevelMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the StressLevelMessage data message's \c stressLevelValue field's current value.
+ *
+ * \return the \c stressLevelValue field value.
+ */
 qint16 StressLevelMessage::stressLevelValue() const
 {
     Q_D(const StressLevelMessage);
     return d->stressLevelValue;
 }
 
+/*!
+ * Returns the StressLevelMessage data message's \c stressLevelTime field's current value.
+ *
+ * \return the \c stressLevelTime field value.
+ */
 DateTime StressLevelMessage::stressLevelTime() const
 {
     Q_D(const StressLevelMessage);
     return d->stressLevelTime;
 }
 
+/*!
+ * Sets the \c stressLevelValue field to \a stressLevelValue.
+ *
+ * \param stressLevelValue The field value to set.
+ */
 void StressLevelMessage::setStressLevelValue(const qint16 stressLevelValue)
 {
     Q_D(StressLevelMessage);
     d->stressLevelValue = stressLevelValue;
 }
+/*!
+ * Sets the \c stressLevelTime field to \a stressLevelTime.
+ *
+ * \param stressLevelTime The field value to set.
+ */
 void StressLevelMessage::setStressLevelTime(const DateTime stressLevelTime)
 {
     Q_D(StressLevelMessage);
     d->stressLevelTime = stressLevelTime;
 }
 
+/*!
+ * \internal
+ *
+ * \class StressLevelMessagePrivate
+ *
+ * The StressLevelMessagePrivate class provides private implementation for the StressLevelMessage.
+ *
+ * \sa StressLevelMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a StressLevelMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 StressLevelMessagePrivate::StressLevelMessagePrivate(StressLevelMessage * const q)
   : FitDataMessagePrivate(q)
   , stressLevelValue(0x7FFF)
@@ -66,6 +117,11 @@ StressLevelMessagePrivate::StressLevelMessagePrivate(StressLevelMessage * const 
     globalMessageNumber = MesgNum::StressLevel;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the StressLevelMessagePrivate object.
+ */
 StressLevelMessagePrivate::~StressLevelMessagePrivate()
 {
 

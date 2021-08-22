@@ -30,122 +30,253 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class JumpMessage
+ *
+ * The JumpMessage class represents a FIT JumpMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid JumpMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 JumpMessage::JumpMessage() : FitDataMessage(new JumpMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the JumpMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime JumpMessage::timestamp() const
 {
     Q_D(const JumpMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c distance field's current value.
+ *
+ * \return the \c distance field value.
+ */
 float JumpMessage::distance() const
 {
     Q_D(const JumpMessage);
     return d->distance;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c height field's current value.
+ *
+ * \return the \c height field value.
+ */
 float JumpMessage::height() const
 {
     Q_D(const JumpMessage);
     return d->height;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c rotations field's current value.
+ *
+ * \return the \c rotations field value.
+ */
 quint8 JumpMessage::rotations() const
 {
     Q_D(const JumpMessage);
     return d->rotations;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c hangTime field's current value.
+ *
+ * \return the \c hangTime field value.
+ */
 float JumpMessage::hangTime() const
 {
     Q_D(const JumpMessage);
     return d->hangTime;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c score field's current value.
+ *
+ * \return the \c score field value.
+ */
 float JumpMessage::score() const
 {
     Q_D(const JumpMessage);
     return d->score;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c positionLat field's current value.
+ *
+ * \return the \c positionLat field value.
+ */
 qint32 JumpMessage::positionLat() const
 {
     Q_D(const JumpMessage);
     return d->positionLat;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c positionLong field's current value.
+ *
+ * \return the \c positionLong field value.
+ */
 qint32 JumpMessage::positionLong() const
 {
     Q_D(const JumpMessage);
     return d->positionLong;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c speed field's current value.
+ *
+ * \return the \c speed field value.
+ */
 quint16 JumpMessage::speed() const
 {
     Q_D(const JumpMessage);
     return d->speed;
 }
 
+/*!
+ * Returns the JumpMessage data message's \c enhancedSpeed field's current value.
+ *
+ * \return the \c enhancedSpeed field value.
+ */
 quint32 JumpMessage::enhancedSpeed() const
 {
     Q_D(const JumpMessage);
     return d->enhancedSpeed;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void JumpMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(JumpMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c distance field to \a distance.
+ *
+ * \param distance The field value to set.
+ */
 void JumpMessage::setDistance(const float distance)
 {
     Q_D(JumpMessage);
     d->distance = distance;
 }
+/*!
+ * Sets the \c height field to \a height.
+ *
+ * \param height The field value to set.
+ */
 void JumpMessage::setHeight(const float height)
 {
     Q_D(JumpMessage);
     d->height = height;
 }
+/*!
+ * Sets the \c rotations field to \a rotations.
+ *
+ * \param rotations The field value to set.
+ */
 void JumpMessage::setRotations(const quint8 rotations)
 {
     Q_D(JumpMessage);
     d->rotations = rotations;
 }
+/*!
+ * Sets the \c hangTime field to \a hangTime.
+ *
+ * \param hangTime The field value to set.
+ */
 void JumpMessage::setHangTime(const float hangTime)
 {
     Q_D(JumpMessage);
     d->hangTime = hangTime;
 }
+/*!
+ * Sets the \c score field to \a score.
+ *
+ * \param score The field value to set.
+ */
 void JumpMessage::setScore(const float score)
 {
     Q_D(JumpMessage);
     d->score = score;
 }
+/*!
+ * Sets the \c positionLat field to \a positionLat.
+ *
+ * \param positionLat The field value to set.
+ */
 void JumpMessage::setPositionLat(const qint32 positionLat)
 {
     Q_D(JumpMessage);
     d->positionLat = positionLat;
 }
+/*!
+ * Sets the \c positionLong field to \a positionLong.
+ *
+ * \param positionLong The field value to set.
+ */
 void JumpMessage::setPositionLong(const qint32 positionLong)
 {
     Q_D(JumpMessage);
     d->positionLong = positionLong;
 }
+/*!
+ * Sets the \c speed field to \a speed.
+ *
+ * \param speed The field value to set.
+ */
 void JumpMessage::setSpeed(const quint16 speed)
 {
     Q_D(JumpMessage);
     d->speed = speed;
 }
+/*!
+ * Sets the \c enhancedSpeed field to \a enhancedSpeed.
+ *
+ * \param enhancedSpeed The field value to set.
+ */
 void JumpMessage::setEnhancedSpeed(const quint32 enhancedSpeed)
 {
     Q_D(JumpMessage);
     d->enhancedSpeed = enhancedSpeed;
 }
 
+/*!
+ * \internal
+ *
+ * \class JumpMessagePrivate
+ *
+ * The JumpMessagePrivate class provides private implementation for the JumpMessage.
+ *
+ * \sa JumpMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a JumpMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 JumpMessagePrivate::JumpMessagePrivate(JumpMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -162,6 +293,11 @@ JumpMessagePrivate::JumpMessagePrivate(JumpMessage * const q)
     globalMessageNumber = MesgNum::Jump;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the JumpMessagePrivate object.
+ */
 JumpMessagePrivate::~JumpMessagePrivate()
 {
 

@@ -30,111 +30,232 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SegmentFileMessage
+ *
+ * The SegmentFileMessage class represents a FIT SegmentFileMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SegmentFileMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SegmentFileMessage::SegmentFileMessage() : FitDataMessage(new SegmentFileMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex SegmentFileMessage::messageIndex() const
 {
     Q_D(const SegmentFileMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c fileUuid field's current value.
+ *
+ * \return the \c fileUuid field value.
+ */
 QString SegmentFileMessage::fileUuid() const
 {
     Q_D(const SegmentFileMessage);
     return d->fileUuid;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c enabled field's current value.
+ *
+ * \return the \c enabled field value.
+ */
 bool SegmentFileMessage::enabled() const
 {
     Q_D(const SegmentFileMessage);
     return d->enabled;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c userProfilePrimaryKey field's current value.
+ *
+ * \return the \c userProfilePrimaryKey field value.
+ */
 quint32 SegmentFileMessage::userProfilePrimaryKey() const
 {
     Q_D(const SegmentFileMessage);
     return d->userProfilePrimaryKey;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c leaderType field's current value.
+ *
+ * \return the \c leaderType field value.
+ */
 SegmentLeaderboardType SegmentFileMessage::leaderType() const
 {
     Q_D(const SegmentFileMessage);
     return d->leaderType;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c leaderGroupPrimaryKey field's current value.
+ *
+ * \return the \c leaderGroupPrimaryKey field value.
+ */
 quint32 SegmentFileMessage::leaderGroupPrimaryKey() const
 {
     Q_D(const SegmentFileMessage);
     return d->leaderGroupPrimaryKey;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c leaderActivityId field's current value.
+ *
+ * \return the \c leaderActivityId field value.
+ */
 quint32 SegmentFileMessage::leaderActivityId() const
 {
     Q_D(const SegmentFileMessage);
     return d->leaderActivityId;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c leaderActivityIdString field's current value.
+ *
+ * \return the \c leaderActivityIdString field value.
+ */
 QString SegmentFileMessage::leaderActivityIdString() const
 {
     Q_D(const SegmentFileMessage);
     return d->leaderActivityIdString;
 }
 
+/*!
+ * Returns the SegmentFileMessage data message's \c defaultRaceLeader field's current value.
+ *
+ * \return the \c defaultRaceLeader field value.
+ */
 quint8 SegmentFileMessage::defaultRaceLeader() const
 {
     Q_D(const SegmentFileMessage);
     return d->defaultRaceLeader;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void SegmentFileMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(SegmentFileMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c fileUuid field to \a fileUuid.
+ *
+ * \param fileUuid The field value to set.
+ */
 void SegmentFileMessage::setFileUuid(const QString fileUuid)
 {
     Q_D(SegmentFileMessage);
     d->fileUuid = fileUuid;
 }
+/*!
+ * Sets the \c enabled field to \a enabled.
+ *
+ * \param enabled The field value to set.
+ */
 void SegmentFileMessage::setEnabled(const bool enabled)
 {
     Q_D(SegmentFileMessage);
     d->enabled = enabled;
 }
+/*!
+ * Sets the \c userProfilePrimaryKey field to \a userProfilePrimaryKey.
+ *
+ * \param userProfilePrimaryKey The field value to set.
+ */
 void SegmentFileMessage::setUserProfilePrimaryKey(const quint32 userProfilePrimaryKey)
 {
     Q_D(SegmentFileMessage);
     d->userProfilePrimaryKey = userProfilePrimaryKey;
 }
+/*!
+ * Sets the \c leaderType field to \a leaderType.
+ *
+ * \param leaderType The field value to set.
+ */
 void SegmentFileMessage::setLeaderType(const SegmentLeaderboardType leaderType)
 {
     Q_D(SegmentFileMessage);
     d->leaderType = leaderType;
 }
+/*!
+ * Sets the \c leaderGroupPrimaryKey field to \a leaderGroupPrimaryKey.
+ *
+ * \param leaderGroupPrimaryKey The field value to set.
+ */
 void SegmentFileMessage::setLeaderGroupPrimaryKey(const quint32 leaderGroupPrimaryKey)
 {
     Q_D(SegmentFileMessage);
     d->leaderGroupPrimaryKey = leaderGroupPrimaryKey;
 }
+/*!
+ * Sets the \c leaderActivityId field to \a leaderActivityId.
+ *
+ * \param leaderActivityId The field value to set.
+ */
 void SegmentFileMessage::setLeaderActivityId(const quint32 leaderActivityId)
 {
     Q_D(SegmentFileMessage);
     d->leaderActivityId = leaderActivityId;
 }
+/*!
+ * Sets the \c leaderActivityIdString field to \a leaderActivityIdString.
+ *
+ * \param leaderActivityIdString The field value to set.
+ */
 void SegmentFileMessage::setLeaderActivityIdString(const QString leaderActivityIdString)
 {
     Q_D(SegmentFileMessage);
     d->leaderActivityIdString = leaderActivityIdString;
 }
+/*!
+ * Sets the \c defaultRaceLeader field to \a defaultRaceLeader.
+ *
+ * \param defaultRaceLeader The field value to set.
+ */
 void SegmentFileMessage::setDefaultRaceLeader(const quint8 defaultRaceLeader)
 {
     Q_D(SegmentFileMessage);
     d->defaultRaceLeader = defaultRaceLeader;
 }
 
+/*!
+ * \internal
+ *
+ * \class SegmentFileMessagePrivate
+ *
+ * The SegmentFileMessagePrivate class provides private implementation for the SegmentFileMessage.
+ *
+ * \sa SegmentFileMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SegmentFileMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SegmentFileMessagePrivate::SegmentFileMessagePrivate(SegmentFileMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -148,6 +269,11 @@ SegmentFileMessagePrivate::SegmentFileMessagePrivate(SegmentFileMessage * const 
     globalMessageNumber = MesgNum::SegmentFile;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SegmentFileMessagePrivate object.
+ */
 SegmentFileMessagePrivate::~SegmentFileMessagePrivate()
 {
 

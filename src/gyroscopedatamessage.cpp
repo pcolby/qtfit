@@ -30,111 +30,232 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class GyroscopeDataMessage
+ *
+ * The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid GyroscopeDataMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 GyroscopeDataMessage::GyroscopeDataMessage() : FitDataMessage(new GyroscopeDataMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime GyroscopeDataMessage::timestamp() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 GyroscopeDataMessage::timestampMs() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c sampleTimeOffset field's current value.
+ *
+ * \return the \c sampleTimeOffset field value.
+ */
 quint16 GyroscopeDataMessage::sampleTimeOffset() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->sampleTimeOffset;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c gyroX field's current value.
+ *
+ * \return the \c gyroX field value.
+ */
 quint16 GyroscopeDataMessage::gyroX() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->gyroX;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c gyroY field's current value.
+ *
+ * \return the \c gyroY field value.
+ */
 quint16 GyroscopeDataMessage::gyroY() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->gyroY;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c gyroZ field's current value.
+ *
+ * \return the \c gyroZ field value.
+ */
 quint16 GyroscopeDataMessage::gyroZ() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->gyroZ;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c calibratedGyroX field's current value.
+ *
+ * \return the \c calibratedGyroX field value.
+ */
 float GyroscopeDataMessage::calibratedGyroX() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->calibratedGyroX;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c calibratedGyroY field's current value.
+ *
+ * \return the \c calibratedGyroY field value.
+ */
 float GyroscopeDataMessage::calibratedGyroY() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->calibratedGyroY;
 }
 
+/*!
+ * Returns the GyroscopeDataMessage data message's \c calibratedGyroZ field's current value.
+ *
+ * \return the \c calibratedGyroZ field value.
+ */
 float GyroscopeDataMessage::calibratedGyroZ() const
 {
     Q_D(const GyroscopeDataMessage);
     return d->calibratedGyroZ;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void GyroscopeDataMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(GyroscopeDataMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void GyroscopeDataMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(GyroscopeDataMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c sampleTimeOffset field to \a sampleTimeOffset.
+ *
+ * \param sampleTimeOffset The field value to set.
+ */
 void GyroscopeDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
 {
     Q_D(GyroscopeDataMessage);
     d->sampleTimeOffset = sampleTimeOffset;
 }
+/*!
+ * Sets the \c gyroX field to \a gyroX.
+ *
+ * \param gyroX The field value to set.
+ */
 void GyroscopeDataMessage::setGyroX(const quint16 gyroX)
 {
     Q_D(GyroscopeDataMessage);
     d->gyroX = gyroX;
 }
+/*!
+ * Sets the \c gyroY field to \a gyroY.
+ *
+ * \param gyroY The field value to set.
+ */
 void GyroscopeDataMessage::setGyroY(const quint16 gyroY)
 {
     Q_D(GyroscopeDataMessage);
     d->gyroY = gyroY;
 }
+/*!
+ * Sets the \c gyroZ field to \a gyroZ.
+ *
+ * \param gyroZ The field value to set.
+ */
 void GyroscopeDataMessage::setGyroZ(const quint16 gyroZ)
 {
     Q_D(GyroscopeDataMessage);
     d->gyroZ = gyroZ;
 }
+/*!
+ * Sets the \c calibratedGyroX field to \a calibratedGyroX.
+ *
+ * \param calibratedGyroX The field value to set.
+ */
 void GyroscopeDataMessage::setCalibratedGyroX(const float calibratedGyroX)
 {
     Q_D(GyroscopeDataMessage);
     d->calibratedGyroX = calibratedGyroX;
 }
+/*!
+ * Sets the \c calibratedGyroY field to \a calibratedGyroY.
+ *
+ * \param calibratedGyroY The field value to set.
+ */
 void GyroscopeDataMessage::setCalibratedGyroY(const float calibratedGyroY)
 {
     Q_D(GyroscopeDataMessage);
     d->calibratedGyroY = calibratedGyroY;
 }
+/*!
+ * Sets the \c calibratedGyroZ field to \a calibratedGyroZ.
+ *
+ * \param calibratedGyroZ The field value to set.
+ */
 void GyroscopeDataMessage::setCalibratedGyroZ(const float calibratedGyroZ)
 {
     Q_D(GyroscopeDataMessage);
     d->calibratedGyroZ = calibratedGyroZ;
 }
 
+/*!
+ * \internal
+ *
+ * \class GyroscopeDataMessagePrivate
+ *
+ * The GyroscopeDataMessagePrivate class provides private implementation for the GyroscopeDataMessage.
+ *
+ * \sa GyroscopeDataMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a GyroscopeDataMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 GyroscopeDataMessagePrivate::GyroscopeDataMessagePrivate(GyroscopeDataMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -150,6 +271,11 @@ GyroscopeDataMessagePrivate::GyroscopeDataMessagePrivate(GyroscopeDataMessage * 
     globalMessageNumber = MesgNum::GyroscopeData;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the GyroscopeDataMessagePrivate object.
+ */
 GyroscopeDataMessagePrivate::~GyroscopeDataMessagePrivate()
 {
 

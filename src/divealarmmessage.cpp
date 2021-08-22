@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class DiveAlarmMessage
+ *
+ * The DiveAlarmMessage class represents a FIT DiveAlarmMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid DiveAlarmMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 DiveAlarmMessage::DiveAlarmMessage() : FitDataMessage(new DiveAlarmMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the DiveAlarmMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex DiveAlarmMessage::messageIndex() const
 {
     Q_D(const DiveAlarmMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the DiveAlarmMessage data message's \c depth field's current value.
+ *
+ * \return the \c depth field value.
+ */
 quint32 DiveAlarmMessage::depth() const
 {
     Q_D(const DiveAlarmMessage);
     return d->depth;
 }
 
+/*!
+ * Returns the DiveAlarmMessage data message's \c time field's current value.
+ *
+ * \return the \c time field value.
+ */
 qint32 DiveAlarmMessage::time() const
 {
     Q_D(const DiveAlarmMessage);
     return d->time;
 }
 
+/*!
+ * Returns the DiveAlarmMessage data message's \c enabled field's current value.
+ *
+ * \return the \c enabled field value.
+ */
 bool DiveAlarmMessage::enabled() const
 {
     Q_D(const DiveAlarmMessage);
     return d->enabled;
 }
 
+/*!
+ * Returns the DiveAlarmMessage data message's \c alarmType field's current value.
+ *
+ * \return the \c alarmType field value.
+ */
 DiveAlarmType DiveAlarmMessage::alarmType() const
 {
     Q_D(const DiveAlarmMessage);
     return d->alarmType;
 }
 
+/*!
+ * Returns the DiveAlarmMessage data message's \c sound field's current value.
+ *
+ * \return the \c sound field value.
+ */
 Tone DiveAlarmMessage::sound() const
 {
     Q_D(const DiveAlarmMessage);
     return d->sound;
 }
 
+/*!
+ * Returns the DiveAlarmMessage data message's \c diveTypes field's current value.
+ *
+ * \return the \c diveTypes field value.
+ */
 SubSport DiveAlarmMessage::diveTypes() const
 {
     Q_D(const DiveAlarmMessage);
     return d->diveTypes;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void DiveAlarmMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(DiveAlarmMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c depth field to \a depth.
+ *
+ * \param depth The field value to set.
+ */
 void DiveAlarmMessage::setDepth(const quint32 depth)
 {
     Q_D(DiveAlarmMessage);
     d->depth = depth;
 }
+/*!
+ * Sets the \c time field to \a time.
+ *
+ * \param time The field value to set.
+ */
 void DiveAlarmMessage::setTime(const qint32 time)
 {
     Q_D(DiveAlarmMessage);
     d->time = time;
 }
+/*!
+ * Sets the \c enabled field to \a enabled.
+ *
+ * \param enabled The field value to set.
+ */
 void DiveAlarmMessage::setEnabled(const bool enabled)
 {
     Q_D(DiveAlarmMessage);
     d->enabled = enabled;
 }
+/*!
+ * Sets the \c alarmType field to \a alarmType.
+ *
+ * \param alarmType The field value to set.
+ */
 void DiveAlarmMessage::setAlarmType(const DiveAlarmType alarmType)
 {
     Q_D(DiveAlarmMessage);
     d->alarmType = alarmType;
 }
+/*!
+ * Sets the \c sound field to \a sound.
+ *
+ * \param sound The field value to set.
+ */
 void DiveAlarmMessage::setSound(const Tone sound)
 {
     Q_D(DiveAlarmMessage);
     d->sound = sound;
 }
+/*!
+ * Sets the \c diveTypes field to \a diveTypes.
+ *
+ * \param diveTypes The field value to set.
+ */
 void DiveAlarmMessage::setDiveTypes(const SubSport diveTypes)
 {
     Q_D(DiveAlarmMessage);
     d->diveTypes = diveTypes;
 }
 
+/*!
+ * \internal
+ *
+ * \class DiveAlarmMessagePrivate
+ *
+ * The DiveAlarmMessagePrivate class provides private implementation for the DiveAlarmMessage.
+ *
+ * \sa DiveAlarmMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a DiveAlarmMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 DiveAlarmMessagePrivate::DiveAlarmMessagePrivate(DiveAlarmMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -126,6 +227,11 @@ DiveAlarmMessagePrivate::DiveAlarmMessagePrivate(DiveAlarmMessage * const q)
     globalMessageNumber = MesgNum::DiveAlarm;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the DiveAlarmMessagePrivate object.
+ */
 DiveAlarmMessagePrivate::~DiveAlarmMessagePrivate()
 {
 

@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ExdDataFieldConfigurationMessage
+ *
+ * The ExdDataFieldConfigurationMessage class represents a FIT ExdDataFieldConfigurationMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ExdDataFieldConfigurationMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ExdDataFieldConfigurationMessage::ExdDataFieldConfigurationMessage() : FitDataMessage(new ExdDataFieldConfigurationMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ExdDataFieldConfigurationMessage data message's \c screenIndex field's current value.
+ *
+ * \return the \c screenIndex field value.
+ */
 quint8 ExdDataFieldConfigurationMessage::screenIndex() const
 {
     Q_D(const ExdDataFieldConfigurationMessage);
     return d->screenIndex;
 }
 
+/*!
+ * Returns the ExdDataFieldConfigurationMessage data message's \c conceptField field's current value.
+ *
+ * \return the \c conceptField field value.
+ */
 quint8 ExdDataFieldConfigurationMessage::conceptField() const
 {
     Q_D(const ExdDataFieldConfigurationMessage);
     return d->conceptField;
 }
 
+/*!
+ * Returns the ExdDataFieldConfigurationMessage data message's \c fieldId field's current value.
+ *
+ * \return the \c fieldId field value.
+ */
 quint8 ExdDataFieldConfigurationMessage::fieldId() const
 {
     Q_D(const ExdDataFieldConfigurationMessage);
     return d->fieldId;
 }
 
+/*!
+ * Returns the ExdDataFieldConfigurationMessage data message's \c conceptCount field's current value.
+ *
+ * \return the \c conceptCount field value.
+ */
 quint8 ExdDataFieldConfigurationMessage::conceptCount() const
 {
     Q_D(const ExdDataFieldConfigurationMessage);
     return d->conceptCount;
 }
 
+/*!
+ * Returns the ExdDataFieldConfigurationMessage data message's \c displayType field's current value.
+ *
+ * \return the \c displayType field value.
+ */
 ExdDisplayType ExdDataFieldConfigurationMessage::displayType() const
 {
     Q_D(const ExdDataFieldConfigurationMessage);
     return d->displayType;
 }
 
+/*!
+ * Returns the ExdDataFieldConfigurationMessage data message's \c title field's current value.
+ *
+ * \return the \c title field value.
+ */
 QString ExdDataFieldConfigurationMessage::title() const
 {
     Q_D(const ExdDataFieldConfigurationMessage);
     return d->title;
 }
 
+/*!
+ * Sets the \c screenIndex field to \a screenIndex.
+ *
+ * \param screenIndex The field value to set.
+ */
 void ExdDataFieldConfigurationMessage::setScreenIndex(const quint8 screenIndex)
 {
     Q_D(ExdDataFieldConfigurationMessage);
     d->screenIndex = screenIndex;
 }
+/*!
+ * Sets the \c conceptField field to \a conceptField.
+ *
+ * \param conceptField The field value to set.
+ */
 void ExdDataFieldConfigurationMessage::setConceptField(const quint8 conceptField)
 {
     Q_D(ExdDataFieldConfigurationMessage);
     d->conceptField = conceptField;
 }
+/*!
+ * Sets the \c fieldId field to \a fieldId.
+ *
+ * \param fieldId The field value to set.
+ */
 void ExdDataFieldConfigurationMessage::setFieldId(const quint8 fieldId)
 {
     Q_D(ExdDataFieldConfigurationMessage);
     d->fieldId = fieldId;
 }
+/*!
+ * Sets the \c conceptCount field to \a conceptCount.
+ *
+ * \param conceptCount The field value to set.
+ */
 void ExdDataFieldConfigurationMessage::setConceptCount(const quint8 conceptCount)
 {
     Q_D(ExdDataFieldConfigurationMessage);
     d->conceptCount = conceptCount;
 }
+/*!
+ * Sets the \c displayType field to \a displayType.
+ *
+ * \param displayType The field value to set.
+ */
 void ExdDataFieldConfigurationMessage::setDisplayType(const ExdDisplayType displayType)
 {
     Q_D(ExdDataFieldConfigurationMessage);
     d->displayType = displayType;
 }
+/*!
+ * Sets the \c title field to \a title.
+ *
+ * \param title The field value to set.
+ */
 void ExdDataFieldConfigurationMessage::setTitle(const QString title)
 {
     Q_D(ExdDataFieldConfigurationMessage);
     d->title = title;
 }
 
+/*!
+ * \internal
+ *
+ * \class ExdDataFieldConfigurationMessagePrivate
+ *
+ * The ExdDataFieldConfigurationMessagePrivate class provides private implementation for the ExdDataFieldConfigurationMessage.
+ *
+ * \sa ExdDataFieldConfigurationMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ExdDataFieldConfigurationMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ExdDataFieldConfigurationMessagePrivate::ExdDataFieldConfigurationMessagePrivate(ExdDataFieldConfigurationMessage * const q)
   : FitDataMessagePrivate(q)
   , screenIndex(0xFF)
@@ -113,6 +204,11 @@ ExdDataFieldConfigurationMessagePrivate::ExdDataFieldConfigurationMessagePrivate
     globalMessageNumber = MesgNum::ExdDataFieldConfiguration;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ExdDataFieldConfigurationMessagePrivate object.
+ */
 ExdDataFieldConfigurationMessagePrivate::~ExdDataFieldConfigurationMessagePrivate()
 {
 

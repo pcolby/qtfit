@@ -30,144 +30,295 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class AviationAttitudeMessage
+ *
+ * The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid AviationAttitudeMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 AviationAttitudeMessage::AviationAttitudeMessage() : FitDataMessage(new AviationAttitudeMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime AviationAttitudeMessage::timestamp() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 AviationAttitudeMessage::timestampMs() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c systemTime field's current value.
+ *
+ * \return the \c systemTime field value.
+ */
 quint32 AviationAttitudeMessage::systemTime() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->systemTime;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c pitch field's current value.
+ *
+ * \return the \c pitch field value.
+ */
 qint16 AviationAttitudeMessage::pitch() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->pitch;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c roll field's current value.
+ *
+ * \return the \c roll field value.
+ */
 qint16 AviationAttitudeMessage::roll() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->roll;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c accelLateral field's current value.
+ *
+ * \return the \c accelLateral field value.
+ */
 qint16 AviationAttitudeMessage::accelLateral() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->accelLateral;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c accelNormal field's current value.
+ *
+ * \return the \c accelNormal field value.
+ */
 qint16 AviationAttitudeMessage::accelNormal() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->accelNormal;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c turnRate field's current value.
+ *
+ * \return the \c turnRate field value.
+ */
 qint16 AviationAttitudeMessage::turnRate() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->turnRate;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c stage field's current value.
+ *
+ * \return the \c stage field value.
+ */
 AttitudeStage AviationAttitudeMessage::stage() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->stage;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c attitudeStageComplete field's current value.
+ *
+ * \return the \c attitudeStageComplete field value.
+ */
 quint8 AviationAttitudeMessage::attitudeStageComplete() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->attitudeStageComplete;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c track field's current value.
+ *
+ * \return the \c track field value.
+ */
 quint16 AviationAttitudeMessage::track() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->track;
 }
 
+/*!
+ * Returns the AviationAttitudeMessage data message's \c validity field's current value.
+ *
+ * \return the \c validity field value.
+ */
 AttitudeValidity AviationAttitudeMessage::validity() const
 {
     Q_D(const AviationAttitudeMessage);
     return d->validity;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void AviationAttitudeMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(AviationAttitudeMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void AviationAttitudeMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(AviationAttitudeMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c systemTime field to \a systemTime.
+ *
+ * \param systemTime The field value to set.
+ */
 void AviationAttitudeMessage::setSystemTime(const quint32 systemTime)
 {
     Q_D(AviationAttitudeMessage);
     d->systemTime = systemTime;
 }
+/*!
+ * Sets the \c pitch field to \a pitch.
+ *
+ * \param pitch The field value to set.
+ */
 void AviationAttitudeMessage::setPitch(const qint16 pitch)
 {
     Q_D(AviationAttitudeMessage);
     d->pitch = pitch;
 }
+/*!
+ * Sets the \c roll field to \a roll.
+ *
+ * \param roll The field value to set.
+ */
 void AviationAttitudeMessage::setRoll(const qint16 roll)
 {
     Q_D(AviationAttitudeMessage);
     d->roll = roll;
 }
+/*!
+ * Sets the \c accelLateral field to \a accelLateral.
+ *
+ * \param accelLateral The field value to set.
+ */
 void AviationAttitudeMessage::setAccelLateral(const qint16 accelLateral)
 {
     Q_D(AviationAttitudeMessage);
     d->accelLateral = accelLateral;
 }
+/*!
+ * Sets the \c accelNormal field to \a accelNormal.
+ *
+ * \param accelNormal The field value to set.
+ */
 void AviationAttitudeMessage::setAccelNormal(const qint16 accelNormal)
 {
     Q_D(AviationAttitudeMessage);
     d->accelNormal = accelNormal;
 }
+/*!
+ * Sets the \c turnRate field to \a turnRate.
+ *
+ * \param turnRate The field value to set.
+ */
 void AviationAttitudeMessage::setTurnRate(const qint16 turnRate)
 {
     Q_D(AviationAttitudeMessage);
     d->turnRate = turnRate;
 }
+/*!
+ * Sets the \c stage field to \a stage.
+ *
+ * \param stage The field value to set.
+ */
 void AviationAttitudeMessage::setStage(const AttitudeStage stage)
 {
     Q_D(AviationAttitudeMessage);
     d->stage = stage;
 }
+/*!
+ * Sets the \c attitudeStageComplete field to \a attitudeStageComplete.
+ *
+ * \param attitudeStageComplete The field value to set.
+ */
 void AviationAttitudeMessage::setAttitudeStageComplete(const quint8 attitudeStageComplete)
 {
     Q_D(AviationAttitudeMessage);
     d->attitudeStageComplete = attitudeStageComplete;
 }
+/*!
+ * Sets the \c track field to \a track.
+ *
+ * \param track The field value to set.
+ */
 void AviationAttitudeMessage::setTrack(const quint16 track)
 {
     Q_D(AviationAttitudeMessage);
     d->track = track;
 }
+/*!
+ * Sets the \c validity field to \a validity.
+ *
+ * \param validity The field value to set.
+ */
 void AviationAttitudeMessage::setValidity(const AttitudeValidity validity)
 {
     Q_D(AviationAttitudeMessage);
     d->validity = validity;
 }
 
+/*!
+ * \internal
+ *
+ * \class AviationAttitudeMessagePrivate
+ *
+ * The AviationAttitudeMessagePrivate class provides private implementation for the AviationAttitudeMessage.
+ *
+ * \sa AviationAttitudeMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a AviationAttitudeMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 AviationAttitudeMessagePrivate::AviationAttitudeMessagePrivate(AviationAttitudeMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -186,6 +337,11 @@ AviationAttitudeMessagePrivate::AviationAttitudeMessagePrivate(AviationAttitudeM
     globalMessageNumber = MesgNum::AviationAttitude;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the AviationAttitudeMessagePrivate object.
+ */
 AviationAttitudeMessagePrivate::~AviationAttitudeMessagePrivate()
 {
 

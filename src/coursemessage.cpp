@@ -30,56 +30,127 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class CourseMessage
+ *
+ * The CourseMessage class represents a FIT CourseMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid CourseMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 CourseMessage::CourseMessage() : FitDataMessage(new CourseMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the CourseMessage data message's \c sport field's current value.
+ *
+ * \return the \c sport field value.
+ */
 Sport CourseMessage::sport() const
 {
     Q_D(const CourseMessage);
     return d->sport;
 }
 
+/*!
+ * Returns the CourseMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString CourseMessage::name() const
 {
     Q_D(const CourseMessage);
     return d->name;
 }
 
+/*!
+ * Returns the CourseMessage data message's \c capabilities field's current value.
+ *
+ * \return the \c capabilities field value.
+ */
 CourseCapabilities CourseMessage::capabilities() const
 {
     Q_D(const CourseMessage);
     return d->capabilities;
 }
 
+/*!
+ * Returns the CourseMessage data message's \c subSport field's current value.
+ *
+ * \return the \c subSport field value.
+ */
 SubSport CourseMessage::subSport() const
 {
     Q_D(const CourseMessage);
     return d->subSport;
 }
 
+/*!
+ * Sets the \c sport field to \a sport.
+ *
+ * \param sport The field value to set.
+ */
 void CourseMessage::setSport(const Sport sport)
 {
     Q_D(CourseMessage);
     d->sport = sport;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void CourseMessage::setName(const QString name)
 {
     Q_D(CourseMessage);
     d->name = name;
 }
+/*!
+ * Sets the \c capabilities field to \a capabilities.
+ *
+ * \param capabilities The field value to set.
+ */
 void CourseMessage::setCapabilities(const CourseCapabilities capabilities)
 {
     Q_D(CourseMessage);
     d->capabilities = capabilities;
 }
+/*!
+ * Sets the \c subSport field to \a subSport.
+ *
+ * \param subSport The field value to set.
+ */
 void CourseMessage::setSubSport(const SubSport subSport)
 {
     Q_D(CourseMessage);
     d->subSport = subSport;
 }
 
+/*!
+ * \internal
+ *
+ * \class CourseMessagePrivate
+ *
+ * The CourseMessagePrivate class provides private implementation for the CourseMessage.
+ *
+ * \sa CourseMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a CourseMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 CourseMessagePrivate::CourseMessagePrivate(CourseMessage * const q)
   : FitDataMessagePrivate(q)
   , sport(static_cast<Sport>(-1))
@@ -89,6 +160,11 @@ CourseMessagePrivate::CourseMessagePrivate(CourseMessage * const q)
     globalMessageNumber = MesgNum::Course;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the CourseMessagePrivate object.
+ */
 CourseMessagePrivate::~CourseMessagePrivate()
 {
 

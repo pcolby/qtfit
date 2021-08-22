@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class WorkoutSessionMessage
+ *
+ * The WorkoutSessionMessage class represents a FIT WorkoutSessionMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid WorkoutSessionMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 WorkoutSessionMessage::WorkoutSessionMessage() : FitDataMessage(new WorkoutSessionMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the WorkoutSessionMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex WorkoutSessionMessage::messageIndex() const
 {
     Q_D(const WorkoutSessionMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the WorkoutSessionMessage data message's \c sport field's current value.
+ *
+ * \return the \c sport field value.
+ */
 Sport WorkoutSessionMessage::sport() const
 {
     Q_D(const WorkoutSessionMessage);
     return d->sport;
 }
 
+/*!
+ * Returns the WorkoutSessionMessage data message's \c subSport field's current value.
+ *
+ * \return the \c subSport field value.
+ */
 SubSport WorkoutSessionMessage::subSport() const
 {
     Q_D(const WorkoutSessionMessage);
     return d->subSport;
 }
 
+/*!
+ * Returns the WorkoutSessionMessage data message's \c numValidSteps field's current value.
+ *
+ * \return the \c numValidSteps field value.
+ */
 quint16 WorkoutSessionMessage::numValidSteps() const
 {
     Q_D(const WorkoutSessionMessage);
     return d->numValidSteps;
 }
 
+/*!
+ * Returns the WorkoutSessionMessage data message's \c firstStepIndex field's current value.
+ *
+ * \return the \c firstStepIndex field value.
+ */
 quint16 WorkoutSessionMessage::firstStepIndex() const
 {
     Q_D(const WorkoutSessionMessage);
     return d->firstStepIndex;
 }
 
+/*!
+ * Returns the WorkoutSessionMessage data message's \c poolLength field's current value.
+ *
+ * \return the \c poolLength field value.
+ */
 quint16 WorkoutSessionMessage::poolLength() const
 {
     Q_D(const WorkoutSessionMessage);
     return d->poolLength;
 }
 
+/*!
+ * Returns the WorkoutSessionMessage data message's \c poolLengthUnit field's current value.
+ *
+ * \return the \c poolLengthUnit field value.
+ */
 DisplayMeasure WorkoutSessionMessage::poolLengthUnit() const
 {
     Q_D(const WorkoutSessionMessage);
     return d->poolLengthUnit;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void WorkoutSessionMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(WorkoutSessionMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c sport field to \a sport.
+ *
+ * \param sport The field value to set.
+ */
 void WorkoutSessionMessage::setSport(const Sport sport)
 {
     Q_D(WorkoutSessionMessage);
     d->sport = sport;
 }
+/*!
+ * Sets the \c subSport field to \a subSport.
+ *
+ * \param subSport The field value to set.
+ */
 void WorkoutSessionMessage::setSubSport(const SubSport subSport)
 {
     Q_D(WorkoutSessionMessage);
     d->subSport = subSport;
 }
+/*!
+ * Sets the \c numValidSteps field to \a numValidSteps.
+ *
+ * \param numValidSteps The field value to set.
+ */
 void WorkoutSessionMessage::setNumValidSteps(const quint16 numValidSteps)
 {
     Q_D(WorkoutSessionMessage);
     d->numValidSteps = numValidSteps;
 }
+/*!
+ * Sets the \c firstStepIndex field to \a firstStepIndex.
+ *
+ * \param firstStepIndex The field value to set.
+ */
 void WorkoutSessionMessage::setFirstStepIndex(const quint16 firstStepIndex)
 {
     Q_D(WorkoutSessionMessage);
     d->firstStepIndex = firstStepIndex;
 }
+/*!
+ * Sets the \c poolLength field to \a poolLength.
+ *
+ * \param poolLength The field value to set.
+ */
 void WorkoutSessionMessage::setPoolLength(const quint16 poolLength)
 {
     Q_D(WorkoutSessionMessage);
     d->poolLength = poolLength;
 }
+/*!
+ * Sets the \c poolLengthUnit field to \a poolLengthUnit.
+ *
+ * \param poolLengthUnit The field value to set.
+ */
 void WorkoutSessionMessage::setPoolLengthUnit(const DisplayMeasure poolLengthUnit)
 {
     Q_D(WorkoutSessionMessage);
     d->poolLengthUnit = poolLengthUnit;
 }
 
+/*!
+ * \internal
+ *
+ * \class WorkoutSessionMessagePrivate
+ *
+ * The WorkoutSessionMessagePrivate class provides private implementation for the WorkoutSessionMessage.
+ *
+ * \sa WorkoutSessionMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a WorkoutSessionMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 WorkoutSessionMessagePrivate::WorkoutSessionMessagePrivate(WorkoutSessionMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -126,6 +227,11 @@ WorkoutSessionMessagePrivate::WorkoutSessionMessagePrivate(WorkoutSessionMessage
     globalMessageNumber = MesgNum::WorkoutSession;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the WorkoutSessionMessagePrivate object.
+ */
 WorkoutSessionMessagePrivate::~WorkoutSessionMessagePrivate()
 {
 

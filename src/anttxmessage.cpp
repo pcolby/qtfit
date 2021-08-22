@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class AntTxMessage
+ *
+ * The AntTxMessage class represents a FIT AntTxMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid AntTxMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 AntTxMessage::AntTxMessage() : FitDataMessage(new AntTxMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the AntTxMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime AntTxMessage::timestamp() const
 {
     Q_D(const AntTxMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the AntTxMessage data message's \c fractionalTimestamp field's current value.
+ *
+ * \return the \c fractionalTimestamp field value.
+ */
 quint16 AntTxMessage::fractionalTimestamp() const
 {
     Q_D(const AntTxMessage);
     return d->fractionalTimestamp;
 }
 
+/*!
+ * Returns the AntTxMessage data message's \c mesgId field's current value.
+ *
+ * \return the \c mesgId field value.
+ */
 quint8 AntTxMessage::mesgId() const
 {
     Q_D(const AntTxMessage);
     return d->mesgId;
 }
 
+/*!
+ * Returns the AntTxMessage data message's \c mesgData field's current value.
+ *
+ * \return the \c mesgData field value.
+ */
 quint8 AntTxMessage::mesgData() const
 {
     Q_D(const AntTxMessage);
     return d->mesgData;
 }
 
+/*!
+ * Returns the AntTxMessage data message's \c channelNumber field's current value.
+ *
+ * \return the \c channelNumber field value.
+ */
 quint8 AntTxMessage::channelNumber() const
 {
     Q_D(const AntTxMessage);
     return d->channelNumber;
 }
 
+/*!
+ * Returns the AntTxMessage data message's \c data field's current value.
+ *
+ * \return the \c data field value.
+ */
 quint8 AntTxMessage::data() const
 {
     Q_D(const AntTxMessage);
     return d->data;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void AntTxMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(AntTxMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c fractionalTimestamp field to \a fractionalTimestamp.
+ *
+ * \param fractionalTimestamp The field value to set.
+ */
 void AntTxMessage::setFractionalTimestamp(const quint16 fractionalTimestamp)
 {
     Q_D(AntTxMessage);
     d->fractionalTimestamp = fractionalTimestamp;
 }
+/*!
+ * Sets the \c mesgId field to \a mesgId.
+ *
+ * \param mesgId The field value to set.
+ */
 void AntTxMessage::setMesgId(const quint8 mesgId)
 {
     Q_D(AntTxMessage);
     d->mesgId = mesgId;
 }
+/*!
+ * Sets the \c mesgData field to \a mesgData.
+ *
+ * \param mesgData The field value to set.
+ */
 void AntTxMessage::setMesgData(const quint8 mesgData)
 {
     Q_D(AntTxMessage);
     d->mesgData = mesgData;
 }
+/*!
+ * Sets the \c channelNumber field to \a channelNumber.
+ *
+ * \param channelNumber The field value to set.
+ */
 void AntTxMessage::setChannelNumber(const quint8 channelNumber)
 {
     Q_D(AntTxMessage);
     d->channelNumber = channelNumber;
 }
+/*!
+ * Sets the \c data field to \a data.
+ *
+ * \param data The field value to set.
+ */
 void AntTxMessage::setData(const quint8 data)
 {
     Q_D(AntTxMessage);
     d->data = data;
 }
 
+/*!
+ * \internal
+ *
+ * \class AntTxMessagePrivate
+ *
+ * The AntTxMessagePrivate class provides private implementation for the AntTxMessage.
+ *
+ * \sa AntTxMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a AntTxMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 AntTxMessagePrivate::AntTxMessagePrivate(AntTxMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -114,6 +205,11 @@ AntTxMessagePrivate::AntTxMessagePrivate(AntTxMessage * const q)
     globalMessageNumber = MesgNum::AntTx;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the AntTxMessagePrivate object.
+ */
 AntTxMessagePrivate::~AntTxMessagePrivate()
 {
 

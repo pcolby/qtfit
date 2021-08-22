@@ -30,177 +30,358 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class EventMessage
+ *
+ * The EventMessage class represents a FIT EventMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid EventMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 EventMessage::EventMessage() : FitDataMessage(new EventMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the EventMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime EventMessage::timestamp() const
 {
     Q_D(const EventMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the EventMessage data message's \c event field's current value.
+ *
+ * \return the \c event field value.
+ */
 Event EventMessage::event() const
 {
     Q_D(const EventMessage);
     return d->event;
 }
 
+/*!
+ * Returns the EventMessage data message's \c eventType field's current value.
+ *
+ * \return the \c eventType field value.
+ */
 EventType EventMessage::eventType() const
 {
     Q_D(const EventMessage);
     return d->eventType;
 }
 
+/*!
+ * Returns the EventMessage data message's \c data16 field's current value.
+ *
+ * \return the \c data16 field value.
+ */
 quint16 EventMessage::data16() const
 {
     Q_D(const EventMessage);
     return d->data16;
 }
 
+/*!
+ * Returns the EventMessage data message's \c data field's current value.
+ *
+ * \return the \c data field value.
+ */
 quint32 EventMessage::data() const
 {
     Q_D(const EventMessage);
     return d->data;
 }
 
+/*!
+ * Returns the EventMessage data message's \c eventGroup field's current value.
+ *
+ * \return the \c eventGroup field value.
+ */
 quint8 EventMessage::eventGroup() const
 {
     Q_D(const EventMessage);
     return d->eventGroup;
 }
 
+/*!
+ * Returns the EventMessage data message's \c score field's current value.
+ *
+ * \return the \c score field value.
+ */
 quint16 EventMessage::score() const
 {
     Q_D(const EventMessage);
     return d->score;
 }
 
+/*!
+ * Returns the EventMessage data message's \c opponentScore field's current value.
+ *
+ * \return the \c opponentScore field value.
+ */
 quint16 EventMessage::opponentScore() const
 {
     Q_D(const EventMessage);
     return d->opponentScore;
 }
 
+/*!
+ * Returns the EventMessage data message's \c frontGearNum field's current value.
+ *
+ * \return the \c frontGearNum field value.
+ */
 quint8z EventMessage::frontGearNum() const
 {
     Q_D(const EventMessage);
     return d->frontGearNum;
 }
 
+/*!
+ * Returns the EventMessage data message's \c frontGear field's current value.
+ *
+ * \return the \c frontGear field value.
+ */
 quint8z EventMessage::frontGear() const
 {
     Q_D(const EventMessage);
     return d->frontGear;
 }
 
+/*!
+ * Returns the EventMessage data message's \c rearGearNum field's current value.
+ *
+ * \return the \c rearGearNum field value.
+ */
 quint8z EventMessage::rearGearNum() const
 {
     Q_D(const EventMessage);
     return d->rearGearNum;
 }
 
+/*!
+ * Returns the EventMessage data message's \c rearGear field's current value.
+ *
+ * \return the \c rearGear field value.
+ */
 quint8z EventMessage::rearGear() const
 {
     Q_D(const EventMessage);
     return d->rearGear;
 }
 
+/*!
+ * Returns the EventMessage data message's \c deviceIndex field's current value.
+ *
+ * \return the \c deviceIndex field value.
+ */
 DeviceIndex EventMessage::deviceIndex() const
 {
     Q_D(const EventMessage);
     return d->deviceIndex;
 }
 
+/*!
+ * Returns the EventMessage data message's \c radarThreatLevelMax field's current value.
+ *
+ * \return the \c radarThreatLevelMax field value.
+ */
 RadarThreatLevelType EventMessage::radarThreatLevelMax() const
 {
     Q_D(const EventMessage);
     return d->radarThreatLevelMax;
 }
 
+/*!
+ * Returns the EventMessage data message's \c radarThreatCount field's current value.
+ *
+ * \return the \c radarThreatCount field value.
+ */
 quint8 EventMessage::radarThreatCount() const
 {
     Q_D(const EventMessage);
     return d->radarThreatCount;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void EventMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(EventMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c event field to \a event.
+ *
+ * \param event The field value to set.
+ */
 void EventMessage::setEvent(const Event event)
 {
     Q_D(EventMessage);
     d->event = event;
 }
+/*!
+ * Sets the \c eventType field to \a eventType.
+ *
+ * \param eventType The field value to set.
+ */
 void EventMessage::setEventType(const EventType eventType)
 {
     Q_D(EventMessage);
     d->eventType = eventType;
 }
+/*!
+ * Sets the \c data16 field to \a data16.
+ *
+ * \param data16 The field value to set.
+ */
 void EventMessage::setData16(const quint16 data16)
 {
     Q_D(EventMessage);
     d->data16 = data16;
 }
+/*!
+ * Sets the \c data field to \a data.
+ *
+ * \param data The field value to set.
+ */
 void EventMessage::setData(const quint32 data)
 {
     Q_D(EventMessage);
     d->data = data;
 }
+/*!
+ * Sets the \c eventGroup field to \a eventGroup.
+ *
+ * \param eventGroup The field value to set.
+ */
 void EventMessage::setEventGroup(const quint8 eventGroup)
 {
     Q_D(EventMessage);
     d->eventGroup = eventGroup;
 }
+/*!
+ * Sets the \c score field to \a score.
+ *
+ * \param score The field value to set.
+ */
 void EventMessage::setScore(const quint16 score)
 {
     Q_D(EventMessage);
     d->score = score;
 }
+/*!
+ * Sets the \c opponentScore field to \a opponentScore.
+ *
+ * \param opponentScore The field value to set.
+ */
 void EventMessage::setOpponentScore(const quint16 opponentScore)
 {
     Q_D(EventMessage);
     d->opponentScore = opponentScore;
 }
+/*!
+ * Sets the \c frontGearNum field to \a frontGearNum.
+ *
+ * \param frontGearNum The field value to set.
+ */
 void EventMessage::setFrontGearNum(const quint8z frontGearNum)
 {
     Q_D(EventMessage);
     d->frontGearNum = frontGearNum;
 }
+/*!
+ * Sets the \c frontGear field to \a frontGear.
+ *
+ * \param frontGear The field value to set.
+ */
 void EventMessage::setFrontGear(const quint8z frontGear)
 {
     Q_D(EventMessage);
     d->frontGear = frontGear;
 }
+/*!
+ * Sets the \c rearGearNum field to \a rearGearNum.
+ *
+ * \param rearGearNum The field value to set.
+ */
 void EventMessage::setRearGearNum(const quint8z rearGearNum)
 {
     Q_D(EventMessage);
     d->rearGearNum = rearGearNum;
 }
+/*!
+ * Sets the \c rearGear field to \a rearGear.
+ *
+ * \param rearGear The field value to set.
+ */
 void EventMessage::setRearGear(const quint8z rearGear)
 {
     Q_D(EventMessage);
     d->rearGear = rearGear;
 }
+/*!
+ * Sets the \c deviceIndex field to \a deviceIndex.
+ *
+ * \param deviceIndex The field value to set.
+ */
 void EventMessage::setDeviceIndex(const DeviceIndex deviceIndex)
 {
     Q_D(EventMessage);
     d->deviceIndex = deviceIndex;
 }
+/*!
+ * Sets the \c radarThreatLevelMax field to \a radarThreatLevelMax.
+ *
+ * \param radarThreatLevelMax The field value to set.
+ */
 void EventMessage::setRadarThreatLevelMax(const RadarThreatLevelType radarThreatLevelMax)
 {
     Q_D(EventMessage);
     d->radarThreatLevelMax = radarThreatLevelMax;
 }
+/*!
+ * Sets the \c radarThreatCount field to \a radarThreatCount.
+ *
+ * \param radarThreatCount The field value to set.
+ */
 void EventMessage::setRadarThreatCount(const quint8 radarThreatCount)
 {
     Q_D(EventMessage);
     d->radarThreatCount = radarThreatCount;
 }
 
+/*!
+ * \internal
+ *
+ * \class EventMessagePrivate
+ *
+ * The EventMessagePrivate class provides private implementation for the EventMessage.
+ *
+ * \sa EventMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a EventMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 EventMessagePrivate::EventMessagePrivate(EventMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -222,6 +403,11 @@ EventMessagePrivate::EventMessagePrivate(EventMessage * const q)
     globalMessageNumber = MesgNum::Event;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the EventMessagePrivate object.
+ */
 EventMessagePrivate::~EventMessagePrivate()
 {
 

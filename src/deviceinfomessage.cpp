@@ -30,210 +30,421 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class DeviceInfoMessage
+ *
+ * The DeviceInfoMessage class represents a FIT DeviceInfoMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid DeviceInfoMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 DeviceInfoMessage::DeviceInfoMessage() : FitDataMessage(new DeviceInfoMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime DeviceInfoMessage::timestamp() const
 {
     Q_D(const DeviceInfoMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c deviceIndex field's current value.
+ *
+ * \return the \c deviceIndex field value.
+ */
 DeviceIndex DeviceInfoMessage::deviceIndex() const
 {
     Q_D(const DeviceInfoMessage);
     return d->deviceIndex;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c deviceType field's current value.
+ *
+ * \return the \c deviceType field value.
+ */
 quint8 DeviceInfoMessage::deviceType() const
 {
     Q_D(const DeviceInfoMessage);
     return d->deviceType;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c manufacturer field's current value.
+ *
+ * \return the \c manufacturer field value.
+ */
 Manufacturer DeviceInfoMessage::manufacturer() const
 {
     Q_D(const DeviceInfoMessage);
     return d->manufacturer;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c serialNumber field's current value.
+ *
+ * \return the \c serialNumber field value.
+ */
 quint32z DeviceInfoMessage::serialNumber() const
 {
     Q_D(const DeviceInfoMessage);
     return d->serialNumber;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c product field's current value.
+ *
+ * \return the \c product field value.
+ */
 quint16 DeviceInfoMessage::product() const
 {
     Q_D(const DeviceInfoMessage);
     return d->product;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c softwareVersion field's current value.
+ *
+ * \return the \c softwareVersion field value.
+ */
 quint16 DeviceInfoMessage::softwareVersion() const
 {
     Q_D(const DeviceInfoMessage);
     return d->softwareVersion;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c hardwareVersion field's current value.
+ *
+ * \return the \c hardwareVersion field value.
+ */
 quint8 DeviceInfoMessage::hardwareVersion() const
 {
     Q_D(const DeviceInfoMessage);
     return d->hardwareVersion;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c cumOperatingTime field's current value.
+ *
+ * \return the \c cumOperatingTime field value.
+ */
 quint32 DeviceInfoMessage::cumOperatingTime() const
 {
     Q_D(const DeviceInfoMessage);
     return d->cumOperatingTime;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c batteryVoltage field's current value.
+ *
+ * \return the \c batteryVoltage field value.
+ */
 quint16 DeviceInfoMessage::batteryVoltage() const
 {
     Q_D(const DeviceInfoMessage);
     return d->batteryVoltage;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c batteryStatus field's current value.
+ *
+ * \return the \c batteryStatus field value.
+ */
 BatteryStatus DeviceInfoMessage::batteryStatus() const
 {
     Q_D(const DeviceInfoMessage);
     return d->batteryStatus;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c sensorPosition field's current value.
+ *
+ * \return the \c sensorPosition field value.
+ */
 BodyLocation DeviceInfoMessage::sensorPosition() const
 {
     Q_D(const DeviceInfoMessage);
     return d->sensorPosition;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c descriptor field's current value.
+ *
+ * \return the \c descriptor field value.
+ */
 QString DeviceInfoMessage::descriptor() const
 {
     Q_D(const DeviceInfoMessage);
     return d->descriptor;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c antTransmissionType field's current value.
+ *
+ * \return the \c antTransmissionType field value.
+ */
 quint8z DeviceInfoMessage::antTransmissionType() const
 {
     Q_D(const DeviceInfoMessage);
     return d->antTransmissionType;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c antDeviceNumber field's current value.
+ *
+ * \return the \c antDeviceNumber field value.
+ */
 quint16z DeviceInfoMessage::antDeviceNumber() const
 {
     Q_D(const DeviceInfoMessage);
     return d->antDeviceNumber;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c antNetwork field's current value.
+ *
+ * \return the \c antNetwork field value.
+ */
 AntNetwork DeviceInfoMessage::antNetwork() const
 {
     Q_D(const DeviceInfoMessage);
     return d->antNetwork;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c sourceType field's current value.
+ *
+ * \return the \c sourceType field value.
+ */
 SourceType DeviceInfoMessage::sourceType() const
 {
     Q_D(const DeviceInfoMessage);
     return d->sourceType;
 }
 
+/*!
+ * Returns the DeviceInfoMessage data message's \c productName field's current value.
+ *
+ * \return the \c productName field value.
+ */
 QString DeviceInfoMessage::productName() const
 {
     Q_D(const DeviceInfoMessage);
     return d->productName;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void DeviceInfoMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(DeviceInfoMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c deviceIndex field to \a deviceIndex.
+ *
+ * \param deviceIndex The field value to set.
+ */
 void DeviceInfoMessage::setDeviceIndex(const DeviceIndex deviceIndex)
 {
     Q_D(DeviceInfoMessage);
     d->deviceIndex = deviceIndex;
 }
+/*!
+ * Sets the \c deviceType field to \a deviceType.
+ *
+ * \param deviceType The field value to set.
+ */
 void DeviceInfoMessage::setDeviceType(const quint8 deviceType)
 {
     Q_D(DeviceInfoMessage);
     d->deviceType = deviceType;
 }
+/*!
+ * Sets the \c manufacturer field to \a manufacturer.
+ *
+ * \param manufacturer The field value to set.
+ */
 void DeviceInfoMessage::setManufacturer(const Manufacturer manufacturer)
 {
     Q_D(DeviceInfoMessage);
     d->manufacturer = manufacturer;
 }
+/*!
+ * Sets the \c serialNumber field to \a serialNumber.
+ *
+ * \param serialNumber The field value to set.
+ */
 void DeviceInfoMessage::setSerialNumber(const quint32z serialNumber)
 {
     Q_D(DeviceInfoMessage);
     d->serialNumber = serialNumber;
 }
+/*!
+ * Sets the \c product field to \a product.
+ *
+ * \param product The field value to set.
+ */
 void DeviceInfoMessage::setProduct(const quint16 product)
 {
     Q_D(DeviceInfoMessage);
     d->product = product;
 }
+/*!
+ * Sets the \c softwareVersion field to \a softwareVersion.
+ *
+ * \param softwareVersion The field value to set.
+ */
 void DeviceInfoMessage::setSoftwareVersion(const quint16 softwareVersion)
 {
     Q_D(DeviceInfoMessage);
     d->softwareVersion = softwareVersion;
 }
+/*!
+ * Sets the \c hardwareVersion field to \a hardwareVersion.
+ *
+ * \param hardwareVersion The field value to set.
+ */
 void DeviceInfoMessage::setHardwareVersion(const quint8 hardwareVersion)
 {
     Q_D(DeviceInfoMessage);
     d->hardwareVersion = hardwareVersion;
 }
+/*!
+ * Sets the \c cumOperatingTime field to \a cumOperatingTime.
+ *
+ * \param cumOperatingTime The field value to set.
+ */
 void DeviceInfoMessage::setCumOperatingTime(const quint32 cumOperatingTime)
 {
     Q_D(DeviceInfoMessage);
     d->cumOperatingTime = cumOperatingTime;
 }
+/*!
+ * Sets the \c batteryVoltage field to \a batteryVoltage.
+ *
+ * \param batteryVoltage The field value to set.
+ */
 void DeviceInfoMessage::setBatteryVoltage(const quint16 batteryVoltage)
 {
     Q_D(DeviceInfoMessage);
     d->batteryVoltage = batteryVoltage;
 }
+/*!
+ * Sets the \c batteryStatus field to \a batteryStatus.
+ *
+ * \param batteryStatus The field value to set.
+ */
 void DeviceInfoMessage::setBatteryStatus(const BatteryStatus batteryStatus)
 {
     Q_D(DeviceInfoMessage);
     d->batteryStatus = batteryStatus;
 }
+/*!
+ * Sets the \c sensorPosition field to \a sensorPosition.
+ *
+ * \param sensorPosition The field value to set.
+ */
 void DeviceInfoMessage::setSensorPosition(const BodyLocation sensorPosition)
 {
     Q_D(DeviceInfoMessage);
     d->sensorPosition = sensorPosition;
 }
+/*!
+ * Sets the \c descriptor field to \a descriptor.
+ *
+ * \param descriptor The field value to set.
+ */
 void DeviceInfoMessage::setDescriptor(const QString descriptor)
 {
     Q_D(DeviceInfoMessage);
     d->descriptor = descriptor;
 }
+/*!
+ * Sets the \c antTransmissionType field to \a antTransmissionType.
+ *
+ * \param antTransmissionType The field value to set.
+ */
 void DeviceInfoMessage::setAntTransmissionType(const quint8z antTransmissionType)
 {
     Q_D(DeviceInfoMessage);
     d->antTransmissionType = antTransmissionType;
 }
+/*!
+ * Sets the \c antDeviceNumber field to \a antDeviceNumber.
+ *
+ * \param antDeviceNumber The field value to set.
+ */
 void DeviceInfoMessage::setAntDeviceNumber(const quint16z antDeviceNumber)
 {
     Q_D(DeviceInfoMessage);
     d->antDeviceNumber = antDeviceNumber;
 }
+/*!
+ * Sets the \c antNetwork field to \a antNetwork.
+ *
+ * \param antNetwork The field value to set.
+ */
 void DeviceInfoMessage::setAntNetwork(const AntNetwork antNetwork)
 {
     Q_D(DeviceInfoMessage);
     d->antNetwork = antNetwork;
 }
+/*!
+ * Sets the \c sourceType field to \a sourceType.
+ *
+ * \param sourceType The field value to set.
+ */
 void DeviceInfoMessage::setSourceType(const SourceType sourceType)
 {
     Q_D(DeviceInfoMessage);
     d->sourceType = sourceType;
 }
+/*!
+ * Sets the \c productName field to \a productName.
+ *
+ * \param productName The field value to set.
+ */
 void DeviceInfoMessage::setProductName(const QString productName)
 {
     Q_D(DeviceInfoMessage);
     d->productName = productName;
 }
 
+/*!
+ * \internal
+ *
+ * \class DeviceInfoMessagePrivate
+ *
+ * The DeviceInfoMessagePrivate class provides private implementation for the DeviceInfoMessage.
+ *
+ * \sa DeviceInfoMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a DeviceInfoMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 DeviceInfoMessagePrivate::DeviceInfoMessagePrivate(DeviceInfoMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -256,6 +467,11 @@ DeviceInfoMessagePrivate::DeviceInfoMessagePrivate(DeviceInfoMessage * const q)
     globalMessageNumber = MesgNum::DeviceInfo;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the DeviceInfoMessagePrivate object.
+ */
 DeviceInfoMessagePrivate::~DeviceInfoMessagePrivate()
 {
 

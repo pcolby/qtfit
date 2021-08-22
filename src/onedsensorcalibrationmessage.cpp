@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class OneDSensorCalibrationMessage
+ *
+ * The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid OneDSensorCalibrationMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 OneDSensorCalibrationMessage::OneDSensorCalibrationMessage() : FitDataMessage(new OneDSensorCalibrationMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the OneDSensorCalibrationMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime OneDSensorCalibrationMessage::timestamp() const
 {
     Q_D(const OneDSensorCalibrationMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the OneDSensorCalibrationMessage data message's \c sensorType field's current value.
+ *
+ * \return the \c sensorType field value.
+ */
 SensorType OneDSensorCalibrationMessage::sensorType() const
 {
     Q_D(const OneDSensorCalibrationMessage);
     return d->sensorType;
 }
 
+/*!
+ * Returns the OneDSensorCalibrationMessage data message's \c calibrationFactor field's current value.
+ *
+ * \return the \c calibrationFactor field value.
+ */
 quint32 OneDSensorCalibrationMessage::calibrationFactor() const
 {
     Q_D(const OneDSensorCalibrationMessage);
     return d->calibrationFactor;
 }
 
+/*!
+ * Returns the OneDSensorCalibrationMessage data message's \c calibrationDivisor field's current value.
+ *
+ * \return the \c calibrationDivisor field value.
+ */
 quint32 OneDSensorCalibrationMessage::calibrationDivisor() const
 {
     Q_D(const OneDSensorCalibrationMessage);
     return d->calibrationDivisor;
 }
 
+/*!
+ * Returns the OneDSensorCalibrationMessage data message's \c levelShift field's current value.
+ *
+ * \return the \c levelShift field value.
+ */
 quint32 OneDSensorCalibrationMessage::levelShift() const
 {
     Q_D(const OneDSensorCalibrationMessage);
     return d->levelShift;
 }
 
+/*!
+ * Returns the OneDSensorCalibrationMessage data message's \c offsetCal field's current value.
+ *
+ * \return the \c offsetCal field value.
+ */
 qint32 OneDSensorCalibrationMessage::offsetCal() const
 {
     Q_D(const OneDSensorCalibrationMessage);
     return d->offsetCal;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void OneDSensorCalibrationMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(OneDSensorCalibrationMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c sensorType field to \a sensorType.
+ *
+ * \param sensorType The field value to set.
+ */
 void OneDSensorCalibrationMessage::setSensorType(const SensorType sensorType)
 {
     Q_D(OneDSensorCalibrationMessage);
     d->sensorType = sensorType;
 }
+/*!
+ * Sets the \c calibrationFactor field to \a calibrationFactor.
+ *
+ * \param calibrationFactor The field value to set.
+ */
 void OneDSensorCalibrationMessage::setCalibrationFactor(const quint32 calibrationFactor)
 {
     Q_D(OneDSensorCalibrationMessage);
     d->calibrationFactor = calibrationFactor;
 }
+/*!
+ * Sets the \c calibrationDivisor field to \a calibrationDivisor.
+ *
+ * \param calibrationDivisor The field value to set.
+ */
 void OneDSensorCalibrationMessage::setCalibrationDivisor(const quint32 calibrationDivisor)
 {
     Q_D(OneDSensorCalibrationMessage);
     d->calibrationDivisor = calibrationDivisor;
 }
+/*!
+ * Sets the \c levelShift field to \a levelShift.
+ *
+ * \param levelShift The field value to set.
+ */
 void OneDSensorCalibrationMessage::setLevelShift(const quint32 levelShift)
 {
     Q_D(OneDSensorCalibrationMessage);
     d->levelShift = levelShift;
 }
+/*!
+ * Sets the \c offsetCal field to \a offsetCal.
+ *
+ * \param offsetCal The field value to set.
+ */
 void OneDSensorCalibrationMessage::setOffsetCal(const qint32 offsetCal)
 {
     Q_D(OneDSensorCalibrationMessage);
     d->offsetCal = offsetCal;
 }
 
+/*!
+ * \internal
+ *
+ * \class OneDSensorCalibrationMessagePrivate
+ *
+ * The OneDSensorCalibrationMessagePrivate class provides private implementation for the OneDSensorCalibrationMessage.
+ *
+ * \sa OneDSensorCalibrationMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a OneDSensorCalibrationMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 OneDSensorCalibrationMessagePrivate::OneDSensorCalibrationMessagePrivate(OneDSensorCalibrationMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -114,6 +205,11 @@ OneDSensorCalibrationMessagePrivate::OneDSensorCalibrationMessagePrivate(OneDSen
     globalMessageNumber = MesgNum::OneDSensorCalibration;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the OneDSensorCalibrationMessagePrivate object.
+ */
 OneDSensorCalibrationMessagePrivate::~OneDSensorCalibrationMessagePrivate()
 {
 

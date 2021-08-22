@@ -30,155 +30,316 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ConnectivityMessage
+ *
+ * The ConnectivityMessage class represents a FIT ConnectivityMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ConnectivityMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ConnectivityMessage::ConnectivityMessage() : FitDataMessage(new ConnectivityMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c bluetoothEnabled field's current value.
+ *
+ * \return the \c bluetoothEnabled field value.
+ */
 bool ConnectivityMessage::bluetoothEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->bluetoothEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c bluetoothLeEnabled field's current value.
+ *
+ * \return the \c bluetoothLeEnabled field value.
+ */
 bool ConnectivityMessage::bluetoothLeEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->bluetoothLeEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c antEnabled field's current value.
+ *
+ * \return the \c antEnabled field value.
+ */
 bool ConnectivityMessage::antEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->antEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString ConnectivityMessage::name() const
 {
     Q_D(const ConnectivityMessage);
     return d->name;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c liveTrackingEnabled field's current value.
+ *
+ * \return the \c liveTrackingEnabled field value.
+ */
 bool ConnectivityMessage::liveTrackingEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->liveTrackingEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c weatherConditionsEnabled field's current value.
+ *
+ * \return the \c weatherConditionsEnabled field value.
+ */
 bool ConnectivityMessage::weatherConditionsEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->weatherConditionsEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c weatherAlertsEnabled field's current value.
+ *
+ * \return the \c weatherAlertsEnabled field value.
+ */
 bool ConnectivityMessage::weatherAlertsEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->weatherAlertsEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c autoActivityUploadEnabled field's current value.
+ *
+ * \return the \c autoActivityUploadEnabled field value.
+ */
 bool ConnectivityMessage::autoActivityUploadEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->autoActivityUploadEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c courseDownloadEnabled field's current value.
+ *
+ * \return the \c courseDownloadEnabled field value.
+ */
 bool ConnectivityMessage::courseDownloadEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->courseDownloadEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c workoutDownloadEnabled field's current value.
+ *
+ * \return the \c workoutDownloadEnabled field value.
+ */
 bool ConnectivityMessage::workoutDownloadEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->workoutDownloadEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c gpsEphemerisDownloadEnabled field's current value.
+ *
+ * \return the \c gpsEphemerisDownloadEnabled field value.
+ */
 bool ConnectivityMessage::gpsEphemerisDownloadEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->gpsEphemerisDownloadEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c incidentDetectionEnabled field's current value.
+ *
+ * \return the \c incidentDetectionEnabled field value.
+ */
 bool ConnectivityMessage::incidentDetectionEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->incidentDetectionEnabled;
 }
 
+/*!
+ * Returns the ConnectivityMessage data message's \c grouptrackEnabled field's current value.
+ *
+ * \return the \c grouptrackEnabled field value.
+ */
 bool ConnectivityMessage::grouptrackEnabled() const
 {
     Q_D(const ConnectivityMessage);
     return d->grouptrackEnabled;
 }
 
+/*!
+ * Sets the \c bluetoothEnabled field to \a bluetoothEnabled.
+ *
+ * \param bluetoothEnabled The field value to set.
+ */
 void ConnectivityMessage::setBluetoothEnabled(const bool bluetoothEnabled)
 {
     Q_D(ConnectivityMessage);
     d->bluetoothEnabled = bluetoothEnabled;
 }
+/*!
+ * Sets the \c bluetoothLeEnabled field to \a bluetoothLeEnabled.
+ *
+ * \param bluetoothLeEnabled The field value to set.
+ */
 void ConnectivityMessage::setBluetoothLeEnabled(const bool bluetoothLeEnabled)
 {
     Q_D(ConnectivityMessage);
     d->bluetoothLeEnabled = bluetoothLeEnabled;
 }
+/*!
+ * Sets the \c antEnabled field to \a antEnabled.
+ *
+ * \param antEnabled The field value to set.
+ */
 void ConnectivityMessage::setAntEnabled(const bool antEnabled)
 {
     Q_D(ConnectivityMessage);
     d->antEnabled = antEnabled;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void ConnectivityMessage::setName(const QString name)
 {
     Q_D(ConnectivityMessage);
     d->name = name;
 }
+/*!
+ * Sets the \c liveTrackingEnabled field to \a liveTrackingEnabled.
+ *
+ * \param liveTrackingEnabled The field value to set.
+ */
 void ConnectivityMessage::setLiveTrackingEnabled(const bool liveTrackingEnabled)
 {
     Q_D(ConnectivityMessage);
     d->liveTrackingEnabled = liveTrackingEnabled;
 }
+/*!
+ * Sets the \c weatherConditionsEnabled field to \a weatherConditionsEnabled.
+ *
+ * \param weatherConditionsEnabled The field value to set.
+ */
 void ConnectivityMessage::setWeatherConditionsEnabled(const bool weatherConditionsEnabled)
 {
     Q_D(ConnectivityMessage);
     d->weatherConditionsEnabled = weatherConditionsEnabled;
 }
+/*!
+ * Sets the \c weatherAlertsEnabled field to \a weatherAlertsEnabled.
+ *
+ * \param weatherAlertsEnabled The field value to set.
+ */
 void ConnectivityMessage::setWeatherAlertsEnabled(const bool weatherAlertsEnabled)
 {
     Q_D(ConnectivityMessage);
     d->weatherAlertsEnabled = weatherAlertsEnabled;
 }
+/*!
+ * Sets the \c autoActivityUploadEnabled field to \a autoActivityUploadEnabled.
+ *
+ * \param autoActivityUploadEnabled The field value to set.
+ */
 void ConnectivityMessage::setAutoActivityUploadEnabled(const bool autoActivityUploadEnabled)
 {
     Q_D(ConnectivityMessage);
     d->autoActivityUploadEnabled = autoActivityUploadEnabled;
 }
+/*!
+ * Sets the \c courseDownloadEnabled field to \a courseDownloadEnabled.
+ *
+ * \param courseDownloadEnabled The field value to set.
+ */
 void ConnectivityMessage::setCourseDownloadEnabled(const bool courseDownloadEnabled)
 {
     Q_D(ConnectivityMessage);
     d->courseDownloadEnabled = courseDownloadEnabled;
 }
+/*!
+ * Sets the \c workoutDownloadEnabled field to \a workoutDownloadEnabled.
+ *
+ * \param workoutDownloadEnabled The field value to set.
+ */
 void ConnectivityMessage::setWorkoutDownloadEnabled(const bool workoutDownloadEnabled)
 {
     Q_D(ConnectivityMessage);
     d->workoutDownloadEnabled = workoutDownloadEnabled;
 }
+/*!
+ * Sets the \c gpsEphemerisDownloadEnabled field to \a gpsEphemerisDownloadEnabled.
+ *
+ * \param gpsEphemerisDownloadEnabled The field value to set.
+ */
 void ConnectivityMessage::setGpsEphemerisDownloadEnabled(const bool gpsEphemerisDownloadEnabled)
 {
     Q_D(ConnectivityMessage);
     d->gpsEphemerisDownloadEnabled = gpsEphemerisDownloadEnabled;
 }
+/*!
+ * Sets the \c incidentDetectionEnabled field to \a incidentDetectionEnabled.
+ *
+ * \param incidentDetectionEnabled The field value to set.
+ */
 void ConnectivityMessage::setIncidentDetectionEnabled(const bool incidentDetectionEnabled)
 {
     Q_D(ConnectivityMessage);
     d->incidentDetectionEnabled = incidentDetectionEnabled;
 }
+/*!
+ * Sets the \c grouptrackEnabled field to \a grouptrackEnabled.
+ *
+ * \param grouptrackEnabled The field value to set.
+ */
 void ConnectivityMessage::setGrouptrackEnabled(const bool grouptrackEnabled)
 {
     Q_D(ConnectivityMessage);
     d->grouptrackEnabled = grouptrackEnabled;
 }
 
+/*!
+ * \internal
+ *
+ * \class ConnectivityMessagePrivate
+ *
+ * The ConnectivityMessagePrivate class provides private implementation for the ConnectivityMessage.
+ *
+ * \sa ConnectivityMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ConnectivityMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ConnectivityMessagePrivate::ConnectivityMessagePrivate(ConnectivityMessage * const q)
   : FitDataMessagePrivate(q)
   , bluetoothEnabled(static_cast<bool>(-1))
@@ -197,6 +358,11 @@ ConnectivityMessagePrivate::ConnectivityMessagePrivate(ConnectivityMessage * con
     globalMessageNumber = MesgNum::Connectivity;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ConnectivityMessagePrivate object.
+ */
 ConnectivityMessagePrivate::~ConnectivityMessagePrivate()
 {
 

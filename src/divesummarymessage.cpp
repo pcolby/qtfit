@@ -30,155 +30,316 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class DiveSummaryMessage
+ *
+ * The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid DiveSummaryMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 DiveSummaryMessage::DiveSummaryMessage() : FitDataMessage(new DiveSummaryMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime DiveSummaryMessage::timestamp() const
 {
     Q_D(const DiveSummaryMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c referenceMesg field's current value.
+ *
+ * \return the \c referenceMesg field value.
+ */
 MesgNum DiveSummaryMessage::referenceMesg() const
 {
     Q_D(const DiveSummaryMessage);
     return d->referenceMesg;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c referenceIndex field's current value.
+ *
+ * \return the \c referenceIndex field value.
+ */
 MessageIndex DiveSummaryMessage::referenceIndex() const
 {
     Q_D(const DiveSummaryMessage);
     return d->referenceIndex;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c avgDepth field's current value.
+ *
+ * \return the \c avgDepth field value.
+ */
 quint32 DiveSummaryMessage::avgDepth() const
 {
     Q_D(const DiveSummaryMessage);
     return d->avgDepth;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c maxDepth field's current value.
+ *
+ * \return the \c maxDepth field value.
+ */
 quint32 DiveSummaryMessage::maxDepth() const
 {
     Q_D(const DiveSummaryMessage);
     return d->maxDepth;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c surfaceInterval field's current value.
+ *
+ * \return the \c surfaceInterval field value.
+ */
 quint32 DiveSummaryMessage::surfaceInterval() const
 {
     Q_D(const DiveSummaryMessage);
     return d->surfaceInterval;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c startCns field's current value.
+ *
+ * \return the \c startCns field value.
+ */
 quint8 DiveSummaryMessage::startCns() const
 {
     Q_D(const DiveSummaryMessage);
     return d->startCns;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c endCns field's current value.
+ *
+ * \return the \c endCns field value.
+ */
 quint8 DiveSummaryMessage::endCns() const
 {
     Q_D(const DiveSummaryMessage);
     return d->endCns;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c startN2 field's current value.
+ *
+ * \return the \c startN2 field value.
+ */
 quint16 DiveSummaryMessage::startN2() const
 {
     Q_D(const DiveSummaryMessage);
     return d->startN2;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c endN2 field's current value.
+ *
+ * \return the \c endN2 field value.
+ */
 quint16 DiveSummaryMessage::endN2() const
 {
     Q_D(const DiveSummaryMessage);
     return d->endN2;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c o2Toxicity field's current value.
+ *
+ * \return the \c o2Toxicity field value.
+ */
 quint16 DiveSummaryMessage::o2Toxicity() const
 {
     Q_D(const DiveSummaryMessage);
     return d->o2Toxicity;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c diveNumber field's current value.
+ *
+ * \return the \c diveNumber field value.
+ */
 quint32 DiveSummaryMessage::diveNumber() const
 {
     Q_D(const DiveSummaryMessage);
     return d->diveNumber;
 }
 
+/*!
+ * Returns the DiveSummaryMessage data message's \c bottomTime field's current value.
+ *
+ * \return the \c bottomTime field value.
+ */
 quint32 DiveSummaryMessage::bottomTime() const
 {
     Q_D(const DiveSummaryMessage);
     return d->bottomTime;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void DiveSummaryMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(DiveSummaryMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c referenceMesg field to \a referenceMesg.
+ *
+ * \param referenceMesg The field value to set.
+ */
 void DiveSummaryMessage::setReferenceMesg(const MesgNum referenceMesg)
 {
     Q_D(DiveSummaryMessage);
     d->referenceMesg = referenceMesg;
 }
+/*!
+ * Sets the \c referenceIndex field to \a referenceIndex.
+ *
+ * \param referenceIndex The field value to set.
+ */
 void DiveSummaryMessage::setReferenceIndex(const MessageIndex referenceIndex)
 {
     Q_D(DiveSummaryMessage);
     d->referenceIndex = referenceIndex;
 }
+/*!
+ * Sets the \c avgDepth field to \a avgDepth.
+ *
+ * \param avgDepth The field value to set.
+ */
 void DiveSummaryMessage::setAvgDepth(const quint32 avgDepth)
 {
     Q_D(DiveSummaryMessage);
     d->avgDepth = avgDepth;
 }
+/*!
+ * Sets the \c maxDepth field to \a maxDepth.
+ *
+ * \param maxDepth The field value to set.
+ */
 void DiveSummaryMessage::setMaxDepth(const quint32 maxDepth)
 {
     Q_D(DiveSummaryMessage);
     d->maxDepth = maxDepth;
 }
+/*!
+ * Sets the \c surfaceInterval field to \a surfaceInterval.
+ *
+ * \param surfaceInterval The field value to set.
+ */
 void DiveSummaryMessage::setSurfaceInterval(const quint32 surfaceInterval)
 {
     Q_D(DiveSummaryMessage);
     d->surfaceInterval = surfaceInterval;
 }
+/*!
+ * Sets the \c startCns field to \a startCns.
+ *
+ * \param startCns The field value to set.
+ */
 void DiveSummaryMessage::setStartCns(const quint8 startCns)
 {
     Q_D(DiveSummaryMessage);
     d->startCns = startCns;
 }
+/*!
+ * Sets the \c endCns field to \a endCns.
+ *
+ * \param endCns The field value to set.
+ */
 void DiveSummaryMessage::setEndCns(const quint8 endCns)
 {
     Q_D(DiveSummaryMessage);
     d->endCns = endCns;
 }
+/*!
+ * Sets the \c startN2 field to \a startN2.
+ *
+ * \param startN2 The field value to set.
+ */
 void DiveSummaryMessage::setStartN2(const quint16 startN2)
 {
     Q_D(DiveSummaryMessage);
     d->startN2 = startN2;
 }
+/*!
+ * Sets the \c endN2 field to \a endN2.
+ *
+ * \param endN2 The field value to set.
+ */
 void DiveSummaryMessage::setEndN2(const quint16 endN2)
 {
     Q_D(DiveSummaryMessage);
     d->endN2 = endN2;
 }
+/*!
+ * Sets the \c o2Toxicity field to \a o2Toxicity.
+ *
+ * \param o2Toxicity The field value to set.
+ */
 void DiveSummaryMessage::setO2Toxicity(const quint16 o2Toxicity)
 {
     Q_D(DiveSummaryMessage);
     d->o2Toxicity = o2Toxicity;
 }
+/*!
+ * Sets the \c diveNumber field to \a diveNumber.
+ *
+ * \param diveNumber The field value to set.
+ */
 void DiveSummaryMessage::setDiveNumber(const quint32 diveNumber)
 {
     Q_D(DiveSummaryMessage);
     d->diveNumber = diveNumber;
 }
+/*!
+ * Sets the \c bottomTime field to \a bottomTime.
+ *
+ * \param bottomTime The field value to set.
+ */
 void DiveSummaryMessage::setBottomTime(const quint32 bottomTime)
 {
     Q_D(DiveSummaryMessage);
     d->bottomTime = bottomTime;
 }
 
+/*!
+ * \internal
+ *
+ * \class DiveSummaryMessagePrivate
+ *
+ * The DiveSummaryMessagePrivate class provides private implementation for the DiveSummaryMessage.
+ *
+ * \sa DiveSummaryMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a DiveSummaryMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -198,6 +359,11 @@ DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const 
     globalMessageNumber = MesgNum::DiveSummary;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the DiveSummaryMessagePrivate object.
+ */
 DiveSummaryMessagePrivate::~DiveSummaryMessagePrivate()
 {
 

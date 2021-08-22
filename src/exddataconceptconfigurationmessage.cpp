@@ -30,133 +30,274 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ExdDataConceptConfigurationMessage
+ *
+ * The ExdDataConceptConfigurationMessage class represents a FIT ExdDataConceptConfigurationMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ExdDataConceptConfigurationMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ExdDataConceptConfigurationMessage::ExdDataConceptConfigurationMessage() : FitDataMessage(new ExdDataConceptConfigurationMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c screenIndex field's current value.
+ *
+ * \return the \c screenIndex field value.
+ */
 quint8 ExdDataConceptConfigurationMessage::screenIndex() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->screenIndex;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c conceptField field's current value.
+ *
+ * \return the \c conceptField field value.
+ */
 quint8 ExdDataConceptConfigurationMessage::conceptField() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->conceptField;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c fieldId field's current value.
+ *
+ * \return the \c fieldId field value.
+ */
 quint8 ExdDataConceptConfigurationMessage::fieldId() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->fieldId;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c conceptIndex field's current value.
+ *
+ * \return the \c conceptIndex field value.
+ */
 quint8 ExdDataConceptConfigurationMessage::conceptIndex() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->conceptIndex;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c dataPage field's current value.
+ *
+ * \return the \c dataPage field value.
+ */
 quint8 ExdDataConceptConfigurationMessage::dataPage() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->dataPage;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c conceptKey field's current value.
+ *
+ * \return the \c conceptKey field value.
+ */
 quint8 ExdDataConceptConfigurationMessage::conceptKey() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->conceptKey;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c scaling field's current value.
+ *
+ * \return the \c scaling field value.
+ */
 quint8 ExdDataConceptConfigurationMessage::scaling() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->scaling;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c dataUnits field's current value.
+ *
+ * \return the \c dataUnits field value.
+ */
 ExdDataUnits ExdDataConceptConfigurationMessage::dataUnits() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->dataUnits;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c qualifier field's current value.
+ *
+ * \return the \c qualifier field value.
+ */
 ExdQualifiers ExdDataConceptConfigurationMessage::qualifier() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->qualifier;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c descriptor field's current value.
+ *
+ * \return the \c descriptor field value.
+ */
 ExdDescriptors ExdDataConceptConfigurationMessage::descriptor() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->descriptor;
 }
 
+/*!
+ * Returns the ExdDataConceptConfigurationMessage data message's \c isSigned field's current value.
+ *
+ * \return the \c isSigned field value.
+ */
 bool ExdDataConceptConfigurationMessage::isSigned() const
 {
     Q_D(const ExdDataConceptConfigurationMessage);
     return d->isSigned;
 }
 
+/*!
+ * Sets the \c screenIndex field to \a screenIndex.
+ *
+ * \param screenIndex The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setScreenIndex(const quint8 screenIndex)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->screenIndex = screenIndex;
 }
+/*!
+ * Sets the \c conceptField field to \a conceptField.
+ *
+ * \param conceptField The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setConceptField(const quint8 conceptField)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->conceptField = conceptField;
 }
+/*!
+ * Sets the \c fieldId field to \a fieldId.
+ *
+ * \param fieldId The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setFieldId(const quint8 fieldId)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->fieldId = fieldId;
 }
+/*!
+ * Sets the \c conceptIndex field to \a conceptIndex.
+ *
+ * \param conceptIndex The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setConceptIndex(const quint8 conceptIndex)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->conceptIndex = conceptIndex;
 }
+/*!
+ * Sets the \c dataPage field to \a dataPage.
+ *
+ * \param dataPage The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setDataPage(const quint8 dataPage)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->dataPage = dataPage;
 }
+/*!
+ * Sets the \c conceptKey field to \a conceptKey.
+ *
+ * \param conceptKey The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setConceptKey(const quint8 conceptKey)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->conceptKey = conceptKey;
 }
+/*!
+ * Sets the \c scaling field to \a scaling.
+ *
+ * \param scaling The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setScaling(const quint8 scaling)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->scaling = scaling;
 }
+/*!
+ * Sets the \c dataUnits field to \a dataUnits.
+ *
+ * \param dataUnits The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setDataUnits(const ExdDataUnits dataUnits)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->dataUnits = dataUnits;
 }
+/*!
+ * Sets the \c qualifier field to \a qualifier.
+ *
+ * \param qualifier The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setQualifier(const ExdQualifiers qualifier)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->qualifier = qualifier;
 }
+/*!
+ * Sets the \c descriptor field to \a descriptor.
+ *
+ * \param descriptor The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setDescriptor(const ExdDescriptors descriptor)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->descriptor = descriptor;
 }
+/*!
+ * Sets the \c isSigned field to \a isSigned.
+ *
+ * \param isSigned The field value to set.
+ */
 void ExdDataConceptConfigurationMessage::setIsSigned(const bool isSigned)
 {
     Q_D(ExdDataConceptConfigurationMessage);
     d->isSigned = isSigned;
 }
 
+/*!
+ * \internal
+ *
+ * \class ExdDataConceptConfigurationMessagePrivate
+ *
+ * The ExdDataConceptConfigurationMessagePrivate class provides private implementation for the ExdDataConceptConfigurationMessage.
+ *
+ * \sa ExdDataConceptConfigurationMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ExdDataConceptConfigurationMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ExdDataConceptConfigurationMessagePrivate::ExdDataConceptConfigurationMessagePrivate(ExdDataConceptConfigurationMessage * const q)
   : FitDataMessagePrivate(q)
   , screenIndex(0xFF)
@@ -174,6 +315,11 @@ ExdDataConceptConfigurationMessagePrivate::ExdDataConceptConfigurationMessagePri
     globalMessageNumber = MesgNum::ExdDataConceptConfiguration;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ExdDataConceptConfigurationMessagePrivate object.
+ */
 ExdDataConceptConfigurationMessagePrivate::~ExdDataConceptConfigurationMessagePrivate()
 {
 

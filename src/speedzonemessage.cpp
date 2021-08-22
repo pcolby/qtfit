@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SpeedZoneMessage
+ *
+ * The SpeedZoneMessage class represents a FIT SpeedZoneMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SpeedZoneMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SpeedZoneMessage::SpeedZoneMessage() : FitDataMessage(new SpeedZoneMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SpeedZoneMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex SpeedZoneMessage::messageIndex() const
 {
     Q_D(const SpeedZoneMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the SpeedZoneMessage data message's \c highValue field's current value.
+ *
+ * \return the \c highValue field value.
+ */
 quint16 SpeedZoneMessage::highValue() const
 {
     Q_D(const SpeedZoneMessage);
     return d->highValue;
 }
 
+/*!
+ * Returns the SpeedZoneMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString SpeedZoneMessage::name() const
 {
     Q_D(const SpeedZoneMessage);
     return d->name;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void SpeedZoneMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(SpeedZoneMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c highValue field to \a highValue.
+ *
+ * \param highValue The field value to set.
+ */
 void SpeedZoneMessage::setHighValue(const quint16 highValue)
 {
     Q_D(SpeedZoneMessage);
     d->highValue = highValue;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void SpeedZoneMessage::setName(const QString name)
 {
     Q_D(SpeedZoneMessage);
     d->name = name;
 }
 
+/*!
+ * \internal
+ *
+ * \class SpeedZoneMessagePrivate
+ *
+ * The SpeedZoneMessagePrivate class provides private implementation for the SpeedZoneMessage.
+ *
+ * \sa SpeedZoneMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SpeedZoneMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SpeedZoneMessagePrivate::SpeedZoneMessagePrivate(SpeedZoneMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -77,6 +138,11 @@ SpeedZoneMessagePrivate::SpeedZoneMessagePrivate(SpeedZoneMessage * const q)
     globalMessageNumber = MesgNum::SpeedZone;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SpeedZoneMessagePrivate object.
+ */
 SpeedZoneMessagePrivate::~SpeedZoneMessagePrivate()
 {
 

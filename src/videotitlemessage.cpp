@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class VideoTitleMessage
+ *
+ * The VideoTitleMessage class represents a FIT VideoTitleMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid VideoTitleMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 VideoTitleMessage::VideoTitleMessage() : FitDataMessage(new VideoTitleMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the VideoTitleMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex VideoTitleMessage::messageIndex() const
 {
     Q_D(const VideoTitleMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the VideoTitleMessage data message's \c messageCount field's current value.
+ *
+ * \return the \c messageCount field value.
+ */
 quint16 VideoTitleMessage::messageCount() const
 {
     Q_D(const VideoTitleMessage);
     return d->messageCount;
 }
 
+/*!
+ * Returns the VideoTitleMessage data message's \c text field's current value.
+ *
+ * \return the \c text field value.
+ */
 QString VideoTitleMessage::text() const
 {
     Q_D(const VideoTitleMessage);
     return d->text;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void VideoTitleMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(VideoTitleMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c messageCount field to \a messageCount.
+ *
+ * \param messageCount The field value to set.
+ */
 void VideoTitleMessage::setMessageCount(const quint16 messageCount)
 {
     Q_D(VideoTitleMessage);
     d->messageCount = messageCount;
 }
+/*!
+ * Sets the \c text field to \a text.
+ *
+ * \param text The field value to set.
+ */
 void VideoTitleMessage::setText(const QString text)
 {
     Q_D(VideoTitleMessage);
     d->text = text;
 }
 
+/*!
+ * \internal
+ *
+ * \class VideoTitleMessagePrivate
+ *
+ * The VideoTitleMessagePrivate class provides private implementation for the VideoTitleMessage.
+ *
+ * \sa VideoTitleMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a VideoTitleMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 VideoTitleMessagePrivate::VideoTitleMessagePrivate(VideoTitleMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -77,6 +138,11 @@ VideoTitleMessagePrivate::VideoTitleMessagePrivate(VideoTitleMessage * const q)
     globalMessageNumber = MesgNum::VideoTitle;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the VideoTitleMessagePrivate object.
+ */
 VideoTitleMessagePrivate::~VideoTitleMessagePrivate()
 {
 

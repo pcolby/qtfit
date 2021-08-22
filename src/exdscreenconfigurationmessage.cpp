@@ -30,56 +30,127 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ExdScreenConfigurationMessage
+ *
+ * The ExdScreenConfigurationMessage class represents a FIT ExdScreenConfigurationMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ExdScreenConfigurationMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ExdScreenConfigurationMessage::ExdScreenConfigurationMessage() : FitDataMessage(new ExdScreenConfigurationMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ExdScreenConfigurationMessage data message's \c screenIndex field's current value.
+ *
+ * \return the \c screenIndex field value.
+ */
 quint8 ExdScreenConfigurationMessage::screenIndex() const
 {
     Q_D(const ExdScreenConfigurationMessage);
     return d->screenIndex;
 }
 
+/*!
+ * Returns the ExdScreenConfigurationMessage data message's \c fieldCount field's current value.
+ *
+ * \return the \c fieldCount field value.
+ */
 quint8 ExdScreenConfigurationMessage::fieldCount() const
 {
     Q_D(const ExdScreenConfigurationMessage);
     return d->fieldCount;
 }
 
+/*!
+ * Returns the ExdScreenConfigurationMessage data message's \c layout field's current value.
+ *
+ * \return the \c layout field value.
+ */
 ExdLayout ExdScreenConfigurationMessage::layout() const
 {
     Q_D(const ExdScreenConfigurationMessage);
     return d->layout;
 }
 
+/*!
+ * Returns the ExdScreenConfigurationMessage data message's \c screenEnabled field's current value.
+ *
+ * \return the \c screenEnabled field value.
+ */
 bool ExdScreenConfigurationMessage::screenEnabled() const
 {
     Q_D(const ExdScreenConfigurationMessage);
     return d->screenEnabled;
 }
 
+/*!
+ * Sets the \c screenIndex field to \a screenIndex.
+ *
+ * \param screenIndex The field value to set.
+ */
 void ExdScreenConfigurationMessage::setScreenIndex(const quint8 screenIndex)
 {
     Q_D(ExdScreenConfigurationMessage);
     d->screenIndex = screenIndex;
 }
+/*!
+ * Sets the \c fieldCount field to \a fieldCount.
+ *
+ * \param fieldCount The field value to set.
+ */
 void ExdScreenConfigurationMessage::setFieldCount(const quint8 fieldCount)
 {
     Q_D(ExdScreenConfigurationMessage);
     d->fieldCount = fieldCount;
 }
+/*!
+ * Sets the \c layout field to \a layout.
+ *
+ * \param layout The field value to set.
+ */
 void ExdScreenConfigurationMessage::setLayout(const ExdLayout layout)
 {
     Q_D(ExdScreenConfigurationMessage);
     d->layout = layout;
 }
+/*!
+ * Sets the \c screenEnabled field to \a screenEnabled.
+ *
+ * \param screenEnabled The field value to set.
+ */
 void ExdScreenConfigurationMessage::setScreenEnabled(const bool screenEnabled)
 {
     Q_D(ExdScreenConfigurationMessage);
     d->screenEnabled = screenEnabled;
 }
 
+/*!
+ * \internal
+ *
+ * \class ExdScreenConfigurationMessagePrivate
+ *
+ * The ExdScreenConfigurationMessagePrivate class provides private implementation for the ExdScreenConfigurationMessage.
+ *
+ * \sa ExdScreenConfigurationMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ExdScreenConfigurationMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ExdScreenConfigurationMessagePrivate::ExdScreenConfigurationMessagePrivate(ExdScreenConfigurationMessage * const q)
   : FitDataMessagePrivate(q)
   , screenIndex(0xFF)
@@ -90,6 +161,11 @@ ExdScreenConfigurationMessagePrivate::ExdScreenConfigurationMessagePrivate(ExdSc
     globalMessageNumber = MesgNum::ExdScreenConfiguration;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ExdScreenConfigurationMessagePrivate object.
+ */
 ExdScreenConfigurationMessagePrivate::~ExdScreenConfigurationMessagePrivate()
 {
 

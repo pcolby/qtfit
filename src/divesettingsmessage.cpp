@@ -30,254 +30,505 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class DiveSettingsMessage
+ *
+ * The DiveSettingsMessage class represents a FIT DiveSettingsMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid DiveSettingsMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 DiveSettingsMessage::DiveSettingsMessage() : FitDataMessage(new DiveSettingsMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex DiveSettingsMessage::messageIndex() const
 {
     Q_D(const DiveSettingsMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString DiveSettingsMessage::name() const
 {
     Q_D(const DiveSettingsMessage);
     return d->name;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c model field's current value.
+ *
+ * \return the \c model field value.
+ */
 TissueModelType DiveSettingsMessage::model() const
 {
     Q_D(const DiveSettingsMessage);
     return d->model;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c gfLow field's current value.
+ *
+ * \return the \c gfLow field value.
+ */
 quint8 DiveSettingsMessage::gfLow() const
 {
     Q_D(const DiveSettingsMessage);
     return d->gfLow;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c gfHigh field's current value.
+ *
+ * \return the \c gfHigh field value.
+ */
 quint8 DiveSettingsMessage::gfHigh() const
 {
     Q_D(const DiveSettingsMessage);
     return d->gfHigh;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c waterType field's current value.
+ *
+ * \return the \c waterType field value.
+ */
 WaterType DiveSettingsMessage::waterType() const
 {
     Q_D(const DiveSettingsMessage);
     return d->waterType;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c waterDensity field's current value.
+ *
+ * \return the \c waterDensity field value.
+ */
 float DiveSettingsMessage::waterDensity() const
 {
     Q_D(const DiveSettingsMessage);
     return d->waterDensity;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c po2Warn field's current value.
+ *
+ * \return the \c po2Warn field value.
+ */
 quint8 DiveSettingsMessage::po2Warn() const
 {
     Q_D(const DiveSettingsMessage);
     return d->po2Warn;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c po2Critical field's current value.
+ *
+ * \return the \c po2Critical field value.
+ */
 quint8 DiveSettingsMessage::po2Critical() const
 {
     Q_D(const DiveSettingsMessage);
     return d->po2Critical;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c po2Deco field's current value.
+ *
+ * \return the \c po2Deco field value.
+ */
 quint8 DiveSettingsMessage::po2Deco() const
 {
     Q_D(const DiveSettingsMessage);
     return d->po2Deco;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c safetyStopEnabled field's current value.
+ *
+ * \return the \c safetyStopEnabled field value.
+ */
 bool DiveSettingsMessage::safetyStopEnabled() const
 {
     Q_D(const DiveSettingsMessage);
     return d->safetyStopEnabled;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c bottomDepth field's current value.
+ *
+ * \return the \c bottomDepth field value.
+ */
 float DiveSettingsMessage::bottomDepth() const
 {
     Q_D(const DiveSettingsMessage);
     return d->bottomDepth;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c bottomTime field's current value.
+ *
+ * \return the \c bottomTime field value.
+ */
 quint32 DiveSettingsMessage::bottomTime() const
 {
     Q_D(const DiveSettingsMessage);
     return d->bottomTime;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c apneaCountdownEnabled field's current value.
+ *
+ * \return the \c apneaCountdownEnabled field value.
+ */
 bool DiveSettingsMessage::apneaCountdownEnabled() const
 {
     Q_D(const DiveSettingsMessage);
     return d->apneaCountdownEnabled;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c apneaCountdownTime field's current value.
+ *
+ * \return the \c apneaCountdownTime field value.
+ */
 quint32 DiveSettingsMessage::apneaCountdownTime() const
 {
     Q_D(const DiveSettingsMessage);
     return d->apneaCountdownTime;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c backlightMode field's current value.
+ *
+ * \return the \c backlightMode field value.
+ */
 DiveBacklightMode DiveSettingsMessage::backlightMode() const
 {
     Q_D(const DiveSettingsMessage);
     return d->backlightMode;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c backlightBrightness field's current value.
+ *
+ * \return the \c backlightBrightness field value.
+ */
 quint8 DiveSettingsMessage::backlightBrightness() const
 {
     Q_D(const DiveSettingsMessage);
     return d->backlightBrightness;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c backlightTimeout field's current value.
+ *
+ * \return the \c backlightTimeout field value.
+ */
 BacklightTimeout DiveSettingsMessage::backlightTimeout() const
 {
     Q_D(const DiveSettingsMessage);
     return d->backlightTimeout;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c repeatDiveInterval field's current value.
+ *
+ * \return the \c repeatDiveInterval field value.
+ */
 quint16 DiveSettingsMessage::repeatDiveInterval() const
 {
     Q_D(const DiveSettingsMessage);
     return d->repeatDiveInterval;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c safetyStopTime field's current value.
+ *
+ * \return the \c safetyStopTime field value.
+ */
 quint16 DiveSettingsMessage::safetyStopTime() const
 {
     Q_D(const DiveSettingsMessage);
     return d->safetyStopTime;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c heartRateSourceType field's current value.
+ *
+ * \return the \c heartRateSourceType field value.
+ */
 SourceType DiveSettingsMessage::heartRateSourceType() const
 {
     Q_D(const DiveSettingsMessage);
     return d->heartRateSourceType;
 }
 
+/*!
+ * Returns the DiveSettingsMessage data message's \c heartRateSource field's current value.
+ *
+ * \return the \c heartRateSource field value.
+ */
 quint8 DiveSettingsMessage::heartRateSource() const
 {
     Q_D(const DiveSettingsMessage);
     return d->heartRateSource;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void DiveSettingsMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(DiveSettingsMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void DiveSettingsMessage::setName(const QString name)
 {
     Q_D(DiveSettingsMessage);
     d->name = name;
 }
+/*!
+ * Sets the \c model field to \a model.
+ *
+ * \param model The field value to set.
+ */
 void DiveSettingsMessage::setModel(const TissueModelType model)
 {
     Q_D(DiveSettingsMessage);
     d->model = model;
 }
+/*!
+ * Sets the \c gfLow field to \a gfLow.
+ *
+ * \param gfLow The field value to set.
+ */
 void DiveSettingsMessage::setGfLow(const quint8 gfLow)
 {
     Q_D(DiveSettingsMessage);
     d->gfLow = gfLow;
 }
+/*!
+ * Sets the \c gfHigh field to \a gfHigh.
+ *
+ * \param gfHigh The field value to set.
+ */
 void DiveSettingsMessage::setGfHigh(const quint8 gfHigh)
 {
     Q_D(DiveSettingsMessage);
     d->gfHigh = gfHigh;
 }
+/*!
+ * Sets the \c waterType field to \a waterType.
+ *
+ * \param waterType The field value to set.
+ */
 void DiveSettingsMessage::setWaterType(const WaterType waterType)
 {
     Q_D(DiveSettingsMessage);
     d->waterType = waterType;
 }
+/*!
+ * Sets the \c waterDensity field to \a waterDensity.
+ *
+ * \param waterDensity The field value to set.
+ */
 void DiveSettingsMessage::setWaterDensity(const float waterDensity)
 {
     Q_D(DiveSettingsMessage);
     d->waterDensity = waterDensity;
 }
+/*!
+ * Sets the \c po2Warn field to \a po2Warn.
+ *
+ * \param po2Warn The field value to set.
+ */
 void DiveSettingsMessage::setPo2Warn(const quint8 po2Warn)
 {
     Q_D(DiveSettingsMessage);
     d->po2Warn = po2Warn;
 }
+/*!
+ * Sets the \c po2Critical field to \a po2Critical.
+ *
+ * \param po2Critical The field value to set.
+ */
 void DiveSettingsMessage::setPo2Critical(const quint8 po2Critical)
 {
     Q_D(DiveSettingsMessage);
     d->po2Critical = po2Critical;
 }
+/*!
+ * Sets the \c po2Deco field to \a po2Deco.
+ *
+ * \param po2Deco The field value to set.
+ */
 void DiveSettingsMessage::setPo2Deco(const quint8 po2Deco)
 {
     Q_D(DiveSettingsMessage);
     d->po2Deco = po2Deco;
 }
+/*!
+ * Sets the \c safetyStopEnabled field to \a safetyStopEnabled.
+ *
+ * \param safetyStopEnabled The field value to set.
+ */
 void DiveSettingsMessage::setSafetyStopEnabled(const bool safetyStopEnabled)
 {
     Q_D(DiveSettingsMessage);
     d->safetyStopEnabled = safetyStopEnabled;
 }
+/*!
+ * Sets the \c bottomDepth field to \a bottomDepth.
+ *
+ * \param bottomDepth The field value to set.
+ */
 void DiveSettingsMessage::setBottomDepth(const float bottomDepth)
 {
     Q_D(DiveSettingsMessage);
     d->bottomDepth = bottomDepth;
 }
+/*!
+ * Sets the \c bottomTime field to \a bottomTime.
+ *
+ * \param bottomTime The field value to set.
+ */
 void DiveSettingsMessage::setBottomTime(const quint32 bottomTime)
 {
     Q_D(DiveSettingsMessage);
     d->bottomTime = bottomTime;
 }
+/*!
+ * Sets the \c apneaCountdownEnabled field to \a apneaCountdownEnabled.
+ *
+ * \param apneaCountdownEnabled The field value to set.
+ */
 void DiveSettingsMessage::setApneaCountdownEnabled(const bool apneaCountdownEnabled)
 {
     Q_D(DiveSettingsMessage);
     d->apneaCountdownEnabled = apneaCountdownEnabled;
 }
+/*!
+ * Sets the \c apneaCountdownTime field to \a apneaCountdownTime.
+ *
+ * \param apneaCountdownTime The field value to set.
+ */
 void DiveSettingsMessage::setApneaCountdownTime(const quint32 apneaCountdownTime)
 {
     Q_D(DiveSettingsMessage);
     d->apneaCountdownTime = apneaCountdownTime;
 }
+/*!
+ * Sets the \c backlightMode field to \a backlightMode.
+ *
+ * \param backlightMode The field value to set.
+ */
 void DiveSettingsMessage::setBacklightMode(const DiveBacklightMode backlightMode)
 {
     Q_D(DiveSettingsMessage);
     d->backlightMode = backlightMode;
 }
+/*!
+ * Sets the \c backlightBrightness field to \a backlightBrightness.
+ *
+ * \param backlightBrightness The field value to set.
+ */
 void DiveSettingsMessage::setBacklightBrightness(const quint8 backlightBrightness)
 {
     Q_D(DiveSettingsMessage);
     d->backlightBrightness = backlightBrightness;
 }
+/*!
+ * Sets the \c backlightTimeout field to \a backlightTimeout.
+ *
+ * \param backlightTimeout The field value to set.
+ */
 void DiveSettingsMessage::setBacklightTimeout(const BacklightTimeout backlightTimeout)
 {
     Q_D(DiveSettingsMessage);
     d->backlightTimeout = backlightTimeout;
 }
+/*!
+ * Sets the \c repeatDiveInterval field to \a repeatDiveInterval.
+ *
+ * \param repeatDiveInterval The field value to set.
+ */
 void DiveSettingsMessage::setRepeatDiveInterval(const quint16 repeatDiveInterval)
 {
     Q_D(DiveSettingsMessage);
     d->repeatDiveInterval = repeatDiveInterval;
 }
+/*!
+ * Sets the \c safetyStopTime field to \a safetyStopTime.
+ *
+ * \param safetyStopTime The field value to set.
+ */
 void DiveSettingsMessage::setSafetyStopTime(const quint16 safetyStopTime)
 {
     Q_D(DiveSettingsMessage);
     d->safetyStopTime = safetyStopTime;
 }
+/*!
+ * Sets the \c heartRateSourceType field to \a heartRateSourceType.
+ *
+ * \param heartRateSourceType The field value to set.
+ */
 void DiveSettingsMessage::setHeartRateSourceType(const SourceType heartRateSourceType)
 {
     Q_D(DiveSettingsMessage);
     d->heartRateSourceType = heartRateSourceType;
 }
+/*!
+ * Sets the \c heartRateSource field to \a heartRateSource.
+ *
+ * \param heartRateSource The field value to set.
+ */
 void DiveSettingsMessage::setHeartRateSource(const quint8 heartRateSource)
 {
     Q_D(DiveSettingsMessage);
     d->heartRateSource = heartRateSource;
 }
 
+/*!
+ * \internal
+ *
+ * \class DiveSettingsMessagePrivate
+ *
+ * The DiveSettingsMessagePrivate class provides private implementation for the DiveSettingsMessage.
+ *
+ * \sa DiveSettingsMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a DiveSettingsMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 DiveSettingsMessagePrivate::DiveSettingsMessagePrivate(DiveSettingsMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -305,6 +556,11 @@ DiveSettingsMessagePrivate::DiveSettingsMessagePrivate(DiveSettingsMessage * con
     globalMessageNumber = MesgNum::DiveSettings;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the DiveSettingsMessagePrivate object.
+ */
 DiveSettingsMessagePrivate::~DiveSettingsMessagePrivate()
 {
 

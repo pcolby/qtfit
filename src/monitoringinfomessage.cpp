@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class MonitoringInfoMessage
+ *
+ * The MonitoringInfoMessage class represents a FIT MonitoringInfoMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid MonitoringInfoMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 MonitoringInfoMessage::MonitoringInfoMessage() : FitDataMessage(new MonitoringInfoMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the MonitoringInfoMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime MonitoringInfoMessage::timestamp() const
 {
     Q_D(const MonitoringInfoMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the MonitoringInfoMessage data message's \c localTimestamp field's current value.
+ *
+ * \return the \c localTimestamp field value.
+ */
 LocalDateTime MonitoringInfoMessage::localTimestamp() const
 {
     Q_D(const MonitoringInfoMessage);
     return d->localTimestamp;
 }
 
+/*!
+ * Returns the MonitoringInfoMessage data message's \c activityType field's current value.
+ *
+ * \return the \c activityType field value.
+ */
 ActivityType MonitoringInfoMessage::activityType() const
 {
     Q_D(const MonitoringInfoMessage);
     return d->activityType;
 }
 
+/*!
+ * Returns the MonitoringInfoMessage data message's \c cyclesToDistance field's current value.
+ *
+ * \return the \c cyclesToDistance field value.
+ */
 quint16 MonitoringInfoMessage::cyclesToDistance() const
 {
     Q_D(const MonitoringInfoMessage);
     return d->cyclesToDistance;
 }
 
+/*!
+ * Returns the MonitoringInfoMessage data message's \c cyclesToCalories field's current value.
+ *
+ * \return the \c cyclesToCalories field value.
+ */
 quint16 MonitoringInfoMessage::cyclesToCalories() const
 {
     Q_D(const MonitoringInfoMessage);
     return d->cyclesToCalories;
 }
 
+/*!
+ * Returns the MonitoringInfoMessage data message's \c restingMetabolicRate field's current value.
+ *
+ * \return the \c restingMetabolicRate field value.
+ */
 quint16 MonitoringInfoMessage::restingMetabolicRate() const
 {
     Q_D(const MonitoringInfoMessage);
     return d->restingMetabolicRate;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void MonitoringInfoMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(MonitoringInfoMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c localTimestamp field to \a localTimestamp.
+ *
+ * \param localTimestamp The field value to set.
+ */
 void MonitoringInfoMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
 {
     Q_D(MonitoringInfoMessage);
     d->localTimestamp = localTimestamp;
 }
+/*!
+ * Sets the \c activityType field to \a activityType.
+ *
+ * \param activityType The field value to set.
+ */
 void MonitoringInfoMessage::setActivityType(const ActivityType activityType)
 {
     Q_D(MonitoringInfoMessage);
     d->activityType = activityType;
 }
+/*!
+ * Sets the \c cyclesToDistance field to \a cyclesToDistance.
+ *
+ * \param cyclesToDistance The field value to set.
+ */
 void MonitoringInfoMessage::setCyclesToDistance(const quint16 cyclesToDistance)
 {
     Q_D(MonitoringInfoMessage);
     d->cyclesToDistance = cyclesToDistance;
 }
+/*!
+ * Sets the \c cyclesToCalories field to \a cyclesToCalories.
+ *
+ * \param cyclesToCalories The field value to set.
+ */
 void MonitoringInfoMessage::setCyclesToCalories(const quint16 cyclesToCalories)
 {
     Q_D(MonitoringInfoMessage);
     d->cyclesToCalories = cyclesToCalories;
 }
+/*!
+ * Sets the \c restingMetabolicRate field to \a restingMetabolicRate.
+ *
+ * \param restingMetabolicRate The field value to set.
+ */
 void MonitoringInfoMessage::setRestingMetabolicRate(const quint16 restingMetabolicRate)
 {
     Q_D(MonitoringInfoMessage);
     d->restingMetabolicRate = restingMetabolicRate;
 }
 
+/*!
+ * \internal
+ *
+ * \class MonitoringInfoMessagePrivate
+ *
+ * The MonitoringInfoMessagePrivate class provides private implementation for the MonitoringInfoMessage.
+ *
+ * \sa MonitoringInfoMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a MonitoringInfoMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 MonitoringInfoMessagePrivate::MonitoringInfoMessagePrivate(MonitoringInfoMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -114,6 +205,11 @@ MonitoringInfoMessagePrivate::MonitoringInfoMessagePrivate(MonitoringInfoMessage
     globalMessageNumber = MesgNum::MonitoringInfo;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the MonitoringInfoMessagePrivate object.
+ */
 MonitoringInfoMessagePrivate::~MonitoringInfoMessagePrivate()
 {
 

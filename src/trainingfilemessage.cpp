@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class TrainingFileMessage
+ *
+ * The TrainingFileMessage class represents a FIT TrainingFileMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid TrainingFileMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 TrainingFileMessage::TrainingFileMessage() : FitDataMessage(new TrainingFileMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the TrainingFileMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime TrainingFileMessage::timestamp() const
 {
     Q_D(const TrainingFileMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the TrainingFileMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 File TrainingFileMessage::type() const
 {
     Q_D(const TrainingFileMessage);
     return d->type;
 }
 
+/*!
+ * Returns the TrainingFileMessage data message's \c manufacturer field's current value.
+ *
+ * \return the \c manufacturer field value.
+ */
 Manufacturer TrainingFileMessage::manufacturer() const
 {
     Q_D(const TrainingFileMessage);
     return d->manufacturer;
 }
 
+/*!
+ * Returns the TrainingFileMessage data message's \c product field's current value.
+ *
+ * \return the \c product field value.
+ */
 quint16 TrainingFileMessage::product() const
 {
     Q_D(const TrainingFileMessage);
     return d->product;
 }
 
+/*!
+ * Returns the TrainingFileMessage data message's \c serialNumber field's current value.
+ *
+ * \return the \c serialNumber field value.
+ */
 quint32z TrainingFileMessage::serialNumber() const
 {
     Q_D(const TrainingFileMessage);
     return d->serialNumber;
 }
 
+/*!
+ * Returns the TrainingFileMessage data message's \c timeCreated field's current value.
+ *
+ * \return the \c timeCreated field value.
+ */
 DateTime TrainingFileMessage::timeCreated() const
 {
     Q_D(const TrainingFileMessage);
     return d->timeCreated;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void TrainingFileMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(TrainingFileMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void TrainingFileMessage::setType(const File type)
 {
     Q_D(TrainingFileMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c manufacturer field to \a manufacturer.
+ *
+ * \param manufacturer The field value to set.
+ */
 void TrainingFileMessage::setManufacturer(const Manufacturer manufacturer)
 {
     Q_D(TrainingFileMessage);
     d->manufacturer = manufacturer;
 }
+/*!
+ * Sets the \c product field to \a product.
+ *
+ * \param product The field value to set.
+ */
 void TrainingFileMessage::setProduct(const quint16 product)
 {
     Q_D(TrainingFileMessage);
     d->product = product;
 }
+/*!
+ * Sets the \c serialNumber field to \a serialNumber.
+ *
+ * \param serialNumber The field value to set.
+ */
 void TrainingFileMessage::setSerialNumber(const quint32z serialNumber)
 {
     Q_D(TrainingFileMessage);
     d->serialNumber = serialNumber;
 }
+/*!
+ * Sets the \c timeCreated field to \a timeCreated.
+ *
+ * \param timeCreated The field value to set.
+ */
 void TrainingFileMessage::setTimeCreated(const DateTime timeCreated)
 {
     Q_D(TrainingFileMessage);
     d->timeCreated = timeCreated;
 }
 
+/*!
+ * \internal
+ *
+ * \class TrainingFileMessagePrivate
+ *
+ * The TrainingFileMessagePrivate class provides private implementation for the TrainingFileMessage.
+ *
+ * \sa TrainingFileMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a TrainingFileMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 TrainingFileMessagePrivate::TrainingFileMessagePrivate(TrainingFileMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -114,6 +205,11 @@ TrainingFileMessagePrivate::TrainingFileMessagePrivate(TrainingFileMessage * con
     globalMessageNumber = MesgNum::TrainingFile;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the TrainingFileMessagePrivate object.
+ */
 TrainingFileMessagePrivate::~TrainingFileMessagePrivate()
 {
 

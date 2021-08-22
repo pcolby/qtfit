@@ -30,111 +30,232 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class GpsMetadataMessage
+ *
+ * The GpsMetadataMessage class represents a FIT GpsMetadataMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid GpsMetadataMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 GpsMetadataMessage::GpsMetadataMessage() : FitDataMessage(new GpsMetadataMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime GpsMetadataMessage::timestamp() const
 {
     Q_D(const GpsMetadataMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 GpsMetadataMessage::timestampMs() const
 {
     Q_D(const GpsMetadataMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c positionLat field's current value.
+ *
+ * \return the \c positionLat field value.
+ */
 qint32 GpsMetadataMessage::positionLat() const
 {
     Q_D(const GpsMetadataMessage);
     return d->positionLat;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c positionLong field's current value.
+ *
+ * \return the \c positionLong field value.
+ */
 qint32 GpsMetadataMessage::positionLong() const
 {
     Q_D(const GpsMetadataMessage);
     return d->positionLong;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c enhancedAltitude field's current value.
+ *
+ * \return the \c enhancedAltitude field value.
+ */
 quint32 GpsMetadataMessage::enhancedAltitude() const
 {
     Q_D(const GpsMetadataMessage);
     return d->enhancedAltitude;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c enhancedSpeed field's current value.
+ *
+ * \return the \c enhancedSpeed field value.
+ */
 quint32 GpsMetadataMessage::enhancedSpeed() const
 {
     Q_D(const GpsMetadataMessage);
     return d->enhancedSpeed;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c heading field's current value.
+ *
+ * \return the \c heading field value.
+ */
 quint16 GpsMetadataMessage::heading() const
 {
     Q_D(const GpsMetadataMessage);
     return d->heading;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c utcTimestamp field's current value.
+ *
+ * \return the \c utcTimestamp field value.
+ */
 DateTime GpsMetadataMessage::utcTimestamp() const
 {
     Q_D(const GpsMetadataMessage);
     return d->utcTimestamp;
 }
 
+/*!
+ * Returns the GpsMetadataMessage data message's \c velocity field's current value.
+ *
+ * \return the \c velocity field value.
+ */
 qint16 GpsMetadataMessage::velocity() const
 {
     Q_D(const GpsMetadataMessage);
     return d->velocity;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void GpsMetadataMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(GpsMetadataMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void GpsMetadataMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(GpsMetadataMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c positionLat field to \a positionLat.
+ *
+ * \param positionLat The field value to set.
+ */
 void GpsMetadataMessage::setPositionLat(const qint32 positionLat)
 {
     Q_D(GpsMetadataMessage);
     d->positionLat = positionLat;
 }
+/*!
+ * Sets the \c positionLong field to \a positionLong.
+ *
+ * \param positionLong The field value to set.
+ */
 void GpsMetadataMessage::setPositionLong(const qint32 positionLong)
 {
     Q_D(GpsMetadataMessage);
     d->positionLong = positionLong;
 }
+/*!
+ * Sets the \c enhancedAltitude field to \a enhancedAltitude.
+ *
+ * \param enhancedAltitude The field value to set.
+ */
 void GpsMetadataMessage::setEnhancedAltitude(const quint32 enhancedAltitude)
 {
     Q_D(GpsMetadataMessage);
     d->enhancedAltitude = enhancedAltitude;
 }
+/*!
+ * Sets the \c enhancedSpeed field to \a enhancedSpeed.
+ *
+ * \param enhancedSpeed The field value to set.
+ */
 void GpsMetadataMessage::setEnhancedSpeed(const quint32 enhancedSpeed)
 {
     Q_D(GpsMetadataMessage);
     d->enhancedSpeed = enhancedSpeed;
 }
+/*!
+ * Sets the \c heading field to \a heading.
+ *
+ * \param heading The field value to set.
+ */
 void GpsMetadataMessage::setHeading(const quint16 heading)
 {
     Q_D(GpsMetadataMessage);
     d->heading = heading;
 }
+/*!
+ * Sets the \c utcTimestamp field to \a utcTimestamp.
+ *
+ * \param utcTimestamp The field value to set.
+ */
 void GpsMetadataMessage::setUtcTimestamp(const DateTime utcTimestamp)
 {
     Q_D(GpsMetadataMessage);
     d->utcTimestamp = utcTimestamp;
 }
+/*!
+ * Sets the \c velocity field to \a velocity.
+ *
+ * \param velocity The field value to set.
+ */
 void GpsMetadataMessage::setVelocity(const qint16 velocity)
 {
     Q_D(GpsMetadataMessage);
     d->velocity = velocity;
 }
 
+/*!
+ * \internal
+ *
+ * \class GpsMetadataMessagePrivate
+ *
+ * The GpsMetadataMessagePrivate class provides private implementation for the GpsMetadataMessage.
+ *
+ * \sa GpsMetadataMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a GpsMetadataMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 GpsMetadataMessagePrivate::GpsMetadataMessagePrivate(GpsMetadataMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -150,6 +271,11 @@ GpsMetadataMessagePrivate::GpsMetadataMessagePrivate(GpsMetadataMessage * const 
     globalMessageNumber = MesgNum::GpsMetadata;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the GpsMetadataMessagePrivate object.
+ */
 GpsMetadataMessagePrivate::~GpsMetadataMessagePrivate()
 {
 

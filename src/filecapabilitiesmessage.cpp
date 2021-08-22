@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class FileCapabilitiesMessage
+ *
+ * The FileCapabilitiesMessage class represents a FIT FileCapabilitiesMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid FileCapabilitiesMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 FileCapabilitiesMessage::FileCapabilitiesMessage() : FitDataMessage(new FileCapabilitiesMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the FileCapabilitiesMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex FileCapabilitiesMessage::messageIndex() const
 {
     Q_D(const FileCapabilitiesMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the FileCapabilitiesMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 File FileCapabilitiesMessage::type() const
 {
     Q_D(const FileCapabilitiesMessage);
     return d->type;
 }
 
+/*!
+ * Returns the FileCapabilitiesMessage data message's \c flags field's current value.
+ *
+ * \return the \c flags field value.
+ */
 FileFlags FileCapabilitiesMessage::flags() const
 {
     Q_D(const FileCapabilitiesMessage);
     return d->flags;
 }
 
+/*!
+ * Returns the FileCapabilitiesMessage data message's \c directory field's current value.
+ *
+ * \return the \c directory field value.
+ */
 QString FileCapabilitiesMessage::directory() const
 {
     Q_D(const FileCapabilitiesMessage);
     return d->directory;
 }
 
+/*!
+ * Returns the FileCapabilitiesMessage data message's \c maxCount field's current value.
+ *
+ * \return the \c maxCount field value.
+ */
 quint16 FileCapabilitiesMessage::maxCount() const
 {
     Q_D(const FileCapabilitiesMessage);
     return d->maxCount;
 }
 
+/*!
+ * Returns the FileCapabilitiesMessage data message's \c maxSize field's current value.
+ *
+ * \return the \c maxSize field value.
+ */
 quint32 FileCapabilitiesMessage::maxSize() const
 {
     Q_D(const FileCapabilitiesMessage);
     return d->maxSize;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void FileCapabilitiesMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(FileCapabilitiesMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void FileCapabilitiesMessage::setType(const File type)
 {
     Q_D(FileCapabilitiesMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c flags field to \a flags.
+ *
+ * \param flags The field value to set.
+ */
 void FileCapabilitiesMessage::setFlags(const FileFlags flags)
 {
     Q_D(FileCapabilitiesMessage);
     d->flags = flags;
 }
+/*!
+ * Sets the \c directory field to \a directory.
+ *
+ * \param directory The field value to set.
+ */
 void FileCapabilitiesMessage::setDirectory(const QString directory)
 {
     Q_D(FileCapabilitiesMessage);
     d->directory = directory;
 }
+/*!
+ * Sets the \c maxCount field to \a maxCount.
+ *
+ * \param maxCount The field value to set.
+ */
 void FileCapabilitiesMessage::setMaxCount(const quint16 maxCount)
 {
     Q_D(FileCapabilitiesMessage);
     d->maxCount = maxCount;
 }
+/*!
+ * Sets the \c maxSize field to \a maxSize.
+ *
+ * \param maxSize The field value to set.
+ */
 void FileCapabilitiesMessage::setMaxSize(const quint32 maxSize)
 {
     Q_D(FileCapabilitiesMessage);
     d->maxSize = maxSize;
 }
 
+/*!
+ * \internal
+ *
+ * \class FileCapabilitiesMessagePrivate
+ *
+ * The FileCapabilitiesMessagePrivate class provides private implementation for the FileCapabilitiesMessage.
+ *
+ * \sa FileCapabilitiesMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a FileCapabilitiesMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 FileCapabilitiesMessagePrivate::FileCapabilitiesMessagePrivate(FileCapabilitiesMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -113,6 +204,11 @@ FileCapabilitiesMessagePrivate::FileCapabilitiesMessagePrivate(FileCapabilitiesM
     globalMessageNumber = MesgNum::FileCapabilities;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the FileCapabilitiesMessagePrivate object.
+ */
 FileCapabilitiesMessagePrivate::~FileCapabilitiesMessagePrivate()
 {
 

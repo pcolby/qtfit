@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class WeatherAlertMessage
+ *
+ * The WeatherAlertMessage class represents a FIT WeatherAlertMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid WeatherAlertMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 WeatherAlertMessage::WeatherAlertMessage() : FitDataMessage(new WeatherAlertMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the WeatherAlertMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime WeatherAlertMessage::timestamp() const
 {
     Q_D(const WeatherAlertMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the WeatherAlertMessage data message's \c reportId field's current value.
+ *
+ * \return the \c reportId field value.
+ */
 QString WeatherAlertMessage::reportId() const
 {
     Q_D(const WeatherAlertMessage);
     return d->reportId;
 }
 
+/*!
+ * Returns the WeatherAlertMessage data message's \c issueTime field's current value.
+ *
+ * \return the \c issueTime field value.
+ */
 DateTime WeatherAlertMessage::issueTime() const
 {
     Q_D(const WeatherAlertMessage);
     return d->issueTime;
 }
 
+/*!
+ * Returns the WeatherAlertMessage data message's \c expireTime field's current value.
+ *
+ * \return the \c expireTime field value.
+ */
 DateTime WeatherAlertMessage::expireTime() const
 {
     Q_D(const WeatherAlertMessage);
     return d->expireTime;
 }
 
+/*!
+ * Returns the WeatherAlertMessage data message's \c severity field's current value.
+ *
+ * \return the \c severity field value.
+ */
 WeatherSeverity WeatherAlertMessage::severity() const
 {
     Q_D(const WeatherAlertMessage);
     return d->severity;
 }
 
+/*!
+ * Returns the WeatherAlertMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 WeatherSevereType WeatherAlertMessage::type() const
 {
     Q_D(const WeatherAlertMessage);
     return d->type;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void WeatherAlertMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(WeatherAlertMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c reportId field to \a reportId.
+ *
+ * \param reportId The field value to set.
+ */
 void WeatherAlertMessage::setReportId(const QString reportId)
 {
     Q_D(WeatherAlertMessage);
     d->reportId = reportId;
 }
+/*!
+ * Sets the \c issueTime field to \a issueTime.
+ *
+ * \param issueTime The field value to set.
+ */
 void WeatherAlertMessage::setIssueTime(const DateTime issueTime)
 {
     Q_D(WeatherAlertMessage);
     d->issueTime = issueTime;
 }
+/*!
+ * Sets the \c expireTime field to \a expireTime.
+ *
+ * \param expireTime The field value to set.
+ */
 void WeatherAlertMessage::setExpireTime(const DateTime expireTime)
 {
     Q_D(WeatherAlertMessage);
     d->expireTime = expireTime;
 }
+/*!
+ * Sets the \c severity field to \a severity.
+ *
+ * \param severity The field value to set.
+ */
 void WeatherAlertMessage::setSeverity(const WeatherSeverity severity)
 {
     Q_D(WeatherAlertMessage);
     d->severity = severity;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void WeatherAlertMessage::setType(const WeatherSevereType type)
 {
     Q_D(WeatherAlertMessage);
     d->type = type;
 }
 
+/*!
+ * \internal
+ *
+ * \class WeatherAlertMessagePrivate
+ *
+ * The WeatherAlertMessagePrivate class provides private implementation for the WeatherAlertMessage.
+ *
+ * \sa WeatherAlertMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a WeatherAlertMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 WeatherAlertMessagePrivate::WeatherAlertMessagePrivate(WeatherAlertMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -113,6 +204,11 @@ WeatherAlertMessagePrivate::WeatherAlertMessagePrivate(WeatherAlertMessage * con
     globalMessageNumber = MesgNum::WeatherAlert;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the WeatherAlertMessagePrivate object.
+ */
 WeatherAlertMessagePrivate::~WeatherAlertMessagePrivate()
 {
 

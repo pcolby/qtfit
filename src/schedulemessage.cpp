@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ScheduleMessage
+ *
+ * The ScheduleMessage class represents a FIT ScheduleMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ScheduleMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ScheduleMessage::ScheduleMessage() : FitDataMessage(new ScheduleMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ScheduleMessage data message's \c manufacturer field's current value.
+ *
+ * \return the \c manufacturer field value.
+ */
 Manufacturer ScheduleMessage::manufacturer() const
 {
     Q_D(const ScheduleMessage);
     return d->manufacturer;
 }
 
+/*!
+ * Returns the ScheduleMessage data message's \c product field's current value.
+ *
+ * \return the \c product field value.
+ */
 quint16 ScheduleMessage::product() const
 {
     Q_D(const ScheduleMessage);
     return d->product;
 }
 
+/*!
+ * Returns the ScheduleMessage data message's \c serialNumber field's current value.
+ *
+ * \return the \c serialNumber field value.
+ */
 quint32z ScheduleMessage::serialNumber() const
 {
     Q_D(const ScheduleMessage);
     return d->serialNumber;
 }
 
+/*!
+ * Returns the ScheduleMessage data message's \c timeCreated field's current value.
+ *
+ * \return the \c timeCreated field value.
+ */
 DateTime ScheduleMessage::timeCreated() const
 {
     Q_D(const ScheduleMessage);
     return d->timeCreated;
 }
 
+/*!
+ * Returns the ScheduleMessage data message's \c completed field's current value.
+ *
+ * \return the \c completed field value.
+ */
 bool ScheduleMessage::completed() const
 {
     Q_D(const ScheduleMessage);
     return d->completed;
 }
 
+/*!
+ * Returns the ScheduleMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 Schedule ScheduleMessage::type() const
 {
     Q_D(const ScheduleMessage);
     return d->type;
 }
 
+/*!
+ * Returns the ScheduleMessage data message's \c scheduledTime field's current value.
+ *
+ * \return the \c scheduledTime field value.
+ */
 LocalDateTime ScheduleMessage::scheduledTime() const
 {
     Q_D(const ScheduleMessage);
     return d->scheduledTime;
 }
 
+/*!
+ * Sets the \c manufacturer field to \a manufacturer.
+ *
+ * \param manufacturer The field value to set.
+ */
 void ScheduleMessage::setManufacturer(const Manufacturer manufacturer)
 {
     Q_D(ScheduleMessage);
     d->manufacturer = manufacturer;
 }
+/*!
+ * Sets the \c product field to \a product.
+ *
+ * \param product The field value to set.
+ */
 void ScheduleMessage::setProduct(const quint16 product)
 {
     Q_D(ScheduleMessage);
     d->product = product;
 }
+/*!
+ * Sets the \c serialNumber field to \a serialNumber.
+ *
+ * \param serialNumber The field value to set.
+ */
 void ScheduleMessage::setSerialNumber(const quint32z serialNumber)
 {
     Q_D(ScheduleMessage);
     d->serialNumber = serialNumber;
 }
+/*!
+ * Sets the \c timeCreated field to \a timeCreated.
+ *
+ * \param timeCreated The field value to set.
+ */
 void ScheduleMessage::setTimeCreated(const DateTime timeCreated)
 {
     Q_D(ScheduleMessage);
     d->timeCreated = timeCreated;
 }
+/*!
+ * Sets the \c completed field to \a completed.
+ *
+ * \param completed The field value to set.
+ */
 void ScheduleMessage::setCompleted(const bool completed)
 {
     Q_D(ScheduleMessage);
     d->completed = completed;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void ScheduleMessage::setType(const Schedule type)
 {
     Q_D(ScheduleMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c scheduledTime field to \a scheduledTime.
+ *
+ * \param scheduledTime The field value to set.
+ */
 void ScheduleMessage::setScheduledTime(const LocalDateTime scheduledTime)
 {
     Q_D(ScheduleMessage);
     d->scheduledTime = scheduledTime;
 }
 
+/*!
+ * \internal
+ *
+ * \class ScheduleMessagePrivate
+ *
+ * The ScheduleMessagePrivate class provides private implementation for the ScheduleMessage.
+ *
+ * \sa ScheduleMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ScheduleMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ScheduleMessagePrivate::ScheduleMessagePrivate(ScheduleMessage * const q)
   : FitDataMessagePrivate(q)
   , manufacturer(static_cast<Manufacturer>(-1))
@@ -126,6 +227,11 @@ ScheduleMessagePrivate::ScheduleMessagePrivate(ScheduleMessage * const q)
     globalMessageNumber = MesgNum::Schedule;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ScheduleMessagePrivate object.
+ */
 ScheduleMessagePrivate::~ScheduleMessagePrivate()
 {
 

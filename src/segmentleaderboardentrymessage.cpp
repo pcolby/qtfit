@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SegmentLeaderboardEntryMessage
+ *
+ * The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SegmentLeaderboardEntryMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SegmentLeaderboardEntryMessage::SegmentLeaderboardEntryMessage() : FitDataMessage(new SegmentLeaderboardEntryMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SegmentLeaderboardEntryMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex SegmentLeaderboardEntryMessage::messageIndex() const
 {
     Q_D(const SegmentLeaderboardEntryMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the SegmentLeaderboardEntryMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString SegmentLeaderboardEntryMessage::name() const
 {
     Q_D(const SegmentLeaderboardEntryMessage);
     return d->name;
 }
 
+/*!
+ * Returns the SegmentLeaderboardEntryMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 SegmentLeaderboardType SegmentLeaderboardEntryMessage::type() const
 {
     Q_D(const SegmentLeaderboardEntryMessage);
     return d->type;
 }
 
+/*!
+ * Returns the SegmentLeaderboardEntryMessage data message's \c groupPrimaryKey field's current value.
+ *
+ * \return the \c groupPrimaryKey field value.
+ */
 quint32 SegmentLeaderboardEntryMessage::groupPrimaryKey() const
 {
     Q_D(const SegmentLeaderboardEntryMessage);
     return d->groupPrimaryKey;
 }
 
+/*!
+ * Returns the SegmentLeaderboardEntryMessage data message's \c activityId field's current value.
+ *
+ * \return the \c activityId field value.
+ */
 quint32 SegmentLeaderboardEntryMessage::activityId() const
 {
     Q_D(const SegmentLeaderboardEntryMessage);
     return d->activityId;
 }
 
+/*!
+ * Returns the SegmentLeaderboardEntryMessage data message's \c segmentTime field's current value.
+ *
+ * \return the \c segmentTime field value.
+ */
 quint32 SegmentLeaderboardEntryMessage::segmentTime() const
 {
     Q_D(const SegmentLeaderboardEntryMessage);
     return d->segmentTime;
 }
 
+/*!
+ * Returns the SegmentLeaderboardEntryMessage data message's \c activityIdString field's current value.
+ *
+ * \return the \c activityIdString field value.
+ */
 QString SegmentLeaderboardEntryMessage::activityIdString() const
 {
     Q_D(const SegmentLeaderboardEntryMessage);
     return d->activityIdString;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void SegmentLeaderboardEntryMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(SegmentLeaderboardEntryMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void SegmentLeaderboardEntryMessage::setName(const QString name)
 {
     Q_D(SegmentLeaderboardEntryMessage);
     d->name = name;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void SegmentLeaderboardEntryMessage::setType(const SegmentLeaderboardType type)
 {
     Q_D(SegmentLeaderboardEntryMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c groupPrimaryKey field to \a groupPrimaryKey.
+ *
+ * \param groupPrimaryKey The field value to set.
+ */
 void SegmentLeaderboardEntryMessage::setGroupPrimaryKey(const quint32 groupPrimaryKey)
 {
     Q_D(SegmentLeaderboardEntryMessage);
     d->groupPrimaryKey = groupPrimaryKey;
 }
+/*!
+ * Sets the \c activityId field to \a activityId.
+ *
+ * \param activityId The field value to set.
+ */
 void SegmentLeaderboardEntryMessage::setActivityId(const quint32 activityId)
 {
     Q_D(SegmentLeaderboardEntryMessage);
     d->activityId = activityId;
 }
+/*!
+ * Sets the \c segmentTime field to \a segmentTime.
+ *
+ * \param segmentTime The field value to set.
+ */
 void SegmentLeaderboardEntryMessage::setSegmentTime(const quint32 segmentTime)
 {
     Q_D(SegmentLeaderboardEntryMessage);
     d->segmentTime = segmentTime;
 }
+/*!
+ * Sets the \c activityIdString field to \a activityIdString.
+ *
+ * \param activityIdString The field value to set.
+ */
 void SegmentLeaderboardEntryMessage::setActivityIdString(const QString activityIdString)
 {
     Q_D(SegmentLeaderboardEntryMessage);
     d->activityIdString = activityIdString;
 }
 
+/*!
+ * \internal
+ *
+ * \class SegmentLeaderboardEntryMessagePrivate
+ *
+ * The SegmentLeaderboardEntryMessagePrivate class provides private implementation for the SegmentLeaderboardEntryMessage.
+ *
+ * \sa SegmentLeaderboardEntryMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SegmentLeaderboardEntryMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SegmentLeaderboardEntryMessagePrivate::SegmentLeaderboardEntryMessagePrivate(SegmentLeaderboardEntryMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -124,6 +225,11 @@ SegmentLeaderboardEntryMessagePrivate::SegmentLeaderboardEntryMessagePrivate(Seg
     globalMessageNumber = MesgNum::SegmentLeaderboardEntry;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SegmentLeaderboardEntryMessagePrivate object.
+ */
 SegmentLeaderboardEntryMessagePrivate::~SegmentLeaderboardEntryMessagePrivate()
 {
 

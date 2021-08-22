@@ -30,34 +30,85 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SlaveDeviceMessage
+ *
+ * The SlaveDeviceMessage class represents a FIT SlaveDeviceMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SlaveDeviceMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SlaveDeviceMessage::SlaveDeviceMessage() : FitDataMessage(new SlaveDeviceMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SlaveDeviceMessage data message's \c manufacturer field's current value.
+ *
+ * \return the \c manufacturer field value.
+ */
 Manufacturer SlaveDeviceMessage::manufacturer() const
 {
     Q_D(const SlaveDeviceMessage);
     return d->manufacturer;
 }
 
+/*!
+ * Returns the SlaveDeviceMessage data message's \c product field's current value.
+ *
+ * \return the \c product field value.
+ */
 quint16 SlaveDeviceMessage::product() const
 {
     Q_D(const SlaveDeviceMessage);
     return d->product;
 }
 
+/*!
+ * Sets the \c manufacturer field to \a manufacturer.
+ *
+ * \param manufacturer The field value to set.
+ */
 void SlaveDeviceMessage::setManufacturer(const Manufacturer manufacturer)
 {
     Q_D(SlaveDeviceMessage);
     d->manufacturer = manufacturer;
 }
+/*!
+ * Sets the \c product field to \a product.
+ *
+ * \param product The field value to set.
+ */
 void SlaveDeviceMessage::setProduct(const quint16 product)
 {
     Q_D(SlaveDeviceMessage);
     d->product = product;
 }
 
+/*!
+ * \internal
+ *
+ * \class SlaveDeviceMessagePrivate
+ *
+ * The SlaveDeviceMessagePrivate class provides private implementation for the SlaveDeviceMessage.
+ *
+ * \sa SlaveDeviceMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SlaveDeviceMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SlaveDeviceMessagePrivate::SlaveDeviceMessagePrivate(SlaveDeviceMessage * const q)
   : FitDataMessagePrivate(q)
   , manufacturer(static_cast<Manufacturer>(-1))
@@ -66,6 +117,11 @@ SlaveDeviceMessagePrivate::SlaveDeviceMessagePrivate(SlaveDeviceMessage * const 
     globalMessageNumber = MesgNum::SlaveDevice;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SlaveDeviceMessagePrivate object.
+ */
 SlaveDeviceMessagePrivate::~SlaveDeviceMessagePrivate()
 {
 

@@ -30,34 +30,85 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class OhrSettingsMessage
+ *
+ * The OhrSettingsMessage class represents a FIT OhrSettingsMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid OhrSettingsMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 OhrSettingsMessage::OhrSettingsMessage() : FitDataMessage(new OhrSettingsMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the OhrSettingsMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime OhrSettingsMessage::timestamp() const
 {
     Q_D(const OhrSettingsMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the OhrSettingsMessage data message's \c enabled field's current value.
+ *
+ * \return the \c enabled field value.
+ */
 Switch OhrSettingsMessage::enabled() const
 {
     Q_D(const OhrSettingsMessage);
     return d->enabled;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void OhrSettingsMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(OhrSettingsMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c enabled field to \a enabled.
+ *
+ * \param enabled The field value to set.
+ */
 void OhrSettingsMessage::setEnabled(const Switch enabled)
 {
     Q_D(OhrSettingsMessage);
     d->enabled = enabled;
 }
 
+/*!
+ * \internal
+ *
+ * \class OhrSettingsMessagePrivate
+ *
+ * The OhrSettingsMessagePrivate class provides private implementation for the OhrSettingsMessage.
+ *
+ * \sa OhrSettingsMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a OhrSettingsMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 OhrSettingsMessagePrivate::OhrSettingsMessagePrivate(OhrSettingsMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -66,6 +117,11 @@ OhrSettingsMessagePrivate::OhrSettingsMessagePrivate(OhrSettingsMessage * const 
     globalMessageNumber = MesgNum::OhrSettings;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the OhrSettingsMessagePrivate object.
+ */
 OhrSettingsMessagePrivate::~OhrSettingsMessagePrivate()
 {
 

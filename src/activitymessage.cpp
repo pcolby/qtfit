@@ -30,100 +30,211 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ActivityMessage
+ *
+ * The ActivityMessage class represents a FIT ActivityMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ActivityMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ActivityMessage::ActivityMessage() : FitDataMessage(new ActivityMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime ActivityMessage::timestamp() const
 {
     Q_D(const ActivityMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c totalTimerTime field's current value.
+ *
+ * \return the \c totalTimerTime field value.
+ */
 quint32 ActivityMessage::totalTimerTime() const
 {
     Q_D(const ActivityMessage);
     return d->totalTimerTime;
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c numSessions field's current value.
+ *
+ * \return the \c numSessions field value.
+ */
 quint16 ActivityMessage::numSessions() const
 {
     Q_D(const ActivityMessage);
     return d->numSessions;
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 Activity ActivityMessage::type() const
 {
     Q_D(const ActivityMessage);
     return d->type;
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c event field's current value.
+ *
+ * \return the \c event field value.
+ */
 Event ActivityMessage::event() const
 {
     Q_D(const ActivityMessage);
     return d->event;
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c eventType field's current value.
+ *
+ * \return the \c eventType field value.
+ */
 EventType ActivityMessage::eventType() const
 {
     Q_D(const ActivityMessage);
     return d->eventType;
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c localTimestamp field's current value.
+ *
+ * \return the \c localTimestamp field value.
+ */
 LocalDateTime ActivityMessage::localTimestamp() const
 {
     Q_D(const ActivityMessage);
     return d->localTimestamp;
 }
 
+/*!
+ * Returns the ActivityMessage data message's \c eventGroup field's current value.
+ *
+ * \return the \c eventGroup field value.
+ */
 quint8 ActivityMessage::eventGroup() const
 {
     Q_D(const ActivityMessage);
     return d->eventGroup;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void ActivityMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(ActivityMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c totalTimerTime field to \a totalTimerTime.
+ *
+ * \param totalTimerTime The field value to set.
+ */
 void ActivityMessage::setTotalTimerTime(const quint32 totalTimerTime)
 {
     Q_D(ActivityMessage);
     d->totalTimerTime = totalTimerTime;
 }
+/*!
+ * Sets the \c numSessions field to \a numSessions.
+ *
+ * \param numSessions The field value to set.
+ */
 void ActivityMessage::setNumSessions(const quint16 numSessions)
 {
     Q_D(ActivityMessage);
     d->numSessions = numSessions;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void ActivityMessage::setType(const Activity type)
 {
     Q_D(ActivityMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c event field to \a event.
+ *
+ * \param event The field value to set.
+ */
 void ActivityMessage::setEvent(const Event event)
 {
     Q_D(ActivityMessage);
     d->event = event;
 }
+/*!
+ * Sets the \c eventType field to \a eventType.
+ *
+ * \param eventType The field value to set.
+ */
 void ActivityMessage::setEventType(const EventType eventType)
 {
     Q_D(ActivityMessage);
     d->eventType = eventType;
 }
+/*!
+ * Sets the \c localTimestamp field to \a localTimestamp.
+ *
+ * \param localTimestamp The field value to set.
+ */
 void ActivityMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
 {
     Q_D(ActivityMessage);
     d->localTimestamp = localTimestamp;
 }
+/*!
+ * Sets the \c eventGroup field to \a eventGroup.
+ *
+ * \param eventGroup The field value to set.
+ */
 void ActivityMessage::setEventGroup(const quint8 eventGroup)
 {
     Q_D(ActivityMessage);
     d->eventGroup = eventGroup;
 }
 
+/*!
+ * \internal
+ *
+ * \class ActivityMessagePrivate
+ *
+ * The ActivityMessagePrivate class provides private implementation for the ActivityMessage.
+ *
+ * \sa ActivityMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ActivityMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ActivityMessagePrivate::ActivityMessagePrivate(ActivityMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -138,6 +249,11 @@ ActivityMessagePrivate::ActivityMessagePrivate(ActivityMessage * const q)
     globalMessageNumber = MesgNum::Activity;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ActivityMessagePrivate object.
+ */
 ActivityMessagePrivate::~ActivityMessagePrivate()
 {
 

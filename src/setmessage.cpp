@@ -30,133 +30,274 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SetMessage
+ *
+ * The SetMessage class represents a FIT SetMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SetMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SetMessage::SetMessage() : FitDataMessage(new SetMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SetMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime SetMessage::timestamp() const
 {
     Q_D(const SetMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the SetMessage data message's \c duration field's current value.
+ *
+ * \return the \c duration field value.
+ */
 quint32 SetMessage::duration() const
 {
     Q_D(const SetMessage);
     return d->duration;
 }
 
+/*!
+ * Returns the SetMessage data message's \c repetitions field's current value.
+ *
+ * \return the \c repetitions field value.
+ */
 quint16 SetMessage::repetitions() const
 {
     Q_D(const SetMessage);
     return d->repetitions;
 }
 
+/*!
+ * Returns the SetMessage data message's \c weight field's current value.
+ *
+ * \return the \c weight field value.
+ */
 quint16 SetMessage::weight() const
 {
     Q_D(const SetMessage);
     return d->weight;
 }
 
+/*!
+ * Returns the SetMessage data message's \c setType field's current value.
+ *
+ * \return the \c setType field value.
+ */
 SetType SetMessage::setType() const
 {
     Q_D(const SetMessage);
     return d->setType;
 }
 
+/*!
+ * Returns the SetMessage data message's \c startTime field's current value.
+ *
+ * \return the \c startTime field value.
+ */
 DateTime SetMessage::startTime() const
 {
     Q_D(const SetMessage);
     return d->startTime;
 }
 
+/*!
+ * Returns the SetMessage data message's \c category field's current value.
+ *
+ * \return the \c category field value.
+ */
 ExerciseCategory SetMessage::category() const
 {
     Q_D(const SetMessage);
     return d->category;
 }
 
+/*!
+ * Returns the SetMessage data message's \c categorySubtype field's current value.
+ *
+ * \return the \c categorySubtype field value.
+ */
 quint16 SetMessage::categorySubtype() const
 {
     Q_D(const SetMessage);
     return d->categorySubtype;
 }
 
+/*!
+ * Returns the SetMessage data message's \c weightDisplayUnit field's current value.
+ *
+ * \return the \c weightDisplayUnit field value.
+ */
 FitBaseUnit SetMessage::weightDisplayUnit() const
 {
     Q_D(const SetMessage);
     return d->weightDisplayUnit;
 }
 
+/*!
+ * Returns the SetMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex SetMessage::messageIndex() const
 {
     Q_D(const SetMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the SetMessage data message's \c wktStepIndex field's current value.
+ *
+ * \return the \c wktStepIndex field value.
+ */
 MessageIndex SetMessage::wktStepIndex() const
 {
     Q_D(const SetMessage);
     return d->wktStepIndex;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void SetMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(SetMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c duration field to \a duration.
+ *
+ * \param duration The field value to set.
+ */
 void SetMessage::setDuration(const quint32 duration)
 {
     Q_D(SetMessage);
     d->duration = duration;
 }
+/*!
+ * Sets the \c repetitions field to \a repetitions.
+ *
+ * \param repetitions The field value to set.
+ */
 void SetMessage::setRepetitions(const quint16 repetitions)
 {
     Q_D(SetMessage);
     d->repetitions = repetitions;
 }
+/*!
+ * Sets the \c weight field to \a weight.
+ *
+ * \param weight The field value to set.
+ */
 void SetMessage::setWeight(const quint16 weight)
 {
     Q_D(SetMessage);
     d->weight = weight;
 }
+/*!
+ * Sets the \c setType field to \a setType.
+ *
+ * \param setType The field value to set.
+ */
 void SetMessage::setSetType(const SetType setType)
 {
     Q_D(SetMessage);
     d->setType = setType;
 }
+/*!
+ * Sets the \c startTime field to \a startTime.
+ *
+ * \param startTime The field value to set.
+ */
 void SetMessage::setStartTime(const DateTime startTime)
 {
     Q_D(SetMessage);
     d->startTime = startTime;
 }
+/*!
+ * Sets the \c category field to \a category.
+ *
+ * \param category The field value to set.
+ */
 void SetMessage::setCategory(const ExerciseCategory category)
 {
     Q_D(SetMessage);
     d->category = category;
 }
+/*!
+ * Sets the \c categorySubtype field to \a categorySubtype.
+ *
+ * \param categorySubtype The field value to set.
+ */
 void SetMessage::setCategorySubtype(const quint16 categorySubtype)
 {
     Q_D(SetMessage);
     d->categorySubtype = categorySubtype;
 }
+/*!
+ * Sets the \c weightDisplayUnit field to \a weightDisplayUnit.
+ *
+ * \param weightDisplayUnit The field value to set.
+ */
 void SetMessage::setWeightDisplayUnit(const FitBaseUnit weightDisplayUnit)
 {
     Q_D(SetMessage);
     d->weightDisplayUnit = weightDisplayUnit;
 }
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void SetMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(SetMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c wktStepIndex field to \a wktStepIndex.
+ *
+ * \param wktStepIndex The field value to set.
+ */
 void SetMessage::setWktStepIndex(const MessageIndex wktStepIndex)
 {
     Q_D(SetMessage);
     d->wktStepIndex = wktStepIndex;
 }
 
+/*!
+ * \internal
+ *
+ * \class SetMessagePrivate
+ *
+ * The SetMessagePrivate class provides private implementation for the SetMessage.
+ *
+ * \sa SetMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SetMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SetMessagePrivate::SetMessagePrivate(SetMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -174,6 +315,11 @@ SetMessagePrivate::SetMessagePrivate(SetMessage * const q)
     globalMessageNumber = MesgNum::Set;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SetMessagePrivate object.
+ */
 SetMessagePrivate::~SetMessagePrivate()
 {
 

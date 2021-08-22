@@ -30,67 +30,148 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class MesgCapabilitiesMessage
+ *
+ * The MesgCapabilitiesMessage class represents a FIT MesgCapabilitiesMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid MesgCapabilitiesMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 MesgCapabilitiesMessage::MesgCapabilitiesMessage() : FitDataMessage(new MesgCapabilitiesMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the MesgCapabilitiesMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex MesgCapabilitiesMessage::messageIndex() const
 {
     Q_D(const MesgCapabilitiesMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the MesgCapabilitiesMessage data message's \c file field's current value.
+ *
+ * \return the \c file field value.
+ */
 File MesgCapabilitiesMessage::file() const
 {
     Q_D(const MesgCapabilitiesMessage);
     return d->file;
 }
 
+/*!
+ * Returns the MesgCapabilitiesMessage data message's \c mesgNum field's current value.
+ *
+ * \return the \c mesgNum field value.
+ */
 MesgNum MesgCapabilitiesMessage::mesgNum() const
 {
     Q_D(const MesgCapabilitiesMessage);
     return d->mesgNum;
 }
 
+/*!
+ * Returns the MesgCapabilitiesMessage data message's \c countType field's current value.
+ *
+ * \return the \c countType field value.
+ */
 MesgCount MesgCapabilitiesMessage::countType() const
 {
     Q_D(const MesgCapabilitiesMessage);
     return d->countType;
 }
 
+/*!
+ * Returns the MesgCapabilitiesMessage data message's \c count field's current value.
+ *
+ * \return the \c count field value.
+ */
 quint16 MesgCapabilitiesMessage::count() const
 {
     Q_D(const MesgCapabilitiesMessage);
     return d->count;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void MesgCapabilitiesMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(MesgCapabilitiesMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c file field to \a file.
+ *
+ * \param file The field value to set.
+ */
 void MesgCapabilitiesMessage::setFile(const File file)
 {
     Q_D(MesgCapabilitiesMessage);
     d->file = file;
 }
+/*!
+ * Sets the \c mesgNum field to \a mesgNum.
+ *
+ * \param mesgNum The field value to set.
+ */
 void MesgCapabilitiesMessage::setMesgNum(const MesgNum mesgNum)
 {
     Q_D(MesgCapabilitiesMessage);
     d->mesgNum = mesgNum;
 }
+/*!
+ * Sets the \c countType field to \a countType.
+ *
+ * \param countType The field value to set.
+ */
 void MesgCapabilitiesMessage::setCountType(const MesgCount countType)
 {
     Q_D(MesgCapabilitiesMessage);
     d->countType = countType;
 }
+/*!
+ * Sets the \c count field to \a count.
+ *
+ * \param count The field value to set.
+ */
 void MesgCapabilitiesMessage::setCount(const quint16 count)
 {
     Q_D(MesgCapabilitiesMessage);
     d->count = count;
 }
 
+/*!
+ * \internal
+ *
+ * \class MesgCapabilitiesMessagePrivate
+ *
+ * The MesgCapabilitiesMessagePrivate class provides private implementation for the MesgCapabilitiesMessage.
+ *
+ * \sa MesgCapabilitiesMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a MesgCapabilitiesMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 MesgCapabilitiesMessagePrivate::MesgCapabilitiesMessagePrivate(MesgCapabilitiesMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -102,6 +183,11 @@ MesgCapabilitiesMessagePrivate::MesgCapabilitiesMessagePrivate(MesgCapabilitiesM
     globalMessageNumber = MesgNum::MesgCapabilities;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the MesgCapabilitiesMessagePrivate object.
+ */
 MesgCapabilitiesMessagePrivate::~MesgCapabilitiesMessagePrivate()
 {
 

@@ -30,111 +30,232 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class MagnetometerDataMessage
+ *
+ * The MagnetometerDataMessage class represents a FIT MagnetometerDataMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid MagnetometerDataMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 MagnetometerDataMessage::MagnetometerDataMessage() : FitDataMessage(new MagnetometerDataMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime MagnetometerDataMessage::timestamp() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 MagnetometerDataMessage::timestampMs() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c sampleTimeOffset field's current value.
+ *
+ * \return the \c sampleTimeOffset field value.
+ */
 quint16 MagnetometerDataMessage::sampleTimeOffset() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->sampleTimeOffset;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c magX field's current value.
+ *
+ * \return the \c magX field value.
+ */
 quint16 MagnetometerDataMessage::magX() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->magX;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c magY field's current value.
+ *
+ * \return the \c magY field value.
+ */
 quint16 MagnetometerDataMessage::magY() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->magY;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c magZ field's current value.
+ *
+ * \return the \c magZ field value.
+ */
 quint16 MagnetometerDataMessage::magZ() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->magZ;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c calibratedMagX field's current value.
+ *
+ * \return the \c calibratedMagX field value.
+ */
 float MagnetometerDataMessage::calibratedMagX() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->calibratedMagX;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c calibratedMagY field's current value.
+ *
+ * \return the \c calibratedMagY field value.
+ */
 float MagnetometerDataMessage::calibratedMagY() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->calibratedMagY;
 }
 
+/*!
+ * Returns the MagnetometerDataMessage data message's \c calibratedMagZ field's current value.
+ *
+ * \return the \c calibratedMagZ field value.
+ */
 float MagnetometerDataMessage::calibratedMagZ() const
 {
     Q_D(const MagnetometerDataMessage);
     return d->calibratedMagZ;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void MagnetometerDataMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(MagnetometerDataMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void MagnetometerDataMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(MagnetometerDataMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c sampleTimeOffset field to \a sampleTimeOffset.
+ *
+ * \param sampleTimeOffset The field value to set.
+ */
 void MagnetometerDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
 {
     Q_D(MagnetometerDataMessage);
     d->sampleTimeOffset = sampleTimeOffset;
 }
+/*!
+ * Sets the \c magX field to \a magX.
+ *
+ * \param magX The field value to set.
+ */
 void MagnetometerDataMessage::setMagX(const quint16 magX)
 {
     Q_D(MagnetometerDataMessage);
     d->magX = magX;
 }
+/*!
+ * Sets the \c magY field to \a magY.
+ *
+ * \param magY The field value to set.
+ */
 void MagnetometerDataMessage::setMagY(const quint16 magY)
 {
     Q_D(MagnetometerDataMessage);
     d->magY = magY;
 }
+/*!
+ * Sets the \c magZ field to \a magZ.
+ *
+ * \param magZ The field value to set.
+ */
 void MagnetometerDataMessage::setMagZ(const quint16 magZ)
 {
     Q_D(MagnetometerDataMessage);
     d->magZ = magZ;
 }
+/*!
+ * Sets the \c calibratedMagX field to \a calibratedMagX.
+ *
+ * \param calibratedMagX The field value to set.
+ */
 void MagnetometerDataMessage::setCalibratedMagX(const float calibratedMagX)
 {
     Q_D(MagnetometerDataMessage);
     d->calibratedMagX = calibratedMagX;
 }
+/*!
+ * Sets the \c calibratedMagY field to \a calibratedMagY.
+ *
+ * \param calibratedMagY The field value to set.
+ */
 void MagnetometerDataMessage::setCalibratedMagY(const float calibratedMagY)
 {
     Q_D(MagnetometerDataMessage);
     d->calibratedMagY = calibratedMagY;
 }
+/*!
+ * Sets the \c calibratedMagZ field to \a calibratedMagZ.
+ *
+ * \param calibratedMagZ The field value to set.
+ */
 void MagnetometerDataMessage::setCalibratedMagZ(const float calibratedMagZ)
 {
     Q_D(MagnetometerDataMessage);
     d->calibratedMagZ = calibratedMagZ;
 }
 
+/*!
+ * \internal
+ *
+ * \class MagnetometerDataMessagePrivate
+ *
+ * The MagnetometerDataMessagePrivate class provides private implementation for the MagnetometerDataMessage.
+ *
+ * \sa MagnetometerDataMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a MagnetometerDataMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 MagnetometerDataMessagePrivate::MagnetometerDataMessagePrivate(MagnetometerDataMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -150,6 +271,11 @@ MagnetometerDataMessagePrivate::MagnetometerDataMessagePrivate(MagnetometerDataM
     globalMessageNumber = MesgNum::MagnetometerData;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the MagnetometerDataMessagePrivate object.
+ */
 MagnetometerDataMessagePrivate::~MagnetometerDataMessagePrivate()
 {
 

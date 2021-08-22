@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SoftwareMessage
+ *
+ * The SoftwareMessage class represents a FIT SoftwareMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SoftwareMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SoftwareMessage::SoftwareMessage() : FitDataMessage(new SoftwareMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SoftwareMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex SoftwareMessage::messageIndex() const
 {
     Q_D(const SoftwareMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the SoftwareMessage data message's \c version field's current value.
+ *
+ * \return the \c version field value.
+ */
 quint16 SoftwareMessage::version() const
 {
     Q_D(const SoftwareMessage);
     return d->version;
 }
 
+/*!
+ * Returns the SoftwareMessage data message's \c partNumber field's current value.
+ *
+ * \return the \c partNumber field value.
+ */
 QString SoftwareMessage::partNumber() const
 {
     Q_D(const SoftwareMessage);
     return d->partNumber;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void SoftwareMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(SoftwareMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c version field to \a version.
+ *
+ * \param version The field value to set.
+ */
 void SoftwareMessage::setVersion(const quint16 version)
 {
     Q_D(SoftwareMessage);
     d->version = version;
 }
+/*!
+ * Sets the \c partNumber field to \a partNumber.
+ *
+ * \param partNumber The field value to set.
+ */
 void SoftwareMessage::setPartNumber(const QString partNumber)
 {
     Q_D(SoftwareMessage);
     d->partNumber = partNumber;
 }
 
+/*!
+ * \internal
+ *
+ * \class SoftwareMessagePrivate
+ *
+ * The SoftwareMessagePrivate class provides private implementation for the SoftwareMessage.
+ *
+ * \sa SoftwareMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SoftwareMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SoftwareMessagePrivate::SoftwareMessagePrivate(SoftwareMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -77,6 +138,11 @@ SoftwareMessagePrivate::SoftwareMessagePrivate(SoftwareMessage * const q)
     globalMessageNumber = MesgNum::Software;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SoftwareMessagePrivate object.
+ */
 SoftwareMessagePrivate::~SoftwareMessagePrivate()
 {
 

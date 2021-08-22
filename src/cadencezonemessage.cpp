@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class CadenceZoneMessage
+ *
+ * The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid CadenceZoneMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 CadenceZoneMessage::CadenceZoneMessage() : FitDataMessage(new CadenceZoneMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the CadenceZoneMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex CadenceZoneMessage::messageIndex() const
 {
     Q_D(const CadenceZoneMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the CadenceZoneMessage data message's \c highValue field's current value.
+ *
+ * \return the \c highValue field value.
+ */
 quint8 CadenceZoneMessage::highValue() const
 {
     Q_D(const CadenceZoneMessage);
     return d->highValue;
 }
 
+/*!
+ * Returns the CadenceZoneMessage data message's \c name field's current value.
+ *
+ * \return the \c name field value.
+ */
 QString CadenceZoneMessage::name() const
 {
     Q_D(const CadenceZoneMessage);
     return d->name;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void CadenceZoneMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(CadenceZoneMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c highValue field to \a highValue.
+ *
+ * \param highValue The field value to set.
+ */
 void CadenceZoneMessage::setHighValue(const quint8 highValue)
 {
     Q_D(CadenceZoneMessage);
     d->highValue = highValue;
 }
+/*!
+ * Sets the \c name field to \a name.
+ *
+ * \param name The field value to set.
+ */
 void CadenceZoneMessage::setName(const QString name)
 {
     Q_D(CadenceZoneMessage);
     d->name = name;
 }
 
+/*!
+ * \internal
+ *
+ * \class CadenceZoneMessagePrivate
+ *
+ * The CadenceZoneMessagePrivate class provides private implementation for the CadenceZoneMessage.
+ *
+ * \sa CadenceZoneMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a CadenceZoneMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 CadenceZoneMessagePrivate::CadenceZoneMessagePrivate(CadenceZoneMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -77,6 +138,11 @@ CadenceZoneMessagePrivate::CadenceZoneMessagePrivate(CadenceZoneMessage * const 
     globalMessageNumber = MesgNum::CadenceZone;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the CadenceZoneMessagePrivate object.
+ */
 CadenceZoneMessagePrivate::~CadenceZoneMessagePrivate()
 {
 

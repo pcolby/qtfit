@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class FileIdMessage
+ *
+ * The FileIdMessage class represents a FIT FileIdMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid FileIdMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 FileIdMessage::FileIdMessage() : FitDataMessage(new FileIdMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the FileIdMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 File FileIdMessage::type() const
 {
     Q_D(const FileIdMessage);
     return d->type;
 }
 
+/*!
+ * Returns the FileIdMessage data message's \c manufacturer field's current value.
+ *
+ * \return the \c manufacturer field value.
+ */
 Manufacturer FileIdMessage::manufacturer() const
 {
     Q_D(const FileIdMessage);
     return d->manufacturer;
 }
 
+/*!
+ * Returns the FileIdMessage data message's \c product field's current value.
+ *
+ * \return the \c product field value.
+ */
 quint16 FileIdMessage::product() const
 {
     Q_D(const FileIdMessage);
     return d->product;
 }
 
+/*!
+ * Returns the FileIdMessage data message's \c serialNumber field's current value.
+ *
+ * \return the \c serialNumber field value.
+ */
 quint32z FileIdMessage::serialNumber() const
 {
     Q_D(const FileIdMessage);
     return d->serialNumber;
 }
 
+/*!
+ * Returns the FileIdMessage data message's \c timeCreated field's current value.
+ *
+ * \return the \c timeCreated field value.
+ */
 DateTime FileIdMessage::timeCreated() const
 {
     Q_D(const FileIdMessage);
     return d->timeCreated;
 }
 
+/*!
+ * Returns the FileIdMessage data message's \c number field's current value.
+ *
+ * \return the \c number field value.
+ */
 quint16 FileIdMessage::number() const
 {
     Q_D(const FileIdMessage);
     return d->number;
 }
 
+/*!
+ * Returns the FileIdMessage data message's \c productName field's current value.
+ *
+ * \return the \c productName field value.
+ */
 QString FileIdMessage::productName() const
 {
     Q_D(const FileIdMessage);
     return d->productName;
 }
 
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void FileIdMessage::setType(const File type)
 {
     Q_D(FileIdMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c manufacturer field to \a manufacturer.
+ *
+ * \param manufacturer The field value to set.
+ */
 void FileIdMessage::setManufacturer(const Manufacturer manufacturer)
 {
     Q_D(FileIdMessage);
     d->manufacturer = manufacturer;
 }
+/*!
+ * Sets the \c product field to \a product.
+ *
+ * \param product The field value to set.
+ */
 void FileIdMessage::setProduct(const quint16 product)
 {
     Q_D(FileIdMessage);
     d->product = product;
 }
+/*!
+ * Sets the \c serialNumber field to \a serialNumber.
+ *
+ * \param serialNumber The field value to set.
+ */
 void FileIdMessage::setSerialNumber(const quint32z serialNumber)
 {
     Q_D(FileIdMessage);
     d->serialNumber = serialNumber;
 }
+/*!
+ * Sets the \c timeCreated field to \a timeCreated.
+ *
+ * \param timeCreated The field value to set.
+ */
 void FileIdMessage::setTimeCreated(const DateTime timeCreated)
 {
     Q_D(FileIdMessage);
     d->timeCreated = timeCreated;
 }
+/*!
+ * Sets the \c number field to \a number.
+ *
+ * \param number The field value to set.
+ */
 void FileIdMessage::setNumber(const quint16 number)
 {
     Q_D(FileIdMessage);
     d->number = number;
 }
+/*!
+ * Sets the \c productName field to \a productName.
+ *
+ * \param productName The field value to set.
+ */
 void FileIdMessage::setProductName(const QString productName)
 {
     Q_D(FileIdMessage);
     d->productName = productName;
 }
 
+/*!
+ * \internal
+ *
+ * \class FileIdMessagePrivate
+ *
+ * The FileIdMessagePrivate class provides private implementation for the FileIdMessage.
+ *
+ * \sa FileIdMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a FileIdMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q)
   : FitDataMessagePrivate(q)
   , type(static_cast<File>(-1))
@@ -125,6 +226,11 @@ FileIdMessagePrivate::FileIdMessagePrivate(FileIdMessage * const q)
     globalMessageNumber = MesgNum::FileId;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the FileIdMessagePrivate object.
+ */
 FileIdMessagePrivate::~FileIdMessagePrivate()
 {
 

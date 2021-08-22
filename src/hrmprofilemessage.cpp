@@ -30,67 +30,148 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class HrmProfileMessage
+ *
+ * The HrmProfileMessage class represents a FIT HrmProfileMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid HrmProfileMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 HrmProfileMessage::HrmProfileMessage() : FitDataMessage(new HrmProfileMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the HrmProfileMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex HrmProfileMessage::messageIndex() const
 {
     Q_D(const HrmProfileMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the HrmProfileMessage data message's \c enabled field's current value.
+ *
+ * \return the \c enabled field value.
+ */
 bool HrmProfileMessage::enabled() const
 {
     Q_D(const HrmProfileMessage);
     return d->enabled;
 }
 
+/*!
+ * Returns the HrmProfileMessage data message's \c hrmAntId field's current value.
+ *
+ * \return the \c hrmAntId field value.
+ */
 quint16z HrmProfileMessage::hrmAntId() const
 {
     Q_D(const HrmProfileMessage);
     return d->hrmAntId;
 }
 
+/*!
+ * Returns the HrmProfileMessage data message's \c logHrv field's current value.
+ *
+ * \return the \c logHrv field value.
+ */
 bool HrmProfileMessage::logHrv() const
 {
     Q_D(const HrmProfileMessage);
     return d->logHrv;
 }
 
+/*!
+ * Returns the HrmProfileMessage data message's \c hrmAntIdTransType field's current value.
+ *
+ * \return the \c hrmAntIdTransType field value.
+ */
 quint8z HrmProfileMessage::hrmAntIdTransType() const
 {
     Q_D(const HrmProfileMessage);
     return d->hrmAntIdTransType;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void HrmProfileMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(HrmProfileMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c enabled field to \a enabled.
+ *
+ * \param enabled The field value to set.
+ */
 void HrmProfileMessage::setEnabled(const bool enabled)
 {
     Q_D(HrmProfileMessage);
     d->enabled = enabled;
 }
+/*!
+ * Sets the \c hrmAntId field to \a hrmAntId.
+ *
+ * \param hrmAntId The field value to set.
+ */
 void HrmProfileMessage::setHrmAntId(const quint16z hrmAntId)
 {
     Q_D(HrmProfileMessage);
     d->hrmAntId = hrmAntId;
 }
+/*!
+ * Sets the \c logHrv field to \a logHrv.
+ *
+ * \param logHrv The field value to set.
+ */
 void HrmProfileMessage::setLogHrv(const bool logHrv)
 {
     Q_D(HrmProfileMessage);
     d->logHrv = logHrv;
 }
+/*!
+ * Sets the \c hrmAntIdTransType field to \a hrmAntIdTransType.
+ *
+ * \param hrmAntIdTransType The field value to set.
+ */
 void HrmProfileMessage::setHrmAntIdTransType(const quint8z hrmAntIdTransType)
 {
     Q_D(HrmProfileMessage);
     d->hrmAntIdTransType = hrmAntIdTransType;
 }
 
+/*!
+ * \internal
+ *
+ * \class HrmProfileMessagePrivate
+ *
+ * The HrmProfileMessagePrivate class provides private implementation for the HrmProfileMessage.
+ *
+ * \sa HrmProfileMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a HrmProfileMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 HrmProfileMessagePrivate::HrmProfileMessagePrivate(HrmProfileMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -102,6 +183,11 @@ HrmProfileMessagePrivate::HrmProfileMessagePrivate(HrmProfileMessage * const q)
     globalMessageNumber = MesgNum::HrmProfile;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the HrmProfileMessagePrivate object.
+ */
 HrmProfileMessagePrivate::~HrmProfileMessagePrivate()
 {
 

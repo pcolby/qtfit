@@ -30,56 +30,127 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class BarometerDataMessage
+ *
+ * The BarometerDataMessage class represents a FIT BarometerDataMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid BarometerDataMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 BarometerDataMessage::BarometerDataMessage() : FitDataMessage(new BarometerDataMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the BarometerDataMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime BarometerDataMessage::timestamp() const
 {
     Q_D(const BarometerDataMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the BarometerDataMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 BarometerDataMessage::timestampMs() const
 {
     Q_D(const BarometerDataMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the BarometerDataMessage data message's \c sampleTimeOffset field's current value.
+ *
+ * \return the \c sampleTimeOffset field value.
+ */
 quint16 BarometerDataMessage::sampleTimeOffset() const
 {
     Q_D(const BarometerDataMessage);
     return d->sampleTimeOffset;
 }
 
+/*!
+ * Returns the BarometerDataMessage data message's \c baroPres field's current value.
+ *
+ * \return the \c baroPres field value.
+ */
 quint32 BarometerDataMessage::baroPres() const
 {
     Q_D(const BarometerDataMessage);
     return d->baroPres;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void BarometerDataMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(BarometerDataMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void BarometerDataMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(BarometerDataMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c sampleTimeOffset field to \a sampleTimeOffset.
+ *
+ * \param sampleTimeOffset The field value to set.
+ */
 void BarometerDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
 {
     Q_D(BarometerDataMessage);
     d->sampleTimeOffset = sampleTimeOffset;
 }
+/*!
+ * Sets the \c baroPres field to \a baroPres.
+ *
+ * \param baroPres The field value to set.
+ */
 void BarometerDataMessage::setBaroPres(const quint32 baroPres)
 {
     Q_D(BarometerDataMessage);
     d->baroPres = baroPres;
 }
 
+/*!
+ * \internal
+ *
+ * \class BarometerDataMessagePrivate
+ *
+ * The BarometerDataMessagePrivate class provides private implementation for the BarometerDataMessage.
+ *
+ * \sa BarometerDataMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a BarometerDataMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 BarometerDataMessagePrivate::BarometerDataMessagePrivate(BarometerDataMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -90,6 +161,11 @@ BarometerDataMessagePrivate::BarometerDataMessagePrivate(BarometerDataMessage * 
     globalMessageNumber = MesgNum::BarometerData;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the BarometerDataMessagePrivate object.
+ */
 BarometerDataMessagePrivate::~BarometerDataMessagePrivate()
 {
 

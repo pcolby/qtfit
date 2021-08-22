@@ -30,23 +30,64 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class HrvMessage
+ *
+ * The HrvMessage class represents a FIT HrvMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid HrvMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 HrvMessage::HrvMessage() : FitDataMessage(new HrvMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the HrvMessage data message's \c time field's current value.
+ *
+ * \return the \c time field value.
+ */
 quint16 HrvMessage::time() const
 {
     Q_D(const HrvMessage);
     return d->time;
 }
 
+/*!
+ * Sets the \c time field to \a time.
+ *
+ * \param time The field value to set.
+ */
 void HrvMessage::setTime(const quint16 time)
 {
     Q_D(HrvMessage);
     d->time = time;
 }
 
+/*!
+ * \internal
+ *
+ * \class HrvMessagePrivate
+ *
+ * The HrvMessagePrivate class provides private implementation for the HrvMessage.
+ *
+ * \sa HrvMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a HrvMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 HrvMessagePrivate::HrvMessagePrivate(HrvMessage * const q)
   : FitDataMessagePrivate(q)
   , time(0xFFFF)
@@ -54,6 +95,11 @@ HrvMessagePrivate::HrvMessagePrivate(HrvMessage * const q)
     globalMessageNumber = MesgNum::Hrv;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the HrvMessagePrivate object.
+ */
 HrvMessagePrivate::~HrvMessagePrivate()
 {
 

@@ -30,100 +30,211 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SdmProfileMessage
+ *
+ * The SdmProfileMessage class represents a FIT SdmProfileMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SdmProfileMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SdmProfileMessage::SdmProfileMessage() : FitDataMessage(new SdmProfileMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex SdmProfileMessage::messageIndex() const
 {
     Q_D(const SdmProfileMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c enabled field's current value.
+ *
+ * \return the \c enabled field value.
+ */
 bool SdmProfileMessage::enabled() const
 {
     Q_D(const SdmProfileMessage);
     return d->enabled;
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c sdmAntId field's current value.
+ *
+ * \return the \c sdmAntId field value.
+ */
 quint16z SdmProfileMessage::sdmAntId() const
 {
     Q_D(const SdmProfileMessage);
     return d->sdmAntId;
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c sdmCalFactor field's current value.
+ *
+ * \return the \c sdmCalFactor field value.
+ */
 quint16 SdmProfileMessage::sdmCalFactor() const
 {
     Q_D(const SdmProfileMessage);
     return d->sdmCalFactor;
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c odometer field's current value.
+ *
+ * \return the \c odometer field value.
+ */
 quint32 SdmProfileMessage::odometer() const
 {
     Q_D(const SdmProfileMessage);
     return d->odometer;
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c speedSource field's current value.
+ *
+ * \return the \c speedSource field value.
+ */
 bool SdmProfileMessage::speedSource() const
 {
     Q_D(const SdmProfileMessage);
     return d->speedSource;
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c sdmAntIdTransType field's current value.
+ *
+ * \return the \c sdmAntIdTransType field value.
+ */
 quint8z SdmProfileMessage::sdmAntIdTransType() const
 {
     Q_D(const SdmProfileMessage);
     return d->sdmAntIdTransType;
 }
 
+/*!
+ * Returns the SdmProfileMessage data message's \c odometerRollover field's current value.
+ *
+ * \return the \c odometerRollover field value.
+ */
 quint8 SdmProfileMessage::odometerRollover() const
 {
     Q_D(const SdmProfileMessage);
     return d->odometerRollover;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void SdmProfileMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(SdmProfileMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c enabled field to \a enabled.
+ *
+ * \param enabled The field value to set.
+ */
 void SdmProfileMessage::setEnabled(const bool enabled)
 {
     Q_D(SdmProfileMessage);
     d->enabled = enabled;
 }
+/*!
+ * Sets the \c sdmAntId field to \a sdmAntId.
+ *
+ * \param sdmAntId The field value to set.
+ */
 void SdmProfileMessage::setSdmAntId(const quint16z sdmAntId)
 {
     Q_D(SdmProfileMessage);
     d->sdmAntId = sdmAntId;
 }
+/*!
+ * Sets the \c sdmCalFactor field to \a sdmCalFactor.
+ *
+ * \param sdmCalFactor The field value to set.
+ */
 void SdmProfileMessage::setSdmCalFactor(const quint16 sdmCalFactor)
 {
     Q_D(SdmProfileMessage);
     d->sdmCalFactor = sdmCalFactor;
 }
+/*!
+ * Sets the \c odometer field to \a odometer.
+ *
+ * \param odometer The field value to set.
+ */
 void SdmProfileMessage::setOdometer(const quint32 odometer)
 {
     Q_D(SdmProfileMessage);
     d->odometer = odometer;
 }
+/*!
+ * Sets the \c speedSource field to \a speedSource.
+ *
+ * \param speedSource The field value to set.
+ */
 void SdmProfileMessage::setSpeedSource(const bool speedSource)
 {
     Q_D(SdmProfileMessage);
     d->speedSource = speedSource;
 }
+/*!
+ * Sets the \c sdmAntIdTransType field to \a sdmAntIdTransType.
+ *
+ * \param sdmAntIdTransType The field value to set.
+ */
 void SdmProfileMessage::setSdmAntIdTransType(const quint8z sdmAntIdTransType)
 {
     Q_D(SdmProfileMessage);
     d->sdmAntIdTransType = sdmAntIdTransType;
 }
+/*!
+ * Sets the \c odometerRollover field to \a odometerRollover.
+ *
+ * \param odometerRollover The field value to set.
+ */
 void SdmProfileMessage::setOdometerRollover(const quint8 odometerRollover)
 {
     Q_D(SdmProfileMessage);
     d->odometerRollover = odometerRollover;
 }
 
+/*!
+ * \internal
+ *
+ * \class SdmProfileMessagePrivate
+ *
+ * The SdmProfileMessagePrivate class provides private implementation for the SdmProfileMessage.
+ *
+ * \sa SdmProfileMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SdmProfileMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SdmProfileMessagePrivate::SdmProfileMessagePrivate(SdmProfileMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -138,6 +249,11 @@ SdmProfileMessagePrivate::SdmProfileMessagePrivate(SdmProfileMessage * const q)
     globalMessageNumber = MesgNum::SdmProfile;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SdmProfileMessagePrivate object.
+ */
 SdmProfileMessagePrivate::~SdmProfileMessagePrivate()
 {
 

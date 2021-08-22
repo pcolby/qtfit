@@ -30,188 +30,379 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class WeatherConditionsMessage
+ *
+ * The WeatherConditionsMessage class represents a FIT WeatherConditionsMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid WeatherConditionsMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 WeatherConditionsMessage::WeatherConditionsMessage() : FitDataMessage(new WeatherConditionsMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime WeatherConditionsMessage::timestamp() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c weatherReport field's current value.
+ *
+ * \return the \c weatherReport field value.
+ */
 WeatherReport WeatherConditionsMessage::weatherReport() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->weatherReport;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c temperature field's current value.
+ *
+ * \return the \c temperature field value.
+ */
 qint8 WeatherConditionsMessage::temperature() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->temperature;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c condition field's current value.
+ *
+ * \return the \c condition field value.
+ */
 WeatherStatus WeatherConditionsMessage::condition() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->condition;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c windDirection field's current value.
+ *
+ * \return the \c windDirection field value.
+ */
 quint16 WeatherConditionsMessage::windDirection() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->windDirection;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c windSpeed field's current value.
+ *
+ * \return the \c windSpeed field value.
+ */
 quint16 WeatherConditionsMessage::windSpeed() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->windSpeed;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c precipitationProbability field's current value.
+ *
+ * \return the \c precipitationProbability field value.
+ */
 quint8 WeatherConditionsMessage::precipitationProbability() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->precipitationProbability;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c temperatureFeelsLike field's current value.
+ *
+ * \return the \c temperatureFeelsLike field value.
+ */
 qint8 WeatherConditionsMessage::temperatureFeelsLike() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->temperatureFeelsLike;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c relativeHumidity field's current value.
+ *
+ * \return the \c relativeHumidity field value.
+ */
 quint8 WeatherConditionsMessage::relativeHumidity() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->relativeHumidity;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c location field's current value.
+ *
+ * \return the \c location field value.
+ */
 QString WeatherConditionsMessage::location() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->location;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c observedAtTime field's current value.
+ *
+ * \return the \c observedAtTime field value.
+ */
 DateTime WeatherConditionsMessage::observedAtTime() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->observedAtTime;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c observedLocationLat field's current value.
+ *
+ * \return the \c observedLocationLat field value.
+ */
 qint32 WeatherConditionsMessage::observedLocationLat() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->observedLocationLat;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c observedLocationLong field's current value.
+ *
+ * \return the \c observedLocationLong field value.
+ */
 qint32 WeatherConditionsMessage::observedLocationLong() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->observedLocationLong;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c dayOfWeek field's current value.
+ *
+ * \return the \c dayOfWeek field value.
+ */
 DayOfWeek WeatherConditionsMessage::dayOfWeek() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->dayOfWeek;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c highTemperature field's current value.
+ *
+ * \return the \c highTemperature field value.
+ */
 qint8 WeatherConditionsMessage::highTemperature() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->highTemperature;
 }
 
+/*!
+ * Returns the WeatherConditionsMessage data message's \c lowTemperature field's current value.
+ *
+ * \return the \c lowTemperature field value.
+ */
 qint8 WeatherConditionsMessage::lowTemperature() const
 {
     Q_D(const WeatherConditionsMessage);
     return d->lowTemperature;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void WeatherConditionsMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(WeatherConditionsMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c weatherReport field to \a weatherReport.
+ *
+ * \param weatherReport The field value to set.
+ */
 void WeatherConditionsMessage::setWeatherReport(const WeatherReport weatherReport)
 {
     Q_D(WeatherConditionsMessage);
     d->weatherReport = weatherReport;
 }
+/*!
+ * Sets the \c temperature field to \a temperature.
+ *
+ * \param temperature The field value to set.
+ */
 void WeatherConditionsMessage::setTemperature(const qint8 temperature)
 {
     Q_D(WeatherConditionsMessage);
     d->temperature = temperature;
 }
+/*!
+ * Sets the \c condition field to \a condition.
+ *
+ * \param condition The field value to set.
+ */
 void WeatherConditionsMessage::setCondition(const WeatherStatus condition)
 {
     Q_D(WeatherConditionsMessage);
     d->condition = condition;
 }
+/*!
+ * Sets the \c windDirection field to \a windDirection.
+ *
+ * \param windDirection The field value to set.
+ */
 void WeatherConditionsMessage::setWindDirection(const quint16 windDirection)
 {
     Q_D(WeatherConditionsMessage);
     d->windDirection = windDirection;
 }
+/*!
+ * Sets the \c windSpeed field to \a windSpeed.
+ *
+ * \param windSpeed The field value to set.
+ */
 void WeatherConditionsMessage::setWindSpeed(const quint16 windSpeed)
 {
     Q_D(WeatherConditionsMessage);
     d->windSpeed = windSpeed;
 }
+/*!
+ * Sets the \c precipitationProbability field to \a precipitationProbability.
+ *
+ * \param precipitationProbability The field value to set.
+ */
 void WeatherConditionsMessage::setPrecipitationProbability(const quint8 precipitationProbability)
 {
     Q_D(WeatherConditionsMessage);
     d->precipitationProbability = precipitationProbability;
 }
+/*!
+ * Sets the \c temperatureFeelsLike field to \a temperatureFeelsLike.
+ *
+ * \param temperatureFeelsLike The field value to set.
+ */
 void WeatherConditionsMessage::setTemperatureFeelsLike(const qint8 temperatureFeelsLike)
 {
     Q_D(WeatherConditionsMessage);
     d->temperatureFeelsLike = temperatureFeelsLike;
 }
+/*!
+ * Sets the \c relativeHumidity field to \a relativeHumidity.
+ *
+ * \param relativeHumidity The field value to set.
+ */
 void WeatherConditionsMessage::setRelativeHumidity(const quint8 relativeHumidity)
 {
     Q_D(WeatherConditionsMessage);
     d->relativeHumidity = relativeHumidity;
 }
+/*!
+ * Sets the \c location field to \a location.
+ *
+ * \param location The field value to set.
+ */
 void WeatherConditionsMessage::setLocation(const QString location)
 {
     Q_D(WeatherConditionsMessage);
     d->location = location;
 }
+/*!
+ * Sets the \c observedAtTime field to \a observedAtTime.
+ *
+ * \param observedAtTime The field value to set.
+ */
 void WeatherConditionsMessage::setObservedAtTime(const DateTime observedAtTime)
 {
     Q_D(WeatherConditionsMessage);
     d->observedAtTime = observedAtTime;
 }
+/*!
+ * Sets the \c observedLocationLat field to \a observedLocationLat.
+ *
+ * \param observedLocationLat The field value to set.
+ */
 void WeatherConditionsMessage::setObservedLocationLat(const qint32 observedLocationLat)
 {
     Q_D(WeatherConditionsMessage);
     d->observedLocationLat = observedLocationLat;
 }
+/*!
+ * Sets the \c observedLocationLong field to \a observedLocationLong.
+ *
+ * \param observedLocationLong The field value to set.
+ */
 void WeatherConditionsMessage::setObservedLocationLong(const qint32 observedLocationLong)
 {
     Q_D(WeatherConditionsMessage);
     d->observedLocationLong = observedLocationLong;
 }
+/*!
+ * Sets the \c dayOfWeek field to \a dayOfWeek.
+ *
+ * \param dayOfWeek The field value to set.
+ */
 void WeatherConditionsMessage::setDayOfWeek(const DayOfWeek dayOfWeek)
 {
     Q_D(WeatherConditionsMessage);
     d->dayOfWeek = dayOfWeek;
 }
+/*!
+ * Sets the \c highTemperature field to \a highTemperature.
+ *
+ * \param highTemperature The field value to set.
+ */
 void WeatherConditionsMessage::setHighTemperature(const qint8 highTemperature)
 {
     Q_D(WeatherConditionsMessage);
     d->highTemperature = highTemperature;
 }
+/*!
+ * Sets the \c lowTemperature field to \a lowTemperature.
+ *
+ * \param lowTemperature The field value to set.
+ */
 void WeatherConditionsMessage::setLowTemperature(const qint8 lowTemperature)
 {
     Q_D(WeatherConditionsMessage);
     d->lowTemperature = lowTemperature;
 }
 
+/*!
+ * \internal
+ *
+ * \class WeatherConditionsMessagePrivate
+ *
+ * The WeatherConditionsMessagePrivate class provides private implementation for the WeatherConditionsMessage.
+ *
+ * \sa WeatherConditionsMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a WeatherConditionsMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 WeatherConditionsMessagePrivate::WeatherConditionsMessagePrivate(WeatherConditionsMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -233,6 +424,11 @@ WeatherConditionsMessagePrivate::WeatherConditionsMessagePrivate(WeatherConditio
     globalMessageNumber = MesgNum::WeatherConditions;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the WeatherConditionsMessagePrivate object.
+ */
 WeatherConditionsMessagePrivate::~WeatherConditionsMessagePrivate()
 {
 

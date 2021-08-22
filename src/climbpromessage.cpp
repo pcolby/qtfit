@@ -30,89 +30,190 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class ClimbProMessage
+ *
+ * The ClimbProMessage class represents a FIT ClimbProMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid ClimbProMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 ClimbProMessage::ClimbProMessage() : FitDataMessage(new ClimbProMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the ClimbProMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime ClimbProMessage::timestamp() const
 {
     Q_D(const ClimbProMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the ClimbProMessage data message's \c positionLat field's current value.
+ *
+ * \return the \c positionLat field value.
+ */
 qint32 ClimbProMessage::positionLat() const
 {
     Q_D(const ClimbProMessage);
     return d->positionLat;
 }
 
+/*!
+ * Returns the ClimbProMessage data message's \c positionLong field's current value.
+ *
+ * \return the \c positionLong field value.
+ */
 qint32 ClimbProMessage::positionLong() const
 {
     Q_D(const ClimbProMessage);
     return d->positionLong;
 }
 
+/*!
+ * Returns the ClimbProMessage data message's \c climbProEvent field's current value.
+ *
+ * \return the \c climbProEvent field value.
+ */
 ClimbProEvent ClimbProMessage::climbProEvent() const
 {
     Q_D(const ClimbProMessage);
     return d->climbProEvent;
 }
 
+/*!
+ * Returns the ClimbProMessage data message's \c climbNumber field's current value.
+ *
+ * \return the \c climbNumber field value.
+ */
 quint16 ClimbProMessage::climbNumber() const
 {
     Q_D(const ClimbProMessage);
     return d->climbNumber;
 }
 
+/*!
+ * Returns the ClimbProMessage data message's \c climbCategory field's current value.
+ *
+ * \return the \c climbCategory field value.
+ */
 quint8 ClimbProMessage::climbCategory() const
 {
     Q_D(const ClimbProMessage);
     return d->climbCategory;
 }
 
+/*!
+ * Returns the ClimbProMessage data message's \c currentDist field's current value.
+ *
+ * \return the \c currentDist field value.
+ */
 float ClimbProMessage::currentDist() const
 {
     Q_D(const ClimbProMessage);
     return d->currentDist;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void ClimbProMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(ClimbProMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c positionLat field to \a positionLat.
+ *
+ * \param positionLat The field value to set.
+ */
 void ClimbProMessage::setPositionLat(const qint32 positionLat)
 {
     Q_D(ClimbProMessage);
     d->positionLat = positionLat;
 }
+/*!
+ * Sets the \c positionLong field to \a positionLong.
+ *
+ * \param positionLong The field value to set.
+ */
 void ClimbProMessage::setPositionLong(const qint32 positionLong)
 {
     Q_D(ClimbProMessage);
     d->positionLong = positionLong;
 }
+/*!
+ * Sets the \c climbProEvent field to \a climbProEvent.
+ *
+ * \param climbProEvent The field value to set.
+ */
 void ClimbProMessage::setClimbProEvent(const ClimbProEvent climbProEvent)
 {
     Q_D(ClimbProMessage);
     d->climbProEvent = climbProEvent;
 }
+/*!
+ * Sets the \c climbNumber field to \a climbNumber.
+ *
+ * \param climbNumber The field value to set.
+ */
 void ClimbProMessage::setClimbNumber(const quint16 climbNumber)
 {
     Q_D(ClimbProMessage);
     d->climbNumber = climbNumber;
 }
+/*!
+ * Sets the \c climbCategory field to \a climbCategory.
+ *
+ * \param climbCategory The field value to set.
+ */
 void ClimbProMessage::setClimbCategory(const quint8 climbCategory)
 {
     Q_D(ClimbProMessage);
     d->climbCategory = climbCategory;
 }
+/*!
+ * Sets the \c currentDist field to \a currentDist.
+ *
+ * \param currentDist The field value to set.
+ */
 void ClimbProMessage::setCurrentDist(const float currentDist)
 {
     Q_D(ClimbProMessage);
     d->currentDist = currentDist;
 }
 
+/*!
+ * \internal
+ *
+ * \class ClimbProMessagePrivate
+ *
+ * The ClimbProMessagePrivate class provides private implementation for the ClimbProMessage.
+ *
+ * \sa ClimbProMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a ClimbProMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 ClimbProMessagePrivate::ClimbProMessagePrivate(ClimbProMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -126,6 +227,11 @@ ClimbProMessagePrivate::ClimbProMessagePrivate(ClimbProMessage * const q)
     globalMessageNumber = MesgNum::ClimbPro;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the ClimbProMessagePrivate object.
+ */
 ClimbProMessagePrivate::~ClimbProMessagePrivate()
 {
 

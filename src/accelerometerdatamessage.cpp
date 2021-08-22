@@ -30,144 +30,295 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class AccelerometerDataMessage
+ *
+ * The AccelerometerDataMessage class represents a FIT AccelerometerDataMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid AccelerometerDataMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 AccelerometerDataMessage::AccelerometerDataMessage() : FitDataMessage(new AccelerometerDataMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime AccelerometerDataMessage::timestamp() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 AccelerometerDataMessage::timestampMs() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c sampleTimeOffset field's current value.
+ *
+ * \return the \c sampleTimeOffset field value.
+ */
 quint16 AccelerometerDataMessage::sampleTimeOffset() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->sampleTimeOffset;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c accelX field's current value.
+ *
+ * \return the \c accelX field value.
+ */
 quint16 AccelerometerDataMessage::accelX() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->accelX;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c accelY field's current value.
+ *
+ * \return the \c accelY field value.
+ */
 quint16 AccelerometerDataMessage::accelY() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->accelY;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c accelZ field's current value.
+ *
+ * \return the \c accelZ field value.
+ */
 quint16 AccelerometerDataMessage::accelZ() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->accelZ;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c calibratedAccelX field's current value.
+ *
+ * \return the \c calibratedAccelX field value.
+ */
 float AccelerometerDataMessage::calibratedAccelX() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->calibratedAccelX;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c calibratedAccelY field's current value.
+ *
+ * \return the \c calibratedAccelY field value.
+ */
 float AccelerometerDataMessage::calibratedAccelY() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->calibratedAccelY;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c calibratedAccelZ field's current value.
+ *
+ * \return the \c calibratedAccelZ field value.
+ */
 float AccelerometerDataMessage::calibratedAccelZ() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->calibratedAccelZ;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c compressedCalibratedAccelX field's current value.
+ *
+ * \return the \c compressedCalibratedAccelX field value.
+ */
 qint16 AccelerometerDataMessage::compressedCalibratedAccelX() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->compressedCalibratedAccelX;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c compressedCalibratedAccelY field's current value.
+ *
+ * \return the \c compressedCalibratedAccelY field value.
+ */
 qint16 AccelerometerDataMessage::compressedCalibratedAccelY() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->compressedCalibratedAccelY;
 }
 
+/*!
+ * Returns the AccelerometerDataMessage data message's \c compressedCalibratedAccelZ field's current value.
+ *
+ * \return the \c compressedCalibratedAccelZ field value.
+ */
 qint16 AccelerometerDataMessage::compressedCalibratedAccelZ() const
 {
     Q_D(const AccelerometerDataMessage);
     return d->compressedCalibratedAccelZ;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void AccelerometerDataMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(AccelerometerDataMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void AccelerometerDataMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(AccelerometerDataMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c sampleTimeOffset field to \a sampleTimeOffset.
+ *
+ * \param sampleTimeOffset The field value to set.
+ */
 void AccelerometerDataMessage::setSampleTimeOffset(const quint16 sampleTimeOffset)
 {
     Q_D(AccelerometerDataMessage);
     d->sampleTimeOffset = sampleTimeOffset;
 }
+/*!
+ * Sets the \c accelX field to \a accelX.
+ *
+ * \param accelX The field value to set.
+ */
 void AccelerometerDataMessage::setAccelX(const quint16 accelX)
 {
     Q_D(AccelerometerDataMessage);
     d->accelX = accelX;
 }
+/*!
+ * Sets the \c accelY field to \a accelY.
+ *
+ * \param accelY The field value to set.
+ */
 void AccelerometerDataMessage::setAccelY(const quint16 accelY)
 {
     Q_D(AccelerometerDataMessage);
     d->accelY = accelY;
 }
+/*!
+ * Sets the \c accelZ field to \a accelZ.
+ *
+ * \param accelZ The field value to set.
+ */
 void AccelerometerDataMessage::setAccelZ(const quint16 accelZ)
 {
     Q_D(AccelerometerDataMessage);
     d->accelZ = accelZ;
 }
+/*!
+ * Sets the \c calibratedAccelX field to \a calibratedAccelX.
+ *
+ * \param calibratedAccelX The field value to set.
+ */
 void AccelerometerDataMessage::setCalibratedAccelX(const float calibratedAccelX)
 {
     Q_D(AccelerometerDataMessage);
     d->calibratedAccelX = calibratedAccelX;
 }
+/*!
+ * Sets the \c calibratedAccelY field to \a calibratedAccelY.
+ *
+ * \param calibratedAccelY The field value to set.
+ */
 void AccelerometerDataMessage::setCalibratedAccelY(const float calibratedAccelY)
 {
     Q_D(AccelerometerDataMessage);
     d->calibratedAccelY = calibratedAccelY;
 }
+/*!
+ * Sets the \c calibratedAccelZ field to \a calibratedAccelZ.
+ *
+ * \param calibratedAccelZ The field value to set.
+ */
 void AccelerometerDataMessage::setCalibratedAccelZ(const float calibratedAccelZ)
 {
     Q_D(AccelerometerDataMessage);
     d->calibratedAccelZ = calibratedAccelZ;
 }
+/*!
+ * Sets the \c compressedCalibratedAccelX field to \a compressedCalibratedAccelX.
+ *
+ * \param compressedCalibratedAccelX The field value to set.
+ */
 void AccelerometerDataMessage::setCompressedCalibratedAccelX(const qint16 compressedCalibratedAccelX)
 {
     Q_D(AccelerometerDataMessage);
     d->compressedCalibratedAccelX = compressedCalibratedAccelX;
 }
+/*!
+ * Sets the \c compressedCalibratedAccelY field to \a compressedCalibratedAccelY.
+ *
+ * \param compressedCalibratedAccelY The field value to set.
+ */
 void AccelerometerDataMessage::setCompressedCalibratedAccelY(const qint16 compressedCalibratedAccelY)
 {
     Q_D(AccelerometerDataMessage);
     d->compressedCalibratedAccelY = compressedCalibratedAccelY;
 }
+/*!
+ * Sets the \c compressedCalibratedAccelZ field to \a compressedCalibratedAccelZ.
+ *
+ * \param compressedCalibratedAccelZ The field value to set.
+ */
 void AccelerometerDataMessage::setCompressedCalibratedAccelZ(const qint16 compressedCalibratedAccelZ)
 {
     Q_D(AccelerometerDataMessage);
     d->compressedCalibratedAccelZ = compressedCalibratedAccelZ;
 }
 
+/*!
+ * \internal
+ *
+ * \class AccelerometerDataMessagePrivate
+ *
+ * The AccelerometerDataMessagePrivate class provides private implementation for the AccelerometerDataMessage.
+ *
+ * \sa AccelerometerDataMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a AccelerometerDataMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 AccelerometerDataMessagePrivate::AccelerometerDataMessagePrivate(AccelerometerDataMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -186,6 +337,11 @@ AccelerometerDataMessagePrivate::AccelerometerDataMessagePrivate(AccelerometerDa
     globalMessageNumber = MesgNum::AccelerometerData;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the AccelerometerDataMessagePrivate object.
+ */
 AccelerometerDataMessagePrivate::~AccelerometerDataMessagePrivate()
 {
 

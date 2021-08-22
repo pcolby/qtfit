@@ -30,45 +30,106 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class NmeaSentenceMessage
+ *
+ * The NmeaSentenceMessage class represents a FIT NmeaSentenceMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid NmeaSentenceMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 NmeaSentenceMessage::NmeaSentenceMessage() : FitDataMessage(new NmeaSentenceMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the NmeaSentenceMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime NmeaSentenceMessage::timestamp() const
 {
     Q_D(const NmeaSentenceMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the NmeaSentenceMessage data message's \c timestampMs field's current value.
+ *
+ * \return the \c timestampMs field value.
+ */
 quint16 NmeaSentenceMessage::timestampMs() const
 {
     Q_D(const NmeaSentenceMessage);
     return d->timestampMs;
 }
 
+/*!
+ * Returns the NmeaSentenceMessage data message's \c sentence field's current value.
+ *
+ * \return the \c sentence field value.
+ */
 QString NmeaSentenceMessage::sentence() const
 {
     Q_D(const NmeaSentenceMessage);
     return d->sentence;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void NmeaSentenceMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(NmeaSentenceMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c timestampMs field to \a timestampMs.
+ *
+ * \param timestampMs The field value to set.
+ */
 void NmeaSentenceMessage::setTimestampMs(const quint16 timestampMs)
 {
     Q_D(NmeaSentenceMessage);
     d->timestampMs = timestampMs;
 }
+/*!
+ * Sets the \c sentence field to \a sentence.
+ *
+ * \param sentence The field value to set.
+ */
 void NmeaSentenceMessage::setSentence(const QString sentence)
 {
     Q_D(NmeaSentenceMessage);
     d->sentence = sentence;
 }
 
+/*!
+ * \internal
+ *
+ * \class NmeaSentenceMessagePrivate
+ *
+ * The NmeaSentenceMessagePrivate class provides private implementation for the NmeaSentenceMessage.
+ *
+ * \sa NmeaSentenceMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a NmeaSentenceMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 NmeaSentenceMessagePrivate::NmeaSentenceMessagePrivate(NmeaSentenceMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -77,6 +138,11 @@ NmeaSentenceMessagePrivate::NmeaSentenceMessagePrivate(NmeaSentenceMessage * con
     globalMessageNumber = MesgNum::NmeaSentence;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the NmeaSentenceMessagePrivate object.
+ */
 NmeaSentenceMessagePrivate::~NmeaSentenceMessagePrivate()
 {
 

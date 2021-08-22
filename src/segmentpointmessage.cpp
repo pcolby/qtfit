@@ -30,78 +30,169 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class SegmentPointMessage
+ *
+ * The SegmentPointMessage class represents a FIT SegmentPointMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid SegmentPointMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 SegmentPointMessage::SegmentPointMessage() : FitDataMessage(new SegmentPointMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the SegmentPointMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex SegmentPointMessage::messageIndex() const
 {
     Q_D(const SegmentPointMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the SegmentPointMessage data message's \c positionLat field's current value.
+ *
+ * \return the \c positionLat field value.
+ */
 qint32 SegmentPointMessage::positionLat() const
 {
     Q_D(const SegmentPointMessage);
     return d->positionLat;
 }
 
+/*!
+ * Returns the SegmentPointMessage data message's \c positionLong field's current value.
+ *
+ * \return the \c positionLong field value.
+ */
 qint32 SegmentPointMessage::positionLong() const
 {
     Q_D(const SegmentPointMessage);
     return d->positionLong;
 }
 
+/*!
+ * Returns the SegmentPointMessage data message's \c distance field's current value.
+ *
+ * \return the \c distance field value.
+ */
 quint32 SegmentPointMessage::distance() const
 {
     Q_D(const SegmentPointMessage);
     return d->distance;
 }
 
+/*!
+ * Returns the SegmentPointMessage data message's \c altitude field's current value.
+ *
+ * \return the \c altitude field value.
+ */
 quint16 SegmentPointMessage::altitude() const
 {
     Q_D(const SegmentPointMessage);
     return d->altitude;
 }
 
+/*!
+ * Returns the SegmentPointMessage data message's \c leaderTime field's current value.
+ *
+ * \return the \c leaderTime field value.
+ */
 quint32 SegmentPointMessage::leaderTime() const
 {
     Q_D(const SegmentPointMessage);
     return d->leaderTime;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void SegmentPointMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(SegmentPointMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c positionLat field to \a positionLat.
+ *
+ * \param positionLat The field value to set.
+ */
 void SegmentPointMessage::setPositionLat(const qint32 positionLat)
 {
     Q_D(SegmentPointMessage);
     d->positionLat = positionLat;
 }
+/*!
+ * Sets the \c positionLong field to \a positionLong.
+ *
+ * \param positionLong The field value to set.
+ */
 void SegmentPointMessage::setPositionLong(const qint32 positionLong)
 {
     Q_D(SegmentPointMessage);
     d->positionLong = positionLong;
 }
+/*!
+ * Sets the \c distance field to \a distance.
+ *
+ * \param distance The field value to set.
+ */
 void SegmentPointMessage::setDistance(const quint32 distance)
 {
     Q_D(SegmentPointMessage);
     d->distance = distance;
 }
+/*!
+ * Sets the \c altitude field to \a altitude.
+ *
+ * \param altitude The field value to set.
+ */
 void SegmentPointMessage::setAltitude(const quint16 altitude)
 {
     Q_D(SegmentPointMessage);
     d->altitude = altitude;
 }
+/*!
+ * Sets the \c leaderTime field to \a leaderTime.
+ *
+ * \param leaderTime The field value to set.
+ */
 void SegmentPointMessage::setLeaderTime(const quint32 leaderTime)
 {
     Q_D(SegmentPointMessage);
     d->leaderTime = leaderTime;
 }
 
+/*!
+ * \internal
+ *
+ * \class SegmentPointMessagePrivate
+ *
+ * The SegmentPointMessagePrivate class provides private implementation for the SegmentPointMessage.
+ *
+ * \sa SegmentPointMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a SegmentPointMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 SegmentPointMessagePrivate::SegmentPointMessagePrivate(SegmentPointMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -114,6 +205,11 @@ SegmentPointMessagePrivate::SegmentPointMessagePrivate(SegmentPointMessage * con
     globalMessageNumber = MesgNum::SegmentPoint;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the SegmentPointMessagePrivate object.
+ */
 SegmentPointMessagePrivate::~SegmentPointMessagePrivate()
 {
 

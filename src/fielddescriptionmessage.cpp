@@ -30,166 +30,337 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class FieldDescriptionMessage
+ *
+ * The FieldDescriptionMessage class represents a FIT FieldDescriptionMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid FieldDescriptionMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 FieldDescriptionMessage::FieldDescriptionMessage() : FitDataMessage(new FieldDescriptionMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c developerDataIndex field's current value.
+ *
+ * \return the \c developerDataIndex field value.
+ */
 quint8 FieldDescriptionMessage::developerDataIndex() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->developerDataIndex;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c fieldDefinitionNumber field's current value.
+ *
+ * \return the \c fieldDefinitionNumber field value.
+ */
 quint8 FieldDescriptionMessage::fieldDefinitionNumber() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->fieldDefinitionNumber;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c fitBaseTypeId field's current value.
+ *
+ * \return the \c fitBaseTypeId field value.
+ */
 FitBaseType FieldDescriptionMessage::fitBaseTypeId() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->fitBaseTypeId;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c fieldName field's current value.
+ *
+ * \return the \c fieldName field value.
+ */
 QString FieldDescriptionMessage::fieldName() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->fieldName;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c array field's current value.
+ *
+ * \return the \c array field value.
+ */
 quint8 FieldDescriptionMessage::array() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->array;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c components field's current value.
+ *
+ * \return the \c components field value.
+ */
 QString FieldDescriptionMessage::components() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->components;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c scale field's current value.
+ *
+ * \return the \c scale field value.
+ */
 quint8 FieldDescriptionMessage::scale() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->scale;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c offset field's current value.
+ *
+ * \return the \c offset field value.
+ */
 qint8 FieldDescriptionMessage::offset() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->offset;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c units field's current value.
+ *
+ * \return the \c units field value.
+ */
 QString FieldDescriptionMessage::units() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->units;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c bits field's current value.
+ *
+ * \return the \c bits field value.
+ */
 QString FieldDescriptionMessage::bits() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->bits;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c accumulate field's current value.
+ *
+ * \return the \c accumulate field value.
+ */
 QString FieldDescriptionMessage::accumulate() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->accumulate;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c fitBaseUnitId field's current value.
+ *
+ * \return the \c fitBaseUnitId field value.
+ */
 FitBaseUnit FieldDescriptionMessage::fitBaseUnitId() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->fitBaseUnitId;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c nativeMesgNum field's current value.
+ *
+ * \return the \c nativeMesgNum field value.
+ */
 MesgNum FieldDescriptionMessage::nativeMesgNum() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->nativeMesgNum;
 }
 
+/*!
+ * Returns the FieldDescriptionMessage data message's \c nativeFieldNum field's current value.
+ *
+ * \return the \c nativeFieldNum field value.
+ */
 quint8 FieldDescriptionMessage::nativeFieldNum() const
 {
     Q_D(const FieldDescriptionMessage);
     return d->nativeFieldNum;
 }
 
+/*!
+ * Sets the \c developerDataIndex field to \a developerDataIndex.
+ *
+ * \param developerDataIndex The field value to set.
+ */
 void FieldDescriptionMessage::setDeveloperDataIndex(const quint8 developerDataIndex)
 {
     Q_D(FieldDescriptionMessage);
     d->developerDataIndex = developerDataIndex;
 }
+/*!
+ * Sets the \c fieldDefinitionNumber field to \a fieldDefinitionNumber.
+ *
+ * \param fieldDefinitionNumber The field value to set.
+ */
 void FieldDescriptionMessage::setFieldDefinitionNumber(const quint8 fieldDefinitionNumber)
 {
     Q_D(FieldDescriptionMessage);
     d->fieldDefinitionNumber = fieldDefinitionNumber;
 }
+/*!
+ * Sets the \c fitBaseTypeId field to \a fitBaseTypeId.
+ *
+ * \param fitBaseTypeId The field value to set.
+ */
 void FieldDescriptionMessage::setFitBaseTypeId(const FitBaseType fitBaseTypeId)
 {
     Q_D(FieldDescriptionMessage);
     d->fitBaseTypeId = fitBaseTypeId;
 }
+/*!
+ * Sets the \c fieldName field to \a fieldName.
+ *
+ * \param fieldName The field value to set.
+ */
 void FieldDescriptionMessage::setFieldName(const QString fieldName)
 {
     Q_D(FieldDescriptionMessage);
     d->fieldName = fieldName;
 }
+/*!
+ * Sets the \c array field to \a array.
+ *
+ * \param array The field value to set.
+ */
 void FieldDescriptionMessage::setArray(const quint8 array)
 {
     Q_D(FieldDescriptionMessage);
     d->array = array;
 }
+/*!
+ * Sets the \c components field to \a components.
+ *
+ * \param components The field value to set.
+ */
 void FieldDescriptionMessage::setComponents(const QString components)
 {
     Q_D(FieldDescriptionMessage);
     d->components = components;
 }
+/*!
+ * Sets the \c scale field to \a scale.
+ *
+ * \param scale The field value to set.
+ */
 void FieldDescriptionMessage::setScale(const quint8 scale)
 {
     Q_D(FieldDescriptionMessage);
     d->scale = scale;
 }
+/*!
+ * Sets the \c offset field to \a offset.
+ *
+ * \param offset The field value to set.
+ */
 void FieldDescriptionMessage::setOffset(const qint8 offset)
 {
     Q_D(FieldDescriptionMessage);
     d->offset = offset;
 }
+/*!
+ * Sets the \c units field to \a units.
+ *
+ * \param units The field value to set.
+ */
 void FieldDescriptionMessage::setUnits(const QString units)
 {
     Q_D(FieldDescriptionMessage);
     d->units = units;
 }
+/*!
+ * Sets the \c bits field to \a bits.
+ *
+ * \param bits The field value to set.
+ */
 void FieldDescriptionMessage::setBits(const QString bits)
 {
     Q_D(FieldDescriptionMessage);
     d->bits = bits;
 }
+/*!
+ * Sets the \c accumulate field to \a accumulate.
+ *
+ * \param accumulate The field value to set.
+ */
 void FieldDescriptionMessage::setAccumulate(const QString accumulate)
 {
     Q_D(FieldDescriptionMessage);
     d->accumulate = accumulate;
 }
+/*!
+ * Sets the \c fitBaseUnitId field to \a fitBaseUnitId.
+ *
+ * \param fitBaseUnitId The field value to set.
+ */
 void FieldDescriptionMessage::setFitBaseUnitId(const FitBaseUnit fitBaseUnitId)
 {
     Q_D(FieldDescriptionMessage);
     d->fitBaseUnitId = fitBaseUnitId;
 }
+/*!
+ * Sets the \c nativeMesgNum field to \a nativeMesgNum.
+ *
+ * \param nativeMesgNum The field value to set.
+ */
 void FieldDescriptionMessage::setNativeMesgNum(const MesgNum nativeMesgNum)
 {
     Q_D(FieldDescriptionMessage);
     d->nativeMesgNum = nativeMesgNum;
 }
+/*!
+ * Sets the \c nativeFieldNum field to \a nativeFieldNum.
+ *
+ * \param nativeFieldNum The field value to set.
+ */
 void FieldDescriptionMessage::setNativeFieldNum(const quint8 nativeFieldNum)
 {
     Q_D(FieldDescriptionMessage);
     d->nativeFieldNum = nativeFieldNum;
 }
 
+/*!
+ * \internal
+ *
+ * \class FieldDescriptionMessagePrivate
+ *
+ * The FieldDescriptionMessagePrivate class provides private implementation for the FieldDescriptionMessage.
+ *
+ * \sa FieldDescriptionMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a FieldDescriptionMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 FieldDescriptionMessagePrivate::FieldDescriptionMessagePrivate(FieldDescriptionMessage * const q)
   : FitDataMessagePrivate(q)
   , developerDataIndex(0xFF)
@@ -205,6 +376,11 @@ FieldDescriptionMessagePrivate::FieldDescriptionMessagePrivate(FieldDescriptionM
     globalMessageNumber = MesgNum::FieldDescription;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the FieldDescriptionMessagePrivate object.
+ */
 FieldDescriptionMessagePrivate::~FieldDescriptionMessagePrivate()
 {
 

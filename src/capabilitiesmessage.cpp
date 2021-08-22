@@ -30,56 +30,127 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class CapabilitiesMessage
+ *
+ * The CapabilitiesMessage class represents a FIT CapabilitiesMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid CapabilitiesMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 CapabilitiesMessage::CapabilitiesMessage() : FitDataMessage(new CapabilitiesMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the CapabilitiesMessage data message's \c languages field's current value.
+ *
+ * \return the \c languages field value.
+ */
 quint8z CapabilitiesMessage::languages() const
 {
     Q_D(const CapabilitiesMessage);
     return d->languages;
 }
 
+/*!
+ * Returns the CapabilitiesMessage data message's \c sports field's current value.
+ *
+ * \return the \c sports field value.
+ */
 SportBits0 CapabilitiesMessage::sports() const
 {
     Q_D(const CapabilitiesMessage);
     return d->sports;
 }
 
+/*!
+ * Returns the CapabilitiesMessage data message's \c workoutsSupported field's current value.
+ *
+ * \return the \c workoutsSupported field value.
+ */
 WorkoutCapabilities CapabilitiesMessage::workoutsSupported() const
 {
     Q_D(const CapabilitiesMessage);
     return d->workoutsSupported;
 }
 
+/*!
+ * Returns the CapabilitiesMessage data message's \c connectivitySupported field's current value.
+ *
+ * \return the \c connectivitySupported field value.
+ */
 ConnectivityCapabilities CapabilitiesMessage::connectivitySupported() const
 {
     Q_D(const CapabilitiesMessage);
     return d->connectivitySupported;
 }
 
+/*!
+ * Sets the \c languages field to \a languages.
+ *
+ * \param languages The field value to set.
+ */
 void CapabilitiesMessage::setLanguages(const quint8z languages)
 {
     Q_D(CapabilitiesMessage);
     d->languages = languages;
 }
+/*!
+ * Sets the \c sports field to \a sports.
+ *
+ * \param sports The field value to set.
+ */
 void CapabilitiesMessage::setSports(const SportBits0 sports)
 {
     Q_D(CapabilitiesMessage);
     d->sports = sports;
 }
+/*!
+ * Sets the \c workoutsSupported field to \a workoutsSupported.
+ *
+ * \param workoutsSupported The field value to set.
+ */
 void CapabilitiesMessage::setWorkoutsSupported(const WorkoutCapabilities workoutsSupported)
 {
     Q_D(CapabilitiesMessage);
     d->workoutsSupported = workoutsSupported;
 }
+/*!
+ * Sets the \c connectivitySupported field to \a connectivitySupported.
+ *
+ * \param connectivitySupported The field value to set.
+ */
 void CapabilitiesMessage::setConnectivitySupported(const ConnectivityCapabilities connectivitySupported)
 {
     Q_D(CapabilitiesMessage);
     d->connectivitySupported = connectivitySupported;
 }
 
+/*!
+ * \internal
+ *
+ * \class CapabilitiesMessagePrivate
+ *
+ * The CapabilitiesMessagePrivate class provides private implementation for the CapabilitiesMessage.
+ *
+ * \sa CapabilitiesMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a CapabilitiesMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 CapabilitiesMessagePrivate::CapabilitiesMessagePrivate(CapabilitiesMessage * const q)
   : FitDataMessagePrivate(q)
   , languages(static_cast<quint8z>(-1))
@@ -90,6 +161,11 @@ CapabilitiesMessagePrivate::CapabilitiesMessagePrivate(CapabilitiesMessage * con
     globalMessageNumber = MesgNum::Capabilities;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the CapabilitiesMessagePrivate object.
+ */
 CapabilitiesMessagePrivate::~CapabilitiesMessagePrivate()
 {
 

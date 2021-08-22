@@ -30,331 +30,652 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class MonitoringMessage
+ *
+ * The MonitoringMessage class represents a FIT MonitoringMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid MonitoringMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 MonitoringMessage::MonitoringMessage() : FitDataMessage(new MonitoringMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c timestamp field's current value.
+ *
+ * \return the \c timestamp field value.
+ */
 DateTime MonitoringMessage::timestamp() const
 {
     Q_D(const MonitoringMessage);
     return d->timestamp;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c deviceIndex field's current value.
+ *
+ * \return the \c deviceIndex field value.
+ */
 DeviceIndex MonitoringMessage::deviceIndex() const
 {
     Q_D(const MonitoringMessage);
     return d->deviceIndex;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c calories field's current value.
+ *
+ * \return the \c calories field value.
+ */
 quint16 MonitoringMessage::calories() const
 {
     Q_D(const MonitoringMessage);
     return d->calories;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c distance field's current value.
+ *
+ * \return the \c distance field value.
+ */
 quint32 MonitoringMessage::distance() const
 {
     Q_D(const MonitoringMessage);
     return d->distance;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c cycles field's current value.
+ *
+ * \return the \c cycles field value.
+ */
 quint32 MonitoringMessage::cycles() const
 {
     Q_D(const MonitoringMessage);
     return d->cycles;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c activeTime field's current value.
+ *
+ * \return the \c activeTime field value.
+ */
 quint32 MonitoringMessage::activeTime() const
 {
     Q_D(const MonitoringMessage);
     return d->activeTime;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c activityType field's current value.
+ *
+ * \return the \c activityType field value.
+ */
 ActivityType MonitoringMessage::activityType() const
 {
     Q_D(const MonitoringMessage);
     return d->activityType;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c activitySubtype field's current value.
+ *
+ * \return the \c activitySubtype field value.
+ */
 ActivitySubtype MonitoringMessage::activitySubtype() const
 {
     Q_D(const MonitoringMessage);
     return d->activitySubtype;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c activityLevel field's current value.
+ *
+ * \return the \c activityLevel field value.
+ */
 ActivityLevel MonitoringMessage::activityLevel() const
 {
     Q_D(const MonitoringMessage);
     return d->activityLevel;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c distance16 field's current value.
+ *
+ * \return the \c distance16 field value.
+ */
 quint16 MonitoringMessage::distance16() const
 {
     Q_D(const MonitoringMessage);
     return d->distance16;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c cycles16 field's current value.
+ *
+ * \return the \c cycles16 field value.
+ */
 quint16 MonitoringMessage::cycles16() const
 {
     Q_D(const MonitoringMessage);
     return d->cycles16;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c activeTime16 field's current value.
+ *
+ * \return the \c activeTime16 field value.
+ */
 quint16 MonitoringMessage::activeTime16() const
 {
     Q_D(const MonitoringMessage);
     return d->activeTime16;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c localTimestamp field's current value.
+ *
+ * \return the \c localTimestamp field value.
+ */
 LocalDateTime MonitoringMessage::localTimestamp() const
 {
     Q_D(const MonitoringMessage);
     return d->localTimestamp;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c temperature field's current value.
+ *
+ * \return the \c temperature field value.
+ */
 qint16 MonitoringMessage::temperature() const
 {
     Q_D(const MonitoringMessage);
     return d->temperature;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c temperatureMin field's current value.
+ *
+ * \return the \c temperatureMin field value.
+ */
 qint16 MonitoringMessage::temperatureMin() const
 {
     Q_D(const MonitoringMessage);
     return d->temperatureMin;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c temperatureMax field's current value.
+ *
+ * \return the \c temperatureMax field value.
+ */
 qint16 MonitoringMessage::temperatureMax() const
 {
     Q_D(const MonitoringMessage);
     return d->temperatureMax;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c activityTime field's current value.
+ *
+ * \return the \c activityTime field value.
+ */
 quint16 MonitoringMessage::activityTime() const
 {
     Q_D(const MonitoringMessage);
     return d->activityTime;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c activeCalories field's current value.
+ *
+ * \return the \c activeCalories field value.
+ */
 quint16 MonitoringMessage::activeCalories() const
 {
     Q_D(const MonitoringMessage);
     return d->activeCalories;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c currentActivityTypeIntensity field's current value.
+ *
+ * \return the \c currentActivityTypeIntensity field value.
+ */
 quint8 MonitoringMessage::currentActivityTypeIntensity() const
 {
     Q_D(const MonitoringMessage);
     return d->currentActivityTypeIntensity;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c timestampMin8 field's current value.
+ *
+ * \return the \c timestampMin8 field value.
+ */
 quint8 MonitoringMessage::timestampMin8() const
 {
     Q_D(const MonitoringMessage);
     return d->timestampMin8;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c timestamp16 field's current value.
+ *
+ * \return the \c timestamp16 field value.
+ */
 quint16 MonitoringMessage::timestamp16() const
 {
     Q_D(const MonitoringMessage);
     return d->timestamp16;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c heartRate field's current value.
+ *
+ * \return the \c heartRate field value.
+ */
 quint8 MonitoringMessage::heartRate() const
 {
     Q_D(const MonitoringMessage);
     return d->heartRate;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c intensity field's current value.
+ *
+ * \return the \c intensity field value.
+ */
 quint8 MonitoringMessage::intensity() const
 {
     Q_D(const MonitoringMessage);
     return d->intensity;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c durationMin field's current value.
+ *
+ * \return the \c durationMin field value.
+ */
 quint16 MonitoringMessage::durationMin() const
 {
     Q_D(const MonitoringMessage);
     return d->durationMin;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c duration field's current value.
+ *
+ * \return the \c duration field value.
+ */
 quint32 MonitoringMessage::duration() const
 {
     Q_D(const MonitoringMessage);
     return d->duration;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c ascent field's current value.
+ *
+ * \return the \c ascent field value.
+ */
 quint32 MonitoringMessage::ascent() const
 {
     Q_D(const MonitoringMessage);
     return d->ascent;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c descent field's current value.
+ *
+ * \return the \c descent field value.
+ */
 quint32 MonitoringMessage::descent() const
 {
     Q_D(const MonitoringMessage);
     return d->descent;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c moderateActivityMinutes field's current value.
+ *
+ * \return the \c moderateActivityMinutes field value.
+ */
 quint16 MonitoringMessage::moderateActivityMinutes() const
 {
     Q_D(const MonitoringMessage);
     return d->moderateActivityMinutes;
 }
 
+/*!
+ * Returns the MonitoringMessage data message's \c vigorousActivityMinutes field's current value.
+ *
+ * \return the \c vigorousActivityMinutes field value.
+ */
 quint16 MonitoringMessage::vigorousActivityMinutes() const
 {
     Q_D(const MonitoringMessage);
     return d->vigorousActivityMinutes;
 }
 
+/*!
+ * Sets the \c timestamp field to \a timestamp.
+ *
+ * \param timestamp The field value to set.
+ */
 void MonitoringMessage::setTimestamp(const DateTime timestamp)
 {
     Q_D(MonitoringMessage);
     d->timestamp = timestamp;
 }
+/*!
+ * Sets the \c deviceIndex field to \a deviceIndex.
+ *
+ * \param deviceIndex The field value to set.
+ */
 void MonitoringMessage::setDeviceIndex(const DeviceIndex deviceIndex)
 {
     Q_D(MonitoringMessage);
     d->deviceIndex = deviceIndex;
 }
+/*!
+ * Sets the \c calories field to \a calories.
+ *
+ * \param calories The field value to set.
+ */
 void MonitoringMessage::setCalories(const quint16 calories)
 {
     Q_D(MonitoringMessage);
     d->calories = calories;
 }
+/*!
+ * Sets the \c distance field to \a distance.
+ *
+ * \param distance The field value to set.
+ */
 void MonitoringMessage::setDistance(const quint32 distance)
 {
     Q_D(MonitoringMessage);
     d->distance = distance;
 }
+/*!
+ * Sets the \c cycles field to \a cycles.
+ *
+ * \param cycles The field value to set.
+ */
 void MonitoringMessage::setCycles(const quint32 cycles)
 {
     Q_D(MonitoringMessage);
     d->cycles = cycles;
 }
+/*!
+ * Sets the \c activeTime field to \a activeTime.
+ *
+ * \param activeTime The field value to set.
+ */
 void MonitoringMessage::setActiveTime(const quint32 activeTime)
 {
     Q_D(MonitoringMessage);
     d->activeTime = activeTime;
 }
+/*!
+ * Sets the \c activityType field to \a activityType.
+ *
+ * \param activityType The field value to set.
+ */
 void MonitoringMessage::setActivityType(const ActivityType activityType)
 {
     Q_D(MonitoringMessage);
     d->activityType = activityType;
 }
+/*!
+ * Sets the \c activitySubtype field to \a activitySubtype.
+ *
+ * \param activitySubtype The field value to set.
+ */
 void MonitoringMessage::setActivitySubtype(const ActivitySubtype activitySubtype)
 {
     Q_D(MonitoringMessage);
     d->activitySubtype = activitySubtype;
 }
+/*!
+ * Sets the \c activityLevel field to \a activityLevel.
+ *
+ * \param activityLevel The field value to set.
+ */
 void MonitoringMessage::setActivityLevel(const ActivityLevel activityLevel)
 {
     Q_D(MonitoringMessage);
     d->activityLevel = activityLevel;
 }
+/*!
+ * Sets the \c distance16 field to \a distance16.
+ *
+ * \param distance16 The field value to set.
+ */
 void MonitoringMessage::setDistance16(const quint16 distance16)
 {
     Q_D(MonitoringMessage);
     d->distance16 = distance16;
 }
+/*!
+ * Sets the \c cycles16 field to \a cycles16.
+ *
+ * \param cycles16 The field value to set.
+ */
 void MonitoringMessage::setCycles16(const quint16 cycles16)
 {
     Q_D(MonitoringMessage);
     d->cycles16 = cycles16;
 }
+/*!
+ * Sets the \c activeTime16 field to \a activeTime16.
+ *
+ * \param activeTime16 The field value to set.
+ */
 void MonitoringMessage::setActiveTime16(const quint16 activeTime16)
 {
     Q_D(MonitoringMessage);
     d->activeTime16 = activeTime16;
 }
+/*!
+ * Sets the \c localTimestamp field to \a localTimestamp.
+ *
+ * \param localTimestamp The field value to set.
+ */
 void MonitoringMessage::setLocalTimestamp(const LocalDateTime localTimestamp)
 {
     Q_D(MonitoringMessage);
     d->localTimestamp = localTimestamp;
 }
+/*!
+ * Sets the \c temperature field to \a temperature.
+ *
+ * \param temperature The field value to set.
+ */
 void MonitoringMessage::setTemperature(const qint16 temperature)
 {
     Q_D(MonitoringMessage);
     d->temperature = temperature;
 }
+/*!
+ * Sets the \c temperatureMin field to \a temperatureMin.
+ *
+ * \param temperatureMin The field value to set.
+ */
 void MonitoringMessage::setTemperatureMin(const qint16 temperatureMin)
 {
     Q_D(MonitoringMessage);
     d->temperatureMin = temperatureMin;
 }
+/*!
+ * Sets the \c temperatureMax field to \a temperatureMax.
+ *
+ * \param temperatureMax The field value to set.
+ */
 void MonitoringMessage::setTemperatureMax(const qint16 temperatureMax)
 {
     Q_D(MonitoringMessage);
     d->temperatureMax = temperatureMax;
 }
+/*!
+ * Sets the \c activityTime field to \a activityTime.
+ *
+ * \param activityTime The field value to set.
+ */
 void MonitoringMessage::setActivityTime(const quint16 activityTime)
 {
     Q_D(MonitoringMessage);
     d->activityTime = activityTime;
 }
+/*!
+ * Sets the \c activeCalories field to \a activeCalories.
+ *
+ * \param activeCalories The field value to set.
+ */
 void MonitoringMessage::setActiveCalories(const quint16 activeCalories)
 {
     Q_D(MonitoringMessage);
     d->activeCalories = activeCalories;
 }
+/*!
+ * Sets the \c currentActivityTypeIntensity field to \a currentActivityTypeIntensity.
+ *
+ * \param currentActivityTypeIntensity The field value to set.
+ */
 void MonitoringMessage::setCurrentActivityTypeIntensity(const quint8 currentActivityTypeIntensity)
 {
     Q_D(MonitoringMessage);
     d->currentActivityTypeIntensity = currentActivityTypeIntensity;
 }
+/*!
+ * Sets the \c timestampMin8 field to \a timestampMin8.
+ *
+ * \param timestampMin8 The field value to set.
+ */
 void MonitoringMessage::setTimestampMin8(const quint8 timestampMin8)
 {
     Q_D(MonitoringMessage);
     d->timestampMin8 = timestampMin8;
 }
+/*!
+ * Sets the \c timestamp16 field to \a timestamp16.
+ *
+ * \param timestamp16 The field value to set.
+ */
 void MonitoringMessage::setTimestamp16(const quint16 timestamp16)
 {
     Q_D(MonitoringMessage);
     d->timestamp16 = timestamp16;
 }
+/*!
+ * Sets the \c heartRate field to \a heartRate.
+ *
+ * \param heartRate The field value to set.
+ */
 void MonitoringMessage::setHeartRate(const quint8 heartRate)
 {
     Q_D(MonitoringMessage);
     d->heartRate = heartRate;
 }
+/*!
+ * Sets the \c intensity field to \a intensity.
+ *
+ * \param intensity The field value to set.
+ */
 void MonitoringMessage::setIntensity(const quint8 intensity)
 {
     Q_D(MonitoringMessage);
     d->intensity = intensity;
 }
+/*!
+ * Sets the \c durationMin field to \a durationMin.
+ *
+ * \param durationMin The field value to set.
+ */
 void MonitoringMessage::setDurationMin(const quint16 durationMin)
 {
     Q_D(MonitoringMessage);
     d->durationMin = durationMin;
 }
+/*!
+ * Sets the \c duration field to \a duration.
+ *
+ * \param duration The field value to set.
+ */
 void MonitoringMessage::setDuration(const quint32 duration)
 {
     Q_D(MonitoringMessage);
     d->duration = duration;
 }
+/*!
+ * Sets the \c ascent field to \a ascent.
+ *
+ * \param ascent The field value to set.
+ */
 void MonitoringMessage::setAscent(const quint32 ascent)
 {
     Q_D(MonitoringMessage);
     d->ascent = ascent;
 }
+/*!
+ * Sets the \c descent field to \a descent.
+ *
+ * \param descent The field value to set.
+ */
 void MonitoringMessage::setDescent(const quint32 descent)
 {
     Q_D(MonitoringMessage);
     d->descent = descent;
 }
+/*!
+ * Sets the \c moderateActivityMinutes field to \a moderateActivityMinutes.
+ *
+ * \param moderateActivityMinutes The field value to set.
+ */
 void MonitoringMessage::setModerateActivityMinutes(const quint16 moderateActivityMinutes)
 {
     Q_D(MonitoringMessage);
     d->moderateActivityMinutes = moderateActivityMinutes;
 }
+/*!
+ * Sets the \c vigorousActivityMinutes field to \a vigorousActivityMinutes.
+ *
+ * \param vigorousActivityMinutes The field value to set.
+ */
 void MonitoringMessage::setVigorousActivityMinutes(const quint16 vigorousActivityMinutes)
 {
     Q_D(MonitoringMessage);
     d->vigorousActivityMinutes = vigorousActivityMinutes;
 }
 
+/*!
+ * \internal
+ *
+ * \class MonitoringMessagePrivate
+ *
+ * The MonitoringMessagePrivate class provides private implementation for the MonitoringMessage.
+ *
+ * \sa MonitoringMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a MonitoringMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 MonitoringMessagePrivate::MonitoringMessagePrivate(MonitoringMessage * const q)
   : FitDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
@@ -390,6 +711,11 @@ MonitoringMessagePrivate::MonitoringMessagePrivate(MonitoringMessage * const q)
     globalMessageNumber = MesgNum::Monitoring;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the MonitoringMessagePrivate object.
+ */
 MonitoringMessagePrivate::~MonitoringMessagePrivate()
 {
 

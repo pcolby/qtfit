@@ -8,12 +8,31 @@
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
+/*!
+ * \class {{ClassName}}
+ *
+ * The {{ClassName}} class represents a FIT {{ClassName}} data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid {{ClassName}} object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 {{ClassName}}::{{ClassName}}() : FitDataMessage(new {{ClassName}}Private(this))
 {
 
 }
 
 {% for field in fields %}
+/*!
+ * Returns the {{ClassName}} data message's \c {{field.name}} field's current value.
+ *
+ * \return the \c {{field.name}} field value.
+ */
 {{field.cppType}} {{ClassName}}::{{field.name}}() const
 {
     Q_D(const {{ClassName}});
@@ -22,6 +41,11 @@
 
 {% endfor %}
 {% for field in fields %}
+/*!
+ * Sets the \c {{field.name}} field to \a {{field.name}}.
+ *
+ * \param {{field.name}} The field value to set.
+ */
 void {{ClassName}}::set{{field.name|capfirst}}(const {{field.cppType}} {{field.name}})
 {
     Q_D({{ClassName}});
@@ -29,6 +53,23 @@ void {{ClassName}}::set{{field.name|capfirst}}(const {{field.cppType}} {{field.n
 }
 {% endfor %}
 
+/*!
+ * \internal
+ *
+ * \class {{ClassName}}Private
+ *
+ * The {{ClassName}}Private class provides private implementation for the {{ClassName}}.
+ *
+ * \sa {{ClassName}}
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a {{ClassName}}Private object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
   : FitDataMessagePrivate(q)
 {% for field in fields %}
@@ -40,6 +81,11 @@ void {{ClassName}}::set{{field.name|capfirst}}(const {{field.cppType}} {{field.n
     globalMessageNumber = MesgNum::{{MesgNumLabel}};
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the {{ClassName}}Private object.
+ */
 {{ClassName}}Private::~{{ClassName}}Private()
 {
 

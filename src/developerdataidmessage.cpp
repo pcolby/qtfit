@@ -30,67 +30,148 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class DeveloperDataIdMessage
+ *
+ * The DeveloperDataIdMessage class represents a FIT DeveloperDataIdMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid DeveloperDataIdMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 DeveloperDataIdMessage::DeveloperDataIdMessage() : FitDataMessage(new DeveloperDataIdMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the DeveloperDataIdMessage data message's \c developerId field's current value.
+ *
+ * \return the \c developerId field value.
+ */
 quint8 DeveloperDataIdMessage::developerId() const
 {
     Q_D(const DeveloperDataIdMessage);
     return d->developerId;
 }
 
+/*!
+ * Returns the DeveloperDataIdMessage data message's \c applicationId field's current value.
+ *
+ * \return the \c applicationId field value.
+ */
 quint8 DeveloperDataIdMessage::applicationId() const
 {
     Q_D(const DeveloperDataIdMessage);
     return d->applicationId;
 }
 
+/*!
+ * Returns the DeveloperDataIdMessage data message's \c manufacturerId field's current value.
+ *
+ * \return the \c manufacturerId field value.
+ */
 Manufacturer DeveloperDataIdMessage::manufacturerId() const
 {
     Q_D(const DeveloperDataIdMessage);
     return d->manufacturerId;
 }
 
+/*!
+ * Returns the DeveloperDataIdMessage data message's \c developerDataIndex field's current value.
+ *
+ * \return the \c developerDataIndex field value.
+ */
 quint8 DeveloperDataIdMessage::developerDataIndex() const
 {
     Q_D(const DeveloperDataIdMessage);
     return d->developerDataIndex;
 }
 
+/*!
+ * Returns the DeveloperDataIdMessage data message's \c applicationVersion field's current value.
+ *
+ * \return the \c applicationVersion field value.
+ */
 quint32 DeveloperDataIdMessage::applicationVersion() const
 {
     Q_D(const DeveloperDataIdMessage);
     return d->applicationVersion;
 }
 
+/*!
+ * Sets the \c developerId field to \a developerId.
+ *
+ * \param developerId The field value to set.
+ */
 void DeveloperDataIdMessage::setDeveloperId(const quint8 developerId)
 {
     Q_D(DeveloperDataIdMessage);
     d->developerId = developerId;
 }
+/*!
+ * Sets the \c applicationId field to \a applicationId.
+ *
+ * \param applicationId The field value to set.
+ */
 void DeveloperDataIdMessage::setApplicationId(const quint8 applicationId)
 {
     Q_D(DeveloperDataIdMessage);
     d->applicationId = applicationId;
 }
+/*!
+ * Sets the \c manufacturerId field to \a manufacturerId.
+ *
+ * \param manufacturerId The field value to set.
+ */
 void DeveloperDataIdMessage::setManufacturerId(const Manufacturer manufacturerId)
 {
     Q_D(DeveloperDataIdMessage);
     d->manufacturerId = manufacturerId;
 }
+/*!
+ * Sets the \c developerDataIndex field to \a developerDataIndex.
+ *
+ * \param developerDataIndex The field value to set.
+ */
 void DeveloperDataIdMessage::setDeveloperDataIndex(const quint8 developerDataIndex)
 {
     Q_D(DeveloperDataIdMessage);
     d->developerDataIndex = developerDataIndex;
 }
+/*!
+ * Sets the \c applicationVersion field to \a applicationVersion.
+ *
+ * \param applicationVersion The field value to set.
+ */
 void DeveloperDataIdMessage::setApplicationVersion(const quint32 applicationVersion)
 {
     Q_D(DeveloperDataIdMessage);
     d->applicationVersion = applicationVersion;
 }
 
+/*!
+ * \internal
+ *
+ * \class DeveloperDataIdMessagePrivate
+ *
+ * The DeveloperDataIdMessagePrivate class provides private implementation for the DeveloperDataIdMessage.
+ *
+ * \sa DeveloperDataIdMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a DeveloperDataIdMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 DeveloperDataIdMessagePrivate::DeveloperDataIdMessagePrivate(DeveloperDataIdMessage * const q)
   : FitDataMessagePrivate(q)
   , developerId(0xFF)
@@ -102,6 +183,11 @@ DeveloperDataIdMessagePrivate::DeveloperDataIdMessagePrivate(DeveloperDataIdMess
     globalMessageNumber = MesgNum::DeveloperDataId;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the DeveloperDataIdMessagePrivate object.
+ */
 DeveloperDataIdMessagePrivate::~DeveloperDataIdMessagePrivate()
 {
 

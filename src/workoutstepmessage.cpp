@@ -30,177 +30,358 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class WorkoutStepMessage
+ *
+ * The WorkoutStepMessage class represents a FIT WorkoutStepMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid WorkoutStepMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 WorkoutStepMessage::WorkoutStepMessage() : FitDataMessage(new WorkoutStepMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex WorkoutStepMessage::messageIndex() const
 {
     Q_D(const WorkoutStepMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c wktStepName field's current value.
+ *
+ * \return the \c wktStepName field value.
+ */
 QString WorkoutStepMessage::wktStepName() const
 {
     Q_D(const WorkoutStepMessage);
     return d->wktStepName;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c durationType field's current value.
+ *
+ * \return the \c durationType field value.
+ */
 WktStepDuration WorkoutStepMessage::durationType() const
 {
     Q_D(const WorkoutStepMessage);
     return d->durationType;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c durationValue field's current value.
+ *
+ * \return the \c durationValue field value.
+ */
 quint32 WorkoutStepMessage::durationValue() const
 {
     Q_D(const WorkoutStepMessage);
     return d->durationValue;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c targetType field's current value.
+ *
+ * \return the \c targetType field value.
+ */
 WktStepTarget WorkoutStepMessage::targetType() const
 {
     Q_D(const WorkoutStepMessage);
     return d->targetType;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c targetValue field's current value.
+ *
+ * \return the \c targetValue field value.
+ */
 quint32 WorkoutStepMessage::targetValue() const
 {
     Q_D(const WorkoutStepMessage);
     return d->targetValue;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c customTargetValueLow field's current value.
+ *
+ * \return the \c customTargetValueLow field value.
+ */
 quint32 WorkoutStepMessage::customTargetValueLow() const
 {
     Q_D(const WorkoutStepMessage);
     return d->customTargetValueLow;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c customTargetValueHigh field's current value.
+ *
+ * \return the \c customTargetValueHigh field value.
+ */
 quint32 WorkoutStepMessage::customTargetValueHigh() const
 {
     Q_D(const WorkoutStepMessage);
     return d->customTargetValueHigh;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c intensity field's current value.
+ *
+ * \return the \c intensity field value.
+ */
 Intensity WorkoutStepMessage::intensity() const
 {
     Q_D(const WorkoutStepMessage);
     return d->intensity;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c notes field's current value.
+ *
+ * \return the \c notes field value.
+ */
 QString WorkoutStepMessage::notes() const
 {
     Q_D(const WorkoutStepMessage);
     return d->notes;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c equipment field's current value.
+ *
+ * \return the \c equipment field value.
+ */
 WorkoutEquipment WorkoutStepMessage::equipment() const
 {
     Q_D(const WorkoutStepMessage);
     return d->equipment;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c exerciseCategory field's current value.
+ *
+ * \return the \c exerciseCategory field value.
+ */
 ExerciseCategory WorkoutStepMessage::exerciseCategory() const
 {
     Q_D(const WorkoutStepMessage);
     return d->exerciseCategory;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c exerciseName field's current value.
+ *
+ * \return the \c exerciseName field value.
+ */
 quint16 WorkoutStepMessage::exerciseName() const
 {
     Q_D(const WorkoutStepMessage);
     return d->exerciseName;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c exerciseWeight field's current value.
+ *
+ * \return the \c exerciseWeight field value.
+ */
 quint16 WorkoutStepMessage::exerciseWeight() const
 {
     Q_D(const WorkoutStepMessage);
     return d->exerciseWeight;
 }
 
+/*!
+ * Returns the WorkoutStepMessage data message's \c weightDisplayUnit field's current value.
+ *
+ * \return the \c weightDisplayUnit field value.
+ */
 FitBaseUnit WorkoutStepMessage::weightDisplayUnit() const
 {
     Q_D(const WorkoutStepMessage);
     return d->weightDisplayUnit;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void WorkoutStepMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(WorkoutStepMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c wktStepName field to \a wktStepName.
+ *
+ * \param wktStepName The field value to set.
+ */
 void WorkoutStepMessage::setWktStepName(const QString wktStepName)
 {
     Q_D(WorkoutStepMessage);
     d->wktStepName = wktStepName;
 }
+/*!
+ * Sets the \c durationType field to \a durationType.
+ *
+ * \param durationType The field value to set.
+ */
 void WorkoutStepMessage::setDurationType(const WktStepDuration durationType)
 {
     Q_D(WorkoutStepMessage);
     d->durationType = durationType;
 }
+/*!
+ * Sets the \c durationValue field to \a durationValue.
+ *
+ * \param durationValue The field value to set.
+ */
 void WorkoutStepMessage::setDurationValue(const quint32 durationValue)
 {
     Q_D(WorkoutStepMessage);
     d->durationValue = durationValue;
 }
+/*!
+ * Sets the \c targetType field to \a targetType.
+ *
+ * \param targetType The field value to set.
+ */
 void WorkoutStepMessage::setTargetType(const WktStepTarget targetType)
 {
     Q_D(WorkoutStepMessage);
     d->targetType = targetType;
 }
+/*!
+ * Sets the \c targetValue field to \a targetValue.
+ *
+ * \param targetValue The field value to set.
+ */
 void WorkoutStepMessage::setTargetValue(const quint32 targetValue)
 {
     Q_D(WorkoutStepMessage);
     d->targetValue = targetValue;
 }
+/*!
+ * Sets the \c customTargetValueLow field to \a customTargetValueLow.
+ *
+ * \param customTargetValueLow The field value to set.
+ */
 void WorkoutStepMessage::setCustomTargetValueLow(const quint32 customTargetValueLow)
 {
     Q_D(WorkoutStepMessage);
     d->customTargetValueLow = customTargetValueLow;
 }
+/*!
+ * Sets the \c customTargetValueHigh field to \a customTargetValueHigh.
+ *
+ * \param customTargetValueHigh The field value to set.
+ */
 void WorkoutStepMessage::setCustomTargetValueHigh(const quint32 customTargetValueHigh)
 {
     Q_D(WorkoutStepMessage);
     d->customTargetValueHigh = customTargetValueHigh;
 }
+/*!
+ * Sets the \c intensity field to \a intensity.
+ *
+ * \param intensity The field value to set.
+ */
 void WorkoutStepMessage::setIntensity(const Intensity intensity)
 {
     Q_D(WorkoutStepMessage);
     d->intensity = intensity;
 }
+/*!
+ * Sets the \c notes field to \a notes.
+ *
+ * \param notes The field value to set.
+ */
 void WorkoutStepMessage::setNotes(const QString notes)
 {
     Q_D(WorkoutStepMessage);
     d->notes = notes;
 }
+/*!
+ * Sets the \c equipment field to \a equipment.
+ *
+ * \param equipment The field value to set.
+ */
 void WorkoutStepMessage::setEquipment(const WorkoutEquipment equipment)
 {
     Q_D(WorkoutStepMessage);
     d->equipment = equipment;
 }
+/*!
+ * Sets the \c exerciseCategory field to \a exerciseCategory.
+ *
+ * \param exerciseCategory The field value to set.
+ */
 void WorkoutStepMessage::setExerciseCategory(const ExerciseCategory exerciseCategory)
 {
     Q_D(WorkoutStepMessage);
     d->exerciseCategory = exerciseCategory;
 }
+/*!
+ * Sets the \c exerciseName field to \a exerciseName.
+ *
+ * \param exerciseName The field value to set.
+ */
 void WorkoutStepMessage::setExerciseName(const quint16 exerciseName)
 {
     Q_D(WorkoutStepMessage);
     d->exerciseName = exerciseName;
 }
+/*!
+ * Sets the \c exerciseWeight field to \a exerciseWeight.
+ *
+ * \param exerciseWeight The field value to set.
+ */
 void WorkoutStepMessage::setExerciseWeight(const quint16 exerciseWeight)
 {
     Q_D(WorkoutStepMessage);
     d->exerciseWeight = exerciseWeight;
 }
+/*!
+ * Sets the \c weightDisplayUnit field to \a weightDisplayUnit.
+ *
+ * \param weightDisplayUnit The field value to set.
+ */
 void WorkoutStepMessage::setWeightDisplayUnit(const FitBaseUnit weightDisplayUnit)
 {
     Q_D(WorkoutStepMessage);
     d->weightDisplayUnit = weightDisplayUnit;
 }
 
+/*!
+ * \internal
+ *
+ * \class WorkoutStepMessagePrivate
+ *
+ * The WorkoutStepMessagePrivate class provides private implementation for the WorkoutStepMessage.
+ *
+ * \sa WorkoutStepMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a WorkoutStepMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 WorkoutStepMessagePrivate::WorkoutStepMessagePrivate(WorkoutStepMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -220,6 +401,11 @@ WorkoutStepMessagePrivate::WorkoutStepMessagePrivate(WorkoutStepMessage * const 
     globalMessageNumber = MesgNum::WorkoutStep;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the WorkoutStepMessagePrivate object.
+ */
 WorkoutStepMessagePrivate::~WorkoutStepMessagePrivate()
 {
 

@@ -30,155 +30,316 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+/*!
+ * \class GoalMessage
+ *
+ * The GoalMessage class represents a FIT GoalMessage data message.
+ *
+ * \sa DataMessage
+ */
+
+/*!
+ * Constructs an invalid GoalMessage object.
+ *
+ * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
+ * constructor may be used, along with the relevant setter methods, to create a valid message.
+ */
 GoalMessage::GoalMessage() : FitDataMessage(new GoalMessagePrivate(this))
 {
 
 }
 
+/*!
+ * Returns the GoalMessage data message's \c messageIndex field's current value.
+ *
+ * \return the \c messageIndex field value.
+ */
 MessageIndex GoalMessage::messageIndex() const
 {
     Q_D(const GoalMessage);
     return d->messageIndex;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c sport field's current value.
+ *
+ * \return the \c sport field value.
+ */
 Sport GoalMessage::sport() const
 {
     Q_D(const GoalMessage);
     return d->sport;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c subSport field's current value.
+ *
+ * \return the \c subSport field value.
+ */
 SubSport GoalMessage::subSport() const
 {
     Q_D(const GoalMessage);
     return d->subSport;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c startDate field's current value.
+ *
+ * \return the \c startDate field value.
+ */
 DateTime GoalMessage::startDate() const
 {
     Q_D(const GoalMessage);
     return d->startDate;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c endDate field's current value.
+ *
+ * \return the \c endDate field value.
+ */
 DateTime GoalMessage::endDate() const
 {
     Q_D(const GoalMessage);
     return d->endDate;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c type field's current value.
+ *
+ * \return the \c type field value.
+ */
 Goal GoalMessage::type() const
 {
     Q_D(const GoalMessage);
     return d->type;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c value field's current value.
+ *
+ * \return the \c value field value.
+ */
 quint32 GoalMessage::value() const
 {
     Q_D(const GoalMessage);
     return d->value;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c repeat field's current value.
+ *
+ * \return the \c repeat field value.
+ */
 bool GoalMessage::repeat() const
 {
     Q_D(const GoalMessage);
     return d->repeat;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c targetValue field's current value.
+ *
+ * \return the \c targetValue field value.
+ */
 quint32 GoalMessage::targetValue() const
 {
     Q_D(const GoalMessage);
     return d->targetValue;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c recurrence field's current value.
+ *
+ * \return the \c recurrence field value.
+ */
 GoalRecurrence GoalMessage::recurrence() const
 {
     Q_D(const GoalMessage);
     return d->recurrence;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c recurrenceValue field's current value.
+ *
+ * \return the \c recurrenceValue field value.
+ */
 quint16 GoalMessage::recurrenceValue() const
 {
     Q_D(const GoalMessage);
     return d->recurrenceValue;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c enabled field's current value.
+ *
+ * \return the \c enabled field value.
+ */
 bool GoalMessage::enabled() const
 {
     Q_D(const GoalMessage);
     return d->enabled;
 }
 
+/*!
+ * Returns the GoalMessage data message's \c source field's current value.
+ *
+ * \return the \c source field value.
+ */
 GoalSource GoalMessage::source() const
 {
     Q_D(const GoalMessage);
     return d->source;
 }
 
+/*!
+ * Sets the \c messageIndex field to \a messageIndex.
+ *
+ * \param messageIndex The field value to set.
+ */
 void GoalMessage::setMessageIndex(const MessageIndex messageIndex)
 {
     Q_D(GoalMessage);
     d->messageIndex = messageIndex;
 }
+/*!
+ * Sets the \c sport field to \a sport.
+ *
+ * \param sport The field value to set.
+ */
 void GoalMessage::setSport(const Sport sport)
 {
     Q_D(GoalMessage);
     d->sport = sport;
 }
+/*!
+ * Sets the \c subSport field to \a subSport.
+ *
+ * \param subSport The field value to set.
+ */
 void GoalMessage::setSubSport(const SubSport subSport)
 {
     Q_D(GoalMessage);
     d->subSport = subSport;
 }
+/*!
+ * Sets the \c startDate field to \a startDate.
+ *
+ * \param startDate The field value to set.
+ */
 void GoalMessage::setStartDate(const DateTime startDate)
 {
     Q_D(GoalMessage);
     d->startDate = startDate;
 }
+/*!
+ * Sets the \c endDate field to \a endDate.
+ *
+ * \param endDate The field value to set.
+ */
 void GoalMessage::setEndDate(const DateTime endDate)
 {
     Q_D(GoalMessage);
     d->endDate = endDate;
 }
+/*!
+ * Sets the \c type field to \a type.
+ *
+ * \param type The field value to set.
+ */
 void GoalMessage::setType(const Goal type)
 {
     Q_D(GoalMessage);
     d->type = type;
 }
+/*!
+ * Sets the \c value field to \a value.
+ *
+ * \param value The field value to set.
+ */
 void GoalMessage::setValue(const quint32 value)
 {
     Q_D(GoalMessage);
     d->value = value;
 }
+/*!
+ * Sets the \c repeat field to \a repeat.
+ *
+ * \param repeat The field value to set.
+ */
 void GoalMessage::setRepeat(const bool repeat)
 {
     Q_D(GoalMessage);
     d->repeat = repeat;
 }
+/*!
+ * Sets the \c targetValue field to \a targetValue.
+ *
+ * \param targetValue The field value to set.
+ */
 void GoalMessage::setTargetValue(const quint32 targetValue)
 {
     Q_D(GoalMessage);
     d->targetValue = targetValue;
 }
+/*!
+ * Sets the \c recurrence field to \a recurrence.
+ *
+ * \param recurrence The field value to set.
+ */
 void GoalMessage::setRecurrence(const GoalRecurrence recurrence)
 {
     Q_D(GoalMessage);
     d->recurrence = recurrence;
 }
+/*!
+ * Sets the \c recurrenceValue field to \a recurrenceValue.
+ *
+ * \param recurrenceValue The field value to set.
+ */
 void GoalMessage::setRecurrenceValue(const quint16 recurrenceValue)
 {
     Q_D(GoalMessage);
     d->recurrenceValue = recurrenceValue;
 }
+/*!
+ * Sets the \c enabled field to \a enabled.
+ *
+ * \param enabled The field value to set.
+ */
 void GoalMessage::setEnabled(const bool enabled)
 {
     Q_D(GoalMessage);
     d->enabled = enabled;
 }
+/*!
+ * Sets the \c source field to \a source.
+ *
+ * \param source The field value to set.
+ */
 void GoalMessage::setSource(const GoalSource source)
 {
     Q_D(GoalMessage);
     d->source = source;
 }
 
+/*!
+ * \internal
+ *
+ * \class GoalMessagePrivate
+ *
+ * The GoalMessagePrivate class provides private implementation for the GoalMessage.
+ *
+ * \sa GoalMessage
+ */
+
+/*!
+ * \internal
+ *
+ * Constructs a GoalMessagePrivate object with public implementation \a q.
+ *
+ * \param q Pointer to public implementaton.
+ */
 GoalMessagePrivate::GoalMessagePrivate(GoalMessage * const q)
   : FitDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
@@ -198,6 +359,11 @@ GoalMessagePrivate::GoalMessagePrivate(GoalMessage * const q)
     globalMessageNumber = MesgNum::Goal;
 }
 
+/*!
+ * \internal
+ *
+ * Destroys the GoalMessagePrivate object.
+ */
 GoalMessagePrivate::~GoalMessagePrivate()
 {
 
