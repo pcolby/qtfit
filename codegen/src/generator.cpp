@@ -251,9 +251,10 @@ int Generator::processTypes(Grantlee::Context &context)
     context.insert(QSL("enums"), enums);
     const bool result =
         render(QSL("src/fitdatamessages.cpp"), context, outputDir.absoluteFilePath(QSL("src/fitdatamessages.cpp")))
+     && render(QSL("src/types.cpp"), context, outputDir.absoluteFilePath(QSL("src/types.cpp")))
      && render(QSL("src/types.h"), context, outputDir.absoluteFilePath(QSL("src/types.h")));
     context.pop();
-    return result ? 2 : -1;
+    return result ? 3 : -1;
 }
 
 // Grantlee output stream that does *no* content escaping.

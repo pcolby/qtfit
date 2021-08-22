@@ -16,6 +16,8 @@
 
 #include "{{ProjectName}}_global.h"
 
+#include <QDebug>
+
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
 typedef quint8  quint8z;
@@ -31,6 +33,10 @@ enum class {{enum.typeName}} {% if enum.baseType != "enum" %}: q{{enum.baseType}
 };
 
 {% endfor %}
+{% for enum in enums %}
+QDebug operator<<(QDebug debug, const {{enum.typeName}} value);
+{% endfor %}
+
 {{ProjectName|upper}}_END_NAMESPACE
 
 #endif // {{ProjectName|upper}}_{{FileName|upper}}_H

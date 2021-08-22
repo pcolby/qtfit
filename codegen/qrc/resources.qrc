@@ -11,5 +11,6 @@
     <file>templates/src/fitdatamessages.cmake</file>
     <file>templates/src/fitdatamessages.cpp</file>
     <file>templates/src/types.h</file>
+    <file>templates/src/types.cpp</file>
   </qresource>
 </RCC>

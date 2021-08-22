@@ -93,17 +93,14 @@ bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
                                      const FitBaseType baseType, const bool bigEndian)
 {
     Q_UNUSED(bigEndian)
-    /// \todo Add a toString(const FitBaseType type) function.
-    qWarning() << "ignoring unknown field" << fieldId << data << static_cast<int>(baseType);
-    return false;
+    qWarning() << "ignoring unknown field" << fieldId << data << baseType;
+    return true; // True because we "handled it safely", and can continue parsing.
 }
 
 inline bool verifyBaseType(const FitBaseType actual, const FitBaseType expected, const char *name)
 {
     if (actual == expected) return true;
-    /// \todo Add a toString(const FitBaseType type) function.
-    qWarning() << name << "has base type" << static_cast<int>(actual)
-               << "but should be" << static_cast<int>(expected);
+    qWarning() << name << "has base type" << actual << "but should be" << expected;
     return false;
 }
 

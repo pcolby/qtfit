@@ -12,6 +12,7 @@ add_library(QtFit SHARED
   fitstreamreader.h
   fitstreamreader_p.h
   QtFit_global.h
+  types.cpp
   types.h
   types_p.h
 )
