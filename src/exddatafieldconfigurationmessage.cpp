@@ -123,75 +123,27 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:exd_data_field_configuration.screenIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_field_configuration.screenIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_field_configuration.screenIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_field_configuration.screenIndex")) return false;
         this->screenIndex = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:exd_data_field_configuration.conceptField
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_field_configuration.conceptField has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_field_configuration.conceptField size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "exd_data_field_configuration.conceptField")) return false;
         this->conceptField = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:exd_data_field_configuration.fieldId
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_field_configuration.fieldId has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_field_configuration.fieldId size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_field_configuration.fieldId")) return false;
         this->fieldId = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:exd_data_field_configuration.conceptCount
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_field_configuration.conceptCount has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_field_configuration.conceptCount size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_field_configuration.conceptCount")) return false;
         this->conceptCount = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:exd_data_field_configuration.displayType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_field_configuration.displayType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_field_configuration.displayType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "exd_data_field_configuration.displayType")) return false;
         this->displayType = static_cast<ExdDisplayType>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:exd_data_field_configuration.title
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_field_configuration.title has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_field_configuration.title size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "exd_data_field_configuration.title")) return false;
         this->title = QString::fromUtf8(data);
         break;
     default:

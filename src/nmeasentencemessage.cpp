@@ -87,39 +87,15 @@ bool NmeaSentenceMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:nmea_sentence.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "nmea_sentence.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "nmea_sentence.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "nmea_sentence.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:nmea_sentence.timestampMs
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "nmea_sentence.timestampMs has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "nmea_sentence.timestampMs size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "nmea_sentence.timestampMs")) return false;
         this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:nmea_sentence.sentence
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "nmea_sentence.sentence has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "nmea_sentence.sentence size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "nmea_sentence.sentence")) return false;
         this->sentence = QString::fromUtf8(data);
         break;
     default:

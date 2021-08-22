@@ -99,51 +99,19 @@ bool CourseMessagePrivate::setField(
 {
     switch (fieldId) {
     case 4: // See Profile.xlsx::Messages:course.sport
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course.sport has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "course.sport size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "course.sport")) return false;
         this->sport = static_cast<Sport>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:course.name
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course.name has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "course.name size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "course.name")) return false;
         this->name = QString::fromUtf8(data);
         break;
     case 6: // See Profile.xlsx::Messages:course.capabilities
-        if (baseType != FitBaseType::Uint32z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course.capabilities has base type" << static_cast<int>(baseType) << "but should be Uint32z";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "course.capabilities size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32z, "course.capabilities")) return false;
         this->capabilities = static_cast<CourseCapabilities>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:course.subSport
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course.subSport has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "course.subSport size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "course.subSport")) return false;
         this->subSport = static_cast<SubSport>(data.at(0));
         break;
     default:

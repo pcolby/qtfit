@@ -208,159 +208,55 @@ bool WeightScaleMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:weight_scale.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "weight_scale.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "weight_scale.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:weight_scale.weight
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.weight has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.weight size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.weight")) return false;
         this->weight = static_cast<Weight>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:weight_scale.percentFat
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.percentFat has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.percentFat size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.percentFat")) return false;
         this->percentFat = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:weight_scale.percentHydration
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.percentHydration has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.percentHydration size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.percentHydration")) return false;
         this->percentHydration = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:weight_scale.visceralFatMass
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.visceralFatMass has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.visceralFatMass size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.visceralFatMass")) return false;
         this->visceralFatMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:weight_scale.boneMass
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.boneMass has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.boneMass size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.boneMass")) return false;
         this->boneMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:weight_scale.muscleMass
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.muscleMass has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.muscleMass size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.muscleMass")) return false;
         this->muscleMass = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:weight_scale.basalMet
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.basalMet has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.basalMet size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.basalMet")) return false;
         this->basalMet = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:weight_scale.physiqueRating
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.physiqueRating has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weight_scale.physiqueRating size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "weight_scale.physiqueRating")) return false;
         this->physiqueRating = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:weight_scale.activeMet
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.activeMet has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.activeMet size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.activeMet")) return false;
         this->activeMet = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:weight_scale.metabolicAge
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.metabolicAge has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weight_scale.metabolicAge size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "weight_scale.metabolicAge")) return false;
         this->metabolicAge = static_cast<quint8>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:weight_scale.visceralFatRating
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.visceralFatRating has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weight_scale.visceralFatRating size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "weight_scale.visceralFatRating")) return false;
         this->visceralFatRating = static_cast<quint8>(data.at(0));
         break;
     case 12: // See Profile.xlsx::Messages:weight_scale.userProfileIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weight_scale.userProfileIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weight_scale.userProfileIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weight_scale.userProfileIndex")) return false;
         this->userProfileIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:

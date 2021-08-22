@@ -136,87 +136,31 @@ bool WorkoutSessionMessagePrivate::setField(
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:workout_session.messageIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "workout_session.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "workout_session.messageIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "workout_session.messageIndex")) return false;
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:workout_session.sport
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "workout_session.sport has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "workout_session.sport size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "workout_session.sport")) return false;
         this->sport = static_cast<Sport>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:workout_session.subSport
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "workout_session.subSport has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "workout_session.subSport size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "workout_session.subSport")) return false;
         this->subSport = static_cast<SubSport>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:workout_session.numValidSteps
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "workout_session.numValidSteps has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "workout_session.numValidSteps size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "workout_session.numValidSteps")) return false;
         this->numValidSteps = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:workout_session.firstStepIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "workout_session.firstStepIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "workout_session.firstStepIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "workout_session.firstStepIndex")) return false;
         this->firstStepIndex = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:workout_session.poolLength
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "workout_session.poolLength has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "workout_session.poolLength size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "workout_session.poolLength")) return false;
         this->poolLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:workout_session.poolLengthUnit
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "workout_session.poolLengthUnit has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "workout_session.poolLengthUnit size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "workout_session.poolLengthUnit")) return false;
         this->poolLengthUnit = static_cast<DisplayMeasure>(data.at(0));
         break;
     default:

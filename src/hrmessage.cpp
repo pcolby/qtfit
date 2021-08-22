@@ -124,75 +124,27 @@ bool HrMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:hr.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hr.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "hr.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "hr.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:hr.fractionalTimestamp
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hr.fractionalTimestamp has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "hr.fractionalTimestamp size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "hr.fractionalTimestamp")) return false;
         this->fractionalTimestamp = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:hr.time256
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hr.time256 has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "hr.time256 size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "hr.time256")) return false;
         this->time256 = static_cast<quint8>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:hr.filteredBpm
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hr.filteredBpm has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "hr.filteredBpm size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "hr.filteredBpm")) return false;
         this->filteredBpm = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:hr.eventTimestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hr.eventTimestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "hr.eventTimestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "hr.eventTimestamp")) return false;
         this->eventTimestamp = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 10: // See Profile.xlsx::Messages:hr.eventTimestamp12
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hr.eventTimestamp12 has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "hr.eventTimestamp12 size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "hr.eventTimestamp12")) return false;
         this->eventTimestamp12 = static_cast<quint8>(data.at(0));
         break;
     default:

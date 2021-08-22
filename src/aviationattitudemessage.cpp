@@ -196,147 +196,51 @@ bool AviationAttitudeMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:aviation_attitude.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "aviation_attitude.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "aviation_attitude.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:aviation_attitude.timestampMs
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.timestampMs has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.timestampMs size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "aviation_attitude.timestampMs")) return false;
         this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:aviation_attitude.systemTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.systemTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "aviation_attitude.systemTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "aviation_attitude.systemTime")) return false;
         this->systemTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:aviation_attitude.pitch
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.pitch has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.pitch size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "aviation_attitude.pitch")) return false;
         this->pitch = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:aviation_attitude.roll
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.roll has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.roll size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "aviation_attitude.roll")) return false;
         this->roll = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:aviation_attitude.accelLateral
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.accelLateral has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.accelLateral size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "aviation_attitude.accelLateral")) return false;
         this->accelLateral = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:aviation_attitude.accelNormal
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.accelNormal has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.accelNormal size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "aviation_attitude.accelNormal")) return false;
         this->accelNormal = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:aviation_attitude.turnRate
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.turnRate has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.turnRate size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "aviation_attitude.turnRate")) return false;
         this->turnRate = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:aviation_attitude.stage
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.stage has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "aviation_attitude.stage size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "aviation_attitude.stage")) return false;
         this->stage = static_cast<AttitudeStage>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:aviation_attitude.attitudeStageComplete
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.attitudeStageComplete has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "aviation_attitude.attitudeStageComplete size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "aviation_attitude.attitudeStageComplete")) return false;
         this->attitudeStageComplete = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:aviation_attitude.track
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.track has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.track size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "aviation_attitude.track")) return false;
         this->track = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:aviation_attitude.validity
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "aviation_attitude.validity has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "aviation_attitude.validity size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "aviation_attitude.validity")) return false;
         this->validity = static_cast<AttitudeValidity>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:

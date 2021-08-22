@@ -88,39 +88,15 @@ bool WatchfaceSettingsMessagePrivate::setField(
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:watchface_settings.messageIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "watchface_settings.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "watchface_settings.messageIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "watchface_settings.messageIndex")) return false;
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:watchface_settings.mode
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "watchface_settings.mode has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "watchface_settings.mode size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "watchface_settings.mode")) return false;
         this->mode = static_cast<WatchfaceMode>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:watchface_settings.layout
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "watchface_settings.layout has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "watchface_settings.layout size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "watchface_settings.layout")) return false;
         this->layout = static_cast<quint8>(data.at(0));
         break;
     default:

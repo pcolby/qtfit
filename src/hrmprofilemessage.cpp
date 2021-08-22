@@ -112,63 +112,23 @@ bool HrmProfileMessagePrivate::setField(
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:hrm_profile.messageIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hrm_profile.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "hrm_profile.messageIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "hrm_profile.messageIndex")) return false;
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:hrm_profile.enabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hrm_profile.enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "hrm_profile.enabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "hrm_profile.enabled")) return false;
         this->enabled = static_cast<bool>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:hrm_profile.hrmAntId
-        if (baseType != FitBaseType::Uint16z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hrm_profile.hrmAntId has base type" << static_cast<int>(baseType) << "but should be Uint16z";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "hrm_profile.hrmAntId size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16z, "hrm_profile.hrmAntId")) return false;
         this->hrmAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:hrm_profile.logHrv
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hrm_profile.logHrv has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "hrm_profile.logHrv size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "hrm_profile.logHrv")) return false;
         this->logHrv = static_cast<bool>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:hrm_profile.hrmAntIdTransType
-        if (baseType != FitBaseType::Uint8z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "hrm_profile.hrmAntIdTransType has base type" << static_cast<int>(baseType) << "but should be Uint8z";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "hrm_profile.hrmAntIdTransType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8z, "hrm_profile.hrmAntIdTransType")) return false;
         this->hrmAntIdTransType = static_cast<quint8z>(data.at(0));
         break;
     default:

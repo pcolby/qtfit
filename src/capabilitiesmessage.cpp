@@ -100,51 +100,19 @@ bool CapabilitiesMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:capabilities.languages
-        if (baseType != FitBaseType::Uint8z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "capabilities.languages has base type" << static_cast<int>(baseType) << "but should be Uint8z";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "capabilities.languages size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8z, "capabilities.languages")) return false;
         this->languages = static_cast<quint8z>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:capabilities.sports
-        if (baseType != FitBaseType::Uint8z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "capabilities.sports has base type" << static_cast<int>(baseType) << "but should be Uint8z";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "capabilities.sports size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8z, "capabilities.sports")) return false;
         this->sports = static_cast<SportBits0>(data.at(0));
         break;
     case 21: // See Profile.xlsx::Messages:capabilities.workoutsSupported
-        if (baseType != FitBaseType::Uint32z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "capabilities.workoutsSupported has base type" << static_cast<int>(baseType) << "but should be Uint32z";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "capabilities.workoutsSupported size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32z, "capabilities.workoutsSupported")) return false;
         this->workoutsSupported = static_cast<WorkoutCapabilities>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 23: // See Profile.xlsx::Messages:capabilities.connectivitySupported
-        if (baseType != FitBaseType::Uint32z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "capabilities.connectivitySupported has base type" << static_cast<int>(baseType) << "but should be Uint32z";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "capabilities.connectivitySupported size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32z, "capabilities.connectivitySupported")) return false;
         this->connectivitySupported = static_cast<ConnectivityCapabilities>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:

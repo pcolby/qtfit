@@ -136,87 +136,31 @@ bool ScheduleMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:schedule.manufacturer
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "schedule.manufacturer has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "schedule.manufacturer size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "schedule.manufacturer")) return false;
         this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:schedule.product
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "schedule.product has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "schedule.product size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "schedule.product")) return false;
         this->product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:schedule.serialNumber
-        if (baseType != FitBaseType::Uint32z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "schedule.serialNumber has base type" << static_cast<int>(baseType) << "but should be Uint32z";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "schedule.serialNumber size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32z, "schedule.serialNumber")) return false;
         this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:schedule.timeCreated
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "schedule.timeCreated has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "schedule.timeCreated size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "schedule.timeCreated")) return false;
         this->timeCreated = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:schedule.completed
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "schedule.completed has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "schedule.completed size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "schedule.completed")) return false;
         this->completed = static_cast<bool>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:schedule.type
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "schedule.type has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "schedule.type size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "schedule.type")) return false;
         this->type = static_cast<Schedule>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:schedule.scheduledTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "schedule.scheduledTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "schedule.scheduledTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "schedule.scheduledTime")) return false;
         this->scheduledTime = static_cast<LocalDateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:

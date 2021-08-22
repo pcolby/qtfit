@@ -160,111 +160,39 @@ bool GpsMetadataMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:gps_metadata.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gps_metadata.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "gps_metadata.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:gps_metadata.timestampMs
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.timestampMs has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gps_metadata.timestampMs size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "gps_metadata.timestampMs")) return false;
         this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:gps_metadata.positionLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.positionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gps_metadata.positionLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "gps_metadata.positionLat")) return false;
         this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:gps_metadata.positionLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.positionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gps_metadata.positionLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "gps_metadata.positionLong")) return false;
         this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:gps_metadata.enhancedAltitude
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.enhancedAltitude has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gps_metadata.enhancedAltitude size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "gps_metadata.enhancedAltitude")) return false;
         this->enhancedAltitude = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:gps_metadata.enhancedSpeed
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.enhancedSpeed has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gps_metadata.enhancedSpeed size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "gps_metadata.enhancedSpeed")) return false;
         this->enhancedSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:gps_metadata.heading
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.heading has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gps_metadata.heading size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "gps_metadata.heading")) return false;
         this->heading = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:gps_metadata.utcTimestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.utcTimestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gps_metadata.utcTimestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "gps_metadata.utcTimestamp")) return false;
         this->utcTimestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:gps_metadata.velocity
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gps_metadata.velocity has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gps_metadata.velocity size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "gps_metadata.velocity")) return false;
         this->velocity = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     default:

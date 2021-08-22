@@ -76,27 +76,11 @@ bool StressLevelMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:stress_level.stressLevelValue
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "stress_level.stressLevelValue has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "stress_level.stressLevelValue size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "stress_level.stressLevelValue")) return false;
         this->stressLevelValue = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:stress_level.stressLevelTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "stress_level.stressLevelTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "stress_level.stressLevelTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "stress_level.stressLevelTime")) return false;
         this->stressLevelTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:

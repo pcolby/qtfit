@@ -46,6 +46,9 @@ protected:
     virtual bool setField(const int fieldId, const QByteArray &data,
                           const FitBaseType baseType, const bool bigEndian);
 
+    bool verify(const QByteArray &data, const FitBaseType actualType, const int expectedSize,
+                       const FitBaseType expectedType, const char *messageFieldName);
+
 private:
     Q_DECLARE_PUBLIC(FitDataMessage)
     Q_DISABLE_COPY(FitDataMessagePrivate)

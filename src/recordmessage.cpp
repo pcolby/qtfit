@@ -940,819 +940,275 @@ bool RecordMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:record.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:record.positionLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.positionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.positionLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "record.positionLat")) return false;
         this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 1: // See Profile.xlsx::Messages:record.positionLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.positionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.positionLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "record.positionLong")) return false;
         this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:record.altitude
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.altitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.altitude size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.altitude")) return false;
         this->altitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:record.heartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.heartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.heartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.heartRate")) return false;
         this->heartRate = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:record.cadence
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.cadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.cadence size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.cadence")) return false;
         this->cadence = static_cast<quint8>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:record.distance
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.distance has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.distance size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.distance")) return false;
         this->distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:record.speed
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.speed has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.speed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.speed")) return false;
         this->speed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 7: // See Profile.xlsx::Messages:record.power
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.power has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.power size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.power")) return false;
         this->power = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 8: // See Profile.xlsx::Messages:record.compressedSpeedDistance
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.compressedSpeedDistance has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.compressedSpeedDistance size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "record.compressedSpeedDistance")) return false;
         this->compressedSpeedDistance = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:record.grade
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.grade has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.grade size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "record.grade")) return false;
         this->grade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 10: // See Profile.xlsx::Messages:record.resistance
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.resistance has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.resistance size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.resistance")) return false;
         this->resistance = static_cast<quint8>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:record.timeFromCourse
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.timeFromCourse has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.timeFromCourse size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "record.timeFromCourse")) return false;
         this->timeFromCourse = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 12: // See Profile.xlsx::Messages:record.cycleLength
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.cycleLength has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.cycleLength size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.cycleLength")) return false;
         this->cycleLength = static_cast<quint8>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:record.temperature
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.temperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.temperature size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "record.temperature")) return false;
         this->temperature = static_cast<qint8>(data.at(0));
         break;
     case 17: // See Profile.xlsx::Messages:record.speed1s
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.speed1s has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.speed1s size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.speed1s")) return false;
         this->speed1s = static_cast<quint8>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:record.cycles
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.cycles has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.cycles size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.cycles")) return false;
         this->cycles = static_cast<quint8>(data.at(0));
         break;
     case 19: // See Profile.xlsx::Messages:record.totalCycles
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.totalCycles has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.totalCycles size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.totalCycles")) return false;
         this->totalCycles = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 28: // See Profile.xlsx::Messages:record.compressedAccumulatedPower
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.compressedAccumulatedPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.compressedAccumulatedPower size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.compressedAccumulatedPower")) return false;
         this->compressedAccumulatedPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 29: // See Profile.xlsx::Messages:record.accumulatedPower
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.accumulatedPower has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.accumulatedPower size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.accumulatedPower")) return false;
         this->accumulatedPower = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 30: // See Profile.xlsx::Messages:record.leftRightBalance
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.leftRightBalance has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.leftRightBalance size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.leftRightBalance")) return false;
         this->leftRightBalance = static_cast<LeftRightBalance>(data.at(0));
         break;
     case 31: // See Profile.xlsx::Messages:record.gpsAccuracy
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.gpsAccuracy has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.gpsAccuracy size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.gpsAccuracy")) return false;
         this->gpsAccuracy = static_cast<quint8>(data.at(0));
         break;
     case 32: // See Profile.xlsx::Messages:record.verticalSpeed
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.verticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.verticalSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "record.verticalSpeed")) return false;
         this->verticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 33: // See Profile.xlsx::Messages:record.calories
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.calories has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.calories size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.calories")) return false;
         this->calories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 39: // See Profile.xlsx::Messages:record.verticalOscillation
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.verticalOscillation has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.verticalOscillation size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.verticalOscillation")) return false;
         this->verticalOscillation = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 40: // See Profile.xlsx::Messages:record.stanceTimePercent
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.stanceTimePercent has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.stanceTimePercent size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.stanceTimePercent")) return false;
         this->stanceTimePercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 41: // See Profile.xlsx::Messages:record.stanceTime
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.stanceTime has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.stanceTime size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.stanceTime")) return false;
         this->stanceTime = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 42: // See Profile.xlsx::Messages:record.activityType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.activityType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.activityType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "record.activityType")) return false;
         this->activityType = static_cast<ActivityType>(data.at(0));
         break;
     case 43: // See Profile.xlsx::Messages:record.leftTorqueEffectiveness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.leftTorqueEffectiveness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.leftTorqueEffectiveness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.leftTorqueEffectiveness")) return false;
         this->leftTorqueEffectiveness = static_cast<quint8>(data.at(0));
         break;
     case 44: // See Profile.xlsx::Messages:record.rightTorqueEffectiveness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.rightTorqueEffectiveness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.rightTorqueEffectiveness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.rightTorqueEffectiveness")) return false;
         this->rightTorqueEffectiveness = static_cast<quint8>(data.at(0));
         break;
     case 45: // See Profile.xlsx::Messages:record.leftPedalSmoothness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.leftPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.leftPedalSmoothness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.leftPedalSmoothness")) return false;
         this->leftPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 46: // See Profile.xlsx::Messages:record.rightPedalSmoothness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.rightPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.rightPedalSmoothness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.rightPedalSmoothness")) return false;
         this->rightPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 47: // See Profile.xlsx::Messages:record.combinedPedalSmoothness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.combinedPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.combinedPedalSmoothness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.combinedPedalSmoothness")) return false;
         this->combinedPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 48: // See Profile.xlsx::Messages:record.time128
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.time128 has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.time128 size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.time128")) return false;
         this->time128 = static_cast<quint8>(data.at(0));
         break;
     case 49: // See Profile.xlsx::Messages:record.strokeType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.strokeType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.strokeType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "record.strokeType")) return false;
         this->strokeType = static_cast<StrokeType>(data.at(0));
         break;
     case 50: // See Profile.xlsx::Messages:record.zone
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.zone has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.zone size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.zone")) return false;
         this->zone = static_cast<quint8>(data.at(0));
         break;
     case 51: // See Profile.xlsx::Messages:record.ballSpeed
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.ballSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.ballSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.ballSpeed")) return false;
         this->ballSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 52: // See Profile.xlsx::Messages:record.cadence256
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.cadence256 has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.cadence256 size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.cadence256")) return false;
         this->cadence256 = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 53: // See Profile.xlsx::Messages:record.fractionalCadence
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.fractionalCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.fractionalCadence size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.fractionalCadence")) return false;
         this->fractionalCadence = static_cast<quint8>(data.at(0));
         break;
     case 54: // See Profile.xlsx::Messages:record.totalHemoglobinConc
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.totalHemoglobinConc has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.totalHemoglobinConc size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.totalHemoglobinConc")) return false;
         this->totalHemoglobinConc = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 55: // See Profile.xlsx::Messages:record.totalHemoglobinConcMin
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.totalHemoglobinConcMin has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.totalHemoglobinConcMin size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.totalHemoglobinConcMin")) return false;
         this->totalHemoglobinConcMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 56: // See Profile.xlsx::Messages:record.totalHemoglobinConcMax
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.totalHemoglobinConcMax has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.totalHemoglobinConcMax size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.totalHemoglobinConcMax")) return false;
         this->totalHemoglobinConcMax = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 57: // See Profile.xlsx::Messages:record.saturatedHemoglobinPercent
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.saturatedHemoglobinPercent has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.saturatedHemoglobinPercent size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.saturatedHemoglobinPercent")) return false;
         this->saturatedHemoglobinPercent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 58: // See Profile.xlsx::Messages:record.saturatedHemoglobinPercentMin
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.saturatedHemoglobinPercentMin has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.saturatedHemoglobinPercentMin size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.saturatedHemoglobinPercentMin")) return false;
         this->saturatedHemoglobinPercentMin = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 59: // See Profile.xlsx::Messages:record.saturatedHemoglobinPercentMax
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.saturatedHemoglobinPercentMax has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.saturatedHemoglobinPercentMax size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.saturatedHemoglobinPercentMax")) return false;
         this->saturatedHemoglobinPercentMax = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 62: // See Profile.xlsx::Messages:record.deviceIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.deviceIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.deviceIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.deviceIndex")) return false;
         this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     case 67: // See Profile.xlsx::Messages:record.leftPco
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.leftPco has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.leftPco size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "record.leftPco")) return false;
         this->leftPco = static_cast<qint8>(data.at(0));
         break;
     case 68: // See Profile.xlsx::Messages:record.rightPco
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.rightPco has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.rightPco size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "record.rightPco")) return false;
         this->rightPco = static_cast<qint8>(data.at(0));
         break;
     case 69: // See Profile.xlsx::Messages:record.leftPowerPhase
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.leftPowerPhase has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.leftPowerPhase size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.leftPowerPhase")) return false;
         this->leftPowerPhase = static_cast<quint8>(data.at(0));
         break;
     case 70: // See Profile.xlsx::Messages:record.leftPowerPhasePeak
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.leftPowerPhasePeak has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.leftPowerPhasePeak size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.leftPowerPhasePeak")) return false;
         this->leftPowerPhasePeak = static_cast<quint8>(data.at(0));
         break;
     case 71: // See Profile.xlsx::Messages:record.rightPowerPhase
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.rightPowerPhase has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.rightPowerPhase size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.rightPowerPhase")) return false;
         this->rightPowerPhase = static_cast<quint8>(data.at(0));
         break;
     case 72: // See Profile.xlsx::Messages:record.rightPowerPhasePeak
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.rightPowerPhasePeak has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.rightPowerPhasePeak size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.rightPowerPhasePeak")) return false;
         this->rightPowerPhasePeak = static_cast<quint8>(data.at(0));
         break;
     case 73: // See Profile.xlsx::Messages:record.enhancedSpeed
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.enhancedSpeed has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.enhancedSpeed size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.enhancedSpeed")) return false;
         this->enhancedSpeed = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 78: // See Profile.xlsx::Messages:record.enhancedAltitude
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.enhancedAltitude has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.enhancedAltitude size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.enhancedAltitude")) return false;
         this->enhancedAltitude = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 81: // See Profile.xlsx::Messages:record.batterySoc
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.batterySoc has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.batterySoc size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.batterySoc")) return false;
         this->batterySoc = static_cast<quint8>(data.at(0));
         break;
     case 82: // See Profile.xlsx::Messages:record.motorPower
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.motorPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.motorPower size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.motorPower")) return false;
         this->motorPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 83: // See Profile.xlsx::Messages:record.verticalRatio
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.verticalRatio has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.verticalRatio size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.verticalRatio")) return false;
         this->verticalRatio = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 84: // See Profile.xlsx::Messages:record.stanceTimeBalance
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.stanceTimeBalance has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.stanceTimeBalance size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.stanceTimeBalance")) return false;
         this->stanceTimeBalance = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 85: // See Profile.xlsx::Messages:record.stepLength
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.stepLength has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.stepLength size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.stepLength")) return false;
         this->stepLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 91: // See Profile.xlsx::Messages:record.absolutePressure
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.absolutePressure has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.absolutePressure size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.absolutePressure")) return false;
         this->absolutePressure = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 92: // See Profile.xlsx::Messages:record.depth
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.depth has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.depth size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.depth")) return false;
         this->depth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 93: // See Profile.xlsx::Messages:record.nextStopDepth
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.nextStopDepth has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.nextStopDepth size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.nextStopDepth")) return false;
         this->nextStopDepth = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 94: // See Profile.xlsx::Messages:record.nextStopTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.nextStopTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.nextStopTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.nextStopTime")) return false;
         this->nextStopTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 95: // See Profile.xlsx::Messages:record.timeToSurface
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.timeToSurface has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.timeToSurface size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.timeToSurface")) return false;
         this->timeToSurface = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 96: // See Profile.xlsx::Messages:record.ndlTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.ndlTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.ndlTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "record.ndlTime")) return false;
         this->ndlTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 97: // See Profile.xlsx::Messages:record.cnsLoad
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.cnsLoad has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.cnsLoad size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.cnsLoad")) return false;
         this->cnsLoad = static_cast<quint8>(data.at(0));
         break;
     case 98: // See Profile.xlsx::Messages:record.n2Load
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.n2Load has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.n2Load size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.n2Load")) return false;
         this->n2Load = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 114: // See Profile.xlsx::Messages:record.grit
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.grit has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.grit size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "record.grit")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -1765,15 +1221,7 @@ bool RecordMessagePrivate::setField(
         #endif
         break;
     case 115: // See Profile.xlsx::Messages:record.flow
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.flow has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "record.flow size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "record.flow")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -1786,63 +1234,23 @@ bool RecordMessagePrivate::setField(
         #endif
         break;
     case 117: // See Profile.xlsx::Messages:record.ebikeTravelRange
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.ebikeTravelRange has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.ebikeTravelRange size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.ebikeTravelRange")) return false;
         this->ebikeTravelRange = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 118: // See Profile.xlsx::Messages:record.ebikeBatteryLevel
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.ebikeBatteryLevel has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.ebikeBatteryLevel size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.ebikeBatteryLevel")) return false;
         this->ebikeBatteryLevel = static_cast<quint8>(data.at(0));
         break;
     case 119: // See Profile.xlsx::Messages:record.ebikeAssistMode
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.ebikeAssistMode has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.ebikeAssistMode size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.ebikeAssistMode")) return false;
         this->ebikeAssistMode = static_cast<quint8>(data.at(0));
         break;
     case 120: // See Profile.xlsx::Messages:record.ebikeAssistLevelPercent
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.ebikeAssistLevelPercent has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "record.ebikeAssistLevelPercent size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "record.ebikeAssistLevelPercent")) return false;
         this->ebikeAssistLevelPercent = static_cast<quint8>(data.at(0));
         break;
     case 139: // See Profile.xlsx::Messages:record.coreTemperature
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "record.coreTemperature has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "record.coreTemperature size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "record.coreTemperature")) return false;
         this->coreTemperature = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     default:

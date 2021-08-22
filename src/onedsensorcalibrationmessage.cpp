@@ -124,75 +124,27 @@ bool OneDSensorCalibrationMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:one_d_sensor_calibration.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "one_d_sensor_calibration.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "one_d_sensor_calibration.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "one_d_sensor_calibration.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:one_d_sensor_calibration.sensorType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "one_d_sensor_calibration.sensorType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "one_d_sensor_calibration.sensorType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "one_d_sensor_calibration.sensorType")) return false;
         this->sensorType = static_cast<SensorType>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:one_d_sensor_calibration.calibrationFactor
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "one_d_sensor_calibration.calibrationFactor has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "one_d_sensor_calibration.calibrationFactor size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "one_d_sensor_calibration.calibrationFactor")) return false;
         this->calibrationFactor = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:one_d_sensor_calibration.calibrationDivisor
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "one_d_sensor_calibration.calibrationDivisor has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "one_d_sensor_calibration.calibrationDivisor size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "one_d_sensor_calibration.calibrationDivisor")) return false;
         this->calibrationDivisor = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:one_d_sensor_calibration.levelShift
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "one_d_sensor_calibration.levelShift has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "one_d_sensor_calibration.levelShift size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "one_d_sensor_calibration.levelShift")) return false;
         this->levelShift = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:one_d_sensor_calibration.offsetCal
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "one_d_sensor_calibration.offsetCal has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "one_d_sensor_calibration.offsetCal size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "one_d_sensor_calibration.offsetCal")) return false;
         this->offsetCal = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     default:

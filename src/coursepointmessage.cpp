@@ -147,99 +147,35 @@ bool CoursePointMessagePrivate::setField(
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:course_point.messageIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "course_point.messageIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "course_point.messageIndex")) return false;
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:course_point.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "course_point.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "course_point.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 2: // See Profile.xlsx::Messages:course_point.positionLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.positionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "course_point.positionLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "course_point.positionLat")) return false;
         this->positionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:course_point.positionLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.positionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "course_point.positionLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "course_point.positionLong")) return false;
         this->positionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:course_point.distance
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.distance has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "course_point.distance size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "course_point.distance")) return false;
         this->distance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:course_point.type
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.type has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "course_point.type size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "course_point.type")) return false;
         this->type = static_cast<CoursePoint>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:course_point.name
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.name has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "course_point.name size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "course_point.name")) return false;
         this->name = QString::fromUtf8(data);
         break;
     case 8: // See Profile.xlsx::Messages:course_point.favorite
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "course_point.favorite has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "course_point.favorite size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "course_point.favorite")) return false;
         this->favorite = static_cast<bool>(data.at(0));
         break;
     default:

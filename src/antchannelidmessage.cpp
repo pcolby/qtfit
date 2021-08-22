@@ -112,63 +112,23 @@ bool AntChannelIdMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:ant_channel_id.channelNumber
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "ant_channel_id.channelNumber has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "ant_channel_id.channelNumber size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "ant_channel_id.channelNumber")) return false;
         this->channelNumber = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:ant_channel_id.deviceType
-        if (baseType != FitBaseType::Uint8z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "ant_channel_id.deviceType has base type" << static_cast<int>(baseType) << "but should be Uint8z";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "ant_channel_id.deviceType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8z, "ant_channel_id.deviceType")) return false;
         this->deviceType = static_cast<quint8z>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:ant_channel_id.deviceNumber
-        if (baseType != FitBaseType::Uint16z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "ant_channel_id.deviceNumber has base type" << static_cast<int>(baseType) << "but should be Uint16z";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "ant_channel_id.deviceNumber size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16z, "ant_channel_id.deviceNumber")) return false;
         this->deviceNumber = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:ant_channel_id.transmissionType
-        if (baseType != FitBaseType::Uint8z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "ant_channel_id.transmissionType has base type" << static_cast<int>(baseType) << "but should be Uint8z";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "ant_channel_id.transmissionType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8z, "ant_channel_id.transmissionType")) return false;
         this->transmissionType = static_cast<quint8z>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:ant_channel_id.deviceIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "ant_channel_id.deviceIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "ant_channel_id.deviceIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "ant_channel_id.deviceIndex")) return false;
         this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     default:

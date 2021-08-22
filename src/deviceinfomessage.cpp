@@ -266,219 +266,75 @@ bool DeviceInfoMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:device_info.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "device_info.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "device_info.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:device_info.deviceIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.deviceIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.deviceIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "device_info.deviceIndex")) return false;
         this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:device_info.deviceType
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.deviceType has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.deviceType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "device_info.deviceType")) return false;
         this->deviceType = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:device_info.manufacturer
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.manufacturer has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "device_info.manufacturer size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "device_info.manufacturer")) return false;
         this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:device_info.serialNumber
-        if (baseType != FitBaseType::Uint32z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.serialNumber has base type" << static_cast<int>(baseType) << "but should be Uint32z";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "device_info.serialNumber size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32z, "device_info.serialNumber")) return false;
         this->serialNumber = static_cast<quint32z>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:device_info.product
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.product has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "device_info.product size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "device_info.product")) return false;
         this->product = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:device_info.softwareVersion
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.softwareVersion has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "device_info.softwareVersion size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "device_info.softwareVersion")) return false;
         this->softwareVersion = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 6: // See Profile.xlsx::Messages:device_info.hardwareVersion
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.hardwareVersion has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.hardwareVersion size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "device_info.hardwareVersion")) return false;
         this->hardwareVersion = static_cast<quint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:device_info.cumOperatingTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.cumOperatingTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "device_info.cumOperatingTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "device_info.cumOperatingTime")) return false;
         this->cumOperatingTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 10: // See Profile.xlsx::Messages:device_info.batteryVoltage
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.batteryVoltage has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "device_info.batteryVoltage size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "device_info.batteryVoltage")) return false;
         this->batteryVoltage = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 11: // See Profile.xlsx::Messages:device_info.batteryStatus
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.batteryStatus has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.batteryStatus size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "device_info.batteryStatus")) return false;
         this->batteryStatus = static_cast<BatteryStatus>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:device_info.sensorPosition
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.sensorPosition has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.sensorPosition size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "device_info.sensorPosition")) return false;
         this->sensorPosition = static_cast<BodyLocation>(data.at(0));
         break;
     case 19: // See Profile.xlsx::Messages:device_info.descriptor
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.descriptor has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.descriptor size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "device_info.descriptor")) return false;
         this->descriptor = QString::fromUtf8(data);
         break;
     case 20: // See Profile.xlsx::Messages:device_info.antTransmissionType
-        if (baseType != FitBaseType::Uint8z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.antTransmissionType has base type" << static_cast<int>(baseType) << "but should be Uint8z";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.antTransmissionType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8z, "device_info.antTransmissionType")) return false;
         this->antTransmissionType = static_cast<quint8z>(data.at(0));
         break;
     case 21: // See Profile.xlsx::Messages:device_info.antDeviceNumber
-        if (baseType != FitBaseType::Uint16z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.antDeviceNumber has base type" << static_cast<int>(baseType) << "but should be Uint16z";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "device_info.antDeviceNumber size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16z, "device_info.antDeviceNumber")) return false;
         this->antDeviceNumber = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 22: // See Profile.xlsx::Messages:device_info.antNetwork
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.antNetwork has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.antNetwork size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "device_info.antNetwork")) return false;
         this->antNetwork = static_cast<AntNetwork>(data.at(0));
         break;
     case 25: // See Profile.xlsx::Messages:device_info.sourceType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.sourceType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.sourceType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "device_info.sourceType")) return false;
         this->sourceType = static_cast<SourceType>(data.at(0));
         break;
     case 27: // See Profile.xlsx::Messages:device_info.productName
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "device_info.productName has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "device_info.productName size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "device_info.productName")) return false;
         this->productName = QString::fromUtf8(data);
         break;
     default:

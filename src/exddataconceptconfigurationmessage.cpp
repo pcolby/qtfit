@@ -184,135 +184,47 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:exd_data_concept_configuration.screenIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.screenIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.screenIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_concept_configuration.screenIndex")) return false;
         this->screenIndex = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:exd_data_concept_configuration.conceptField
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.conceptField has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.conceptField size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "exd_data_concept_configuration.conceptField")) return false;
         this->conceptField = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:exd_data_concept_configuration.fieldId
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.fieldId has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.fieldId size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_concept_configuration.fieldId")) return false;
         this->fieldId = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:exd_data_concept_configuration.conceptIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.conceptIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.conceptIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_concept_configuration.conceptIndex")) return false;
         this->conceptIndex = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:exd_data_concept_configuration.dataPage
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.dataPage has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.dataPage size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_concept_configuration.dataPage")) return false;
         this->dataPage = static_cast<quint8>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:exd_data_concept_configuration.conceptKey
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.conceptKey has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.conceptKey size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_concept_configuration.conceptKey")) return false;
         this->conceptKey = static_cast<quint8>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:exd_data_concept_configuration.scaling
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.scaling has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.scaling size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_data_concept_configuration.scaling")) return false;
         this->scaling = static_cast<quint8>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:exd_data_concept_configuration.dataUnits
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.dataUnits has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.dataUnits size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "exd_data_concept_configuration.dataUnits")) return false;
         this->dataUnits = static_cast<ExdDataUnits>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:exd_data_concept_configuration.qualifier
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.qualifier has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.qualifier size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "exd_data_concept_configuration.qualifier")) return false;
         this->qualifier = static_cast<ExdQualifiers>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:exd_data_concept_configuration.descriptor
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.descriptor has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_data_concept_configuration.descriptor size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "exd_data_concept_configuration.descriptor")) return false;
         this->descriptor = static_cast<ExdDescriptors>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:exd_data_concept_configuration.isSigned
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_data_concept_configuration.isSigned has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "exd_data_concept_configuration.isSigned size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "exd_data_concept_configuration.isSigned")) return false;
         this->isSigned = static_cast<bool>(data.at(0));
         break;
     default:

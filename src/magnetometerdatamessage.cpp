@@ -160,87 +160,31 @@ bool MagnetometerDataMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:magnetometer_data.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "magnetometer_data.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "magnetometer_data.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:magnetometer_data.timestampMs
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.timestampMs has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "magnetometer_data.timestampMs size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "magnetometer_data.timestampMs")) return false;
         this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:magnetometer_data.sampleTimeOffset
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.sampleTimeOffset has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "magnetometer_data.sampleTimeOffset size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "magnetometer_data.sampleTimeOffset")) return false;
         this->sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:magnetometer_data.magX
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.magX has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "magnetometer_data.magX size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "magnetometer_data.magX")) return false;
         this->magX = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:magnetometer_data.magY
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.magY has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "magnetometer_data.magY size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "magnetometer_data.magY")) return false;
         this->magY = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:magnetometer_data.magZ
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.magZ has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "magnetometer_data.magZ size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "magnetometer_data.magZ")) return false;
         this->magZ = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:magnetometer_data.calibratedMagX
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.calibratedMagX has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "magnetometer_data.calibratedMagX size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "magnetometer_data.calibratedMagX")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -253,15 +197,7 @@ bool MagnetometerDataMessagePrivate::setField(
         #endif
         break;
     case 6: // See Profile.xlsx::Messages:magnetometer_data.calibratedMagY
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.calibratedMagY has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "magnetometer_data.calibratedMagY size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "magnetometer_data.calibratedMagY")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -274,15 +210,7 @@ bool MagnetometerDataMessagePrivate::setField(
         #endif
         break;
     case 7: // See Profile.xlsx::Messages:magnetometer_data.calibratedMagZ
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "magnetometer_data.calibratedMagZ has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "magnetometer_data.calibratedMagZ size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "magnetometer_data.calibratedMagZ")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);

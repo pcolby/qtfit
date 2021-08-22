@@ -100,51 +100,19 @@ bool ExdScreenConfigurationMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:exd_screen_configuration.screenIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_screen_configuration.screenIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_screen_configuration.screenIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_screen_configuration.screenIndex")) return false;
         this->screenIndex = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:exd_screen_configuration.fieldCount
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_screen_configuration.fieldCount has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_screen_configuration.fieldCount size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "exd_screen_configuration.fieldCount")) return false;
         this->fieldCount = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:exd_screen_configuration.layout
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_screen_configuration.layout has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "exd_screen_configuration.layout size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "exd_screen_configuration.layout")) return false;
         this->layout = static_cast<ExdLayout>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:exd_screen_configuration.screenEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "exd_screen_configuration.screenEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "exd_screen_configuration.screenEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "exd_screen_configuration.screenEnabled")) return false;
         this->screenEnabled = static_cast<bool>(data.at(0));
         break;
     default:

@@ -1154,1047 +1154,351 @@ bool SegmentLapMessagePrivate::setField(
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:segment_lap.messageIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.messageIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.messageIndex")) return false;
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 253: // See Profile.xlsx::Messages:segment_lap.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:segment_lap.event
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.event has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.event size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "segment_lap.event")) return false;
         this->event = static_cast<Event>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:segment_lap.eventType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.eventType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.eventType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "segment_lap.eventType")) return false;
         this->eventType = static_cast<EventType>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:segment_lap.startTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.startTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.startTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.startTime")) return false;
         this->startTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 3: // See Profile.xlsx::Messages:segment_lap.startPositionLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.startPositionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.startPositionLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.startPositionLat")) return false;
         this->startPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:segment_lap.startPositionLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.startPositionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.startPositionLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.startPositionLong")) return false;
         this->startPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 5: // See Profile.xlsx::Messages:segment_lap.endPositionLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.endPositionLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.endPositionLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.endPositionLat")) return false;
         this->endPositionLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 6: // See Profile.xlsx::Messages:segment_lap.endPositionLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.endPositionLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.endPositionLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.endPositionLong")) return false;
         this->endPositionLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 7: // See Profile.xlsx::Messages:segment_lap.totalElapsedTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalElapsedTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalElapsedTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.totalElapsedTime")) return false;
         this->totalElapsedTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 8: // See Profile.xlsx::Messages:segment_lap.totalTimerTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalTimerTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalTimerTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.totalTimerTime")) return false;
         this->totalTimerTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 9: // See Profile.xlsx::Messages:segment_lap.totalDistance
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalDistance has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalDistance size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.totalDistance")) return false;
         this->totalDistance = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 10: // See Profile.xlsx::Messages:segment_lap.totalCycles
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalCycles has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalCycles size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.totalCycles")) return false;
         this->totalCycles = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 11: // See Profile.xlsx::Messages:segment_lap.totalCalories
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalCalories has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.totalCalories size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.totalCalories")) return false;
         this->totalCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 12: // See Profile.xlsx::Messages:segment_lap.totalFatCalories
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalFatCalories has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.totalFatCalories size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.totalFatCalories")) return false;
         this->totalFatCalories = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 13: // See Profile.xlsx::Messages:segment_lap.avgSpeed
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.avgSpeed")) return false;
         this->avgSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 14: // See Profile.xlsx::Messages:segment_lap.maxSpeed
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.maxSpeed")) return false;
         this->maxSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 15: // See Profile.xlsx::Messages:segment_lap.avgHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgHeartRate")) return false;
         this->avgHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 16: // See Profile.xlsx::Messages:segment_lap.maxHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.maxHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.maxHeartRate")) return false;
         this->maxHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 17: // See Profile.xlsx::Messages:segment_lap.avgCadence
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgCadence size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgCadence")) return false;
         this->avgCadence = static_cast<quint8>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:segment_lap.maxCadence
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.maxCadence size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.maxCadence")) return false;
         this->maxCadence = static_cast<quint8>(data.at(0));
         break;
     case 19: // See Profile.xlsx::Messages:segment_lap.avgPower
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgPower size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.avgPower")) return false;
         this->avgPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 20: // See Profile.xlsx::Messages:segment_lap.maxPower
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxPower size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.maxPower")) return false;
         this->maxPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 21: // See Profile.xlsx::Messages:segment_lap.totalAscent
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalAscent has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.totalAscent size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.totalAscent")) return false;
         this->totalAscent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 22: // See Profile.xlsx::Messages:segment_lap.totalDescent
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalDescent has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.totalDescent size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.totalDescent")) return false;
         this->totalDescent = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 23: // See Profile.xlsx::Messages:segment_lap.sport
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.sport has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.sport size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "segment_lap.sport")) return false;
         this->sport = static_cast<Sport>(data.at(0));
         break;
     case 24: // See Profile.xlsx::Messages:segment_lap.eventGroup
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.eventGroup has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.eventGroup size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.eventGroup")) return false;
         this->eventGroup = static_cast<quint8>(data.at(0));
         break;
     case 25: // See Profile.xlsx::Messages:segment_lap.necLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.necLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.necLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.necLat")) return false;
         this->necLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 26: // See Profile.xlsx::Messages:segment_lap.necLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.necLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.necLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.necLong")) return false;
         this->necLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 27: // See Profile.xlsx::Messages:segment_lap.swcLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.swcLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.swcLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.swcLat")) return false;
         this->swcLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 28: // See Profile.xlsx::Messages:segment_lap.swcLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.swcLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.swcLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "segment_lap.swcLong")) return false;
         this->swcLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 29: // See Profile.xlsx::Messages:segment_lap.name
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.name has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.name size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "segment_lap.name")) return false;
         this->name = QString::fromUtf8(data);
         break;
     case 30: // See Profile.xlsx::Messages:segment_lap.normalizedPower
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.normalizedPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.normalizedPower size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.normalizedPower")) return false;
         this->normalizedPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 31: // See Profile.xlsx::Messages:segment_lap.leftRightBalance
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.leftRightBalance has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.leftRightBalance size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.leftRightBalance")) return false;
         this->leftRightBalance = static_cast<LeftRightBalance100>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 32: // See Profile.xlsx::Messages:segment_lap.subSport
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.subSport has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.subSport size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "segment_lap.subSport")) return false;
         this->subSport = static_cast<SubSport>(data.at(0));
         break;
     case 33: // See Profile.xlsx::Messages:segment_lap.totalWork
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalWork has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalWork size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.totalWork")) return false;
         this->totalWork = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 34: // See Profile.xlsx::Messages:segment_lap.avgAltitude
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgAltitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgAltitude size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.avgAltitude")) return false;
         this->avgAltitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 35: // See Profile.xlsx::Messages:segment_lap.maxAltitude
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxAltitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxAltitude size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.maxAltitude")) return false;
         this->maxAltitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 36: // See Profile.xlsx::Messages:segment_lap.gpsAccuracy
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.gpsAccuracy has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.gpsAccuracy size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.gpsAccuracy")) return false;
         this->gpsAccuracy = static_cast<quint8>(data.at(0));
         break;
     case 37: // See Profile.xlsx::Messages:segment_lap.avgGrade
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgGrade size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.avgGrade")) return false;
         this->avgGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 38: // See Profile.xlsx::Messages:segment_lap.avgPosGrade
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgPosGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgPosGrade size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.avgPosGrade")) return false;
         this->avgPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 39: // See Profile.xlsx::Messages:segment_lap.avgNegGrade
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgNegGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgNegGrade size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.avgNegGrade")) return false;
         this->avgNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 40: // See Profile.xlsx::Messages:segment_lap.maxPosGrade
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxPosGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxPosGrade size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.maxPosGrade")) return false;
         this->maxPosGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 41: // See Profile.xlsx::Messages:segment_lap.maxNegGrade
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxNegGrade has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxNegGrade size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.maxNegGrade")) return false;
         this->maxNegGrade = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 42: // See Profile.xlsx::Messages:segment_lap.avgTemperature
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgTemperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgTemperature size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "segment_lap.avgTemperature")) return false;
         this->avgTemperature = static_cast<qint8>(data.at(0));
         break;
     case 43: // See Profile.xlsx::Messages:segment_lap.maxTemperature
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxTemperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.maxTemperature size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "segment_lap.maxTemperature")) return false;
         this->maxTemperature = static_cast<qint8>(data.at(0));
         break;
     case 44: // See Profile.xlsx::Messages:segment_lap.totalMovingTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalMovingTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalMovingTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.totalMovingTime")) return false;
         this->totalMovingTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 45: // See Profile.xlsx::Messages:segment_lap.avgPosVerticalSpeed
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgPosVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgPosVerticalSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.avgPosVerticalSpeed")) return false;
         this->avgPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 46: // See Profile.xlsx::Messages:segment_lap.avgNegVerticalSpeed
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgNegVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgNegVerticalSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.avgNegVerticalSpeed")) return false;
         this->avgNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 47: // See Profile.xlsx::Messages:segment_lap.maxPosVerticalSpeed
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxPosVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxPosVerticalSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.maxPosVerticalSpeed")) return false;
         this->maxPosVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 48: // See Profile.xlsx::Messages:segment_lap.maxNegVerticalSpeed
-        if (baseType != FitBaseType::Sint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxNegVerticalSpeed has base type" << static_cast<int>(baseType) << "but should be Sint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxNegVerticalSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Sint16, "segment_lap.maxNegVerticalSpeed")) return false;
         this->maxNegVerticalSpeed = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     case 49: // See Profile.xlsx::Messages:segment_lap.timeInHrZone
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.timeInHrZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.timeInHrZone size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.timeInHrZone")) return false;
         this->timeInHrZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 50: // See Profile.xlsx::Messages:segment_lap.timeInSpeedZone
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.timeInSpeedZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.timeInSpeedZone size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.timeInSpeedZone")) return false;
         this->timeInSpeedZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 51: // See Profile.xlsx::Messages:segment_lap.timeInCadenceZone
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.timeInCadenceZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.timeInCadenceZone size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.timeInCadenceZone")) return false;
         this->timeInCadenceZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 52: // See Profile.xlsx::Messages:segment_lap.timeInPowerZone
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.timeInPowerZone has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.timeInPowerZone size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.timeInPowerZone")) return false;
         this->timeInPowerZone = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 53: // See Profile.xlsx::Messages:segment_lap.repetitionNum
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.repetitionNum has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.repetitionNum size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.repetitionNum")) return false;
         this->repetitionNum = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 54: // See Profile.xlsx::Messages:segment_lap.minAltitude
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.minAltitude has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.minAltitude size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.minAltitude")) return false;
         this->minAltitude = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 55: // See Profile.xlsx::Messages:segment_lap.minHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.minHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.minHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.minHeartRate")) return false;
         this->minHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 56: // See Profile.xlsx::Messages:segment_lap.activeTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.activeTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.activeTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.activeTime")) return false;
         this->activeTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 57: // See Profile.xlsx::Messages:segment_lap.wktStepIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.wktStepIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.wktStepIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.wktStepIndex")) return false;
         this->wktStepIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 58: // See Profile.xlsx::Messages:segment_lap.sportEvent
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.sportEvent has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.sportEvent size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "segment_lap.sportEvent")) return false;
         this->sportEvent = static_cast<SportEvent>(data.at(0));
         break;
     case 59: // See Profile.xlsx::Messages:segment_lap.avgLeftTorqueEffectiveness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgLeftTorqueEffectiveness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgLeftTorqueEffectiveness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgLeftTorqueEffectiveness")) return false;
         this->avgLeftTorqueEffectiveness = static_cast<quint8>(data.at(0));
         break;
     case 60: // See Profile.xlsx::Messages:segment_lap.avgRightTorqueEffectiveness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgRightTorqueEffectiveness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgRightTorqueEffectiveness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgRightTorqueEffectiveness")) return false;
         this->avgRightTorqueEffectiveness = static_cast<quint8>(data.at(0));
         break;
     case 61: // See Profile.xlsx::Messages:segment_lap.avgLeftPedalSmoothness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgLeftPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgLeftPedalSmoothness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgLeftPedalSmoothness")) return false;
         this->avgLeftPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 62: // See Profile.xlsx::Messages:segment_lap.avgRightPedalSmoothness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgRightPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgRightPedalSmoothness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgRightPedalSmoothness")) return false;
         this->avgRightPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 63: // See Profile.xlsx::Messages:segment_lap.avgCombinedPedalSmoothness
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgCombinedPedalSmoothness has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgCombinedPedalSmoothness size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgCombinedPedalSmoothness")) return false;
         this->avgCombinedPedalSmoothness = static_cast<quint8>(data.at(0));
         break;
     case 64: // See Profile.xlsx::Messages:segment_lap.status
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.status has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.status size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "segment_lap.status")) return false;
         this->status = static_cast<SegmentLapStatus>(data.at(0));
         break;
     case 65: // See Profile.xlsx::Messages:segment_lap.uuid
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.uuid has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.uuid size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "segment_lap.uuid")) return false;
         this->uuid = QString::fromUtf8(data);
         break;
     case 66: // See Profile.xlsx::Messages:segment_lap.avgFractionalCadence
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgFractionalCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgFractionalCadence size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgFractionalCadence")) return false;
         this->avgFractionalCadence = static_cast<quint8>(data.at(0));
         break;
     case 67: // See Profile.xlsx::Messages:segment_lap.maxFractionalCadence
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxFractionalCadence has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.maxFractionalCadence size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.maxFractionalCadence")) return false;
         this->maxFractionalCadence = static_cast<quint8>(data.at(0));
         break;
     case 68: // See Profile.xlsx::Messages:segment_lap.totalFractionalCycles
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalFractionalCycles has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.totalFractionalCycles size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.totalFractionalCycles")) return false;
         this->totalFractionalCycles = static_cast<quint8>(data.at(0));
         break;
     case 69: // See Profile.xlsx::Messages:segment_lap.frontGearShiftCount
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.frontGearShiftCount has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.frontGearShiftCount size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.frontGearShiftCount")) return false;
         this->frontGearShiftCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 70: // See Profile.xlsx::Messages:segment_lap.rearGearShiftCount
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.rearGearShiftCount has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.rearGearShiftCount size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.rearGearShiftCount")) return false;
         this->rearGearShiftCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 71: // See Profile.xlsx::Messages:segment_lap.timeStanding
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.timeStanding has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.timeStanding size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "segment_lap.timeStanding")) return false;
         this->timeStanding = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 72: // See Profile.xlsx::Messages:segment_lap.standCount
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.standCount has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.standCount size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.standCount")) return false;
         this->standCount = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 73: // See Profile.xlsx::Messages:segment_lap.avgLeftPco
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgLeftPco has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgLeftPco size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "segment_lap.avgLeftPco")) return false;
         this->avgLeftPco = static_cast<qint8>(data.at(0));
         break;
     case 74: // See Profile.xlsx::Messages:segment_lap.avgRightPco
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgRightPco has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgRightPco size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "segment_lap.avgRightPco")) return false;
         this->avgRightPco = static_cast<qint8>(data.at(0));
         break;
     case 75: // See Profile.xlsx::Messages:segment_lap.avgLeftPowerPhase
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgLeftPowerPhase has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgLeftPowerPhase size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgLeftPowerPhase")) return false;
         this->avgLeftPowerPhase = static_cast<quint8>(data.at(0));
         break;
     case 76: // See Profile.xlsx::Messages:segment_lap.avgLeftPowerPhasePeak
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgLeftPowerPhasePeak has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgLeftPowerPhasePeak size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgLeftPowerPhasePeak")) return false;
         this->avgLeftPowerPhasePeak = static_cast<quint8>(data.at(0));
         break;
     case 77: // See Profile.xlsx::Messages:segment_lap.avgRightPowerPhase
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgRightPowerPhase has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgRightPowerPhase size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgRightPowerPhase")) return false;
         this->avgRightPowerPhase = static_cast<quint8>(data.at(0));
         break;
     case 78: // See Profile.xlsx::Messages:segment_lap.avgRightPowerPhasePeak
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgRightPowerPhasePeak has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgRightPowerPhasePeak size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgRightPowerPhasePeak")) return false;
         this->avgRightPowerPhasePeak = static_cast<quint8>(data.at(0));
         break;
     case 79: // See Profile.xlsx::Messages:segment_lap.avgPowerPosition
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgPowerPosition has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.avgPowerPosition size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.avgPowerPosition")) return false;
         this->avgPowerPosition = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 80: // See Profile.xlsx::Messages:segment_lap.maxPowerPosition
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxPowerPosition has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.maxPowerPosition size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.maxPowerPosition")) return false;
         this->maxPowerPosition = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 81: // See Profile.xlsx::Messages:segment_lap.avgCadencePosition
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgCadencePosition has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.avgCadencePosition size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.avgCadencePosition")) return false;
         this->avgCadencePosition = static_cast<quint8>(data.at(0));
         break;
     case 82: // See Profile.xlsx::Messages:segment_lap.maxCadencePosition
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.maxCadencePosition has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.maxCadencePosition size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.maxCadencePosition")) return false;
         this->maxCadencePosition = static_cast<quint8>(data.at(0));
         break;
     case 83: // See Profile.xlsx::Messages:segment_lap.manufacturer
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.manufacturer has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "segment_lap.manufacturer size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "segment_lap.manufacturer")) return false;
         this->manufacturer = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 84: // See Profile.xlsx::Messages:segment_lap.totalGrit
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalGrit has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalGrit size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "segment_lap.totalGrit")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -2207,15 +1511,7 @@ bool SegmentLapMessagePrivate::setField(
         #endif
         break;
     case 85: // See Profile.xlsx::Messages:segment_lap.totalFlow
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalFlow has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.totalFlow size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "segment_lap.totalFlow")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -2228,15 +1524,7 @@ bool SegmentLapMessagePrivate::setField(
         #endif
         break;
     case 86: // See Profile.xlsx::Messages:segment_lap.avgGrit
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgGrit has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.avgGrit size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "segment_lap.avgGrit")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -2249,15 +1537,7 @@ bool SegmentLapMessagePrivate::setField(
         #endif
         break;
     case 87: // See Profile.xlsx::Messages:segment_lap.avgFlow
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.avgFlow has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "segment_lap.avgFlow size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "segment_lap.avgFlow")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -2270,27 +1550,11 @@ bool SegmentLapMessagePrivate::setField(
         #endif
         break;
     case 89: // See Profile.xlsx::Messages:segment_lap.totalFractionalAscent
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalFractionalAscent has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.totalFractionalAscent size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.totalFractionalAscent")) return false;
         this->totalFractionalAscent = static_cast<quint8>(data.at(0));
         break;
     case 90: // See Profile.xlsx::Messages:segment_lap.totalFractionalDescent
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "segment_lap.totalFractionalDescent has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "segment_lap.totalFractionalDescent size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "segment_lap.totalFractionalDescent")) return false;
         this->totalFractionalDescent = static_cast<quint8>(data.at(0));
         break;
     default:

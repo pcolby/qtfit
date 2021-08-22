@@ -160,87 +160,31 @@ bool GyroscopeDataMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:gyroscope_data.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gyroscope_data.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "gyroscope_data.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:gyroscope_data.timestampMs
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.timestampMs has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gyroscope_data.timestampMs size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "gyroscope_data.timestampMs")) return false;
         this->timestampMs = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 1: // See Profile.xlsx::Messages:gyroscope_data.sampleTimeOffset
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.sampleTimeOffset has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gyroscope_data.sampleTimeOffset size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "gyroscope_data.sampleTimeOffset")) return false;
         this->sampleTimeOffset = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:gyroscope_data.gyroX
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.gyroX has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gyroscope_data.gyroX size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "gyroscope_data.gyroX")) return false;
         this->gyroX = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:gyroscope_data.gyroY
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.gyroY has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gyroscope_data.gyroY size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "gyroscope_data.gyroY")) return false;
         this->gyroY = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:gyroscope_data.gyroZ
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.gyroZ has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "gyroscope_data.gyroZ size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "gyroscope_data.gyroZ")) return false;
         this->gyroZ = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroX
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.calibratedGyroX has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gyroscope_data.calibratedGyroX size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "gyroscope_data.calibratedGyroX")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -253,15 +197,7 @@ bool GyroscopeDataMessagePrivate::setField(
         #endif
         break;
     case 6: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroY
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.calibratedGyroY has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gyroscope_data.calibratedGyroY size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "gyroscope_data.calibratedGyroY")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);
@@ -274,15 +210,7 @@ bool GyroscopeDataMessagePrivate::setField(
         #endif
         break;
     case 7: // See Profile.xlsx::Messages:gyroscope_data.calibratedGyroZ
-        if (baseType != FitBaseType::Float32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "gyroscope_data.calibratedGyroZ has base type" << static_cast<int>(baseType) << "but should be Float32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "gyroscope_data.calibratedGyroZ size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Float32, "gyroscope_data.calibratedGyroZ")) return false;
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)
         {   // Qt's from-endian functions have no float/double specialisations prior to Qt 5.12.
             const quint32 localEndian = bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data);

@@ -148,99 +148,35 @@ bool SdmProfileMessagePrivate::setField(
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:sdm_profile.messageIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "sdm_profile.messageIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "sdm_profile.messageIndex")) return false;
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:sdm_profile.enabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.enabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "sdm_profile.enabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "sdm_profile.enabled")) return false;
         this->enabled = static_cast<bool>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:sdm_profile.sdmAntId
-        if (baseType != FitBaseType::Uint16z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.sdmAntId has base type" << static_cast<int>(baseType) << "but should be Uint16z";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "sdm_profile.sdmAntId size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16z, "sdm_profile.sdmAntId")) return false;
         this->sdmAntId = static_cast<quint16z>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 2: // See Profile.xlsx::Messages:sdm_profile.sdmCalFactor
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.sdmCalFactor has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "sdm_profile.sdmCalFactor size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "sdm_profile.sdmCalFactor")) return false;
         this->sdmCalFactor = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:sdm_profile.odometer
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.odometer has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "sdm_profile.odometer size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "sdm_profile.odometer")) return false;
         this->odometer = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 4: // See Profile.xlsx::Messages:sdm_profile.speedSource
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.speedSource has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "sdm_profile.speedSource size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "sdm_profile.speedSource")) return false;
         this->speedSource = static_cast<bool>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:sdm_profile.sdmAntIdTransType
-        if (baseType != FitBaseType::Uint8z) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.sdmAntIdTransType has base type" << static_cast<int>(baseType) << "but should be Uint8z";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "sdm_profile.sdmAntIdTransType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8z, "sdm_profile.sdmAntIdTransType")) return false;
         this->sdmAntIdTransType = static_cast<quint8z>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:sdm_profile.odometerRollover
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "sdm_profile.odometerRollover has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "sdm_profile.odometerRollover size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "sdm_profile.odometerRollover")) return false;
         this->odometerRollover = static_cast<quint8>(data.at(0));
         break;
     default:

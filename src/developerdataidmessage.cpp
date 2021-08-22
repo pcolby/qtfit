@@ -112,63 +112,23 @@ bool DeveloperDataIdMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:developer_data_id.developerId
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "developer_data_id.developerId has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "developer_data_id.developerId size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "developer_data_id.developerId")) return false;
         this->developerId = static_cast<quint8>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:developer_data_id.applicationId
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "developer_data_id.applicationId has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "developer_data_id.applicationId size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "developer_data_id.applicationId")) return false;
         this->applicationId = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:developer_data_id.manufacturerId
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "developer_data_id.manufacturerId has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "developer_data_id.manufacturerId size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "developer_data_id.manufacturerId")) return false;
         this->manufacturerId = static_cast<Manufacturer>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 3: // See Profile.xlsx::Messages:developer_data_id.developerDataIndex
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "developer_data_id.developerDataIndex has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "developer_data_id.developerDataIndex size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "developer_data_id.developerDataIndex")) return false;
         this->developerDataIndex = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:developer_data_id.applicationVersion
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "developer_data_id.applicationVersion has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "developer_data_id.applicationVersion size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "developer_data_id.applicationVersion")) return false;
         this->applicationVersion = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:

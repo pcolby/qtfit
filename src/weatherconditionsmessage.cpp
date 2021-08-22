@@ -243,195 +243,67 @@ bool WeatherConditionsMessagePrivate::setField(
 {
     switch (fieldId) {
     case 253: // See Profile.xlsx::Messages:weather_conditions.timestamp
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.timestamp has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "weather_conditions.timestamp size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "weather_conditions.timestamp")) return false;
         this->timestamp = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 0: // See Profile.xlsx::Messages:weather_conditions.weatherReport
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.weatherReport has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.weatherReport size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "weather_conditions.weatherReport")) return false;
         this->weatherReport = static_cast<WeatherReport>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:weather_conditions.temperature
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.temperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.temperature size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "weather_conditions.temperature")) return false;
         this->temperature = static_cast<qint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:weather_conditions.condition
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.condition has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.condition size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "weather_conditions.condition")) return false;
         this->condition = static_cast<WeatherStatus>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:weather_conditions.windDirection
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.windDirection has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weather_conditions.windDirection size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weather_conditions.windDirection")) return false;
         this->windDirection = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 4: // See Profile.xlsx::Messages:weather_conditions.windSpeed
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.windSpeed has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "weather_conditions.windSpeed size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "weather_conditions.windSpeed")) return false;
         this->windSpeed = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:weather_conditions.precipitationProbability
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.precipitationProbability has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.precipitationProbability size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "weather_conditions.precipitationProbability")) return false;
         this->precipitationProbability = static_cast<quint8>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:weather_conditions.temperatureFeelsLike
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.temperatureFeelsLike has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.temperatureFeelsLike size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "weather_conditions.temperatureFeelsLike")) return false;
         this->temperatureFeelsLike = static_cast<qint8>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:weather_conditions.relativeHumidity
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.relativeHumidity has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.relativeHumidity size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "weather_conditions.relativeHumidity")) return false;
         this->relativeHumidity = static_cast<quint8>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:weather_conditions.location
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.location has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.location size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "weather_conditions.location")) return false;
         this->location = QString::fromUtf8(data);
         break;
     case 9: // See Profile.xlsx::Messages:weather_conditions.observedAtTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.observedAtTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "weather_conditions.observedAtTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "weather_conditions.observedAtTime")) return false;
         this->observedAtTime = static_cast<DateTime>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 10: // See Profile.xlsx::Messages:weather_conditions.observedLocationLat
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.observedLocationLat has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "weather_conditions.observedLocationLat size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "weather_conditions.observedLocationLat")) return false;
         this->observedLocationLat = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 11: // See Profile.xlsx::Messages:weather_conditions.observedLocationLong
-        if (baseType != FitBaseType::Sint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.observedLocationLong has base type" << static_cast<int>(baseType) << "but should be Sint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "weather_conditions.observedLocationLong size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "weather_conditions.observedLocationLong")) return false;
         this->observedLocationLong = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
         break;
     case 12: // See Profile.xlsx::Messages:weather_conditions.dayOfWeek
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.dayOfWeek has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.dayOfWeek size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "weather_conditions.dayOfWeek")) return false;
         this->dayOfWeek = static_cast<DayOfWeek>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:weather_conditions.highTemperature
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.highTemperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.highTemperature size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "weather_conditions.highTemperature")) return false;
         this->highTemperature = static_cast<qint8>(data.at(0));
         break;
     case 14: // See Profile.xlsx::Messages:weather_conditions.lowTemperature
-        if (baseType != FitBaseType::Sint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "weather_conditions.lowTemperature has base type" << static_cast<int>(baseType) << "but should be Sint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "weather_conditions.lowTemperature size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Sint8, "weather_conditions.lowTemperature")) return false;
         this->lowTemperature = static_cast<qint8>(data.at(0));
         break;
     default:

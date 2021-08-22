@@ -98,4 +98,28 @@ bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
     return false;
 }
 
+inline bool verifyBaseType(const FitBaseType actual, const FitBaseType expected, const char *name)
+{
+    if (actual == expected) return true;
+    /// \todo Add a toString(const FitBaseType type) function.
+    qWarning() << name << "has base type" << static_cast<int>(actual)
+               << "but should be" << static_cast<int>(expected);
+    return false;
+}
+
+inline bool verifyDataSieze(const QByteArray &data, const int expectedSize, const char *name)
+{
+    if (data.size() == expectedSize) return true;
+    qWarning() << name << "size is" << data.size() << "but should be" << expectedSize;
+    return false;
+}
+
+bool FitDataMessagePrivate::verify(const QByteArray &data, const FitBaseType actualType,
+                                   const int expectedSize, const FitBaseType expectedType,
+                                   const char *messageFieldName)
+{
+    return (verifyBaseType(actualType, expectedType, messageFieldName) &&
+            verifyDataSieze(data, expectedSize, messageFieldName));
+}
+
 QTFIT_END_NAMESPACE

@@ -207,159 +207,55 @@ bool ConnectivityMessagePrivate::setField(
 {
     switch (fieldId) {
     case 0: // See Profile.xlsx::Messages:connectivity.bluetoothEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.bluetoothEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.bluetoothEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.bluetoothEnabled")) return false;
         this->bluetoothEnabled = static_cast<bool>(data.at(0));
         break;
     case 1: // See Profile.xlsx::Messages:connectivity.bluetoothLeEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.bluetoothLeEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.bluetoothLeEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.bluetoothLeEnabled")) return false;
         this->bluetoothLeEnabled = static_cast<bool>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:connectivity.antEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.antEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.antEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.antEnabled")) return false;
         this->antEnabled = static_cast<bool>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:connectivity.name
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.name has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "connectivity.name size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "connectivity.name")) return false;
         this->name = QString::fromUtf8(data);
         break;
     case 4: // See Profile.xlsx::Messages:connectivity.liveTrackingEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.liveTrackingEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.liveTrackingEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.liveTrackingEnabled")) return false;
         this->liveTrackingEnabled = static_cast<bool>(data.at(0));
         break;
     case 5: // See Profile.xlsx::Messages:connectivity.weatherConditionsEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.weatherConditionsEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.weatherConditionsEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.weatherConditionsEnabled")) return false;
         this->weatherConditionsEnabled = static_cast<bool>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:connectivity.weatherAlertsEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.weatherAlertsEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.weatherAlertsEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.weatherAlertsEnabled")) return false;
         this->weatherAlertsEnabled = static_cast<bool>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:connectivity.autoActivityUploadEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.autoActivityUploadEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.autoActivityUploadEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.autoActivityUploadEnabled")) return false;
         this->autoActivityUploadEnabled = static_cast<bool>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:connectivity.courseDownloadEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.courseDownloadEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.courseDownloadEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.courseDownloadEnabled")) return false;
         this->courseDownloadEnabled = static_cast<bool>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:connectivity.workoutDownloadEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.workoutDownloadEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.workoutDownloadEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.workoutDownloadEnabled")) return false;
         this->workoutDownloadEnabled = static_cast<bool>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:connectivity.gpsEphemerisDownloadEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.gpsEphemerisDownloadEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.gpsEphemerisDownloadEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.gpsEphemerisDownloadEnabled")) return false;
         this->gpsEphemerisDownloadEnabled = static_cast<bool>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:connectivity.incidentDetectionEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.incidentDetectionEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.incidentDetectionEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.incidentDetectionEnabled")) return false;
         this->incidentDetectionEnabled = static_cast<bool>(data.at(0));
         break;
     case 12: // See Profile.xlsx::Messages:connectivity.grouptrackEnabled
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "connectivity.grouptrackEnabled has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 0) {
-            qWarning() << "connectivity.grouptrackEnabled size is" << data.size() << "but should be" << 0;
-            return false;
-        }
+        if (!verify(data, baseType, 0, FitBaseType::Byte, "connectivity.grouptrackEnabled")) return false;
         this->grouptrackEnabled = static_cast<bool>(data.at(0));
         break;
     default:

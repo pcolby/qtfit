@@ -112,63 +112,23 @@ bool ZonesTargetMessagePrivate::setField(
 {
     switch (fieldId) {
     case 1: // See Profile.xlsx::Messages:zones_target.maxHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "zones_target.maxHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "zones_target.maxHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "zones_target.maxHeartRate")) return false;
         this->maxHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:zones_target.thresholdHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "zones_target.thresholdHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "zones_target.thresholdHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "zones_target.thresholdHeartRate")) return false;
         this->thresholdHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:zones_target.functionalThresholdPower
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "zones_target.functionalThresholdPower has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "zones_target.functionalThresholdPower size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "zones_target.functionalThresholdPower")) return false;
         this->functionalThresholdPower = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:zones_target.hrCalcType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "zones_target.hrCalcType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "zones_target.hrCalcType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "zones_target.hrCalcType")) return false;
         this->hrCalcType = static_cast<HrZoneCalc>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:zones_target.pwrCalcType
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "zones_target.pwrCalcType has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "zones_target.pwrCalcType size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "zones_target.pwrCalcType")) return false;
         this->pwrCalcType = static_cast<PwrZoneCalc>(data.at(0));
         break;
     default:

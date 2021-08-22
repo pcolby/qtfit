@@ -51,15 +51,7 @@ bool {{ClassName}}Private::setField(
     switch (fieldId) {
 {% for field in fields %}
     case {{field.number}}: // See Profile.xlsx::Messages:{{messageName}}.{{field.name}}
-        if (baseType != FitBaseType::{{field.baseTypeEnumLabel}}) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "{{messageName}}.{{field.name}} has base type" << static_cast<int>(baseType) << "but should be {{field.baseTypeEnumLabel}}";
-            return false;
-        }
-        if (data.size() != {{field.baseTypeSize}}) {
-            qWarning() << "{{messageName}}.{{field.name}} size is" << data.size() << "but should be" << {{field.baseTypeSize}};
-            return false;
-        }
+        if (!verify(data, baseType, {{field.baseTypeSize}}, FitBaseType::{{field.baseTypeEnumLabel}}, "{{messageName}}.{{field.name}}")) return false;
 {% if field.endianAbility %}
   {% if field.endianAbility == "float" or field.endianAbility == "double" %}
         #if QT_VERSION < QT_VERSION_CHECK(5, 12, 0)

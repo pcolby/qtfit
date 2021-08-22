@@ -399,351 +399,119 @@ bool UserProfileMessagePrivate::setField(
 {
     switch (fieldId) {
     case 254: // See Profile.xlsx::Messages:user_profile.messageIndex
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.messageIndex has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "user_profile.messageIndex size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "user_profile.messageIndex")) return false;
         this->messageIndex = static_cast<MessageIndex>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 0: // See Profile.xlsx::Messages:user_profile.friendlyName
-        if (baseType != FitBaseType::String) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.friendlyName has base type" << static_cast<int>(baseType) << "but should be String";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.friendlyName size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::String, "user_profile.friendlyName")) return false;
         this->friendlyName = QString::fromUtf8(data);
         break;
     case 1: // See Profile.xlsx::Messages:user_profile.gender
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.gender has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.gender size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.gender")) return false;
         this->gender = static_cast<Gender>(data.at(0));
         break;
     case 2: // See Profile.xlsx::Messages:user_profile.age
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.age has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.age size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "user_profile.age")) return false;
         this->age = static_cast<quint8>(data.at(0));
         break;
     case 3: // See Profile.xlsx::Messages:user_profile.height
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.height has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.height size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "user_profile.height")) return false;
         this->height = static_cast<quint8>(data.at(0));
         break;
     case 4: // See Profile.xlsx::Messages:user_profile.weight
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.weight has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "user_profile.weight size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "user_profile.weight")) return false;
         this->weight = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 5: // See Profile.xlsx::Messages:user_profile.language
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.language has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.language size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.language")) return false;
         this->language = static_cast<Language>(data.at(0));
         break;
     case 6: // See Profile.xlsx::Messages:user_profile.elevSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.elevSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.elevSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.elevSetting")) return false;
         this->elevSetting = static_cast<DisplayMeasure>(data.at(0));
         break;
     case 7: // See Profile.xlsx::Messages:user_profile.weightSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.weightSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.weightSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.weightSetting")) return false;
         this->weightSetting = static_cast<DisplayMeasure>(data.at(0));
         break;
     case 8: // See Profile.xlsx::Messages:user_profile.restingHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.restingHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.restingHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "user_profile.restingHeartRate")) return false;
         this->restingHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 9: // See Profile.xlsx::Messages:user_profile.defaultMaxRunningHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.defaultMaxRunningHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.defaultMaxRunningHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "user_profile.defaultMaxRunningHeartRate")) return false;
         this->defaultMaxRunningHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 10: // See Profile.xlsx::Messages:user_profile.defaultMaxBikingHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.defaultMaxBikingHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.defaultMaxBikingHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "user_profile.defaultMaxBikingHeartRate")) return false;
         this->defaultMaxBikingHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 11: // See Profile.xlsx::Messages:user_profile.defaultMaxHeartRate
-        if (baseType != FitBaseType::Uint8) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.defaultMaxHeartRate has base type" << static_cast<int>(baseType) << "but should be Uint8";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.defaultMaxHeartRate size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Uint8, "user_profile.defaultMaxHeartRate")) return false;
         this->defaultMaxHeartRate = static_cast<quint8>(data.at(0));
         break;
     case 12: // See Profile.xlsx::Messages:user_profile.hrSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.hrSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.hrSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.hrSetting")) return false;
         this->hrSetting = static_cast<DisplayHeart>(data.at(0));
         break;
     case 13: // See Profile.xlsx::Messages:user_profile.speedSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.speedSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.speedSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.speedSetting")) return false;
         this->speedSetting = static_cast<DisplayMeasure>(data.at(0));
         break;
     case 14: // See Profile.xlsx::Messages:user_profile.distSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.distSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.distSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.distSetting")) return false;
         this->distSetting = static_cast<DisplayMeasure>(data.at(0));
         break;
     case 16: // See Profile.xlsx::Messages:user_profile.powerSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.powerSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.powerSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.powerSetting")) return false;
         this->powerSetting = static_cast<DisplayPower>(data.at(0));
         break;
     case 17: // See Profile.xlsx::Messages:user_profile.activityClass
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.activityClass has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.activityClass size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.activityClass")) return false;
         this->activityClass = static_cast<ActivityClass>(data.at(0));
         break;
     case 18: // See Profile.xlsx::Messages:user_profile.positionSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.positionSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.positionSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.positionSetting")) return false;
         this->positionSetting = static_cast<DisplayPosition>(data.at(0));
         break;
     case 21: // See Profile.xlsx::Messages:user_profile.temperatureSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.temperatureSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.temperatureSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.temperatureSetting")) return false;
         this->temperatureSetting = static_cast<DisplayMeasure>(data.at(0));
         break;
     case 22: // See Profile.xlsx::Messages:user_profile.localId
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.localId has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "user_profile.localId size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "user_profile.localId")) return false;
         this->localId = static_cast<UserLocalId>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 23: // See Profile.xlsx::Messages:user_profile.globalId
-        if (baseType != FitBaseType::Byte) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.globalId has base type" << static_cast<int>(baseType) << "but should be Byte";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.globalId size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Byte, "user_profile.globalId")) return false;
         this->globalId = static_cast<quint8>(data.at(0));
         break;
     case 28: // See Profile.xlsx::Messages:user_profile.wakeTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.wakeTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "user_profile.wakeTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "user_profile.wakeTime")) return false;
         this->wakeTime = static_cast<LocaltimeIntoDay>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 29: // See Profile.xlsx::Messages:user_profile.sleepTime
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.sleepTime has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "user_profile.sleepTime size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "user_profile.sleepTime")) return false;
         this->sleepTime = static_cast<LocaltimeIntoDay>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     case 30: // See Profile.xlsx::Messages:user_profile.heightSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.heightSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.heightSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.heightSetting")) return false;
         this->heightSetting = static_cast<DisplayMeasure>(data.at(0));
         break;
     case 31: // See Profile.xlsx::Messages:user_profile.userRunningStepLength
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.userRunningStepLength has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "user_profile.userRunningStepLength size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "user_profile.userRunningStepLength")) return false;
         this->userRunningStepLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 32: // See Profile.xlsx::Messages:user_profile.userWalkingStepLength
-        if (baseType != FitBaseType::Uint16) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.userWalkingStepLength has base type" << static_cast<int>(baseType) << "but should be Uint16";
-            return false;
-        }
-        if (data.size() != 2) {
-            qWarning() << "user_profile.userWalkingStepLength size is" << data.size() << "but should be" << 2;
-            return false;
-        }
+        if (!verify(data, baseType, 2, FitBaseType::Uint16, "user_profile.userWalkingStepLength")) return false;
         this->userWalkingStepLength = static_cast<quint16>(bigEndian ? qFromBigEndian<quint16>(data) : qFromLittleEndian<quint16>(data));
         break;
     case 47: // See Profile.xlsx::Messages:user_profile.depthSetting
-        if (baseType != FitBaseType::Enum) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.depthSetting has base type" << static_cast<int>(baseType) << "but should be Enum";
-            return false;
-        }
-        if (data.size() != 1) {
-            qWarning() << "user_profile.depthSetting size is" << data.size() << "but should be" << 1;
-            return false;
-        }
+        if (!verify(data, baseType, 1, FitBaseType::Enum, "user_profile.depthSetting")) return false;
         this->depthSetting = static_cast<DisplayMeasure>(data.at(0));
         break;
     case 49: // See Profile.xlsx::Messages:user_profile.diveCount
-        if (baseType != FitBaseType::Uint32) {
-            /// \todo Add toString function for baseType.
-            qWarning() << "user_profile.diveCount has base type" << static_cast<int>(baseType) << "but should be Uint32";
-            return false;
-        }
-        if (data.size() != 4) {
-            qWarning() << "user_profile.diveCount size is" << data.size() << "but should be" << 4;
-            return false;
-        }
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "user_profile.diveCount")) return false;
         this->diveCount = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
