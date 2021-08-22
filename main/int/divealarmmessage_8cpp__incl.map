@@ -1,14 +1,14 @@
 <map id="divealarmmessage.cpp" name="divealarmmessage.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="196,5,371,32"/>
-<area shape="rect" id="node2" href="$divealarmmessage_8h.html" title=" " alt="" coords="181,155,340,181"/>
-<area shape="rect" id="node7" href="$divealarmmessage__p_8h.html" title=" " alt="" coords="20,80,195,107"/>
-<area shape="rect" id="node11" title=" " alt="" coords="283,80,358,107"/>
-<area shape="rect" id="node12" title=" " alt="" coords="383,80,464,107"/>
-<area shape="rect" id="node3" href="$fitdatamessage_8h.html" title=" " alt="" coords="196,229,331,256"/>
-<area shape="rect" id="node4" href="$QtFit__global_8h.html" title=" " alt="" coords="105,379,217,405"/>
-<area shape="rect" id="node6" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="125,304,196,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="121,453,200,480"/>
-<area shape="rect" id="node8" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="5,155,156,181"/>
-<area shape="rect" id="node9" href="$types__p_8h.html" title=" " alt="" coords="35,229,121,256"/>
-<area shape="rect" id="node10" title=" " alt="" coords="47,304,101,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="252,5,427,32"/>
+<area shape="rect" id="node2" href="$divealarmmessage_8h.html" title=" " alt="" coords="5,80,164,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="311,379,386,405"/>
+<area shape="rect" id="node8" href="$divealarmmessage__p_8h.html" title=" " alt="" coords="189,80,364,107"/>
+<area shape="rect" id="node12" title=" " alt="" coords="441,80,523,107"/>
+<area shape="rect" id="node3" href="$fitdatamessage_8h.html" title=" " alt="" coords="7,229,141,256"/>
+<area shape="rect" id="node4" href="$QtFit__global_8h.html" title=" " alt="" coords="122,379,234,405"/>
+<area shape="rect" id="node6" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="216,304,287,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="139,453,217,480"/>
+<area shape="rect" id="node9" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="184,155,335,181"/>
+<area shape="rect" id="node10" href="$types__p_8h.html" title=" " alt="" coords="281,229,366,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="311,304,365,331"/>
 </map>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classSegmentPointMessagePrivate.html#afc3716ba57390da6170566a9a2dc3bfc":[3,0,131,7],
 "classSessionMessage.html":[3,0,132],
 "classSessionMessage.html#a0117a97c582deba2a159d60e3dbfbb42":[3,0,132,210],
 "classSessionMessage.html#a01dbee0c593b33940a6f6ddc59558149":[3,0,132,256],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "classSessionMessage.html#af0dba94747d2f3846abd49823f5290fe":[3,0,132,67],
 "classSessionMessage.html#af0ef7ff10e2bf5564e6be0ee41806eb6":[3,0,132,202],
 "classSessionMessage.html#af168202becb79d0a56de322602c24757":[3,0,132,100],
-"classSessionMessage.html#af17ad227c6fa5927a5ab596d6935eab9":[3,0,132,178],
-"classSessionMessage.html#af1945ae9bafcca4c8affebdff6d613b1":[3,0,132,54]
+"classSessionMessage.html#af17ad227c6fa5927a5ab596d6935eab9":[3,0,132,178]
 };

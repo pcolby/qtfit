@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classMagnetometerDataMessagePrivate.html#a44d467165fe31e04a35e0a774ee3b4ca":[3,0,95,8],
 "classMagnetometerDataMessagePrivate.html#a4a3c59f037723da3a4ab47271114c48d":[3,0,95,7],
 "classMagnetometerDataMessagePrivate.html#a70250488f673e8cc230f3fde5e8a931c":[3,0,95,9],
 "classMagnetometerDataMessagePrivate.html#a9654e386f148971e65746f9a2f2fafb4":[3,0,95,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classOhrSettingsMessage.html#a4e6b65be297b3ee39f107a76abca4b57":[3,0,110,1],
 "classOhrSettingsMessage.html#a5c1e6c26a66f75e19d9a0ffefc3aa4fb":[3,0,110,0],
 "classOhrSettingsMessage.html#a5e2eb76f2a2674e31243525029ce8e89":[3,0,110,4],
-"classOhrSettingsMessage.html#a925b91a23ca1e446c430ec2e8d7fcf7b":[3,0,110,5],
-"classOhrSettingsMessage.html#aadff3b1db28a7f82a9f08115e00ced36":[3,0,110,2]
+"classOhrSettingsMessage.html#a925b91a23ca1e446c430ec2e8d7fcf7b":[3,0,110,5]
 };

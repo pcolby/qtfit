@@ -1,7 +1,8 @@
 <map id="fieldcapabilitiesmessage.h" name="fieldcapabilitiesmessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,201,32"/>
 <area shape="rect" id="node2" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="36,80,171,107"/>
-<area shape="rect" id="node3" href="$QtFit__global_8h_source.html" title=" " alt="" coords="47,229,159,256"/>
+<area shape="rect" id="node3" href="$QtFit__global_8h_source.html" title=" " alt="" coords="11,229,123,256"/>
 <area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="105,155,176,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="64,304,143,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="28,304,107,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="147,229,222,256"/>
 </map>

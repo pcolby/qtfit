@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"classVideoClipMessage.html#adddf7b2d8fd98afb00cbcad1efa560a6":[3,0,156,0],
 "classVideoClipMessage.html#ae42f9a04c7ec464a466084be8d0d42db":[3,0,156,1],
 "classVideoClipMessage.html#ae8efb54a37771287f7cd0d1081aba4eb":[3,0,156,5],
 "classVideoClipMessagePrivate.html":[3,0,157],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "classWorkoutMessagePrivate.html":[3,0,175],
 "classWorkoutMessagePrivate.html#a1f49d5cc7471141e269a1c49609e9e87":[3,0,175,3],
 "classWorkoutMessagePrivate.html#a2a744a03962a96996c771f245cd63cd6":[3,0,175,1],
-"classWorkoutMessagePrivate.html#a2e07d238ac8703b0bbf5443e3e25b6b9":[3,0,175,4],
-"classWorkoutMessagePrivate.html#a31c97122c688be40e50138c0f97e3be5":[3,0,175,10]
+"classWorkoutMessagePrivate.html#a2e07d238ac8703b0bbf5443e3e25b6b9":[3,0,175,4]
 };

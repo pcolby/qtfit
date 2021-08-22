@@ -1,7 +1,8 @@
 <map id="developerdataidmessage.h" name="developerdataidmessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,204,32"/>
 <area shape="rect" id="node2" href="$fitdatamessage_8h.html" title=" " alt="" coords="37,80,172,107"/>
-<area shape="rect" id="node3" href="$QtFit__global_8h.html" title=" " alt="" coords="49,229,161,256"/>
+<area shape="rect" id="node3" href="$QtFit__global_8h.html" title=" " alt="" coords="13,229,125,256"/>
 <area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="107,155,177,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="65,304,144,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="29,304,108,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="149,229,223,256"/>
 </map>

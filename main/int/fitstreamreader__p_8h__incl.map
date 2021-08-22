@@ -1,12 +1,13 @@
 <map id="fitstreamreader_p.h" name="fitstreamreader_p.h">
-<area shape="rect" id="node1" title=" " alt="" coords="250,5,401,32"/>
-<area shape="rect" id="node2" href="$types__p_8h.html" title=" " alt="" coords="61,80,147,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="171,80,269,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="293,80,358,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="383,80,473,107"/>
-<area shape="rect" id="node10" title=" " alt="" coords="498,80,630,107"/>
-<area shape="rect" id="node3" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="26,155,97,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="121,155,175,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="309,5,459,32"/>
+<area shape="rect" id="node2" href="$types__p_8h.html" title=" " alt="" coords="120,80,205,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="230,80,327,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="351,80,417,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="441,80,532,107"/>
+<area shape="rect" id="node11" title=" " alt="" coords="557,80,689,107"/>
+<area shape="rect" id="node3" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="85,155,155,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="179,155,234,181"/>
 <area shape="rect" id="node4" href="$QtFit__global_8h.html" title=" " alt="" coords="5,229,117,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="141,229,216,256"/>
 <area shape="rect" id="node5" title=" " alt="" coords="22,304,101,331"/>
 </map>

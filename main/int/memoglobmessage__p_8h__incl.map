@@ -1,9 +1,10 @@
 <map id="memoglobmessage_p.h" name="memoglobmessage_p.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,184,32"/>
-<area shape="rect" id="node2" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="19,80,170,107"/>
-<area shape="rect" id="node3" href="$QtFit__global_8h.html" title=" " alt="" coords="13,304,125,331"/>
-<area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="71,229,142,256"/>
-<area shape="rect" id="node6" href="$types__p_8h.html" title=" " alt="" coords="132,155,217,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="30,379,109,405"/>
-<area shape="rect" id="node7" title=" " alt="" coords="166,229,221,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="33,5,212,32"/>
+<area shape="rect" id="node2" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="47,80,198,107"/>
+<area shape="rect" id="node3" href="$QtFit__global_8h.html" title=" " alt="" coords="5,304,117,331"/>
+<area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="99,229,170,256"/>
+<area shape="rect" id="node7" href="$types__p_8h.html" title=" " alt="" coords="160,155,245,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="22,379,101,405"/>
+<area shape="rect" id="node6" title=" " alt="" coords="141,304,216,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="194,229,249,256"/>
 </map>

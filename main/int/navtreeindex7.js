@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"classLapMessage.html#ad7419f485fd61787b992173f36800f10":[3,0,90,141],
 "classLapMessage.html#ad78a207dedd91f7ec862fe64bdb827d5":[3,0,90,73],
 "classLapMessage.html#ad851e024b3494fbe92e96d06ff156f60":[3,0,90,121],
 "classLapMessage.html#ad8a4a49321f22fde83b0f0f5530fba7f":[3,0,90,174],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "classMagnetometerDataMessagePrivate.html#a158cc376476d2cf4096444153dea208d":[3,0,95,11],
 "classMagnetometerDataMessagePrivate.html#a2b38305c49c8180056569c278c51d3bf":[3,0,95,0],
 "classMagnetometerDataMessagePrivate.html#a33ccc9601af3e7708b25308f6a051007":[3,0,95,2],
-"classMagnetometerDataMessagePrivate.html#a3a890957f3a025c604ce7225a5ee9dd1":[3,0,95,12],
-"classMagnetometerDataMessagePrivate.html#a44d467165fe31e04a35e0a774ee3b4ca":[3,0,95,8]
+"classMagnetometerDataMessagePrivate.html#a3a890957f3a025c604ce7225a5ee9dd1":[3,0,95,12]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classOhrSettingsMessage.html#aadff3b1db28a7f82a9f08115e00ced36":[3,0,110,2],
 "classOhrSettingsMessagePrivate.html":[3,0,111],
 "classOhrSettingsMessagePrivate.html#a00beaecdb3d11cf6fa10f39285216f05":[3,0,111,5],
 "classOhrSettingsMessagePrivate.html#a12f93467e489ae2cf89e36c3af5dba7b":[3,0,111,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classRecordMessagePrivate.html#a90a6021d7425bcd70998b26a282eb780":[3,0,117,43],
 "classRecordMessagePrivate.html#a915162f2076642bbf896d6f24c4c2e13":[3,0,117,45],
 "classRecordMessagePrivate.html#a97130a3b513f81039b8a81ce7ff4d571":[3,0,117,4],
-"classRecordMessagePrivate.html#aa21c9b2a72cb76118cb26840a7d78884":[3,0,117,42],
-"classRecordMessagePrivate.html#ab0473c34b8985f3283dc82f6523268aa":[3,0,117,12]
+"classRecordMessagePrivate.html#aa21c9b2a72cb76118cb26840a7d78884":[3,0,117,42]
 };

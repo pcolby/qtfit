@@ -231,7 +231,7 @@ var files_dup =
     [ "fileidmessage_p.h", "fileidmessage__p_8h.html", [
       [ "FileIdMessagePrivate", "classFileIdMessagePrivate.html", "classFileIdMessagePrivate" ]
     ] ],
-    [ "fitdatamessage.cpp", "fitdatamessage_8cpp.html", null ],
+    [ "fitdatamessage.cpp", "fitdatamessage_8cpp.html", "fitdatamessage_8cpp" ],
     [ "fitdatamessage.h", "fitdatamessage_8h.html", [
       [ "FitDataMessage", "classFitDataMessage.html", "classFitDataMessage" ]
     ] ],
@@ -527,6 +527,7 @@ var files_dup =
     [ "trainingfilemessage_p.h", "trainingfilemessage__p_8h.html", [
       [ "TrainingFileMessagePrivate", "classTrainingFileMessagePrivate.html", "classTrainingFileMessagePrivate" ]
     ] ],
+    [ "types.cpp", "types_8cpp.html", "types_8cpp" ],
     [ "types.h", "types_8h.html", "types_8h" ],
     [ "types_p.h", "types__p_8h.html", "types__p_8h" ],
     [ "userprofilemessage.cpp", "userprofilemessage_8cpp.html", null ],

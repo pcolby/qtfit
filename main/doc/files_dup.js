@@ -296,6 +296,7 @@ var files_dup =
     [ "trainingfilemessage.h", "trainingfilemessage_8h.html", [
       [ "TrainingFileMessage", "classTrainingFileMessage.html", "classTrainingFileMessage" ]
     ] ],
+    [ "types.cpp", "types_8cpp.html", "types_8cpp" ],
     [ "types.h", "types_8h.html", "types_8h" ],
     [ "userprofilemessage.cpp", "userprofilemessage_8cpp.html", null ],
     [ "userprofilemessage.h", "userprofilemessage_8h.html", [

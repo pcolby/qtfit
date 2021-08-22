@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('fitdatamessage_8cpp.html',''); initRes
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">fitdatamessage.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -95,11 +97,134 @@ $(document).ready(function(){initNavTree('fitdatamessage_8cpp.html',''); initRes
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fitdatamessage.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="fitdatamessage_8cpp__incl.svg" width="351" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="fitdatamessage_8cpp__incl.svg" width="388" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
 <p><a href="fitdatamessage_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3d7ec006b7bf32e4ea754e0ce7a0d3a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fitdatamessage_8cpp.html#a3d7ec006b7bf32e4ea754e0ce7a0d3a4">verifyBaseType</a> (const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> actual, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> expected, const char *name)</td></tr>
+<tr class="separator:a3d7ec006b7bf32e4ea754e0ce7a0d3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1c894ea22d300479f8a7f822127d03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fitdatamessage_8cpp.html#a3e1c894ea22d300479f8a7f822127d03">verifyDataSieze</a> (const QByteArray &amp;data, const int expectedSize, const char *name)</td></tr>
+<tr class="separator:a3e1c894ea22d300479f8a7f822127d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3d7ec006b7bf32e4ea754e0ce7a0d3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d7ec006b7bf32e4ea754e0ce7a0d3a4">&#9670;&nbsp;</a></span>verifyBaseType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verifyBaseType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a>&#160;</td>
+          <td class="paramname"><em>actual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a>&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fitdatamessage_8cpp_source.html#l00100">100</a> of file <a class="el" href="fitdatamessage_8cpp_source.html">fitdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (actual == expected) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    qWarning() &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;has base type&quot;</span> &lt;&lt; actual &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; expected;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="fitdatamessage_8cpp_source.html#l00114">FitDataMessagePrivate::verify()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="fitdatamessage_8cpp_a3d7ec006b7bf32e4ea754e0ce7a0d3a4_icgraph.svg" width="655" height="3110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3e1c894ea22d300479f8a7f822127d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1c894ea22d300479f8a7f822127d03">&#9670;&nbsp;</a></span>verifyDataSieze()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verifyDataSieze </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>expectedSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fitdatamessage_8cpp_source.html#l00107">107</a> of file <a class="el" href="fitdatamessage_8cpp_source.html">fitdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (data.size() == expectedSize) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    qWarning() &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;size is&quot;</span> &lt;&lt; data.size() &lt;&lt; <span class="stringliteral">&quot;but should be&quot;</span> &lt;&lt; expectedSize;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="fitdatamessage_8cpp_source.html#l00114">FitDataMessagePrivate::verify()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="fitdatamessage_8cpp_a3e1c894ea22d300479f8a7f822127d03_icgraph.svg" width="659" height="3110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,8 +1,9 @@
 <map id="types.h" name="types.h">
-<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="4439,5,4510,32"/>
-<area shape="rect" id="node2" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="4407,80,4542,107"/>
+<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="4415,5,4486,32"/>
+<area shape="rect" id="node2" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="4317,80,4451,107"/>
+<area shape="rect" id="node50" href="$types_8cpp.html" title=" " alt="" coords="4476,80,4561,107"/>
 <area shape="rect" id="node3" href="$accelerometerdatamessage_8h.html" title=" " alt="" coords="5,155,221,181"/>
-<area shape="rect" id="node4" href="$fitdatamessages_8cpp.html" title=" " alt="" coords="4305,229,4463,256"/>
+<area shape="rect" id="node4" href="$fitdatamessages_8cpp.html" title=" " alt="" coords="4204,229,4361,256"/>
 <area shape="rect" id="node5" href="$activitymessage_8h.html" title=" " alt="" coords="297,155,439,181"/>
 <area shape="rect" id="node6" href="$antchannelidmessage_8h.html" title=" " alt="" coords="463,155,641,181"/>
 <area shape="rect" id="node7" href="$antrxmessage_8h.html" title=" " alt="" coords="665,155,791,181"/>
@@ -48,5 +49,4 @@
 <area shape="rect" id="node47" href="$lengthmessage_8h.html" title=" " alt="" coords="8318,155,8453,181"/>
 <area shape="rect" id="node48" href="$magnetometerdatamessage_8h.html" title=" " alt="" coords="8477,155,8696,181"/>
 <area shape="rect" id="node49" href="$memoglobmessage_8h.html" title=" " alt="" coords="8720,155,8883,181"/>
-<area shape="rect" id="node50" href="$mesgcapabilitiesmessage_8h.html" title=" " alt="" coords="8907,155,9111,181"/>
 </map>

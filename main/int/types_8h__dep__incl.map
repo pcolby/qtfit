@@ -1,23 +1,24 @@
 <map id="types.h" name="types.h">
-<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="8382,5,8453,32"/>
-<area shape="rect" id="node2" href="$fitdatamessage_8h.html" title=" " alt="" coords="4635,80,4770,107"/>
-<area shape="rect" id="node49" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="8422,155,8573,181"/>
-<area shape="rect" id="node50" href="$types__p_8h.html" title=" " alt="" coords="8375,80,8460,107"/>
-<area shape="rect" id="node3" href="$accelerometerdatamessage_8h.html" title=" " alt="" coords="5447,155,5663,181"/>
-<area shape="rect" id="node4" href="$fitdatamessages_8cpp.html" title=" " alt="" coords="4381,229,4539,256"/>
-<area shape="rect" id="node5" href="$activitymessage_8h.html" title=" " alt="" coords="5687,155,5830,181"/>
-<area shape="rect" id="node6" href="$antchannelidmessage_8h.html" title=" " alt="" coords="5854,155,6031,181"/>
-<area shape="rect" id="node7" href="$antrxmessage_8h.html" title=" " alt="" coords="6055,155,6182,181"/>
-<area shape="rect" id="node8" href="$anttxmessage_8h.html" title=" " alt="" coords="6206,155,6333,181"/>
-<area shape="rect" id="node9" href="$aviationattitudemessage_8h.html" title=" " alt="" coords="6357,155,6555,181"/>
-<area shape="rect" id="node10" href="$barometerdatamessage_8h.html" title=" " alt="" coords="6579,155,6770,181"/>
-<area shape="rect" id="node11" href="$bikeprofilemessage_8h.html" title=" " alt="" coords="6794,155,6955,181"/>
-<area shape="rect" id="node12" href="$bloodpressuremessage_8h.html" title=" " alt="" coords="6979,155,7165,181"/>
-<area shape="rect" id="node13" href="$cadencezonemessage_8h.html" title=" " alt="" coords="7189,155,7368,181"/>
-<area shape="rect" id="node14" href="$cameraeventmessage_8h.html" title=" " alt="" coords="7392,155,7571,181"/>
-<area shape="rect" id="node15" href="$capabilitiesmessage_8h.html" title=" " alt="" coords="7595,155,7763,181"/>
-<area shape="rect" id="node16" href="$climbpromessage_8h.html" title=" " alt="" coords="7787,155,7938,181"/>
-<area shape="rect" id="node17" href="$connectivitymessage_8h.html" title=" " alt="" coords="7963,155,8136,181"/>
+<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="8285,5,8355,32"/>
+<area shape="rect" id="node2" href="$fitdatamessage_8h.html" title=" " alt="" coords="4557,80,4691,107"/>
+<area shape="rect" id="node48" href="$fitdatamessage__p_8h.html" title=" " alt="" coords="8285,155,8435,181"/>
+<area shape="rect" id="node49" href="$types_8cpp.html" title=" " alt="" coords="8427,80,8512,107"/>
+<area shape="rect" id="node50" href="$types__p_8h.html" title=" " alt="" coords="8317,80,8403,107"/>
+<area shape="rect" id="node3" href="$accelerometerdatamessage_8h.html" title=" " alt="" coords="5309,155,5525,181"/>
+<area shape="rect" id="node4" href="$fitdatamessages_8cpp.html" title=" " alt="" coords="4295,229,4452,256"/>
+<area shape="rect" id="node5" href="$activitymessage_8h.html" title=" " alt="" coords="5550,155,5693,181"/>
+<area shape="rect" id="node6" href="$antchannelidmessage_8h.html" title=" " alt="" coords="5717,155,5894,181"/>
+<area shape="rect" id="node7" href="$antrxmessage_8h.html" title=" " alt="" coords="5918,155,6045,181"/>
+<area shape="rect" id="node8" href="$anttxmessage_8h.html" title=" " alt="" coords="6069,155,6195,181"/>
+<area shape="rect" id="node9" href="$aviationattitudemessage_8h.html" title=" " alt="" coords="6220,155,6417,181"/>
+<area shape="rect" id="node10" href="$barometerdatamessage_8h.html" title=" " alt="" coords="6442,155,6633,181"/>
+<area shape="rect" id="node11" href="$bikeprofilemessage_8h.html" title=" " alt="" coords="6657,155,6818,181"/>
+<area shape="rect" id="node12" href="$bloodpressuremessage_8h.html" title=" " alt="" coords="6842,155,7027,181"/>
+<area shape="rect" id="node13" href="$cadencezonemessage_8h.html" title=" " alt="" coords="7052,155,7231,181"/>
+<area shape="rect" id="node14" href="$cameraeventmessage_8h.html" title=" " alt="" coords="7255,155,7433,181"/>
+<area shape="rect" id="node15" href="$capabilitiesmessage_8h.html" title=" " alt="" coords="7457,155,7625,181"/>
+<area shape="rect" id="node16" href="$climbpromessage_8h.html" title=" " alt="" coords="7650,155,7801,181"/>
+<area shape="rect" id="node17" href="$connectivitymessage_8h.html" title=" " alt="" coords="7825,155,7999,181"/>
 <area shape="rect" id="node18" href="$coursemessage_8h.html" title=" " alt="" coords="5,155,141,181"/>
 <area shape="rect" id="node19" href="$coursepointmessage_8h.html" title=" " alt="" coords="166,155,335,181"/>
 <area shape="rect" id="node20" href="$developerdataidmessage_8h.html" title=" " alt="" coords="359,155,558,181"/>
@@ -37,9 +38,9 @@
 <area shape="rect" id="node34" href="$filecapabilitiesmessage_8h.html" title=" " alt="" coords="3385,155,3573,181"/>
 <area shape="rect" id="node35" href="$filecreatormessage_8h.html" title=" " alt="" coords="3597,155,3755,181"/>
 <area shape="rect" id="node36" href="$fileidmessage_8h.html" title=" " alt="" coords="3780,155,3905,181"/>
-<area shape="rect" id="node37" href="$fitdatamessage_8cpp.html" title=" " alt="" coords="8398,229,8549,256"/>
-<area shape="rect" id="node38" href="$fitstreamreader_8cpp.html" title=" " alt="" coords="8177,229,8327,256"/>
-<area shape="rect" id="node39" href="$fitstreamreader_8h.html" title=" " alt="" coords="8161,155,8295,181"/>
+<area shape="rect" id="node37" href="$fitdatamessage_8cpp.html" title=" " alt="" coords="8227,229,8378,256"/>
+<area shape="rect" id="node38" href="$fitstreamreader_8cpp.html" title=" " alt="" coords="8007,229,8156,256"/>
+<area shape="rect" id="node39" href="$fitstreamreader_8h.html" title=" " alt="" coords="8074,155,8209,181"/>
 <area shape="rect" id="node40" href="$goalmessage_8h.html" title=" " alt="" coords="3930,155,4051,181"/>
 <area shape="rect" id="node41" href="$gpsmetadatamessage_8h.html" title=" " alt="" coords="4076,155,4255,181"/>
 <area shape="rect" id="node42" href="$gyroscopedatamessage_8h.html" title=" " alt="" coords="4279,155,4468,181"/>
@@ -48,5 +49,4 @@
 <area shape="rect" id="node45" href="$hrvmessage_8h.html" title=" " alt="" coords="4807,155,4921,181"/>
 <area shape="rect" id="node46" href="$hrzonemessage_8h.html" title=" " alt="" coords="4946,155,5083,181"/>
 <area shape="rect" id="node47" href="$jumpmessage_8h.html" title=" " alt="" coords="5107,155,5234,181"/>
-<area shape="rect" id="node48" href="$lapmessage_8h.html" title=" " alt="" coords="5258,155,5371,181"/>
 </map>

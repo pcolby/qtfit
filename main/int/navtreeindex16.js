@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classWorkoutMessagePrivate.html#a31c97122c688be40e50138c0f97e3be5":[3,0,175,10],
 "classWorkoutMessagePrivate.html#a44a0e5f753b0b253444d98d3b85545a5":[3,0,175,6],
 "classWorkoutMessagePrivate.html#a4a1fe18c2e49d61743306b95ec5c82db":[3,0,175,7],
 "classWorkoutMessagePrivate.html#a7c569412c9131bd10905510918396242":[3,0,175,8],
@@ -241,13 +242,12 @@ var NAVTREEINDEX16 =
 "fileidmessage__p_8h_source.html":[4,0,98],
 "files.html":[4,0],
 "fitdatamessage_8cpp.html":[4,0,99],
+"fitdatamessage_8cpp.html#a3d7ec006b7bf32e4ea754e0ce7a0d3a4":[4,0,99,0],
+"fitdatamessage_8cpp.html#a3e1c894ea22d300479f8a7f822127d03":[4,0,99,1],
 "fitdatamessage_8cpp_source.html":[4,0,99],
 "fitdatamessage_8h.html":[4,0,100],
 "fitdatamessage_8h_source.html":[4,0,100],
 "fitdatamessage__p_8h.html":[4,0,101],
 "fitdatamessage__p_8h_source.html":[4,0,101],
-"fitdatamessages_8cpp.html":[4,0,102],
-"fitdatamessages_8cpp_source.html":[4,0,102],
-"fitstreamreader_8cpp.html":[4,0,103],
-"fitstreamreader_8cpp.html#ae1dc2f3ad4869b2d74ae07e503e75013":[4,0,103,0]
+"fitdatamessages_8cpp.html":[4,0,102]
 };

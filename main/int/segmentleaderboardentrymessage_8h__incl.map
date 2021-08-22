@@ -1,7 +1,8 @@
 <map id="segmentleaderboardentrymessage.h" name="segmentleaderboardentrymessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,268,32"/>
 <area shape="rect" id="node2" href="$fitdatamessage_8h.html" title=" " alt="" coords="69,80,204,107"/>
-<area shape="rect" id="node3" href="$QtFit__global_8h.html" title=" " alt="" coords="81,229,193,256"/>
+<area shape="rect" id="node3" href="$QtFit__global_8h.html" title=" " alt="" coords="45,229,157,256"/>
 <area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="139,155,209,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="97,304,176,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="61,304,140,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="181,229,255,256"/>
 </map>

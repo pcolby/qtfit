@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"classSportMessagePrivate.html#a9bb8a71aadb099b331c0113de9f87d05":[3,0,143,0],
 "classSportMessagePrivate.html#ac255e31f9e78bfdabb8c88d0411b59f1":[3,0,143,6],
 "classSportMessagePrivate.html#ad709b92818c488a8a96182cc8dc7d14b":[3,0,143,4],
 "classSportMessagePrivate.html#adf808254a7568abc874234710d43aab9":[3,0,143,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "classVideoClipMessage.html#a906b16fec24d1a55ccf4a1e68216ad82":[3,0,156,2],
 "classVideoClipMessage.html#aaa685e0c0b3e3d8343bd8fc00351495a":[3,0,156,9],
 "classVideoClipMessage.html#ab032b29431047e6664757f5407ce1391":[3,0,156,4],
-"classVideoClipMessage.html#ac42d7e9d5bc20c030dddf0aab6f4f803":[3,0,156,14],
-"classVideoClipMessage.html#adddf7b2d8fd98afb00cbcad1efa560a6":[3,0,156,0]
+"classVideoClipMessage.html#ac42d7e9d5bc20c030dddf0aab6f4f803":[3,0,156,14]
 };

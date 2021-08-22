@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"classSessionMessage.html#af1945ae9bafcca4c8affebdff6d613b1":[3,0,132,54],
 "classSessionMessage.html#af1e1b268e5188ce1c3a47dbfe6bbf37c":[3,0,132,130],
 "classSessionMessage.html#af26b181b7bafd88e758891409b94e80e":[3,0,132,73],
 "classSessionMessage.html#af2a886096aded13af03f303c72b760f0":[3,0,132,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "classSportMessage.html#adb37c607c70835212eafc15086a36e6e":[3,0,142,7],
 "classSportMessagePrivate.html":[3,0,143],
 "classSportMessagePrivate.html#a039e874f779f887e1f625c693a1afb5b":[3,0,143,5],
-"classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b":[3,0,143,3],
-"classSportMessagePrivate.html#a9bb8a71aadb099b331c0113de9f87d05":[3,0,143,0]
+"classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b":[3,0,143,3]
 };
