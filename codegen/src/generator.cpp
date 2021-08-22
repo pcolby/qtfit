@@ -181,9 +181,12 @@ int Generator::processMessages(Grantlee::Context &context)
     context.push();
     context.insert(QSL("TargetName"), context.lookup(QSL("ProjectName")));
     context.insert(QSL("classNames"), classNames);
-    render(QSL("src/fitdatamessages.cmake"), context, outputDir.absoluteFilePath(QSL("src/fitdatamessages.cmake")));
+    const bool result = render(QSL("src/fitdatamessages.cmake"), context,
+                               outputDir.absoluteFilePath(QSL("src/fitdatamessages.cmake")));
+    if (result) fileCount++;
     context.pop();
-    return 0;//-1;
+    if (!result) return -1;
+    return fileCount;
 }
 
 int Generator::processTypes(Grantlee::Context &context)
@@ -246,12 +249,12 @@ int Generator::processTypes(Grantlee::Context &context)
     // Generate the types header.
     context.push();
     context.insert(QSL("enums"), enums);
-    const bool result =
-        render(QSL("src/fitdatamessages.cpp"), context, outputDir.absoluteFilePath(QSL("src/fitdatamessages.cpp")))
-     && render(QSL("src/types.cpp"), context, outputDir.absoluteFilePath(QSL("src/types.cpp")))
-     && render(QSL("src/types.h"), context, outputDir.absoluteFilePath(QSL("src/types.h")));
-    context.pop();
-    return result ? 3 : -1;
+    const QStringList fileNames { QSL("fitdatamessages.cpp"), QSL("types.cpp"), QSL("types.h")};
+    for (const QString &fileName: fileNames) {
+        if (!render(QSL("src/") + fileName, context, outputDir.absoluteFilePath(QSL("src/") + fileName)))
+            return -1;
+    }
+    return fileNames.size();
 }
 
 // Grantlee output stream that does *no* content escaping.
