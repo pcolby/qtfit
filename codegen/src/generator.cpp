@@ -69,8 +69,6 @@ int Generator::generate()
 /// \todo Generate test classes too.
 int Generator::processMessages(Grantlee::Context &context)
 {
-    Q_UNUSED(context)
-
     QFile file(QSL(":/fit-sdk/ProfileMessages.tsv"));
     if (!file.open(QFile::ReadOnly)) {
         qWarning() << "failed to open internal resource" << file.fileName();
@@ -115,7 +113,6 @@ int Generator::processMessages(Grantlee::Context &context)
             messageName = QString::fromUtf8(columns.at(0));
         }
         if (!columns.at(2).isEmpty()) { // Field Name is not empty.
-            bool ok;
             QVector<quint8> failures;
             QVariantMap field;
             const QByteArray fieldNumber = columns.at(1);
@@ -135,7 +132,7 @@ int Generator::processMessages(Grantlee::Context &context)
             const QByteArray isArray = columns.at(4);        ///< \a todo
           //const QByteArray components = columns.at(5);     ///< \a todo
             const QByteArray scale = columns.at(6);          ///< \a todo
-            const int offset = columns.at(7).toInt(&ok); if (!ok) failures << 8; ///< \a todo
+            const int offset = columns.at(7).toInt();        ///< \a todo
             const QByteArray units = columns.at(8);          ///< \a todo
             const QByteArray bits = columns.at(9);           ///< \a todo
             const QByteArray accumulate = columns.at(10);    ///< \a todo
