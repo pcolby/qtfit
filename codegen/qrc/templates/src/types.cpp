@@ -23,6 +23,6 @@ QDebug operator<<(QDebug debug, const {{enum.typeName}} value)
     }
     return debug;
 }
-{% endfor %}
 
+{% endfor %}
 {{ProjectName|upper}}_END_NAMESPACE
