@@ -281,6 +281,8 @@ void ExdDataConceptConfigurationMessage::setIsSigned(const bool isSigned)
     d->isSigned = isSigned;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -379,5 +381,7 @@ bool ExdDataConceptConfigurationMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

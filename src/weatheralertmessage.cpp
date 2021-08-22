@@ -176,6 +176,8 @@ void WeatherAlertMessage::setType(const WeatherSevereType type)
     d->type = type;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -248,5 +250,7 @@ bool WeatherAlertMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

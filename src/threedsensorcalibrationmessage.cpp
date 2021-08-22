@@ -197,6 +197,8 @@ void ThreeDSensorCalibrationMessage::setOrientationMatrix(const qint32 orientati
     d->orientationMatrix = orientationMatrix;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -275,5 +277,7 @@ bool ThreeDSensorCalibrationMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

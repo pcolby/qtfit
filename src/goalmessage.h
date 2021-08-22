@@ -66,9 +66,9 @@ public:
     void setSource(const GoalSource source);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit GoalMessage(GoalMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(GoalMessage)

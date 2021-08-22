@@ -218,6 +218,8 @@ void CoursePointMessage::setFavorite(const bool favorite)
     d->favorite = favorite;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -300,5 +302,7 @@ bool CoursePointMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

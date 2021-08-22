@@ -52,9 +52,9 @@ public:
     void setTimeCreated(const DateTime timeCreated);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit TrainingFileMessage(TrainingFileMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(TrainingFileMessage)

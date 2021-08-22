@@ -155,6 +155,8 @@ void HrmProfileMessage::setHrmAntIdTransType(const quint8z hrmAntIdTransType)
     d->hrmAntIdTransType = hrmAntIdTransType;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -223,5 +225,7 @@ bool HrmProfileMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

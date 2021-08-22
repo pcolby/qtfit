@@ -56,9 +56,9 @@ public:
     void setFavorite(const bool favorite);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit CoursePointMessage(CoursePointMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(CoursePointMessage)

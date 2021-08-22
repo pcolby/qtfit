@@ -134,6 +134,8 @@ void BarometerDataMessage::setBaroPres(const quint32 baroPres)
     d->baroPres = baroPres;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -197,5 +199,7 @@ bool BarometerDataMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

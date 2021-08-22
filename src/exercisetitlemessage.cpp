@@ -134,6 +134,8 @@ void ExerciseTitleMessage::setWktStepName(const QString wktStepName)
     d->wktStepName = wktStepName;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -196,5 +198,7 @@ bool ExerciseTitleMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

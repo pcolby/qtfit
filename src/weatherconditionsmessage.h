@@ -72,9 +72,9 @@ public:
     void setLowTemperature(const qint8 lowTemperature);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit WeatherConditionsMessage(WeatherConditionsMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(WeatherConditionsMessage)

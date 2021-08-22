@@ -197,6 +197,8 @@ void TimestampCorrelationMessage::setSystemTimestampMs(const quint16 systemTimes
     d->systemTimestampMs = systemTimestampMs;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -275,5 +277,7 @@ bool TimestampCorrelationMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

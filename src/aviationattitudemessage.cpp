@@ -302,6 +302,8 @@ void AviationAttitudeMessage::setValidity(const AttitudeValidity validity)
     d->validity = validity;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -405,5 +407,7 @@ bool AviationAttitudeMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

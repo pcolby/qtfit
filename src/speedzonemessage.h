@@ -46,9 +46,9 @@ public:
     void setName(const QString name);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SpeedZoneMessage(SpeedZoneMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SpeedZoneMessage)

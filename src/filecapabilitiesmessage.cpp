@@ -176,6 +176,8 @@ void FileCapabilitiesMessage::setMaxSize(const quint32 maxSize)
     d->maxSize = maxSize;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -248,5 +250,7 @@ bool FileCapabilitiesMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

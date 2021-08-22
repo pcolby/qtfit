@@ -218,6 +218,8 @@ void SdmProfileMessage::setOdometerRollover(const quint8 odometerRollover)
     d->odometerRollover = odometerRollover;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -301,5 +303,7 @@ bool SdmProfileMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

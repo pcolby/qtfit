@@ -52,9 +52,9 @@ public:
     void setData(const quint8 data);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit AntTxMessage(AntTxMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(AntTxMessage)

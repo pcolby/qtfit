@@ -2780,6 +2780,8 @@ void SessionMessage::setMaxCoreTemperature(const quint16 maxCoreTemperature)
     d->maxCoreTemperature = maxCoreTemperature;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -3508,5 +3510,7 @@ bool SessionMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

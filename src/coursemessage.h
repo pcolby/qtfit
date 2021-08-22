@@ -48,9 +48,9 @@ public:
     void setSubSport(const SubSport subSport);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit CourseMessage(CourseMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(CourseMessage)

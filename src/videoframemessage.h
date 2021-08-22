@@ -46,9 +46,9 @@ public:
     void setFrameNumber(const quint32 frameNumber);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit VideoFrameMessage(VideoFrameMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(VideoFrameMessage)

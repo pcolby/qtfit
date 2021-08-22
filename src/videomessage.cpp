@@ -113,6 +113,8 @@ void VideoMessage::setDuration(const quint32 duration)
     d->duration = duration;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -169,5 +171,7 @@ bool VideoMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

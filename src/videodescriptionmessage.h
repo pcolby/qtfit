@@ -46,9 +46,9 @@ public:
     void setText(const QString text);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit VideoDescriptionMessage(VideoDescriptionMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(VideoDescriptionMessage)

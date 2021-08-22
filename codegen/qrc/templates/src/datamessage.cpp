@@ -53,6 +53,8 @@ void {{ClassName}}::set{{field.name|capfirst}}(const {{field.cppType}} {{field.n
 }
 {% endfor %}
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -126,5 +128,7 @@ bool {{ClassName}}Private::setField(
     }
     return true;
 }
+
+/// \endcond
 
 {{ProjectName|upper}}_END_NAMESPACE

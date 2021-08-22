@@ -44,9 +44,9 @@ public:
     void setHardwareVersion(const quint8 hardwareVersion);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit FileCreatorMessage(FileCreatorMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(FileCreatorMessage)

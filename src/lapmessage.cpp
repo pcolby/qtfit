@@ -2486,6 +2486,8 @@ void LapMessage::setMaxCoreTemperature(const quint16 maxCoreTemperature)
     d->maxCoreTemperature = maxCoreTemperature;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -3145,5 +3147,7 @@ bool LapMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -50,9 +50,9 @@ public:
     void setCameraOrientation(const CameraOrientationType cameraOrientation);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit CameraEventMessage(CameraEventMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(CameraEventMessage)

@@ -58,9 +58,9 @@ public:
     void setDefaultRaceLeader(const quint8 defaultRaceLeader);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SegmentFileMessage(SegmentFileMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SegmentFileMessage)

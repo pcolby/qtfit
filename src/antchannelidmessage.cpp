@@ -155,6 +155,8 @@ void AntChannelIdMessage::setDeviceIndex(const DeviceIndex deviceIndex)
     d->deviceIndex = deviceIndex;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -223,5 +225,7 @@ bool AntChannelIdMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

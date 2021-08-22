@@ -113,6 +113,8 @@ void SoftwareMessage::setPartNumber(const QString partNumber)
     d->partNumber = partNumber;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -170,5 +172,7 @@ bool SoftwareMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -134,6 +134,8 @@ void CapabilitiesMessage::setConnectivitySupported(const ConnectivityCapabilitie
     d->connectivitySupported = connectivitySupported;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -197,5 +199,7 @@ bool CapabilitiesMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

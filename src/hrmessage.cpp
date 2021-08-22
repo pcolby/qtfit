@@ -176,6 +176,8 @@ void HrMessage::setEventTimestamp12(const quint8 eventTimestamp12)
     d->eventTimestamp12 = eventTimestamp12;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -249,5 +251,7 @@ bool HrMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

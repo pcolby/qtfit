@@ -113,6 +113,8 @@ void PowerZoneMessage::setName(const QString name)
     d->name = name;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -170,5 +172,7 @@ bool PowerZoneMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

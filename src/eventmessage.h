@@ -70,9 +70,9 @@ public:
     void setRadarThreatCount(const quint8 radarThreatCount);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit EventMessage(EventMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(EventMessage)

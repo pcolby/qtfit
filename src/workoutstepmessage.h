@@ -70,9 +70,9 @@ public:
     void setWeightDisplayUnit(const FitBaseUnit weightDisplayUnit);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit WorkoutStepMessage(WorkoutStepMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(WorkoutStepMessage)

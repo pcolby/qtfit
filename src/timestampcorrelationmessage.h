@@ -54,9 +54,9 @@ public:
     void setSystemTimestampMs(const quint16 systemTimestampMs);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit TimestampCorrelationMessage(TimestampCorrelationMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(TimestampCorrelationMessage)

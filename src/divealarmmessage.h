@@ -54,9 +54,9 @@ public:
     void setDiveTypes(const SubSport diveTypes);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit DiveAlarmMessage(DiveAlarmMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(DiveAlarmMessage)

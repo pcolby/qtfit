@@ -365,6 +365,8 @@ void EventMessage::setRadarThreatCount(const quint8 radarThreatCount)
     d->radarThreatCount = radarThreatCount;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -483,5 +485,7 @@ bool EventMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

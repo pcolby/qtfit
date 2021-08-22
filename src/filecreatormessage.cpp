@@ -92,6 +92,8 @@ void FileCreatorMessage::setHardwareVersion(const quint8 hardwareVersion)
     d->hardwareVersion = hardwareVersion;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -145,5 +147,7 @@ bool FileCreatorMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -38,10 +38,10 @@ public:
     static AbstractDataMessage * fromData(const DataDefinition * const defn, const QByteArray &record);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     AbstractDataMessagePrivate * const d_ptr; ///< Internal d-pointer.
     explicit AbstractDataMessage(AbstractDataMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(AbstractDataMessage)

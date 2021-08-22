@@ -76,9 +76,9 @@ public:
     void setZoneCount(const quint16 zoneCount);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit LengthMessage(LengthMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(LengthMessage)

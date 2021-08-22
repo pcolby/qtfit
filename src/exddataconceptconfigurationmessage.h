@@ -62,9 +62,9 @@ public:
     void setIsSigned(const bool isSigned);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ExdDataConceptConfigurationMessage(ExdDataConceptConfigurationMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ExdDataConceptConfigurationMessage)

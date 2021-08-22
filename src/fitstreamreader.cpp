@@ -262,6 +262,8 @@ AbstractDataMessage * FitStreamReader::readNext()
         ? d->readNextDataMessage<QByteArray>() : d->readNextDataMessage<QIODevice>();
 }
 
+/// \cond internal
+
 FitStreamReaderPrivate::FitStreamReaderPrivate(FitStreamReader * const q)
     : dataOffset(0), device(nullptr), q_ptr(q)
 {
@@ -540,5 +542,7 @@ bool FitStreamReaderPrivate::isDefinitionMessage(const quint8 recordHeader)
     // woud be a Normal Data Message, not a Definition Message).
     return ((recordHeader >> 6) == 1); // Match bit 7 on and 6 off; ie 01xxxxxx.
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

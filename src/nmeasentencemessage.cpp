@@ -113,6 +113,8 @@ void NmeaSentenceMessage::setSentence(const QString sentence)
     d->sentence = sentence;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -170,5 +172,7 @@ bool NmeaSentenceMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

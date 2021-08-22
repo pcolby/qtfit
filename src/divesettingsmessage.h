@@ -84,9 +84,9 @@ public:
     void setHeartRateSource(const quint8 heartRateSource);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit DiveSettingsMessage(DiveSettingsMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(DiveSettingsMessage)

@@ -52,9 +52,9 @@ public:
     void setOffsetCal(const qint32 offsetCal);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit OneDSensorCalibrationMessage(OneDSensorCalibrationMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(OneDSensorCalibrationMessage)

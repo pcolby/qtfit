@@ -52,9 +52,9 @@ public:
     void setTitle(const QString title);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ExdDataFieldConfigurationMessage(ExdDataFieldConfigurationMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ExdDataFieldConfigurationMessage)

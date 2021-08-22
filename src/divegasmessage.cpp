@@ -134,6 +134,8 @@ void DiveGasMessage::setStatus(const DiveGasStatus status)
     d->status = status;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -197,5 +199,7 @@ bool DiveGasMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

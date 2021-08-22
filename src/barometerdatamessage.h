@@ -48,9 +48,9 @@ public:
     void setBaroPres(const quint32 baroPres);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit BarometerDataMessage(BarometerDataMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(BarometerDataMessage)

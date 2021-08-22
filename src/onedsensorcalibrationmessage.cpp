@@ -176,6 +176,8 @@ void OneDSensorCalibrationMessage::setOffsetCal(const qint32 offsetCal)
     d->offsetCal = offsetCal;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -249,5 +251,7 @@ bool OneDSensorCalibrationMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

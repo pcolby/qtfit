@@ -134,6 +134,8 @@ void MemoGlobMessage::setMessageIndex(const MessageIndex messageIndex)
     d->messageIndex = messageIndex;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -197,5 +199,7 @@ bool MemoGlobMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

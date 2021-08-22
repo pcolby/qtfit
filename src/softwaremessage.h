@@ -46,9 +46,9 @@ public:
     void setPartNumber(const QString partNumber);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SoftwareMessage(SoftwareMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SoftwareMessage)

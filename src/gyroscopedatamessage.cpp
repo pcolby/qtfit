@@ -239,6 +239,8 @@ void GyroscopeDataMessage::setCalibratedGyroZ(const float calibratedGyroZ)
     d->calibratedGyroZ = calibratedGyroZ;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -354,5 +356,7 @@ bool GyroscopeDataMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

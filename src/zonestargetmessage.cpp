@@ -155,6 +155,8 @@ void ZonesTargetMessage::setPwrCalcType(const PwrZoneCalc pwrCalcType)
     d->pwrCalcType = pwrCalcType;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -223,5 +225,7 @@ bool ZonesTargetMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

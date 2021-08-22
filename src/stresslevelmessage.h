@@ -44,9 +44,9 @@ public:
     void setStressLevelTime(const DateTime stressLevelTime);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit StressLevelMessage(StressLevelMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(StressLevelMessage)

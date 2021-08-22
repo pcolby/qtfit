@@ -260,6 +260,8 @@ void JumpMessage::setEnhancedSpeed(const quint32 enhancedSpeed)
     d->enhancedSpeed = enhancedSpeed;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -389,5 +391,7 @@ bool JumpMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

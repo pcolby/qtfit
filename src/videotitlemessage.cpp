@@ -113,6 +113,8 @@ void VideoTitleMessage::setText(const QString text)
     d->text = text;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -170,5 +172,7 @@ bool VideoTitleMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

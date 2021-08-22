@@ -197,6 +197,8 @@ void FileIdMessage::setProductName(const QString productName)
     d->productName = productName;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -274,5 +276,7 @@ bool FileIdMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

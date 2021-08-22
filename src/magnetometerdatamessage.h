@@ -58,9 +58,9 @@ public:
     void setCalibratedMagZ(const float calibratedMagZ);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit MagnetometerDataMessage(MagnetometerDataMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(MagnetometerDataMessage)

@@ -71,6 +71,8 @@ void HrvMessage::setTime(const quint16 time)
     d->time = time;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -119,5 +121,7 @@ bool HrvMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

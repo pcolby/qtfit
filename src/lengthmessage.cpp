@@ -428,6 +428,8 @@ void LengthMessage::setZoneCount(const quint16 zoneCount)
     d->zoneCount = zoneCount;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -561,5 +563,7 @@ bool LengthMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

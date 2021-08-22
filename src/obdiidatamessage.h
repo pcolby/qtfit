@@ -58,9 +58,9 @@ public:
     void setStartTimestampMs(const quint16 startTimestampMs);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ObdiiDataMessage(ObdiiDataMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ObdiiDataMessage)

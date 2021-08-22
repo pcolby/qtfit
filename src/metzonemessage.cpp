@@ -134,6 +134,8 @@ void MetZoneMessage::setFatCalories(const quint8 fatCalories)
     d->fatCalories = fatCalories;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -197,5 +199,7 @@ bool MetZoneMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

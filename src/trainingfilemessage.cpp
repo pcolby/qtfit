@@ -176,6 +176,8 @@ void TrainingFileMessage::setTimeCreated(const DateTime timeCreated)
     d->timeCreated = timeCreated;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -249,5 +251,7 @@ bool TrainingFileMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -50,9 +50,9 @@ public:
     void setCount(const quint16 count);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit FieldCapabilitiesMessage(FieldCapabilitiesMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(FieldCapabilitiesMessage)

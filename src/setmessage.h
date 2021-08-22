@@ -62,9 +62,9 @@ public:
     void setWktStepIndex(const MessageIndex wktStepIndex);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SetMessage(SetMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SetMessage)

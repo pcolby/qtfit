@@ -197,6 +197,8 @@ void ScheduleMessage::setScheduledTime(const LocalDateTime scheduledTime)
     d->scheduledTime = scheduledTime;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -275,5 +277,7 @@ bool ScheduleMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -197,6 +197,8 @@ void WorkoutSessionMessage::setPoolLengthUnit(const DisplayMeasure poolLengthUni
     d->poolLengthUnit = poolLengthUnit;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -275,5 +277,7 @@ bool WorkoutSessionMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

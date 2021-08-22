@@ -66,9 +66,9 @@ public:
     void setBottomTime(const quint32 bottomTime);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit DiveSummaryMessage(DiveSummaryMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(DiveSummaryMessage)

@@ -554,6 +554,8 @@ void DeviceSettingsMessage::setTapSensitivity(const TapSensitivity tapSensitivit
     d->tapSensitivity = tapSensitivity;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -717,5 +719,7 @@ bool DeviceSettingsMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

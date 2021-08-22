@@ -50,9 +50,9 @@ public:
     void setPwrCalcType(const PwrZoneCalc pwrCalcType);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ZonesTargetMessage(ZonesTargetMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ZonesTargetMessage)

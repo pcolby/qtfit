@@ -176,6 +176,8 @@ void SegmentPointMessage::setLeaderTime(const quint32 leaderTime)
     d->leaderTime = leaderTime;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -249,5 +251,7 @@ bool SegmentPointMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

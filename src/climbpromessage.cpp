@@ -197,6 +197,8 @@ void ClimbProMessage::setCurrentDist(const float currentDist)
     d->currentDist = currentDist;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -284,5 +286,7 @@ bool ClimbProMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

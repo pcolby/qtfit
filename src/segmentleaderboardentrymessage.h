@@ -54,9 +54,9 @@ public:
     void setActivityIdString(const QString activityIdString);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SegmentLeaderboardEntryMessage(SegmentLeaderboardEntryMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SegmentLeaderboardEntryMessage)

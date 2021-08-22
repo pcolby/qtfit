@@ -92,6 +92,8 @@ void SlaveDeviceMessage::setProduct(const quint16 product)
     d->product = product;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -145,5 +147,7 @@ bool SlaveDeviceMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

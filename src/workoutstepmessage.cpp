@@ -365,6 +365,8 @@ void WorkoutStepMessage::setWeightDisplayUnit(const FitBaseUnit weightDisplayUni
     d->weightDisplayUnit = weightDisplayUnit;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -481,5 +483,7 @@ bool WorkoutStepMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

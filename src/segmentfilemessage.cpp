@@ -239,6 +239,8 @@ void SegmentFileMessage::setDefaultRaceLeader(const quint8 defaultRaceLeader)
     d->defaultRaceLeader = defaultRaceLeader;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -325,5 +327,7 @@ bool SegmentFileMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

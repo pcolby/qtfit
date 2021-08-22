@@ -323,6 +323,8 @@ void WeightScaleMessage::setUserProfileIndex(const MessageIndex userProfileIndex
     d->userProfileIndex = userProfileIndex;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -431,5 +433,7 @@ bool WeightScaleMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

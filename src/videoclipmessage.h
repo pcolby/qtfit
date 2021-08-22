@@ -54,9 +54,9 @@ public:
     void setClipEnd(const quint32 clipEnd);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit VideoClipMessage(VideoClipMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(VideoClipMessage)

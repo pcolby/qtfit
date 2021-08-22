@@ -60,9 +60,9 @@ public:
     void setSportIndex(const quint8 sportIndex);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit TotalsMessage(TotalsMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(TotalsMessage)

@@ -48,9 +48,9 @@ public:
     void setStatus(const DiveGasStatus status);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit DiveGasMessage(DiveGasMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(DiveGasMessage)

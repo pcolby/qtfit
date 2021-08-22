@@ -224,9 +224,9 @@ public:
     void setTotalFractionalDescent(const quint8 totalFractionalDescent);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SegmentLapMessage(SegmentLapMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SegmentLapMessage)

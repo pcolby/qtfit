@@ -46,9 +46,9 @@ public:
     void setSentence(const QString sentence);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit NmeaSentenceMessage(NmeaSentenceMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(NmeaSentenceMessage)

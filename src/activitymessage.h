@@ -56,9 +56,9 @@ public:
     void setEventGroup(const quint8 eventGroup);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ActivityMessage(ActivityMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ActivityMessage)

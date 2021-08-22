@@ -64,9 +64,9 @@ public:
     void setValidity(const AttitudeValidity validity);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit AviationAttitudeMessage(AviationAttitudeMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(AviationAttitudeMessage)

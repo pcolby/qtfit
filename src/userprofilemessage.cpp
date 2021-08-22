@@ -659,6 +659,8 @@ void UserProfileMessage::setDiveCount(const quint32 diveCount)
     d->diveCount = diveCount;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -846,5 +848,7 @@ bool UserProfileMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

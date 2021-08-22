@@ -155,6 +155,8 @@ void MesgCapabilitiesMessage::setCount(const quint16 count)
     d->count = count;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -223,5 +225,7 @@ bool MesgCapabilitiesMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

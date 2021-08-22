@@ -92,6 +92,8 @@ void OhrSettingsMessage::setEnabled(const Switch enabled)
     d->enabled = enabled;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -145,5 +147,7 @@ bool OhrSettingsMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

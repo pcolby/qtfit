@@ -56,9 +56,9 @@ public:
     void setOdometerRollover(const quint8 odometerRollover);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SdmProfileMessage(SdmProfileMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SdmProfileMessage)

@@ -44,9 +44,9 @@ public:
     void setEnabled(const Switch enabled);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit OhrSettingsMessage(OhrSettingsMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(OhrSettingsMessage)

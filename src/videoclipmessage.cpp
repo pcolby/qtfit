@@ -197,6 +197,8 @@ void VideoClipMessage::setClipEnd(const quint32 clipEnd)
     d->clipEnd = clipEnd;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -275,5 +277,7 @@ bool VideoClipMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

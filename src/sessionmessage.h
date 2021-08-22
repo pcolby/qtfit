@@ -300,9 +300,9 @@ public:
     void setMaxCoreTemperature(const quint16 maxCoreTemperature);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SessionMessage(SessionMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SessionMessage)

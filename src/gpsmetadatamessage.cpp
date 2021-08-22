@@ -239,6 +239,8 @@ void GpsMetadataMessage::setVelocity(const qint16 velocity)
     d->velocity = velocity;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -327,5 +329,7 @@ bool GpsMetadataMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

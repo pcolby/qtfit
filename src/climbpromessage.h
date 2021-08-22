@@ -54,9 +54,9 @@ public:
     void setCurrentDist(const float currentDist);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ClimbProMessage(ClimbProMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ClimbProMessage)

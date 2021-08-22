@@ -46,9 +46,9 @@ public:
     void setName(const QString name);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit CadenceZoneMessage(CadenceZoneMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(CadenceZoneMessage)

@@ -176,6 +176,8 @@ void MonitoringInfoMessage::setRestingMetabolicRate(const quint16 restingMetabol
     d->restingMetabolicRate = restingMetabolicRate;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -249,5 +251,7 @@ bool MonitoringInfoMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -98,9 +98,9 @@ public:
     void setVigorousActivityMinutes(const quint16 vigorousActivityMinutes);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit MonitoringMessage(MonitoringMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(MonitoringMessage)

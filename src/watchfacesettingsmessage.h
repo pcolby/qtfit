@@ -46,9 +46,9 @@ public:
     void setLayout(const quint8 layout);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit WatchfaceSettingsMessage(WatchfaceSettingsMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(WatchfaceSettingsMessage)

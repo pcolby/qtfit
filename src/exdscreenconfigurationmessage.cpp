@@ -134,6 +134,8 @@ void ExdScreenConfigurationMessage::setScreenEnabled(const bool screenEnabled)
     d->screenEnabled = screenEnabled;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -197,5 +199,7 @@ bool ExdScreenConfigurationMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

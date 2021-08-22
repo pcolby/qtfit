@@ -188,9 +188,9 @@ public:
     void setCoreTemperature(const quint16 coreTemperature);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit RecordMessage(RecordMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(RecordMessage)

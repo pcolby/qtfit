@@ -24,9 +24,9 @@ public:
 {% endfor %}
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit {{ClassName}}({{ClassName}}Private * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE({{ClassName}})

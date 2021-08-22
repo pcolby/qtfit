@@ -722,6 +722,8 @@ void BikeProfileMessage::setShimanoDi2Enabled(const bool shimanoDi2Enabled)
     d->shimanoDi2Enabled = shimanoDi2Enabled;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -924,5 +926,7 @@ bool BikeProfileMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

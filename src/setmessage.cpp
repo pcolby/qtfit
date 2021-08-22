@@ -281,6 +281,8 @@ void SetMessage::setWktStepIndex(const MessageIndex wktStepIndex)
     d->wktStepIndex = wktStepIndex;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -379,5 +381,7 @@ bool SetMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

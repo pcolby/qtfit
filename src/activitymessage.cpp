@@ -218,6 +218,8 @@ void ActivityMessage::setEventGroup(const quint8 eventGroup)
     d->eventGroup = eventGroup;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -301,5 +303,7 @@ bool ActivityMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -52,9 +52,9 @@ public:
     void setEventTimestamp12(const quint8 eventTimestamp12);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit HrMessage(HrMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(HrMessage)

@@ -113,6 +113,8 @@ void SportMessage::setName(const QString name)
     d->name = name;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -170,5 +172,7 @@ bool SportMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -52,9 +52,9 @@ public:
     void setLeaderTime(const quint32 leaderTime);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SegmentPointMessage(SegmentPointMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SegmentPointMessage)

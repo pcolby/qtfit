@@ -134,6 +134,8 @@ void CourseMessage::setSubSport(const SubSport subSport)
     d->subSport = subSport;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -196,5 +198,7 @@ bool CourseMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

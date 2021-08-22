@@ -58,9 +58,9 @@ public:
     void setSelectionType(const SegmentSelectionType selectionType);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SegmentIdMessage(SegmentIdMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SegmentIdMessage)

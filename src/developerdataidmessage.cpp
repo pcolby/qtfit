@@ -155,6 +155,8 @@ void DeveloperDataIdMessage::setApplicationVersion(const quint32 applicationVers
     d->applicationVersion = applicationVersion;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -223,5 +225,7 @@ bool DeveloperDataIdMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

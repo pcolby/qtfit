@@ -104,9 +104,9 @@ public:
     void setShimanoDi2Enabled(const bool shimanoDi2Enabled);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit BikeProfileMessage(BikeProfileMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(BikeProfileMessage)

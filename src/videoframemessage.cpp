@@ -113,6 +113,8 @@ void VideoFrameMessage::setFrameNumber(const quint32 frameNumber)
     d->frameNumber = frameNumber;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -171,5 +173,7 @@ bool VideoFrameMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

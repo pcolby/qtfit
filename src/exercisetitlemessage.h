@@ -48,9 +48,9 @@ public:
     void setWktStepName(const QString wktStepName);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ExerciseTitleMessage(ExerciseTitleMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ExerciseTitleMessage)

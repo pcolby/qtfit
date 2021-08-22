@@ -98,9 +98,9 @@ public:
     void setDiveCount(const quint32 diveCount);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit UserProfileMessage(UserProfileMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(UserProfileMessage)

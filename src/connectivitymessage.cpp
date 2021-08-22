@@ -323,6 +323,8 @@ void ConnectivityMessage::setGrouptrackEnabled(const bool grouptrackEnabled)
     d->grouptrackEnabled = grouptrackEnabled;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -430,5 +432,7 @@ bool ConnectivityMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

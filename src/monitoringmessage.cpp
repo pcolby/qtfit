@@ -659,6 +659,8 @@ void MonitoringMessage::setVigorousActivityMinutes(const quint16 vigorousActivit
     d->vigorousActivityMinutes = vigorousActivityMinutes;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -847,5 +849,7 @@ bool MonitoringMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -197,6 +197,8 @@ void DiveAlarmMessage::setDiveTypes(const SubSport diveTypes)
     d->diveTypes = diveTypes;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -275,5 +277,7 @@ bool DiveAlarmMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

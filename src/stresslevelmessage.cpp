@@ -92,6 +92,8 @@ void StressLevelMessage::setStressLevelTime(const DateTime stressLevelTime)
     d->stressLevelTime = stressLevelTime;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -145,5 +147,7 @@ bool StressLevelMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

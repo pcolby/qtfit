@@ -176,6 +176,8 @@ void AntRxMessage::setData(const quint8 data)
     d->data = data;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -249,5 +251,7 @@ bool AntRxMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

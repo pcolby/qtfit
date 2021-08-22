@@ -52,9 +52,9 @@ public:
     void setMaxSize(const quint32 maxSize);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit FileCapabilitiesMessage(FileCapabilitiesMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(FileCapabilitiesMessage)

@@ -52,9 +52,9 @@ public:
     void setRestingMetabolicRate(const quint16 restingMetabolicRate);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit MonitoringInfoMessage(MonitoringInfoMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(MonitoringInfoMessage)

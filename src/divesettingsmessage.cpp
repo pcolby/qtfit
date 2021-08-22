@@ -512,6 +512,8 @@ void DiveSettingsMessage::setHeartRateSource(const quint8 heartRateSource)
     d->heartRateSource = heartRateSource;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -682,5 +684,7 @@ bool DiveSettingsMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

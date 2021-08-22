@@ -68,9 +68,9 @@ public:
     void setNativeFieldNum(const quint8 nativeFieldNum);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit FieldDescriptionMessage(FieldDescriptionMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(FieldDescriptionMessage)

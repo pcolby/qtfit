@@ -197,6 +197,8 @@ void SegmentLeaderboardEntryMessage::setActivityIdString(const QString activityI
     d->activityIdString = activityIdString;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -273,5 +275,7 @@ bool SegmentLeaderboardEntryMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

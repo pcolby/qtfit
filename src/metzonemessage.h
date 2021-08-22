@@ -48,9 +48,9 @@ public:
     void setFatCalories(const quint8 fatCalories);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit MetZoneMessage(MetZoneMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(MetZoneMessage)

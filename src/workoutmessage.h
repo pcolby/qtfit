@@ -54,9 +54,9 @@ public:
     void setPoolLengthUnit(const DisplayMeasure poolLengthUnit);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit WorkoutMessage(WorkoutMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(WorkoutMessage)

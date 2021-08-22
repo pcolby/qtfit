@@ -48,9 +48,9 @@ public:
     void setConnectivitySupported(const ConnectivityCapabilities connectivitySupported);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit CapabilitiesMessage(CapabilitiesMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(CapabilitiesMessage)

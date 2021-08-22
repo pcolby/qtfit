@@ -62,9 +62,9 @@ public:
     void setUserProfileIndex(const MessageIndex userProfileIndex);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit BloodPressureMessage(BloodPressureMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(BloodPressureMessage)

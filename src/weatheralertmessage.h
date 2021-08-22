@@ -52,9 +52,9 @@ public:
     void setType(const WeatherSevereType type);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit WeatherAlertMessage(WeatherAlertMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(WeatherAlertMessage)

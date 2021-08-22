@@ -46,9 +46,9 @@ public:
     void setName(const QString name);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit HrZoneMessage(HrZoneMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(HrZoneMessage)

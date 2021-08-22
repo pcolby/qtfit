@@ -66,9 +66,9 @@ public:
     void setUserProfileIndex(const MessageIndex userProfileIndex);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit WeightScaleMessage(WeightScaleMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(WeightScaleMessage)

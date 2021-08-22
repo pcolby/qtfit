@@ -1982,6 +1982,8 @@ void SegmentLapMessage::setTotalFractionalDescent(const quint8 totalFractionalDe
     d->totalFractionalDescent = totalFractionalDescent;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -2519,5 +2521,7 @@ bool SegmentLapMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

@@ -386,6 +386,8 @@ void WeatherConditionsMessage::setLowTemperature(const qint8 lowTemperature)
     d->lowTemperature = lowTemperature;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -508,5 +510,7 @@ bool WeatherConditionsMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

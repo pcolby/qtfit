@@ -64,9 +64,9 @@ public:
     void setCompressedCalibratedAccelZ(const qint16 compressedCalibratedAccelZ);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit AccelerometerDataMessage(AccelerometerDataMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(AccelerometerDataMessage)

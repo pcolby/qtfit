@@ -272,9 +272,9 @@ public:
     void setMaxCoreTemperature(const quint16 maxCoreTemperature);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit LapMessage(LapMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(LapMessage)

@@ -113,6 +113,8 @@ void WatchfaceSettingsMessage::setLayout(const quint8 layout)
     d->layout = layout;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -171,5 +173,7 @@ bool WatchfaceSettingsMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

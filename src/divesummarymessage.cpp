@@ -323,6 +323,8 @@ void DiveSummaryMessage::setBottomTime(const quint32 bottomTime)
     d->bottomTime = bottomTime;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -431,5 +433,7 @@ bool DiveSummaryMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

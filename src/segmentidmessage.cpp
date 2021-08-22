@@ -239,6 +239,8 @@ void SegmentIdMessage::setSelectionType(const SegmentSelectionType selectionType
     d->selectionType = selectionType;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -325,5 +327,7 @@ bool SegmentIdMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

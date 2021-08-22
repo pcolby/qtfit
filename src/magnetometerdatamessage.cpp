@@ -239,6 +239,8 @@ void MagnetometerDataMessage::setCalibratedMagZ(const float calibratedMagZ)
     d->calibratedMagZ = calibratedMagZ;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -354,5 +356,7 @@ bool MagnetometerDataMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

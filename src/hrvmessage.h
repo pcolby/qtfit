@@ -42,9 +42,9 @@ public:
     void setTime(const quint16 time);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit HrvMessage(HrvMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(HrvMessage)

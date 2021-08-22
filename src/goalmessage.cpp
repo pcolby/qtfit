@@ -323,6 +323,8 @@ void GoalMessage::setSource(const GoalSource source)
     d->source = source;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -431,5 +433,7 @@ bool GoalMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

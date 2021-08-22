@@ -46,9 +46,9 @@ public:
     void setDuration(const quint32 duration);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit VideoMessage(VideoMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(VideoMessage)

@@ -76,9 +76,9 @@ public:
     void setProductName(const QString productName);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit DeviceInfoMessage(DeviceInfoMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(DeviceInfoMessage)

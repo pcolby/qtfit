@@ -58,9 +58,9 @@ public:
     void setCalibratedGyroZ(const float calibratedGyroZ);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit GyroscopeDataMessage(GyroscopeDataMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(GyroscopeDataMessage)

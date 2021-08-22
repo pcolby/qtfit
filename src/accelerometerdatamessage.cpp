@@ -302,6 +302,8 @@ void AccelerometerDataMessage::setCompressedCalibratedAccelZ(const qint16 compre
     d->compressedCalibratedAccelZ = compressedCalibratedAccelZ;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -432,5 +434,7 @@ bool AccelerometerDataMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

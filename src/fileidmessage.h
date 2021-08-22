@@ -54,9 +54,9 @@ public:
     void setProductName(const QString productName);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit FileIdMessage(FileIdMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(FileIdMessage)

@@ -281,6 +281,8 @@ void BloodPressureMessage::setUserProfileIndex(const MessageIndex userProfileInd
     d->userProfileIndex = userProfileIndex;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -379,5 +381,7 @@ bool BloodPressureMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

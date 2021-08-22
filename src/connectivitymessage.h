@@ -66,9 +66,9 @@ public:
     void setGrouptrackEnabled(const bool grouptrackEnabled);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ConnectivityMessage(ConnectivityMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ConnectivityMessage)

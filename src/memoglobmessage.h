@@ -48,9 +48,9 @@ public:
     void setMessageIndex(const MessageIndex messageIndex);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit MemoGlobMessage(MemoGlobMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(MemoGlobMessage)

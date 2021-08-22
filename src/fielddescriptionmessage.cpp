@@ -344,6 +344,8 @@ void FieldDescriptionMessage::setNativeFieldNum(const quint8 nativeFieldNum)
     d->nativeFieldNum = nativeFieldNum;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -452,5 +454,7 @@ bool FieldDescriptionMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

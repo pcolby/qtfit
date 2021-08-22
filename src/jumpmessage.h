@@ -60,9 +60,9 @@ public:
     void setEnhancedSpeed(const quint32 enhancedSpeed);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit JumpMessage(JumpMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(JumpMessage)

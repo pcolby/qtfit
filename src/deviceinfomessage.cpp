@@ -428,6 +428,8 @@ void DeviceInfoMessage::setProductName(const QString productName)
     d->productName = productName;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -559,5 +561,7 @@ bool DeviceInfoMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

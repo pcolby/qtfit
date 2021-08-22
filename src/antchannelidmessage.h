@@ -50,9 +50,9 @@ public:
     void setDeviceIndex(const DeviceIndex deviceIndex);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit AntChannelIdMessage(AntChannelIdMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(AntChannelIdMessage)

@@ -239,6 +239,8 @@ void ObdiiDataMessage::setStartTimestampMs(const quint16 startTimestampMs)
     d->startTimestampMs = startTimestampMs;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -327,5 +329,7 @@ bool ObdiiDataMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

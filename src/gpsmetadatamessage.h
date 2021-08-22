@@ -58,9 +58,9 @@ public:
     void setVelocity(const qint16 velocity);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit GpsMetadataMessage(GpsMetadataMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(GpsMetadataMessage)

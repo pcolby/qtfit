@@ -54,9 +54,9 @@ public:
     void setScheduledTime(const LocalDateTime scheduledTime);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ScheduleMessage(ScheduleMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ScheduleMessage)

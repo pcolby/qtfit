@@ -155,6 +155,8 @@ void CameraEventMessage::setCameraOrientation(const CameraOrientationType camera
     d->cameraOrientation = cameraOrientation;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -222,5 +224,7 @@ bool CameraEventMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

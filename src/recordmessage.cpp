@@ -1604,6 +1604,8 @@ void RecordMessage::setCoreTemperature(const quint16 coreTemperature)
     d->coreTemperature = coreTemperature;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -2035,5 +2037,7 @@ bool RecordMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

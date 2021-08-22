@@ -33,9 +33,9 @@ QTFIT_BEGIN_NAMESPACE
 /*!
  * \internal
  *
- * Constructs a AbstractDataMessage which private implementation \a q.
+ * Constructs a AbstractDataMessage with private implementation \a q.
  *
- * \param q Pointer to private implementation.
+ * \param d Pointer to private implementation.
  */
 AbstractDataMessage::AbstractDataMessage(AbstractDataMessagePrivate * const d) : d_ptr(d)
 {
@@ -60,6 +60,8 @@ MesgNum AbstractDataMessage::globalMessageNumber() const
     Q_D(const AbstractDataMessage);
     return d->globalMessageNumber;
 }
+
+/// \cond internal
 
 /*!
  * \internal
@@ -196,5 +198,7 @@ bool AbstractDataMessagePrivate::verify(const QByteArray &data, const FitBaseTyp
     return (verifyBaseType(actualType, expectedType, messageFieldName) &&
             verifyDataSize(data, expectedSize, messageFieldName));
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

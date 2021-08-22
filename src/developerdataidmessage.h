@@ -50,9 +50,9 @@ public:
     void setApplicationVersion(const quint32 applicationVersion);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit DeveloperDataIdMessage(DeveloperDataIdMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(DeveloperDataIdMessage)

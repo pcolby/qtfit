@@ -176,6 +176,8 @@ void ExdDataFieldConfigurationMessage::setTitle(const QString title)
     d->title = title;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -248,5 +250,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

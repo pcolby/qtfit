@@ -44,9 +44,9 @@ public:
     void setProduct(const quint16 product);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit SlaveDeviceMessage(SlaveDeviceMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(SlaveDeviceMessage)

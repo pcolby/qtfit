@@ -54,9 +54,9 @@ public:
     void setOrientationMatrix(const qint32 orientationMatrix);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ThreeDSensorCalibrationMessage(ThreeDSensorCalibrationMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ThreeDSensorCalibrationMessage)

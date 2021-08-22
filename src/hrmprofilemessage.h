@@ -50,9 +50,9 @@ public:
     void setHrmAntIdTransType(const quint8z hrmAntIdTransType);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit HrmProfileMessage(HrmProfileMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(HrmProfileMessage)

@@ -260,6 +260,8 @@ void TotalsMessage::setSportIndex(const quint8 sportIndex)
     d->sportIndex = sportIndex;
 }
 
+/// \cond internal
+
 /*!
  * \internal
  *
@@ -353,5 +355,7 @@ bool TotalsMessagePrivate::setField(
     }
     return true;
 }
+
+/// \endcond
 
 QTFIT_END_NAMESPACE

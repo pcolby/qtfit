@@ -48,9 +48,9 @@ public:
     void setScreenEnabled(const bool screenEnabled);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit ExdScreenConfigurationMessage(ExdScreenConfigurationMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(ExdScreenConfigurationMessage)

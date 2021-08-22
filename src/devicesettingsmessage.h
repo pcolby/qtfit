@@ -88,9 +88,9 @@ public:
     void setTapSensitivity(const TapSensitivity tapSensitivity);
 
 protected:
-    /// @cond internal
+    /// \cond internal
     explicit DeviceSettingsMessage(DeviceSettingsMessagePrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(DeviceSettingsMessage)
