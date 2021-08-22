@@ -25,13 +25,13 @@
 #ifndef QTFIT_DEVICESETTINGSMESSAGE_H
 #define QTFIT_DEVICESETTINGSMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DeviceSettingsMessagePrivate;
 
-class QTFIT_EXPORT DeviceSettingsMessage : public FitDataMessage {
+class QTFIT_EXPORT DeviceSettingsMessage : public AbstractDataMessage {
 
 public:
     DeviceSettingsMessage();

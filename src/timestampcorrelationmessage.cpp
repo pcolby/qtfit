@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-TimestampCorrelationMessage::TimestampCorrelationMessage() : FitDataMessage(new TimestampCorrelationMessagePrivate(this))
+TimestampCorrelationMessage::TimestampCorrelationMessage() : AbstractDataMessage(new TimestampCorrelationMessagePrivate(this))
 {
 
 }
@@ -215,7 +215,7 @@ void TimestampCorrelationMessage::setSystemTimestampMs(const quint16 systemTimes
  * \param q Pointer to public implementaton.
  */
 TimestampCorrelationMessagePrivate::TimestampCorrelationMessagePrivate(TimestampCorrelationMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , fractionalTimestamp(0xFFFF)
   , systemTimestamp(static_cast<DateTime>(-1))
@@ -271,7 +271,7 @@ bool TimestampCorrelationMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown timestamp_correlation message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

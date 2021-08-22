@@ -25,13 +25,13 @@
 #ifndef QTFIT_THREEDSENSORCALIBRATIONMESSAGE_P_H
 #define QTFIT_THREEDSENSORCALIBRATIONMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ThreeDSensorCalibrationMessage;
 
-class ThreeDSensorCalibrationMessagePrivate : public FitDataMessagePrivate {
+class ThreeDSensorCalibrationMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

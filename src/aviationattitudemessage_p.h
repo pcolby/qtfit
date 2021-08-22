@@ -25,13 +25,13 @@
 #ifndef QTFIT_AVIATIONATTITUDEMESSAGE_P_H
 #define QTFIT_AVIATIONATTITUDEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class AviationAttitudeMessage;
 
-class AviationAttitudeMessagePrivate : public FitDataMessagePrivate {
+class AviationAttitudeMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

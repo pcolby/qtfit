@@ -25,13 +25,13 @@
 #ifndef QTFIT_DEVICESETTINGSMESSAGE_P_H
 #define QTFIT_DEVICESETTINGSMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DeviceSettingsMessage;
 
-class DeviceSettingsMessagePrivate : public FitDataMessagePrivate {
+class DeviceSettingsMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint8 activeTimeZone;

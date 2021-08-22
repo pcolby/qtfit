@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-FileCreatorMessage::FileCreatorMessage() : FitDataMessage(new FileCreatorMessagePrivate(this))
+FileCreatorMessage::FileCreatorMessage() : AbstractDataMessage(new FileCreatorMessagePrivate(this))
 {
 
 }
@@ -110,7 +110,7 @@ void FileCreatorMessage::setHardwareVersion(const quint8 hardwareVersion)
  * \param q Pointer to public implementaton.
  */
 FileCreatorMessagePrivate::FileCreatorMessagePrivate(FileCreatorMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , softwareVersion(0xFFFF)
   , hardwareVersion(0xFF)
 {
@@ -141,7 +141,7 @@ bool FileCreatorMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown file_creator message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

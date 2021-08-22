@@ -25,13 +25,13 @@
 #ifndef QTFIT_SDMPROFILEMESSAGE_P_H
 #define QTFIT_SDMPROFILEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class SdmProfileMessage;
 
-class SdmProfileMessagePrivate : public FitDataMessagePrivate {
+class SdmProfileMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

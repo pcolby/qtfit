@@ -25,13 +25,13 @@
 #ifndef QTFIT_FILEIDMESSAGE_H
 #define QTFIT_FILEIDMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class FileIdMessagePrivate;
 
-class QTFIT_EXPORT FileIdMessage : public FitDataMessage {
+class QTFIT_EXPORT FileIdMessage : public AbstractDataMessage {
 
 public:
     FileIdMessage();

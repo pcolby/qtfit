@@ -25,13 +25,13 @@
 #ifndef QTFIT_RECORDMESSAGE_H
 #define QTFIT_RECORDMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class RecordMessagePrivate;
 
-class QTFIT_EXPORT RecordMessage : public FitDataMessage {
+class QTFIT_EXPORT RecordMessage : public AbstractDataMessage {
 
 public:
     RecordMessage();

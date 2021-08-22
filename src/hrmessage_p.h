@@ -25,13 +25,13 @@
 #ifndef QTFIT_HRMESSAGE_P_H
 #define QTFIT_HRMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class HrMessage;
 
-class HrMessagePrivate : public FitDataMessagePrivate {
+class HrMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

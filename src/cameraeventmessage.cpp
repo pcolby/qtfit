@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-CameraEventMessage::CameraEventMessage() : FitDataMessage(new CameraEventMessagePrivate(this))
+CameraEventMessage::CameraEventMessage() : AbstractDataMessage(new CameraEventMessagePrivate(this))
 {
 
 }
@@ -173,7 +173,7 @@ void CameraEventMessage::setCameraOrientation(const CameraOrientationType camera
  * \param q Pointer to public implementaton.
  */
 CameraEventMessagePrivate::CameraEventMessagePrivate(CameraEventMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
   , cameraEventType(static_cast<CameraEventType>(-1))
@@ -218,7 +218,7 @@ bool CameraEventMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown camera_event message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

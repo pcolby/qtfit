@@ -25,13 +25,13 @@
 #ifndef QTFIT_SCHEDULEMESSAGE_P_H
 #define QTFIT_SCHEDULEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ScheduleMessage;
 
-class ScheduleMessagePrivate : public FitDataMessagePrivate {
+class ScheduleMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     Manufacturer manufacturer;

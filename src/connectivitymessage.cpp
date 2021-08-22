@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ConnectivityMessage::ConnectivityMessage() : FitDataMessage(new ConnectivityMessagePrivate(this))
+ConnectivityMessage::ConnectivityMessage() : AbstractDataMessage(new ConnectivityMessagePrivate(this))
 {
 
 }
@@ -341,7 +341,7 @@ void ConnectivityMessage::setGrouptrackEnabled(const bool grouptrackEnabled)
  * \param q Pointer to public implementaton.
  */
 ConnectivityMessagePrivate::ConnectivityMessagePrivate(ConnectivityMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , bluetoothEnabled(static_cast<bool>(-1))
   , bluetoothLeEnabled(static_cast<bool>(-1))
   , antEnabled(static_cast<bool>(-1))
@@ -426,7 +426,7 @@ bool ConnectivityMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown connectivity message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

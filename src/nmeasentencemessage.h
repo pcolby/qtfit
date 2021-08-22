@@ -25,13 +25,13 @@
 #ifndef QTFIT_NMEASENTENCEMESSAGE_H
 #define QTFIT_NMEASENTENCEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class NmeaSentenceMessagePrivate;
 
-class QTFIT_EXPORT NmeaSentenceMessage : public FitDataMessage {
+class QTFIT_EXPORT NmeaSentenceMessage : public AbstractDataMessage {
 
 public:
     NmeaSentenceMessage();

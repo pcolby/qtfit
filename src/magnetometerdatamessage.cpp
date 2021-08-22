@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-MagnetometerDataMessage::MagnetometerDataMessage() : FitDataMessage(new MagnetometerDataMessagePrivate(this))
+MagnetometerDataMessage::MagnetometerDataMessage() : AbstractDataMessage(new MagnetometerDataMessagePrivate(this))
 {
 
 }
@@ -257,7 +257,7 @@ void MagnetometerDataMessage::setCalibratedMagZ(const float calibratedMagZ)
  * \param q Pointer to public implementaton.
  */
 MagnetometerDataMessagePrivate::MagnetometerDataMessagePrivate(MagnetometerDataMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
   , sampleTimeOffset(0xFFFF)
@@ -350,7 +350,7 @@ bool MagnetometerDataMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown magnetometer_data message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

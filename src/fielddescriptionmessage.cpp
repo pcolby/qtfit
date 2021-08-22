@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-FieldDescriptionMessage::FieldDescriptionMessage() : FitDataMessage(new FieldDescriptionMessagePrivate(this))
+FieldDescriptionMessage::FieldDescriptionMessage() : AbstractDataMessage(new FieldDescriptionMessagePrivate(this))
 {
 
 }
@@ -362,7 +362,7 @@ void FieldDescriptionMessage::setNativeFieldNum(const quint8 nativeFieldNum)
  * \param q Pointer to public implementaton.
  */
 FieldDescriptionMessagePrivate::FieldDescriptionMessagePrivate(FieldDescriptionMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , developerDataIndex(0xFF)
   , fieldDefinitionNumber(0xFF)
   , fitBaseTypeId(static_cast<FitBaseType>(-1))
@@ -448,7 +448,7 @@ bool FieldDescriptionMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown field_description message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

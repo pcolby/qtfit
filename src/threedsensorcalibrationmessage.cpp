@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : FitDataMessage(new ThreeDSensorCalibrationMessagePrivate(this))
+ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : AbstractDataMessage(new ThreeDSensorCalibrationMessagePrivate(this))
 {
 
 }
@@ -215,7 +215,7 @@ void ThreeDSensorCalibrationMessage::setOrientationMatrix(const qint32 orientati
  * \param q Pointer to public implementaton.
  */
 ThreeDSensorCalibrationMessagePrivate::ThreeDSensorCalibrationMessagePrivate(ThreeDSensorCalibrationMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , sensorType(static_cast<SensorType>(-1))
   , calibrationFactor(0xFFFFFFFF)
@@ -271,7 +271,7 @@ bool ThreeDSensorCalibrationMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown three_d_sensor_calibration message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

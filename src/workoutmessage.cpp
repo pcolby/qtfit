@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-WorkoutMessage::WorkoutMessage() : FitDataMessage(new WorkoutMessagePrivate(this))
+WorkoutMessage::WorkoutMessage() : AbstractDataMessage(new WorkoutMessagePrivate(this))
 {
 
 }
@@ -215,7 +215,7 @@ void WorkoutMessage::setPoolLengthUnit(const DisplayMeasure poolLengthUnit)
  * \param q Pointer to public implementaton.
  */
 WorkoutMessagePrivate::WorkoutMessagePrivate(WorkoutMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , sport(static_cast<Sport>(-1))
   , capabilities(static_cast<WorkoutCapabilities>(-1))
   , numValidSteps(0xFFFF)
@@ -270,7 +270,7 @@ bool WorkoutMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown workout message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

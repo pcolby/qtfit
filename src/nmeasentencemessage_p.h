@@ -25,13 +25,13 @@
 #ifndef QTFIT_NMEASENTENCEMESSAGE_P_H
 #define QTFIT_NMEASENTENCEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class NmeaSentenceMessage;
 
-class NmeaSentenceMessagePrivate : public FitDataMessagePrivate {
+class NmeaSentenceMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

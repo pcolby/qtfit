@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-CadenceZoneMessage::CadenceZoneMessage() : FitDataMessage(new CadenceZoneMessagePrivate(this))
+CadenceZoneMessage::CadenceZoneMessage() : AbstractDataMessage(new CadenceZoneMessagePrivate(this))
 {
 
 }
@@ -131,7 +131,7 @@ void CadenceZoneMessage::setName(const QString name)
  * \param q Pointer to public implementaton.
  */
 CadenceZoneMessagePrivate::CadenceZoneMessagePrivate(CadenceZoneMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , highValue(0xFF)
 {
@@ -166,7 +166,7 @@ bool CadenceZoneMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown cadence_zone message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ScheduleMessage::ScheduleMessage() : FitDataMessage(new ScheduleMessagePrivate(this))
+ScheduleMessage::ScheduleMessage() : AbstractDataMessage(new ScheduleMessagePrivate(this))
 {
 
 }
@@ -215,7 +215,7 @@ void ScheduleMessage::setScheduledTime(const LocalDateTime scheduledTime)
  * \param q Pointer to public implementaton.
  */
 ScheduleMessagePrivate::ScheduleMessagePrivate(ScheduleMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , manufacturer(static_cast<Manufacturer>(-1))
   , product(0xFFFF)
   , serialNumber(0)
@@ -271,7 +271,7 @@ bool ScheduleMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown schedule message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

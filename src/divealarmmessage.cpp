@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-DiveAlarmMessage::DiveAlarmMessage() : FitDataMessage(new DiveAlarmMessagePrivate(this))
+DiveAlarmMessage::DiveAlarmMessage() : AbstractDataMessage(new DiveAlarmMessagePrivate(this))
 {
 
 }
@@ -215,7 +215,7 @@ void DiveAlarmMessage::setDiveTypes(const SubSport diveTypes)
  * \param q Pointer to public implementaton.
  */
 DiveAlarmMessagePrivate::DiveAlarmMessagePrivate(DiveAlarmMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , depth(0xFFFFFFFF)
   , time(0x7FFFFFFF)
@@ -271,7 +271,7 @@ bool DiveAlarmMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown dive_alarm message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

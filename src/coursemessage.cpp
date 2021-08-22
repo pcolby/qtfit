@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-CourseMessage::CourseMessage() : FitDataMessage(new CourseMessagePrivate(this))
+CourseMessage::CourseMessage() : AbstractDataMessage(new CourseMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void CourseMessage::setSubSport(const SubSport subSport)
  * \param q Pointer to public implementaton.
  */
 CourseMessagePrivate::CourseMessagePrivate(CourseMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , sport(static_cast<Sport>(-1))
   , capabilities(static_cast<CourseCapabilities>(-1))
   , subSport(static_cast<SubSport>(-1))
@@ -192,7 +192,7 @@ bool CourseMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown course message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

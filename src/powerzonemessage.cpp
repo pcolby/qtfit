@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-PowerZoneMessage::PowerZoneMessage() : FitDataMessage(new PowerZoneMessagePrivate(this))
+PowerZoneMessage::PowerZoneMessage() : AbstractDataMessage(new PowerZoneMessagePrivate(this))
 {
 
 }
@@ -131,7 +131,7 @@ void PowerZoneMessage::setName(const QString name)
  * \param q Pointer to public implementaton.
  */
 PowerZoneMessagePrivate::PowerZoneMessagePrivate(PowerZoneMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , highValue(0xFFFF)
 {
@@ -166,7 +166,7 @@ bool PowerZoneMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown power_zone message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

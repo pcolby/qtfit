@@ -25,13 +25,13 @@
 #ifndef QTFIT_CAMERAEVENTMESSAGE_P_H
 #define QTFIT_CAMERAEVENTMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class CameraEventMessage;
 
-class CameraEventMessagePrivate : public FitDataMessagePrivate {
+class CameraEventMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

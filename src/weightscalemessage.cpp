@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-WeightScaleMessage::WeightScaleMessage() : FitDataMessage(new WeightScaleMessagePrivate(this))
+WeightScaleMessage::WeightScaleMessage() : AbstractDataMessage(new WeightScaleMessagePrivate(this))
 {
 
 }
@@ -341,7 +341,7 @@ void WeightScaleMessage::setUserProfileIndex(const MessageIndex userProfileIndex
  * \param q Pointer to public implementaton.
  */
 WeightScaleMessagePrivate::WeightScaleMessagePrivate(WeightScaleMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , weight(static_cast<Weight>(-1))
   , percentFat(0xFFFF)
@@ -427,7 +427,7 @@ bool WeightScaleMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown weight_scale message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

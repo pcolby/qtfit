@@ -25,13 +25,13 @@
 #ifndef QTFIT_CAPABILITIESMESSAGE_P_H
 #define QTFIT_CAPABILITIESMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class CapabilitiesMessage;
 
-class CapabilitiesMessagePrivate : public FitDataMessagePrivate {
+class CapabilitiesMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint8z languages;

@@ -25,13 +25,13 @@
 #ifndef QTFIT_ZONESTARGETMESSAGE_H
 #define QTFIT_ZONESTARGETMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ZonesTargetMessagePrivate;
 
-class QTFIT_EXPORT ZonesTargetMessage : public FitDataMessage {
+class QTFIT_EXPORT ZonesTargetMessage : public AbstractDataMessage {
 
 public:
     ZonesTargetMessage();

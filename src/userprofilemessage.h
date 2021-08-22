@@ -25,13 +25,13 @@
 #ifndef QTFIT_USERPROFILEMESSAGE_H
 #define QTFIT_USERPROFILEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class UserProfileMessagePrivate;
 
-class QTFIT_EXPORT UserProfileMessage : public FitDataMessage {
+class QTFIT_EXPORT UserProfileMessage : public AbstractDataMessage {
 
 public:
     UserProfileMessage();

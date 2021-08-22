@@ -25,13 +25,13 @@
 #ifndef QTFIT_MONITORINGINFOMESSAGE_H
 #define QTFIT_MONITORINGINFOMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MonitoringInfoMessagePrivate;
 
-class QTFIT_EXPORT MonitoringInfoMessage : public FitDataMessage {
+class QTFIT_EXPORT MonitoringInfoMessage : public AbstractDataMessage {
 
 public:
     MonitoringInfoMessage();

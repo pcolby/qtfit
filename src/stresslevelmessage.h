@@ -25,13 +25,13 @@
 #ifndef QTFIT_STRESSLEVELMESSAGE_H
 #define QTFIT_STRESSLEVELMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class StressLevelMessagePrivate;
 
-class QTFIT_EXPORT StressLevelMessage : public FitDataMessage {
+class QTFIT_EXPORT StressLevelMessage : public AbstractDataMessage {
 
 public:
     StressLevelMessage();

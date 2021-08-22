@@ -25,13 +25,13 @@
 #ifndef QTFIT_DIVEALARMMESSAGE_H
 #define QTFIT_DIVEALARMMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DiveAlarmMessagePrivate;
 
-class QTFIT_EXPORT DiveAlarmMessage : public FitDataMessage {
+class QTFIT_EXPORT DiveAlarmMessage : public AbstractDataMessage {
 
 public:
     DiveAlarmMessage();

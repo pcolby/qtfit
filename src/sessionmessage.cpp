@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SessionMessage::SessionMessage() : FitDataMessage(new SessionMessagePrivate(this))
+SessionMessage::SessionMessage() : AbstractDataMessage(new SessionMessagePrivate(this))
 {
 
 }
@@ -2798,7 +2798,7 @@ void SessionMessage::setMaxCoreTemperature(const quint16 maxCoreTemperature)
  * \param q Pointer to public implementaton.
  */
 SessionMessagePrivate::SessionMessagePrivate(SessionMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , timestamp(static_cast<DateTime>(-1))
   , event(static_cast<Event>(-1))
@@ -3504,7 +3504,7 @@ bool SessionMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown session message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

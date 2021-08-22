@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-RecordMessage::RecordMessage() : FitDataMessage(new RecordMessagePrivate(this))
+RecordMessage::RecordMessage() : AbstractDataMessage(new RecordMessagePrivate(this))
 {
 
 }
@@ -1622,7 +1622,7 @@ void RecordMessage::setCoreTemperature(const quint16 coreTemperature)
  * \param q Pointer to public implementaton.
  */
 RecordMessagePrivate::RecordMessagePrivate(RecordMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , positionLat(0x7FFFFFFF)
   , positionLong(0x7FFFFFFF)
@@ -2031,7 +2031,7 @@ bool RecordMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown record message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_DIVESETTINGSMESSAGE_H
 #define QTFIT_DIVESETTINGSMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DiveSettingsMessagePrivate;
 
-class QTFIT_EXPORT DiveSettingsMessage : public FitDataMessage {
+class QTFIT_EXPORT DiveSettingsMessage : public AbstractDataMessage {
 
 public:
     DiveSettingsMessage();

@@ -25,13 +25,13 @@
 #ifndef QTFIT_JUMPMESSAGE_P_H
 #define QTFIT_JUMPMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class JumpMessage;
 
-class JumpMessagePrivate : public FitDataMessagePrivate {
+class JumpMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

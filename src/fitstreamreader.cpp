@@ -17,7 +17,7 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 #include "fitstreamreader.h"
 #include "fitstreamreader_p.h"
 
@@ -255,7 +255,7 @@ QVersionNumber FitStreamReader::protocolVersion() const
  *
  * \sa addData
  */
-FitDataMessage * FitStreamReader::readNext()
+AbstractDataMessage * FitStreamReader::readNext()
 {
     Q_D(FitStreamReader);
     return (d->device == nullptr)
@@ -437,7 +437,7 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     return true;
 }
 
-template<class T> FitDataMessage * FitStreamReaderPrivate::parseDataMessage()
+template<class T> AbstractDataMessage * FitStreamReaderPrivate::parseDataMessage()
 {
     Q_ASSERT(bytesAvailable<T>());
     qDebug() << "parsing data message";
@@ -481,7 +481,7 @@ template<class T> FitDataMessage * FitStreamReaderPrivate::parseDataMessage()
         return nullptr; // Not enough bytes.
     }
     qDebug() << "record" << record.mid(1);
-    return FitDataMessage::fromData(&defn, record.mid(1));
+    return AbstractDataMessage::fromData(&defn, record.mid(1));
 }
 
 template<> quint8 FitStreamReaderPrivate::peekByte<QByteArray>(const int pos) const
@@ -515,7 +515,7 @@ template<class T> QByteArray FitStreamReaderPrivate::readFileHeader()
     return (bytesAvailable<T>()) ? readBytes<T>(peekByte<T>()) : QByteArray();
 }
 
-template<class T> FitDataMessage * FitStreamReaderPrivate::readNextDataMessage()
+template<class T> AbstractDataMessage * FitStreamReaderPrivate::readNextDataMessage()
 {
     // If we haven't parsed the FIT File Header yet, do so now.
     if ((protocolVersion.isNull() && (!parseFileHeader<T>()))) {

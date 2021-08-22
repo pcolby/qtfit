@@ -25,13 +25,13 @@
 #ifndef QTFIT_EXDSCREENCONFIGURATIONMESSAGE_P_H
 #define QTFIT_EXDSCREENCONFIGURATIONMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ExdScreenConfigurationMessage;
 
-class ExdScreenConfigurationMessagePrivate : public FitDataMessagePrivate {
+class ExdScreenConfigurationMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint8 screenIndex;

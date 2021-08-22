@@ -25,13 +25,13 @@
 #ifndef QTFIT_METZONEMESSAGE_P_H
 #define QTFIT_METZONEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MetZoneMessage;
 
-class MetZoneMessagePrivate : public FitDataMessagePrivate {
+class MetZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

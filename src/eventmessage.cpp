@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-EventMessage::EventMessage() : FitDataMessage(new EventMessagePrivate(this))
+EventMessage::EventMessage() : AbstractDataMessage(new EventMessagePrivate(this))
 {
 
 }
@@ -383,7 +383,7 @@ void EventMessage::setRadarThreatCount(const quint8 radarThreatCount)
  * \param q Pointer to public implementaton.
  */
 EventMessagePrivate::EventMessagePrivate(EventMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , event(static_cast<Event>(-1))
   , eventType(static_cast<EventType>(-1))
@@ -479,7 +479,7 @@ bool EventMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown event message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

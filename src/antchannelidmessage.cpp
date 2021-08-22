@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-AntChannelIdMessage::AntChannelIdMessage() : FitDataMessage(new AntChannelIdMessagePrivate(this))
+AntChannelIdMessage::AntChannelIdMessage() : AbstractDataMessage(new AntChannelIdMessagePrivate(this))
 {
 
 }
@@ -173,7 +173,7 @@ void AntChannelIdMessage::setDeviceIndex(const DeviceIndex deviceIndex)
  * \param q Pointer to public implementaton.
  */
 AntChannelIdMessagePrivate::AntChannelIdMessagePrivate(AntChannelIdMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , channelNumber(0xFF)
   , deviceType(static_cast<quint8z>(-1))
   , deviceNumber(0)
@@ -219,7 +219,7 @@ bool AntChannelIdMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown ant_channel_id message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

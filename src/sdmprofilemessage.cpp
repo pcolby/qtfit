@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SdmProfileMessage::SdmProfileMessage() : FitDataMessage(new SdmProfileMessagePrivate(this))
+SdmProfileMessage::SdmProfileMessage() : AbstractDataMessage(new SdmProfileMessagePrivate(this))
 {
 
 }
@@ -236,7 +236,7 @@ void SdmProfileMessage::setOdometerRollover(const quint8 odometerRollover)
  * \param q Pointer to public implementaton.
  */
 SdmProfileMessagePrivate::SdmProfileMessagePrivate(SdmProfileMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , enabled(static_cast<bool>(-1))
   , sdmAntId(0)
@@ -297,7 +297,7 @@ bool SdmProfileMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown sdm_profile message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

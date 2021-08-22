@@ -25,13 +25,13 @@
 #ifndef QTFIT_MONITORINGINFOMESSAGE_P_H
 #define QTFIT_MONITORINGINFOMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MonitoringInfoMessage;
 
-class MonitoringInfoMessagePrivate : public FitDataMessagePrivate {
+class MonitoringInfoMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

@@ -25,13 +25,13 @@
 #ifndef QTFIT_EXDSCREENCONFIGURATIONMESSAGE_H
 #define QTFIT_EXDSCREENCONFIGURATIONMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ExdScreenConfigurationMessagePrivate;
 
-class QTFIT_EXPORT ExdScreenConfigurationMessage : public FitDataMessage {
+class QTFIT_EXPORT ExdScreenConfigurationMessage : public AbstractDataMessage {
 
 public:
     ExdScreenConfigurationMessage();

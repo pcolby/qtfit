@@ -25,13 +25,13 @@
 #ifndef QTFIT_MAGNETOMETERDATAMESSAGE_H
 #define QTFIT_MAGNETOMETERDATAMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MagnetometerDataMessagePrivate;
 
-class QTFIT_EXPORT MagnetometerDataMessage : public FitDataMessage {
+class QTFIT_EXPORT MagnetometerDataMessage : public AbstractDataMessage {
 
 public:
     MagnetometerDataMessage();

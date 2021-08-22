@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-MemoGlobMessage::MemoGlobMessage() : FitDataMessage(new MemoGlobMessagePrivate(this))
+MemoGlobMessage::MemoGlobMessage() : AbstractDataMessage(new MemoGlobMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void MemoGlobMessage::setMessageIndex(const MessageIndex messageIndex)
  * \param q Pointer to public implementaton.
  */
 MemoGlobMessagePrivate::MemoGlobMessagePrivate(MemoGlobMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , partIndex(0xFFFFFFFF)
   , memo(0xFF)
   , messageNumber(0xFFFF)
@@ -193,7 +193,7 @@ bool MemoGlobMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown memo_glob message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

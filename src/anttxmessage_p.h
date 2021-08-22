@@ -25,13 +25,13 @@
 #ifndef QTFIT_ANTTXMESSAGE_P_H
 #define QTFIT_ANTTXMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class AntTxMessage;
 
-class AntTxMessagePrivate : public FitDataMessagePrivate {
+class AntTxMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

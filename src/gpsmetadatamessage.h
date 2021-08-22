@@ -25,13 +25,13 @@
 #ifndef QTFIT_GPSMETADATAMESSAGE_H
 #define QTFIT_GPSMETADATAMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class GpsMetadataMessagePrivate;
 
-class QTFIT_EXPORT GpsMetadataMessage : public FitDataMessage {
+class QTFIT_EXPORT GpsMetadataMessage : public AbstractDataMessage {
 
 public:
     GpsMetadataMessage();

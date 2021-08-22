@@ -25,13 +25,13 @@
 #ifndef QTFIT_ACCELEROMETERDATAMESSAGE_H
 #define QTFIT_ACCELEROMETERDATAMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class AccelerometerDataMessagePrivate;
 
-class QTFIT_EXPORT AccelerometerDataMessage : public FitDataMessage {
+class QTFIT_EXPORT AccelerometerDataMessage : public AbstractDataMessage {
 
 public:
     AccelerometerDataMessage();

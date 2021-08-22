@@ -25,13 +25,13 @@
 #ifndef QTFIT_OBDIIDATAMESSAGE_P_H
 #define QTFIT_OBDIIDATAMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ObdiiDataMessage;
 
-class ObdiiDataMessagePrivate : public FitDataMessagePrivate {
+class ObdiiDataMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

@@ -25,13 +25,13 @@
 #ifndef QTFIT_SEGMENTIDMESSAGE_H
 #define QTFIT_SEGMENTIDMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class SegmentIdMessagePrivate;
 
-class QTFIT_EXPORT SegmentIdMessage : public FitDataMessage {
+class QTFIT_EXPORT SegmentIdMessage : public AbstractDataMessage {
 
 public:
     SegmentIdMessage();

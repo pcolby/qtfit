@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ExdDataFieldConfigurationMessage::ExdDataFieldConfigurationMessage() : FitDataMessage(new ExdDataFieldConfigurationMessagePrivate(this))
+ExdDataFieldConfigurationMessage::ExdDataFieldConfigurationMessage() : AbstractDataMessage(new ExdDataFieldConfigurationMessagePrivate(this))
 {
 
 }
@@ -194,7 +194,7 @@ void ExdDataFieldConfigurationMessage::setTitle(const QString title)
  * \param q Pointer to public implementaton.
  */
 ExdDataFieldConfigurationMessagePrivate::ExdDataFieldConfigurationMessagePrivate(ExdDataFieldConfigurationMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , screenIndex(0xFF)
   , conceptField(0xFF)
   , fieldId(0xFF)
@@ -244,7 +244,7 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown exd_data_field_configuration message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

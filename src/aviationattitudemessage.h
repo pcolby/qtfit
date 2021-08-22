@@ -25,13 +25,13 @@
 #ifndef QTFIT_AVIATIONATTITUDEMESSAGE_H
 #define QTFIT_AVIATIONATTITUDEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class AviationAttitudeMessagePrivate;
 
-class QTFIT_EXPORT AviationAttitudeMessage : public FitDataMessage {
+class QTFIT_EXPORT AviationAttitudeMessage : public AbstractDataMessage {
 
 public:
     AviationAttitudeMessage();

@@ -25,13 +25,13 @@
 #ifndef QTFIT_ANTRXMESSAGE_H
 #define QTFIT_ANTRXMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class AntRxMessagePrivate;
 
-class QTFIT_EXPORT AntRxMessage : public FitDataMessage {
+class QTFIT_EXPORT AntRxMessage : public AbstractDataMessage {
 
 public:
     AntRxMessage();

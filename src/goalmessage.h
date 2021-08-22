@@ -25,13 +25,13 @@
 #ifndef QTFIT_GOALMESSAGE_H
 #define QTFIT_GOALMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class GoalMessagePrivate;
 
-class QTFIT_EXPORT GoalMessage : public FitDataMessage {
+class QTFIT_EXPORT GoalMessage : public AbstractDataMessage {
 
 public:
     GoalMessage();

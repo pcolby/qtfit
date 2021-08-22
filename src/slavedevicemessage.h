@@ -25,13 +25,13 @@
 #ifndef QTFIT_SLAVEDEVICEMESSAGE_H
 #define QTFIT_SLAVEDEVICEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class SlaveDeviceMessagePrivate;
 
-class QTFIT_EXPORT SlaveDeviceMessage : public FitDataMessage {
+class QTFIT_EXPORT SlaveDeviceMessage : public AbstractDataMessage {
 
 public:
     SlaveDeviceMessage();

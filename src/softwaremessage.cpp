@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SoftwareMessage::SoftwareMessage() : FitDataMessage(new SoftwareMessagePrivate(this))
+SoftwareMessage::SoftwareMessage() : AbstractDataMessage(new SoftwareMessagePrivate(this))
 {
 
 }
@@ -131,7 +131,7 @@ void SoftwareMessage::setPartNumber(const QString partNumber)
  * \param q Pointer to public implementaton.
  */
 SoftwareMessagePrivate::SoftwareMessagePrivate(SoftwareMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , version(0xFFFF)
 {
@@ -166,7 +166,7 @@ bool SoftwareMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown software message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

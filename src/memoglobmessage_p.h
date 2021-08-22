@@ -25,13 +25,13 @@
 #ifndef QTFIT_MEMOGLOBMESSAGE_P_H
 #define QTFIT_MEMOGLOBMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MemoGlobMessage;
 
-class MemoGlobMessagePrivate : public FitDataMessagePrivate {
+class MemoGlobMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint32 partIndex;

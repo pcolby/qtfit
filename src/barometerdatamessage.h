@@ -25,13 +25,13 @@
 #ifndef QTFIT_BAROMETERDATAMESSAGE_H
 #define QTFIT_BAROMETERDATAMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class BarometerDataMessagePrivate;
 
-class QTFIT_EXPORT BarometerDataMessage : public FitDataMessage {
+class QTFIT_EXPORT BarometerDataMessage : public AbstractDataMessage {
 
 public:
     BarometerDataMessage();

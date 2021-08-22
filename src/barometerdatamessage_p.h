@@ -25,13 +25,13 @@
 #ifndef QTFIT_BAROMETERDATAMESSAGE_P_H
 #define QTFIT_BAROMETERDATAMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class BarometerDataMessage;
 
-class BarometerDataMessagePrivate : public FitDataMessagePrivate {
+class BarometerDataMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

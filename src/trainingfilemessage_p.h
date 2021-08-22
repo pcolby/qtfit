@@ -25,13 +25,13 @@
 #ifndef QTFIT_TRAININGFILEMESSAGE_P_H
 #define QTFIT_TRAININGFILEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class TrainingFileMessage;
 
-class TrainingFileMessagePrivate : public FitDataMessagePrivate {
+class TrainingFileMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

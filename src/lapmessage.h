@@ -25,13 +25,13 @@
 #ifndef QTFIT_LAPMESSAGE_H
 #define QTFIT_LAPMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class LapMessagePrivate;
 
-class QTFIT_EXPORT LapMessage : public FitDataMessage {
+class QTFIT_EXPORT LapMessage : public AbstractDataMessage {
 
 public:
     LapMessage();

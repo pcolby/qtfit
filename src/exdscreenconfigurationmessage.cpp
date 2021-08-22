@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ExdScreenConfigurationMessage::ExdScreenConfigurationMessage() : FitDataMessage(new ExdScreenConfigurationMessagePrivate(this))
+ExdScreenConfigurationMessage::ExdScreenConfigurationMessage() : AbstractDataMessage(new ExdScreenConfigurationMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void ExdScreenConfigurationMessage::setScreenEnabled(const bool screenEnabled)
  * \param q Pointer to public implementaton.
  */
 ExdScreenConfigurationMessagePrivate::ExdScreenConfigurationMessagePrivate(ExdScreenConfigurationMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , screenIndex(0xFF)
   , fieldCount(0xFF)
   , layout(static_cast<ExdLayout>(-1))
@@ -193,7 +193,7 @@ bool ExdScreenConfigurationMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown exd_screen_configuration message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

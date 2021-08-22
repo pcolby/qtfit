@@ -25,13 +25,13 @@
 #ifndef QTFIT_BLOODPRESSUREMESSAGE_H
 #define QTFIT_BLOODPRESSUREMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class BloodPressureMessagePrivate;
 
-class QTFIT_EXPORT BloodPressureMessage : public FitDataMessage {
+class QTFIT_EXPORT BloodPressureMessage : public AbstractDataMessage {
 
 public:
     BloodPressureMessage();

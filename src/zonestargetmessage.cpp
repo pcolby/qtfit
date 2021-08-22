@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ZonesTargetMessage::ZonesTargetMessage() : FitDataMessage(new ZonesTargetMessagePrivate(this))
+ZonesTargetMessage::ZonesTargetMessage() : AbstractDataMessage(new ZonesTargetMessagePrivate(this))
 {
 
 }
@@ -173,7 +173,7 @@ void ZonesTargetMessage::setPwrCalcType(const PwrZoneCalc pwrCalcType)
  * \param q Pointer to public implementaton.
  */
 ZonesTargetMessagePrivate::ZonesTargetMessagePrivate(ZonesTargetMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , maxHeartRate(0xFF)
   , thresholdHeartRate(0xFF)
   , functionalThresholdPower(0xFFFF)
@@ -219,7 +219,7 @@ bool ZonesTargetMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown zones_target message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

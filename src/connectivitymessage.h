@@ -25,13 +25,13 @@
 #ifndef QTFIT_CONNECTIVITYMESSAGE_H
 #define QTFIT_CONNECTIVITYMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ConnectivityMessagePrivate;
 
-class QTFIT_EXPORT ConnectivityMessage : public FitDataMessage {
+class QTFIT_EXPORT ConnectivityMessage : public AbstractDataMessage {
 
 public:
     ConnectivityMessage();

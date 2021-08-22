@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-HrMessage::HrMessage() : FitDataMessage(new HrMessagePrivate(this))
+HrMessage::HrMessage() : AbstractDataMessage(new HrMessagePrivate(this))
 {
 
 }
@@ -194,7 +194,7 @@ void HrMessage::setEventTimestamp12(const quint8 eventTimestamp12)
  * \param q Pointer to public implementaton.
  */
 HrMessagePrivate::HrMessagePrivate(HrMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , fractionalTimestamp(0xFFFF)
   , time256(0xFF)
@@ -245,7 +245,7 @@ bool HrMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown hr message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

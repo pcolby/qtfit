@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-HrmProfileMessage::HrmProfileMessage() : FitDataMessage(new HrmProfileMessagePrivate(this))
+HrmProfileMessage::HrmProfileMessage() : AbstractDataMessage(new HrmProfileMessagePrivate(this))
 {
 
 }
@@ -173,7 +173,7 @@ void HrmProfileMessage::setHrmAntIdTransType(const quint8z hrmAntIdTransType)
  * \param q Pointer to public implementaton.
  */
 HrmProfileMessagePrivate::HrmProfileMessagePrivate(HrmProfileMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , enabled(static_cast<bool>(-1))
   , hrmAntId(0)
@@ -219,7 +219,7 @@ bool HrmProfileMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown hrm_profile message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

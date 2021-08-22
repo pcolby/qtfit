@@ -25,13 +25,13 @@
 #ifndef QTFIT_EVENTMESSAGE_P_H
 #define QTFIT_EVENTMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class EventMessage;
 
-class EventMessagePrivate : public FitDataMessagePrivate {
+class EventMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

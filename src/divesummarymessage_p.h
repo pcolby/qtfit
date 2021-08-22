@@ -25,13 +25,13 @@
 #ifndef QTFIT_DIVESUMMARYMESSAGE_P_H
 #define QTFIT_DIVESUMMARYMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DiveSummaryMessage;
 
-class DiveSummaryMessagePrivate : public FitDataMessagePrivate {
+class DiveSummaryMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

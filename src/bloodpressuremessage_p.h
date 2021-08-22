@@ -25,13 +25,13 @@
 #ifndef QTFIT_BLOODPRESSUREMESSAGE_P_H
 #define QTFIT_BLOODPRESSUREMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class BloodPressureMessage;
 
-class BloodPressureMessagePrivate : public FitDataMessagePrivate {
+class BloodPressureMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

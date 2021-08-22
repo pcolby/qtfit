@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-LapMessage::LapMessage() : FitDataMessage(new LapMessagePrivate(this))
+LapMessage::LapMessage() : AbstractDataMessage(new LapMessagePrivate(this))
 {
 
 }
@@ -2504,7 +2504,7 @@ void LapMessage::setMaxCoreTemperature(const quint16 maxCoreTemperature)
  * \param q Pointer to public implementaton.
  */
 LapMessagePrivate::LapMessagePrivate(LapMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , timestamp(static_cast<DateTime>(-1))
   , event(static_cast<Event>(-1))
@@ -3141,7 +3141,7 @@ bool LapMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown lap message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

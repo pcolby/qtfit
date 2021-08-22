@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-HrvMessage::HrvMessage() : FitDataMessage(new HrvMessagePrivate(this))
+HrvMessage::HrvMessage() : AbstractDataMessage(new HrvMessagePrivate(this))
 {
 
 }
@@ -89,7 +89,7 @@ void HrvMessage::setTime(const quint16 time)
  * \param q Pointer to public implementaton.
  */
 HrvMessagePrivate::HrvMessagePrivate(HrvMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , time(0xFFFF)
 {
     globalMessageNumber = MesgNum::Hrv;
@@ -115,7 +115,7 @@ bool HrvMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown hrv message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

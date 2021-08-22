@@ -25,13 +25,13 @@
 #ifndef QTFIT_TOTALSMESSAGE_H
 #define QTFIT_TOTALSMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class TotalsMessagePrivate;
 
-class QTFIT_EXPORT TotalsMessage : public FitDataMessage {
+class QTFIT_EXPORT TotalsMessage : public AbstractDataMessage {
 
 public:
     TotalsMessage();

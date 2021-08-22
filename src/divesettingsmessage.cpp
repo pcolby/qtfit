@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-DiveSettingsMessage::DiveSettingsMessage() : FitDataMessage(new DiveSettingsMessagePrivate(this))
+DiveSettingsMessage::DiveSettingsMessage() : AbstractDataMessage(new DiveSettingsMessagePrivate(this))
 {
 
 }
@@ -530,7 +530,7 @@ void DiveSettingsMessage::setHeartRateSource(const quint8 heartRateSource)
  * \param q Pointer to public implementaton.
  */
 DiveSettingsMessagePrivate::DiveSettingsMessagePrivate(DiveSettingsMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , model(static_cast<TissueModelType>(-1))
   , gfLow(0xFF)
@@ -678,7 +678,7 @@ bool DiveSettingsMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown dive_settings message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

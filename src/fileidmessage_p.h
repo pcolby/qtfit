@@ -25,13 +25,13 @@
 #ifndef QTFIT_FILEIDMESSAGE_P_H
 #define QTFIT_FILEIDMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class FileIdMessage;
 
-class FileIdMessagePrivate : public FitDataMessagePrivate {
+class FileIdMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     File type;

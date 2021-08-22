@@ -17,8 +17,8 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef FITDATAMESSAGE_H
-#define FITDATAMESSAGE_H
+#ifndef QTFIT_ABSTRACTDATAMESSAGE_H
+#define QTFIT_ABSTRACTDATAMESSAGE_H
 
 #include "QtFit_global.h"
 #include "types.h"
@@ -26,32 +26,32 @@
 QTFIT_BEGIN_NAMESPACE
 
 struct DataDefinition;
-class FitDataMessagePrivate;
+class AbstractDataMessagePrivate;
 
-class QTFIT_EXPORT FitDataMessage {
+class QTFIT_EXPORT AbstractDataMessage {
 
 public:
-    FitDataMessage();
-    FitDataMessage(const FitDataMessage &other);
-    FitDataMessage &operator=(const FitDataMessage &other);
-    ~FitDataMessage();
+    AbstractDataMessage();
+    AbstractDataMessage(const AbstractDataMessage &other);
+    AbstractDataMessage &operator=(const AbstractDataMessage &other);
+    ~AbstractDataMessage();
     MesgNum globalMessageNumber() const;
     bool isNull() const;
 //    bool isValid() const; ///< @todo?
 
-    static FitDataMessage * fromData(const DataDefinition * const defn, const QByteArray &record);
+    static AbstractDataMessage * fromData(const DataDefinition * const defn, const QByteArray &record);
 
 protected:
     /// @cond internal
-    FitDataMessagePrivate * const d_ptr; ///< Internal d-pointer.
-    explicit FitDataMessage(FitDataMessagePrivate * const d);
+    AbstractDataMessagePrivate * const d_ptr; ///< Internal d-pointer.
+    explicit AbstractDataMessage(AbstractDataMessagePrivate * const d);
     /// @endcond
 
 private:
-    Q_DECLARE_PRIVATE(FitDataMessage)
+    Q_DECLARE_PRIVATE(AbstractDataMessage)
 
 };
 
 QTFIT_END_NAMESPACE
 
-#endif // FITDATAMESSAGE_H
+#endif // QTFIT_ABSTRACTDATAMESSAGE_H

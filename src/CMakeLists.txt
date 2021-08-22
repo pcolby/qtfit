@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 
 add_library(QtFit SHARED
+  abstractdatamessage.cpp
+  abstractdatamessage.h
+  abstractdatamessage_p.h
   fileidmessage.cpp
   fileidmessage.h
   fileidmessage_p.h
-  fitdatamessage.cpp
-  fitdatamessage.h
-  fitdatamessage_p.h
   fitdatamessages.cpp
   fitstreamreader.cpp
   fitstreamreader.h

@@ -17,25 +17,25 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "fitdatamessage.h"
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage.h"
+#include "abstractdatamessage_p.h"
 
 #include <QDebug>
 
 QTFIT_BEGIN_NAMESPACE
 
 /*!
- * \class FitDataMessage
+ * \class AbstractDataMessage
  *
- * The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.
+ * The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.
  */
 
 /*!
- * Constructs a invalid, null FitDataMessage object.
+ * Constructs a invalid, null AbstractDataMessage object.
  *
  * That is, one where isNull returns \c true, and isValid returns \c false.
  */
-FitDataMessage::FitDataMessage() : d_ptr(new FitDataMessagePrivate(this))
+AbstractDataMessage::AbstractDataMessage() : d_ptr(new AbstractDataMessagePrivate(this))
 {
 
 }
@@ -43,46 +43,46 @@ FitDataMessage::FitDataMessage() : d_ptr(new FitDataMessagePrivate(this))
 /*!
  * \internal
  *
- * Constructs a FitDataMessage which private implementation \a q.
+ * Constructs a AbstractDataMessage which private implementation \a q.
  *
  * \param q Pointer to private implementation.
  */
-FitDataMessage::FitDataMessage(FitDataMessagePrivate * const d) : d_ptr(d)
+AbstractDataMessage::AbstractDataMessage(AbstractDataMessagePrivate * const d) : d_ptr(d)
 {
 
 }
 
 /*!
- * Copies a FitDataMessage.
+ * Copies a AbstractDataMessage.
  *
  * \param other The data message to copy.
  */
-FitDataMessage::FitDataMessage(const FitDataMessage &other) : d_ptr(new FitDataMessagePrivate(this))
+AbstractDataMessage::AbstractDataMessage(const AbstractDataMessage &other) : d_ptr(new AbstractDataMessagePrivate(this))
 {
-    Q_D(FitDataMessage);
+    Q_D(AbstractDataMessage);
     d->globalMessageNumber = other.globalMessageNumber();
     d->isNull = other.isNull();
 }
 
 /*!
- * Assigns a FitDataMessage to this one.
+ * Assigns a AbstractDataMessage to this one.
  *
  * \param other The data message from which to assign.
  *
  * \return a reference to self.
  */
-FitDataMessage &FitDataMessage::operator=(const FitDataMessage &other)
+AbstractDataMessage &AbstractDataMessage::operator=(const AbstractDataMessage &other)
 {
-    Q_D(FitDataMessage);
+    Q_D(AbstractDataMessage);
     d->globalMessageNumber = other.globalMessageNumber();
     d->isNull = other.isNull();
     return *this;
 }
 
 /*!
- * Destroys the FitDataMessage object.
+ * Destroys the AbstractDataMessage object.
  */
-FitDataMessage::~FitDataMessage()
+AbstractDataMessage::~AbstractDataMessage()
 {
     delete d_ptr;
 }
@@ -92,9 +92,9 @@ FitDataMessage::~FitDataMessage()
  *
  * \return the global message number.
  */
-MesgNum FitDataMessage::globalMessageNumber() const
+MesgNum AbstractDataMessage::globalMessageNumber() const
 {
-    Q_D(const FitDataMessage);
+    Q_D(const AbstractDataMessage);
     return d->globalMessageNumber;
 }
 
@@ -102,30 +102,30 @@ MesgNum FitDataMessage::globalMessageNumber() const
  * Returns \c true if this is not a valid data message, otherwise \c false.
  * \return \c true if this is not a valid data message, otherwise \c false.
  */
-bool FitDataMessage::isNull() const
+bool AbstractDataMessage::isNull() const
 {
-    Q_D(const FitDataMessage);
+    Q_D(const AbstractDataMessage);
     return d->isNull;
 }
 
 /*!
  * \internal
  *
- * \class FitDataMessagePrivate
+ * \class AbstractDataMessagePrivate
  *
- * The FitDataMessagePrivate class provides private implementation for FitDataMessage.
+ * The AbstractDataMessagePrivate class provides private implementation for AbstractDataMessage.
  *
- * \sa FitDataMessage
+ * \sa AbstractDataMessage
  */
 
 /*!
  * \internal
  *
- * Constructs a FitDataMessagePrivate object with public implementation \a q.
+ * Constructs a AbstractDataMessagePrivate object with public implementation \a q.
  *
  * \param q Pointer to public implementation.
  */
-FitDataMessagePrivate::FitDataMessagePrivate(FitDataMessage * const q)
+AbstractDataMessagePrivate::AbstractDataMessagePrivate(AbstractDataMessage * const q)
     : globalMessageNumber(static_cast<MesgNum>(0xFFFF)), isNull(true), q_ptr(q)
 {
 
@@ -134,9 +134,9 @@ FitDataMessagePrivate::FitDataMessagePrivate(FitDataMessage * const q)
 /*!
  * \internal
  *
- * Destroys the FitDataMessagePrivate object.
+ * Destroys the AbstractDataMessagePrivate object.
  */
-FitDataMessagePrivate::~FitDataMessagePrivate()
+AbstractDataMessagePrivate::~AbstractDataMessagePrivate()
 {
 
 }
@@ -157,7 +157,7 @@ FitDataMessagePrivate::~FitDataMessagePrivate()
  *
  * \sa setField
  */
-bool FitDataMessagePrivate::setFields(const DataDefinition * const defn, const QByteArray &record)
+bool AbstractDataMessagePrivate::setFields(const DataDefinition * const defn, const QByteArray &record)
 {
     Q_ASSERT(defn->globalMessageNumber == this->globalMessageNumber);
     int dataOffset=0; // Next field's offset within dataRecord.
@@ -185,7 +185,7 @@ bool FitDataMessagePrivate::setFields(const DataDefinition * const defn, const Q
  *
  * \return \c true if the field was set, or skipped; \c false if the field was corrupt or invalid.
  */
-bool FitDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
+bool AbstractDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
                                      const FitBaseType baseType, const bool bigEndian)
 {
     Q_UNUSED(bigEndian)
@@ -242,7 +242,7 @@ inline bool verifyDataSieze(const QByteArray &data, const int expectedSize, cons
  *
  * \return \c true if the size and type match, \c false otherwise.
  */
-bool FitDataMessagePrivate::verify(const QByteArray &data, const FitBaseType actualType,
+bool AbstractDataMessagePrivate::verify(const QByteArray &data, const FitBaseType actualType,
                                    const int expectedSize, const FitBaseType expectedType,
                                    const char *messageFieldName)
 {

@@ -25,13 +25,13 @@
 #ifndef QTFIT_WEIGHTSCALEMESSAGE_P_H
 #define QTFIT_WEIGHTSCALEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class WeightScaleMessage;
 
-class WeightScaleMessagePrivate : public FitDataMessagePrivate {
+class WeightScaleMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

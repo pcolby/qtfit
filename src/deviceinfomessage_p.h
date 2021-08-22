@@ -25,13 +25,13 @@
 #ifndef QTFIT_DEVICEINFOMESSAGE_P_H
 #define QTFIT_DEVICEINFOMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DeviceInfoMessage;
 
-class DeviceInfoMessagePrivate : public FitDataMessagePrivate {
+class DeviceInfoMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

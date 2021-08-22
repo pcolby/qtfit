@@ -25,13 +25,13 @@
 #ifndef QTFIT_DEVELOPERDATAIDMESSAGE_P_H
 #define QTFIT_DEVELOPERDATAIDMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DeveloperDataIdMessage;
 
-class DeveloperDataIdMessagePrivate : public FitDataMessagePrivate {
+class DeveloperDataIdMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint8 developerId;

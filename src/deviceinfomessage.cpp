@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-DeviceInfoMessage::DeviceInfoMessage() : FitDataMessage(new DeviceInfoMessagePrivate(this))
+DeviceInfoMessage::DeviceInfoMessage() : AbstractDataMessage(new DeviceInfoMessagePrivate(this))
 {
 
 }
@@ -446,7 +446,7 @@ void DeviceInfoMessage::setProductName(const QString productName)
  * \param q Pointer to public implementaton.
  */
 DeviceInfoMessagePrivate::DeviceInfoMessagePrivate(DeviceInfoMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , deviceIndex(static_cast<DeviceIndex>(-1))
   , deviceType(0xFF)
@@ -555,7 +555,7 @@ bool DeviceInfoMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown device_info message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_CLIMBPROMESSAGE_P_H
 #define QTFIT_CLIMBPROMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ClimbProMessage;
 
-class ClimbProMessagePrivate : public FitDataMessagePrivate {
+class ClimbProMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

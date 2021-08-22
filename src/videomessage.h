@@ -25,13 +25,13 @@
 #ifndef QTFIT_VIDEOMESSAGE_H
 #define QTFIT_VIDEOMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class VideoMessagePrivate;
 
-class QTFIT_EXPORT VideoMessage : public FitDataMessage {
+class QTFIT_EXPORT VideoMessage : public AbstractDataMessage {
 
 public:
     VideoMessage();

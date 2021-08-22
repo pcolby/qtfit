@@ -25,13 +25,13 @@
 #ifndef QTFIT_THREEDSENSORCALIBRATIONMESSAGE_H
 #define QTFIT_THREEDSENSORCALIBRATIONMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ThreeDSensorCalibrationMessagePrivate;
 
-class QTFIT_EXPORT ThreeDSensorCalibrationMessage : public FitDataMessage {
+class QTFIT_EXPORT ThreeDSensorCalibrationMessage : public AbstractDataMessage {
 
 public:
     ThreeDSensorCalibrationMessage();

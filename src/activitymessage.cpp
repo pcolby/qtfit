@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ActivityMessage::ActivityMessage() : FitDataMessage(new ActivityMessagePrivate(this))
+ActivityMessage::ActivityMessage() : AbstractDataMessage(new ActivityMessagePrivate(this))
 {
 
 }
@@ -236,7 +236,7 @@ void ActivityMessage::setEventGroup(const quint8 eventGroup)
  * \param q Pointer to public implementaton.
  */
 ActivityMessagePrivate::ActivityMessagePrivate(ActivityMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , totalTimerTime(0xFFFFFFFF)
   , numSessions(0xFFFF)
@@ -297,7 +297,7 @@ bool ActivityMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown activity message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

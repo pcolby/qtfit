@@ -25,13 +25,13 @@
 #ifndef QTFIT_DIVEGASMESSAGE_P_H
 #define QTFIT_DIVEGASMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class DiveGasMessage;
 
-class DiveGasMessagePrivate : public FitDataMessagePrivate {
+class DiveGasMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

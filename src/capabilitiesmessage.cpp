@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-CapabilitiesMessage::CapabilitiesMessage() : FitDataMessage(new CapabilitiesMessagePrivate(this))
+CapabilitiesMessage::CapabilitiesMessage() : AbstractDataMessage(new CapabilitiesMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void CapabilitiesMessage::setConnectivitySupported(const ConnectivityCapabilitie
  * \param q Pointer to public implementaton.
  */
 CapabilitiesMessagePrivate::CapabilitiesMessagePrivate(CapabilitiesMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , languages(static_cast<quint8z>(-1))
   , sports(static_cast<SportBits0>(-1))
   , workoutsSupported(static_cast<WorkoutCapabilities>(-1))
@@ -193,7 +193,7 @@ bool CapabilitiesMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown capabilities message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

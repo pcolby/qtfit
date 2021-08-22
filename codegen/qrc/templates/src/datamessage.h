@@ -3,13 +3,13 @@
 #ifndef {{ProjectName|upper}}_{{ClassName|upper}}_H
 #define {{ProjectName|upper}}_{{ClassName|upper}}_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
 class {{ClassName}}Private;
 
-class {{ProjectName|upper}}_EXPORT {{ClassName}} : public FitDataMessage {
+class {{ProjectName|upper}}_EXPORT {{ClassName}} : public AbstractDataMessage {
 
 public:
     {{ClassName}}();

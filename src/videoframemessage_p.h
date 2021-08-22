@@ -25,13 +25,13 @@
 #ifndef QTFIT_VIDEOFRAMEMESSAGE_P_H
 #define QTFIT_VIDEOFRAMEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class VideoFrameMessage;
 
-class VideoFrameMessagePrivate : public FitDataMessagePrivate {
+class VideoFrameMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

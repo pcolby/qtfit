@@ -25,13 +25,13 @@
 #ifndef QTFIT_SPEEDZONEMESSAGE_P_H
 #define QTFIT_SPEEDZONEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class SpeedZoneMessage;
 
-class SpeedZoneMessagePrivate : public FitDataMessagePrivate {
+class SpeedZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

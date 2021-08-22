@@ -25,13 +25,13 @@
 #ifndef QTFIT_EXDDATAFIELDCONFIGURATIONMESSAGE_H
 #define QTFIT_EXDDATAFIELDCONFIGURATIONMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ExdDataFieldConfigurationMessagePrivate;
 
-class QTFIT_EXPORT ExdDataFieldConfigurationMessage : public FitDataMessage {
+class QTFIT_EXPORT ExdDataFieldConfigurationMessage : public AbstractDataMessage {
 
 public:
     ExdDataFieldConfigurationMessage();

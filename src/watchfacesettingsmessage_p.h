@@ -25,13 +25,13 @@
 #ifndef QTFIT_WATCHFACESETTINGSMESSAGE_P_H
 #define QTFIT_WATCHFACESETTINGSMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class WatchfaceSettingsMessage;
 
-class WatchfaceSettingsMessagePrivate : public FitDataMessagePrivate {
+class WatchfaceSettingsMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

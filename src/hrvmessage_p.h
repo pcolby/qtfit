@@ -25,13 +25,13 @@
 #ifndef QTFIT_HRVMESSAGE_P_H
 #define QTFIT_HRVMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class HrvMessage;
 
-class HrvMessagePrivate : public FitDataMessagePrivate {
+class HrvMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint16 time;

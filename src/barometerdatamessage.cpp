@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-BarometerDataMessage::BarometerDataMessage() : FitDataMessage(new BarometerDataMessagePrivate(this))
+BarometerDataMessage::BarometerDataMessage() : AbstractDataMessage(new BarometerDataMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void BarometerDataMessage::setBaroPres(const quint32 baroPres)
  * \param q Pointer to public implementaton.
  */
 BarometerDataMessagePrivate::BarometerDataMessagePrivate(BarometerDataMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
   , sampleTimeOffset(0xFFFF)
@@ -193,7 +193,7 @@ bool BarometerDataMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown barometer_data message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

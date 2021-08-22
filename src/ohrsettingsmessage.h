@@ -25,13 +25,13 @@
 #ifndef QTFIT_OHRSETTINGSMESSAGE_H
 #define QTFIT_OHRSETTINGSMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class OhrSettingsMessagePrivate;
 
-class QTFIT_EXPORT OhrSettingsMessage : public FitDataMessage {
+class QTFIT_EXPORT OhrSettingsMessage : public AbstractDataMessage {
 
 public:
     OhrSettingsMessage();

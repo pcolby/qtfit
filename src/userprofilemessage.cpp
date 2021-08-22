@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-UserProfileMessage::UserProfileMessage() : FitDataMessage(new UserProfileMessagePrivate(this))
+UserProfileMessage::UserProfileMessage() : AbstractDataMessage(new UserProfileMessagePrivate(this))
 {
 
 }
@@ -677,7 +677,7 @@ void UserProfileMessage::setDiveCount(const quint32 diveCount)
  * \param q Pointer to public implementaton.
  */
 UserProfileMessagePrivate::UserProfileMessagePrivate(UserProfileMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , gender(static_cast<Gender>(-1))
   , age(0xFF)
@@ -842,7 +842,7 @@ bool UserProfileMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown user_profile message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-StressLevelMessage::StressLevelMessage() : FitDataMessage(new StressLevelMessagePrivate(this))
+StressLevelMessage::StressLevelMessage() : AbstractDataMessage(new StressLevelMessagePrivate(this))
 {
 
 }
@@ -110,7 +110,7 @@ void StressLevelMessage::setStressLevelTime(const DateTime stressLevelTime)
  * \param q Pointer to public implementaton.
  */
 StressLevelMessagePrivate::StressLevelMessagePrivate(StressLevelMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , stressLevelValue(0x7FFF)
   , stressLevelTime(static_cast<DateTime>(-1))
 {
@@ -141,7 +141,7 @@ bool StressLevelMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown stress_level message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

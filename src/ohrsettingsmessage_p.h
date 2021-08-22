@@ -25,13 +25,13 @@
 #ifndef QTFIT_OHRSETTINGSMESSAGE_P_H
 #define QTFIT_OHRSETTINGSMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class OhrSettingsMessage;
 
-class OhrSettingsMessagePrivate : public FitDataMessagePrivate {
+class OhrSettingsMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

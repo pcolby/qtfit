@@ -25,13 +25,13 @@
 #ifndef QTFIT_FILECREATORMESSAGE_P_H
 #define QTFIT_FILECREATORMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class FileCreatorMessage;
 
-class FileCreatorMessagePrivate : public FitDataMessagePrivate {
+class FileCreatorMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint16 softwareVersion;

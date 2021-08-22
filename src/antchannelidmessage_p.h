@@ -25,13 +25,13 @@
 #ifndef QTFIT_ANTCHANNELIDMESSAGE_P_H
 #define QTFIT_ANTCHANNELIDMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class AntChannelIdMessage;
 
-class AntChannelIdMessagePrivate : public FitDataMessagePrivate {
+class AntChannelIdMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint8 channelNumber;

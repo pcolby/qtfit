@@ -17,8 +17,8 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef FITDATAMESSAGE_P_H
-#define FITDATAMESSAGE_P_H
+#ifndef QTFIT_ABSTRACTDATAMESSAGE_P_H
+#define QTFIT_ABSTRACTDATAMESSAGE_P_H
 
 #include "QtFit_global.h"
 #include "types.h"
@@ -26,22 +26,22 @@
 
 QTFIT_BEGIN_NAMESPACE
 
-class FitDataMessage;
+class AbstractDataMessage;
 
-class FitDataMessagePrivate {
+class AbstractDataMessagePrivate {
 
 public:
     MesgNum globalMessageNumber;
     bool isNull;
 
-    FitDataMessagePrivate() = delete;
-    explicit FitDataMessagePrivate(FitDataMessage * const q);
-    virtual ~FitDataMessagePrivate();
+    AbstractDataMessagePrivate() = delete;
+    explicit AbstractDataMessagePrivate(AbstractDataMessage * const q);
+    virtual ~AbstractDataMessagePrivate();
 
     bool setFields(const DataDefinition * const defn, const QByteArray &record);
 
 protected:
-    FitDataMessage * const q_ptr; ///< Internal q-pointer.
+    AbstractDataMessage * const q_ptr; ///< Internal q-pointer.
 
     virtual bool setField(const int fieldId, const QByteArray &data,
                           const FitBaseType baseType, const bool bigEndian);
@@ -50,11 +50,11 @@ protected:
                        const FitBaseType expectedType, const char *messageFieldName);
 
 private:
-    Q_DECLARE_PUBLIC(FitDataMessage)
-    Q_DISABLE_COPY(FitDataMessagePrivate)
+    Q_DECLARE_PUBLIC(AbstractDataMessage)
+    Q_DISABLE_COPY(AbstractDataMessagePrivate)
 
 };
 
 QTFIT_END_NAMESPACE
 
-#endif // FITDATAMESSAGE_P_H
+#endif // QTFIT_ABSTRACTDATAMESSAGE_P_H

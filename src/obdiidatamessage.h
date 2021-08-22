@@ -25,13 +25,13 @@
 #ifndef QTFIT_OBDIIDATAMESSAGE_H
 #define QTFIT_OBDIIDATAMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ObdiiDataMessagePrivate;
 
-class QTFIT_EXPORT ObdiiDataMessage : public FitDataMessage {
+class QTFIT_EXPORT ObdiiDataMessage : public AbstractDataMessage {
 
 public:
     ObdiiDataMessage();

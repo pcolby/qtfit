@@ -25,13 +25,13 @@
 #ifndef QTFIT_HRZONEMESSAGE_H
 #define QTFIT_HRZONEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class HrZoneMessagePrivate;
 
-class QTFIT_EXPORT HrZoneMessage : public FitDataMessage {
+class QTFIT_EXPORT HrZoneMessage : public AbstractDataMessage {
 
 public:
     HrZoneMessage();

@@ -3,13 +3,13 @@
 #ifndef {{ProjectName|upper}}_{{ClassName|upper}}_P_H
 #define {{ProjectName|upper}}_{{ClassName|upper}}_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
 class {{ClassName}};
 
-class {{ClassName}}Private : public FitDataMessagePrivate {
+class {{ClassName}}Private : public AbstractDataMessagePrivate {
 
 public:
 {% for field in fields %}

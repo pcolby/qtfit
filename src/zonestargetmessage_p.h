@@ -25,13 +25,13 @@
 #ifndef QTFIT_ZONESTARGETMESSAGE_P_H
 #define QTFIT_ZONESTARGETMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ZonesTargetMessage;
 
-class ZonesTargetMessagePrivate : public FitDataMessagePrivate {
+class ZonesTargetMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint8 maxHeartRate;

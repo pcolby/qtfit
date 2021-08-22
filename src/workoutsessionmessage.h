@@ -25,13 +25,13 @@
 #ifndef QTFIT_WORKOUTSESSIONMESSAGE_H
 #define QTFIT_WORKOUTSESSIONMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class WorkoutSessionMessagePrivate;
 
-class QTFIT_EXPORT WorkoutSessionMessage : public FitDataMessage {
+class QTFIT_EXPORT WorkoutSessionMessage : public AbstractDataMessage {
 
 public:
     WorkoutSessionMessage();

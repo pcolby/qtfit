@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-WatchfaceSettingsMessage::WatchfaceSettingsMessage() : FitDataMessage(new WatchfaceSettingsMessagePrivate(this))
+WatchfaceSettingsMessage::WatchfaceSettingsMessage() : AbstractDataMessage(new WatchfaceSettingsMessagePrivate(this))
 {
 
 }
@@ -131,7 +131,7 @@ void WatchfaceSettingsMessage::setLayout(const quint8 layout)
  * \param q Pointer to public implementaton.
  */
 WatchfaceSettingsMessagePrivate::WatchfaceSettingsMessagePrivate(WatchfaceSettingsMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , mode(static_cast<WatchfaceMode>(-1))
   , layout(0xFF)
@@ -167,7 +167,7 @@ bool WatchfaceSettingsMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown watchface_settings message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

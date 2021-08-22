@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-MetZoneMessage::MetZoneMessage() : FitDataMessage(new MetZoneMessagePrivate(this))
+MetZoneMessage::MetZoneMessage() : AbstractDataMessage(new MetZoneMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void MetZoneMessage::setFatCalories(const quint8 fatCalories)
  * \param q Pointer to public implementaton.
  */
 MetZoneMessagePrivate::MetZoneMessagePrivate(MetZoneMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , highBpm(0xFF)
   , calories(0xFFFF)
@@ -193,7 +193,7 @@ bool MetZoneMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown met_zone message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

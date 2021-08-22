@@ -25,13 +25,13 @@
 #ifndef QTFIT_CADENCEZONEMESSAGE_P_H
 #define QTFIT_CADENCEZONEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class CadenceZoneMessage;
 
-class CadenceZoneMessagePrivate : public FitDataMessagePrivate {
+class CadenceZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

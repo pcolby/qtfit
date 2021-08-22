@@ -25,13 +25,13 @@
 #ifndef QTFIT_WEATHERCONDITIONSMESSAGE_H
 #define QTFIT_WEATHERCONDITIONSMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class WeatherConditionsMessagePrivate;
 
-class QTFIT_EXPORT WeatherConditionsMessage : public FitDataMessage {
+class QTFIT_EXPORT WeatherConditionsMessage : public AbstractDataMessage {
 
 public:
     WeatherConditionsMessage();

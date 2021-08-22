@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SegmentPointMessage::SegmentPointMessage() : FitDataMessage(new SegmentPointMessagePrivate(this))
+SegmentPointMessage::SegmentPointMessage() : AbstractDataMessage(new SegmentPointMessagePrivate(this))
 {
 
 }
@@ -194,7 +194,7 @@ void SegmentPointMessage::setLeaderTime(const quint32 leaderTime)
  * \param q Pointer to public implementaton.
  */
 SegmentPointMessagePrivate::SegmentPointMessagePrivate(SegmentPointMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , positionLat(0x7FFFFFFF)
   , positionLong(0x7FFFFFFF)
@@ -245,7 +245,7 @@ bool SegmentPointMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown segment_point message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

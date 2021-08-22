@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-GoalMessage::GoalMessage() : FitDataMessage(new GoalMessagePrivate(this))
+GoalMessage::GoalMessage() : AbstractDataMessage(new GoalMessagePrivate(this))
 {
 
 }
@@ -341,7 +341,7 @@ void GoalMessage::setSource(const GoalSource source)
  * \param q Pointer to public implementaton.
  */
 GoalMessagePrivate::GoalMessagePrivate(GoalMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , sport(static_cast<Sport>(-1))
   , subSport(static_cast<SubSport>(-1))
@@ -427,7 +427,7 @@ bool GoalMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown goal message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

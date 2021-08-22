@@ -25,13 +25,13 @@
 #ifndef QTFIT_MEMOGLOBMESSAGE_H
 #define QTFIT_MEMOGLOBMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MemoGlobMessagePrivate;
 
-class QTFIT_EXPORT MemoGlobMessage : public FitDataMessage {
+class QTFIT_EXPORT MemoGlobMessage : public AbstractDataMessage {
 
 public:
     MemoGlobMessage();

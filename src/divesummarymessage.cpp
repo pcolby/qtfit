@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-DiveSummaryMessage::DiveSummaryMessage() : FitDataMessage(new DiveSummaryMessagePrivate(this))
+DiveSummaryMessage::DiveSummaryMessage() : AbstractDataMessage(new DiveSummaryMessagePrivate(this))
 {
 
 }
@@ -341,7 +341,7 @@ void DiveSummaryMessage::setBottomTime(const quint32 bottomTime)
  * \param q Pointer to public implementaton.
  */
 DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , referenceMesg(static_cast<MesgNum>(-1))
   , referenceIndex(static_cast<MessageIndex>(-1))
@@ -427,7 +427,7 @@ bool DiveSummaryMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown dive_summary message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-VideoDescriptionMessage::VideoDescriptionMessage() : FitDataMessage(new VideoDescriptionMessagePrivate(this))
+VideoDescriptionMessage::VideoDescriptionMessage() : AbstractDataMessage(new VideoDescriptionMessagePrivate(this))
 {
 
 }
@@ -131,7 +131,7 @@ void VideoDescriptionMessage::setText(const QString text)
  * \param q Pointer to public implementaton.
  */
 VideoDescriptionMessagePrivate::VideoDescriptionMessagePrivate(VideoDescriptionMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , messageCount(0xFFFF)
 {
@@ -166,7 +166,7 @@ bool VideoDescriptionMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown video_description message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

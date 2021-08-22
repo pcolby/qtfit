@@ -25,13 +25,13 @@
 #ifndef QTFIT_ACTIVITYMESSAGE_H
 #define QTFIT_ACTIVITYMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ActivityMessagePrivate;
 
-class QTFIT_EXPORT ActivityMessage : public FitDataMessage {
+class QTFIT_EXPORT ActivityMessage : public AbstractDataMessage {
 
 public:
     ActivityMessage();

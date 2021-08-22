@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-WeatherAlertMessage::WeatherAlertMessage() : FitDataMessage(new WeatherAlertMessagePrivate(this))
+WeatherAlertMessage::WeatherAlertMessage() : AbstractDataMessage(new WeatherAlertMessagePrivate(this))
 {
 
 }
@@ -194,7 +194,7 @@ void WeatherAlertMessage::setType(const WeatherSevereType type)
  * \param q Pointer to public implementaton.
  */
 WeatherAlertMessagePrivate::WeatherAlertMessagePrivate(WeatherAlertMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , issueTime(static_cast<DateTime>(-1))
   , expireTime(static_cast<DateTime>(-1))
@@ -244,7 +244,7 @@ bool WeatherAlertMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown weather_alert message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_MESGCAPABILITIESMESSAGE_P_H
 #define QTFIT_MESGCAPABILITIESMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MesgCapabilitiesMessage;
 
-class MesgCapabilitiesMessagePrivate : public FitDataMessagePrivate {
+class MesgCapabilitiesMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

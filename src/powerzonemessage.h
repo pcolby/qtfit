@@ -25,13 +25,13 @@
 #ifndef QTFIT_POWERZONEMESSAGE_H
 #define QTFIT_POWERZONEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class PowerZoneMessagePrivate;
 
-class QTFIT_EXPORT PowerZoneMessage : public FitDataMessage {
+class QTFIT_EXPORT PowerZoneMessage : public AbstractDataMessage {
 
 public:
     PowerZoneMessage();

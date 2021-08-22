@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-LengthMessage::LengthMessage() : FitDataMessage(new LengthMessagePrivate(this))
+LengthMessage::LengthMessage() : AbstractDataMessage(new LengthMessagePrivate(this))
 {
 
 }
@@ -446,7 +446,7 @@ void LengthMessage::setZoneCount(const quint16 zoneCount)
  * \param q Pointer to public implementaton.
  */
 LengthMessagePrivate::LengthMessagePrivate(LengthMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , timestamp(static_cast<DateTime>(-1))
   , event(static_cast<Event>(-1))
@@ -557,7 +557,7 @@ bool LengthMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown length message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ExerciseTitleMessage::ExerciseTitleMessage() : FitDataMessage(new ExerciseTitleMessagePrivate(this))
+ExerciseTitleMessage::ExerciseTitleMessage() : AbstractDataMessage(new ExerciseTitleMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void ExerciseTitleMessage::setWktStepName(const QString wktStepName)
  * \param q Pointer to public implementaton.
  */
 ExerciseTitleMessagePrivate::ExerciseTitleMessagePrivate(ExerciseTitleMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , exerciseCategory(static_cast<ExerciseCategory>(-1))
   , exerciseName(0xFFFF)
@@ -192,7 +192,7 @@ bool ExerciseTitleMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown exercise_title message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

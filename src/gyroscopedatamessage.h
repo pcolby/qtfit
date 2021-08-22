@@ -25,13 +25,13 @@
 #ifndef QTFIT_GYROSCOPEDATAMESSAGE_H
 #define QTFIT_GYROSCOPEDATAMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class GyroscopeDataMessagePrivate;
 
-class QTFIT_EXPORT GyroscopeDataMessage : public FitDataMessage {
+class QTFIT_EXPORT GyroscopeDataMessage : public AbstractDataMessage {
 
 public:
     GyroscopeDataMessage();

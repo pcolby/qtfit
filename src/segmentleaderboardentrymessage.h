@@ -25,13 +25,13 @@
 #ifndef QTFIT_SEGMENTLEADERBOARDENTRYMESSAGE_H
 #define QTFIT_SEGMENTLEADERBOARDENTRYMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class SegmentLeaderboardEntryMessagePrivate;
 
-class QTFIT_EXPORT SegmentLeaderboardEntryMessage : public FitDataMessage {
+class QTFIT_EXPORT SegmentLeaderboardEntryMessage : public AbstractDataMessage {
 
 public:
     SegmentLeaderboardEntryMessage();

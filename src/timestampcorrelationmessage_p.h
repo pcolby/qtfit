@@ -25,13 +25,13 @@
 #ifndef QTFIT_TIMESTAMPCORRELATIONMESSAGE_P_H
 #define QTFIT_TIMESTAMPCORRELATIONMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class TimestampCorrelationMessage;
 
-class TimestampCorrelationMessagePrivate : public FitDataMessagePrivate {
+class TimestampCorrelationMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

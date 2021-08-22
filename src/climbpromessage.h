@@ -25,13 +25,13 @@
 #ifndef QTFIT_CLIMBPROMESSAGE_H
 #define QTFIT_CLIMBPROMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class ClimbProMessagePrivate;
 
-class QTFIT_EXPORT ClimbProMessage : public FitDataMessage {
+class QTFIT_EXPORT ClimbProMessage : public AbstractDataMessage {
 
 public:
     ClimbProMessage();

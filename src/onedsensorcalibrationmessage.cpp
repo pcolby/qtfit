@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-OneDSensorCalibrationMessage::OneDSensorCalibrationMessage() : FitDataMessage(new OneDSensorCalibrationMessagePrivate(this))
+OneDSensorCalibrationMessage::OneDSensorCalibrationMessage() : AbstractDataMessage(new OneDSensorCalibrationMessagePrivate(this))
 {
 
 }
@@ -194,7 +194,7 @@ void OneDSensorCalibrationMessage::setOffsetCal(const qint32 offsetCal)
  * \param q Pointer to public implementaton.
  */
 OneDSensorCalibrationMessagePrivate::OneDSensorCalibrationMessagePrivate(OneDSensorCalibrationMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , sensorType(static_cast<SensorType>(-1))
   , calibrationFactor(0xFFFFFFFF)
@@ -245,7 +245,7 @@ bool OneDSensorCalibrationMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown one_d_sensor_calibration message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

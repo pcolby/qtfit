@@ -3,14 +3,14 @@
 /*!
  * \file
  *
- * Provides the FitDataMessage::fromData implementation.
+ * Provides the AbstractDataMessage::fromData implementation.
  *
  * This is kept in a separate file so it can be safely code-generated. And also to avoid polluting
- * the fitdatamessage.cpp file with #includes for the ~100 or so FitDataMessage-derived classes.
+ * the abstractdatamessage.cpp file with #includes for the ~100 or so AbstractDataMessage-derived classes.
  */
 
-#include "fitdatamessage.h"
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage.h"
+#include "abstractdatamessage_p.h"
 
 {% for enum in types %}
 {% if enum.typeName == "MesgNum" %}
@@ -23,17 +23,17 @@
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
 /*!
- * Constructs the relevant FitDataMessage-derived class to parse \a record according to \a defn.
+ * Constructs the relevant AbstractDataMessage-derived class to parse \a record according to \a defn.
  *
  * \param defn   Definition data describing the FIT \a record.
  * \param record FIT data record to parse.
  *
- * \return an instance of a FitDataMessage-derived class, or \c nullptr if \a record could not be parsed.
+ * \return an instance of a AbstractDataMessage-derived class, or \c nullptr if \a record could not be parsed.
  */
-FitDataMessage * FitDataMessage::fromData(const DataDefinition * const defn, const QByteArray &record)
+AbstractDataMessage * AbstractDataMessage::fromData(const DataDefinition * const defn, const QByteArray &record)
 {
     Q_ASSERT(defn);
-    FitDataMessage * message = nullptr;
+    AbstractDataMessage * message = nullptr;
     switch (defn->globalMessageNumber) {
 {% for enum in types %}
 {% if enum.typeName == "MesgNum" %}

@@ -25,13 +25,13 @@
 #ifndef QTFIT_ONEDSENSORCALIBRATIONMESSAGE_H
 #define QTFIT_ONEDSENSORCALIBRATIONMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class OneDSensorCalibrationMessagePrivate;
 
-class QTFIT_EXPORT OneDSensorCalibrationMessage : public FitDataMessage {
+class QTFIT_EXPORT OneDSensorCalibrationMessage : public AbstractDataMessage {
 
 public:
     OneDSensorCalibrationMessage();

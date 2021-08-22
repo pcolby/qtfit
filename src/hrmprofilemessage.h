@@ -25,13 +25,13 @@
 #ifndef QTFIT_HRMPROFILEMESSAGE_H
 #define QTFIT_HRMPROFILEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class HrmProfileMessagePrivate;
 
-class QTFIT_EXPORT HrmProfileMessage : public FitDataMessage {
+class QTFIT_EXPORT HrmProfileMessage : public AbstractDataMessage {
 
 public:
     HrmProfileMessage();

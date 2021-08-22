@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-DeveloperDataIdMessage::DeveloperDataIdMessage() : FitDataMessage(new DeveloperDataIdMessagePrivate(this))
+DeveloperDataIdMessage::DeveloperDataIdMessage() : AbstractDataMessage(new DeveloperDataIdMessagePrivate(this))
 {
 
 }
@@ -173,7 +173,7 @@ void DeveloperDataIdMessage::setApplicationVersion(const quint32 applicationVers
  * \param q Pointer to public implementaton.
  */
 DeveloperDataIdMessagePrivate::DeveloperDataIdMessagePrivate(DeveloperDataIdMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , developerId(0xFF)
   , applicationId(0xFF)
   , manufacturerId(static_cast<Manufacturer>(-1))
@@ -219,7 +219,7 @@ bool DeveloperDataIdMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown developer_data_id message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

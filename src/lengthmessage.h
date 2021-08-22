@@ -25,13 +25,13 @@
 #ifndef QTFIT_LENGTHMESSAGE_H
 #define QTFIT_LENGTHMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class LengthMessagePrivate;
 
-class QTFIT_EXPORT LengthMessage : public FitDataMessage {
+class QTFIT_EXPORT LengthMessage : public AbstractDataMessage {
 
 public:
     LengthMessage();

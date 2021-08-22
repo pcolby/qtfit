@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-MonitoringInfoMessage::MonitoringInfoMessage() : FitDataMessage(new MonitoringInfoMessagePrivate(this))
+MonitoringInfoMessage::MonitoringInfoMessage() : AbstractDataMessage(new MonitoringInfoMessagePrivate(this))
 {
 
 }
@@ -194,7 +194,7 @@ void MonitoringInfoMessage::setRestingMetabolicRate(const quint16 restingMetabol
  * \param q Pointer to public implementaton.
  */
 MonitoringInfoMessagePrivate::MonitoringInfoMessagePrivate(MonitoringInfoMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , localTimestamp(static_cast<LocalDateTime>(-1))
   , activityType(static_cast<ActivityType>(-1))
@@ -245,7 +245,7 @@ bool MonitoringInfoMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown monitoring_info message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_FIELDDESCRIPTIONMESSAGE_P_H
 #define QTFIT_FIELDDESCRIPTIONMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class FieldDescriptionMessage;
 
-class FieldDescriptionMessagePrivate : public FitDataMessagePrivate {
+class FieldDescriptionMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint8 developerDataIndex;

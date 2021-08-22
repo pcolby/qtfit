@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SegmentLapMessage::SegmentLapMessage() : FitDataMessage(new SegmentLapMessagePrivate(this))
+SegmentLapMessage::SegmentLapMessage() : AbstractDataMessage(new SegmentLapMessagePrivate(this))
 {
 
 }
@@ -2000,7 +2000,7 @@ void SegmentLapMessage::setTotalFractionalDescent(const quint8 totalFractionalDe
  * \param q Pointer to public implementaton.
  */
 SegmentLapMessagePrivate::SegmentLapMessagePrivate(SegmentLapMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , timestamp(static_cast<DateTime>(-1))
   , event(static_cast<Event>(-1))
@@ -2515,7 +2515,7 @@ bool SegmentLapMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown segment_lap message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

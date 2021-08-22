@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-GpsMetadataMessage::GpsMetadataMessage() : FitDataMessage(new GpsMetadataMessagePrivate(this))
+GpsMetadataMessage::GpsMetadataMessage() : AbstractDataMessage(new GpsMetadataMessagePrivate(this))
 {
 
 }
@@ -257,7 +257,7 @@ void GpsMetadataMessage::setVelocity(const qint16 velocity)
  * \param q Pointer to public implementaton.
  */
 GpsMetadataMessagePrivate::GpsMetadataMessagePrivate(GpsMetadataMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
   , positionLat(0x7FFFFFFF)
@@ -323,7 +323,7 @@ bool GpsMetadataMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown gps_metadata message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

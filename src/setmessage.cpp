@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SetMessage::SetMessage() : FitDataMessage(new SetMessagePrivate(this))
+SetMessage::SetMessage() : AbstractDataMessage(new SetMessagePrivate(this))
 {
 
 }
@@ -299,7 +299,7 @@ void SetMessage::setWktStepIndex(const MessageIndex wktStepIndex)
  * \param q Pointer to public implementaton.
  */
 SetMessagePrivate::SetMessagePrivate(SetMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , duration(0xFFFFFFFF)
   , repetitions(0xFFFF)
@@ -375,7 +375,7 @@ bool SetMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown set message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-DiveGasMessage::DiveGasMessage() : FitDataMessage(new DiveGasMessagePrivate(this))
+DiveGasMessage::DiveGasMessage() : AbstractDataMessage(new DiveGasMessagePrivate(this))
 {
 
 }
@@ -152,7 +152,7 @@ void DiveGasMessage::setStatus(const DiveGasStatus status)
  * \param q Pointer to public implementaton.
  */
 DiveGasMessagePrivate::DiveGasMessagePrivate(DiveGasMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , heliumContent(0xFF)
   , oxygenContent(0xFF)
@@ -193,7 +193,7 @@ bool DiveGasMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown dive_gas message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_COURSEMESSAGE_P_H
 #define QTFIT_COURSEMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class CourseMessage;
 
-class CourseMessagePrivate : public FitDataMessagePrivate {
+class CourseMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     Sport sport;

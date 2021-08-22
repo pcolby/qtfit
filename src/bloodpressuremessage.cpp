@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-BloodPressureMessage::BloodPressureMessage() : FitDataMessage(new BloodPressureMessagePrivate(this))
+BloodPressureMessage::BloodPressureMessage() : AbstractDataMessage(new BloodPressureMessagePrivate(this))
 {
 
 }
@@ -299,7 +299,7 @@ void BloodPressureMessage::setUserProfileIndex(const MessageIndex userProfileInd
  * \param q Pointer to public implementaton.
  */
 BloodPressureMessagePrivate::BloodPressureMessagePrivate(BloodPressureMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , systolicPressure(0xFFFF)
   , diastolicPressure(0xFFFF)
@@ -375,7 +375,7 @@ bool BloodPressureMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown blood_pressure message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

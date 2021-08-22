@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-ObdiiDataMessage::ObdiiDataMessage() : FitDataMessage(new ObdiiDataMessagePrivate(this))
+ObdiiDataMessage::ObdiiDataMessage() : AbstractDataMessage(new ObdiiDataMessagePrivate(this))
 {
 
 }
@@ -257,7 +257,7 @@ void ObdiiDataMessage::setStartTimestampMs(const quint16 startTimestampMs)
  * \param q Pointer to public implementaton.
  */
 ObdiiDataMessagePrivate::ObdiiDataMessagePrivate(ObdiiDataMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
   , timeOffset(0xFFFF)
@@ -323,7 +323,7 @@ bool ObdiiDataMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown obdii_data message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

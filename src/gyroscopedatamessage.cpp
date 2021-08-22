@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-GyroscopeDataMessage::GyroscopeDataMessage() : FitDataMessage(new GyroscopeDataMessagePrivate(this))
+GyroscopeDataMessage::GyroscopeDataMessage() : AbstractDataMessage(new GyroscopeDataMessagePrivate(this))
 {
 
 }
@@ -257,7 +257,7 @@ void GyroscopeDataMessage::setCalibratedGyroZ(const float calibratedGyroZ)
  * \param q Pointer to public implementaton.
  */
 GyroscopeDataMessagePrivate::GyroscopeDataMessagePrivate(GyroscopeDataMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
   , sampleTimeOffset(0xFFFF)
@@ -350,7 +350,7 @@ bool GyroscopeDataMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown gyroscope_data message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

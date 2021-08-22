@@ -25,13 +25,13 @@
 #ifndef QTFIT_VIDEODESCRIPTIONMESSAGE_P_H
 #define QTFIT_VIDEODESCRIPTIONMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class VideoDescriptionMessage;
 
-class VideoDescriptionMessagePrivate : public FitDataMessagePrivate {
+class VideoDescriptionMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

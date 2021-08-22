@@ -25,13 +25,13 @@
 #ifndef QTFIT_JUMPMESSAGE_H
 #define QTFIT_JUMPMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class JumpMessagePrivate;
 
-class QTFIT_EXPORT JumpMessage : public FitDataMessage {
+class QTFIT_EXPORT JumpMessage : public AbstractDataMessage {
 
 public:
     JumpMessage();

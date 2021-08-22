@@ -22,7 +22,7 @@
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-{{ClassName}}::{{ClassName}}() : FitDataMessage(new {{ClassName}}Private(this))
+{{ClassName}}::{{ClassName}}() : AbstractDataMessage(new {{ClassName}}Private(this))
 {
 
 }
@@ -71,7 +71,7 @@ void {{ClassName}}::set{{field.name|capfirst}}(const {{field.cppType}} {{field.n
  * \param q Pointer to public implementaton.
  */
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
 {% for field in fields %}
 {% if field.defaultValue %}
   , {{field.name}}({{field.defaultValue}})
@@ -122,7 +122,7 @@ bool {{ClassName}}Private::setField(
 {% endfor %}
     default:
         qWarning() << "unknown {{messageName}} message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

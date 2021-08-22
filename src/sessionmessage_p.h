@@ -25,13 +25,13 @@
 #ifndef QTFIT_SESSIONMESSAGE_P_H
 #define QTFIT_SESSIONMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class SessionMessage;
 
-class SessionMessagePrivate : public FitDataMessagePrivate {
+class SessionMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

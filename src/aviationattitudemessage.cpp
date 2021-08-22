@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-AviationAttitudeMessage::AviationAttitudeMessage() : FitDataMessage(new AviationAttitudeMessagePrivate(this))
+AviationAttitudeMessage::AviationAttitudeMessage() : AbstractDataMessage(new AviationAttitudeMessagePrivate(this))
 {
 
 }
@@ -320,7 +320,7 @@ void AviationAttitudeMessage::setValidity(const AttitudeValidity validity)
  * \param q Pointer to public implementaton.
  */
 AviationAttitudeMessagePrivate::AviationAttitudeMessagePrivate(AviationAttitudeMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
   , systemTime(0xFFFFFFFF)
@@ -401,7 +401,7 @@ bool AviationAttitudeMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown aviation_attitude message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

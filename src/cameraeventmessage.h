@@ -25,13 +25,13 @@
 #ifndef QTFIT_CAMERAEVENTMESSAGE_H
 #define QTFIT_CAMERAEVENTMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class CameraEventMessagePrivate;
 
-class QTFIT_EXPORT CameraEventMessage : public FitDataMessage {
+class QTFIT_EXPORT CameraEventMessage : public AbstractDataMessage {
 
 public:
     CameraEventMessage();

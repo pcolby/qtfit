@@ -25,13 +25,13 @@
 #ifndef QTFIT_METZONEMESSAGE_H
 #define QTFIT_METZONEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MetZoneMessagePrivate;
 
-class QTFIT_EXPORT MetZoneMessage : public FitDataMessage {
+class QTFIT_EXPORT MetZoneMessage : public AbstractDataMessage {
 
 public:
     MetZoneMessage();

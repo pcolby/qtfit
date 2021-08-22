@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-JumpMessage::JumpMessage() : FitDataMessage(new JumpMessagePrivate(this))
+JumpMessage::JumpMessage() : AbstractDataMessage(new JumpMessagePrivate(this))
 {
 
 }
@@ -278,7 +278,7 @@ void JumpMessage::setEnhancedSpeed(const quint32 enhancedSpeed)
  * \param q Pointer to public implementaton.
  */
 JumpMessagePrivate::JumpMessagePrivate(JumpMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , distance(static_cast<float>(-1))
   , height(static_cast<float>(-1))
@@ -385,7 +385,7 @@ bool JumpMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown jump message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

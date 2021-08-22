@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-TotalsMessage::TotalsMessage() : FitDataMessage(new TotalsMessagePrivate(this))
+TotalsMessage::TotalsMessage() : AbstractDataMessage(new TotalsMessagePrivate(this))
 {
 
 }
@@ -278,7 +278,7 @@ void TotalsMessage::setSportIndex(const quint8 sportIndex)
  * \param q Pointer to public implementaton.
  */
 TotalsMessagePrivate::TotalsMessagePrivate(TotalsMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , timestamp(static_cast<DateTime>(-1))
   , timerTime(0xFFFFFFFF)
@@ -349,7 +349,7 @@ bool TotalsMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown totals message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_MAGNETOMETERDATAMESSAGE_P_H
 #define QTFIT_MAGNETOMETERDATAMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MagnetometerDataMessage;
 
-class MagnetometerDataMessagePrivate : public FitDataMessagePrivate {
+class MagnetometerDataMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

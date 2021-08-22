@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-BikeProfileMessage::BikeProfileMessage() : FitDataMessage(new BikeProfileMessagePrivate(this))
+BikeProfileMessage::BikeProfileMessage() : AbstractDataMessage(new BikeProfileMessagePrivate(this))
 {
 
 }
@@ -740,7 +740,7 @@ void BikeProfileMessage::setShimanoDi2Enabled(const bool shimanoDi2Enabled)
  * \param q Pointer to public implementaton.
  */
 BikeProfileMessagePrivate::BikeProfileMessagePrivate(BikeProfileMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , sport(static_cast<Sport>(-1))
   , subSport(static_cast<SubSport>(-1))
@@ -920,7 +920,7 @@ bool BikeProfileMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown bike_profile message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

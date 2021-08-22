@@ -25,13 +25,13 @@
 #ifndef QTFIT_SEGMENTPOINTMESSAGE_P_H
 #define QTFIT_SEGMENTPOINTMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class SegmentPointMessage;
 
-class SegmentPointMessagePrivate : public FitDataMessagePrivate {
+class SegmentPointMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

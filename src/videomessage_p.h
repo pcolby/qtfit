@@ -25,13 +25,13 @@
 #ifndef QTFIT_VIDEOMESSAGE_P_H
 #define QTFIT_VIDEOMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class VideoMessage;
 
-class VideoMessagePrivate : public FitDataMessagePrivate {
+class VideoMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     QString url;

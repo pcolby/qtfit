@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-NmeaSentenceMessage::NmeaSentenceMessage() : FitDataMessage(new NmeaSentenceMessagePrivate(this))
+NmeaSentenceMessage::NmeaSentenceMessage() : AbstractDataMessage(new NmeaSentenceMessagePrivate(this))
 {
 
 }
@@ -131,7 +131,7 @@ void NmeaSentenceMessage::setSentence(const QString sentence)
  * \param q Pointer to public implementaton.
  */
 NmeaSentenceMessagePrivate::NmeaSentenceMessagePrivate(NmeaSentenceMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , timestampMs(0xFFFF)
 {
@@ -166,7 +166,7 @@ bool NmeaSentenceMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown nmea_sentence message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

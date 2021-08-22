@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SpeedZoneMessage::SpeedZoneMessage() : FitDataMessage(new SpeedZoneMessagePrivate(this))
+SpeedZoneMessage::SpeedZoneMessage() : AbstractDataMessage(new SpeedZoneMessagePrivate(this))
 {
 
 }
@@ -131,7 +131,7 @@ void SpeedZoneMessage::setName(const QString name)
  * \param q Pointer to public implementaton.
  */
 SpeedZoneMessagePrivate::SpeedZoneMessagePrivate(SpeedZoneMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , messageIndex(static_cast<MessageIndex>(-1))
   , highValue(0xFFFF)
 {
@@ -166,7 +166,7 @@ bool SpeedZoneMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown speed_zone message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

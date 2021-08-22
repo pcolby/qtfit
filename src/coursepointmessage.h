@@ -25,13 +25,13 @@
 #ifndef QTFIT_COURSEPOINTMESSAGE_H
 #define QTFIT_COURSEPOINTMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class CoursePointMessagePrivate;
 
-class QTFIT_EXPORT CoursePointMessage : public FitDataMessage {
+class QTFIT_EXPORT CoursePointMessage : public AbstractDataMessage {
 
 public:
     CoursePointMessage();

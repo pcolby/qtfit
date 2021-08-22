@@ -25,13 +25,13 @@
 #ifndef QTFIT_WORKOUTSTEPMESSAGE_P_H
 #define QTFIT_WORKOUTSTEPMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class WorkoutStepMessage;
 
-class WorkoutStepMessagePrivate : public FitDataMessagePrivate {
+class WorkoutStepMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

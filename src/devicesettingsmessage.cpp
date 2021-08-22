@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-DeviceSettingsMessage::DeviceSettingsMessage() : FitDataMessage(new DeviceSettingsMessagePrivate(this))
+DeviceSettingsMessage::DeviceSettingsMessage() : AbstractDataMessage(new DeviceSettingsMessagePrivate(this))
 {
 
 }
@@ -572,7 +572,7 @@ void DeviceSettingsMessage::setTapSensitivity(const TapSensitivity tapSensitivit
  * \param q Pointer to public implementaton.
  */
 DeviceSettingsMessagePrivate::DeviceSettingsMessagePrivate(DeviceSettingsMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , activeTimeZone(0xFF)
   , utcOffset(0xFFFFFFFF)
   , timeOffset(0xFFFFFFFF)
@@ -713,7 +713,7 @@ bool DeviceSettingsMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown device_settings message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_TOTALSMESSAGE_P_H
 #define QTFIT_TOTALSMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class TotalsMessage;
 
-class TotalsMessagePrivate : public FitDataMessagePrivate {
+class TotalsMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     MessageIndex messageIndex;

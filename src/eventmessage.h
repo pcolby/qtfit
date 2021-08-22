@@ -25,13 +25,13 @@
 #ifndef QTFIT_EVENTMESSAGE_H
 #define QTFIT_EVENTMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class EventMessagePrivate;
 
-class QTFIT_EXPORT EventMessage : public FitDataMessage {
+class QTFIT_EXPORT EventMessage : public AbstractDataMessage {
 
 public:
     EventMessage();

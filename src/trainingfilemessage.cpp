@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-TrainingFileMessage::TrainingFileMessage() : FitDataMessage(new TrainingFileMessagePrivate(this))
+TrainingFileMessage::TrainingFileMessage() : AbstractDataMessage(new TrainingFileMessagePrivate(this))
 {
 
 }
@@ -194,7 +194,7 @@ void TrainingFileMessage::setTimeCreated(const DateTime timeCreated)
  * \param q Pointer to public implementaton.
  */
 TrainingFileMessagePrivate::TrainingFileMessagePrivate(TrainingFileMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , type(static_cast<File>(-1))
   , manufacturer(static_cast<Manufacturer>(-1))
@@ -245,7 +245,7 @@ bool TrainingFileMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown training_file message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

@@ -25,13 +25,13 @@
 #ifndef QTFIT_WEIGHTSCALEMESSAGE_H
 #define QTFIT_WEIGHTSCALEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class WeightScaleMessagePrivate;
 
-class QTFIT_EXPORT WeightScaleMessage : public FitDataMessage {
+class QTFIT_EXPORT WeightScaleMessage : public AbstractDataMessage {
 
 public:
     WeightScaleMessage();

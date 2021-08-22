@@ -25,13 +25,13 @@
 #ifndef QTFIT_WEATHERALERTMESSAGE_P_H
 #define QTFIT_WEATHERALERTMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class WeatherAlertMessage;
 
-class WeatherAlertMessagePrivate : public FitDataMessagePrivate {
+class WeatherAlertMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     DateTime timestamp;

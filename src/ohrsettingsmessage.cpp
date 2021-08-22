@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-OhrSettingsMessage::OhrSettingsMessage() : FitDataMessage(new OhrSettingsMessagePrivate(this))
+OhrSettingsMessage::OhrSettingsMessage() : AbstractDataMessage(new OhrSettingsMessagePrivate(this))
 {
 
 }
@@ -110,7 +110,7 @@ void OhrSettingsMessage::setEnabled(const Switch enabled)
  * \param q Pointer to public implementaton.
  */
 OhrSettingsMessagePrivate::OhrSettingsMessagePrivate(OhrSettingsMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , timestamp(static_cast<DateTime>(-1))
   , enabled(static_cast<Switch>(-1))
 {
@@ -141,7 +141,7 @@ bool OhrSettingsMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown ohr_settings message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

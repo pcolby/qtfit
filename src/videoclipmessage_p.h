@@ -25,13 +25,13 @@
 #ifndef QTFIT_VIDEOCLIPMESSAGE_P_H
 #define QTFIT_VIDEOCLIPMESSAGE_P_H
 
-#include "fitdatamessage_p.h"
+#include "abstractdatamessage_p.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class VideoClipMessage;
 
-class VideoClipMessagePrivate : public FitDataMessagePrivate {
+class VideoClipMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
     quint16 clipNumber;

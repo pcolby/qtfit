@@ -25,13 +25,13 @@
 #ifndef QTFIT_BIKEPROFILEMESSAGE_H
 #define QTFIT_BIKEPROFILEMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class BikeProfileMessagePrivate;
 
-class QTFIT_EXPORT BikeProfileMessage : public FitDataMessage {
+class QTFIT_EXPORT BikeProfileMessage : public AbstractDataMessage {
 
 public:
     BikeProfileMessage();

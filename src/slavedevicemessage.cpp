@@ -44,7 +44,7 @@ QTFIT_BEGIN_NAMESPACE
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
-SlaveDeviceMessage::SlaveDeviceMessage() : FitDataMessage(new SlaveDeviceMessagePrivate(this))
+SlaveDeviceMessage::SlaveDeviceMessage() : AbstractDataMessage(new SlaveDeviceMessagePrivate(this))
 {
 
 }
@@ -110,7 +110,7 @@ void SlaveDeviceMessage::setProduct(const quint16 product)
  * \param q Pointer to public implementaton.
  */
 SlaveDeviceMessagePrivate::SlaveDeviceMessagePrivate(SlaveDeviceMessage * const q)
-  : FitDataMessagePrivate(q)
+  : AbstractDataMessagePrivate(q)
   , manufacturer(static_cast<Manufacturer>(-1))
   , product(0xFFFF)
 {
@@ -141,7 +141,7 @@ bool SlaveDeviceMessagePrivate::setField(
         break;
     default:
         qWarning() << "unknown slave_device message field number" << fieldId;
-        return FitDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
     }
     return true;
 }

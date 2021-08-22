@@ -25,13 +25,13 @@
 #ifndef QTFIT_MESGCAPABILITIESMESSAGE_H
 #define QTFIT_MESGCAPABILITIESMESSAGE_H
 
-#include "fitdatamessage.h"
+#include "abstractdatamessage.h"
 
 QTFIT_BEGIN_NAMESPACE
 
 class MesgCapabilitiesMessagePrivate;
 
-class QTFIT_EXPORT MesgCapabilitiesMessage : public FitDataMessage {
+class QTFIT_EXPORT MesgCapabilitiesMessage : public AbstractDataMessage {
 
 public:
     MesgCapabilitiesMessage();
