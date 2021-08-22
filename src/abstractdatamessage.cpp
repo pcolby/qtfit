@@ -130,7 +130,7 @@ bool AbstractDataMessagePrivate::setFields(const DataDefinition * const defn, co
  * Sets the value of the \a fieldId field.
  *
  * Derived classes must implement this method to extract the \a baseType value from \a data, and
- * assign the extracted value the \fieldId field.
+ * assign the extracted value the \a fieldId field.
  *
  * \param fieldId   The field number within the given FIT data message.
  * \param data      The raw data to extract the field value from.

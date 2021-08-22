@@ -6,7 +6,8 @@
  * Provides the AbstractDataMessage::fromData implementation.
  *
  * This is kept in a separate file so it can be safely code-generated. And also to avoid polluting
- * the abstractdatamessage.cpp file with #includes for the ~100 or so AbstractDataMessage-derived classes.
+ * the abstractdatamessage.cpp file with \c \#includes for the ~100 or so AbstractDataMessage
+ * descendants.
  */
 
 #include "abstractdatamessage.h"
