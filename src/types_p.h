@@ -51,12 +51,6 @@ struct DataDefinition {
     int recordSize; ///< Sum of all sizes in fieldDefinitions and developerFieldDefintions.
 };
 
-struct DataMessage {
-    quint8 localMessageType; // 0xFF == invalid
-    quint8 timestampOffset; // Valid range is 0 to 31; anything outside this is invalid.
-    QByteArray recordContent; // empty -> invalid.
-};
-
 QTFIT_END_NAMESPACE
 
 #endif // QTFIT_TYPES_H
