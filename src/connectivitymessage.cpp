@@ -425,8 +425,8 @@ bool ConnectivityMessagePrivate::setField(
         this->grouptrackEnabled = static_cast<bool>(data.at(0));
         break;
     default:
-        qWarning() << "unknown connectivity message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown connectivity message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

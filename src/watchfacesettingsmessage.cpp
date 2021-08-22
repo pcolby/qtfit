@@ -166,8 +166,8 @@ bool WatchfaceSettingsMessagePrivate::setField(
         this->layout = static_cast<quint8>(data.at(0));
         break;
     default:
-        qWarning() << "unknown watchface_settings message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown watchface_settings message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

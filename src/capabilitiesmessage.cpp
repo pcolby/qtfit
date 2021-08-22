@@ -192,8 +192,8 @@ bool CapabilitiesMessagePrivate::setField(
         this->connectivitySupported = static_cast<ConnectivityCapabilities>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
-        qWarning() << "unknown capabilities message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown capabilities message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

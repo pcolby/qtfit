@@ -218,8 +218,8 @@ bool AntChannelIdMessagePrivate::setField(
         this->deviceIndex = static_cast<DeviceIndex>(data.at(0));
         break;
     default:
-        qWarning() << "unknown ant_channel_id message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown ant_channel_id message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

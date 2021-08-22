@@ -554,8 +554,8 @@ bool DeviceInfoMessagePrivate::setField(
         this->productName = QString::fromUtf8(data);
         break;
     default:
-        qWarning() << "unknown device_info message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown device_info message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

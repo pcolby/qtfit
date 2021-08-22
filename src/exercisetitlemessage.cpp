@@ -191,8 +191,8 @@ bool ExerciseTitleMessagePrivate::setField(
         this->wktStepName = QString::fromUtf8(data);
         break;
     default:
-        qWarning() << "unknown exercise_title message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown exercise_title message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

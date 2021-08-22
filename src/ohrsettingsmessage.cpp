@@ -140,8 +140,8 @@ bool OhrSettingsMessagePrivate::setField(
         this->enabled = static_cast<Switch>(data.at(0));
         break;
     default:
-        qWarning() << "unknown ohr_settings message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown ohr_settings message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

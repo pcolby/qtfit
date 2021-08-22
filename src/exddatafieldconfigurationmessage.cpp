@@ -243,8 +243,8 @@ bool ExdDataFieldConfigurationMessagePrivate::setField(
         this->title = QString::fromUtf8(data);
         break;
     default:
-        qWarning() << "unknown exd_data_field_configuration message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown exd_data_field_configuration message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

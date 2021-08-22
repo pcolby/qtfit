@@ -31,13 +31,9 @@ class AbstractDataMessagePrivate;
 class QTFIT_EXPORT AbstractDataMessage {
 
 public:
-    AbstractDataMessage();
-    AbstractDataMessage(const AbstractDataMessage &other);
-    AbstractDataMessage &operator=(const AbstractDataMessage &other);
+    AbstractDataMessage() = delete;
     ~AbstractDataMessage();
     MesgNum globalMessageNumber() const;
-    bool isNull() const;
-//    bool isValid() const; ///< @todo?
 
     static AbstractDataMessage * fromData(const DataDefinition * const defn, const QByteArray &record);
 
@@ -49,6 +45,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(AbstractDataMessage)
+    Q_DISABLE_COPY(AbstractDataMessage)
 
 };
 

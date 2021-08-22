@@ -165,8 +165,8 @@ bool CadenceZoneMessagePrivate::setField(
         this->name = QString::fromUtf8(data);
         break;
     default:
-        qWarning() << "unknown cadence_zone message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown cadence_zone message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

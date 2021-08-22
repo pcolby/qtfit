@@ -32,7 +32,6 @@ class AbstractDataMessagePrivate {
 
 public:
     MesgNum globalMessageNumber;
-    bool isNull;
 
     AbstractDataMessagePrivate() = delete;
     explicit AbstractDataMessagePrivate(AbstractDataMessage * const q);
@@ -44,7 +43,7 @@ protected:
     AbstractDataMessage * const q_ptr; ///< Internal q-pointer.
 
     virtual bool setField(const int fieldId, const QByteArray &data,
-                          const FitBaseType baseType, const bool bigEndian);
+                          const FitBaseType baseType, const bool bigEndian) = 0;
 
     bool verify(const QByteArray &data, const FitBaseType actualType, const int expectedSize,
                        const FitBaseType expectedType, const char *messageFieldName);

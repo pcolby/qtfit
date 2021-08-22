@@ -218,8 +218,8 @@ bool ZonesTargetMessagePrivate::setField(
         this->pwrCalcType = static_cast<PwrZoneCalc>(data.at(0));
         break;
     default:
-        qWarning() << "unknown zones_target message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown zones_target message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

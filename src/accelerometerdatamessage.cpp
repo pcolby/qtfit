@@ -427,8 +427,8 @@ bool AccelerometerDataMessagePrivate::setField(
         this->compressedCalibratedAccelZ = static_cast<qint16>(bigEndian ? qFromBigEndian< qint16>(data) : qFromLittleEndian< qint16>(data));
         break;
     default:
-        qWarning() << "unknown accelerometer_data message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown accelerometer_data message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

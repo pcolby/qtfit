@@ -192,8 +192,8 @@ bool MetZoneMessagePrivate::setField(
         this->fatCalories = static_cast<quint8>(data.at(0));
         break;
     default:
-        qWarning() << "unknown met_zone message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown met_zone message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }

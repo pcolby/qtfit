@@ -31,16 +31,6 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs a invalid, null AbstractDataMessage object.
- *
- * That is, one where isNull returns \c true, and isValid returns \c false.
- */
-AbstractDataMessage::AbstractDataMessage() : d_ptr(new AbstractDataMessagePrivate(this))
-{
-
-}
-
-/*!
  * \internal
  *
  * Constructs a AbstractDataMessage which private implementation \a q.
@@ -50,33 +40,6 @@ AbstractDataMessage::AbstractDataMessage() : d_ptr(new AbstractDataMessagePrivat
 AbstractDataMessage::AbstractDataMessage(AbstractDataMessagePrivate * const d) : d_ptr(d)
 {
 
-}
-
-/*!
- * Copies a AbstractDataMessage.
- *
- * \param other The data message to copy.
- */
-AbstractDataMessage::AbstractDataMessage(const AbstractDataMessage &other) : d_ptr(new AbstractDataMessagePrivate(this))
-{
-    Q_D(AbstractDataMessage);
-    d->globalMessageNumber = other.globalMessageNumber();
-    d->isNull = other.isNull();
-}
-
-/*!
- * Assigns a AbstractDataMessage to this one.
- *
- * \param other The data message from which to assign.
- *
- * \return a reference to self.
- */
-AbstractDataMessage &AbstractDataMessage::operator=(const AbstractDataMessage &other)
-{
-    Q_D(AbstractDataMessage);
-    d->globalMessageNumber = other.globalMessageNumber();
-    d->isNull = other.isNull();
-    return *this;
 }
 
 /*!
@@ -99,16 +62,6 @@ MesgNum AbstractDataMessage::globalMessageNumber() const
 }
 
 /*!
- * Returns \c true if this is not a valid data message, otherwise \c false.
- * \return \c true if this is not a valid data message, otherwise \c false.
- */
-bool AbstractDataMessage::isNull() const
-{
-    Q_D(const AbstractDataMessage);
-    return d->isNull;
-}
-
-/*!
  * \internal
  *
  * \class AbstractDataMessagePrivate
@@ -126,7 +79,7 @@ bool AbstractDataMessage::isNull() const
  * \param q Pointer to public implementation.
  */
 AbstractDataMessagePrivate::AbstractDataMessagePrivate(AbstractDataMessage * const q)
-    : globalMessageNumber(static_cast<MesgNum>(0xFFFF)), isNull(true), q_ptr(q)
+    : globalMessageNumber(static_cast<MesgNum>(0xFFFF)), q_ptr(q)
 {
 
 }
@@ -144,7 +97,7 @@ AbstractDataMessagePrivate::~AbstractDataMessagePrivate()
 /*!
  * \internal
  *
- * Set the current FIT data message's fields.
+ * Sets the current FIT data message's fields.
  *
  * The method iterates through the \a record, invoking the virtual setField method to assign the
  * extraced values to the relevant data message fields. Derived classes are expected to override
@@ -172,26 +125,20 @@ bool AbstractDataMessagePrivate::setFields(const DataDefinition * const defn, co
 
 /*!
  * \internal
+ * \fn AbstractDataMessagePrivate::setField
  *
- * Set a value of a data message field.
+ * Sets the value of the \a fieldId field.
  *
- * This base implementation simply logs a warning, and ignores the field. Derived classes should
- * override this implementation to set the relevant class members.
+ * Derived classes must implement this method to extract the \a baseType value from \a data, and
+ * assign the extracted value the \fieldId field.
  *
  * \param fieldId   The field number within the given FIT data message.
  * \param data      The raw data to extract the field value from.
  * \param baseType  The FIT base type for the field.
  * \param bigEndian Whether or not multibyte values in \a record are big-endian.
  *
- * \return \c true if the field was set, or skipped; \c false if the field was corrupt or invalid.
+ * \return \c true if the field was set, or safely ignored; \c false otherwise.
  */
-bool AbstractDataMessagePrivate::setField(const int fieldId, const QByteArray &data,
-                                     const FitBaseType baseType, const bool bigEndian)
-{
-    Q_UNUSED(bigEndian)
-    qWarning() << "ignoring unknown field" << fieldId << data << baseType;
-    return true; // True because we "handled it safely", and can continue parsing.
-}
 
 /*!
  * \internal
@@ -222,7 +169,7 @@ inline bool verifyBaseType(const FitBaseType actual, const FitBaseType expected,
  *
  * \return \c true if \a data has \a expectedSize bytes, \c false otherwise.
  */
-inline bool verifyDataSieze(const QByteArray &data, const int expectedSize, const char *name)
+inline bool verifyDataSize(const QByteArray &data, const int expectedSize, const char *name)
 {
     if (data.size() == expectedSize) return true;
     qWarning() << name << "size is" << data.size() << "but should be" << expectedSize;
@@ -247,7 +194,7 @@ bool AbstractDataMessagePrivate::verify(const QByteArray &data, const FitBaseTyp
                                    const char *messageFieldName)
 {
     return (verifyBaseType(actualType, expectedType, messageFieldName) &&
-            verifyDataSieze(data, expectedSize, messageFieldName));
+            verifyDataSize(data, expectedSize, messageFieldName));
 }
 
 QTFIT_END_NAMESPACE

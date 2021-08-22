@@ -712,8 +712,8 @@ bool DeviceSettingsMessagePrivate::setField(
         this->tapSensitivity = static_cast<TapSensitivity>(data.at(0));
         break;
     default:
-        qWarning() << "unknown device_settings message field number" << fieldId;
-        return AbstractDataMessagePrivate::setField(fieldId, data, baseType, bigEndian);
+        qWarning() << "ignoring unknown device_settings message field number" << fieldId << bigEndian;
+        // Fall through to return true, as its still 'safe' to continue parsing data messages.
     }
     return true;
 }
