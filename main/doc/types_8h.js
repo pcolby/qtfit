@@ -1,8 +1,11 @@
 var types_8h =
 [
+    [ "LocalDeviceType", "types_8h.html#ae953cde0bbb9b96d1403a322bbee5a25", null ],
+    [ "LocaltimeIntoDay", "types_8h.html#adc2e5e09f9d2d670266119c737b69e4f", null ],
     [ "quint16z", "types_8h.html#ab1f19760ebc204816d39999628339d7c", null ],
     [ "quint32z", "types_8h.html#af8923988212a718608f45e6ac0164095", null ],
     [ "quint64z", "types_8h.html#aad0aa5118416fc0b0716aa1282ad4946", null ],
+    [ "TimeIntoDay", "types_8h.html#a28867e7f16728c81d6e620e5fb0f7fb7", null ],
     [ "Activity", "types_8h.html#a8e0156d35231e7fa3c9ec51f91df3d97", [
       [ "Manual", "types_8h.html#a8e0156d35231e7fa3c9ec51f91df3d97ae1ba155a9f2e8c3be94020eef32a0301", null ],
       [ "AutoMultiSport", "types_8h.html#a8e0156d35231e7fa3c9ec51f91df3d97a6f37b0a6390d6034cedecdf3f1f67d23", null ]
@@ -1870,8 +1873,6 @@ var types_8h =
     [ "LocalDateTime", "types_8h.html#a0265c2aab789a2c900c4d1fd9cf26bcb", [
       [ "Min", "types_8h.html#a0265c2aab789a2c900c4d1fd9cf26bcba78d811e98514cd165dda532286610fd2", null ]
     ] ],
-    [ "LocalDeviceType", "types_8h.html#a0f036072cb4257ac30e3e01da83339c6", null ],
-    [ "LocaltimeIntoDay", "types_8h.html#abcd66e86f70dfc8ea173b3e01d81b677", null ],
     [ "LungeExerciseName", "types_8h.html#a6de877374e2192ef42af6f854ecc225a", [
       [ "OverheadLunge", "types_8h.html#a6de877374e2192ef42af6f854ecc225aa14ee59f13b74150dde026a69bdd7703e", null ],
       [ "LungeMatrix", "types_8h.html#a6de877374e2192ef42af6f854ecc225aa5c62bd5c4aa4f37194296512109aaad2", null ],
@@ -3130,7 +3131,6 @@ var types_8h =
       [ "Medium", "types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1a87f8a6ab85c9ced3702b4ea641ad4bb5", null ],
       [ "Low", "types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1a28d0edd045e05cf5af64e35ae0c4c6ef", null ]
     ] ],
-    [ "TimeIntoDay", "types_8h.html#a483f8586c261e5d12f41c8c936ff76e9", null ],
     [ "TimeMode", "types_8h.html#a2a4e52b0210a441665a23dc88317d9e5", [
       [ "Hour12", "types_8h.html#a2a4e52b0210a441665a23dc88317d9e5ad83042d116065348edf4a8884b8947b1", null ],
       [ "Hour24", "types_8h.html#a2a4e52b0210a441665a23dc88317d9e5ac26b4fa01eed52047e45bc5530d11cbd", null ],
@@ -3709,8 +3709,6 @@ var types_8h =
     [ "operator<<", "types_8h.html#a12853a7798a0415ae824902d2d731b8f", null ],
     [ "operator<<", "types_8h.html#a6a89a4cc7b19b6a9d5580ae751c01b74", null ],
     [ "operator<<", "types_8h.html#a4e2b596b1a9f2671a2861b7405a7a4f0", null ],
-    [ "operator<<", "types_8h.html#a5d58753a066b9913b626b6ac81a81f9e", null ],
-    [ "operator<<", "types_8h.html#a61cea56b674c5117d5e30a9346c23c2d", null ],
     [ "operator<<", "types_8h.html#a78dde98737ba4d196e0865fae486ac2d", null ],
     [ "operator<<", "types_8h.html#a24e47f04d08d6b32eb55955196caa451", null ],
     [ "operator<<", "types_8h.html#aee2c5199e9b209a5f047c42efa5c4b32", null ],
@@ -3757,7 +3755,6 @@ var types_8h =
     [ "operator<<", "types_8h.html#a5baedd649ffbe031aecd9a7f784a828b", null ],
     [ "operator<<", "types_8h.html#a6326e5624fe1b14137351859afe6a8b6", null ],
     [ "operator<<", "types_8h.html#ae8f576c2bd9d1115154b5997954ea2f7", null ],
-    [ "operator<<", "types_8h.html#a64121c7e02290e653e7355b7f75948dd", null ],
     [ "operator<<", "types_8h.html#a1e73e3162d543532a437f477839bebaf", null ],
     [ "operator<<", "types_8h.html#a9fa624052766c697a382ec018f667695", null ],
     [ "operator<<", "types_8h.html#a1924d26c1edd2e1ad864d5d78e9bee01", null ],

@@ -44,6 +44,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ]
       ] ]
     ] ]
@@ -63,22 +64,22 @@ var NAVTREEINDEX =
 "classSessionMessage.html#aa8334b5485b4bf7543a80130442382a1",
 "classUserProfileMessage.html#a8530287f7e882ec031fbec36a906ff16",
 "classZonesTargetMessage.html#a769fc0229044c81edecc324f0062677e",
-"types_8cpp.html#a58c43670632d267253d5f0e353805051",
-"types_8h.html#a00eecc1db747a403407ee496ccd56103a4f142625c71c2b349d06e9b7cb0cd969",
-"types_8h.html#a024199a3d93e059de66ed7ae51a7bea5ad0fa7c3b5984b6f28d08dcba9cc682ec",
-"types_8h.html#a216296365fafce4b06c5502ce5e4015fa2a51ce865590499b44eb0dc9472ade97",
-"types_8h.html#a32feb909178efb4161d852c21ded1e31ac95b70e349ee6c3c58b6d73fb9fd73ea",
-"types_8h.html#a417088b0068504866b23a691abf7b868a1d24d845403b1c569af831f9c75067e4",
-"types_8h.html#a4b28f6697cd8c1d8c42b3103f1923310a5ceb37e195269ab6af7f236b3f1f4da0",
-"types_8h.html#a6653306bfa9bbac10f0d1a6d7ed0d41ca559abdb60db3e888dc96f6a572d88901",
-"types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a1e84bc4859881db3c492b5a9dcbe0ab3",
-"types_8h.html#a8fafe388d86ed7de90d905a38c68ad15af1028e55b5ecef0c2dd53768ad212182",
-"types_8h.html#aa7b4e665c5b2a4777b818f6910014a80a182043305b358f48cbb34626d6fed495",
-"types_8h.html#ab81b58332d5fc8a29dc60c268bd3742ba8b7051187b9191cdcdae6ed5a10e5adc",
-"types_8h.html#abff0cc6077b6b352288453cfaef93f80ab38745378436693251ec644ea9ef761e",
-"types_8h.html#acc0284e7a47f3a3eec5012e46cf9da7ea068a0b5b2858dc3f1ac7b47464bc4b0a",
-"types_8h.html#ade18175d73af40e5bea7bbd888a7c558a0d167fcb74a78ae726fbece049851541",
-"videodescriptionmessage_8h.html"
+"types_8cpp.html#a551f8ccd570a3eec9220664bbed862f1",
+"types_8h.html#a00eecc1db747a403407ee496ccd56103a50abdc5e3c7d40e1a9c29419d99becd0",
+"types_8h.html#a024199a3d93e059de66ed7ae51a7bea5af08d7f223f4f7b6303e3744cf0728960",
+"types_8h.html#a216296365fafce4b06c5502ce5e4015fa3498a6386ca942c3a4382b5b8e7b8996",
+"types_8h.html#a32feb909178efb4161d852c21ded1e31ad2a00780174b95adecdd0caf9ab52740",
+"types_8h.html#a417088b0068504866b23a691abf7b868a23974cac992b987bc4d1484c3e596a39",
+"types_8h.html#a4cea131c826b8a26b33b1492369e389ca068108b0030d5155c9097e5d2d7062f8",
+"types_8h.html#a6653306bfa9bbac10f0d1a6d7ed0d41ca752b85ffa227dcdf050187420cd943ee",
+"types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e",
+"types_8h.html#a901a06442ef4da16071aed4009348969",
+"types_8h.html#aa7b4e665c5b2a4777b818f6910014a80a2c3925ee01dc00d7a5533e0ccd61bfbe",
+"types_8h.html#ab9465341f65fe8e7ea48e57f83d57520a18dd53e8b4de98d1156803d947fb2ca6",
+"types_8h.html#abff0cc6077b6b352288453cfaef93f80ac12beb1e443935a7c2bb47faae1accfe",
+"types_8h.html#acc0284e7a47f3a3eec5012e46cf9da7ea12455808d6bfbbaf57869ac333e610da",
+"types_8h.html#ade18175d73af40e5bea7bbd888a7c558abcc22c7999c7d11ea5195090e434a621",
+"videomessage_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

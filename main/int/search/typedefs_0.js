@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['quint16z_7869',['quint16z',['../types_8h.html#ab1f19760ebc204816d39999628339d7c',1,'types.h']]],
-  ['quint32z_7870',['quint32z',['../types_8h.html#af8923988212a718608f45e6ac0164095',1,'types.h']]],
-  ['quint64z_7871',['quint64z',['../types_8h.html#aad0aa5118416fc0b0716aa1282ad4946',1,'types.h']]]
+  ['localdevicetype_7869',['LocalDeviceType',['../types_8h.html#ae953cde0bbb9b96d1403a322bbee5a25',1,'types.h']]],
+  ['localtimeintoday_7870',['LocaltimeIntoDay',['../types_8h.html#adc2e5e09f9d2d670266119c737b69e4f',1,'types.h']]]
 ];
