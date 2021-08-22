@@ -63,6 +63,8 @@ MessageIndex SegmentFileMessage::messageIndex() const
 /*!
  * Returns the SegmentFileMessage data message's \c fileUuid field's current value.
  *
+ * UUID of the segment file
+ *
  * \return the \c fileUuid field value.
  */
 QString SegmentFileMessage::fileUuid() const
@@ -73,6 +75,8 @@ QString SegmentFileMessage::fileUuid() const
 
 /*!
  * Returns the SegmentFileMessage data message's \c enabled field's current value.
+ *
+ * Enabled state of the segment file
  *
  * \return the \c enabled field value.
  */
@@ -85,6 +89,8 @@ bool SegmentFileMessage::enabled() const
 /*!
  * Returns the SegmentFileMessage data message's \c userProfilePrimaryKey field's current value.
  *
+ * Primary key of the user that created the segment file
+ *
  * \return the \c userProfilePrimaryKey field value.
  */
 quint32 SegmentFileMessage::userProfilePrimaryKey() const
@@ -95,6 +101,8 @@ quint32 SegmentFileMessage::userProfilePrimaryKey() const
 
 /*!
  * Returns the SegmentFileMessage data message's \c leaderType field's current value.
+ *
+ * Leader type of each leader in the segment file
  *
  * \return the \c leaderType field value.
  */
@@ -107,6 +115,8 @@ SegmentLeaderboardType SegmentFileMessage::leaderType() const
 /*!
  * Returns the SegmentFileMessage data message's \c leaderGroupPrimaryKey field's current value.
  *
+ * Group primary key of each leader in the segment file
+ *
  * \return the \c leaderGroupPrimaryKey field value.
  */
 quint32 SegmentFileMessage::leaderGroupPrimaryKey() const
@@ -117,6 +127,8 @@ quint32 SegmentFileMessage::leaderGroupPrimaryKey() const
 
 /*!
  * Returns the SegmentFileMessage data message's \c leaderActivityId field's current value.
+ *
+ * Activity ID of each leader in the segment file
  *
  * \return the \c leaderActivityId field value.
  */
@@ -129,6 +141,8 @@ quint32 SegmentFileMessage::leaderActivityId() const
 /*!
  * Returns the SegmentFileMessage data message's \c leaderActivityIdString field's current value.
  *
+ * String version of the activity ID of each leader in the segment file. 21 characters long for each ID, express in decimal
+ *
  * \return the \c leaderActivityIdString field value.
  */
 QString SegmentFileMessage::leaderActivityIdString() const
@@ -139,6 +153,8 @@ QString SegmentFileMessage::leaderActivityIdString() const
 
 /*!
  * Returns the SegmentFileMessage data message's \c defaultRaceLeader field's current value.
+ *
+ * Index for the Leader Board entry selected as the default race participant
  *
  * \return the \c defaultRaceLeader field value.
  */

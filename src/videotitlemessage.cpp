@@ -52,6 +52,8 @@ VideoTitleMessage::VideoTitleMessage() : AbstractDataMessage(new VideoTitleMessa
 /*!
  * Returns the VideoTitleMessage data message's \c messageIndex field's current value.
  *
+ * Long titles will be split into multiple parts
+ *
  * \return the \c messageIndex field value.
  */
 MessageIndex VideoTitleMessage::messageIndex() const
@@ -62,6 +64,8 @@ MessageIndex VideoTitleMessage::messageIndex() const
 
 /*!
  * Returns the VideoTitleMessage data message's \c messageCount field's current value.
+ *
+ * Total number of title parts
  *
  * \return the \c messageCount field value.
  */

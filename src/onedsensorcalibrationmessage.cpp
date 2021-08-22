@@ -52,6 +52,8 @@ OneDSensorCalibrationMessage::OneDSensorCalibrationMessage() : AbstractDataMessa
 /*!
  * Returns the OneDSensorCalibrationMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp
+ *
  * \return the \c timestamp field value.
  */
 DateTime OneDSensorCalibrationMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime OneDSensorCalibrationMessage::timestamp() const
 
 /*!
  * Returns the OneDSensorCalibrationMessage data message's \c sensorType field's current value.
+ *
+ * Indicates which sensor the calibration is for
  *
  * \return the \c sensorType field value.
  */
@@ -74,6 +78,8 @@ SensorType OneDSensorCalibrationMessage::sensorType() const
 /*!
  * Returns the OneDSensorCalibrationMessage data message's \c calibrationFactor field's current value.
  *
+ * Calibration factor used to convert from raw ADC value to degrees, g,  etc.
+ *
  * \return the \c calibrationFactor field value.
  */
 quint32 OneDSensorCalibrationMessage::calibrationFactor() const
@@ -84,6 +90,8 @@ quint32 OneDSensorCalibrationMessage::calibrationFactor() const
 
 /*!
  * Returns the OneDSensorCalibrationMessage data message's \c calibrationDivisor field's current value.
+ *
+ * Calibration factor divisor
  *
  * \return the \c calibrationDivisor field value.
  */
@@ -96,6 +104,8 @@ quint32 OneDSensorCalibrationMessage::calibrationDivisor() const
 /*!
  * Returns the OneDSensorCalibrationMessage data message's \c levelShift field's current value.
  *
+ * Level shift value used to shift the ADC value back into range
+ *
  * \return the \c levelShift field value.
  */
 quint32 OneDSensorCalibrationMessage::levelShift() const
@@ -106,6 +116,8 @@ quint32 OneDSensorCalibrationMessage::levelShift() const
 
 /*!
  * Returns the OneDSensorCalibrationMessage data message's \c offsetCal field's current value.
+ *
+ * Internal Calibration factor
  *
  * \return the \c offsetCal field value.
  */

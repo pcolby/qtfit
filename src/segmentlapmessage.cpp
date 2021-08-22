@@ -63,6 +63,8 @@ MessageIndex SegmentLapMessage::messageIndex() const
 /*!
  * Returns the SegmentLapMessage data message's \c timestamp field's current value.
  *
+ * Lap end time.
+ *
  * \return the \c timestamp field value.
  */
 DateTime SegmentLapMessage::timestamp() const
@@ -151,6 +153,8 @@ qint32 SegmentLapMessage::endPositionLong() const
 /*!
  * Returns the SegmentLapMessage data message's \c totalElapsedTime field's current value.
  *
+ * Time (includes pauses)
+ *
  * \return the \c totalElapsedTime field value.
  */
 quint32 SegmentLapMessage::totalElapsedTime() const
@@ -161,6 +165,8 @@ quint32 SegmentLapMessage::totalElapsedTime() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c totalTimerTime field's current value.
+ *
+ * Timer Time (excludes pauses)
  *
  * \return the \c totalTimerTime field value.
  */
@@ -205,6 +211,8 @@ quint16 SegmentLapMessage::totalCalories() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c totalFatCalories field's current value.
+ *
+ * If New Leaf
  *
  * \return the \c totalFatCalories field value.
  */
@@ -261,6 +269,8 @@ quint8 SegmentLapMessage::maxHeartRate() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgCadence field's current value.
  *
+ * total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles / total_elapsed_time
+ *
  * \return the \c avgCadence field value.
  */
 quint8 SegmentLapMessage::avgCadence() const
@@ -282,6 +292,8 @@ quint8 SegmentLapMessage::maxCadence() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c avgPower field's current value.
+ *
+ * total_power / total_timer_time if non_zero_avg_power otherwise total_power / total_elapsed_time
  *
  * \return the \c avgPower field value.
  */
@@ -349,6 +361,8 @@ quint8 SegmentLapMessage::eventGroup() const
 /*!
  * Returns the SegmentLapMessage data message's \c necLat field's current value.
  *
+ * North east corner latitude.
+ *
  * \return the \c necLat field value.
  */
 qint32 SegmentLapMessage::necLat() const
@@ -359,6 +373,8 @@ qint32 SegmentLapMessage::necLat() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c necLong field's current value.
+ *
+ * North east corner longitude.
  *
  * \return the \c necLong field value.
  */
@@ -371,6 +387,8 @@ qint32 SegmentLapMessage::necLong() const
 /*!
  * Returns the SegmentLapMessage data message's \c swcLat field's current value.
  *
+ * South west corner latitude.
+ *
  * \return the \c swcLat field value.
  */
 qint32 SegmentLapMessage::swcLat() const
@@ -381,6 +399,8 @@ qint32 SegmentLapMessage::swcLat() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c swcLong field's current value.
+ *
+ * South west corner latitude.
  *
  * \return the \c swcLong field value.
  */
@@ -800,6 +820,8 @@ QString SegmentLapMessage::uuid() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgFractionalCadence field's current value.
  *
+ * fractional part of the avg_cadence
+ *
  * \return the \c avgFractionalCadence field value.
  */
 quint8 SegmentLapMessage::avgFractionalCadence() const
@@ -811,6 +833,8 @@ quint8 SegmentLapMessage::avgFractionalCadence() const
 /*!
  * Returns the SegmentLapMessage data message's \c maxFractionalCadence field's current value.
  *
+ * fractional part of the max_cadence
+ *
  * \return the \c maxFractionalCadence field value.
  */
 quint8 SegmentLapMessage::maxFractionalCadence() const
@@ -821,6 +845,8 @@ quint8 SegmentLapMessage::maxFractionalCadence() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c totalFractionalCycles field's current value.
+ *
+ * fractional part of the total_cycles
  *
  * \return the \c totalFractionalCycles field value.
  */
@@ -855,6 +881,8 @@ quint16 SegmentLapMessage::rearGearShiftCount() const
 /*!
  * Returns the SegmentLapMessage data message's \c timeStanding field's current value.
  *
+ * Total time spent in the standing position
+ *
  * \return the \c timeStanding field value.
  */
 quint32 SegmentLapMessage::timeStanding() const
@@ -865,6 +893,8 @@ quint32 SegmentLapMessage::timeStanding() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c standCount field's current value.
+ *
+ * Number of transitions to the standing state
  *
  * \return the \c standCount field value.
  */
@@ -877,6 +907,8 @@ quint16 SegmentLapMessage::standCount() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgLeftPco field's current value.
  *
+ * Average left platform center offset
+ *
  * \return the \c avgLeftPco field value.
  */
 qint8 SegmentLapMessage::avgLeftPco() const
@@ -887,6 +919,8 @@ qint8 SegmentLapMessage::avgLeftPco() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c avgRightPco field's current value.
+ *
+ * Average right platform center offset
  *
  * \return the \c avgRightPco field value.
  */
@@ -899,6 +933,8 @@ qint8 SegmentLapMessage::avgRightPco() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgLeftPowerPhase field's current value.
  *
+ * Average left power phase angles. Data value indexes defined by power_phase_type.
+ *
  * \return the \c avgLeftPowerPhase field value.
  */
 quint8 SegmentLapMessage::avgLeftPowerPhase() const
@@ -909,6 +945,8 @@ quint8 SegmentLapMessage::avgLeftPowerPhase() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c avgLeftPowerPhasePeak field's current value.
+ *
+ * Average left power phase peak angles. Data value indexes defined by power_phase_type.
  *
  * \return the \c avgLeftPowerPhasePeak field value.
  */
@@ -921,6 +959,8 @@ quint8 SegmentLapMessage::avgLeftPowerPhasePeak() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgRightPowerPhase field's current value.
  *
+ * Average right power phase angles. Data value indexes defined by power_phase_type.
+ *
  * \return the \c avgRightPowerPhase field value.
  */
 quint8 SegmentLapMessage::avgRightPowerPhase() const
@@ -931,6 +971,8 @@ quint8 SegmentLapMessage::avgRightPowerPhase() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c avgRightPowerPhasePeak field's current value.
+ *
+ * Average right power phase peak angles. Data value indexes defined by power_phase_type.
  *
  * \return the \c avgRightPowerPhasePeak field value.
  */
@@ -943,6 +985,8 @@ quint8 SegmentLapMessage::avgRightPowerPhasePeak() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgPowerPosition field's current value.
  *
+ * Average power by position. Data value indexes defined by rider_position_type.
+ *
  * \return the \c avgPowerPosition field value.
  */
 quint16 SegmentLapMessage::avgPowerPosition() const
@@ -953,6 +997,8 @@ quint16 SegmentLapMessage::avgPowerPosition() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c maxPowerPosition field's current value.
+ *
+ * Maximum power by position. Data value indexes defined by rider_position_type.
  *
  * \return the \c maxPowerPosition field value.
  */
@@ -965,6 +1011,8 @@ quint16 SegmentLapMessage::maxPowerPosition() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgCadencePosition field's current value.
  *
+ * Average cadence by position. Data value indexes defined by rider_position_type.
+ *
  * \return the \c avgCadencePosition field value.
  */
 quint8 SegmentLapMessage::avgCadencePosition() const
@@ -975,6 +1023,8 @@ quint8 SegmentLapMessage::avgCadencePosition() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c maxCadencePosition field's current value.
+ *
+ * Maximum cadence by position. Data value indexes defined by rider_position_type.
  *
  * \return the \c maxCadencePosition field value.
  */
@@ -987,6 +1037,8 @@ quint8 SegmentLapMessage::maxCadencePosition() const
 /*!
  * Returns the SegmentLapMessage data message's \c manufacturer field's current value.
  *
+ * Manufacturer that produced the segment
+ *
  * \return the \c manufacturer field value.
  */
 Manufacturer SegmentLapMessage::manufacturer() const
@@ -997,6 +1049,8 @@ Manufacturer SegmentLapMessage::manufacturer() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c totalGrit field's current value.
+ *
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
  *
  * \return the \c totalGrit field value.
  */
@@ -1009,6 +1063,8 @@ float SegmentLapMessage::totalGrit() const
 /*!
  * Returns the SegmentLapMessage data message's \c totalFlow field's current value.
  *
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
+ *
  * \return the \c totalFlow field value.
  */
 float SegmentLapMessage::totalFlow() const
@@ -1019,6 +1075,8 @@ float SegmentLapMessage::totalFlow() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c avgGrit field's current value.
+ *
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
  *
  * \return the \c avgGrit field value.
  */
@@ -1031,6 +1089,8 @@ float SegmentLapMessage::avgGrit() const
 /*!
  * Returns the SegmentLapMessage data message's \c avgFlow field's current value.
  *
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
+ *
  * \return the \c avgFlow field value.
  */
 float SegmentLapMessage::avgFlow() const
@@ -1042,6 +1102,8 @@ float SegmentLapMessage::avgFlow() const
 /*!
  * Returns the SegmentLapMessage data message's \c totalFractionalAscent field's current value.
  *
+ * fractional part of total_ascent
+ *
  * \return the \c totalFractionalAscent field value.
  */
 quint8 SegmentLapMessage::totalFractionalAscent() const
@@ -1052,6 +1114,8 @@ quint8 SegmentLapMessage::totalFractionalAscent() const
 
 /*!
  * Returns the SegmentLapMessage data message's \c totalFractionalDescent field's current value.
+ *
+ * fractional part of total_descent
  *
  * \return the \c totalFractionalDescent field value.
  */

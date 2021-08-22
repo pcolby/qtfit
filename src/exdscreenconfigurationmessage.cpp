@@ -63,6 +63,8 @@ quint8 ExdScreenConfigurationMessage::screenIndex() const
 /*!
  * Returns the ExdScreenConfigurationMessage data message's \c fieldCount field's current value.
  *
+ * number of fields in screen
+ *
  * \return the \c fieldCount field value.
  */
 quint8 ExdScreenConfigurationMessage::fieldCount() const

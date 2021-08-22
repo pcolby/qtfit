@@ -338,6 +338,8 @@ quint8z BikeProfileMessage::bikePowerAntIdTransType() const
 /*!
  * Returns the BikeProfileMessage data message's \c odometerRollover field's current value.
  *
+ * Rollover counter that can be used to extend the odometer
+ *
  * \return the \c odometerRollover field value.
  */
 quint8 BikeProfileMessage::odometerRollover() const
@@ -348,6 +350,8 @@ quint8 BikeProfileMessage::odometerRollover() const
 
 /*!
  * Returns the BikeProfileMessage data message's \c frontGearNum field's current value.
+ *
+ * Number of front gears
  *
  * \return the \c frontGearNum field value.
  */
@@ -360,6 +364,8 @@ quint8z BikeProfileMessage::frontGearNum() const
 /*!
  * Returns the BikeProfileMessage data message's \c frontGear field's current value.
  *
+ * Number of teeth on each gear 0 is innermost
+ *
  * \return the \c frontGear field value.
  */
 quint8z BikeProfileMessage::frontGear() const
@@ -371,6 +377,8 @@ quint8z BikeProfileMessage::frontGear() const
 /*!
  * Returns the BikeProfileMessage data message's \c rearGearNum field's current value.
  *
+ * Number of rear gears
+ *
  * \return the \c rearGearNum field value.
  */
 quint8z BikeProfileMessage::rearGearNum() const
@@ -381,6 +389,8 @@ quint8z BikeProfileMessage::rearGearNum() const
 
 /*!
  * Returns the BikeProfileMessage data message's \c rearGear field's current value.
+ *
+ * Number of teeth on each gear 0 is innermost
  *
  * \return the \c rearGear field value.
  */

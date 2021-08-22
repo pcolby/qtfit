@@ -31,6 +31,10 @@
 /*!
  * Returns the {{ClassName}} data message's \c {{field.name}} field's current value.
  *
+{% if field.comment %}
+ * {{field.comment}}
+ *
+{% endif %}
  * \return the \c {{field.name}} field value.
  */
 {{field.cppType}} {{ClassName}}::{{field.name}}() const

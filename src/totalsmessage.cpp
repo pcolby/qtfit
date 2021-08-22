@@ -74,6 +74,8 @@ DateTime TotalsMessage::timestamp() const
 /*!
  * Returns the TotalsMessage data message's \c timerTime field's current value.
  *
+ * Excludes pauses
+ *
  * \return the \c timerTime field value.
  */
 quint32 TotalsMessage::timerTime() const
@@ -117,6 +119,8 @@ Sport TotalsMessage::sport() const
 
 /*!
  * Returns the TotalsMessage data message's \c elapsedTime field's current value.
+ *
+ * Includes pauses
  *
  * \return the \c elapsedTime field value.
  */

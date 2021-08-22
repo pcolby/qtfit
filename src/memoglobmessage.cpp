@@ -52,6 +52,8 @@ MemoGlobMessage::MemoGlobMessage() : AbstractDataMessage(new MemoGlobMessagePriv
 /*!
  * Returns the MemoGlobMessage data message's \c partIndex field's current value.
  *
+ * Sequence number of memo blocks
+ *
  * \return the \c partIndex field value.
  */
 quint32 MemoGlobMessage::partIndex() const
@@ -62,6 +64,8 @@ quint32 MemoGlobMessage::partIndex() const
 
 /*!
  * Returns the MemoGlobMessage data message's \c memo field's current value.
+ *
+ * Block of utf8 bytes
  *
  * \return the \c memo field value.
  */
@@ -74,6 +78,8 @@ quint8 MemoGlobMessage::memo() const
 /*!
  * Returns the MemoGlobMessage data message's \c messageNumber field's current value.
  *
+ * Allows relating glob to another mesg  If used only required for first part of each memo_glob
+ *
  * \return the \c messageNumber field value.
  */
 quint16 MemoGlobMessage::messageNumber() const
@@ -84,6 +90,8 @@ quint16 MemoGlobMessage::messageNumber() const
 
 /*!
  * Returns the MemoGlobMessage data message's \c messageIndex field's current value.
+ *
+ * Index of external mesg
  *
  * \return the \c messageIndex field value.
  */

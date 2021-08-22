@@ -52,6 +52,8 @@ DiveAlarmMessage::DiveAlarmMessage() : AbstractDataMessage(new DiveAlarmMessageP
 /*!
  * Returns the DiveAlarmMessage data message's \c messageIndex field's current value.
  *
+ * Index of the alarm
+ *
  * \return the \c messageIndex field value.
  */
 MessageIndex DiveAlarmMessage::messageIndex() const

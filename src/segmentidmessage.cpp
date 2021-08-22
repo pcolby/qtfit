@@ -52,6 +52,8 @@ SegmentIdMessage::SegmentIdMessage() : AbstractDataMessage(new SegmentIdMessageP
 /*!
  * Returns the SegmentIdMessage data message's \c name field's current value.
  *
+ * Friendly name assigned to segment
+ *
  * \return the \c name field value.
  */
 QString SegmentIdMessage::name() const
@@ -62,6 +64,8 @@ QString SegmentIdMessage::name() const
 
 /*!
  * Returns the SegmentIdMessage data message's \c uuid field's current value.
+ *
+ * UUID of the segment
  *
  * \return the \c uuid field value.
  */
@@ -74,6 +78,8 @@ QString SegmentIdMessage::uuid() const
 /*!
  * Returns the SegmentIdMessage data message's \c sport field's current value.
  *
+ * Sport associated with the segment
+ *
  * \return the \c sport field value.
  */
 Sport SegmentIdMessage::sport() const
@@ -84,6 +90,8 @@ Sport SegmentIdMessage::sport() const
 
 /*!
  * Returns the SegmentIdMessage data message's \c enabled field's current value.
+ *
+ * Segment enabled for evaluation
  *
  * \return the \c enabled field value.
  */
@@ -96,6 +104,8 @@ bool SegmentIdMessage::enabled() const
 /*!
  * Returns the SegmentIdMessage data message's \c userProfilePrimaryKey field's current value.
  *
+ * Primary key of the user that created the segment
+ *
  * \return the \c userProfilePrimaryKey field value.
  */
 quint32 SegmentIdMessage::userProfilePrimaryKey() const
@@ -106,6 +116,8 @@ quint32 SegmentIdMessage::userProfilePrimaryKey() const
 
 /*!
  * Returns the SegmentIdMessage data message's \c deviceId field's current value.
+ *
+ * ID of the device that created the segment
  *
  * \return the \c deviceId field value.
  */
@@ -118,6 +130,8 @@ quint32 SegmentIdMessage::deviceId() const
 /*!
  * Returns the SegmentIdMessage data message's \c defaultRaceLeader field's current value.
  *
+ * Index for the Leader Board entry selected as the default race participant
+ *
  * \return the \c defaultRaceLeader field value.
  */
 quint8 SegmentIdMessage::defaultRaceLeader() const
@@ -129,6 +143,8 @@ quint8 SegmentIdMessage::defaultRaceLeader() const
 /*!
  * Returns the SegmentIdMessage data message's \c deleteStatus field's current value.
  *
+ * Indicates if any segments should be deleted
+ *
  * \return the \c deleteStatus field value.
  */
 SegmentDeleteStatus SegmentIdMessage::deleteStatus() const
@@ -139,6 +155,8 @@ SegmentDeleteStatus SegmentIdMessage::deleteStatus() const
 
 /*!
  * Returns the SegmentIdMessage data message's \c selectionType field's current value.
+ *
+ * Indicates how the segment was selected to be sent to the device
  *
  * \return the \c selectionType field value.
  */

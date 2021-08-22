@@ -173,6 +173,8 @@ qint16 RecordMessage::grade() const
 /*!
  * Returns the RecordMessage data message's \c resistance field's current value.
  *
+ * Relative. 0 is none  254 is Max.
+ *
  * \return the \c resistance field value.
  */
 quint8 RecordMessage::resistance() const
@@ -216,6 +218,8 @@ qint8 RecordMessage::temperature() const
 
 /*!
  * Returns the RecordMessage data message's \c speed1s field's current value.
+ *
+ * Speed at 1s intervals.  Timestamp field indicates time of last array element.
  *
  * \return the \c speed1s field value.
  */
@@ -459,6 +463,8 @@ quint16 RecordMessage::ballSpeed() const
 /*!
  * Returns the RecordMessage data message's \c cadence256 field's current value.
  *
+ * Log cadence and fractional cadence for backwards compatability
+ *
  * \return the \c cadence256 field value.
  */
 quint16 RecordMessage::cadence256() const
@@ -481,6 +487,8 @@ quint8 RecordMessage::fractionalCadence() const
 /*!
  * Returns the RecordMessage data message's \c totalHemoglobinConc field's current value.
  *
+ * Total saturated and unsaturated hemoglobin
+ *
  * \return the \c totalHemoglobinConc field value.
  */
 quint16 RecordMessage::totalHemoglobinConc() const
@@ -491,6 +499,8 @@ quint16 RecordMessage::totalHemoglobinConc() const
 
 /*!
  * Returns the RecordMessage data message's \c totalHemoglobinConcMin field's current value.
+ *
+ * Min saturated and unsaturated hemoglobin
  *
  * \return the \c totalHemoglobinConcMin field value.
  */
@@ -503,6 +513,8 @@ quint16 RecordMessage::totalHemoglobinConcMin() const
 /*!
  * Returns the RecordMessage data message's \c totalHemoglobinConcMax field's current value.
  *
+ * Max saturated and unsaturated hemoglobin
+ *
  * \return the \c totalHemoglobinConcMax field value.
  */
 quint16 RecordMessage::totalHemoglobinConcMax() const
@@ -513,6 +525,8 @@ quint16 RecordMessage::totalHemoglobinConcMax() const
 
 /*!
  * Returns the RecordMessage data message's \c saturatedHemoglobinPercent field's current value.
+ *
+ * Percentage of hemoglobin saturated with oxygen
  *
  * \return the \c saturatedHemoglobinPercent field value.
  */
@@ -525,6 +539,8 @@ quint16 RecordMessage::saturatedHemoglobinPercent() const
 /*!
  * Returns the RecordMessage data message's \c saturatedHemoglobinPercentMin field's current value.
  *
+ * Min percentage of hemoglobin saturated with oxygen
+ *
  * \return the \c saturatedHemoglobinPercentMin field value.
  */
 quint16 RecordMessage::saturatedHemoglobinPercentMin() const
@@ -535,6 +551,8 @@ quint16 RecordMessage::saturatedHemoglobinPercentMin() const
 
 /*!
  * Returns the RecordMessage data message's \c saturatedHemoglobinPercentMax field's current value.
+ *
+ * Max percentage of hemoglobin saturated with oxygen
  *
  * \return the \c saturatedHemoglobinPercentMax field value.
  */
@@ -558,6 +576,8 @@ DeviceIndex RecordMessage::deviceIndex() const
 /*!
  * Returns the RecordMessage data message's \c leftPco field's current value.
  *
+ * Left platform center offset
+ *
  * \return the \c leftPco field value.
  */
 qint8 RecordMessage::leftPco() const
@@ -568,6 +588,8 @@ qint8 RecordMessage::leftPco() const
 
 /*!
  * Returns the RecordMessage data message's \c rightPco field's current value.
+ *
+ * Right platform center offset
  *
  * \return the \c rightPco field value.
  */
@@ -580,6 +602,8 @@ qint8 RecordMessage::rightPco() const
 /*!
  * Returns the RecordMessage data message's \c leftPowerPhase field's current value.
  *
+ * Left power phase angles. Data value indexes defined by power_phase_type.
+ *
  * \return the \c leftPowerPhase field value.
  */
 quint8 RecordMessage::leftPowerPhase() const
@@ -590,6 +614,8 @@ quint8 RecordMessage::leftPowerPhase() const
 
 /*!
  * Returns the RecordMessage data message's \c leftPowerPhasePeak field's current value.
+ *
+ * Left power phase peak angles. Data value indexes defined by power_phase_type.
  *
  * \return the \c leftPowerPhasePeak field value.
  */
@@ -602,6 +628,8 @@ quint8 RecordMessage::leftPowerPhasePeak() const
 /*!
  * Returns the RecordMessage data message's \c rightPowerPhase field's current value.
  *
+ * Right power phase angles. Data value indexes defined by power_phase_type.
+ *
  * \return the \c rightPowerPhase field value.
  */
 quint8 RecordMessage::rightPowerPhase() const
@@ -612,6 +640,8 @@ quint8 RecordMessage::rightPowerPhase() const
 
 /*!
  * Returns the RecordMessage data message's \c rightPowerPhasePeak field's current value.
+ *
+ * Right power phase peak angles. Data value indexes defined by power_phase_type.
  *
  * \return the \c rightPowerPhasePeak field value.
  */
@@ -646,6 +676,8 @@ quint32 RecordMessage::enhancedAltitude() const
 /*!
  * Returns the RecordMessage data message's \c batterySoc field's current value.
  *
+ * lev battery state of charge
+ *
  * \return the \c batterySoc field value.
  */
 quint8 RecordMessage::batterySoc() const
@@ -656,6 +688,8 @@ quint8 RecordMessage::batterySoc() const
 
 /*!
  * Returns the RecordMessage data message's \c motorPower field's current value.
+ *
+ * lev motor power
  *
  * \return the \c motorPower field value.
  */
@@ -701,6 +735,8 @@ quint16 RecordMessage::stepLength() const
 /*!
  * Returns the RecordMessage data message's \c absolutePressure field's current value.
  *
+ * Includes atmospheric pressure
+ *
  * \return the \c absolutePressure field value.
  */
 quint32 RecordMessage::absolutePressure() const
@@ -712,6 +748,8 @@ quint32 RecordMessage::absolutePressure() const
 /*!
  * Returns the RecordMessage data message's \c depth field's current value.
  *
+ * 0 if above water
+ *
  * \return the \c depth field value.
  */
 quint32 RecordMessage::depth() const
@@ -722,6 +760,8 @@ quint32 RecordMessage::depth() const
 
 /*!
  * Returns the RecordMessage data message's \c nextStopDepth field's current value.
+ *
+ * 0 if above water
  *
  * \return the \c nextStopDepth field value.
  */
@@ -789,6 +829,8 @@ quint16 RecordMessage::n2Load() const
 /*!
  * Returns the RecordMessage data message's \c grit field's current value.
  *
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ *
  * \return the \c grit field value.
  */
 float RecordMessage::grit() const
@@ -799,6 +841,8 @@ float RecordMessage::grit() const
 
 /*!
  * Returns the RecordMessage data message's \c flow field's current value.
+ *
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c flow field value.
  */

@@ -52,6 +52,8 @@ CameraEventMessage::CameraEventMessage() : AbstractDataMessage(new CameraEventMe
 /*!
  * Returns the CameraEventMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp.
+ *
  * \return the \c timestamp field value.
  */
 DateTime CameraEventMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime CameraEventMessage::timestamp() const
 
 /*!
  * Returns the CameraEventMessage data message's \c timestampMs field's current value.
+ *
+ * Millisecond part of the timestamp.
  *
  * \return the \c timestampMs field value.
  */

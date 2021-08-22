@@ -107,6 +107,8 @@ quint32 SdmProfileMessage::odometer() const
 /*!
  * Returns the SdmProfileMessage data message's \c speedSource field's current value.
  *
+ * Use footpod for speed source instead of GPS
+ *
  * \return the \c speedSource field value.
  */
 bool SdmProfileMessage::speedSource() const
@@ -128,6 +130,8 @@ quint8z SdmProfileMessage::sdmAntIdTransType() const
 
 /*!
  * Returns the SdmProfileMessage data message's \c odometerRollover field's current value.
+ *
+ * Rollover counter that can be used to extend the odometer
  *
  * \return the \c odometerRollover field value.
  */

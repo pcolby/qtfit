@@ -52,6 +52,8 @@ ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : AbstractDataM
 /*!
  * Returns the ThreeDSensorCalibrationMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp
+ *
  * \return the \c timestamp field value.
  */
 DateTime ThreeDSensorCalibrationMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime ThreeDSensorCalibrationMessage::timestamp() const
 
 /*!
  * Returns the ThreeDSensorCalibrationMessage data message's \c sensorType field's current value.
+ *
+ * Indicates which sensor the calibration is for
  *
  * \return the \c sensorType field value.
  */
@@ -74,6 +78,8 @@ SensorType ThreeDSensorCalibrationMessage::sensorType() const
 /*!
  * Returns the ThreeDSensorCalibrationMessage data message's \c calibrationFactor field's current value.
  *
+ * Calibration factor used to convert from raw ADC value to degrees, g,  etc.
+ *
  * \return the \c calibrationFactor field value.
  */
 quint32 ThreeDSensorCalibrationMessage::calibrationFactor() const
@@ -84,6 +90,8 @@ quint32 ThreeDSensorCalibrationMessage::calibrationFactor() const
 
 /*!
  * Returns the ThreeDSensorCalibrationMessage data message's \c calibrationDivisor field's current value.
+ *
+ * Calibration factor divisor
  *
  * \return the \c calibrationDivisor field value.
  */
@@ -96,6 +104,8 @@ quint32 ThreeDSensorCalibrationMessage::calibrationDivisor() const
 /*!
  * Returns the ThreeDSensorCalibrationMessage data message's \c levelShift field's current value.
  *
+ * Level shift value used to shift the ADC value back into range
+ *
  * \return the \c levelShift field value.
  */
 quint32 ThreeDSensorCalibrationMessage::levelShift() const
@@ -107,6 +117,8 @@ quint32 ThreeDSensorCalibrationMessage::levelShift() const
 /*!
  * Returns the ThreeDSensorCalibrationMessage data message's \c offsetCal field's current value.
  *
+ * Internal calibration factors, one for each: xy, yx, zx
+ *
  * \return the \c offsetCal field value.
  */
 qint32 ThreeDSensorCalibrationMessage::offsetCal() const
@@ -117,6 +129,8 @@ qint32 ThreeDSensorCalibrationMessage::offsetCal() const
 
 /*!
  * Returns the ThreeDSensorCalibrationMessage data message's \c orientationMatrix field's current value.
+ *
+ * 3 x 3 rotation matrix (row major)
  *
  * \return the \c orientationMatrix field value.
  */

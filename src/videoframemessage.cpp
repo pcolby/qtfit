@@ -52,6 +52,8 @@ VideoFrameMessage::VideoFrameMessage() : AbstractDataMessage(new VideoFrameMessa
 /*!
  * Returns the VideoFrameMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp
+ *
  * \return the \c timestamp field value.
  */
 DateTime VideoFrameMessage::timestamp() const
@@ -63,6 +65,8 @@ DateTime VideoFrameMessage::timestamp() const
 /*!
  * Returns the VideoFrameMessage data message's \c timestampMs field's current value.
  *
+ * Millisecond part of the timestamp.
+ *
  * \return the \c timestampMs field value.
  */
 quint16 VideoFrameMessage::timestampMs() const
@@ -73,6 +77,8 @@ quint16 VideoFrameMessage::timestampMs() const
 
 /*!
  * Returns the VideoFrameMessage data message's \c frameNumber field's current value.
+ *
+ * Number of the frame that the timestamp and timestamp_ms correlate to
  *
  * \return the \c frameNumber field value.
  */

@@ -118,6 +118,8 @@ WaterType DiveSettingsMessage::waterType() const
 /*!
  * Returns the DiveSettingsMessage data message's \c waterDensity field's current value.
  *
+ * Fresh water is usually 1000; salt water is usually 1025
+ *
  * \return the \c waterDensity field value.
  */
 float DiveSettingsMessage::waterDensity() const
@@ -129,6 +131,8 @@ float DiveSettingsMessage::waterDensity() const
 /*!
  * Returns the DiveSettingsMessage data message's \c po2Warn field's current value.
  *
+ * Typically 1.40
+ *
  * \return the \c po2Warn field value.
  */
 quint8 DiveSettingsMessage::po2Warn() const
@@ -139,6 +143,8 @@ quint8 DiveSettingsMessage::po2Warn() const
 
 /*!
  * Returns the DiveSettingsMessage data message's \c po2Critical field's current value.
+ *
+ * Typically 1.60
  *
  * \return the \c po2Critical field value.
  */
@@ -250,6 +256,8 @@ BacklightTimeout DiveSettingsMessage::backlightTimeout() const
 /*!
  * Returns the DiveSettingsMessage data message's \c repeatDiveInterval field's current value.
  *
+ * Time between surfacing and ending the activity
+ *
  * \return the \c repeatDiveInterval field value.
  */
 quint16 DiveSettingsMessage::repeatDiveInterval() const
@@ -260,6 +268,8 @@ quint16 DiveSettingsMessage::repeatDiveInterval() const
 
 /*!
  * Returns the DiveSettingsMessage data message's \c safetyStopTime field's current value.
+ *
+ * Time at safety stop (if enabled)
  *
  * \return the \c safetyStopTime field value.
  */

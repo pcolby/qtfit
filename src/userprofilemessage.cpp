@@ -294,6 +294,8 @@ quint8 UserProfileMessage::globalId() const
 /*!
  * Returns the UserProfileMessage data message's \c wakeTime field's current value.
  *
+ * Typical wake time
+ *
  * \return the \c wakeTime field value.
  */
 LocaltimeIntoDay UserProfileMessage::wakeTime() const
@@ -304,6 +306,8 @@ LocaltimeIntoDay UserProfileMessage::wakeTime() const
 
 /*!
  * Returns the UserProfileMessage data message's \c sleepTime field's current value.
+ *
+ * Typical bed time
  *
  * \return the \c sleepTime field value.
  */
@@ -327,6 +331,8 @@ DisplayMeasure UserProfileMessage::heightSetting() const
 /*!
  * Returns the UserProfileMessage data message's \c userRunningStepLength field's current value.
  *
+ * User defined running step length set to 0 for auto length
+ *
  * \return the \c userRunningStepLength field value.
  */
 quint16 UserProfileMessage::userRunningStepLength() const
@@ -337,6 +343,8 @@ quint16 UserProfileMessage::userRunningStepLength() const
 
 /*!
  * Returns the UserProfileMessage data message's \c userWalkingStepLength field's current value.
+ *
+ * User defined walking step length set to 0 for auto length
  *
  * \return the \c userWalkingStepLength field value.
  */

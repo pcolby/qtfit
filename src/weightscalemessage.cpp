@@ -151,6 +151,8 @@ quint8 WeightScaleMessage::physiqueRating() const
 /*!
  * Returns the WeightScaleMessage data message's \c activeMet field's current value.
  *
+ * ~4kJ per kcal, 0.25 allows max 16384 kcal
+ *
  * \return the \c activeMet field value.
  */
 quint16 WeightScaleMessage::activeMet() const
@@ -183,6 +185,8 @@ quint8 WeightScaleMessage::visceralFatRating() const
 
 /*!
  * Returns the WeightScaleMessage data message's \c userProfileIndex field's current value.
+ *
+ * Associates this weight scale message to a user.  This corresponds to the index of the user profile message in the weight scale file.
  *
  * \return the \c userProfileIndex field value.
  */

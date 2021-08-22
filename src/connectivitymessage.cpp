@@ -52,6 +52,8 @@ ConnectivityMessage::ConnectivityMessage() : AbstractDataMessage(new Connectivit
 /*!
  * Returns the ConnectivityMessage data message's \c bluetoothEnabled field's current value.
  *
+ * Use Bluetooth for connectivity features
+ *
  * \return the \c bluetoothEnabled field value.
  */
 bool ConnectivityMessage::bluetoothEnabled() const
@@ -63,6 +65,8 @@ bool ConnectivityMessage::bluetoothEnabled() const
 /*!
  * Returns the ConnectivityMessage data message's \c bluetoothLeEnabled field's current value.
  *
+ * Use Bluetooth Low Energy for connectivity features
+ *
  * \return the \c bluetoothLeEnabled field value.
  */
 bool ConnectivityMessage::bluetoothLeEnabled() const
@@ -73,6 +77,8 @@ bool ConnectivityMessage::bluetoothLeEnabled() const
 
 /*!
  * Returns the ConnectivityMessage data message's \c antEnabled field's current value.
+ *
+ * Use ANT for connectivity features
  *
  * \return the \c antEnabled field value.
  */

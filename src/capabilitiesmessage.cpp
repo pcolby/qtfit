@@ -52,6 +52,8 @@ CapabilitiesMessage::CapabilitiesMessage() : AbstractDataMessage(new Capabilitie
 /*!
  * Returns the CapabilitiesMessage data message's \c languages field's current value.
  *
+ * Use language_bits_x types where x is index of array.
+ *
  * \return the \c languages field value.
  */
 quint8z CapabilitiesMessage::languages() const
@@ -62,6 +64,8 @@ quint8z CapabilitiesMessage::languages() const
 
 /*!
  * Returns the CapabilitiesMessage data message's \c sports field's current value.
+ *
+ * Use sport_bits_x types where x is index of array.
  *
  * \return the \c sports field value.
  */

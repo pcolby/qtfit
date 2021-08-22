@@ -63,6 +63,8 @@ MessageIndex LapMessage::messageIndex() const
 /*!
  * Returns the LapMessage data message's \c timestamp field's current value.
  *
+ * Lap end time.
+ *
  * \return the \c timestamp field value.
  */
 DateTime LapMessage::timestamp() const
@@ -151,6 +153,8 @@ qint32 LapMessage::endPositionLong() const
 /*!
  * Returns the LapMessage data message's \c totalElapsedTime field's current value.
  *
+ * Time (includes pauses)
+ *
  * \return the \c totalElapsedTime field value.
  */
 quint32 LapMessage::totalElapsedTime() const
@@ -161,6 +165,8 @@ quint32 LapMessage::totalElapsedTime() const
 
 /*!
  * Returns the LapMessage data message's \c totalTimerTime field's current value.
+ *
+ * Timer Time (excludes pauses)
  *
  * \return the \c totalTimerTime field value.
  */
@@ -205,6 +211,8 @@ quint16 LapMessage::totalCalories() const
 
 /*!
  * Returns the LapMessage data message's \c totalFatCalories field's current value.
+ *
+ * If New Leaf
  *
  * \return the \c totalFatCalories field value.
  */
@@ -261,6 +269,8 @@ quint8 LapMessage::maxHeartRate() const
 /*!
  * Returns the LapMessage data message's \c avgCadence field's current value.
  *
+ * total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles / total_elapsed_time
+ *
  * \return the \c avgCadence field value.
  */
 quint8 LapMessage::avgCadence() const
@@ -282,6 +292,8 @@ quint8 LapMessage::maxCadence() const
 
 /*!
  * Returns the LapMessage data message's \c avgPower field's current value.
+ *
+ * total_power / total_timer_time if non_zero_avg_power otherwise total_power / total_elapsed_time
  *
  * \return the \c avgPower field value.
  */
@@ -371,6 +383,8 @@ quint8 LapMessage::eventGroup() const
 /*!
  * Returns the LapMessage data message's \c numLengths field's current value.
  *
+ * # of lengths of swim pool
+ *
  * \return the \c numLengths field value.
  */
 quint16 LapMessage::numLengths() const
@@ -447,6 +461,8 @@ SubSport LapMessage::subSport() const
 
 /*!
  * Returns the LapMessage data message's \c numActiveLengths field's current value.
+ *
+ * # of active lengths of swim pool
  *
  * \return the \c numActiveLengths field value.
  */
@@ -734,6 +750,8 @@ quint16 LapMessage::opponentScore() const
 /*!
  * Returns the LapMessage data message's \c strokeCount field's current value.
  *
+ * stroke_type enum used as the index
+ *
  * \return the \c strokeCount field value.
  */
 quint16 LapMessage::strokeCount() const
@@ -744,6 +762,8 @@ quint16 LapMessage::strokeCount() const
 
 /*!
  * Returns the LapMessage data message's \c zoneCount field's current value.
+ *
+ * zone number used as the index
  *
  * \return the \c zoneCount field value.
  */
@@ -789,6 +809,8 @@ quint16 LapMessage::avgStanceTime() const
 /*!
  * Returns the LapMessage data message's \c avgFractionalCadence field's current value.
  *
+ * fractional part of the avg_cadence
+ *
  * \return the \c avgFractionalCadence field value.
  */
 quint8 LapMessage::avgFractionalCadence() const
@@ -800,6 +822,8 @@ quint8 LapMessage::avgFractionalCadence() const
 /*!
  * Returns the LapMessage data message's \c maxFractionalCadence field's current value.
  *
+ * fractional part of the max_cadence
+ *
  * \return the \c maxFractionalCadence field value.
  */
 quint8 LapMessage::maxFractionalCadence() const
@@ -810,6 +834,8 @@ quint8 LapMessage::maxFractionalCadence() const
 
 /*!
  * Returns the LapMessage data message's \c totalFractionalCycles field's current value.
+ *
+ * fractional part of the total_cycles
  *
  * \return the \c totalFractionalCycles field value.
  */
@@ -833,6 +859,8 @@ quint16 LapMessage::playerScore() const
 /*!
  * Returns the LapMessage data message's \c avgTotalHemoglobinConc field's current value.
  *
+ * Avg saturated and unsaturated hemoglobin
+ *
  * \return the \c avgTotalHemoglobinConc field value.
  */
 quint16 LapMessage::avgTotalHemoglobinConc() const
@@ -843,6 +871,8 @@ quint16 LapMessage::avgTotalHemoglobinConc() const
 
 /*!
  * Returns the LapMessage data message's \c minTotalHemoglobinConc field's current value.
+ *
+ * Min saturated and unsaturated hemoglobin
  *
  * \return the \c minTotalHemoglobinConc field value.
  */
@@ -855,6 +885,8 @@ quint16 LapMessage::minTotalHemoglobinConc() const
 /*!
  * Returns the LapMessage data message's \c maxTotalHemoglobinConc field's current value.
  *
+ * Max saturated and unsaturated hemoglobin
+ *
  * \return the \c maxTotalHemoglobinConc field value.
  */
 quint16 LapMessage::maxTotalHemoglobinConc() const
@@ -865,6 +897,8 @@ quint16 LapMessage::maxTotalHemoglobinConc() const
 
 /*!
  * Returns the LapMessage data message's \c avgSaturatedHemoglobinPercent field's current value.
+ *
+ * Avg percentage of hemoglobin saturated with oxygen
  *
  * \return the \c avgSaturatedHemoglobinPercent field value.
  */
@@ -877,6 +911,8 @@ quint16 LapMessage::avgSaturatedHemoglobinPercent() const
 /*!
  * Returns the LapMessage data message's \c minSaturatedHemoglobinPercent field's current value.
  *
+ * Min percentage of hemoglobin saturated with oxygen
+ *
  * \return the \c minSaturatedHemoglobinPercent field value.
  */
 quint16 LapMessage::minSaturatedHemoglobinPercent() const
@@ -887,6 +923,8 @@ quint16 LapMessage::minSaturatedHemoglobinPercent() const
 
 /*!
  * Returns the LapMessage data message's \c maxSaturatedHemoglobinPercent field's current value.
+ *
+ * Max percentage of hemoglobin saturated with oxygen
  *
  * \return the \c maxSaturatedHemoglobinPercent field value.
  */
@@ -954,6 +992,8 @@ quint8 LapMessage::avgCombinedPedalSmoothness() const
 /*!
  * Returns the LapMessage data message's \c timeStanding field's current value.
  *
+ * Total time spent in the standing position
+ *
  * \return the \c timeStanding field value.
  */
 quint32 LapMessage::timeStanding() const
@@ -964,6 +1004,8 @@ quint32 LapMessage::timeStanding() const
 
 /*!
  * Returns the LapMessage data message's \c standCount field's current value.
+ *
+ * Number of transitions to the standing state
  *
  * \return the \c standCount field value.
  */
@@ -976,6 +1018,8 @@ quint16 LapMessage::standCount() const
 /*!
  * Returns the LapMessage data message's \c avgLeftPco field's current value.
  *
+ * Average left platform center offset
+ *
  * \return the \c avgLeftPco field value.
  */
 qint8 LapMessage::avgLeftPco() const
@@ -986,6 +1030,8 @@ qint8 LapMessage::avgLeftPco() const
 
 /*!
  * Returns the LapMessage data message's \c avgRightPco field's current value.
+ *
+ * Average right platform center offset
  *
  * \return the \c avgRightPco field value.
  */
@@ -998,6 +1044,8 @@ qint8 LapMessage::avgRightPco() const
 /*!
  * Returns the LapMessage data message's \c avgLeftPowerPhase field's current value.
  *
+ * Average left power phase angles. Data value indexes defined by power_phase_type.
+ *
  * \return the \c avgLeftPowerPhase field value.
  */
 quint8 LapMessage::avgLeftPowerPhase() const
@@ -1008,6 +1056,8 @@ quint8 LapMessage::avgLeftPowerPhase() const
 
 /*!
  * Returns the LapMessage data message's \c avgLeftPowerPhasePeak field's current value.
+ *
+ * Average left power phase peak angles. Data value indexes  defined by power_phase_type.
  *
  * \return the \c avgLeftPowerPhasePeak field value.
  */
@@ -1020,6 +1070,8 @@ quint8 LapMessage::avgLeftPowerPhasePeak() const
 /*!
  * Returns the LapMessage data message's \c avgRightPowerPhase field's current value.
  *
+ * Average right power phase angles. Data value indexes defined by power_phase_type.
+ *
  * \return the \c avgRightPowerPhase field value.
  */
 quint8 LapMessage::avgRightPowerPhase() const
@@ -1030,6 +1082,8 @@ quint8 LapMessage::avgRightPowerPhase() const
 
 /*!
  * Returns the LapMessage data message's \c avgRightPowerPhasePeak field's current value.
+ *
+ * Average right power phase peak angles. Data value indexes  defined by power_phase_type.
  *
  * \return the \c avgRightPowerPhasePeak field value.
  */
@@ -1042,6 +1096,8 @@ quint8 LapMessage::avgRightPowerPhasePeak() const
 /*!
  * Returns the LapMessage data message's \c avgPowerPosition field's current value.
  *
+ * Average power by position. Data value indexes defined by rider_position_type.
+ *
  * \return the \c avgPowerPosition field value.
  */
 quint16 LapMessage::avgPowerPosition() const
@@ -1052,6 +1108,8 @@ quint16 LapMessage::avgPowerPosition() const
 
 /*!
  * Returns the LapMessage data message's \c maxPowerPosition field's current value.
+ *
+ * Maximum power by position. Data value indexes defined by rider_position_type.
  *
  * \return the \c maxPowerPosition field value.
  */
@@ -1064,6 +1122,8 @@ quint16 LapMessage::maxPowerPosition() const
 /*!
  * Returns the LapMessage data message's \c avgCadencePosition field's current value.
  *
+ * Average cadence by position. Data value indexes defined by rider_position_type.
+ *
  * \return the \c avgCadencePosition field value.
  */
 quint8 LapMessage::avgCadencePosition() const
@@ -1074,6 +1134,8 @@ quint8 LapMessage::avgCadencePosition() const
 
 /*!
  * Returns the LapMessage data message's \c maxCadencePosition field's current value.
+ *
+ * Maximum cadence by position. Data value indexes defined by rider_position_type.
  *
  * \return the \c maxCadencePosition field value.
  */
@@ -1141,6 +1203,8 @@ quint32 LapMessage::enhancedMaxAltitude() const
 /*!
  * Returns the LapMessage data message's \c avgLevMotorPower field's current value.
  *
+ * lev average motor power during lap
+ *
  * \return the \c avgLevMotorPower field value.
  */
 quint16 LapMessage::avgLevMotorPower() const
@@ -1152,6 +1216,8 @@ quint16 LapMessage::avgLevMotorPower() const
 /*!
  * Returns the LapMessage data message's \c maxLevMotorPower field's current value.
  *
+ * lev maximum motor power during lap
+ *
  * \return the \c maxLevMotorPower field value.
  */
 quint16 LapMessage::maxLevMotorPower() const
@@ -1162,6 +1228,8 @@ quint16 LapMessage::maxLevMotorPower() const
 
 /*!
  * Returns the LapMessage data message's \c levBatteryConsumption field's current value.
+ *
+ * lev battery consumption during lap
  *
  * \return the \c levBatteryConsumption field value.
  */
@@ -1218,6 +1286,8 @@ quint16 LapMessage::avgVam() const
 /*!
  * Returns the LapMessage data message's \c totalGrit field's current value.
  *
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ *
  * \return the \c totalGrit field value.
  */
 float LapMessage::totalGrit() const
@@ -1228,6 +1298,8 @@ float LapMessage::totalGrit() const
 
 /*!
  * Returns the LapMessage data message's \c totalFlow field's current value.
+ *
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c totalFlow field value.
  */
@@ -1251,6 +1323,8 @@ quint16 LapMessage::jumpCount() const
 /*!
  * Returns the LapMessage data message's \c avgGrit field's current value.
  *
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ *
  * \return the \c avgGrit field value.
  */
 float LapMessage::avgGrit() const
@@ -1261,6 +1335,8 @@ float LapMessage::avgGrit() const
 
 /*!
  * Returns the LapMessage data message's \c avgFlow field's current value.
+ *
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c avgFlow field value.
  */
@@ -1273,6 +1349,8 @@ float LapMessage::avgFlow() const
 /*!
  * Returns the LapMessage data message's \c totalFractionalAscent field's current value.
  *
+ * fractional part of total_ascent
+ *
  * \return the \c totalFractionalAscent field value.
  */
 quint8 LapMessage::totalFractionalAscent() const
@@ -1283,6 +1361,8 @@ quint8 LapMessage::totalFractionalAscent() const
 
 /*!
  * Returns the LapMessage data message's \c totalFractionalDescent field's current value.
+ *
+ * fractional part of total_descent
  *
  * \return the \c totalFractionalDescent field value.
  */

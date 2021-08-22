@@ -52,6 +52,8 @@ GpsMetadataMessage::GpsMetadataMessage() : AbstractDataMessage(new GpsMetadataMe
 /*!
  * Returns the GpsMetadataMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp.
+ *
  * \return the \c timestamp field value.
  */
 DateTime GpsMetadataMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime GpsMetadataMessage::timestamp() const
 
 /*!
  * Returns the GpsMetadataMessage data message's \c timestampMs field's current value.
+ *
+ * Millisecond part of the timestamp.
  *
  * \return the \c timestampMs field value.
  */
@@ -129,6 +133,8 @@ quint16 GpsMetadataMessage::heading() const
 /*!
  * Returns the GpsMetadataMessage data message's \c utcTimestamp field's current value.
  *
+ * Used to correlate UTC to system time if the timestamp of the message is in system time.  This UTC time is derived from the GPS data.
+ *
  * \return the \c utcTimestamp field value.
  */
 DateTime GpsMetadataMessage::utcTimestamp() const
@@ -139,6 +145,8 @@ DateTime GpsMetadataMessage::utcTimestamp() const
 
 /*!
  * Returns the GpsMetadataMessage data message's \c velocity field's current value.
+ *
+ * velocity[0] is lon velocity.  Velocity[1] is lat velocity.  Velocity[2] is altitude velocity.
  *
  * \return the \c velocity field value.
  */

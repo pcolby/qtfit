@@ -85,6 +85,8 @@ qint32 SegmentPointMessage::positionLong() const
 /*!
  * Returns the SegmentPointMessage data message's \c distance field's current value.
  *
+ * Accumulated distance along the segment at the described point
+ *
  * \return the \c distance field value.
  */
 quint32 SegmentPointMessage::distance() const
@@ -96,6 +98,8 @@ quint32 SegmentPointMessage::distance() const
 /*!
  * Returns the SegmentPointMessage data message's \c altitude field's current value.
  *
+ * Accumulated altitude along the segment at the described point
+ *
  * \return the \c altitude field value.
  */
 quint16 SegmentPointMessage::altitude() const
@@ -106,6 +110,8 @@ quint16 SegmentPointMessage::altitude() const
 
 /*!
  * Returns the SegmentPointMessage data message's \c leaderTime field's current value.
+ *
+ * Accumualted time each leader board member required to reach the described point. This value is zero for all leader board members at the starting point of the segment.
  *
  * \return the \c leaderTime field value.
  */

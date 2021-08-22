@@ -52,6 +52,8 @@ SetMessage::SetMessage() : AbstractDataMessage(new SetMessagePrivate(this))
 /*!
  * Returns the SetMessage data message's \c timestamp field's current value.
  *
+ * Timestamp of the set
+ *
  * \return the \c timestamp field value.
  */
 DateTime SetMessage::timestamp() const
@@ -74,6 +76,8 @@ quint32 SetMessage::duration() const
 /*!
  * Returns the SetMessage data message's \c repetitions field's current value.
  *
+ * # of repitions of the movement
+ *
  * \return the \c repetitions field value.
  */
 quint16 SetMessage::repetitions() const
@@ -84,6 +88,8 @@ quint16 SetMessage::repetitions() const
 
 /*!
  * Returns the SetMessage data message's \c weight field's current value.
+ *
+ * Amount of weight applied for the set
  *
  * \return the \c weight field value.
  */
@@ -107,6 +113,8 @@ SetType SetMessage::setType() const
 /*!
  * Returns the SetMessage data message's \c startTime field's current value.
  *
+ * Start time of the set
+ *
  * \return the \c startTime field value.
  */
 DateTime SetMessage::startTime() const
@@ -128,6 +136,8 @@ ExerciseCategory SetMessage::category() const
 
 /*!
  * Returns the SetMessage data message's \c categorySubtype field's current value.
+ *
+ * Based on the associated category, see [category]_exercise_names
  *
  * \return the \c categorySubtype field value.
  */

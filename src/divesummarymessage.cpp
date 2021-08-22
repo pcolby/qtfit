@@ -85,6 +85,8 @@ MessageIndex DiveSummaryMessage::referenceIndex() const
 /*!
  * Returns the DiveSummaryMessage data message's \c avgDepth field's current value.
  *
+ * 0 if above water
+ *
  * \return the \c avgDepth field value.
  */
 quint32 DiveSummaryMessage::avgDepth() const
@@ -96,6 +98,8 @@ quint32 DiveSummaryMessage::avgDepth() const
 /*!
  * Returns the DiveSummaryMessage data message's \c maxDepth field's current value.
  *
+ * 0 if above water
+ *
  * \return the \c maxDepth field value.
  */
 quint32 DiveSummaryMessage::maxDepth() const
@@ -106,6 +110,8 @@ quint32 DiveSummaryMessage::maxDepth() const
 
 /*!
  * Returns the DiveSummaryMessage data message's \c surfaceInterval field's current value.
+ *
+ * Time since end of last dive
  *
  * \return the \c surfaceInterval field value.
  */

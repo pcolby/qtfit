@@ -74,6 +74,8 @@ QString VideoMessage::hostingProvider() const
 /*!
  * Returns the VideoMessage data message's \c duration field's current value.
  *
+ * Playback time of video
+ *
  * \return the \c duration field value.
  */
 quint32 VideoMessage::duration() const

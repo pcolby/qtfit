@@ -63,6 +63,8 @@ DateTime ActivityMessage::timestamp() const
 /*!
  * Returns the ActivityMessage data message's \c totalTimerTime field's current value.
  *
+ * Exclude pauses
+ *
  * \return the \c totalTimerTime field value.
  */
 quint32 ActivityMessage::totalTimerTime() const
@@ -117,6 +119,8 @@ EventType ActivityMessage::eventType() const
 
 /*!
  * Returns the ActivityMessage data message's \c localTimestamp field's current value.
+ *
+ * timestamp epoch expressed in local time, used to convert activity timestamps to local time 
  *
  * \return the \c localTimestamp field value.
  */

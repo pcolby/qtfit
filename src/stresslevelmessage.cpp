@@ -63,6 +63,8 @@ qint16 StressLevelMessage::stressLevelValue() const
 /*!
  * Returns the StressLevelMessage data message's \c stressLevelTime field's current value.
  *
+ * Time stress score was calculated
+ *
  * \return the \c stressLevelTime field value.
  */
 DateTime StressLevelMessage::stressLevelTime() const

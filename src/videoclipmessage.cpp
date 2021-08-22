@@ -107,6 +107,8 @@ quint16 VideoClipMessage::endTimestampMs() const
 /*!
  * Returns the VideoClipMessage data message's \c clipStart field's current value.
  *
+ * Start of clip in video time
+ *
  * \return the \c clipStart field value.
  */
 quint32 VideoClipMessage::clipStart() const
@@ -117,6 +119,8 @@ quint32 VideoClipMessage::clipStart() const
 
 /*!
  * Returns the VideoClipMessage data message's \c clipEnd field's current value.
+ *
+ * End of clip in video time
  *
  * \return the \c clipEnd field value.
  */

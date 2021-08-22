@@ -52,6 +52,8 @@ AccelerometerDataMessage::AccelerometerDataMessage() : AbstractDataMessage(new A
 /*!
  * Returns the AccelerometerDataMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp
+ *
  * \return the \c timestamp field value.
  */
 DateTime AccelerometerDataMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime AccelerometerDataMessage::timestamp() const
 
 /*!
  * Returns the AccelerometerDataMessage data message's \c timestampMs field's current value.
+ *
+ * Millisecond part of the timestamp.
  *
  * \return the \c timestampMs field value.
  */
@@ -74,6 +78,8 @@ quint16 AccelerometerDataMessage::timestampMs() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c sampleTimeOffset field's current value.
  *
+ * Each time in the array describes the time at which the accelerometer sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in accel_x and accel_y and accel_z
+ *
  * \return the \c sampleTimeOffset field value.
  */
 quint16 AccelerometerDataMessage::sampleTimeOffset() const
@@ -84,6 +90,8 @@ quint16 AccelerometerDataMessage::sampleTimeOffset() const
 
 /*!
  * Returns the AccelerometerDataMessage data message's \c accelX field's current value.
+ *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c accelX field value.
  */
@@ -96,6 +104,8 @@ quint16 AccelerometerDataMessage::accelX() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c accelY field's current value.
  *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ *
  * \return the \c accelY field value.
  */
 quint16 AccelerometerDataMessage::accelY() const
@@ -106,6 +116,8 @@ quint16 AccelerometerDataMessage::accelY() const
 
 /*!
  * Returns the AccelerometerDataMessage data message's \c accelZ field's current value.
+ *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c accelZ field value.
  */
@@ -118,6 +130,8 @@ quint16 AccelerometerDataMessage::accelZ() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c calibratedAccelX field's current value.
  *
+ * Calibrated accel reading
+ *
  * \return the \c calibratedAccelX field value.
  */
 float AccelerometerDataMessage::calibratedAccelX() const
@@ -128,6 +142,8 @@ float AccelerometerDataMessage::calibratedAccelX() const
 
 /*!
  * Returns the AccelerometerDataMessage data message's \c calibratedAccelY field's current value.
+ *
+ * Calibrated accel reading
  *
  * \return the \c calibratedAccelY field value.
  */
@@ -140,6 +156,8 @@ float AccelerometerDataMessage::calibratedAccelY() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c calibratedAccelZ field's current value.
  *
+ * Calibrated accel reading
+ *
  * \return the \c calibratedAccelZ field value.
  */
 float AccelerometerDataMessage::calibratedAccelZ() const
@@ -150,6 +168,8 @@ float AccelerometerDataMessage::calibratedAccelZ() const
 
 /*!
  * Returns the AccelerometerDataMessage data message's \c compressedCalibratedAccelX field's current value.
+ *
+ * Calibrated accel reading
  *
  * \return the \c compressedCalibratedAccelX field value.
  */
@@ -162,6 +182,8 @@ qint16 AccelerometerDataMessage::compressedCalibratedAccelX() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c compressedCalibratedAccelY field's current value.
  *
+ * Calibrated accel reading
+ *
  * \return the \c compressedCalibratedAccelY field value.
  */
 qint16 AccelerometerDataMessage::compressedCalibratedAccelY() const
@@ -172,6 +194,8 @@ qint16 AccelerometerDataMessage::compressedCalibratedAccelY() const
 
 /*!
  * Returns the AccelerometerDataMessage data message's \c compressedCalibratedAccelZ field's current value.
+ *
+ * Calibrated accel reading
  *
  * \return the \c compressedCalibratedAccelZ field value.
  */

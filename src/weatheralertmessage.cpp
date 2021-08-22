@@ -63,6 +63,8 @@ DateTime WeatherAlertMessage::timestamp() const
 /*!
  * Returns the WeatherAlertMessage data message's \c reportId field's current value.
  *
+ * Unique identifier from GCS report ID string, length is 12
+ *
  * \return the \c reportId field value.
  */
 QString WeatherAlertMessage::reportId() const
@@ -73,6 +75,8 @@ QString WeatherAlertMessage::reportId() const
 
 /*!
  * Returns the WeatherAlertMessage data message's \c issueTime field's current value.
+ *
+ * Time alert was issued
  *
  * \return the \c issueTime field value.
  */
@@ -85,6 +89,8 @@ DateTime WeatherAlertMessage::issueTime() const
 /*!
  * Returns the WeatherAlertMessage data message's \c expireTime field's current value.
  *
+ * Time alert expires
+ *
  * \return the \c expireTime field value.
  */
 DateTime WeatherAlertMessage::expireTime() const
@@ -96,6 +102,8 @@ DateTime WeatherAlertMessage::expireTime() const
 /*!
  * Returns the WeatherAlertMessage data message's \c severity field's current value.
  *
+ * Warning, Watch, Advisory, Statement
+ *
  * \return the \c severity field value.
  */
 WeatherSeverity WeatherAlertMessage::severity() const
@@ -106,6 +114,8 @@ WeatherSeverity WeatherAlertMessage::severity() const
 
 /*!
  * Returns the WeatherAlertMessage data message's \c type field's current value.
+ *
+ * Tornado, Severe Thunderstorm, etc.
  *
  * \return the \c type field value.
  */

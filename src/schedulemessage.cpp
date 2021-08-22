@@ -52,6 +52,8 @@ ScheduleMessage::ScheduleMessage() : AbstractDataMessage(new ScheduleMessagePriv
 /*!
  * Returns the ScheduleMessage data message's \c manufacturer field's current value.
  *
+ * Corresponds to file_id of scheduled workout / course.
+ *
  * \return the \c manufacturer field value.
  */
 Manufacturer ScheduleMessage::manufacturer() const
@@ -62,6 +64,8 @@ Manufacturer ScheduleMessage::manufacturer() const
 
 /*!
  * Returns the ScheduleMessage data message's \c product field's current value.
+ *
+ * Corresponds to file_id of scheduled workout / course.
  *
  * \return the \c product field value.
  */
@@ -74,6 +78,8 @@ quint16 ScheduleMessage::product() const
 /*!
  * Returns the ScheduleMessage data message's \c serialNumber field's current value.
  *
+ * Corresponds to file_id of scheduled workout / course.
+ *
  * \return the \c serialNumber field value.
  */
 quint32z ScheduleMessage::serialNumber() const
@@ -85,6 +91,8 @@ quint32z ScheduleMessage::serialNumber() const
 /*!
  * Returns the ScheduleMessage data message's \c timeCreated field's current value.
  *
+ * Corresponds to file_id of scheduled workout / course.
+ *
  * \return the \c timeCreated field value.
  */
 DateTime ScheduleMessage::timeCreated() const
@@ -95,6 +103,8 @@ DateTime ScheduleMessage::timeCreated() const
 
 /*!
  * Returns the ScheduleMessage data message's \c completed field's current value.
+ *
+ * TRUE if this activity has been started
  *
  * \return the \c completed field value.
  */

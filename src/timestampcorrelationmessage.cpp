@@ -52,6 +52,8 @@ TimestampCorrelationMessage::TimestampCorrelationMessage() : AbstractDataMessage
 /*!
  * Returns the TimestampCorrelationMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of UTC timestamp at the time the system timestamp was recorded.
+ *
  * \return the \c timestamp field value.
  */
 DateTime TimestampCorrelationMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime TimestampCorrelationMessage::timestamp() const
 
 /*!
  * Returns the TimestampCorrelationMessage data message's \c fractionalTimestamp field's current value.
+ *
+ * Fractional part of the UTC timestamp at the time the system timestamp was recorded.
  *
  * \return the \c fractionalTimestamp field value.
  */
@@ -74,6 +78,8 @@ quint16 TimestampCorrelationMessage::fractionalTimestamp() const
 /*!
  * Returns the TimestampCorrelationMessage data message's \c systemTimestamp field's current value.
  *
+ * Whole second part of the system timestamp
+ *
  * \return the \c systemTimestamp field value.
  */
 DateTime TimestampCorrelationMessage::systemTimestamp() const
@@ -84,6 +90,8 @@ DateTime TimestampCorrelationMessage::systemTimestamp() const
 
 /*!
  * Returns the TimestampCorrelationMessage data message's \c fractionalSystemTimestamp field's current value.
+ *
+ * Fractional part of the system timestamp
  *
  * \return the \c fractionalSystemTimestamp field value.
  */
@@ -96,6 +104,8 @@ quint16 TimestampCorrelationMessage::fractionalSystemTimestamp() const
 /*!
  * Returns the TimestampCorrelationMessage data message's \c localTimestamp field's current value.
  *
+ * timestamp epoch expressed in local time used to convert timestamps to local time
+ *
  * \return the \c localTimestamp field value.
  */
 LocalDateTime TimestampCorrelationMessage::localTimestamp() const
@@ -107,6 +117,8 @@ LocalDateTime TimestampCorrelationMessage::localTimestamp() const
 /*!
  * Returns the TimestampCorrelationMessage data message's \c timestampMs field's current value.
  *
+ * Millisecond part of the UTC timestamp at the time the system timestamp was recorded.
+ *
  * \return the \c timestampMs field value.
  */
 quint16 TimestampCorrelationMessage::timestampMs() const
@@ -117,6 +129,8 @@ quint16 TimestampCorrelationMessage::timestampMs() const
 
 /*!
  * Returns the TimestampCorrelationMessage data message's \c systemTimestampMs field's current value.
+ *
+ * Millisecond part of the system timestamp
  *
  * \return the \c systemTimestampMs field value.
  */

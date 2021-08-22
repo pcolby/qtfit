@@ -107,6 +107,8 @@ float JumpMessage::hangTime() const
 /*!
  * Returns the JumpMessage data message's \c score field's current value.
  *
+ * A score for a jump calculated based on hang time, rotations, and distance.
+ *
  * \return the \c score field value.
  */
 float JumpMessage::score() const

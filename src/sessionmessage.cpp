@@ -52,6 +52,8 @@ SessionMessage::SessionMessage() : AbstractDataMessage(new SessionMessagePrivate
 /*!
  * Returns the SessionMessage data message's \c messageIndex field's current value.
  *
+ * Selected bit is set for the current session.
+ *
  * \return the \c messageIndex field value.
  */
 MessageIndex SessionMessage::messageIndex() const
@@ -62,6 +64,8 @@ MessageIndex SessionMessage::messageIndex() const
 
 /*!
  * Returns the SessionMessage data message's \c timestamp field's current value.
+ *
+ * Sesson end time.
  *
  * \return the \c timestamp field value.
  */
@@ -74,6 +78,8 @@ DateTime SessionMessage::timestamp() const
 /*!
  * Returns the SessionMessage data message's \c event field's current value.
  *
+ * session
+ *
  * \return the \c event field value.
  */
 Event SessionMessage::event() const
@@ -84,6 +90,8 @@ Event SessionMessage::event() const
 
 /*!
  * Returns the SessionMessage data message's \c eventType field's current value.
+ *
+ * stop
  *
  * \return the \c eventType field value.
  */
@@ -151,6 +159,8 @@ SubSport SessionMessage::subSport() const
 /*!
  * Returns the SessionMessage data message's \c totalElapsedTime field's current value.
  *
+ * Time (includes pauses)
+ *
  * \return the \c totalElapsedTime field value.
  */
 quint32 SessionMessage::totalElapsedTime() const
@@ -161,6 +171,8 @@ quint32 SessionMessage::totalElapsedTime() const
 
 /*!
  * Returns the SessionMessage data message's \c totalTimerTime field's current value.
+ *
+ * Timer Time (excludes pauses)
  *
  * \return the \c totalTimerTime field value.
  */
@@ -217,6 +229,8 @@ quint16 SessionMessage::totalFatCalories() const
 /*!
  * Returns the SessionMessage data message's \c avgSpeed field's current value.
  *
+ * total_distance / total_timer_time
+ *
  * \return the \c avgSpeed field value.
  */
 quint16 SessionMessage::avgSpeed() const
@@ -238,6 +252,8 @@ quint16 SessionMessage::maxSpeed() const
 
 /*!
  * Returns the SessionMessage data message's \c avgHeartRate field's current value.
+ *
+ * average heart rate (excludes pause time)
  *
  * \return the \c avgHeartRate field value.
  */
@@ -261,6 +277,8 @@ quint8 SessionMessage::maxHeartRate() const
 /*!
  * Returns the SessionMessage data message's \c avgCadence field's current value.
  *
+ * total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles / total_elapsed_time
+ *
  * \return the \c avgCadence field value.
  */
 quint8 SessionMessage::avgCadence() const
@@ -282,6 +300,8 @@ quint8 SessionMessage::maxCadence() const
 
 /*!
  * Returns the SessionMessage data message's \c avgPower field's current value.
+ *
+ * total_power / total_timer_time if non_zero_avg_power otherwise total_power / total_elapsed_time
  *
  * \return the \c avgPower field value.
  */
@@ -382,6 +402,8 @@ SessionTrigger SessionMessage::trigger() const
 /*!
  * Returns the SessionMessage data message's \c necLat field's current value.
  *
+ * North east corner latitude
+ *
  * \return the \c necLat field value.
  */
 qint32 SessionMessage::necLat() const
@@ -392,6 +414,8 @@ qint32 SessionMessage::necLat() const
 
 /*!
  * Returns the SessionMessage data message's \c necLong field's current value.
+ *
+ * North east corner longitude
  *
  * \return the \c necLong field value.
  */
@@ -404,6 +428,8 @@ qint32 SessionMessage::necLong() const
 /*!
  * Returns the SessionMessage data message's \c swcLat field's current value.
  *
+ * South west corner latitude
+ *
  * \return the \c swcLat field value.
  */
 qint32 SessionMessage::swcLat() const
@@ -415,6 +441,8 @@ qint32 SessionMessage::swcLat() const
 /*!
  * Returns the SessionMessage data message's \c swcLong field's current value.
  *
+ * South west corner longitude
+ *
  * \return the \c swcLong field value.
  */
 qint32 SessionMessage::swcLong() const
@@ -425,6 +453,8 @@ qint32 SessionMessage::swcLong() const
 
 /*!
  * Returns the SessionMessage data message's \c numLengths field's current value.
+ *
+ * # of lengths of swim pool
  *
  * \return the \c numLengths field value.
  */
@@ -546,6 +576,8 @@ DisplayMeasure SessionMessage::poolLengthUnit() const
 
 /*!
  * Returns the SessionMessage data message's \c numActiveLengths field's current value.
+ *
+ * # of active lengths of swim pool
  *
  * \return the \c numActiveLengths field value.
  */
@@ -855,6 +887,8 @@ QString SessionMessage::opponentName() const
 /*!
  * Returns the SessionMessage data message's \c strokeCount field's current value.
  *
+ * stroke_type enum used as the index
+ *
  * \return the \c strokeCount field value.
  */
 quint16 SessionMessage::strokeCount() const
@@ -865,6 +899,8 @@ quint16 SessionMessage::strokeCount() const
 
 /*!
  * Returns the SessionMessage data message's \c zoneCount field's current value.
+ *
+ * zone number used as the index
  *
  * \return the \c zoneCount field value.
  */
@@ -932,6 +968,8 @@ quint16 SessionMessage::avgStanceTime() const
 /*!
  * Returns the SessionMessage data message's \c avgFractionalCadence field's current value.
  *
+ * fractional part of the avg_cadence
+ *
  * \return the \c avgFractionalCadence field value.
  */
 quint8 SessionMessage::avgFractionalCadence() const
@@ -942,6 +980,8 @@ quint8 SessionMessage::avgFractionalCadence() const
 
 /*!
  * Returns the SessionMessage data message's \c maxFractionalCadence field's current value.
+ *
+ * fractional part of the max_cadence
  *
  * \return the \c maxFractionalCadence field value.
  */
@@ -954,6 +994,8 @@ quint8 SessionMessage::maxFractionalCadence() const
 /*!
  * Returns the SessionMessage data message's \c totalFractionalCycles field's current value.
  *
+ * fractional part of the total_cycles
+ *
  * \return the \c totalFractionalCycles field value.
  */
 quint8 SessionMessage::totalFractionalCycles() const
@@ -964,6 +1006,8 @@ quint8 SessionMessage::totalFractionalCycles() const
 
 /*!
  * Returns the SessionMessage data message's \c avgTotalHemoglobinConc field's current value.
+ *
+ * Avg saturated and unsaturated hemoglobin
  *
  * \return the \c avgTotalHemoglobinConc field value.
  */
@@ -976,6 +1020,8 @@ quint16 SessionMessage::avgTotalHemoglobinConc() const
 /*!
  * Returns the SessionMessage data message's \c minTotalHemoglobinConc field's current value.
  *
+ * Min saturated and unsaturated hemoglobin
+ *
  * \return the \c minTotalHemoglobinConc field value.
  */
 quint16 SessionMessage::minTotalHemoglobinConc() const
@@ -986,6 +1032,8 @@ quint16 SessionMessage::minTotalHemoglobinConc() const
 
 /*!
  * Returns the SessionMessage data message's \c maxTotalHemoglobinConc field's current value.
+ *
+ * Max saturated and unsaturated hemoglobin
  *
  * \return the \c maxTotalHemoglobinConc field value.
  */
@@ -998,6 +1046,8 @@ quint16 SessionMessage::maxTotalHemoglobinConc() const
 /*!
  * Returns the SessionMessage data message's \c avgSaturatedHemoglobinPercent field's current value.
  *
+ * Avg percentage of hemoglobin saturated with oxygen
+ *
  * \return the \c avgSaturatedHemoglobinPercent field value.
  */
 quint16 SessionMessage::avgSaturatedHemoglobinPercent() const
@@ -1009,6 +1059,8 @@ quint16 SessionMessage::avgSaturatedHemoglobinPercent() const
 /*!
  * Returns the SessionMessage data message's \c minSaturatedHemoglobinPercent field's current value.
  *
+ * Min percentage of hemoglobin saturated with oxygen
+ *
  * \return the \c minSaturatedHemoglobinPercent field value.
  */
 quint16 SessionMessage::minSaturatedHemoglobinPercent() const
@@ -1019,6 +1071,8 @@ quint16 SessionMessage::minSaturatedHemoglobinPercent() const
 
 /*!
  * Returns the SessionMessage data message's \c maxSaturatedHemoglobinPercent field's current value.
+ *
+ * Max percentage of hemoglobin saturated with oxygen
  *
  * \return the \c maxSaturatedHemoglobinPercent field value.
  */
@@ -1097,6 +1151,8 @@ quint8 SessionMessage::sportIndex() const
 /*!
  * Returns the SessionMessage data message's \c timeStanding field's current value.
  *
+ * Total time spend in the standing position
+ *
  * \return the \c timeStanding field value.
  */
 quint32 SessionMessage::timeStanding() const
@@ -1107,6 +1163,8 @@ quint32 SessionMessage::timeStanding() const
 
 /*!
  * Returns the SessionMessage data message's \c standCount field's current value.
+ *
+ * Number of transitions to the standing state
  *
  * \return the \c standCount field value.
  */
@@ -1119,6 +1177,8 @@ quint16 SessionMessage::standCount() const
 /*!
  * Returns the SessionMessage data message's \c avgLeftPco field's current value.
  *
+ * Average platform center offset Left
+ *
  * \return the \c avgLeftPco field value.
  */
 qint8 SessionMessage::avgLeftPco() const
@@ -1129,6 +1189,8 @@ qint8 SessionMessage::avgLeftPco() const
 
 /*!
  * Returns the SessionMessage data message's \c avgRightPco field's current value.
+ *
+ * Average platform center offset Right
  *
  * \return the \c avgRightPco field value.
  */
@@ -1141,6 +1203,8 @@ qint8 SessionMessage::avgRightPco() const
 /*!
  * Returns the SessionMessage data message's \c avgLeftPowerPhase field's current value.
  *
+ * Average left power phase angles. Indexes defined by power_phase_type.
+ *
  * \return the \c avgLeftPowerPhase field value.
  */
 quint8 SessionMessage::avgLeftPowerPhase() const
@@ -1151,6 +1215,8 @@ quint8 SessionMessage::avgLeftPowerPhase() const
 
 /*!
  * Returns the SessionMessage data message's \c avgLeftPowerPhasePeak field's current value.
+ *
+ * Average left power phase peak angles. Data value indexes defined by power_phase_type.
  *
  * \return the \c avgLeftPowerPhasePeak field value.
  */
@@ -1163,6 +1229,8 @@ quint8 SessionMessage::avgLeftPowerPhasePeak() const
 /*!
  * Returns the SessionMessage data message's \c avgRightPowerPhase field's current value.
  *
+ * Average right power phase angles. Data value indexes defined by power_phase_type.
+ *
  * \return the \c avgRightPowerPhase field value.
  */
 quint8 SessionMessage::avgRightPowerPhase() const
@@ -1173,6 +1241,8 @@ quint8 SessionMessage::avgRightPowerPhase() const
 
 /*!
  * Returns the SessionMessage data message's \c avgRightPowerPhasePeak field's current value.
+ *
+ * Average right power phase peak angles data value indexes  defined by power_phase_type.
  *
  * \return the \c avgRightPowerPhasePeak field value.
  */
@@ -1185,6 +1255,8 @@ quint8 SessionMessage::avgRightPowerPhasePeak() const
 /*!
  * Returns the SessionMessage data message's \c avgPowerPosition field's current value.
  *
+ * Average power by position. Data value indexes defined by rider_position_type.
+ *
  * \return the \c avgPowerPosition field value.
  */
 quint16 SessionMessage::avgPowerPosition() const
@@ -1195,6 +1267,8 @@ quint16 SessionMessage::avgPowerPosition() const
 
 /*!
  * Returns the SessionMessage data message's \c maxPowerPosition field's current value.
+ *
+ * Maximum power by position. Data value indexes defined by rider_position_type.
  *
  * \return the \c maxPowerPosition field value.
  */
@@ -1207,6 +1281,8 @@ quint16 SessionMessage::maxPowerPosition() const
 /*!
  * Returns the SessionMessage data message's \c avgCadencePosition field's current value.
  *
+ * Average cadence by position. Data value indexes defined by rider_position_type.
+ *
  * \return the \c avgCadencePosition field value.
  */
 quint8 SessionMessage::avgCadencePosition() const
@@ -1218,6 +1294,8 @@ quint8 SessionMessage::avgCadencePosition() const
 /*!
  * Returns the SessionMessage data message's \c maxCadencePosition field's current value.
  *
+ * Maximum cadence by position. Data value indexes defined by rider_position_type.
+ *
  * \return the \c maxCadencePosition field value.
  */
 quint8 SessionMessage::maxCadencePosition() const
@@ -1228,6 +1306,8 @@ quint8 SessionMessage::maxCadencePosition() const
 
 /*!
  * Returns the SessionMessage data message's \c enhancedAvgSpeed field's current value.
+ *
+ * total_distance / total_timer_time
  *
  * \return the \c enhancedAvgSpeed field value.
  */
@@ -1284,6 +1364,8 @@ quint32 SessionMessage::enhancedMaxAltitude() const
 /*!
  * Returns the SessionMessage data message's \c avgLevMotorPower field's current value.
  *
+ * lev average motor power during session
+ *
  * \return the \c avgLevMotorPower field value.
  */
 quint16 SessionMessage::avgLevMotorPower() const
@@ -1295,6 +1377,8 @@ quint16 SessionMessage::avgLevMotorPower() const
 /*!
  * Returns the SessionMessage data message's \c maxLevMotorPower field's current value.
  *
+ * lev maximum motor power during session
+ *
  * \return the \c maxLevMotorPower field value.
  */
 quint16 SessionMessage::maxLevMotorPower() const
@@ -1305,6 +1389,8 @@ quint16 SessionMessage::maxLevMotorPower() const
 
 /*!
  * Returns the SessionMessage data message's \c levBatteryConsumption field's current value.
+ *
+ * lev battery consumption during session
  *
  * \return the \c levBatteryConsumption field value.
  */
@@ -1372,6 +1458,8 @@ quint16 SessionMessage::avgVam() const
 /*!
  * Returns the SessionMessage data message's \c totalGrit field's current value.
  *
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ *
  * \return the \c totalGrit field value.
  */
 float SessionMessage::totalGrit() const
@@ -1382,6 +1470,8 @@ float SessionMessage::totalGrit() const
 
 /*!
  * Returns the SessionMessage data message's \c totalFlow field's current value.
+ *
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c totalFlow field value.
  */
@@ -1405,6 +1495,8 @@ quint16 SessionMessage::jumpCount() const
 /*!
  * Returns the SessionMessage data message's \c avgGrit field's current value.
  *
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ *
  * \return the \c avgGrit field value.
  */
 float SessionMessage::avgGrit() const
@@ -1415,6 +1507,8 @@ float SessionMessage::avgGrit() const
 
 /*!
  * Returns the SessionMessage data message's \c avgFlow field's current value.
+ *
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c avgFlow field value.
  */
@@ -1427,6 +1521,8 @@ float SessionMessage::avgFlow() const
 /*!
  * Returns the SessionMessage data message's \c totalFractionalAscent field's current value.
  *
+ * fractional part of total_ascent
+ *
  * \return the \c totalFractionalAscent field value.
  */
 quint8 SessionMessage::totalFractionalAscent() const
@@ -1437,6 +1533,8 @@ quint8 SessionMessage::totalFractionalAscent() const
 
 /*!
  * Returns the SessionMessage data message's \c totalFractionalDescent field's current value.
+ *
+ * fractional part of total_descent
  *
  * \return the \c totalFractionalDescent field value.
  */

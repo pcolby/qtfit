@@ -63,6 +63,8 @@ MessageIndex SegmentLeaderboardEntryMessage::messageIndex() const
 /*!
  * Returns the SegmentLeaderboardEntryMessage data message's \c name field's current value.
  *
+ * Friendly name assigned to leader
+ *
  * \return the \c name field value.
  */
 QString SegmentLeaderboardEntryMessage::name() const
@@ -73,6 +75,8 @@ QString SegmentLeaderboardEntryMessage::name() const
 
 /*!
  * Returns the SegmentLeaderboardEntryMessage data message's \c type field's current value.
+ *
+ * Leader classification
  *
  * \return the \c type field value.
  */
@@ -85,6 +89,8 @@ SegmentLeaderboardType SegmentLeaderboardEntryMessage::type() const
 /*!
  * Returns the SegmentLeaderboardEntryMessage data message's \c groupPrimaryKey field's current value.
  *
+ * Primary user ID of this leader
+ *
  * \return the \c groupPrimaryKey field value.
  */
 quint32 SegmentLeaderboardEntryMessage::groupPrimaryKey() const
@@ -95,6 +101,8 @@ quint32 SegmentLeaderboardEntryMessage::groupPrimaryKey() const
 
 /*!
  * Returns the SegmentLeaderboardEntryMessage data message's \c activityId field's current value.
+ *
+ * ID of the activity associated with this leader time
  *
  * \return the \c activityId field value.
  */
@@ -107,6 +115,8 @@ quint32 SegmentLeaderboardEntryMessage::activityId() const
 /*!
  * Returns the SegmentLeaderboardEntryMessage data message's \c segmentTime field's current value.
  *
+ * Segment Time (includes pauses)
+ *
  * \return the \c segmentTime field value.
  */
 quint32 SegmentLeaderboardEntryMessage::segmentTime() const
@@ -117,6 +127,8 @@ quint32 SegmentLeaderboardEntryMessage::segmentTime() const
 
 /*!
  * Returns the SegmentLeaderboardEntryMessage data message's \c activityIdString field's current value.
+ *
+ * String version of the activity_id. 21 characters long, express in decimal
  *
  * \return the \c activityIdString field value.
  */

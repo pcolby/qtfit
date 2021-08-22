@@ -63,6 +63,8 @@ DateTime MonitoringInfoMessage::timestamp() const
 /*!
  * Returns the MonitoringInfoMessage data message's \c localTimestamp field's current value.
  *
+ * Use to convert activity timestamps to local time if device does not support time zone and daylight savings time correction.
+ *
  * \return the \c localTimestamp field value.
  */
 LocalDateTime MonitoringInfoMessage::localTimestamp() const
@@ -85,6 +87,8 @@ ActivityType MonitoringInfoMessage::activityType() const
 /*!
  * Returns the MonitoringInfoMessage data message's \c cyclesToDistance field's current value.
  *
+ * Indexed by activity_type
+ *
  * \return the \c cyclesToDistance field value.
  */
 quint16 MonitoringInfoMessage::cyclesToDistance() const
@@ -95,6 +99,8 @@ quint16 MonitoringInfoMessage::cyclesToDistance() const
 
 /*!
  * Returns the MonitoringInfoMessage data message's \c cyclesToCalories field's current value.
+ *
+ * Indexed by activity_type
  *
  * \return the \c cyclesToCalories field value.
  */

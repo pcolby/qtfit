@@ -96,6 +96,8 @@ quint32z FileIdMessage::serialNumber() const
 /*!
  * Returns the FileIdMessage data message's \c timeCreated field's current value.
  *
+ * Only set for files that are can be created/erased.
+ *
  * \return the \c timeCreated field value.
  */
 DateTime FileIdMessage::timeCreated() const
@@ -107,6 +109,8 @@ DateTime FileIdMessage::timeCreated() const
 /*!
  * Returns the FileIdMessage data message's \c number field's current value.
  *
+ * Only set for files that are not created/erased.
+ *
  * \return the \c number field value.
  */
 quint16 FileIdMessage::number() const
@@ -117,6 +121,8 @@ quint16 FileIdMessage::number() const
 
 /*!
  * Returns the FileIdMessage data message's \c productName field's current value.
+ *
+ * Optional free form string to indicate the devices name or model
  *
  * \return the \c productName field value.
  */

@@ -52,6 +52,8 @@ AviationAttitudeMessage::AviationAttitudeMessage() : AbstractDataMessage(new Avi
 /*!
  * Returns the AviationAttitudeMessage data message's \c timestamp field's current value.
  *
+ * Timestamp message was output
+ *
  * \return the \c timestamp field value.
  */
 DateTime AviationAttitudeMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime AviationAttitudeMessage::timestamp() const
 
 /*!
  * Returns the AviationAttitudeMessage data message's \c timestampMs field's current value.
+ *
+ * Fractional part of timestamp, added to timestamp
  *
  * \return the \c timestampMs field value.
  */
@@ -74,6 +78,8 @@ quint16 AviationAttitudeMessage::timestampMs() const
 /*!
  * Returns the AviationAttitudeMessage data message's \c systemTime field's current value.
  *
+ * System time associated with sample expressed in ms.
+ *
  * \return the \c systemTime field value.
  */
 quint32 AviationAttitudeMessage::systemTime() const
@@ -84,6 +90,8 @@ quint32 AviationAttitudeMessage::systemTime() const
 
 /*!
  * Returns the AviationAttitudeMessage data message's \c pitch field's current value.
+ *
+ * Range -PI/2 to +PI/2
  *
  * \return the \c pitch field value.
  */
@@ -96,6 +104,8 @@ qint16 AviationAttitudeMessage::pitch() const
 /*!
  * Returns the AviationAttitudeMessage data message's \c roll field's current value.
  *
+ * Range -PI to +PI
+ *
  * \return the \c roll field value.
  */
 qint16 AviationAttitudeMessage::roll() const
@@ -106,6 +116,8 @@ qint16 AviationAttitudeMessage::roll() const
 
 /*!
  * Returns the AviationAttitudeMessage data message's \c accelLateral field's current value.
+ *
+ * Range -78.4 to +78.4 (-8 Gs to 8 Gs)
  *
  * \return the \c accelLateral field value.
  */
@@ -118,6 +130,8 @@ qint16 AviationAttitudeMessage::accelLateral() const
 /*!
  * Returns the AviationAttitudeMessage data message's \c accelNormal field's current value.
  *
+ * Range -78.4 to +78.4 (-8 Gs to 8 Gs)
+ *
  * \return the \c accelNormal field value.
  */
 qint16 AviationAttitudeMessage::accelNormal() const
@@ -128,6 +142,8 @@ qint16 AviationAttitudeMessage::accelNormal() const
 
 /*!
  * Returns the AviationAttitudeMessage data message's \c turnRate field's current value.
+ *
+ * Range -8.727 to +8.727 (-500 degs/sec to +500 degs/sec)
  *
  * \return the \c turnRate field value.
  */
@@ -151,6 +167,8 @@ AttitudeStage AviationAttitudeMessage::stage() const
 /*!
  * Returns the AviationAttitudeMessage data message's \c attitudeStageComplete field's current value.
  *
+ * The percent complete of the current attitude stage.  Set to 0 for attitude stages 0, 1 and 2 and to 100 for attitude stage 3 by AHRS modules that do not support it.  Range - 100
+ *
  * \return the \c attitudeStageComplete field value.
  */
 quint8 AviationAttitudeMessage::attitudeStageComplete() const
@@ -161,6 +179,8 @@ quint8 AviationAttitudeMessage::attitudeStageComplete() const
 
 /*!
  * Returns the AviationAttitudeMessage data message's \c track field's current value.
+ *
+ * Track Angle/Heading Range 0 - 2pi
  *
  * \return the \c track field value.
  */

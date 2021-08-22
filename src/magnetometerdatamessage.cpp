@@ -52,6 +52,8 @@ MagnetometerDataMessage::MagnetometerDataMessage() : AbstractDataMessage(new Mag
 /*!
  * Returns the MagnetometerDataMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp
+ *
  * \return the \c timestamp field value.
  */
 DateTime MagnetometerDataMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime MagnetometerDataMessage::timestamp() const
 
 /*!
  * Returns the MagnetometerDataMessage data message's \c timestampMs field's current value.
+ *
+ * Millisecond part of the timestamp.
  *
  * \return the \c timestampMs field value.
  */
@@ -74,6 +78,8 @@ quint16 MagnetometerDataMessage::timestampMs() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c sampleTimeOffset field's current value.
  *
+ * Each time in the array describes the time at which the compass sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in cmps_x and cmps_y and cmps_z
+ *
  * \return the \c sampleTimeOffset field value.
  */
 quint16 MagnetometerDataMessage::sampleTimeOffset() const
@@ -84,6 +90,8 @@ quint16 MagnetometerDataMessage::sampleTimeOffset() const
 
 /*!
  * Returns the MagnetometerDataMessage data message's \c magX field's current value.
+ *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c magX field value.
  */
@@ -96,6 +104,8 @@ quint16 MagnetometerDataMessage::magX() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c magY field's current value.
  *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ *
  * \return the \c magY field value.
  */
 quint16 MagnetometerDataMessage::magY() const
@@ -106,6 +116,8 @@ quint16 MagnetometerDataMessage::magY() const
 
 /*!
  * Returns the MagnetometerDataMessage data message's \c magZ field's current value.
+ *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c magZ field value.
  */
@@ -118,6 +130,8 @@ quint16 MagnetometerDataMessage::magZ() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c calibratedMagX field's current value.
  *
+ * Calibrated Magnetometer reading
+ *
  * \return the \c calibratedMagX field value.
  */
 float MagnetometerDataMessage::calibratedMagX() const
@@ -129,6 +143,8 @@ float MagnetometerDataMessage::calibratedMagX() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c calibratedMagY field's current value.
  *
+ * Calibrated Magnetometer reading
+ *
  * \return the \c calibratedMagY field value.
  */
 float MagnetometerDataMessage::calibratedMagY() const
@@ -139,6 +155,8 @@ float MagnetometerDataMessage::calibratedMagY() const
 
 /*!
  * Returns the MagnetometerDataMessage data message's \c calibratedMagZ field's current value.
+ *
+ * Calibrated Magnetometer reading
  *
  * \return the \c calibratedMagZ field value.
  */

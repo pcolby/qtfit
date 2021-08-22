@@ -52,6 +52,8 @@ WeatherConditionsMessage::WeatherConditionsMessage() : AbstractDataMessage(new W
 /*!
  * Returns the WeatherConditionsMessage data message's \c timestamp field's current value.
  *
+ * time of update for current conditions, else forecast time
+ *
  * \return the \c timestamp field value.
  */
 DateTime WeatherConditionsMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime WeatherConditionsMessage::timestamp() const
 
 /*!
  * Returns the WeatherConditionsMessage data message's \c weatherReport field's current value.
+ *
+ * Current or forecast
  *
  * \return the \c weatherReport field value.
  */
@@ -84,6 +88,8 @@ qint8 WeatherConditionsMessage::temperature() const
 
 /*!
  * Returns the WeatherConditionsMessage data message's \c condition field's current value.
+ *
+ * Corresponds to GSC Response weatherIcon field
  *
  * \return the \c condition field value.
  */
@@ -118,6 +124,8 @@ quint16 WeatherConditionsMessage::windSpeed() const
 /*!
  * Returns the WeatherConditionsMessage data message's \c precipitationProbability field's current value.
  *
+ * range 0-100
+ *
  * \return the \c precipitationProbability field value.
  */
 quint8 WeatherConditionsMessage::precipitationProbability() const
@@ -128,6 +136,8 @@ quint8 WeatherConditionsMessage::precipitationProbability() const
 
 /*!
  * Returns the WeatherConditionsMessage data message's \c temperatureFeelsLike field's current value.
+ *
+ * Heat Index if  GCS heatIdx above or equal to 90F or wind chill if GCS windChill below or equal to 32F
  *
  * \return the \c temperatureFeelsLike field value.
  */
@@ -150,6 +160,8 @@ quint8 WeatherConditionsMessage::relativeHumidity() const
 
 /*!
  * Returns the WeatherConditionsMessage data message's \c location field's current value.
+ *
+ * string corresponding to GCS response location string
  *
  * \return the \c location field value.
  */

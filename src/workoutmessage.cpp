@@ -74,6 +74,8 @@ WorkoutCapabilities WorkoutMessage::capabilities() const
 /*!
  * Returns the WorkoutMessage data message's \c numValidSteps field's current value.
  *
+ * number of valid steps
+ *
  * \return the \c numValidSteps field value.
  */
 quint16 WorkoutMessage::numValidSteps() const

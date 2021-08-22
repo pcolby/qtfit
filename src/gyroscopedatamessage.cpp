@@ -52,6 +52,8 @@ GyroscopeDataMessage::GyroscopeDataMessage() : AbstractDataMessage(new Gyroscope
 /*!
  * Returns the GyroscopeDataMessage data message's \c timestamp field's current value.
  *
+ * Whole second part of the timestamp
+ *
  * \return the \c timestamp field value.
  */
 DateTime GyroscopeDataMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime GyroscopeDataMessage::timestamp() const
 
 /*!
  * Returns the GyroscopeDataMessage data message's \c timestampMs field's current value.
+ *
+ * Millisecond part of the timestamp.
  *
  * \return the \c timestampMs field value.
  */
@@ -74,6 +78,8 @@ quint16 GyroscopeDataMessage::timestampMs() const
 /*!
  * Returns the GyroscopeDataMessage data message's \c sampleTimeOffset field's current value.
  *
+ * Each time in the array describes the time at which the gyro sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in gyro_x and gyro_y and gyro_z
+ *
  * \return the \c sampleTimeOffset field value.
  */
 quint16 GyroscopeDataMessage::sampleTimeOffset() const
@@ -84,6 +90,8 @@ quint16 GyroscopeDataMessage::sampleTimeOffset() const
 
 /*!
  * Returns the GyroscopeDataMessage data message's \c gyroX field's current value.
+ *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c gyroX field value.
  */
@@ -96,6 +104,8 @@ quint16 GyroscopeDataMessage::gyroX() const
 /*!
  * Returns the GyroscopeDataMessage data message's \c gyroY field's current value.
  *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ *
  * \return the \c gyroY field value.
  */
 quint16 GyroscopeDataMessage::gyroY() const
@@ -106,6 +116,8 @@ quint16 GyroscopeDataMessage::gyroY() const
 
 /*!
  * Returns the GyroscopeDataMessage data message's \c gyroZ field's current value.
+ *
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c gyroZ field value.
  */
@@ -118,6 +130,8 @@ quint16 GyroscopeDataMessage::gyroZ() const
 /*!
  * Returns the GyroscopeDataMessage data message's \c calibratedGyroX field's current value.
  *
+ * Calibrated gyro reading
+ *
  * \return the \c calibratedGyroX field value.
  */
 float GyroscopeDataMessage::calibratedGyroX() const
@@ -129,6 +143,8 @@ float GyroscopeDataMessage::calibratedGyroX() const
 /*!
  * Returns the GyroscopeDataMessage data message's \c calibratedGyroY field's current value.
  *
+ * Calibrated gyro reading
+ *
  * \return the \c calibratedGyroY field value.
  */
 float GyroscopeDataMessage::calibratedGyroY() const
@@ -139,6 +155,8 @@ float GyroscopeDataMessage::calibratedGyroY() const
 
 /*!
  * Returns the GyroscopeDataMessage data message's \c calibratedGyroZ field's current value.
+ *
+ * Calibrated gyro reading
  *
  * \return the \c calibratedGyroZ field value.
  */

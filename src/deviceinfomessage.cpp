@@ -140,6 +140,8 @@ quint8 DeviceInfoMessage::hardwareVersion() const
 /*!
  * Returns the DeviceInfoMessage data message's \c cumOperatingTime field's current value.
  *
+ * Reset by new battery or charge.
+ *
  * \return the \c cumOperatingTime field value.
  */
 quint32 DeviceInfoMessage::cumOperatingTime() const
@@ -173,6 +175,8 @@ BatteryStatus DeviceInfoMessage::batteryStatus() const
 /*!
  * Returns the DeviceInfoMessage data message's \c sensorPosition field's current value.
  *
+ * Indicates the location of the sensor
+ *
  * \return the \c sensorPosition field value.
  */
 BodyLocation DeviceInfoMessage::sensorPosition() const
@@ -183,6 +187,8 @@ BodyLocation DeviceInfoMessage::sensorPosition() const
 
 /*!
  * Returns the DeviceInfoMessage data message's \c descriptor field's current value.
+ *
+ * Used to describe the sensor or location
  *
  * \return the \c descriptor field value.
  */
@@ -238,6 +244,8 @@ SourceType DeviceInfoMessage::sourceType() const
 
 /*!
  * Returns the DeviceInfoMessage data message's \c productName field's current value.
+ *
+ * Optional free form string to indicate the devices name or model
  *
  * \return the \c productName field value.
  */

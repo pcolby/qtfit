@@ -52,6 +52,8 @@ DeviceSettingsMessage::DeviceSettingsMessage() : AbstractDataMessage(new DeviceS
 /*!
  * Returns the DeviceSettingsMessage data message's \c activeTimeZone field's current value.
  *
+ * Index into time zone arrays.
+ *
  * \return the \c activeTimeZone field value.
  */
 quint8 DeviceSettingsMessage::activeTimeZone() const
@@ -62,6 +64,8 @@ quint8 DeviceSettingsMessage::activeTimeZone() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c utcOffset field's current value.
+ *
+ * Offset from system time. Required to convert timestamp from system time to UTC.
  *
  * \return the \c utcOffset field value.
  */
@@ -74,6 +78,8 @@ quint32 DeviceSettingsMessage::utcOffset() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c timeOffset field's current value.
  *
+ * Offset from system time.
+ *
  * \return the \c timeOffset field value.
  */
 quint32 DeviceSettingsMessage::timeOffset() const
@@ -84,6 +90,8 @@ quint32 DeviceSettingsMessage::timeOffset() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c timeMode field's current value.
+ *
+ * Display mode for the time
  *
  * \return the \c timeMode field value.
  */
@@ -96,6 +104,8 @@ TimeMode DeviceSettingsMessage::timeMode() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c timeZoneOffset field's current value.
  *
+ * timezone offset in 1/4 hour increments
+ *
  * \return the \c timeZoneOffset field value.
  */
 qint8 DeviceSettingsMessage::timeZoneOffset() const
@@ -106,6 +116,8 @@ qint8 DeviceSettingsMessage::timeZoneOffset() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c backlightMode field's current value.
+ *
+ * Mode for backlight
  *
  * \return the \c backlightMode field value.
  */
@@ -118,6 +130,8 @@ BacklightMode DeviceSettingsMessage::backlightMode() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c activityTrackerEnabled field's current value.
  *
+ * Enabled state of the activity tracker functionality
+ *
  * \return the \c activityTrackerEnabled field value.
  */
 bool DeviceSettingsMessage::activityTrackerEnabled() const
@@ -128,6 +142,8 @@ bool DeviceSettingsMessage::activityTrackerEnabled() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c clockTime field's current value.
+ *
+ * UTC timestamp used to set the devices clock and date
  *
  * \return the \c clockTime field value.
  */
@@ -140,6 +156,8 @@ DateTime DeviceSettingsMessage::clockTime() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c pagesEnabled field's current value.
  *
+ * Bitfield  to configure enabled screens for each supported loop
+ *
  * \return the \c pagesEnabled field value.
  */
 quint16 DeviceSettingsMessage::pagesEnabled() const
@@ -151,6 +169,8 @@ quint16 DeviceSettingsMessage::pagesEnabled() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c moveAlertEnabled field's current value.
  *
+ * Enabled state of the move alert
+ *
  * \return the \c moveAlertEnabled field value.
  */
 bool DeviceSettingsMessage::moveAlertEnabled() const
@@ -161,6 +181,8 @@ bool DeviceSettingsMessage::moveAlertEnabled() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c dateMode field's current value.
+ *
+ * Display mode for the date
  *
  * \return the \c dateMode field value.
  */
@@ -195,6 +217,8 @@ Side DeviceSettingsMessage::mountingSide() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c defaultPage field's current value.
  *
+ * Bitfield to indicate one page as default for each supported loop
+ *
  * \return the \c defaultPage field value.
  */
 quint16 DeviceSettingsMessage::defaultPage() const
@@ -205,6 +229,8 @@ quint16 DeviceSettingsMessage::defaultPage() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c autosyncMinSteps field's current value.
+ *
+ * Minimum steps before an autosync can occur
  *
  * \return the \c autosyncMinSteps field value.
  */
@@ -217,6 +243,8 @@ quint16 DeviceSettingsMessage::autosyncMinSteps() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c autosyncMinTime field's current value.
  *
+ * Minimum minutes before an autosync can occur
+ *
  * \return the \c autosyncMinTime field value.
  */
 quint16 DeviceSettingsMessage::autosyncMinTime() const
@@ -227,6 +255,8 @@ quint16 DeviceSettingsMessage::autosyncMinTime() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c lactateThresholdAutodetectEnabled field's current value.
+ *
+ * Enable auto-detect setting for the lactate threshold feature.
  *
  * \return the \c lactateThresholdAutodetectEnabled field value.
  */
@@ -239,6 +269,8 @@ bool DeviceSettingsMessage::lactateThresholdAutodetectEnabled() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c bleAutoUploadEnabled field's current value.
  *
+ * Automatically upload using BLE
+ *
  * \return the \c bleAutoUploadEnabled field value.
  */
 bool DeviceSettingsMessage::bleAutoUploadEnabled() const
@@ -249,6 +281,8 @@ bool DeviceSettingsMessage::bleAutoUploadEnabled() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c autoSyncFrequency field's current value.
+ *
+ * Helps to conserve battery by changing modes
  *
  * \return the \c autoSyncFrequency field value.
  */
@@ -261,6 +295,8 @@ AutoSyncFrequency DeviceSettingsMessage::autoSyncFrequency() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c autoActivityDetect field's current value.
  *
+ * Allows setting specific activities auto-activity detect enabled/disabled settings
+ *
  * \return the \c autoActivityDetect field value.
  */
 AutoActivityDetect DeviceSettingsMessage::autoActivityDetect() const
@@ -272,6 +308,8 @@ AutoActivityDetect DeviceSettingsMessage::autoActivityDetect() const
 /*!
  * Returns the DeviceSettingsMessage data message's \c numberOfScreens field's current value.
  *
+ * Number of screens configured to display
+ *
  * \return the \c numberOfScreens field value.
  */
 quint8 DeviceSettingsMessage::numberOfScreens() const
@@ -282,6 +320,8 @@ quint8 DeviceSettingsMessage::numberOfScreens() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c smartNotificationDisplayOrientation field's current value.
+ *
+ * Smart Notification display orientation
  *
  * \return the \c smartNotificationDisplayOrientation field value.
  */
@@ -304,6 +344,8 @@ Switch DeviceSettingsMessage::tapInterface() const
 
 /*!
  * Returns the DeviceSettingsMessage data message's \c tapSensitivity field's current value.
+ *
+ * Used to hold the tap threshold setting
  *
  * \return the \c tapSensitivity field value.
  */

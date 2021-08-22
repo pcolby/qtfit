@@ -52,6 +52,8 @@ VideoDescriptionMessage::VideoDescriptionMessage() : AbstractDataMessage(new Vid
 /*!
  * Returns the VideoDescriptionMessage data message's \c messageIndex field's current value.
  *
+ * Long descriptions will be split into multiple parts
+ *
  * \return the \c messageIndex field value.
  */
 MessageIndex VideoDescriptionMessage::messageIndex() const
@@ -62,6 +64,8 @@ MessageIndex VideoDescriptionMessage::messageIndex() const
 
 /*!
  * Returns the VideoDescriptionMessage data message's \c messageCount field's current value.
+ *
+ * Total number of description parts
  *
  * \return the \c messageCount field value.
  */

@@ -52,6 +52,8 @@ HrvMessage::HrvMessage() : AbstractDataMessage(new HrvMessagePrivate(this))
 /*!
  * Returns the HrvMessage data message's \c time field's current value.
  *
+ * Time between beats
+ *
  * \return the \c time field value.
  */
 quint16 HrvMessage::time() const

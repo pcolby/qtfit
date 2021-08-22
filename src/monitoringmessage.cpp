@@ -52,6 +52,8 @@ MonitoringMessage::MonitoringMessage() : AbstractDataMessage(new MonitoringMessa
 /*!
  * Returns the MonitoringMessage data message's \c timestamp field's current value.
  *
+ * Must align to logging interval, for example, time must be 00:00:00 for daily log.
+ *
  * \return the \c timestamp field value.
  */
 DateTime MonitoringMessage::timestamp() const
@@ -62,6 +64,8 @@ DateTime MonitoringMessage::timestamp() const
 
 /*!
  * Returns the MonitoringMessage data message's \c deviceIndex field's current value.
+ *
+ * Associates this data to device_info message.  Not required for file with single device (sensor).
  *
  * \return the \c deviceIndex field value.
  */
@@ -74,6 +78,8 @@ DeviceIndex MonitoringMessage::deviceIndex() const
 /*!
  * Returns the MonitoringMessage data message's \c calories field's current value.
  *
+ * Accumulated total calories.  Maintained by MonitoringReader for each activity_type.  See SDK documentation
+ *
  * \return the \c calories field value.
  */
 quint16 MonitoringMessage::calories() const
@@ -85,6 +91,8 @@ quint16 MonitoringMessage::calories() const
 /*!
  * Returns the MonitoringMessage data message's \c distance field's current value.
  *
+ * Accumulated distance.  Maintained by MonitoringReader for each activity_type.  See SDK documentation.
+ *
  * \return the \c distance field value.
  */
 quint32 MonitoringMessage::distance() const
@@ -95,6 +103,8 @@ quint32 MonitoringMessage::distance() const
 
 /*!
  * Returns the MonitoringMessage data message's \c cycles field's current value.
+ *
+ * Accumulated cycles.  Maintained by MonitoringReader for each activity_type.  See SDK documentation.
  *
  * \return the \c cycles field value.
  */
@@ -184,6 +194,8 @@ quint16 MonitoringMessage::activeTime16() const
 /*!
  * Returns the MonitoringMessage data message's \c localTimestamp field's current value.
  *
+ * Must align to logging interval, for example, time must be 00:00:00 for daily log.
+ *
  * \return the \c localTimestamp field value.
  */
 LocalDateTime MonitoringMessage::localTimestamp() const
@@ -194,6 +206,8 @@ LocalDateTime MonitoringMessage::localTimestamp() const
 
 /*!
  * Returns the MonitoringMessage data message's \c temperature field's current value.
+ *
+ * Avg temperature during the logging interval ended at timestamp
  *
  * \return the \c temperature field value.
  */
@@ -206,6 +220,8 @@ qint16 MonitoringMessage::temperature() const
 /*!
  * Returns the MonitoringMessage data message's \c temperatureMin field's current value.
  *
+ * Min temperature during the logging interval ended at timestamp
+ *
  * \return the \c temperatureMin field value.
  */
 qint16 MonitoringMessage::temperatureMin() const
@@ -217,6 +233,8 @@ qint16 MonitoringMessage::temperatureMin() const
 /*!
  * Returns the MonitoringMessage data message's \c temperatureMax field's current value.
  *
+ * Max temperature during the logging interval ended at timestamp
+ *
  * \return the \c temperatureMax field value.
  */
 qint16 MonitoringMessage::temperatureMax() const
@@ -227,6 +245,8 @@ qint16 MonitoringMessage::temperatureMax() const
 
 /*!
  * Returns the MonitoringMessage data message's \c activityTime field's current value.
+ *
+ * Indexed using minute_activity_level enum
  *
  * \return the \c activityTime field value.
  */
@@ -249,6 +269,8 @@ quint16 MonitoringMessage::activeCalories() const
 
 /*!
  * Returns the MonitoringMessage data message's \c currentActivityTypeIntensity field's current value.
+ *
+ * Indicates single type / intensity for duration since last monitoring message.
  *
  * \return the \c currentActivityTypeIntensity field value.
  */

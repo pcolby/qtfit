@@ -228,6 +228,8 @@ quint16 LengthMessage::opponentScore() const
 /*!
  * Returns the LengthMessage data message's \c strokeCount field's current value.
  *
+ * stroke_type enum used as the index
+ *
  * \return the \c strokeCount field value.
  */
 quint16 LengthMessage::strokeCount() const
@@ -238,6 +240,8 @@ quint16 LengthMessage::strokeCount() const
 
 /*!
  * Returns the LengthMessage data message's \c zoneCount field's current value.
+ *
+ * zone number used as the index
  *
  * \return the \c zoneCount field value.
  */

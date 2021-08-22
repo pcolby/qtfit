@@ -52,6 +52,8 @@ NmeaSentenceMessage::NmeaSentenceMessage() : AbstractDataMessage(new NmeaSentenc
 /*!
  * Returns the NmeaSentenceMessage data message's \c timestamp field's current value.
  *
+ * Timestamp message was output
+ *
  * \return the \c timestamp field value.
  */
 DateTime NmeaSentenceMessage::timestamp() const
@@ -63,6 +65,8 @@ DateTime NmeaSentenceMessage::timestamp() const
 /*!
  * Returns the NmeaSentenceMessage data message's \c timestampMs field's current value.
  *
+ * Fractional part of timestamp, added to timestamp
+ *
  * \return the \c timestampMs field value.
  */
 quint16 NmeaSentenceMessage::timestampMs() const
@@ -73,6 +77,8 @@ quint16 NmeaSentenceMessage::timestampMs() const
 
 /*!
  * Returns the NmeaSentenceMessage data message's \c sentence field's current value.
+ *
+ * NMEA sentence
  *
  * \return the \c sentence field value.
  */
