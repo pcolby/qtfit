@@ -25,7 +25,12 @@
 /*!
  * \file
  *
- * \todo Document this.
+ * QDebug stream operators for types defined by the ANT+ FIT SDK.
+ *
+ * Specifically, `operator<<` for all enumerator types found in the types.h header.
+ *
+ * \sa [QDebug - Writing Custom Types to a Stream (Qt5)](https://doc.qt.io/qt-5/qdebug.html#writing-custom-types-to-a-stream)
+ * \sa [QDebug - Writing Custom Types to a Stream (Qt6)](https://doc.qt.io/qt-6/qdebug.html#writing-custom-types-to-a-stream)
  */
 
 #include "types.h"
