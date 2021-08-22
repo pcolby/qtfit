@@ -10,7 +10,7 @@
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
-{% for enum in types %}
+{% for type in types %}{% if type.values %}{% with type as enum %}
 QDebug operator<<(QDebug debug, const {{enum.typeName}} value)
 {
     switch (value) {
@@ -23,6 +23,5 @@ QDebug operator<<(QDebug debug, const {{enum.typeName}} value)
     }
     return debug;
 }
-
-{% endfor %}
+{% endwith %}{% endif %}{% endfor %}
 {{ProjectName|upper}}_END_NAMESPACE

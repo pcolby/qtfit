@@ -24,18 +24,19 @@ typedef quint8  quint8z;
 typedef quint16 quint16z;
 typedef quint32 quint32z;
 typedef quint64 quint64z;
-{% for enum in types %}{% if enum.comment %}
-/// {{enum.comment}}{% endif %}
-enum class {{enum.typeName}} {% if enum.baseType != "enum" %}: q{{enum.baseType}} {% endif %}{
+{% for type in types %}{% if type.comment %}
+/// {{type.comment}}{% endif %}
+{% if type.values %}{% with type as enum %}enum class {{enum.typeName}} {% if enum.baseType != "enum" %}: q{{enum.baseType}} {% endif %}{
 {% for value in enum.values %}
     {{value.valueName|ljust:enum.maxValueNameLength}} = {{value.value|rjust:enum.maxValueValueLength}},{% if value.comment %} ///< {{value.comment}}{% endif %}
 {% endfor %}
 };
+{% endwith %}{% else %}typedef q{{type.baseType}} {{type.typeName}};
 
+{% endif %}
 {% endfor %}
-{% for enum in types %}
-QDebug operator<<(QDebug debug, const {{enum.typeName}} value);
-{% endfor %}
+{% for type in types %}{% if type.values %}
+QDebug operator<<(QDebug debug, const {{type.typeName}} value);{% endif %}{% endfor %}
 
 {{ProjectName|upper}}_END_NAMESPACE
 

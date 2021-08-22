@@ -1869,12 +1869,10 @@ enum class WeatherSevereType {
 };
 
 /// number of seconds into the day since 00:00:00 UTC
-enum class TimeIntoDay : quint32 {
-};
+typedef quint32 TimeIntoDay;
 
 /// number of seconds into the day since local 00:00:00
-enum class LocaltimeIntoDay : quint32 {
-};
+typedef quint32 LocaltimeIntoDay;
 
 enum class StrokeType {
     NoEvent  = 0,
@@ -1967,8 +1965,7 @@ enum class SourceType {
     Local              = 5, ///< Onboard device
 };
 
-enum class LocalDeviceType : quint8 {
-};
+typedef quint8 LocalDeviceType;
 
 enum class DisplayOrientation {
     Auto             = 0, ///< automatic if the device supports it
@@ -3845,6 +3842,7 @@ enum class RadarThreatLevelType {
     ThreatApproachingFast = 3,
 };
 
+
 QDebug operator<<(QDebug debug, const File value);
 QDebug operator<<(QDebug debug, const MesgNum value);
 QDebug operator<<(QDebug debug, const Checksum value);
@@ -3929,8 +3927,6 @@ QDebug operator<<(QDebug debug, const WeatherReport value);
 QDebug operator<<(QDebug debug, const WeatherStatus value);
 QDebug operator<<(QDebug debug, const WeatherSeverity value);
 QDebug operator<<(QDebug debug, const WeatherSevereType value);
-QDebug operator<<(QDebug debug, const TimeIntoDay value);
-QDebug operator<<(QDebug debug, const LocaltimeIntoDay value);
 QDebug operator<<(QDebug debug, const StrokeType value);
 QDebug operator<<(QDebug debug, const BodyLocation value);
 QDebug operator<<(QDebug debug, const SegmentLapStatus value);
@@ -3938,7 +3934,6 @@ QDebug operator<<(QDebug debug, const SegmentLeaderboardType value);
 QDebug operator<<(QDebug debug, const SegmentDeleteStatus value);
 QDebug operator<<(QDebug debug, const SegmentSelectionType value);
 QDebug operator<<(QDebug debug, const SourceType value);
-QDebug operator<<(QDebug debug, const LocalDeviceType value);
 QDebug operator<<(QDebug debug, const DisplayOrientation value);
 QDebug operator<<(QDebug debug, const WorkoutEquipment value);
 QDebug operator<<(QDebug debug, const WatchfaceMode value);

@@ -32,6 +32,7 @@
 
 QTFIT_BEGIN_NAMESPACE
 
+
 QDebug operator<<(QDebug debug, const File value)
 {
     switch (value) {
@@ -2257,22 +2258,6 @@ QDebug operator<<(QDebug debug, const WeatherSevereType value)
     return debug;
 }
 
-QDebug operator<<(QDebug debug, const TimeIntoDay value)
-{
-    switch (value) {
-    default: debug << "unknown";
-    }
-    return debug;
-}
-
-QDebug operator<<(QDebug debug, const LocaltimeIntoDay value)
-{
-    switch (value) {
-    default: debug << "unknown";
-    }
-    return debug;
-}
-
 QDebug operator<<(QDebug debug, const StrokeType value)
 {
     switch (value) {
@@ -2394,14 +2379,6 @@ QDebug operator<<(QDebug debug, const SourceType value)
     case SourceType::BluetoothLowEnergy: debug << "BluetoothLowEnergy"; break;
     case SourceType::Wifi              : debug << "Wifi"; break;
     case SourceType::Local             : debug << "Local"; break;
-    default: debug << "unknown";
-    }
-    return debug;
-}
-
-QDebug operator<<(QDebug debug, const LocalDeviceType value)
-{
-    switch (value) {
     default: debug << "unknown";
     }
     return debug;
