@@ -1,6 +1,6 @@
 var classSegmentPointMessage =
 [
-    [ "SegmentPointMessage", "classSegmentPointMessage.html#a58697fca9350f2799142a0c35c87eb47", null ],
+    [ "SegmentPointMessage", "classSegmentPointMessage.html#aeff7ec5d3f62ba9f52e62bd9040766e2", null ],
     [ "~SegmentPointMessage", "classSegmentPointMessage.html#ac621057ac41c4cd21f976728a760a87a", null ],
     [ "altitude", "classSegmentPointMessage.html#ab1849af6e8be1bbcd31f476eac8b8ada", null ],
     [ "distance", "classSegmentPointMessage.html#a8b6a59b942d71556c3e90704224d59c4", null ],

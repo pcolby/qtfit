@@ -1,5 +1,5 @@
 <map id="ExdScreenConfigurationMessagePrivate" name="ExdScreenConfigurationMessagePrivate">
 <area shape="rect" id="node1" title=" " alt="" coords="5,171,240,212"/>
 <area shape="rect" id="node2" href="$classFitDataMessagePrivate.html" title=" " alt="" coords="36,95,209,121"/>
-<area shape="rect" id="node3" href="$classFitDataMessage.html" title=" " alt="" coords="59,5,186,32"/>
+<area shape="rect" id="node3" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="59,5,186,32"/>
 </map>

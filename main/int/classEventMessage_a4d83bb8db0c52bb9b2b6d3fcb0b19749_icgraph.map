@@ -1,4 +1,4 @@
 <map id="EventMessage::frontGearNum" name="EventMessage::frontGearNum">
-<area shape="rect" id="node1" title=" " alt="" coords="293,5,512,32"/>
-<area shape="rect" id="node2" href="$classEventMessage.html#abb3439afd54362960f82129d1d9504fb" title=" " alt="" coords="5,5,245,32"/>
+<area shape="rect" id="node1" title="Returns the EventMessage data message&#39;s frontGearNum field&#39;s current value." alt="" coords="293,5,512,32"/>
+<area shape="rect" id="node2" href="$classEventMessage.html#abb3439afd54362960f82129d1d9504fb" title="Sets the frontGearNum field to frontGearNum." alt="" coords="5,5,245,32"/>
 </map>

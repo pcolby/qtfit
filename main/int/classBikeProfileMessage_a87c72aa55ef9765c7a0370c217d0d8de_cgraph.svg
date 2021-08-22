@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Sets the bikeSpdcadAntIdTransType field to bikeSpdcadAntIdTransType.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-30.5 167,-30.5 167,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">BikeProfileMessage</text>
 <text text-anchor="middle" x="83.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::setBikeSpdcadAntIdTransType</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classBikeProfileMessage.html#ae0e3036af2d00686ac1226d2bf0072da" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classBikeProfileMessage.html#ae0e3036af2d00686ac1226d2bf0072da" target="_top" xlink:title="Returns the BikeProfileMessage data message&#39;s bikeSpdcadAntIdTransType field&#39;s current value.">
 <polygon fill="none" stroke="black" points="203,-0.5 203,-30.5 355,-30.5 355,-0.5 203,-0.5"/>
 <text text-anchor="start" x="211" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">BikeProfileMessage</text>
 <text text-anchor="middle" x="279" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::bikeSpdcadAntIdTransType</text>

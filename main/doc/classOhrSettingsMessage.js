@@ -1,6 +1,6 @@
 var classOhrSettingsMessage =
 [
-    [ "OhrSettingsMessage", "classOhrSettingsMessage.html#a5c1e6c26a66f75e19d9a0ffefc3aa4fb", null ],
+    [ "OhrSettingsMessage", "classOhrSettingsMessage.html#aefe1e9a3e0a32f1815f4c8b30372533a", null ],
     [ "~OhrSettingsMessage", "classOhrSettingsMessage.html#a4e6b65be297b3ee39f107a76abca4b57", null ],
     [ "enabled", "classOhrSettingsMessage.html#aadff3b1db28a7f82a9f08115e00ced36", null ],
     [ "setEnabled", "classOhrSettingsMessage.html#a0ef7c348c29853cbc5b10eb43faefcb5", null ],

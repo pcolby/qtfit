@@ -1,4 +1,4 @@
 <map id="CameraEventMessage" name="CameraEventMessage">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,173,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title=" " alt="" coords="26,5,153,32"/>
+<area shape="rect" id="node1" title="The CameraEventMessage class represents a FIT CameraEventMessage data message." alt="" coords="5,80,173,107"/>
+<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="26,5,153,32"/>
 </map>

@@ -1,6 +1,6 @@
 var classAntTxMessage =
 [
-    [ "AntTxMessage", "classAntTxMessage.html#a15d8974fc5799848c66507e68f8a0f81", null ],
+    [ "AntTxMessage", "classAntTxMessage.html#ac7f14ffb30047e5be05bc97c5dc0b023", null ],
     [ "~AntTxMessage", "classAntTxMessage.html#a90be014d751e3048593b44d6f97f6a59", null ],
     [ "channelNumber", "classAntTxMessage.html#a5fa5c7d1ccca23ad447af813508919d8", null ],
     [ "data", "classAntTxMessage.html#a2b52ec558faf005ed58024a7b5a26d86", null ],

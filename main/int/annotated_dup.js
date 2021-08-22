@@ -33,7 +33,6 @@ var annotated_dup =
     [ "CoursePointMessage", "classCoursePointMessage.html", "classCoursePointMessage" ],
     [ "CoursePointMessagePrivate", "classCoursePointMessagePrivate.html", "classCoursePointMessagePrivate" ],
     [ "DataDefinition", "structDataDefinition.html", "structDataDefinition" ],
-    [ "DataMessage", "structDataMessage.html", "structDataMessage" ],
     [ "DeveloperDataIdMessage", "classDeveloperDataIdMessage.html", "classDeveloperDataIdMessage" ],
     [ "DeveloperDataIdMessagePrivate", "classDeveloperDataIdMessagePrivate.html", "classDeveloperDataIdMessagePrivate" ],
     [ "DeveloperFieldDefinition", "structDeveloperFieldDefinition.html", "structDeveloperFieldDefinition" ],

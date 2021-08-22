@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Sets the hrmAntIdTransType field to hrmAntIdTransType.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-30.5 126,-30.5 126,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">HrmProfileMessage::</text>
 <text text-anchor="middle" x="63" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">setHrmAntIdTransType</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7" target="_top" xlink:title="Returns the HrmProfileMessage data message&#39;s hrmAntIdTransType field&#39;s current value.">
 <polygon fill="none" stroke="black" points="162,-0.5 162,-30.5 280,-30.5 280,-0.5 162,-0.5"/>
 <text text-anchor="start" x="170" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">HrmProfileMessage::</text>
 <text text-anchor="middle" x="221" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">hrmAntIdTransType</text>

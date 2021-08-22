@@ -1,6 +1,6 @@
 var classMonitoringInfoMessage =
 [
-    [ "MonitoringInfoMessage", "classMonitoringInfoMessage.html#a2bb290fa3852e3f35ef8f9b5b4889d59", null ],
+    [ "MonitoringInfoMessage", "classMonitoringInfoMessage.html#a6d1ec6658f37d5253b4427c97bfd9d9a", null ],
     [ "~MonitoringInfoMessage", "classMonitoringInfoMessage.html#a60fe2a67fbd68aa2b5fa20fbbb98b795", null ],
     [ "activityType", "classMonitoringInfoMessage.html#ad075efb7652ea4d9cdd08102fc46f7ed", null ],
     [ "cyclesToCalories", "classMonitoringInfoMessage.html#adcfe0717d8e938013ce6efecf0d82b4f", null ],

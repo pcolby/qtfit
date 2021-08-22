@@ -1,5 +1,5 @@
 <map id="gpsmetadatamessage.h" name="gpsmetadatamessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="95,5,273,32"/>
-<area shape="rect" id="node2" href="$fitdatamessages_8cpp.html" title=" " alt="" coords="5,80,163,107"/>
+<area shape="rect" id="node2" href="$fitdatamessages_8cpp.html" title="Provides the FitDataMessage::fromData implementation." alt="" coords="5,80,163,107"/>
 <area shape="rect" id="node3" href="$gpsmetadatamessage_8cpp.html" title=" " alt="" coords="187,80,381,107"/>
 </map>

@@ -1,6 +1,6 @@
 var classGyroscopeDataMessage =
 [
-    [ "GyroscopeDataMessage", "classGyroscopeDataMessage.html#a0d00c01d2ad5226a903f2773751331c0", null ],
+    [ "GyroscopeDataMessage", "classGyroscopeDataMessage.html#a7f71b354c7124b4e491e0235b47d70ce", null ],
     [ "~GyroscopeDataMessage", "classGyroscopeDataMessage.html#a223801ffbeebd2244679b3f6dd4687a3", null ],
     [ "calibratedGyroX", "classGyroscopeDataMessage.html#a7f7418fdc07ad257b2b82eb5b48567fb", null ],
     [ "calibratedGyroY", "classGyroscopeDataMessage.html#a5a7bb9a7cc4f91c00cce533f12f57df3", null ],

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Sets the rearGear field to rearGear.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 155,-19.5 155,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="77.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">EventMessage::setRearGear</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEventMessage.html#a046b72e2da2719616e38a472d6f1dec3" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEventMessage.html#a046b72e2da2719616e38a472d6f1dec3" target="_top" xlink:title="Returns the EventMessage data message&#39;s rearGear field&#39;s current value.">
 <polygon fill="none" stroke="black" points="191,-0.5 191,-19.5 328,-19.5 328,-0.5 191,-0.5"/>
 <text text-anchor="middle" x="259.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">EventMessage::rearGear</text>
 </a>

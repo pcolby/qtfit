@@ -36,7 +36,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classFitDataMessage.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classFitDataMessage.html" target="_top" xlink:title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.">
 <polygon fill="none" stroke="black" points="30,-135.5 30,-154.5 125,-154.5 125,-135.5 30,-135.5"/>
 <text text-anchor="middle" x="77.5" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitDataMessage</text>
 </a>

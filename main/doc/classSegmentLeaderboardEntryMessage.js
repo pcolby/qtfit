@@ -1,6 +1,6 @@
 var classSegmentLeaderboardEntryMessage =
 [
-    [ "SegmentLeaderboardEntryMessage", "classSegmentLeaderboardEntryMessage.html#a7c61b5bdea85446952fdd4cb03165ca1", null ],
+    [ "SegmentLeaderboardEntryMessage", "classSegmentLeaderboardEntryMessage.html#a8f13cd69af83ed4e91a08f812ec85a00", null ],
     [ "~SegmentLeaderboardEntryMessage", "classSegmentLeaderboardEntryMessage.html#a3cc8885ef7a0a572ebddedc346a75fb7", null ],
     [ "activityId", "classSegmentLeaderboardEntryMessage.html#ad5189a87122b9e53b2bf4d3614df05cb", null ],
     [ "activityIdString", "classSegmentLeaderboardEntryMessage.html#a75dcd00a05441a4ba9ca017268c45560", null ],

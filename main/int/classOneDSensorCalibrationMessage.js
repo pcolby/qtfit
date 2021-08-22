@@ -1,6 +1,6 @@
 var classOneDSensorCalibrationMessage =
 [
-    [ "OneDSensorCalibrationMessage", "classOneDSensorCalibrationMessage.html#ae5ef1ef264bae4c66026b90e573bfbfa", null ],
+    [ "OneDSensorCalibrationMessage", "classOneDSensorCalibrationMessage.html#a8957086a6e25f77206cfc589d40104ac", null ],
     [ "~OneDSensorCalibrationMessage", "classOneDSensorCalibrationMessage.html#a63f51e28b2f6db522a31bf1b378c726c", null ],
     [ "calibrationDivisor", "classOneDSensorCalibrationMessage.html#acd61a04f063e0b7f0602dcc7ebca9195", null ],
     [ "calibrationFactor", "classOneDSensorCalibrationMessage.html#a3e80e2a2cf1729fd06529ca753bf2306", null ],

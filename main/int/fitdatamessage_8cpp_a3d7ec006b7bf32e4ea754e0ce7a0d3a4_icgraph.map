@@ -1,6 +1,6 @@
 <map id="verifyBaseType" name="verifyBaseType">
-<area shape="rect" id="node1" title=" " alt="" coords="528,1549,649,1575"/>
-<area shape="rect" id="node2" href="$classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284" title=" " alt="" coords="307,1541,480,1583"/>
+<area shape="rect" id="node1" title=" " alt="" coords="528,2809,649,2835"/>
+<area shape="rect" id="node2" href="$classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284" title="\interal" alt="" coords="307,2801,480,2843"/>
 <area shape="rect" id="node3" href="$classAccelerometerDataMessagePrivate.html#a66905505d2bc981a69a4e3d2610c920c" title=" " alt="" coords="29,5,235,47"/>
 <area shape="rect" id="node4" href="$classActivityMessagePrivate.html#a01add89d24c11d195d41af8f93502547" title=" " alt="" coords="44,71,220,112"/>
 <area shape="rect" id="node5" href="$classAntChannelIdMessagePrivate.html#a8ff077987f68a986d0d9ae30065a4bf6" title=" " alt="" coords="25,136,239,177"/>
@@ -49,4 +49,43 @@
 <area shape="rect" id="node48" href="$classMesgCapabilitiesMessagePrivate.html#af04dd6e7e82b05e9438ac7d727dcd1c5" title=" " alt="" coords="13,2932,251,2973"/>
 <area shape="rect" id="node49" href="$classMetZoneMessagePrivate.html#aa76f52520e7b162960cb39120e5356ab" title=" " alt="" coords="40,2997,224,3039"/>
 <area shape="rect" id="node50" href="$classMonitoringInfoMessagePrivate.html#a7123b55aca77be55f96b4c1a175622ad" title=" " alt="" coords="21,3063,243,3104"/>
+<area shape="rect" id="node51" href="$classMonitoringMessagePrivate.html#acc012a532c1b819f73faeae6cf81ea82" title=" " alt="" coords="34,3128,230,3169"/>
+<area shape="rect" id="node52" href="$classNmeaSentenceMessagePrivate.html#a6ac11f0fd87d6901f06f09675ecf4869" title=" " alt="" coords="19,3193,245,3235"/>
+<area shape="rect" id="node53" href="$classObdiiDataMessagePrivate.html#a5ad8282e29a549b1690d09d677e606e6" title=" " alt="" coords="37,3259,227,3300"/>
+<area shape="rect" id="node54" href="$classOhrSettingsMessagePrivate.html#a83e783f59e1498c49448c6a29094dee3" title=" " alt="" coords="31,3324,233,3365"/>
+<area shape="rect" id="node55" href="$classOneDSensorCalibrationMessagePrivate.html#a51a0a83355fb6d3e9a72d23007328321" title=" " alt="" coords="17,3389,247,3431"/>
+<area shape="rect" id="node56" href="$classPowerZoneMessagePrivate.html#aaa75c49e20d34e20ceefef36b9770405" title=" " alt="" coords="33,3455,231,3496"/>
+<area shape="rect" id="node57" href="$classRecordMessagePrivate.html#acb39c48269231572fb1e6b8b84f9a961" title=" " alt="" coords="47,3520,217,3561"/>
+<area shape="rect" id="node58" href="$classScheduleMessagePrivate.html#abb0ac30a362bf272e96b72dbaf687845" title=" " alt="" coords="39,3585,225,3627"/>
+<area shape="rect" id="node59" href="$classSdmProfileMessagePrivate.html#aa19d7f6c3c64feffe385620039ef3892" title=" " alt="" coords="34,3651,230,3692"/>
+<area shape="rect" id="node60" href="$classSegmentFileMessagePrivate.html#a1a6a907feef32e7a5f7d58de9e6d2206" title=" " alt="" coords="29,3716,235,3757"/>
+<area shape="rect" id="node61" href="$classSegmentIdMessagePrivate.html#aab4b407acb3d3d6662a93f135d348af8" title=" " alt="" coords="34,3781,230,3823"/>
+<area shape="rect" id="node62" href="$classSegmentLapMessagePrivate.html#a4d038bb4b68f6b1d9c044928d2976aa1" title=" " alt="" coords="29,3847,235,3888"/>
+<area shape="rect" id="node63" href="$classSegmentLeaderboardEntryMessagePrivate.html#ab78229de4ede830ca200aa595e22e38b" title=" " alt="" coords="5,3912,259,3953"/>
+<area shape="rect" id="node64" href="$classSegmentPointMessagePrivate.html#a709200e7484f05d965e9216f01bf5892" title=" " alt="" coords="23,3977,241,4019"/>
+<area shape="rect" id="node65" href="$classSessionMessagePrivate.html#ab1e441282d8295ab451aab4db5a1c069" title=" " alt="" coords="44,4043,220,4084"/>
+<area shape="rect" id="node66" href="$classSetMessagePrivate.html#a23601e8c6e4b9158e5772125e29f6cfd" title=" " alt="" coords="55,4108,209,4149"/>
+<area shape="rect" id="node67" href="$classSlaveDeviceMessagePrivate.html#a69456785a91d646a77260932c6e5e797" title=" " alt="" coords="29,4173,235,4215"/>
+<area shape="rect" id="node68" href="$classSoftwareMessagePrivate.html#a7fef234f888b150570adaee5e3b2e624" title=" " alt="" coords="41,4239,223,4280"/>
+<area shape="rect" id="node69" href="$classSpeedZoneMessagePrivate.html#a37cbba8e779c23fe715e833f8545a671" title=" " alt="" coords="33,4304,231,4345"/>
+<area shape="rect" id="node70" href="$classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b" title=" " alt="" coords="52,4369,212,4411"/>
+<area shape="rect" id="node71" href="$classStressLevelMessagePrivate.html#a0f67b1aa0edf83e4ccd7fe3a44a811ea" title=" " alt="" coords="31,4435,233,4476"/>
+<area shape="rect" id="node72" href="$classThreeDSensorCalibrationMessagePrivate.html#ad7548ff19a0e57348eff8fa5fea18cf3" title=" " alt="" coords="11,4500,253,4541"/>
+<area shape="rect" id="node73" href="$classTimestampCorrelationMessagePrivate.html#a83a51e70cccbf6c1c285885ae5ece290" title=" " alt="" coords="19,4565,245,4607"/>
+<area shape="rect" id="node74" href="$classTotalsMessagePrivate.html#af599a6649b3157a6aed094d1639e479d" title=" " alt="" coords="50,4631,214,4672"/>
+<area shape="rect" id="node75" href="$classTrainingFileMessagePrivate.html#abdacf9f297c9457f7e97353ca9d130bd" title=" " alt="" coords="32,4696,232,4737"/>
+<area shape="rect" id="node76" href="$classUserProfileMessagePrivate.html#addb3eece8bb5f6c6e7207fa4c6219442" title=" " alt="" coords="33,4761,231,4803"/>
+<area shape="rect" id="node77" href="$classVideoClipMessagePrivate.html#a2ff3b1742218a25b2229705fa01a275a" title=" " alt="" coords="38,4827,226,4868"/>
+<area shape="rect" id="node78" href="$classVideoDescriptionMessagePrivate.html#a4ad69d6bcaaca33fc5c600da8ef88da6" title=" " alt="" coords="13,4892,251,4933"/>
+<area shape="rect" id="node79" href="$classVideoFrameMessagePrivate.html#addc2d14b159c6b69d3f6fe5c6693e262" title=" " alt="" coords="30,4957,234,4999"/>
+<area shape="rect" id="node80" href="$classVideoMessagePrivate.html#a2f3fad3ac3c0de31d14c73347e54fb14" title=" " alt="" coords="51,5023,213,5064"/>
+<area shape="rect" id="node81" href="$classVideoTitleMessagePrivate.html#ac9b5deee16c6a9dd3e2a4d1336e18f03" title=" " alt="" coords="36,5088,228,5129"/>
+<area shape="rect" id="node82" href="$classWatchfaceSettingsMessagePrivate.html#a35c9ab0aa45af70dd42648d9bc12f9c7" title=" " alt="" coords="31,5153,233,5195"/>
+<area shape="rect" id="node83" href="$classWeatherAlertMessagePrivate.html#a37070cef5d5ed6e1346f13cd29e59b2b" title=" " alt="" coords="27,5219,237,5260"/>
+<area shape="rect" id="node84" href="$classWeatherConditionsMessagePrivate.html#ada12a5e9d8e885f0f4a8377e788b91bf" title=" " alt="" coords="31,5284,233,5325"/>
+<area shape="rect" id="node85" href="$classWeightScaleMessagePrivate.html#a597253580027ccca9dc9ae0c847b02cd" title=" " alt="" coords="29,5349,235,5391"/>
+<area shape="rect" id="node86" href="$classWorkoutMessagePrivate.html#a1f49d5cc7471141e269a1c49609e9e87" title=" " alt="" coords="43,5415,221,5456"/>
+<area shape="rect" id="node87" href="$classWorkoutSessionMessagePrivate.html#ae189c7ce36fa6412678678e92fbd5083" title=" " alt="" coords="17,5480,247,5521"/>
+<area shape="rect" id="node88" href="$classWorkoutStepMessagePrivate.html#a2a633dbced2dc7120c49ef0ed04d3c9d" title=" " alt="" coords="28,5545,236,5587"/>
+<area shape="rect" id="node89" href="$classZonesTargetMessagePrivate.html#a574628995ad90e5328e4a7fb143badff" title=" " alt="" coords="29,5611,235,5652"/>
 </map>

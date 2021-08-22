@@ -1,6 +1,6 @@
 var classAviationAttitudeMessage =
 [
-    [ "AviationAttitudeMessage", "classAviationAttitudeMessage.html#ac4d54008214ee9cdab30384c139460e7", null ],
+    [ "AviationAttitudeMessage", "classAviationAttitudeMessage.html#a6f5f8583c4acad1997baeb521c5820b7", null ],
     [ "~AviationAttitudeMessage", "classAviationAttitudeMessage.html#ae256d0d6eb6495e8fc6817f0e8b0e412", null ],
     [ "accelLateral", "classAviationAttitudeMessage.html#a9cd9577072f899ada961dd5a5d7b4a45", null ],
     [ "accelNormal", "classAviationAttitudeMessage.html#a8f8d4ea84e5ef2388807023c6d3ab1bf", null ],

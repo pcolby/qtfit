@@ -1,6 +1,6 @@
 var classDiveGasMessage =
 [
-    [ "DiveGasMessage", "classDiveGasMessage.html#acb368fa414cfb25c580e36f40453a911", null ],
+    [ "DiveGasMessage", "classDiveGasMessage.html#a2adef5e9c40ffb52d7aa67c2e449faae", null ],
     [ "~DiveGasMessage", "classDiveGasMessage.html#a44b3a4f463e6d214007701616e2d100a", null ],
     [ "heliumContent", "classDiveGasMessage.html#a4aa9ee78683d591c96b6c78e7a81d76c", null ],
     [ "messageIndex", "classDiveGasMessage.html#a04610815e2db44f6b69e1d10f37dd030", null ],

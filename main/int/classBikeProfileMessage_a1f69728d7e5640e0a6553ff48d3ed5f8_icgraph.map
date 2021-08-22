@@ -1,4 +1,4 @@
 <map id="BikeProfileMessage::frontGear" name="BikeProfileMessage::frontGear">
-<area shape="rect" id="node1" title=" " alt="" coords="203,5,352,47"/>
-<area shape="rect" id="node2" href="$classBikeProfileMessage.html#a5fccfeeb1218b3ccbed0a13fcef97421" title=" " alt="" coords="5,5,155,47"/>
+<area shape="rect" id="node1" title="Returns the BikeProfileMessage data message&#39;s frontGear field&#39;s current value." alt="" coords="203,5,352,47"/>
+<area shape="rect" id="node2" href="$classBikeProfileMessage.html#a5fccfeeb1218b3ccbed0a13fcef97421" title="Sets the frontGear field to frontGear." alt="" coords="5,5,155,47"/>
 </map>

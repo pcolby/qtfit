@@ -1,6 +1,6 @@
 var classMonitoringMessage =
 [
-    [ "MonitoringMessage", "classMonitoringMessage.html#ad8d2612753887ff1f646fec775ffa6bf", null ],
+    [ "MonitoringMessage", "classMonitoringMessage.html#ad65e837516c5beb2565df14885de06dc", null ],
     [ "~MonitoringMessage", "classMonitoringMessage.html#aadbc2b6e8f5a8b3af418d9eca2d0d837", null ],
     [ "activeCalories", "classMonitoringMessage.html#a3ce9f6eb06b99adf8df9c1efcf6a46a0", null ],
     [ "activeTime", "classMonitoringMessage.html#abfc8b72a353288af2635223c31e5298b", null ],

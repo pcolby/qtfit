@@ -1,6 +1,6 @@
 var classDiveSummaryMessage =
 [
-    [ "DiveSummaryMessage", "classDiveSummaryMessage.html#a2e7ef0e92af56ea9fc0620b5e066878c", null ],
+    [ "DiveSummaryMessage", "classDiveSummaryMessage.html#ab7629a66581101a5d74401e9cb89ebb0", null ],
     [ "~DiveSummaryMessage", "classDiveSummaryMessage.html#ab8c7cace44c42520598d3fcce5a344ea", null ],
     [ "avgDepth", "classDiveSummaryMessage.html#a25cf49a622c660fce4216f3780ef5edb", null ],
     [ "bottomTime", "classDiveSummaryMessage.html#a49487fd6108c515ab8ca15064dfdbf79", null ],

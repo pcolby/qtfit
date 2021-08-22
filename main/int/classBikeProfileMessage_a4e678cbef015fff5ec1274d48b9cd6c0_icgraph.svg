@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Returns the BikeProfileMessage data message&#39;s rearGearNum field&#39;s current value.">
 <polygon fill="#bfbfbf" stroke="black" points="148,-0.5 148,-30.5 260,-30.5 260,-0.5 148,-0.5"/>
 <text text-anchor="start" x="156" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">BikeProfileMessage</text>
 <text text-anchor="middle" x="204" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::rearGearNum</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classBikeProfileMessage.html#a364fbc6b69f1fd3429ecbddbbf064c55" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classBikeProfileMessage.html#a364fbc6b69f1fd3429ecbddbbf064c55" target="_top" xlink:title="Sets the rearGearNum field to rearGearNum.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-30.5 112,-30.5 112,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">BikeProfileMessage</text>
 <text text-anchor="middle" x="56" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::setRearGearNum</text>

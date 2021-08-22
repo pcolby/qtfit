@@ -1,5 +1,5 @@
 <map id="FitStreamReaderPrivate::parseDataMessage" name="FitStreamReaderPrivate::parseDataMessage">
 <area shape="rect" id="node1" title=" " alt="" coords="5,27,183,69"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html#ac4f164d1749350ced5cf43d8de01d9dd" title=" " alt="" coords="231,5,428,32"/>
+<area shape="rect" id="node2" href="$classFitDataMessage.html#ac4f164d1749350ced5cf43d8de01d9dd" title="Constructs the relevant FitDataMessage&#45;derived class to parse record according to defn." alt="" coords="231,5,428,32"/>
 <area shape="rect" id="node3" href="$classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e" title=" " alt="" coords="241,57,418,98"/>
 </map>

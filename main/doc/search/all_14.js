@@ -1,11 +1,20 @@
 var searchData=
 [
-  ['unitedstatesgrid_522',['UnitedStatesGrid',['../types_8h.html#ac48f2fc76319f7b3d77afeeaf6f592e4a2cabf4ff3ec4d3c342bf367a0fdff754',1,'types.h']]],
-  ['unknown_523',['Unknown',['../types_8h.html#aedf1b78d4e92e2985c190f1d7179e725a88183b946cc5f0e8c96b2e66e1c74a7e',1,'types.h']]],
-  ['user_524',['User',['../types_8h.html#aa7eaa149085455643033d4e0b1dffdd2a8f9bfe9d1345237cb3b2b205864da075',1,'types.h']]],
-  ['usermarker_525',['UserMarker',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a158bf89ebbb53e1b73ea5207899b58c6',1,'types.h']]],
-  ['userprofilemessage_526',['UserProfileMessage',['../classUserProfileMessage.html',1,'']]],
-  ['userprofilemessage_2ecpp_527',['userprofilemessage.cpp',['../userprofilemessage_8cpp.html',1,'']]],
-  ['userprofilemessage_2eh_528',['userprofilemessage.h',['../userprofilemessage_8h.html',1,'']]],
-  ['utmupsgrid_529',['UtmUpsGrid',['../types_8h.html#ac48f2fc76319f7b3d77afeeaf6f592e4a0f85ae9289d7138a28c9d68ee28d5e5e',1,'types.h']]]
+  ['unitedstatesgrid_1745',['UnitedStatesGrid',['../types_8h.html#ac48f2fc76319f7b3d77afeeaf6f592e4a2cabf4ff3ec4d3c342bf367a0fdff754',1,'types.h']]],
+  ['units_1746',['units',['../classFieldDescriptionMessage.html#ad78b5ebab25d5fc60add6493fc74afe1',1,'FieldDescriptionMessage']]],
+  ['unknown_1747',['Unknown',['../types_8h.html#aedf1b78d4e92e2985c190f1d7179e725a88183b946cc5f0e8c96b2e66e1c74a7e',1,'types.h']]],
+  ['url_1748',['url',['../classVideoMessage.html#a4febf85ef16729c02535be27706bf88a',1,'VideoMessage']]],
+  ['user_1749',['User',['../types_8h.html#aa7eaa149085455643033d4e0b1dffdd2a8f9bfe9d1345237cb3b2b205864da075',1,'types.h']]],
+  ['usermarker_1750',['UserMarker',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a158bf89ebbb53e1b73ea5207899b58c6',1,'types.h']]],
+  ['userprofileindex_1751',['userProfileIndex',['../classBloodPressureMessage.html#a27b6fe31b4d6fa70ba222a028f911414',1,'BloodPressureMessage::userProfileIndex()'],['../classWeightScaleMessage.html#a821ecfe81dedfdb981156c8ee9113864',1,'WeightScaleMessage::userProfileIndex()']]],
+  ['userprofilemessage_1752',['UserProfileMessage',['../classUserProfileMessage.html#a02e7b1cabb0ae46ec6ad10394ffd502a',1,'UserProfileMessage::UserProfileMessage()'],['../classUserProfileMessage.html',1,'UserProfileMessage']]],
+  ['userprofilemessage_2ecpp_1753',['userprofilemessage.cpp',['../userprofilemessage_8cpp.html',1,'']]],
+  ['userprofilemessage_2eh_1754',['userprofilemessage.h',['../userprofilemessage_8h.html',1,'']]],
+  ['userprofileprimarykey_1755',['userProfilePrimaryKey',['../classSegmentFileMessage.html#a3aaae1692a1de06ff5a8dba535bacbf0',1,'SegmentFileMessage::userProfilePrimaryKey()'],['../classSegmentIdMessage.html#a19ad7f8d20e20bf090eb83f8894edd82',1,'SegmentIdMessage::userProfilePrimaryKey()']]],
+  ['userrunningsteplength_1756',['userRunningStepLength',['../classUserProfileMessage.html#a4a4f796fc54389897cf1cf0080be4f97',1,'UserProfileMessage']]],
+  ['userwalkingsteplength_1757',['userWalkingStepLength',['../classUserProfileMessage.html#a8530287f7e882ec031fbec36a906ff16',1,'UserProfileMessage']]],
+  ['utcoffset_1758',['utcOffset',['../classDeviceSettingsMessage.html#ad0feca6dbf45e8f80e2b1cd385786765',1,'DeviceSettingsMessage']]],
+  ['utctimestamp_1759',['utcTimestamp',['../classGpsMetadataMessage.html#aa6b08e7408f00703a7cd8460b414277e',1,'GpsMetadataMessage']]],
+  ['utmupsgrid_1760',['UtmUpsGrid',['../types_8h.html#ac48f2fc76319f7b3d77afeeaf6f592e4a0f85ae9289d7138a28c9d68ee28d5e5e',1,'types.h']]],
+  ['uuid_1761',['uuid',['../classSegmentLapMessage.html#ad36e57b65574d9da50526484ea6938a9',1,'SegmentLapMessage::uuid()'],['../classSegmentIdMessage.html#ad185766d99e0b7f81eb4b1cfaf4c0c39',1,'SegmentIdMessage::uuid()']]]
 ];

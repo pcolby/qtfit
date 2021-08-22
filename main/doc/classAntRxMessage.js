@@ -1,6 +1,6 @@
 var classAntRxMessage =
 [
-    [ "AntRxMessage", "classAntRxMessage.html#ace0f2dc21bba5db1dfd5e3844542b055", null ],
+    [ "AntRxMessage", "classAntRxMessage.html#ad5c73007effd205abe15230511d2c6a0", null ],
     [ "~AntRxMessage", "classAntRxMessage.html#a69f918adfba222ddd96e4cb144e65f9d", null ],
     [ "channelNumber", "classAntRxMessage.html#ae8877b51a17718ef9de088cda1d284d5", null ],
     [ "data", "classAntRxMessage.html#a8782a5328c09dce9d6dcefc868db5e7b", null ],

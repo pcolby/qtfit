@@ -1,6 +1,6 @@
 var classConnectivityMessage =
 [
-    [ "ConnectivityMessage", "classConnectivityMessage.html#afe6e2785b0af079a0ccf88daee8dc87c", null ],
+    [ "ConnectivityMessage", "classConnectivityMessage.html#ae34d10776a3fa87cb291c5213bfad663", null ],
     [ "~ConnectivityMessage", "classConnectivityMessage.html#a97ea0d21a61762a1959e2359b12fe821", null ],
     [ "antEnabled", "classConnectivityMessage.html#a8f0b94bce88ea80f3ebd3dceee1101fa", null ],
     [ "autoActivityUploadEnabled", "classConnectivityMessage.html#a4c03bbb539e27c1d90a73f5ed50bc898", null ],

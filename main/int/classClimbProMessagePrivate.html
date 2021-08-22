@@ -155,6 +155,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a41e76a07b6cfd468a29b90ddd09207f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classFitDataMessagePrivate"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFitDataMessagePrivate')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></td></tr>
 <tr class="memitem:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a> (const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> actualType, const int expectedSize, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> expectedType, const char *messageFieldName)</td></tr>
+<tr class="memdesc:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">\interal  <a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">More...</a><br /></td></tr>
 <tr class="separator:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -165,7 +166,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8af17988d16bd92de480941dca604613 inherit pro_attribs_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>The <a class="el" href="classClimbProMessagePrivate.html">ClimbProMessagePrivate</a> class provides private implementation for the <a class="el" href="classClimbProMessage.html" title="The ClimbProMessage class represents a FIT ClimbProMessage data message.">ClimbProMessage</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classClimbProMessage.html" title="The ClimbProMessage class represents a FIT ClimbProMessage data message.">ClimbProMessage</a> </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa02a37b81a0119b91a07870855cb307c"></a>
@@ -216,19 +219,26 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classClimbProMessagePrivate.html">ClimbProMessagePrivate</a> object with public implementation <em>q</em>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>Pointer to public implementaton. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="climbpromessage_8cpp_source.html#l00116">116</a> of file <a class="el" href="climbpromessage_8cpp_source.html">climbpromessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#af867ca7ea31843265f02b3e492b3eec7">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#a1e15a660d3c01334c9e3f0610b094cc6">positionLat</a>(0x7FFFFFFF)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#ab2e086b48f0d756c029b5689d779c3a5">positionLong</a>(0x7FFFFFFF)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#ad437b01f66987803e56fbb6d44c315e3">climbProEvent</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a42b91e1fa7d40359cef8e15f18c17fde">ClimbProEvent</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#a15dcb4501eb80b060aca72d0f70a011f">climbNumber</a>(0xFFFF)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#a98ff4c9d17a6d03db8231cf9d5089818">climbCategory</a>(0xFF)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22cacc11da16eff4c73fe4bb242bad6abffc">MesgNum::ClimbPro</a>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="climbpromessage_8cpp_source.html#l00217">217</a> of file <a class="el" href="climbpromessage_8cpp_source.html">climbpromessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#af867ca7ea31843265f02b3e492b3eec7">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#a1e15a660d3c01334c9e3f0610b094cc6">positionLat</a>(0x7FFFFFFF)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#ab2e086b48f0d756c029b5689d779c3a5">positionLong</a>(0x7FFFFFFF)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#ad437b01f66987803e56fbb6d44c315e3">climbProEvent</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a42b91e1fa7d40359cef8e15f18c17fde">ClimbProEvent</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#a15dcb4501eb80b060aca72d0f70a011f">climbNumber</a>(0xFFFF)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#a98ff4c9d17a6d03db8231cf9d5089818">climbCategory</a>(0xFF)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  , <a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22cacc11da16eff4c73fe4bb242bad6abffc">MesgNum::ClimbPro</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
 <div class="ttc" id="aclassClimbProMessagePrivate_html_a15dcb4501eb80b060aca72d0f70a011f"><div class="ttname"><a href="classClimbProMessagePrivate.html#a15dcb4501eb80b060aca72d0f70a011f">ClimbProMessagePrivate::climbNumber</a></div><div class="ttdeci">quint16 climbNumber</div><div class="ttdef"><b>Definition:</b> <a href="climbpromessage__p_8h_source.html#l00041">climbpromessage_p.h:41</a></div></div>
 <div class="ttc" id="aclassClimbProMessagePrivate_html_a1e15a660d3c01334c9e3f0610b094cc6"><div class="ttname"><a href="classClimbProMessagePrivate.html#a1e15a660d3c01334c9e3f0610b094cc6">ClimbProMessagePrivate::positionLat</a></div><div class="ttdeci">qint32 positionLat</div><div class="ttdef"><b>Definition:</b> <a href="climbpromessage__p_8h_source.html#l00038">climbpromessage_p.h:38</a></div></div>
 <div class="ttc" id="aclassClimbProMessagePrivate_html_a98ff4c9d17a6d03db8231cf9d5089818"><div class="ttname"><a href="classClimbProMessagePrivate.html#a98ff4c9d17a6d03db8231cf9d5089818">ClimbProMessagePrivate::climbCategory</a></div><div class="ttdeci">quint8 climbCategory</div><div class="ttdef"><b>Definition:</b> <a href="climbpromessage__p_8h_source.html#l00042">climbpromessage_p.h:42</a></div></div>
@@ -268,11 +278,12 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destroys the <a class="el" href="classClimbProMessagePrivate.html">ClimbProMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="climbpromessage_8cpp_source.html#l00129">129</a> of file <a class="el" href="climbpromessage_8cpp_source.html">climbpromessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="climbpromessage_8cpp_source.html#l00235">235</a> of file <a class="el" href="climbpromessage_8cpp_source.html">climbpromessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -322,57 +333,69 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set a value of a data message field.</p>
+<p>This base implementation simply logs a warning, and ignores the field. Derived classes should override this implementation to set the relevant class members.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldId</td><td>The field number within the given FIT data message. </td></tr>
+    <tr><td class="paramname">data</td><td>The raw data to extract the field value from. </td></tr>
+    <tr><td class="paramname">baseType</td><td>The FIT base type for the field. </td></tr>
+    <tr><td class="paramname">bigEndian</td><td>Whether or not multibyte values in <em>record</em> are big-endian.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the field was set, or skipped; <code>false</code> if the field was corrupt or invalid. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="climbpromessage_8cpp_source.html#l00134">134</a> of file <a class="el" href="climbpromessage_8cpp_source.html">climbpromessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:climb_pro.timestamp</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;climb_pro.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#af867ca7ea31843265f02b3e492b3eec7">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:climb_pro.positionLat</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;climb_pro.positionLat&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#a1e15a660d3c01334c9e3f0610b094cc6">positionLat</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:climb_pro.positionLong</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;climb_pro.positionLong&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ab2e086b48f0d756c029b5689d779c3a5">positionLong</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:climb_pro.climbProEvent</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;climb_pro.climbProEvent&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad437b01f66987803e56fbb6d44c315e3">climbProEvent</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a42b91e1fa7d40359cef8e15f18c17fde">ClimbProEvent</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:climb_pro.climbNumber</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;climb_pro.climbNumber&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#a15dcb4501eb80b060aca72d0f70a011f">climbNumber</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:climb_pro.climbCategory</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;climb_pro.climbCategory&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#a98ff4c9d17a6d03db8231cf9d5089818">climbCategory</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:climb_pro.currentDist</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a166495adc0d0f53bee6baecc577f5204">FitBaseType::Float32</a>, <span class="stringliteral">&quot;climb_pro.currentDist&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a>, &amp;localEndian, data.size());</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">        #else</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown climb_pro message field number&quot;</span> &lt;&lt; fieldId;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00114">fitdatamessage.cpp:114</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<p class="definition">Definition at line <a class="el" href="climbpromessage_8cpp_source.html#l00240">240</a> of file <a class="el" href="climbpromessage_8cpp_source.html">climbpromessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:climb_pro.timestamp</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;climb_pro.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#af867ca7ea31843265f02b3e492b3eec7">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:climb_pro.positionLat</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;climb_pro.positionLat&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#a1e15a660d3c01334c9e3f0610b094cc6">positionLat</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:climb_pro.positionLong</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;climb_pro.positionLong&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ab2e086b48f0d756c029b5689d779c3a5">positionLong</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:climb_pro.climbProEvent</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;climb_pro.climbProEvent&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad437b01f66987803e56fbb6d44c315e3">climbProEvent</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a42b91e1fa7d40359cef8e15f18c17fde">ClimbProEvent</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:climb_pro.climbNumber</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;climb_pro.climbNumber&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#a15dcb4501eb80b060aca72d0f70a011f">climbNumber</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:climb_pro.climbCategory</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;climb_pro.climbCategory&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#a98ff4c9d17a6d03db8231cf9d5089818">climbCategory</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:climb_pro.currentDist</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a166495adc0d0f53bee6baecc577f5204">FitBaseType::Float32</a>, <span class="stringliteral">&quot;climb_pro.currentDist&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a>, &amp;localEndian, data.size());</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        this-&gt;<a class="code" href="classClimbProMessagePrivate.html#ad20933275a9910a48a6d3253c568f637">currentDist</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown climb_pro message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdoc">\interal</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00235">fitdatamessage.cpp:235</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00178">fitdatamessage.cpp:178</a></div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a166495adc0d0f53bee6baecc577f5204"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a166495adc0d0f53bee6baecc577f5204">FitBaseType::Float32</a></div><div class="ttdeci">@ Float32</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
@@ -380,7 +403,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a></div><div class="ttdeci">@ Sint32</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a></div><div class="ttdeci">@ Enum</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="climbpromessage__p_8h_source.html#l00042">climbCategory</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00041">climbNumber</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00040">climbProEvent</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00043">currentDist</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a166495adc0d0f53bee6baecc577f5204">Float32</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00038">positionLat</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00039">positionLong</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">Sint32</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00037">timestamp</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00114">FitDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="climbpromessage__p_8h_source.html#l00042">climbCategory</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00041">climbNumber</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00040">climbProEvent</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00043">currentDist</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a166495adc0d0f53bee6baecc577f5204">Float32</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00038">positionLat</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00039">positionLong</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00178">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">Sint32</a>, <a class="el" href="climbpromessage__p_8h_source.html#l00037">timestamp</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00235">FitDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -405,7 +428,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00134">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00240">setField()</a>.</p>
 
 </div>
 </div>
@@ -423,7 +446,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00134">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00240">setField()</a>.</p>
 
 </div>
 </div>
@@ -441,7 +464,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00134">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00240">setField()</a>.</p>
 
 </div>
 </div>
@@ -459,7 +482,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00043">43</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00134">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00240">setField()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +500,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00134">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00240">setField()</a>.</p>
 
 </div>
 </div>
@@ -495,7 +518,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00134">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00240">setField()</a>.</p>
 
 </div>
 </div>
@@ -513,7 +536,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="climbpromessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="climbpromessage__p_8h_source.html">climbpromessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00134">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="climbpromessage_8cpp_source.html#l00240">setField()</a>.</p>
 
 </div>
 </div>

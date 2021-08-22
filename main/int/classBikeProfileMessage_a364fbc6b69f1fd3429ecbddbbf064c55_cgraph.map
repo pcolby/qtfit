@@ -1,4 +1,4 @@
 <map id="BikeProfileMessage::setRearGearNum" name="BikeProfileMessage::setRearGearNum">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,155,47"/>
-<area shape="rect" id="node2" href="$classBikeProfileMessage.html#a4e678cbef015fff5ec1274d48b9cd6c0" title=" " alt="" coords="203,5,352,47"/>
+<area shape="rect" id="node1" title="Sets the rearGearNum field to rearGearNum." alt="" coords="5,5,155,47"/>
+<area shape="rect" id="node2" href="$classBikeProfileMessage.html#a4e678cbef015fff5ec1274d48b9cd6c0" title="Returns the BikeProfileMessage data message&#39;s rearGearNum field&#39;s current value." alt="" coords="203,5,352,47"/>
 </map>

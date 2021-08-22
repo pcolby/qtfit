@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['setdevice_869',['setDevice',['../classFitStreamReader.html#ac5922537088dfa514ee1013d08ee59be',1,'FitStreamReader']]]
+  ['gender_2428',['gender',['../classUserProfileMessage.html#a927dda5d2a9cfe04ee83be3ea76ff1e1',1,'UserProfileMessage']]],
+  ['gfhigh_2429',['gfHigh',['../classDiveSettingsMessage.html#a501f2b810edec9edd1d6f17fcd988235',1,'DiveSettingsMessage']]],
+  ['gflow_2430',['gfLow',['../classDiveSettingsMessage.html#a3267b2b31dd12ecf542d6c2ef3cfe458',1,'DiveSettingsMessage']]],
+  ['globalid_2431',['globalId',['../classUserProfileMessage.html#a1435dce73734d0cb552dc98e9f104778',1,'UserProfileMessage']]],
+  ['globalmessagenumber_2432',['globalMessageNumber',['../classFitDataMessage.html#aec43e441e41b6b1a4d05199844440515',1,'FitDataMessage']]],
+  ['goalmessage_2433',['GoalMessage',['../classGoalMessage.html#a14c983dae9a159c102bdaa1a51874fc5',1,'GoalMessage']]],
+  ['gpsaccuracy_2434',['gpsAccuracy',['../classLapMessage.html#a5b8753a8fd441d4005fb6e470d98e728',1,'LapMessage::gpsAccuracy()'],['../classRecordMessage.html#a8f5e182a724b403f5b37a5c246d89019',1,'RecordMessage::gpsAccuracy()'],['../classSegmentLapMessage.html#aada3730d74866d12cbfbb218c86980b0',1,'SegmentLapMessage::gpsAccuracy()'],['../classSessionMessage.html#af1945ae9bafcca4c8affebdff6d613b1',1,'SessionMessage::gpsAccuracy()']]],
+  ['gpsephemerisdownloadenabled_2435',['gpsEphemerisDownloadEnabled',['../classConnectivityMessage.html#a822ab9f83832f65d6a34ce759305185d',1,'ConnectivityMessage']]],
+  ['gpsmetadatamessage_2436',['GpsMetadataMessage',['../classGpsMetadataMessage.html#ae42c7ad53ea6b3d4e0a7b19cad7e446b',1,'GpsMetadataMessage']]],
+  ['grade_2437',['grade',['../classRecordMessage.html#a08a098e6e92a5357bd56f6ff4454d67a',1,'RecordMessage']]],
+  ['grit_2438',['grit',['../classRecordMessage.html#a8c55f476aae717c9e1d34a45ad6ddd1f',1,'RecordMessage']]],
+  ['groupprimarykey_2439',['groupPrimaryKey',['../classSegmentLeaderboardEntryMessage.html#a9206742441b3aa2727ad8f9f5622d920',1,'SegmentLeaderboardEntryMessage']]],
+  ['grouptrackenabled_2440',['grouptrackEnabled',['../classConnectivityMessage.html#a306788fc50004d0b138f450b9d3b753f',1,'ConnectivityMessage']]],
+  ['gyroscopedatamessage_2441',['GyroscopeDataMessage',['../classGyroscopeDataMessage.html#a7f71b354c7124b4e491e0235b47d70ce',1,'GyroscopeDataMessage']]],
+  ['gyrox_2442',['gyroX',['../classGyroscopeDataMessage.html#a1ca13601c6b164cf4acc597c7432514d',1,'GyroscopeDataMessage']]],
+  ['gyroy_2443',['gyroY',['../classGyroscopeDataMessage.html#acf98165788866a56c64321559e18020b',1,'GyroscopeDataMessage']]],
+  ['gyroz_2444',['gyroZ',['../classGyroscopeDataMessage.html#aa01ffe032ad33a45b0dbd18b15072a18',1,'GyroscopeDataMessage']]]
 ];

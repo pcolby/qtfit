@@ -1,4 +1,4 @@
 <map id="NmeaSentenceMessage" name="NmeaSentenceMessage">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,184,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title=" " alt="" coords="31,5,158,32"/>
+<area shape="rect" id="node1" title="The NmeaSentenceMessage class represents a FIT NmeaSentenceMessage data message." alt="" coords="5,80,184,107"/>
+<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="31,5,158,32"/>
 </map>

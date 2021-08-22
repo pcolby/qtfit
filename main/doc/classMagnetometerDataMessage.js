@@ -1,6 +1,6 @@
 var classMagnetometerDataMessage =
 [
-    [ "MagnetometerDataMessage", "classMagnetometerDataMessage.html#ac1122aa94fd64d2c7cf4dd5441516111", null ],
+    [ "MagnetometerDataMessage", "classMagnetometerDataMessage.html#ab4468d4f43726318974f0c0c65c0a0af", null ],
     [ "~MagnetometerDataMessage", "classMagnetometerDataMessage.html#a907a7bbbe6ff292232f0e41298f1bdb2", null ],
     [ "calibratedMagX", "classMagnetometerDataMessage.html#a8a20236cf56ae80bb3907015a7c21d16", null ],
     [ "calibratedMagY", "classMagnetometerDataMessage.html#a138b9ec6ed84da9a4a613bdf050218b5", null ],

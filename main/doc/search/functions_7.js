@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['_7efitstreamreader_870',['~FitStreamReader',['../classFitStreamReader.html#a8e848ed37d37d7f2a9a3a734dc484524',1,'FitStreamReader']]]
+  ['hangtime_2445',['hangTime',['../classJumpMessage.html#ae19ee8f06f8b532cb8e055d67a960355',1,'JumpMessage']]],
+  ['hardwareversion_2446',['hardwareVersion',['../classDeviceInfoMessage.html#adcf108351d297cc80c73b257a43bfa6e',1,'DeviceInfoMessage::hardwareVersion()'],['../classFileCreatorMessage.html#acb5301176cba60ddee7df3fba7741bef',1,'FileCreatorMessage::hardwareVersion()']]],
+  ['heading_2447',['heading',['../classGpsMetadataMessage.html#a5c9fb171dde0fde7de46025905ec8a67',1,'GpsMetadataMessage']]],
+  ['heartrate_2448',['heartRate',['../classBloodPressureMessage.html#a699899f8bd4cae90677182036f9a9ce9',1,'BloodPressureMessage::heartRate()'],['../classMonitoringMessage.html#a2c7a179f6b0a0554481266a9aebb3830',1,'MonitoringMessage::heartRate()'],['../classRecordMessage.html#a65153e0491b7e717beca3b09093a9871',1,'RecordMessage::heartRate()']]],
+  ['heartratesource_2449',['heartRateSource',['../classDiveSettingsMessage.html#ad906d46264cfa60a376ac0aa07ba1b97',1,'DiveSettingsMessage']]],
+  ['heartratesourcetype_2450',['heartRateSourceType',['../classDiveSettingsMessage.html#a9e254285b2fdd71cc796dd5eaf92964c',1,'DiveSettingsMessage']]],
+  ['heartratetype_2451',['heartRateType',['../classBloodPressureMessage.html#a2fc7eb9a7099b6790c848a5db7354dc1',1,'BloodPressureMessage']]],
+  ['height_2452',['height',['../classJumpMessage.html#a75f048a3d8e73cc9edebd359cc854c71',1,'JumpMessage::height()'],['../classUserProfileMessage.html#a2e9b795a1bff6a0a99af404db23b420b',1,'UserProfileMessage::height() const']]],
+  ['heightsetting_2453',['heightSetting',['../classUserProfileMessage.html#a82ca8ab7d98663ba09f1e82ada9bf54a',1,'UserProfileMessage']]],
+  ['heliumcontent_2454',['heliumContent',['../classDiveGasMessage.html#a4aa9ee78683d591c96b6c78e7a81d76c',1,'DiveGasMessage']]],
+  ['highbpm_2455',['highBpm',['../classHrZoneMessage.html#ac065837902258f4a30953a6edb024cf4',1,'HrZoneMessage::highBpm()'],['../classMetZoneMessage.html#a4e756ea99385b389bb9263479903b4a6',1,'MetZoneMessage::highBpm()']]],
+  ['hightemperature_2456',['highTemperature',['../classWeatherConditionsMessage.html#ae0dfdb870eb13c8140ce8b2bc2f88d6d',1,'WeatherConditionsMessage']]],
+  ['highvalue_2457',['highValue',['../classCadenceZoneMessage.html#ac31beb38c4b41b9124123f46eac59f43',1,'CadenceZoneMessage::highValue()'],['../classPowerZoneMessage.html#a9b8eea13270cffdc66b29f8edb28ebd6',1,'PowerZoneMessage::highValue()'],['../classSpeedZoneMessage.html#afa7655e81497ff108a572ee50bdc2881',1,'SpeedZoneMessage::highValue()']]],
+  ['hostingprovider_2458',['hostingProvider',['../classVideoMessage.html#a6b31d10c4bcc01dd988b560fb9855572',1,'VideoMessage']]],
+  ['hrcalctype_2459',['hrCalcType',['../classZonesTargetMessage.html#afac374cbf5f498b247c21c859d6d22c8',1,'ZonesTargetMessage']]],
+  ['hrmantid_2460',['hrmAntId',['../classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9',1,'HrmProfileMessage']]],
+  ['hrmantidtranstype_2461',['hrmAntIdTransType',['../classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7',1,'HrmProfileMessage']]],
+  ['hrmessage_2462',['HrMessage',['../classHrMessage.html#a8b3037ab5e8aaf18337ee3b7abcf26f0',1,'HrMessage']]],
+  ['hrmprofilemessage_2463',['HrmProfileMessage',['../classHrmProfileMessage.html#a519428418371718feebec355f8659094',1,'HrmProfileMessage']]],
+  ['hrsetting_2464',['hrSetting',['../classUserProfileMessage.html#a2768a05ade7a8174da685035e1851e8a',1,'UserProfileMessage']]],
+  ['hrvmessage_2465',['HrvMessage',['../classHrvMessage.html#aa86e9e4125f3f1325fe293ff1b8576f9',1,'HrvMessage']]],
+  ['hrzonemessage_2466',['HrZoneMessage',['../classHrZoneMessage.html#aa909a1ab5f90104890eac2abf98239ed',1,'HrZoneMessage']]]
 ];

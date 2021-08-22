@@ -157,6 +157,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a91bac760eb9d0c3475dc18c33835902b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classFitDataMessagePrivate"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFitDataMessagePrivate')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></td></tr>
 <tr class="memitem:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a> (const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> actualType, const int expectedSize, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> expectedType, const char *messageFieldName)</td></tr>
+<tr class="memdesc:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">\interal  <a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">More...</a><br /></td></tr>
 <tr class="separator:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -167,7 +168,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8af17988d16bd92de480941dca604613 inherit pro_attribs_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>The <a class="el" href="classCoursePointMessagePrivate.html">CoursePointMessagePrivate</a> class provides private implementation for the <a class="el" href="classCoursePointMessage.html" title="The CoursePointMessage class represents a FIT CoursePointMessage data message.">CoursePointMessage</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classCoursePointMessage.html" title="The CoursePointMessage class represents a FIT CoursePointMessage data message.">CoursePointMessage</a> </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aee2414dfbd9b69ddbdb4a3003a232e0d"></a>
@@ -218,19 +221,26 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classCoursePointMessagePrivate.html">CoursePointMessagePrivate</a> object with public implementation <em>q</em>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>Pointer to public implementaton. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="coursepointmessage_8cpp_source.html#l00127">127</a> of file <a class="el" href="coursepointmessage_8cpp_source.html">coursepointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a29d5acc5db3cd847721e0c823828b830">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#ad9a651352d5d997a5a159c8d9f7d92a5">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a45afb19a4c537394974b0d5ade42567b">positionLat</a>(0x7FFFFFFF)</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#ad2612fcc25a2334814047051dd722de8">positionLong</a>(0x7FFFFFFF)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a446d869e840d8e9bb1b64fb4a1dcdb7b">distance</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#aafbc0270269854856b177438d13d906c">type</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8fafe388d86ed7de90d905a38c68ad15">CoursePoint</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a2d477828bed7106c3e0652c7f0e5626a">favorite</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca49228f35fc41f14a03e726c5bcd7132c">MesgNum::CoursePoint</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="coursepointmessage_8cpp_source.html#l00238">238</a> of file <a class="el" href="coursepointmessage_8cpp_source.html">coursepointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a29d5acc5db3cd847721e0c823828b830">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#ad9a651352d5d997a5a159c8d9f7d92a5">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a45afb19a4c537394974b0d5ade42567b">positionLat</a>(0x7FFFFFFF)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#ad2612fcc25a2334814047051dd722de8">positionLong</a>(0x7FFFFFFF)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a446d869e840d8e9bb1b64fb4a1dcdb7b">distance</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#aafbc0270269854856b177438d13d906c">type</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8fafe388d86ed7de90d905a38c68ad15">CoursePoint</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  , <a class="code" href="classCoursePointMessagePrivate.html#a2d477828bed7106c3e0652c7f0e5626a">favorite</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;{</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca49228f35fc41f14a03e726c5bcd7132c">MesgNum::CoursePoint</a>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
 <div class="ttc" id="aclassCoursePointMessagePrivate_html_a29d5acc5db3cd847721e0c823828b830"><div class="ttname"><a href="classCoursePointMessagePrivate.html#a29d5acc5db3cd847721e0c823828b830">CoursePointMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdef"><b>Definition:</b> <a href="coursepointmessage__p_8h_source.html#l00037">coursepointmessage_p.h:37</a></div></div>
 <div class="ttc" id="aclassCoursePointMessagePrivate_html_a2d477828bed7106c3e0652c7f0e5626a"><div class="ttname"><a href="classCoursePointMessagePrivate.html#a2d477828bed7106c3e0652c7f0e5626a">CoursePointMessagePrivate::favorite</a></div><div class="ttdeci">bool favorite</div><div class="ttdef"><b>Definition:</b> <a href="coursepointmessage__p_8h_source.html#l00044">coursepointmessage_p.h:44</a></div></div>
 <div class="ttc" id="aclassCoursePointMessagePrivate_html_a446d869e840d8e9bb1b64fb4a1dcdb7b"><div class="ttname"><a href="classCoursePointMessagePrivate.html#a446d869e840d8e9bb1b64fb4a1dcdb7b">CoursePointMessagePrivate::distance</a></div><div class="ttdeci">quint32 distance</div><div class="ttdef"><b>Definition:</b> <a href="coursepointmessage__p_8h_source.html#l00041">coursepointmessage_p.h:41</a></div></div>
@@ -271,11 +281,12 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destroys the <a class="el" href="classCoursePointMessagePrivate.html">CoursePointMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="coursepointmessage_8cpp_source.html#l00140">140</a> of file <a class="el" href="coursepointmessage_8cpp_source.html">coursepointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="coursepointmessage_8cpp_source.html#l00256">256</a> of file <a class="el" href="coursepointmessage_8cpp_source.html">coursepointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -325,53 +336,65 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set a value of a data message field.</p>
+<p>This base implementation simply logs a warning, and ignores the field. Derived classes should override this implementation to set the relevant class members.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldId</td><td>The field number within the given FIT data message. </td></tr>
+    <tr><td class="paramname">data</td><td>The raw data to extract the field value from. </td></tr>
+    <tr><td class="paramname">baseType</td><td>The FIT base type for the field. </td></tr>
+    <tr><td class="paramname">bigEndian</td><td>Whether or not multibyte values in <em>record</em> are big-endian.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the field was set, or skipped; <code>false</code> if the field was corrupt or invalid. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="coursepointmessage_8cpp_source.html#l00145">145</a> of file <a class="el" href="coursepointmessage_8cpp_source.html">coursepointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:course_point.messageIndex</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;course_point.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a29d5acc5db3cd847721e0c823828b830">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:course_point.timestamp</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;course_point.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#ad9a651352d5d997a5a159c8d9f7d92a5">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:course_point.positionLat</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;course_point.positionLat&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a45afb19a4c537394974b0d5ade42567b">positionLat</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:course_point.positionLong</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;course_point.positionLong&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#ad2612fcc25a2334814047051dd722de8">positionLong</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:course_point.distance</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;course_point.distance&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a446d869e840d8e9bb1b64fb4a1dcdb7b">distance</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:course_point.type</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;course_point.type&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#aafbc0270269854856b177438d13d906c">type</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8fafe388d86ed7de90d905a38c68ad15">CoursePoint</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:course_point.name</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>, <span class="stringliteral">&quot;course_point.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a8bd8787d75f0ddfcf12bc05f8bebb6ea">name</a> = QString::fromUtf8(data);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">case</span> 8: <span class="comment">// See Profile.xlsx::Messages:course_point.favorite</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;course_point.favorite&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a2d477828bed7106c3e0652c7f0e5626a">favorite</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown course_point message field number&quot;</span> &lt;&lt; fieldId;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="coursepointmessage_8cpp_source.html#l00261">261</a> of file <a class="el" href="coursepointmessage_8cpp_source.html">coursepointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:course_point.messageIndex</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;course_point.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a29d5acc5db3cd847721e0c823828b830">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:course_point.timestamp</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;course_point.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#ad9a651352d5d997a5a159c8d9f7d92a5">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:course_point.positionLat</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;course_point.positionLat&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a45afb19a4c537394974b0d5ade42567b">positionLat</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:course_point.positionLong</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">FitBaseType::Sint32</a>, <span class="stringliteral">&quot;course_point.positionLong&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#ad2612fcc25a2334814047051dd722de8">positionLong</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:course_point.distance</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;course_point.distance&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a446d869e840d8e9bb1b64fb4a1dcdb7b">distance</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:course_point.type</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;course_point.type&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#aafbc0270269854856b177438d13d906c">type</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8fafe388d86ed7de90d905a38c68ad15">CoursePoint</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:course_point.name</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>, <span class="stringliteral">&quot;course_point.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a8bd8787d75f0ddfcf12bc05f8bebb6ea">name</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">case</span> 8: <span class="comment">// See Profile.xlsx::Messages:course_point.favorite</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;course_point.favorite&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        this-&gt;<a class="code" href="classCoursePointMessagePrivate.html#a2d477828bed7106c3e0652c7f0e5626a">favorite</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown course_point message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
 <div class="ttc" id="aclassCoursePointMessagePrivate_html_a8bd8787d75f0ddfcf12bc05f8bebb6ea"><div class="ttname"><a href="classCoursePointMessagePrivate.html#a8bd8787d75f0ddfcf12bc05f8bebb6ea">CoursePointMessagePrivate::name</a></div><div class="ttdeci">QString name</div><div class="ttdef"><b>Definition:</b> <a href="coursepointmessage__p_8h_source.html#l00043">coursepointmessage_p.h:43</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00114">fitdatamessage.cpp:114</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdoc">\interal</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00235">fitdatamessage.cpp:235</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00178">fitdatamessage.cpp:178</a></div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a></div><div class="ttdeci">@ String</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
@@ -379,7 +402,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a></div><div class="ttdeci">@ Byte</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a></div><div class="ttdeci">@ Enum</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00041">distance</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00044">favorite</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00037">messageIndex</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00043">name</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00039">positionLat</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00040">positionLong</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">Sint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">String</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00038">timestamp</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00042">type</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00114">FitDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00041">distance</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00044">favorite</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00037">messageIndex</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00043">name</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00039">positionLat</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00040">positionLong</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00178">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a987058a08862c20fb524e8ba3d28b137">Sint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">String</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00038">timestamp</a>, <a class="el" href="coursepointmessage__p_8h_source.html#l00042">type</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00235">FitDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -404,7 +427,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>
@@ -422,7 +445,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00044">44</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>
@@ -440,7 +463,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>
@@ -458,7 +481,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00043">43</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>
@@ -476,7 +499,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>
@@ -494,7 +517,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>
@@ -512,7 +535,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>
@@ -530,7 +553,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="coursepointmessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="coursepointmessage__p_8h_source.html">coursepointmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00145">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="coursepointmessage_8cpp_source.html#l00261">setField()</a>.</p>
 
 </div>
 </div>

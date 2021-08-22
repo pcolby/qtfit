@@ -1,6 +1,6 @@
 var classNmeaSentenceMessage =
 [
-    [ "NmeaSentenceMessage", "classNmeaSentenceMessage.html#a4f983dfdbeeeb8ecc76e3505c8937c03", null ],
+    [ "NmeaSentenceMessage", "classNmeaSentenceMessage.html#abf7f0b12d489ef35e279c42ab026d161", null ],
     [ "~NmeaSentenceMessage", "classNmeaSentenceMessage.html#abe0053385394607071f7f4deca83091c", null ],
     [ "sentence", "classNmeaSentenceMessage.html#aa6dde31a7e4390d07c2faf78fe932bce", null ],
     [ "setSentence", "classNmeaSentenceMessage.html#a21cd2cd044dbae6577457096d459d25c", null ],

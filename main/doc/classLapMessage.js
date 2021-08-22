@@ -1,6 +1,6 @@
 var classLapMessage =
 [
-    [ "LapMessage", "classLapMessage.html#a856aedbd420f93b6fc565fb1fcacd5e5", null ],
+    [ "LapMessage", "classLapMessage.html#afc3f90b810674fd1ca3462cdd83d720c", null ],
     [ "~LapMessage", "classLapMessage.html#a853a33de108376208013b3ebbce0fc3d", null ],
     [ "avgAltitude", "classLapMessage.html#ae5d95837f0489c89117a9ed6cb4d2826", null ],
     [ "avgCadence", "classLapMessage.html#a1107b67e1cdbe8e62de598a7842b7da1", null ],

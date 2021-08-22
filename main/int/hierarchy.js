@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "DataDefinition", "structDataDefinition.html", null ],
-    [ "DataMessage", "structDataMessage.html", null ],
     [ "DeveloperFieldDefinition", "structDeveloperFieldDefinition.html", null ],
     [ "FieldDefinition", "structFieldDefinition.html", null ],
     [ "FitDataMessage", "classFitDataMessage.html", [

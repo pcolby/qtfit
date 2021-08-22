@@ -1,5 +1,5 @@
 <map id="cadencezonemessage.h" name="cadencezonemessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="113,5,291,32"/>
 <area shape="rect" id="node2" href="$cadencezonemessage_8cpp.html" title=" " alt="" coords="5,80,199,107"/>
-<area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title=" " alt="" coords="223,80,381,107"/>
+<area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title="Provides the FitDataMessage::fromData implementation." alt="" coords="223,80,381,107"/>
 </map>

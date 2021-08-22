@@ -1,6 +1,6 @@
 var classDiveSettingsMessage =
 [
-    [ "DiveSettingsMessage", "classDiveSettingsMessage.html#a289a78c83fca825370d4d0534fadf988", null ],
+    [ "DiveSettingsMessage", "classDiveSettingsMessage.html#a20c45e888eb33b9eb083abf6c11c84dc", null ],
     [ "~DiveSettingsMessage", "classDiveSettingsMessage.html#a460e7a76a31f063376cfa56807b3fa15", null ],
     [ "apneaCountdownEnabled", "classDiveSettingsMessage.html#aa95aa69f5ea5ee63ab07fd1ea020f041", null ],
     [ "apneaCountdownTime", "classDiveSettingsMessage.html#a40b7468b074c9452f4cbd675944ace71", null ],

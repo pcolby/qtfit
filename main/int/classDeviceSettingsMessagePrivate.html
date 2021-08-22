@@ -189,6 +189,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a0e73a776b795f34ff94b789d306623bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classFitDataMessagePrivate"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFitDataMessagePrivate')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></td></tr>
 <tr class="memitem:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a> (const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> actualType, const int expectedSize, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> expectedType, const char *messageFieldName)</td></tr>
+<tr class="memdesc:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">\interal  <a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">More...</a><br /></td></tr>
 <tr class="separator:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -199,7 +200,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8af17988d16bd92de480941dca604613 inherit pro_attribs_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>The <a class="el" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a> class provides private implementation for the <a class="el" href="classDeviceSettingsMessage.html" title="The DeviceSettingsMessage class represents a FIT DeviceSettingsMessage data message.">DeviceSettingsMessage</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classDeviceSettingsMessage.html" title="The DeviceSettingsMessage class represents a FIT DeviceSettingsMessage data message.">DeviceSettingsMessage</a> </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5530052e0cc8c465a20524b352fb5d15"></a>
@@ -250,36 +253,43 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a> object with public implementation <em>q</em>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>Pointer to public implementaton. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="devicesettingsmessage_8cpp_source.html#l00303">303</a> of file <a class="el" href="devicesettingsmessage_8cpp_source.html">devicesettingsmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a88c05a56389ce63cfc96ba55fdf13e18">activeTimeZone</a>(0xFF)</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a33daa8110fb207d7f3f18b2a7352cf65">utcOffset</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ab8bbcd2982a19f61f87415e1d27ee17b">timeOffset</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aea25dd7b9ef5665c848d9467f0ebae9e">timeMode</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a6601a74132b25402d9a456eab3867390">timeZoneOffset</a>(0x7F)</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aba2c10815ba22c3a114c2b7e03c99c88">backlightMode</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a43e58e1a299634047efee16ea679ee60">activityTrackerEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a04b9e2eba0769f31eb6796a36b04d20f">clockTime</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a808e6e02f27663ea1acc72db8e8136b5">pagesEnabled</a>(0xFFFF)</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ae91ae9a7d2bf2e8957e469907e655609">moveAlertEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ab759227d4aec0b80444307e8dd1e4f8b">dateMode</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a868cd867f81da8143d36e3e1f3ea6086">displayOrientation</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aaf913bf7c0b8f6151b6e5e1fb72e800c">mountingSide</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a36699a3fd2a588bbaa99eaecde3af52f">defaultPage</a>(0xFFFF)</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a94bf08e37b78481a768a31151670881d">autosyncMinSteps</a>(0xFFFF)</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ac3488511bf9dc68ea613989c7d4ad36f">autosyncMinTime</a>(0xFFFF)</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a604124c741cf653768ea6465bf3e8c86">lactateThresholdAutodetectEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aa8fef776aa9ee84f69e838dd0e2e5194">bleAutoUploadEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aa2f75cd90a7cd0f48229adeab2df7e1f">autoSyncFrequency</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#afa7d47976a18911afa6ff74202d16abc">autoActivityDetect</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aa26fa483ab3a09d8b4fc9b27c7c67e99">numberOfScreens</a>(0xFF)</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a1ab315bb006c700aeca1dbb04da03aa2">smartNotificationDisplayOrientation</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#abc10ffb5679694db379171c098f5ad96">tapInterface</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ab51f1035c3db82c90e77ae147a8eb3df">tapSensitivity</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;{</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca06a4484c5c5210ddbeb6cdf5ca9bf0f3">MesgNum::DeviceSettings</a>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="devicesettingsmessage_8cpp_source.html#l00574">574</a> of file <a class="el" href="devicesettingsmessage_8cpp_source.html">devicesettingsmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a88c05a56389ce63cfc96ba55fdf13e18">activeTimeZone</a>(0xFF)</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a33daa8110fb207d7f3f18b2a7352cf65">utcOffset</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ab8bbcd2982a19f61f87415e1d27ee17b">timeOffset</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aea25dd7b9ef5665c848d9467f0ebae9e">timeMode</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a6601a74132b25402d9a456eab3867390">timeZoneOffset</a>(0x7F)</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aba2c10815ba22c3a114c2b7e03c99c88">backlightMode</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a43e58e1a299634047efee16ea679ee60">activityTrackerEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a04b9e2eba0769f31eb6796a36b04d20f">clockTime</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a808e6e02f27663ea1acc72db8e8136b5">pagesEnabled</a>(0xFFFF)</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ae91ae9a7d2bf2e8957e469907e655609">moveAlertEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ab759227d4aec0b80444307e8dd1e4f8b">dateMode</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a868cd867f81da8143d36e3e1f3ea6086">displayOrientation</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aaf913bf7c0b8f6151b6e5e1fb72e800c">mountingSide</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a36699a3fd2a588bbaa99eaecde3af52f">defaultPage</a>(0xFFFF)</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a94bf08e37b78481a768a31151670881d">autosyncMinSteps</a>(0xFFFF)</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ac3488511bf9dc68ea613989c7d4ad36f">autosyncMinTime</a>(0xFFFF)</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a604124c741cf653768ea6465bf3e8c86">lactateThresholdAutodetectEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aa8fef776aa9ee84f69e838dd0e2e5194">bleAutoUploadEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aa2f75cd90a7cd0f48229adeab2df7e1f">autoSyncFrequency</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#afa7d47976a18911afa6ff74202d16abc">autoActivityDetect</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#aa26fa483ab3a09d8b4fc9b27c7c67e99">numberOfScreens</a>(0xFF)</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#a1ab315bb006c700aeca1dbb04da03aa2">smartNotificationDisplayOrientation</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#abc10ffb5679694db379171c098f5ad96">tapInterface</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;  , <a class="code" href="classDeviceSettingsMessagePrivate.html#ab51f1035c3db82c90e77ae147a8eb3df">tapSensitivity</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;{</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca06a4484c5c5210ddbeb6cdf5ca9bf0f3">MesgNum::DeviceSettings</a>;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;}</div>
 <div class="ttc" id="aclassDeviceSettingsMessagePrivate_html_a04b9e2eba0769f31eb6796a36b04d20f"><div class="ttname"><a href="classDeviceSettingsMessagePrivate.html#a04b9e2eba0769f31eb6796a36b04d20f">DeviceSettingsMessagePrivate::clockTime</a></div><div class="ttdeci">DateTime clockTime</div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage__p_8h_source.html#l00044">devicesettingsmessage_p.h:44</a></div></div>
 <div class="ttc" id="aclassDeviceSettingsMessagePrivate_html_a1ab315bb006c700aeca1dbb04da03aa2"><div class="ttname"><a href="classDeviceSettingsMessagePrivate.html#a1ab315bb006c700aeca1dbb04da03aa2">DeviceSettingsMessagePrivate::smartNotificationDisplayOrientation</a></div><div class="ttdeci">DisplayOrientation smartNotificationDisplayOrientation</div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage__p_8h_source.html#l00058">devicesettingsmessage_p.h:58</a></div></div>
 <div class="ttc" id="aclassDeviceSettingsMessagePrivate_html_a33daa8110fb207d7f3f18b2a7352cf65"><div class="ttname"><a href="classDeviceSettingsMessagePrivate.html#a33daa8110fb207d7f3f18b2a7352cf65">DeviceSettingsMessagePrivate::utcOffset</a></div><div class="ttdeci">quint32 utcOffset</div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage__p_8h_source.html#l00038">devicesettingsmessage_p.h:38</a></div></div>
@@ -344,11 +354,12 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destroys the <a class="el" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="devicesettingsmessage_8cpp_source.html#l00333">333</a> of file <a class="el" href="devicesettingsmessage_8cpp_source.html">devicesettingsmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;{</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="devicesettingsmessage_8cpp_source.html#l00609">609</a> of file <a class="el" href="devicesettingsmessage_8cpp_source.html">devicesettingsmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;{</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160; </div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -398,116 +409,128 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set a value of a data message field.</p>
+<p>This base implementation simply logs a warning, and ignores the field. Derived classes should override this implementation to set the relevant class members.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldId</td><td>The field number within the given FIT data message. </td></tr>
+    <tr><td class="paramname">data</td><td>The raw data to extract the field value from. </td></tr>
+    <tr><td class="paramname">baseType</td><td>The FIT base type for the field. </td></tr>
+    <tr><td class="paramname">bigEndian</td><td>Whether or not multibyte values in <em>record</em> are big-endian.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the field was set, or skipped; <code>false</code> if the field was corrupt or invalid. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">338</a> of file <a class="el" href="devicesettingsmessage_8cpp_source.html">devicesettingsmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:device_settings.activeTimeZone</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;device_settings.activeTimeZone&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a88c05a56389ce63cfc96ba55fdf13e18">activeTimeZone</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:device_settings.utcOffset</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.utcOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a33daa8110fb207d7f3f18b2a7352cf65">utcOffset</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:device_settings.timeOffset</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.timeOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ab8bbcd2982a19f61f87415e1d27ee17b">timeOffset</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:device_settings.timeMode</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.timeMode&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aea25dd7b9ef5665c848d9467f0ebae9e">timeMode</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:device_settings.timeZoneOffset</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a1e84bc4859881db3c492b5a9dcbe0ab3">FitBaseType::Sint8</a>, <span class="stringliteral">&quot;device_settings.timeZoneOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a6601a74132b25402d9a456eab3867390">timeZoneOffset</a> = <span class="keyword">static_cast&lt;</span>qint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">case</span> 12: <span class="comment">// See Profile.xlsx::Messages:device_settings.backlightMode</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.backlightMode&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aba2c10815ba22c3a114c2b7e03c99c88">backlightMode</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">case</span> 36: <span class="comment">// See Profile.xlsx::Messages:device_settings.activityTrackerEnabled</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.activityTrackerEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a43e58e1a299634047efee16ea679ee60">activityTrackerEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">case</span> 39: <span class="comment">// See Profile.xlsx::Messages:device_settings.clockTime</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.clockTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a04b9e2eba0769f31eb6796a36b04d20f">clockTime</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">case</span> 40: <span class="comment">// See Profile.xlsx::Messages:device_settings.pagesEnabled</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.pagesEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a808e6e02f27663ea1acc72db8e8136b5">pagesEnabled</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">case</span> 46: <span class="comment">// See Profile.xlsx::Messages:device_settings.moveAlertEnabled</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.moveAlertEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ae91ae9a7d2bf2e8957e469907e655609">moveAlertEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">case</span> 47: <span class="comment">// See Profile.xlsx::Messages:device_settings.dateMode</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.dateMode&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ab759227d4aec0b80444307e8dd1e4f8b">dateMode</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">case</span> 55: <span class="comment">// See Profile.xlsx::Messages:device_settings.displayOrientation</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.displayOrientation&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a868cd867f81da8143d36e3e1f3ea6086">displayOrientation</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">case</span> 56: <span class="comment">// See Profile.xlsx::Messages:device_settings.mountingSide</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.mountingSide&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aaf913bf7c0b8f6151b6e5e1fb72e800c">mountingSide</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">case</span> 57: <span class="comment">// See Profile.xlsx::Messages:device_settings.defaultPage</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.defaultPage&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a36699a3fd2a588bbaa99eaecde3af52f">defaultPage</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">case</span> 58: <span class="comment">// See Profile.xlsx::Messages:device_settings.autosyncMinSteps</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.autosyncMinSteps&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a94bf08e37b78481a768a31151670881d">autosyncMinSteps</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">case</span> 59: <span class="comment">// See Profile.xlsx::Messages:device_settings.autosyncMinTime</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.autosyncMinTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ac3488511bf9dc68ea613989c7d4ad36f">autosyncMinTime</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">case</span> 80: <span class="comment">// See Profile.xlsx::Messages:device_settings.lactateThresholdAutodetectEnabled</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.lactateThresholdAutodetectEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a604124c741cf653768ea6465bf3e8c86">lactateThresholdAutodetectEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">case</span> 86: <span class="comment">// See Profile.xlsx::Messages:device_settings.bleAutoUploadEnabled</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.bleAutoUploadEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aa8fef776aa9ee84f69e838dd0e2e5194">bleAutoUploadEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">case</span> 89: <span class="comment">// See Profile.xlsx::Messages:device_settings.autoSyncFrequency</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.autoSyncFrequency&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aa2f75cd90a7cd0f48229adeab2df7e1f">autoSyncFrequency</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordflow">case</span> 90: <span class="comment">// See Profile.xlsx::Messages:device_settings.autoActivityDetect</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.autoActivityDetect&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#afa7d47976a18911afa6ff74202d16abc">autoActivityDetect</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">case</span> 94: <span class="comment">// See Profile.xlsx::Messages:device_settings.numberOfScreens</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;device_settings.numberOfScreens&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aa26fa483ab3a09d8b4fc9b27c7c67e99">numberOfScreens</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordflow">case</span> 95: <span class="comment">// See Profile.xlsx::Messages:device_settings.smartNotificationDisplayOrientation</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.smartNotificationDisplayOrientation&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a1ab315bb006c700aeca1dbb04da03aa2">smartNotificationDisplayOrientation</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordflow">case</span> 134: <span class="comment">// See Profile.xlsx::Messages:device_settings.tapInterface</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.tapInterface&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#abc10ffb5679694db379171c098f5ad96">tapInterface</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">case</span> 174: <span class="comment">// See Profile.xlsx::Messages:device_settings.tapSensitivity</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.tapSensitivity&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ab51f1035c3db82c90e77ae147a8eb3df">tapSensitivity</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown device_settings message field number&quot;</span> &lt;&lt; fieldId;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    }</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00114">fitdatamessage.cpp:114</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<p class="definition">Definition at line <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">614</a> of file <a class="el" href="devicesettingsmessage_8cpp_source.html">devicesettingsmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;{</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:device_settings.activeTimeZone</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;device_settings.activeTimeZone&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a88c05a56389ce63cfc96ba55fdf13e18">activeTimeZone</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:device_settings.utcOffset</span></div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.utcOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a33daa8110fb207d7f3f18b2a7352cf65">utcOffset</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:device_settings.timeOffset</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.timeOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ab8bbcd2982a19f61f87415e1d27ee17b">timeOffset</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:device_settings.timeMode</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.timeMode&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aea25dd7b9ef5665c848d9467f0ebae9e">timeMode</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:device_settings.timeZoneOffset</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a1e84bc4859881db3c492b5a9dcbe0ab3">FitBaseType::Sint8</a>, <span class="stringliteral">&quot;device_settings.timeZoneOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a6601a74132b25402d9a456eab3867390">timeZoneOffset</a> = <span class="keyword">static_cast&lt;</span>qint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <span class="keywordflow">case</span> 12: <span class="comment">// See Profile.xlsx::Messages:device_settings.backlightMode</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.backlightMode&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aba2c10815ba22c3a114c2b7e03c99c88">backlightMode</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="keywordflow">case</span> 36: <span class="comment">// See Profile.xlsx::Messages:device_settings.activityTrackerEnabled</span></div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.activityTrackerEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a43e58e1a299634047efee16ea679ee60">activityTrackerEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="keywordflow">case</span> 39: <span class="comment">// See Profile.xlsx::Messages:device_settings.clockTime</span></div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.clockTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a04b9e2eba0769f31eb6796a36b04d20f">clockTime</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="keywordflow">case</span> 40: <span class="comment">// See Profile.xlsx::Messages:device_settings.pagesEnabled</span></div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.pagesEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a808e6e02f27663ea1acc72db8e8136b5">pagesEnabled</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keywordflow">case</span> 46: <span class="comment">// See Profile.xlsx::Messages:device_settings.moveAlertEnabled</span></div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.moveAlertEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ae91ae9a7d2bf2e8957e469907e655609">moveAlertEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    <span class="keywordflow">case</span> 47: <span class="comment">// See Profile.xlsx::Messages:device_settings.dateMode</span></div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.dateMode&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ab759227d4aec0b80444307e8dd1e4f8b">dateMode</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordflow">case</span> 55: <span class="comment">// See Profile.xlsx::Messages:device_settings.displayOrientation</span></div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.displayOrientation&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a868cd867f81da8143d36e3e1f3ea6086">displayOrientation</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordflow">case</span> 56: <span class="comment">// See Profile.xlsx::Messages:device_settings.mountingSide</span></div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.mountingSide&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aaf913bf7c0b8f6151b6e5e1fb72e800c">mountingSide</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordflow">case</span> 57: <span class="comment">// See Profile.xlsx::Messages:device_settings.defaultPage</span></div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.defaultPage&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a36699a3fd2a588bbaa99eaecde3af52f">defaultPage</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <span class="keywordflow">case</span> 58: <span class="comment">// See Profile.xlsx::Messages:device_settings.autosyncMinSteps</span></div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.autosyncMinSteps&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a94bf08e37b78481a768a31151670881d">autosyncMinSteps</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <span class="keywordflow">case</span> 59: <span class="comment">// See Profile.xlsx::Messages:device_settings.autosyncMinTime</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;device_settings.autosyncMinTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ac3488511bf9dc68ea613989c7d4ad36f">autosyncMinTime</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="keywordflow">case</span> 80: <span class="comment">// See Profile.xlsx::Messages:device_settings.lactateThresholdAutodetectEnabled</span></div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.lactateThresholdAutodetectEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a604124c741cf653768ea6465bf3e8c86">lactateThresholdAutodetectEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    <span class="keywordflow">case</span> 86: <span class="comment">// See Profile.xlsx::Messages:device_settings.bleAutoUploadEnabled</span></div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;device_settings.bleAutoUploadEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aa8fef776aa9ee84f69e838dd0e2e5194">bleAutoUploadEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    <span class="keywordflow">case</span> 89: <span class="comment">// See Profile.xlsx::Messages:device_settings.autoSyncFrequency</span></div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.autoSyncFrequency&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aa2f75cd90a7cd0f48229adeab2df7e1f">autoSyncFrequency</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="keywordflow">case</span> 90: <span class="comment">// See Profile.xlsx::Messages:device_settings.autoActivityDetect</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;device_settings.autoActivityDetect&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#afa7d47976a18911afa6ff74202d16abc">autoActivityDetect</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordflow">case</span> 94: <span class="comment">// See Profile.xlsx::Messages:device_settings.numberOfScreens</span></div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;device_settings.numberOfScreens&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#aa26fa483ab3a09d8b4fc9b27c7c67e99">numberOfScreens</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keywordflow">case</span> 95: <span class="comment">// See Profile.xlsx::Messages:device_settings.smartNotificationDisplayOrientation</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.smartNotificationDisplayOrientation&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#a1ab315bb006c700aeca1dbb04da03aa2">smartNotificationDisplayOrientation</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    <span class="keywordflow">case</span> 134: <span class="comment">// See Profile.xlsx::Messages:device_settings.tapInterface</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.tapInterface&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#abc10ffb5679694db379171c098f5ad96">tapInterface</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keywordflow">case</span> 174: <span class="comment">// See Profile.xlsx::Messages:device_settings.tapSensitivity</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;device_settings.tapSensitivity&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        this-&gt;<a class="code" href="classDeviceSettingsMessagePrivate.html#ab51f1035c3db82c90e77ae147a8eb3df">tapSensitivity</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown device_settings message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    }</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;}</div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdoc">\interal</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00235">fitdatamessage.cpp:235</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00178">fitdatamessage.cpp:178</a></div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a1e84bc4859881db3c492b5a9dcbe0ab3"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a1e84bc4859881db3c492b5a9dcbe0ab3">FitBaseType::Sint8</a></div><div class="ttdeci">@ Sint8</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
@@ -515,7 +538,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a></div><div class="ttdeci">@ Byte</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a></div><div class="ttdeci">@ Enum</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="devicesettingsmessage__p_8h_source.html#l00037">activeTimeZone</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00043">activityTrackerEnabled</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00056">autoActivityDetect</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00055">autoSyncFrequency</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00051">autosyncMinSteps</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00052">autosyncMinTime</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00042">backlightMode</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00054">bleAutoUploadEnabled</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00044">clockTime</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00047">dateMode</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00050">defaultPage</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00048">displayOrientation</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00053">lactateThresholdAutodetectEnabled</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00049">mountingSide</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00046">moveAlertEnabled</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00057">numberOfScreens</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00045">pagesEnabled</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a1e84bc4859881db3c492b5a9dcbe0ab3">Sint8</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00058">smartNotificationDisplayOrientation</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00059">tapInterface</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00060">tapSensitivity</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00040">timeMode</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00039">timeOffset</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00041">timeZoneOffset</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00038">utcOffset</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00114">FitDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="devicesettingsmessage__p_8h_source.html#l00037">activeTimeZone</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00043">activityTrackerEnabled</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00056">autoActivityDetect</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00055">autoSyncFrequency</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00051">autosyncMinSteps</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00052">autosyncMinTime</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00042">backlightMode</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00054">bleAutoUploadEnabled</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00044">clockTime</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00047">dateMode</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00050">defaultPage</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00048">displayOrientation</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00053">lactateThresholdAutodetectEnabled</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00049">mountingSide</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00046">moveAlertEnabled</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00057">numberOfScreens</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00045">pagesEnabled</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00178">FitDataMessagePrivate::setField()</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a1e84bc4859881db3c492b5a9dcbe0ab3">Sint8</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00058">smartNotificationDisplayOrientation</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00059">tapInterface</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00060">tapSensitivity</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00040">timeMode</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00039">timeOffset</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00041">timeZoneOffset</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, <a class="el" href="devicesettingsmessage__p_8h_source.html#l00038">utcOffset</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00235">FitDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -540,7 +563,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -558,7 +581,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00043">43</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -576,7 +599,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00056">56</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -594,7 +617,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00055">55</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -612,7 +635,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00051">51</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -630,7 +653,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00052">52</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -648,7 +671,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -666,7 +689,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00054">54</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -684,7 +707,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00044">44</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -702,7 +725,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00047">47</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -720,7 +743,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00050">50</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -738,7 +761,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00048">48</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -756,7 +779,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00053">53</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -774,7 +797,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -792,7 +815,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -810,7 +833,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00057">57</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -828,7 +851,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00045">45</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -846,7 +869,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00058">58</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -864,7 +887,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00059">59</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -882,7 +905,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00060">60</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -900,7 +923,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -918,7 +941,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -936,7 +959,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>
@@ -954,7 +977,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="devicesettingsmessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="devicesettingsmessage__p_8h_source.html">devicesettingsmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00338">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="devicesettingsmessage_8cpp_source.html#l00614">setField()</a>.</p>
 
 </div>
 </div>

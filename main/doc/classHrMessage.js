@@ -1,6 +1,6 @@
 var classHrMessage =
 [
-    [ "HrMessage", "classHrMessage.html#a221f93382beb4287b31c2252c5e78946", null ],
+    [ "HrMessage", "classHrMessage.html#a8b3037ab5e8aaf18337ee3b7abcf26f0", null ],
     [ "~HrMessage", "classHrMessage.html#a03047b6a40004e5ad2cd9d9cff57f604", null ],
     [ "eventTimestamp", "classHrMessage.html#a7b9d415b6e1ca01e71f0797118a0cd35", null ],
     [ "eventTimestamp12", "classHrMessage.html#a0fe581c365ed22ca3541fddea0853b7b", null ],

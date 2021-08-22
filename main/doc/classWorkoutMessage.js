@@ -1,6 +1,6 @@
 var classWorkoutMessage =
 [
-    [ "WorkoutMessage", "classWorkoutMessage.html#aba0cdf6f27ac493c239dfde08f5abf60", null ],
+    [ "WorkoutMessage", "classWorkoutMessage.html#a31825ff64a2415e84e213520029d63e9", null ],
     [ "~WorkoutMessage", "classWorkoutMessage.html#a7ae00014ea6d621954102a7b0fe778da", null ],
     [ "capabilities", "classWorkoutMessage.html#a2247726fab703caf0907cb4c5dd69e1e", null ],
     [ "numValidSteps", "classWorkoutMessage.html#a0b250eb5d23a27119dd6a00024476ea8", null ],

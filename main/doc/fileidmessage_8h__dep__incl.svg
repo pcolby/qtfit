@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="fitdatamessages_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="fitdatamessages_8cpp.html" target="_top" xlink:title="Provides the FitDataMessage::fromData implementation.">
 <polygon fill="none" stroke="black" points="123.5,-0.5 123.5,-19.5 241.5,-19.5 241.5,-0.5 123.5,-0.5"/>
 <text text-anchor="middle" x="182.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitdatamessages.cpp</text>
 </a>

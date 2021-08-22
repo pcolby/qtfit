@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="The MetZoneMessage class represents a FIT MetZoneMessage data message.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 104,-19.5 104,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="52" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MetZoneMessage</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classFitDataMessage.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classFitDataMessage.html" target="_top" xlink:title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.">
 <polygon fill="none" stroke="black" points="4.5,-56.5 4.5,-75.5 99.5,-75.5 99.5,-56.5 4.5,-56.5"/>
 <text text-anchor="middle" x="52" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitDataMessage</text>
 </a>

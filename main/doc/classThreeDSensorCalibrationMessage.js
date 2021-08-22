@@ -1,6 +1,6 @@
 var classThreeDSensorCalibrationMessage =
 [
-    [ "ThreeDSensorCalibrationMessage", "classThreeDSensorCalibrationMessage.html#a507adf49c985ecd4a029af1ac1cc0437", null ],
+    [ "ThreeDSensorCalibrationMessage", "classThreeDSensorCalibrationMessage.html#a3840c7cc915abed99c298ef0b426fce8", null ],
     [ "~ThreeDSensorCalibrationMessage", "classThreeDSensorCalibrationMessage.html#a79ab4288df11b5ca05df5185e970faa4", null ],
     [ "calibrationDivisor", "classThreeDSensorCalibrationMessage.html#a0630ca94ce2c8dfac920107d375d0c0b", null ],
     [ "calibrationFactor", "classThreeDSensorCalibrationMessage.html#ad23e6403a1f9b20f75385b144ba5f72b", null ],

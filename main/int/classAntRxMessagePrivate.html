@@ -153,6 +153,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a1a7aaffaaa62687c4456afe6dd3d2d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classFitDataMessagePrivate"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFitDataMessagePrivate')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></td></tr>
 <tr class="memitem:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a> (const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> actualType, const int expectedSize, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> expectedType, const char *messageFieldName)</td></tr>
+<tr class="memdesc:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">\interal  <a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">More...</a><br /></td></tr>
 <tr class="separator:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -163,7 +164,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8af17988d16bd92de480941dca604613 inherit pro_attribs_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>The <a class="el" href="classAntRxMessagePrivate.html">AntRxMessagePrivate</a> class provides private implementation for the <a class="el" href="classAntRxMessage.html" title="The AntRxMessage class represents a FIT AntRxMessage data message.">AntRxMessage</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAntRxMessage.html" title="The AntRxMessage class represents a FIT AntRxMessage data message.">AntRxMessage</a> </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="antrxmessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="antrxmessage__p_8h_source.html">antrxmessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5977410399719baecee6aa81c95bb37f"></a>
@@ -214,18 +217,25 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classAntRxMessagePrivate.html">AntRxMessagePrivate</a> object with public implementation <em>q</em>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>Pointer to public implementaton. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="antrxmessage_8cpp_source.html#l00105">105</a> of file <a class="el" href="antrxmessage_8cpp_source.html">antrxmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#aeef45280741a6f9d65dc4c3dc80973cf">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#a4617f97f5186bcee46a7f29ea70f2e12">fractionalTimestamp</a>(0xFFFF)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#ade866271a082990cdc6af6c3beb3f8cb">mesgId</a>(0xFF)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#a5d6f7f744e412e87fc37b1ce3411a172">mesgData</a>(0xFF)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#acf996691cdf8e260215aa4ce97b06ed1">channelNumber</a>(0xFF)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>(0xFF)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca7ec222695968ebb2ccbce69d0634d38b">MesgNum::AntRx</a>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="antrxmessage_8cpp_source.html#l00196">196</a> of file <a class="el" href="antrxmessage_8cpp_source.html">antrxmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#aeef45280741a6f9d65dc4c3dc80973cf">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#a4617f97f5186bcee46a7f29ea70f2e12">fractionalTimestamp</a>(0xFFFF)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#ade866271a082990cdc6af6c3beb3f8cb">mesgId</a>(0xFF)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#a5d6f7f744e412e87fc37b1ce3411a172">mesgData</a>(0xFF)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#acf996691cdf8e260215aa4ce97b06ed1">channelNumber</a>(0xFF)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  , <a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>(0xFF)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca7ec222695968ebb2ccbce69d0634d38b">MesgNum::AntRx</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
 <div class="ttc" id="aclassAntRxMessagePrivate_html_a4617f97f5186bcee46a7f29ea70f2e12"><div class="ttname"><a href="classAntRxMessagePrivate.html#a4617f97f5186bcee46a7f29ea70f2e12">AntRxMessagePrivate::fractionalTimestamp</a></div><div class="ttdeci">quint16 fractionalTimestamp</div><div class="ttdef"><b>Definition:</b> <a href="antrxmessage__p_8h_source.html#l00038">antrxmessage_p.h:38</a></div></div>
 <div class="ttc" id="aclassAntRxMessagePrivate_html_a5d6f7f744e412e87fc37b1ce3411a172"><div class="ttname"><a href="classAntRxMessagePrivate.html#a5d6f7f744e412e87fc37b1ce3411a172">AntRxMessagePrivate::mesgData</a></div><div class="ttdeci">quint8 mesgData</div><div class="ttdef"><b>Definition:</b> <a href="antrxmessage__p_8h_source.html#l00040">antrxmessage_p.h:40</a></div></div>
 <div class="ttc" id="aclassAntRxMessagePrivate_html_acf996691cdf8e260215aa4ce97b06ed1"><div class="ttname"><a href="classAntRxMessagePrivate.html#acf996691cdf8e260215aa4ce97b06ed1">AntRxMessagePrivate::channelNumber</a></div><div class="ttdeci">quint8 channelNumber</div><div class="ttdef"><b>Definition:</b> <a href="antrxmessage__p_8h_source.html#l00041">antrxmessage_p.h:41</a></div></div>
@@ -263,11 +273,12 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destroys the <a class="el" href="classAntRxMessagePrivate.html">AntRxMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="antrxmessage_8cpp_source.html#l00117">117</a> of file <a class="el" href="antrxmessage_8cpp_source.html">antrxmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="antrxmessage_8cpp_source.html#l00213">213</a> of file <a class="el" href="antrxmessage_8cpp_source.html">antrxmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -317,50 +328,62 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set a value of a data message field.</p>
+<p>This base implementation simply logs a warning, and ignores the field. Derived classes should override this implementation to set the relevant class members.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldId</td><td>The field number within the given FIT data message. </td></tr>
+    <tr><td class="paramname">data</td><td>The raw data to extract the field value from. </td></tr>
+    <tr><td class="paramname">baseType</td><td>The FIT base type for the field. </td></tr>
+    <tr><td class="paramname">bigEndian</td><td>Whether or not multibyte values in <em>record</em> are big-endian.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the field was set, or skipped; <code>false</code> if the field was corrupt or invalid. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="antrxmessage_8cpp_source.html#l00122">122</a> of file <a class="el" href="antrxmessage_8cpp_source.html">antrxmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:ant_rx.timestamp</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;ant_rx.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#aeef45280741a6f9d65dc4c3dc80973cf">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>) : qFromLittleEndian&lt;quint32&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>));</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:ant_rx.fractionalTimestamp</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;ant_rx.fractionalTimestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#a4617f97f5186bcee46a7f29ea70f2e12">fractionalTimestamp</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>) : qFromLittleEndian&lt;quint16&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>));</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:ant_rx.mesgId</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;ant_rx.mesgId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#ade866271a082990cdc6af6c3beb3f8cb">mesgId</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:ant_rx.mesgData</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;ant_rx.mesgData&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#a5d6f7f744e412e87fc37b1ce3411a172">mesgData</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:ant_rx.channelNumber</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;ant_rx.channelNumber&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#acf996691cdf8e260215aa4ce97b06ed1">channelNumber</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:ant_rx.data</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;ant_rx.data&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown ant_rx message field number&quot;</span> &lt;&lt; fieldId;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, <a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, bigEndian);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00114">fitdatamessage.cpp:114</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antrxmessage_8cpp_source.html#l00218">218</a> of file <a class="el" href="antrxmessage_8cpp_source.html">antrxmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:ant_rx.timestamp</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;ant_rx.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#aeef45280741a6f9d65dc4c3dc80973cf">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>) : qFromLittleEndian&lt;quint32&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>));</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:ant_rx.fractionalTimestamp</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;ant_rx.fractionalTimestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#a4617f97f5186bcee46a7f29ea70f2e12">fractionalTimestamp</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>) : qFromLittleEndian&lt;quint16&gt;(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>));</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:ant_rx.mesgId</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;ant_rx.mesgId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#ade866271a082990cdc6af6c3beb3f8cb">mesgId</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:ant_rx.mesgData</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;ant_rx.mesgData&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#a5d6f7f744e412e87fc37b1ce3411a172">mesgData</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:ant_rx.channelNumber</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;ant_rx.channelNumber&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#acf996691cdf8e260215aa4ce97b06ed1">channelNumber</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:ant_rx.data</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;ant_rx.data&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        this-&gt;<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(<a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>.at(0));</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown ant_rx message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, <a class="code" href="classAntRxMessagePrivate.html#ad1bd182e94aa2c6075c6382946539889">data</a>, baseType, bigEndian);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdoc">\interal</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00235">fitdatamessage.cpp:235</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00178">fitdatamessage.cpp:178</a></div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a></div><div class="ttdeci">@ Uint8</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a></div><div class="ttdeci">@ Byte</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00041">channelNumber</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00042">data</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00038">fractionalTimestamp</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00040">mesgData</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00039">mesgId</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00037">timestamp</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00114">FitDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00041">channelNumber</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00042">data</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00038">fractionalTimestamp</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00040">mesgData</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00039">mesgId</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00178">FitDataMessagePrivate::setField()</a>, <a class="el" href="antrxmessage__p_8h_source.html#l00037">timestamp</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00235">FitDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -385,7 +408,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="antrxmessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="antrxmessage__p_8h_source.html">antrxmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00122">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00218">setField()</a>.</p>
 
 </div>
 </div>
@@ -403,7 +426,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="antrxmessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="antrxmessage__p_8h_source.html">antrxmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00122">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00218">setField()</a>.</p>
 
 </div>
 </div>
@@ -421,7 +444,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="antrxmessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="antrxmessage__p_8h_source.html">antrxmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00122">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00218">setField()</a>.</p>
 
 </div>
 </div>
@@ -439,7 +462,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="antrxmessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="antrxmessage__p_8h_source.html">antrxmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00122">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00218">setField()</a>.</p>
 
 </div>
 </div>
@@ -457,7 +480,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="antrxmessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="antrxmessage__p_8h_source.html">antrxmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00122">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00218">setField()</a>.</p>
 
 </div>
 </div>
@@ -475,7 +498,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="antrxmessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="antrxmessage__p_8h_source.html">antrxmessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00122">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antrxmessage_8cpp_source.html#l00218">setField()</a>.</p>
 
 </div>
 </div>

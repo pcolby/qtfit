@@ -1,4 +1,4 @@
 <map id="BikeProfileMessage::setBikePowerAntIdTransType" name="BikeProfileMessage::setBikePowerAntIdTransType">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,221,47"/>
-<area shape="rect" id="node2" href="$classBikeProfileMessage.html#a5bb325814190721d144051759d4ac1f6" title=" " alt="" coords="269,5,464,47"/>
+<area shape="rect" id="node1" title="Sets the bikePowerAntIdTransType field to bikePowerAntIdTransType." alt="" coords="5,5,221,47"/>
+<area shape="rect" id="node2" href="$classBikeProfileMessage.html#a5bb325814190721d144051759d4ac1f6" title="Returns the BikeProfileMessage data message&#39;s bikePowerAntIdTransType field&#39;s current value." alt="" coords="269,5,464,47"/>
 </map>

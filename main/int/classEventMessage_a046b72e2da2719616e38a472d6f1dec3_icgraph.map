@@ -1,4 +1,4 @@
 <map id="EventMessage::rearGear" name="EventMessage::rearGear">
-<area shape="rect" id="node1" title=" " alt="" coords="260,5,443,32"/>
-<area shape="rect" id="node2" href="$classEventMessage.html#a8f7a7a083396f854962bd2a8dac382ec" title=" " alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node1" title="Returns the EventMessage data message&#39;s rearGear field&#39;s current value." alt="" coords="260,5,443,32"/>
+<area shape="rect" id="node2" href="$classEventMessage.html#a8f7a7a083396f854962bd2a8dac382ec" title="Sets the rearGear field to rearGear." alt="" coords="5,5,212,32"/>
 </map>

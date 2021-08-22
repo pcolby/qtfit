@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Returns the EventMessage data message&#39;s frontGear field&#39;s current value.">
 <polygon fill="#bfbfbf" stroke="black" points="193,-0.5 193,-19.5 333,-19.5 333,-0.5 193,-0.5"/>
 <text text-anchor="middle" x="263" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">EventMessage::frontGear</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEventMessage.html#a5f61508d53059e96d534dc89fa8f6ff6" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEventMessage.html#a5f61508d53059e96d534dc89fa8f6ff6" target="_top" xlink:title="Sets the frontGear field to frontGear.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 157,-19.5 157,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="78.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">EventMessage::setFrontGear</text>
 </a>

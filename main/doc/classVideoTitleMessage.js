@@ -1,6 +1,6 @@
 var classVideoTitleMessage =
 [
-    [ "VideoTitleMessage", "classVideoTitleMessage.html#a359797bfa78bfbe920fd1eff819d7986", null ],
+    [ "VideoTitleMessage", "classVideoTitleMessage.html#ab7b719f41e85f6a8cbb82497743a1190", null ],
     [ "~VideoTitleMessage", "classVideoTitleMessage.html#a1d0ea08f87fd96f68b3e860074b2fb70", null ],
     [ "messageCount", "classVideoTitleMessage.html#aa9e0373ee4d6071f3d5fb5d3f498e772", null ],
     [ "messageIndex", "classVideoTitleMessage.html#ad1b11c5cab3f6cacafa957d7ad1dc507", null ],

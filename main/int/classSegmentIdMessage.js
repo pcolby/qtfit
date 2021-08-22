@@ -1,6 +1,6 @@
 var classSegmentIdMessage =
 [
-    [ "SegmentIdMessage", "classSegmentIdMessage.html#acc1b71aa54d7f33cc98bbdf4391ab4a9", null ],
+    [ "SegmentIdMessage", "classSegmentIdMessage.html#aa365fa72478e29c665688c2ebb3bda82", null ],
     [ "~SegmentIdMessage", "classSegmentIdMessage.html#a051c084ab661428a1e13bc95facc8857", null ],
     [ "defaultRaceLeader", "classSegmentIdMessage.html#ad46d1e3f13d0d124da6b1ac69bb7d5c8", null ],
     [ "deleteStatus", "classSegmentIdMessage.html#a14311855568a53f489ec9c09e36f2da1", null ],

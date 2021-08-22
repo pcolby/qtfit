@@ -1,6 +1,6 @@
 var classDeviceSettingsMessage =
 [
-    [ "DeviceSettingsMessage", "classDeviceSettingsMessage.html#adae8722ab237697ca83f772826396d3a", null ],
+    [ "DeviceSettingsMessage", "classDeviceSettingsMessage.html#a775c29655f7e9ae0a4d01b71271274c0", null ],
     [ "~DeviceSettingsMessage", "classDeviceSettingsMessage.html#ab3cd7265dd73ee853b03f60c170373df", null ],
     [ "activeTimeZone", "classDeviceSettingsMessage.html#ab0d42dfb4eb33866abbc7ba683dc683a", null ],
     [ "activityTrackerEnabled", "classDeviceSettingsMessage.html#a2abf8520480ed9200ba9048ae3776800", null ],

@@ -36,8 +36,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -54,32 +54,32 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "QtFit__global_8h_source.html",
-"classBloodPressureMessage.html#aa1187a813f2bce601e0395524e7d3e3f",
+"classBloodPressureMessage.html#aa99560b1b962fdc31a4c7fa7f4fd0fab",
 "classDiveSettingsMessage.html#a0dab630d9916cfab342f45ceaf3564c8",
 "classFileIdMessage.html#af92d5e690b563ce7419e09810bc98a9b",
 "classLapMessage.html#a65a692e9880841102d630e03504623ae",
 "classMonitoringInfoMessage.html#adcfe0717d8e938013ce6efecf0d82b4f",
-"classRecordMessage.html#ad13b93c8becbf9b3bd99506b6f96d152",
+"classRecordMessage.html#acfa6a782d99a48da30a0863ecb063493",
 "classSegmentLapMessage.html#acb2d68b06e7ff62e8b2d683f0078c229",
 "classSessionMessage.html#aa8334b5485b4bf7543a80130442382a1",
-"classUserProfileMessage.html#a8530287f7e882ec031fbec36a906ff16",
-"classZonesTargetMessage.html#a769fc0229044c81edecc324f0062677e",
-"types_8cpp.html#a551f8ccd570a3eec9220664bbed862f1",
-"types_8h.html#a00eecc1db747a403407ee496ccd56103a50abdc5e3c7d40e1a9c29419d99becd0",
-"types_8h.html#a024199a3d93e059de66ed7ae51a7bea5af08d7f223f4f7b6303e3744cf0728960",
-"types_8h.html#a216296365fafce4b06c5502ce5e4015fa3498a6386ca942c3a4382b5b8e7b8996",
-"types_8h.html#a32feb909178efb4161d852c21ded1e31ad2a00780174b95adecdd0caf9ab52740",
-"types_8h.html#a417088b0068504866b23a691abf7b868a23974cac992b987bc4d1484c3e596a39",
-"types_8h.html#a4cea131c826b8a26b33b1492369e389ca068108b0030d5155c9097e5d2d7062f8",
-"types_8h.html#a6653306bfa9bbac10f0d1a6d7ed0d41ca752b85ffa227dcdf050187420cd943ee",
-"types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e",
-"types_8h.html#a901a06442ef4da16071aed4009348969",
-"types_8h.html#aa7b4e665c5b2a4777b818f6910014a80a2c3925ee01dc00d7a5533e0ccd61bfbe",
-"types_8h.html#ab9465341f65fe8e7ea48e57f83d57520a18dd53e8b4de98d1156803d947fb2ca6",
-"types_8h.html#abff0cc6077b6b352288453cfaef93f80ac12beb1e443935a7c2bb47faae1accfe",
-"types_8h.html#acc0284e7a47f3a3eec5012e46cf9da7ea12455808d6bfbbaf57869ac333e610da",
-"types_8h.html#ade18175d73af40e5bea7bbd888a7c558abcc22c7999c7d11ea5195090e434a621",
-"videomessage_8cpp.html"
+"classUserProfileMessage.html#a82ca8ab7d98663ba09f1e82ada9bf54a",
+"classZonesTargetMessage.html#a8ce3129e7eefa20a8f217cc0b662b6f4",
+"totalsmessage_8h_source.html",
+"types_8h.html#a00eecc1db747a403407ee496ccd56103a29dd1d6b1cefba8abfa7404744a7d8d8",
+"types_8h.html#a00eecc1db747a403407ee496ccd56103ae169926a099dd00fc5c71f969fd08863",
+"types_8h.html#a17c9d8de027c09e02b07fda419c76507ae5c8eeac6a008375297be0f0fecf835a",
+"types_8h.html#a32d45993822b22736b066b62ff0f7eaea9a9910d067a3db166d0c322152e5ad34",
+"types_8h.html#a3f472eba0bbcfdce6a17250303a4e8ceac4fe3f2d44c34d4fa07abfebe6e3dfab",
+"types_8h.html#a475b19e78e99e68bc5989ec773971bc5ab34fc23e6f6fc412d5f452d4b4d652f4",
+"types_8h.html#a6230df23cf868e87b9d6a76cb6870bc9ac598d54c487073381031c4c731520d9e",
+"types_8h.html#a71ece1115066545f8d3b16037d342378a99bc2d8647aa434ef0a41c137cfd7d5a",
+"types_8h.html#a8fae57054bcd35ba2eff48efcf76aaeda115bff29ac93db1a23bb9b0534d590f6",
+"types_8h.html#aa455026201b375659811c45137e139d3a846495f9ceed11accf8879f555936a7d",
+"types_8h.html#ab7fe9751f3f85320c2e9818675c5ab86a0d60d14bdb4e1dcfa5a8b1d812f83b43",
+"types_8h.html#abff0cc6077b6b352288453cfaef93f80a839e98d78eceec1db2eb48d424fc03b2",
+"types_8h.html#ac77ff16ce976e5b30f31d739c90095dda08a00425421bcb802ba22d174edafe6a",
+"types_8h.html#ad019fe145253b66851bf4fb6edb5183aa45c31561991c210adb2c9eb898fb650f",
+"types_8h.html#af55e655a92a6a777f412b85aff15e0afac42ae1bdfe3a418a8fe71cd233f4ee74"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

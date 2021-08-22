@@ -1,4 +1,32 @@
 var searchData=
 [
-  ['clear_863',['clear',['../classFitStreamReader.html#abd70d1e90b4c90d0bba7ac3e7337dec3',1,'FitStreamReader']]]
+  ['backlightbrightness_2217',['backlightBrightness',['../classDiveSettingsMessage.html#afb7cc2d98ea4ee0284bfbfd554325fe6',1,'DiveSettingsMessage']]],
+  ['backlightmode_2218',['backlightMode',['../classDeviceSettingsMessage.html#a08cba8788069c4d8487b7e4107a620bd',1,'DeviceSettingsMessage::backlightMode()'],['../classDiveSettingsMessage.html#aeafcfaaff92338c3b26e4787d577a26e',1,'DiveSettingsMessage::backlightMode() const']]],
+  ['backlighttimeout_2219',['backlightTimeout',['../classDiveSettingsMessage.html#a17bfc90c9980834045c49251d8ca5c52',1,'DiveSettingsMessage']]],
+  ['ballspeed_2220',['ballSpeed',['../classRecordMessage.html#a3a23e31f8bad1e4f1df00a47aadc1a2e',1,'RecordMessage']]],
+  ['barometerdatamessage_2221',['BarometerDataMessage',['../classBarometerDataMessage.html#aaeadbb72bb537970dcb9a4abb9d06744',1,'BarometerDataMessage']]],
+  ['baropres_2222',['baroPres',['../classBarometerDataMessage.html#a01d73a28eafd527d34c24abaf134ef25',1,'BarometerDataMessage']]],
+  ['basalmet_2223',['basalMet',['../classWeightScaleMessage.html#afa3c2cd8be2c95a855a2380ac1eddd49',1,'WeightScaleMessage']]],
+  ['batterysoc_2224',['batterySoc',['../classRecordMessage.html#a3aed4d6b9cd7cf125b8c0091dd1c04ca',1,'RecordMessage']]],
+  ['batterystatus_2225',['batteryStatus',['../classDeviceInfoMessage.html#a2ed1f6ff8532279390ce82afcb22417f',1,'DeviceInfoMessage']]],
+  ['batteryvoltage_2226',['batteryVoltage',['../classDeviceInfoMessage.html#a7118e81de28dab7f9d76c279954d9fd0',1,'DeviceInfoMessage']]],
+  ['bestlapindex_2227',['bestLapIndex',['../classSessionMessage.html#ab25d09fc344ee170b5f675ed5f241506',1,'SessionMessage']]],
+  ['bikecadantid_2228',['bikeCadAntId',['../classBikeProfileMessage.html#ade09238bc940eb6e67958e747eeb9d91',1,'BikeProfileMessage']]],
+  ['bikecadantidtranstype_2229',['bikeCadAntIdTransType',['../classBikeProfileMessage.html#a63eb98df8c0421d4ca33b292a7a5bdcf',1,'BikeProfileMessage']]],
+  ['bikepowerantid_2230',['bikePowerAntId',['../classBikeProfileMessage.html#a6b107bb2d2d568cff4e880956bb4d3c7',1,'BikeProfileMessage']]],
+  ['bikepowerantidtranstype_2231',['bikePowerAntIdTransType',['../classBikeProfileMessage.html#a5bb325814190721d144051759d4ac1f6',1,'BikeProfileMessage']]],
+  ['bikeprofilemessage_2232',['BikeProfileMessage',['../classBikeProfileMessage.html#a4e3d5c3dff1b8d35bc381fbd62b454da',1,'BikeProfileMessage']]],
+  ['bikespdantid_2233',['bikeSpdAntId',['../classBikeProfileMessage.html#a0ac3c719d668f66fece96942c3eec571',1,'BikeProfileMessage']]],
+  ['bikespdantidtranstype_2234',['bikeSpdAntIdTransType',['../classBikeProfileMessage.html#af886a4dc291d0ed8aae0ca49f199a323',1,'BikeProfileMessage']]],
+  ['bikespdcadantid_2235',['bikeSpdcadAntId',['../classBikeProfileMessage.html#afe314e99cccc9010d6bcb01328a9de4a',1,'BikeProfileMessage']]],
+  ['bikespdcadantidtranstype_2236',['bikeSpdcadAntIdTransType',['../classBikeProfileMessage.html#ae0e3036af2d00686ac1226d2bf0072da',1,'BikeProfileMessage']]],
+  ['bikeweight_2237',['bikeWeight',['../classBikeProfileMessage.html#ac001444a0fa82b02775b77097d54d37a',1,'BikeProfileMessage']]],
+  ['bits_2238',['bits',['../classFieldDescriptionMessage.html#ad9c610d0622598a10188b985c7e9f1c7',1,'FieldDescriptionMessage']]],
+  ['bleautouploadenabled_2239',['bleAutoUploadEnabled',['../classDeviceSettingsMessage.html#ad8406632b5f45d70c3e114e95f471980',1,'DeviceSettingsMessage']]],
+  ['bloodpressuremessage_2240',['BloodPressureMessage',['../classBloodPressureMessage.html#af4c263d8690b6fa595ef11b0c369b70e',1,'BloodPressureMessage']]],
+  ['bluetoothenabled_2241',['bluetoothEnabled',['../classConnectivityMessage.html#a59da0d1023fe4a3c289213ced5ae8a81',1,'ConnectivityMessage']]],
+  ['bluetoothleenabled_2242',['bluetoothLeEnabled',['../classConnectivityMessage.html#ad559f61829f3eeb7546522f18e335c58',1,'ConnectivityMessage']]],
+  ['bonemass_2243',['boneMass',['../classWeightScaleMessage.html#a05f0f53a212fc164a9aa6ce875f7f3c2',1,'WeightScaleMessage']]],
+  ['bottomdepth_2244',['bottomDepth',['../classDiveSettingsMessage.html#a3f20a5521ea2d2a7214c03e067dfde1c',1,'DiveSettingsMessage']]],
+  ['bottomtime_2245',['bottomTime',['../classDiveSettingsMessage.html#a3397a7e95ad0ad0e2d770892c41fb0d4',1,'DiveSettingsMessage::bottomTime()'],['../classDiveSummaryMessage.html#a49487fd6108c515ab8ca15064dfdbf79',1,'DiveSummaryMessage::bottomTime()']]]
 ];

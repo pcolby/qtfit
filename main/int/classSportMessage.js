@@ -1,6 +1,6 @@
 var classSportMessage =
 [
-    [ "SportMessage", "classSportMessage.html#a21f87458da9409c179b1a6cb30a810cf", null ],
+    [ "SportMessage", "classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd", null ],
     [ "~SportMessage", "classSportMessage.html#a9acd9a963cb8bc37394dfdde221be65a", null ],
     [ "name", "classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14", null ],
     [ "setName", "classSportMessage.html#aceadee0d3f2dd30657718624bd005613", null ],

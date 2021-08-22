@@ -1,6 +1,6 @@
 var classActivityMessage =
 [
-    [ "ActivityMessage", "classActivityMessage.html#a11eac8f8b8b0ed60b3d99545ffa0bef3", null ],
+    [ "ActivityMessage", "classActivityMessage.html#a62390ab83912628bf31457195ca0c64c", null ],
     [ "~ActivityMessage", "classActivityMessage.html#ae838000d5a5deb0acb4cce2456d9f4f7", null ],
     [ "event", "classActivityMessage.html#a25782f7a7660506b157f141229afd5df", null ],
     [ "eventGroup", "classActivityMessage.html#af0e4d1f0363c31d32a8c44975d840712", null ],

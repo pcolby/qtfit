@@ -1,6 +1,6 @@
 var classSpeedZoneMessage =
 [
-    [ "SpeedZoneMessage", "classSpeedZoneMessage.html#ac1a42124908636d73f1ec496ea2f5cd8", null ],
+    [ "SpeedZoneMessage", "classSpeedZoneMessage.html#af86b525a1e87f4285e513fa07455f48f", null ],
     [ "~SpeedZoneMessage", "classSpeedZoneMessage.html#ac4b32d74303ab9012083d8a55b6a4d2f", null ],
     [ "highValue", "classSpeedZoneMessage.html#afa7655e81497ff108a572ee50bdc2881", null ],
     [ "messageIndex", "classSpeedZoneMessage.html#a3170e15b46f764c9202528d1129c1279", null ],

@@ -205,6 +205,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ad34ac1f2c7a31b62f55d56e1ff353c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classFitDataMessagePrivate"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFitDataMessagePrivate')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></td></tr>
 <tr class="memitem:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a> (const QByteArray &amp;data, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> actualType, const int expectedSize, const <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> expectedType, const char *messageFieldName)</td></tr>
+<tr class="memdesc:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">\interal  <a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">More...</a><br /></td></tr>
 <tr class="separator:a4a9a5ee83dbe87dcc25f3fc5f50f2284 inherit pro_methods_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -215,7 +216,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8af17988d16bd92de480941dca604613 inherit pro_attribs_classFitDataMessagePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>The <a class="el" href="classBikeProfileMessagePrivate.html">BikeProfileMessagePrivate</a> class provides private implementation for the <a class="el" href="classBikeProfileMessage.html" title="The BikeProfileMessage class represents a FIT BikeProfileMessage data message.">BikeProfileMessage</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classBikeProfileMessage.html" title="The BikeProfileMessage class represents a FIT BikeProfileMessage data message.">BikeProfileMessage</a> </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3d8a39f9adb70575345810140582faa4"></a>
@@ -266,43 +269,50 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classBikeProfileMessagePrivate.html">BikeProfileMessagePrivate</a> object with public implementation <em>q</em>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>Pointer to public implementaton. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="bikeprofilemessage_8cpp_source.html#l00391">391</a> of file <a class="el" href="bikeprofilemessage_8cpp_source.html">bikeprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af00643a94af2cb90680fc520839d9617">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ac4d8468ad7d514534967d9611a6b05ce">sport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af41864ff226251a0fcd31db9c449c6e1">subSport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ad264b885b556bd600cba04bded85760b">odometer</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a7718abb6a7618d6c2da124ffec2e7d33">bikeSpdAntId</a>(0)</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a0286c324a17aed36f9d2cb5134e5d28c">bikeCadAntId</a>(0)</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a9d969acadc736b9f92b19606773672d5">bikeSpdcadAntId</a>(0)</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ab3561edf65b8a6c12529c3a99a95460c">bikePowerAntId</a>(0)</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a62c144b19cbff5fbbb48aa0ed3ddd8b3">customWheelsize</a>(0xFFFF)</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af7a23d3fd1795fe6605a434bcc596453">autoWheelsize</a>(0xFFFF)</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a207d8c127cd4e680d085b56dd2d5d42a">bikeWeight</a>(0xFFFF)</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a0b470264d39af74b9876de1b135d6923">powerCalFactor</a>(0xFFFF)</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a5a785659920b270378f3537418bfe9f4">autoWheelCal</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#abfbdb88d7106ac3a05a35c00c9e1dec7">autoPowerZero</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#afed1b90ac37aea528ca4966722139e53">id</a>(0xFF)</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ae2d9827b763607881b4de1fbabc58165">spdEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af8a35b9c5176c418cb5b436b284fa7a8">cadEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af6a76a07b2fb4dd2cff7c5e7946bc68a">spdcadEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a1c280bcc4f1195d18713ef6a8999db06">powerEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#aa45b0f62060b5555c16153011867707a">crankLength</a>(0xFF)</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a373c8fa9b1873f7365c8792023b55898">enabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a0df4c720b051a090d70db275d37e88f8">bikeSpdAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#aa6ff560547150be4f6d565d849737d67">bikeCadAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a4600b020b2d75add308eebe65086d42a">bikeSpdcadAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a3524c6911513f5cb2de7314574d3bcf4">bikePowerAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af8604cfbc7fba131ccc326636373bbca">odometerRollover</a>(0xFF)</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a55cc385823a6e6dbd8d1b33b5940cfab">frontGearNum</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a6c06ff9673f8e5f170a10a63342778dc">frontGear</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#adf9041ed41360a7f7e6308db415464c6">rearGearNum</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ac0db6ddf706b04eff8c1cb9827d69ba6">rearGear</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a2e7dfacdd285803b295ff25fdd1d775a">shimanoDi2Enabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;{</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22caae77f03f6cc97e7adcde5bab4084ad17">MesgNum::BikeProfile</a>;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="bikeprofilemessage_8cpp_source.html#l00742">742</a> of file <a class="el" href="bikeprofilemessage_8cpp_source.html">bikeprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html#ae71d76b1cc2ca639b8ba6f4c213a81c1">FitDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af00643a94af2cb90680fc520839d9617">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ac4d8468ad7d514534967d9611a6b05ce">sport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af41864ff226251a0fcd31db9c449c6e1">subSport</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ad264b885b556bd600cba04bded85760b">odometer</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a7718abb6a7618d6c2da124ffec2e7d33">bikeSpdAntId</a>(0)</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a0286c324a17aed36f9d2cb5134e5d28c">bikeCadAntId</a>(0)</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a9d969acadc736b9f92b19606773672d5">bikeSpdcadAntId</a>(0)</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ab3561edf65b8a6c12529c3a99a95460c">bikePowerAntId</a>(0)</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a62c144b19cbff5fbbb48aa0ed3ddd8b3">customWheelsize</a>(0xFFFF)</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af7a23d3fd1795fe6605a434bcc596453">autoWheelsize</a>(0xFFFF)</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a207d8c127cd4e680d085b56dd2d5d42a">bikeWeight</a>(0xFFFF)</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a0b470264d39af74b9876de1b135d6923">powerCalFactor</a>(0xFFFF)</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a5a785659920b270378f3537418bfe9f4">autoWheelCal</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#abfbdb88d7106ac3a05a35c00c9e1dec7">autoPowerZero</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#afed1b90ac37aea528ca4966722139e53">id</a>(0xFF)</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ae2d9827b763607881b4de1fbabc58165">spdEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af8a35b9c5176c418cb5b436b284fa7a8">cadEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af6a76a07b2fb4dd2cff7c5e7946bc68a">spdcadEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a1c280bcc4f1195d18713ef6a8999db06">powerEnabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#aa45b0f62060b5555c16153011867707a">crankLength</a>(0xFF)</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a373c8fa9b1873f7365c8792023b55898">enabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a0df4c720b051a090d70db275d37e88f8">bikeSpdAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#aa6ff560547150be4f6d565d849737d67">bikeCadAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a4600b020b2d75add308eebe65086d42a">bikeSpdcadAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a3524c6911513f5cb2de7314574d3bcf4">bikePowerAntIdTransType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#af8604cfbc7fba131ccc326636373bbca">odometerRollover</a>(0xFF)</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a55cc385823a6e6dbd8d1b33b5940cfab">frontGearNum</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a6c06ff9673f8e5f170a10a63342778dc">frontGear</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#adf9041ed41360a7f7e6308db415464c6">rearGearNum</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#ac0db6ddf706b04eff8c1cb9827d69ba6">rearGear</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;  , <a class="code" href="classBikeProfileMessagePrivate.html#a2e7dfacdd285803b295ff25fdd1d775a">shimanoDi2Enabled</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;{</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22caae77f03f6cc97e7adcde5bab4084ad17">MesgNum::BikeProfile</a>;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;}</div>
 <div class="ttc" id="aclassBikeProfileMessagePrivate_html_a0286c324a17aed36f9d2cb5134e5d28c"><div class="ttname"><a href="classBikeProfileMessagePrivate.html#a0286c324a17aed36f9d2cb5134e5d28c">BikeProfileMessagePrivate::bikeCadAntId</a></div><div class="ttdeci">quint16z bikeCadAntId</div><div class="ttdef"><b>Definition:</b> <a href="bikeprofilemessage__p_8h_source.html#l00043">bikeprofilemessage_p.h:43</a></div></div>
 <div class="ttc" id="aclassBikeProfileMessagePrivate_html_a0b470264d39af74b9876de1b135d6923"><div class="ttname"><a href="classBikeProfileMessagePrivate.html#a0b470264d39af74b9876de1b135d6923">BikeProfileMessagePrivate::powerCalFactor</a></div><div class="ttdeci">quint16 powerCalFactor</div><div class="ttdef"><b>Definition:</b> <a href="bikeprofilemessage__p_8h_source.html#l00049">bikeprofilemessage_p.h:49</a></div></div>
 <div class="ttc" id="aclassBikeProfileMessagePrivate_html_a0df4c720b051a090d70db275d37e88f8"><div class="ttname"><a href="classBikeProfileMessagePrivate.html#a0df4c720b051a090d70db275d37e88f8">BikeProfileMessagePrivate::bikeSpdAntIdTransType</a></div><div class="ttdeci">quint8z bikeSpdAntIdTransType</div><div class="ttdef"><b>Definition:</b> <a href="bikeprofilemessage__p_8h_source.html#l00059">bikeprofilemessage_p.h:59</a></div></div>
@@ -368,11 +378,12 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destroys the <a class="el" href="classBikeProfileMessagePrivate.html">BikeProfileMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="bikeprofilemessage_8cpp_source.html#l00428">428</a> of file <a class="el" href="bikeprofilemessage_8cpp_source.html">bikeprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;{</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="bikeprofilemessage_8cpp_source.html#l00784">784</a> of file <a class="el" href="bikeprofilemessage_8cpp_source.html">bikeprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;{</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160; </div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -422,149 +433,161 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set a value of a data message field.</p>
+<p>This base implementation simply logs a warning, and ignores the field. Derived classes should override this implementation to set the relevant class members.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fieldId</td><td>The field number within the given FIT data message. </td></tr>
+    <tr><td class="paramname">data</td><td>The raw data to extract the field value from. </td></tr>
+    <tr><td class="paramname">baseType</td><td>The FIT base type for the field. </td></tr>
+    <tr><td class="paramname">bigEndian</td><td>Whether or not multibyte values in <em>record</em> are big-endian.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the field was set, or skipped; <code>false</code> if the field was corrupt or invalid. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">433</a> of file <a class="el" href="bikeprofilemessage_8cpp_source.html">bikeprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;{</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:bike_profile.messageIndex</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af00643a94af2cb90680fc520839d9617">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:bike_profile.name</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>, <span class="stringliteral">&quot;bike_profile.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af04ddf68f2f3284ebf51742febbc6f17">name</a> = QString::fromUtf8(data);</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:bike_profile.sport</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;bike_profile.sport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ac4d8468ad7d514534967d9611a6b05ce">sport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:bike_profile.subSport</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;bike_profile.subSport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af41864ff226251a0fcd31db9c449c6e1">subSport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:bike_profile.odometer</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;bike_profile.odometer&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ad264b885b556bd600cba04bded85760b">odometer</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdAntId</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a7718abb6a7618d6c2da124ffec2e7d33">bikeSpdAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeCadAntId</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikeCadAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a0286c324a17aed36f9d2cb5134e5d28c">bikeCadAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdcadAntId</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdcadAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a9d969acadc736b9f92b19606773672d5">bikeSpdcadAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordflow">case</span> 7: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikePowerAntId</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikePowerAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ab3561edf65b8a6c12529c3a99a95460c">bikePowerAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">case</span> 8: <span class="comment">// See Profile.xlsx::Messages:bike_profile.customWheelsize</span></div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.customWheelsize&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a62c144b19cbff5fbbb48aa0ed3ddd8b3">customWheelsize</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="keywordflow">case</span> 9: <span class="comment">// See Profile.xlsx::Messages:bike_profile.autoWheelsize</span></div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.autoWheelsize&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af7a23d3fd1795fe6605a434bcc596453">autoWheelsize</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keywordflow">case</span> 10: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeWeight</span></div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.bikeWeight&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a207d8c127cd4e680d085b56dd2d5d42a">bikeWeight</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="keywordflow">case</span> 11: <span class="comment">// See Profile.xlsx::Messages:bike_profile.powerCalFactor</span></div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.powerCalFactor&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a0b470264d39af74b9876de1b135d6923">powerCalFactor</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordflow">case</span> 12: <span class="comment">// See Profile.xlsx::Messages:bike_profile.autoWheelCal</span></div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.autoWheelCal&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a5a785659920b270378f3537418bfe9f4">autoWheelCal</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keywordflow">case</span> 13: <span class="comment">// See Profile.xlsx::Messages:bike_profile.autoPowerZero</span></div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.autoPowerZero&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#abfbdb88d7106ac3a05a35c00c9e1dec7">autoPowerZero</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="keywordflow">case</span> 14: <span class="comment">// See Profile.xlsx::Messages:bike_profile.id</span></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;bike_profile.id&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        this-&gt;<span class="keywordtype">id</span> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordflow">case</span> 15: <span class="comment">// See Profile.xlsx::Messages:bike_profile.spdEnabled</span></div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.spdEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ae2d9827b763607881b4de1fbabc58165">spdEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">case</span> 16: <span class="comment">// See Profile.xlsx::Messages:bike_profile.cadEnabled</span></div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.cadEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af8a35b9c5176c418cb5b436b284fa7a8">cadEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">case</span> 17: <span class="comment">// See Profile.xlsx::Messages:bike_profile.spdcadEnabled</span></div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.spdcadEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af6a76a07b2fb4dd2cff7c5e7946bc68a">spdcadEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keywordflow">case</span> 18: <span class="comment">// See Profile.xlsx::Messages:bike_profile.powerEnabled</span></div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.powerEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a1c280bcc4f1195d18713ef6a8999db06">powerEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordflow">case</span> 19: <span class="comment">// See Profile.xlsx::Messages:bike_profile.crankLength</span></div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;bike_profile.crankLength&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#aa45b0f62060b5555c16153011867707a">crankLength</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordflow">case</span> 20: <span class="comment">// See Profile.xlsx::Messages:bike_profile.enabled</span></div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.enabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a373c8fa9b1873f7365c8792023b55898">enabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <span class="keywordflow">case</span> 21: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdAntIdTransType</span></div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a0df4c720b051a090d70db275d37e88f8">bikeSpdAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    <span class="keywordflow">case</span> 22: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeCadAntIdTransType</span></div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikeCadAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#aa6ff560547150be4f6d565d849737d67">bikeCadAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">case</span> 23: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdcadAntIdTransType</span></div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdcadAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a4600b020b2d75add308eebe65086d42a">bikeSpdcadAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keywordflow">case</span> 24: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikePowerAntIdTransType</span></div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikePowerAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a3524c6911513f5cb2de7314574d3bcf4">bikePowerAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="keywordflow">case</span> 37: <span class="comment">// See Profile.xlsx::Messages:bike_profile.odometerRollover</span></div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;bike_profile.odometerRollover&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af8604cfbc7fba131ccc326636373bbca">odometerRollover</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordflow">case</span> 38: <span class="comment">// See Profile.xlsx::Messages:bike_profile.frontGearNum</span></div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.frontGearNum&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a55cc385823a6e6dbd8d1b33b5940cfab">frontGearNum</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordflow">case</span> 39: <span class="comment">// See Profile.xlsx::Messages:bike_profile.frontGear</span></div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.frontGear&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a6c06ff9673f8e5f170a10a63342778dc">frontGear</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <span class="keywordflow">case</span> 40: <span class="comment">// See Profile.xlsx::Messages:bike_profile.rearGearNum</span></div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.rearGearNum&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#adf9041ed41360a7f7e6308db415464c6">rearGearNum</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <span class="keywordflow">case</span> 41: <span class="comment">// See Profile.xlsx::Messages:bike_profile.rearGear</span></div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.rearGear&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ac0db6ddf706b04eff8c1cb9827d69ba6">rearGear</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordflow">case</span> 44: <span class="comment">// See Profile.xlsx::Messages:bike_profile.shimanoDi2Enabled</span></div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.shimanoDi2Enabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a2e7dfacdd285803b295ff25fdd1d775a">shimanoDi2Enabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown bike_profile message field number&quot;</span> &lt;&lt; fieldId;</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    }</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">789</a> of file <a class="el" href="bikeprofilemessage_8cpp_source.html">bikeprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;{</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:bike_profile.messageIndex</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af00643a94af2cb90680fc520839d9617">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:bike_profile.name</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>, <span class="stringliteral">&quot;bike_profile.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af04ddf68f2f3284ebf51742febbc6f17">name</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:bike_profile.sport</span></div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;bike_profile.sport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ac4d8468ad7d514534967d9611a6b05ce">sport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:bike_profile.subSport</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;bike_profile.subSport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af41864ff226251a0fcd31db9c449c6e1">subSport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:bike_profile.odometer</span></div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 4, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a>, <span class="stringliteral">&quot;bike_profile.odometer&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ad264b885b556bd600cba04bded85760b">odometer</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdAntId</span></div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a7718abb6a7618d6c2da124ffec2e7d33">bikeSpdAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeCadAntId</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikeCadAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a0286c324a17aed36f9d2cb5134e5d28c">bikeCadAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdcadAntId</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdcadAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a9d969acadc736b9f92b19606773672d5">bikeSpdcadAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    <span class="keywordflow">case</span> 7: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikePowerAntId</span></div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">FitBaseType::Uint16z</a>, <span class="stringliteral">&quot;bike_profile.bikePowerAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ab3561edf65b8a6c12529c3a99a95460c">bikePowerAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;    <span class="keywordflow">case</span> 8: <span class="comment">// See Profile.xlsx::Messages:bike_profile.customWheelsize</span></div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.customWheelsize&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a62c144b19cbff5fbbb48aa0ed3ddd8b3">customWheelsize</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;    <span class="keywordflow">case</span> 9: <span class="comment">// See Profile.xlsx::Messages:bike_profile.autoWheelsize</span></div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.autoWheelsize&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af7a23d3fd1795fe6605a434bcc596453">autoWheelsize</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    <span class="keywordflow">case</span> 10: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeWeight</span></div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.bikeWeight&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a207d8c127cd4e680d085b56dd2d5d42a">bikeWeight</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    <span class="keywordflow">case</span> 11: <span class="comment">// See Profile.xlsx::Messages:bike_profile.powerCalFactor</span></div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 2, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a>, <span class="stringliteral">&quot;bike_profile.powerCalFactor&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a0b470264d39af74b9876de1b135d6923">powerCalFactor</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="keywordflow">case</span> 12: <span class="comment">// See Profile.xlsx::Messages:bike_profile.autoWheelCal</span></div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.autoWheelCal&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a5a785659920b270378f3537418bfe9f4">autoWheelCal</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    <span class="keywordflow">case</span> 13: <span class="comment">// See Profile.xlsx::Messages:bike_profile.autoPowerZero</span></div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.autoPowerZero&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#abfbdb88d7106ac3a05a35c00c9e1dec7">autoPowerZero</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    <span class="keywordflow">case</span> 14: <span class="comment">// See Profile.xlsx::Messages:bike_profile.id</span></div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;bike_profile.id&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;        this-&gt;<span class="keywordtype">id</span> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    <span class="keywordflow">case</span> 15: <span class="comment">// See Profile.xlsx::Messages:bike_profile.spdEnabled</span></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.spdEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ae2d9827b763607881b4de1fbabc58165">spdEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    <span class="keywordflow">case</span> 16: <span class="comment">// See Profile.xlsx::Messages:bike_profile.cadEnabled</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.cadEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af8a35b9c5176c418cb5b436b284fa7a8">cadEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="keywordflow">case</span> 17: <span class="comment">// See Profile.xlsx::Messages:bike_profile.spdcadEnabled</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.spdcadEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af6a76a07b2fb4dd2cff7c5e7946bc68a">spdcadEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="keywordflow">case</span> 18: <span class="comment">// See Profile.xlsx::Messages:bike_profile.powerEnabled</span></div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.powerEnabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a1c280bcc4f1195d18713ef6a8999db06">powerEnabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <span class="keywordflow">case</span> 19: <span class="comment">// See Profile.xlsx::Messages:bike_profile.crankLength</span></div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;bike_profile.crankLength&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#aa45b0f62060b5555c16153011867707a">crankLength</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordflow">case</span> 20: <span class="comment">// See Profile.xlsx::Messages:bike_profile.enabled</span></div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.enabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a373c8fa9b1873f7365c8792023b55898">enabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <span class="keywordflow">case</span> 21: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdAntIdTransType</span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a0df4c720b051a090d70db275d37e88f8">bikeSpdAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    <span class="keywordflow">case</span> 22: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeCadAntIdTransType</span></div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikeCadAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#aa6ff560547150be4f6d565d849737d67">bikeCadAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;    <span class="keywordflow">case</span> 23: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikeSpdcadAntIdTransType</span></div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikeSpdcadAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a4600b020b2d75add308eebe65086d42a">bikeSpdcadAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    <span class="keywordflow">case</span> 24: <span class="comment">// See Profile.xlsx::Messages:bike_profile.bikePowerAntIdTransType</span></div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.bikePowerAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a3524c6911513f5cb2de7314574d3bcf4">bikePowerAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keywordflow">case</span> 37: <span class="comment">// See Profile.xlsx::Messages:bike_profile.odometerRollover</span></div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">FitBaseType::Uint8</a>, <span class="stringliteral">&quot;bike_profile.odometerRollover&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#af8604cfbc7fba131ccc326636373bbca">odometerRollover</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;    <span class="keywordflow">case</span> 38: <span class="comment">// See Profile.xlsx::Messages:bike_profile.frontGearNum</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.frontGearNum&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a55cc385823a6e6dbd8d1b33b5940cfab">frontGearNum</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    <span class="keywordflow">case</span> 39: <span class="comment">// See Profile.xlsx::Messages:bike_profile.frontGear</span></div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.frontGear&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a6c06ff9673f8e5f170a10a63342778dc">frontGear</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    <span class="keywordflow">case</span> 40: <span class="comment">// See Profile.xlsx::Messages:bike_profile.rearGearNum</span></div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.rearGearNum&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#adf9041ed41360a7f7e6308db415464c6">rearGearNum</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    <span class="keywordflow">case</span> 41: <span class="comment">// See Profile.xlsx::Messages:bike_profile.rearGear</span></div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">FitBaseType::Uint8z</a>, <span class="stringliteral">&quot;bike_profile.rearGear&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#ac0db6ddf706b04eff8c1cb9827d69ba6">rearGear</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;    <span class="keywordflow">case</span> 44: <span class="comment">// See Profile.xlsx::Messages:bike_profile.shimanoDi2Enabled</span></div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 0, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">FitBaseType::Byte</a>, <span class="stringliteral">&quot;bike_profile.shimanoDi2Enabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;        this-&gt;<a class="code" href="classBikeProfileMessagePrivate.html#a2e7dfacdd285803b295ff25fdd1d775a">shimanoDi2Enabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown bike_profile message field number&quot;</span> &lt;&lt; fieldId;</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    }</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;}</div>
 <div class="ttc" id="aclassBikeProfileMessagePrivate_html_af04ddf68f2f3284ebf51742febbc6f17"><div class="ttname"><a href="classBikeProfileMessagePrivate.html#af04ddf68f2f3284ebf51742febbc6f17">BikeProfileMessagePrivate::name</a></div><div class="ttdeci">QString name</div><div class="ttdef"><b>Definition:</b> <a href="bikeprofilemessage__p_8h_source.html#l00038">bikeprofilemessage_p.h:38</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00114">fitdatamessage.cpp:114</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00092">fitdatamessage.cpp:92</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdoc">\interal</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00235">fitdatamessage.cpp:235</a></div></div>
+<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00178">fitdatamessage.cpp:178</a></div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a></div><div class="ttdeci">@ String</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">FitBaseType::Uint32</a></div><div class="ttdeci">@ Uint32</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">FitBaseType::Uint16</a></div><div class="ttdeci">@ Uint16</div></div>
@@ -575,7 +598,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a></div><div class="ttdeci">@ Enum</div></div>
 <div class="ttc" id="atypes_8h_html_ab1f19760ebc204816d39999628339d7c"><div class="ttname"><a href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a></div><div class="ttdeci">quint16 quint16z</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00046">types.h:46</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="bikeprofilemessage__p_8h_source.html#l00051">autoPowerZero</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00050">autoWheelCal</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00047">autoWheelsize</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00043">bikeCadAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00060">bikeCadAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00045">bikePowerAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00062">bikePowerAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00042">bikeSpdAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00059">bikeSpdAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00044">bikeSpdcadAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00061">bikeSpdcadAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00048">bikeWeight</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00054">cadEnabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00057">crankLength</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00046">customWheelsize</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00058">enabled</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00065">frontGear</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00064">frontGearNum</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00037">messageIndex</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00038">name</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00041">odometer</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00063">odometerRollover</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00049">powerCalFactor</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00056">powerEnabled</a>, <a class="el" href="types_8h_source.html#l00045">quint8z</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00067">rearGear</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00066">rearGearNum</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00092">FitDataMessagePrivate::setField()</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00068">shimanoDi2Enabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00055">spdcadEnabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00053">spdEnabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00039">sport</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">String</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00040">subSport</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">Uint16z</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">Uint8z</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00114">FitDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="bikeprofilemessage__p_8h_source.html#l00051">autoPowerZero</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00050">autoWheelCal</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00047">autoWheelsize</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00043">bikeCadAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00060">bikeCadAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00045">bikePowerAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00062">bikePowerAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00042">bikeSpdAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00059">bikeSpdAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00044">bikeSpdcadAntId</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00061">bikeSpdcadAntIdTransType</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00048">bikeWeight</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05aa245c3230debe5c956484ecc6fa93877">Byte</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00054">cadEnabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00057">crankLength</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00046">customWheelsize</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00058">enabled</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">Enum</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00065">frontGear</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00064">frontGearNum</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00037">messageIndex</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00038">name</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00041">odometer</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00063">odometerRollover</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00049">powerCalFactor</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00056">powerEnabled</a>, <a class="el" href="types_8h_source.html#l00045">quint8z</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00067">rearGear</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00066">rearGearNum</a>, <a class="el" href="fitdatamessage_8cpp_source.html#l00178">FitDataMessagePrivate::setField()</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00068">shimanoDi2Enabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00055">spdcadEnabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00053">spdEnabled</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00039">sport</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">String</a>, <a class="el" href="bikeprofilemessage__p_8h_source.html#l00040">subSport</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3167337450665ae9b3b34004d33cafe8">Uint16</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a956f0d8ef9f384e239ffba8004ac4add">Uint16z</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a2f3a46e0add3a07937412cbeb8f95727">Uint32</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a3a33b05b1fe0bad48ad87ffbacdddd15">Uint8</a>, <a class="el" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a7ce0e447666a1596ee581891b048365e">Uint8z</a>, and <a class="el" href="fitdatamessage_8cpp_source.html#l00235">FitDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -600,7 +623,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00051">51</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -618,7 +641,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00050">50</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -636,7 +659,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00047">47</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -654,7 +677,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00043">43</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -672,7 +695,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00060">60</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -690,7 +713,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00045">45</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -708,7 +731,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00062">62</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -726,7 +749,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -744,7 +767,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00059">59</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -762,7 +785,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00044">44</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -780,7 +803,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00061">61</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -798,7 +821,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00048">48</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -816,7 +839,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00054">54</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -834,7 +857,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00057">57</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -852,7 +875,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -870,7 +893,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00058">58</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -888,7 +911,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00065">65</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -906,7 +929,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00064">64</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -940,7 +963,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00037">37</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -958,7 +981,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -976,7 +999,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00041">41</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1017,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00063">63</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1035,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1030,7 +1053,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00056">56</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1071,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00067">67</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1089,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00066">66</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1107,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00068">68</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1102,7 +1125,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00055">55</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1143,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00053">53</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1138,7 +1161,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00039">39</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1179,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="bikeprofilemessage__p_8h_source.html#l00040">40</a> of file <a class="el" href="bikeprofilemessage__p_8h_source.html">bikeprofilemessage_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00433">setField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bikeprofilemessage_8cpp_source.html#l00789">setField()</a>.</p>
 
 </div>
 </div>

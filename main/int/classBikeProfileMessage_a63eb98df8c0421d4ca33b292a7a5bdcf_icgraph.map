@@ -1,4 +1,4 @@
 <map id="BikeProfileMessage::bikeCadAntIdTransType" name="BikeProfileMessage::bikeCadAntIdTransType">
-<area shape="rect" id="node1" title=" " alt="" coords="255,5,435,47"/>
-<area shape="rect" id="node2" href="$classBikeProfileMessage.html#ada00f70d1de30d65870f4333cebaa8df" title=" " alt="" coords="5,5,207,47"/>
+<area shape="rect" id="node1" title="Returns the BikeProfileMessage data message&#39;s bikeCadAntIdTransType field&#39;s current value." alt="" coords="255,5,435,47"/>
+<area shape="rect" id="node2" href="$classBikeProfileMessage.html#ada00f70d1de30d65870f4333cebaa8df" title="Sets the bikeCadAntIdTransType field to bikeCadAntIdTransType." alt="" coords="5,5,207,47"/>
 </map>

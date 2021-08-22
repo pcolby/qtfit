@@ -1,6 +1,6 @@
 var classWatchfaceSettingsMessage =
 [
-    [ "WatchfaceSettingsMessage", "classWatchfaceSettingsMessage.html#a88a3138b1dc544bad2b8540d8213e079", null ],
+    [ "WatchfaceSettingsMessage", "classWatchfaceSettingsMessage.html#a6ea1b17c41994037e263a018879bfa86", null ],
     [ "~WatchfaceSettingsMessage", "classWatchfaceSettingsMessage.html#a1923789101d3b6ba5db8d3b45c095d35", null ],
     [ "layout", "classWatchfaceSettingsMessage.html#a70520bd0e0ce0a3333c0a0d69afa764d", null ],
     [ "messageIndex", "classWatchfaceSettingsMessage.html#a8b7fd117acd8523bb61949f1d7d93557", null ],
