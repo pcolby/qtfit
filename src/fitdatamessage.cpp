@@ -111,6 +111,16 @@ bool FitDataMessage::isNull() const
 /*!
  * \internal
  *
+ * \class FitDataMessagePrivate
+ *
+ * The FitDataMessagePrivate class provides private implementation for FitDataMessage.
+ *
+ * \sa FitDataMessage
+ */
+
+/*!
+ * \internal
+ *
  * Constructs a FitDataMessagePrivate object with public implementation \a q.
  *
  * \param q Pointer to public implementation.
@@ -220,7 +230,7 @@ inline bool verifyDataSieze(const QByteArray &data, const int expectedSize, cons
 }
 
 /*!
- * \interal
+ * \internal
  *
  * Verifies the size and type of FIT Data Message fields.
  *
