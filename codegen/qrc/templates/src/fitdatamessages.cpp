@@ -9,7 +9,7 @@
 #include "fitdatamessage.h"
 #include "fitdatamessage_p.h"
 
-{% for enum in enums %}
+{% for enum in types %}
 {% if enum.typeName == "MesgNum" %}
 {% for value in enum.values|dictsort:"valueName" %}
 {% if value.valueName == "Pad" or value.valueName == "MfgRangeMin" or value.valueName == "MfgRangeMax" %}//{% endif %}#include "{{value.valueName|lower}}message.h"
@@ -24,7 +24,7 @@ FitDataMessage * FitDataMessage::fromData(const DataDefinition * const defn, con
     Q_ASSERT(defn);
     FitDataMessage * message = nullptr;
     switch (defn->globalMessageNumber) {
-{% for enum in enums %}
+{% for enum in types %}
 {% if enum.typeName == "MesgNum" %}
 {% for value in enum.values %}
 {% if value.valueName == "Pad" %}

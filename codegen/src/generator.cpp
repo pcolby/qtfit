@@ -204,7 +204,7 @@ int Generator::processTypes(Grantlee::Context &context)
     }
 
     // Build a list of enums from the TSV file.
-    QVariantList enums;  // Full set of enums we'll expose to the Grantless context below.
+    QVariantList types;  // Full set of types we'll expose to the Grantless context below.
     QVariantMap type;    // The current enum type being built in the loop, then added to enums.
     QVariantList values; // The set of values for the current type.
     int maxValueNameLength=0, maxValueValueLength=0;
@@ -218,7 +218,7 @@ int Generator::processTypes(Grantlee::Context &context)
             type.insert(QSL("values"), values);
             type.insert(QSL("maxValueNameLength"), maxValueNameLength);
             type.insert(QSL("maxValueValueLength"), maxValueValueLength);
-            enums.append(type);
+            types.append(type);
             type.clear();
             values.clear();
             maxValueNameLength = maxValueValueLength = 0;
@@ -248,7 +248,7 @@ int Generator::processTypes(Grantlee::Context &context)
 
     // Generate the types header.
     context.push();
-    context.insert(QSL("enums"), enums);
+    context.insert(QSL("types"), types);
     const QStringList fileNames { QSL("fitdatamessages.cpp"), QSL("types.cpp"), QSL("types.h")};
     for (const QString &fileName: fileNames) {
         if (!render(QSL("src/") + fileName, context, outputDir.absoluteFilePath(QSL("src/") + fileName)))

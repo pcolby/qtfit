@@ -24,7 +24,7 @@ typedef quint8  quint8z;
 typedef quint16 quint16z;
 typedef quint32 quint32z;
 typedef quint64 quint64z;
-{% for enum in enums %}{% if enum.comment %}
+{% for enum in types %}{% if enum.comment %}
 /// {{enum.comment}}{% endif %}
 enum class {{enum.typeName}} {% if enum.baseType != "enum" %}: q{{enum.baseType}} {% endif %}{
 {% for value in enum.values %}
@@ -33,7 +33,7 @@ enum class {{enum.typeName}} {% if enum.baseType != "enum" %}: q{{enum.baseType}
 };
 
 {% endfor %}
-{% for enum in enums %}
+{% for enum in types %}
 QDebug operator<<(QDebug debug, const {{enum.typeName}} value);
 {% endfor %}
 

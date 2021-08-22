@@ -10,7 +10,7 @@
 
 {{ProjectName|upper}}_BEGIN_NAMESPACE
 
-{% for enum in enums %}
+{% for enum in types %}
 QDebug operator<<(QDebug debug, const {{enum.typeName}} value)
 {
     switch (value) {
