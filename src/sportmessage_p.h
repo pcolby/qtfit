@@ -34,8 +34,19 @@ class SportMessage;
 class SportMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The SportMessage FIT message's sport field.
+     */
     Sport sport;
+
+    /*!
+     * The SportMessage FIT message's subSport field.
+     */
     SubSport subSport;
+
+    /*!
+     * The SportMessage FIT message's name field.
+     */
     QString name;
 
     SportMessagePrivate() = delete;

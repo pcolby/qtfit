@@ -34,7 +34,14 @@ class SlaveDeviceMessage;
 class SlaveDeviceMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The SlaveDeviceMessage FIT message's manufacturer field.
+     */
     Manufacturer manufacturer;
+
+    /*!
+     * The SlaveDeviceMessage FIT message's product field.
+     */
     quint16 product;
 
     SlaveDeviceMessagePrivate() = delete;

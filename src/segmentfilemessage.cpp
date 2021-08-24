@@ -141,7 +141,8 @@ quint32 SegmentFileMessage::leaderActivityId() const
 /*!
  * Returns the SegmentFileMessage data message's \c leaderActivityIdString field's current value.
  *
- * String version of the activity ID of each leader in the segment file. 21 characters long for each ID, express in decimal
+ * String version of the activity ID of each leader in the segment file. 21 characters long for
+ * each ID, express in decimal
  *
  * \return the \c leaderActivityIdString field value.
  */

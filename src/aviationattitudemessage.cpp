@@ -167,7 +167,8 @@ AttitudeStage AviationAttitudeMessage::stage() const
 /*!
  * Returns the AviationAttitudeMessage data message's \c attitudeStageComplete field's current value.
  *
- * The percent complete of the current attitude stage.  Set to 0 for attitude stages 0, 1 and 2 and to 100 for attitude stage 3 by AHRS modules that do not support it.  Range - 100
+ * The percent complete of the current attitude stage.  Set to 0 for attitude stages 0, 1 and 2
+ * and to 100 for attitude stage 3 by AHRS modules that do not support it.  Range - 100
  *
  * \return the \c attitudeStageComplete field value.
  */

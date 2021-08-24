@@ -34,10 +34,29 @@ class FieldCapabilitiesMessage;
 class FieldCapabilitiesMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The FieldCapabilitiesMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The FieldCapabilitiesMessage FIT message's file field.
+     */
     File file;
+
+    /*!
+     * The FieldCapabilitiesMessage FIT message's mesgNum field.
+     */
     MesgNum mesgNum;
+
+    /*!
+     * The FieldCapabilitiesMessage FIT message's fieldNum field.
+     */
     quint8 fieldNum;
+
+    /*!
+     * The FieldCapabilitiesMessage FIT message's count field.
+     */
     quint16 count;
 
     FieldCapabilitiesMessagePrivate() = delete;

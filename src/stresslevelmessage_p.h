@@ -34,7 +34,16 @@ class StressLevelMessage;
 class StressLevelMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The StressLevelMessage FIT message's stressLevelValue field.
+     */
     qint16 stressLevelValue;
+
+    /*!
+     * The StressLevelMessage FIT message's stressLevelTime field.
+     *
+     * Time stress score was calculated
+     */
     DateTime stressLevelTime;
 
     StressLevelMessagePrivate() = delete;

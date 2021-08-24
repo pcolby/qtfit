@@ -34,9 +34,28 @@ class CapabilitiesMessage;
 class CapabilitiesMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The CapabilitiesMessage FIT message's languages field.
+     *
+     * Use language_bits_x types where x is index of array.
+     */
     quint8z languages;
+
+    /*!
+     * The CapabilitiesMessage FIT message's sports field.
+     *
+     * Use sport_bits_x types where x is index of array.
+     */
     SportBits0 sports;
+
+    /*!
+     * The CapabilitiesMessage FIT message's workoutsSupported field.
+     */
     WorkoutCapabilities workoutsSupported;
+
+    /*!
+     * The CapabilitiesMessage FIT message's connectivitySupported field.
+     */
     ConnectivityCapabilities connectivitySupported;
 
     CapabilitiesMessagePrivate() = delete;

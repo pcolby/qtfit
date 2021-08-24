@@ -111,7 +111,8 @@ quint16 SegmentPointMessage::altitude() const
 /*!
  * Returns the SegmentPointMessage data message's \c leaderTime field's current value.
  *
- * Accumualted time each leader board member required to reach the described point. This value is zero for all leader board members at the starting point of the segment.
+ * Accumualted time each leader board member required to reach the described point. This value
+ * is zero for all leader board members at the starting point of the segment.
  *
  * \return the \c leaderTime field value.
  */

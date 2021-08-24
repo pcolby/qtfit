@@ -34,9 +34,26 @@ class ExdScreenConfigurationMessage;
 class ExdScreenConfigurationMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ExdScreenConfigurationMessage FIT message's screenIndex field.
+     */
     quint8 screenIndex;
+
+    /*!
+     * The ExdScreenConfigurationMessage FIT message's fieldCount field.
+     *
+     * number of fields in screen
+     */
     quint8 fieldCount;
+
+    /*!
+     * The ExdScreenConfigurationMessage FIT message's layout field.
+     */
     ExdLayout layout;
+
+    /*!
+     * The ExdScreenConfigurationMessage FIT message's screenEnabled field.
+     */
     bool screenEnabled;
 
     ExdScreenConfigurationMessagePrivate() = delete;

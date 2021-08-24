@@ -137,7 +137,8 @@ quint8 WeatherConditionsMessage::precipitationProbability() const
 /*!
  * Returns the WeatherConditionsMessage data message's \c temperatureFeelsLike field's current value.
  *
- * Heat Index if  GCS heatIdx above or equal to 90F or wind chill if GCS windChill below or equal to 32F
+ * Heat Index if  GCS heatIdx above or equal to 90F or wind chill if GCS windChill below or
+ * equal to 32F
  *
  * \return the \c temperatureFeelsLike field value.
  */

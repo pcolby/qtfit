@@ -34,18 +34,75 @@ class DiveSummaryMessage;
 class DiveSummaryMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The DiveSummaryMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The DiveSummaryMessage FIT message's referenceMesg field.
+     */
     MesgNum referenceMesg;
+
+    /*!
+     * The DiveSummaryMessage FIT message's referenceIndex field.
+     */
     MessageIndex referenceIndex;
+
+    /*!
+     * The DiveSummaryMessage FIT message's avgDepth field.
+     *
+     * 0 if above water
+     */
     quint32 avgDepth;
+
+    /*!
+     * The DiveSummaryMessage FIT message's maxDepth field.
+     *
+     * 0 if above water
+     */
     quint32 maxDepth;
+
+    /*!
+     * The DiveSummaryMessage FIT message's surfaceInterval field.
+     *
+     * Time since end of last dive
+     */
     quint32 surfaceInterval;
+
+    /*!
+     * The DiveSummaryMessage FIT message's startCns field.
+     */
     quint8 startCns;
+
+    /*!
+     * The DiveSummaryMessage FIT message's endCns field.
+     */
     quint8 endCns;
+
+    /*!
+     * The DiveSummaryMessage FIT message's startN2 field.
+     */
     quint16 startN2;
+
+    /*!
+     * The DiveSummaryMessage FIT message's endN2 field.
+     */
     quint16 endN2;
+
+    /*!
+     * The DiveSummaryMessage FIT message's o2Toxicity field.
+     */
     quint16 o2Toxicity;
+
+    /*!
+     * The DiveSummaryMessage FIT message's diveNumber field.
+     */
     quint32 diveNumber;
+
+    /*!
+     * The DiveSummaryMessage FIT message's bottomTime field.
+     */
     quint32 bottomTime;
 
     DiveSummaryMessagePrivate() = delete;

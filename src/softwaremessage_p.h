@@ -34,8 +34,19 @@ class SoftwareMessage;
 class SoftwareMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The SoftwareMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The SoftwareMessage FIT message's version field.
+     */
     quint16 version;
+
+    /*!
+     * The SoftwareMessage FIT message's partNumber field.
+     */
     QString partNumber;
 
     SoftwareMessagePrivate() = delete;

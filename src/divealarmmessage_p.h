@@ -34,12 +34,41 @@ class DiveAlarmMessage;
 class DiveAlarmMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The DiveAlarmMessage FIT message's messageIndex field.
+     *
+     * Index of the alarm
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The DiveAlarmMessage FIT message's depth field.
+     */
     quint32 depth;
+
+    /*!
+     * The DiveAlarmMessage FIT message's time field.
+     */
     qint32 time;
+
+    /*!
+     * The DiveAlarmMessage FIT message's enabled field.
+     */
     bool enabled;
+
+    /*!
+     * The DiveAlarmMessage FIT message's alarmType field.
+     */
     DiveAlarmType alarmType;
+
+    /*!
+     * The DiveAlarmMessage FIT message's sound field.
+     */
     Tone sound;
+
+    /*!
+     * The DiveAlarmMessage FIT message's diveTypes field.
+     */
     SubSport diveTypes;
 
     DiveAlarmMessagePrivate() = delete;

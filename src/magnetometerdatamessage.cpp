@@ -78,7 +78,9 @@ quint16 MagnetometerDataMessage::timestampMs() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c sampleTimeOffset field's current value.
  *
- * Each time in the array describes the time at which the compass sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in cmps_x and cmps_y and cmps_z
+ * Each time in the array describes the time at which the compass sample with the corrosponding
+ * index was taken. Limited to 30 samples in each message. The samples may span across seconds.
+ * Array size must match the number of samples in cmps_x and cmps_y and cmps_z
  *
  * \return the \c sampleTimeOffset field value.
  */
@@ -91,7 +93,8 @@ quint16 MagnetometerDataMessage::sampleTimeOffset() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c magX field's current value.
  *
- * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+ * may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c magX field value.
  */
@@ -104,7 +107,8 @@ quint16 MagnetometerDataMessage::magX() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c magY field's current value.
  *
- * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+ * may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c magY field value.
  */
@@ -117,7 +121,8 @@ quint16 MagnetometerDataMessage::magY() const
 /*!
  * Returns the MagnetometerDataMessage data message's \c magZ field's current value.
  *
- * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+ * may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c magZ field value.
  */

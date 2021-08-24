@@ -34,11 +34,41 @@ class SegmentPointMessage;
 class SegmentPointMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The SegmentPointMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The SegmentPointMessage FIT message's positionLat field.
+     */
     qint32 positionLat;
+
+    /*!
+     * The SegmentPointMessage FIT message's positionLong field.
+     */
     qint32 positionLong;
+
+    /*!
+     * The SegmentPointMessage FIT message's distance field.
+     *
+     * Accumulated distance along the segment at the described point
+     */
     quint32 distance;
+
+    /*!
+     * The SegmentPointMessage FIT message's altitude field.
+     *
+     * Accumulated altitude along the segment at the described point
+     */
     quint16 altitude;
+
+    /*!
+     * The SegmentPointMessage FIT message's leaderTime field.
+     *
+     * Accumualted time each leader board member required to reach the described point. This value
+     * is zero for all leader board members at the starting point of the segment.
+     */
     quint32 leaderTime;
 
     SegmentPointMessagePrivate() = delete;

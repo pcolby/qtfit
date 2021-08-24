@@ -34,14 +34,72 @@ class GyroscopeDataMessage;
 class GyroscopeDataMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The GyroscopeDataMessage FIT message's timestamp field.
+     *
+     * Whole second part of the timestamp
+     */
     DateTime timestamp;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's timestampMs field.
+     *
+     * Millisecond part of the timestamp.
+     */
     quint16 timestampMs;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's sampleTimeOffset field.
+     *
+     * Each time in the array describes the time at which the gyro sample with the corrosponding
+     * index was taken. Limited to 30 samples in each message. The samples may span across seconds.
+     * Array size must match the number of samples in gyro_x and gyro_y and gyro_z
+     */
     quint16 sampleTimeOffset;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's gyroX field.
+     *
+     * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+     * may span across seconds. A conversion will need to be done on this data once read.
+     */
     quint16 gyroX;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's gyroY field.
+     *
+     * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+     * may span across seconds. A conversion will need to be done on this data once read.
+     */
     quint16 gyroY;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's gyroZ field.
+     *
+     * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+     * may span across seconds. A conversion will need to be done on this data once read.
+     */
     quint16 gyroZ;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's calibratedGyroX field.
+     *
+     * Calibrated gyro reading
+     */
     float calibratedGyroX;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's calibratedGyroY field.
+     *
+     * Calibrated gyro reading
+     */
     float calibratedGyroY;
+
+    /*!
+     * The GyroscopeDataMessage FIT message's calibratedGyroZ field.
+     *
+     * Calibrated gyro reading
+     */
     float calibratedGyroZ;
 
     GyroscopeDataMessagePrivate() = delete;

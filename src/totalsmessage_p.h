@@ -34,15 +34,58 @@ class TotalsMessage;
 class TotalsMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The TotalsMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The TotalsMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The TotalsMessage FIT message's timerTime field.
+     *
+     * Excludes pauses
+     */
     quint32 timerTime;
+
+    /*!
+     * The TotalsMessage FIT message's distance field.
+     */
     quint32 distance;
+
+    /*!
+     * The TotalsMessage FIT message's calories field.
+     */
     quint32 calories;
+
+    /*!
+     * The TotalsMessage FIT message's sport field.
+     */
     Sport sport;
+
+    /*!
+     * The TotalsMessage FIT message's elapsedTime field.
+     *
+     * Includes pauses
+     */
     quint32 elapsedTime;
+
+    /*!
+     * The TotalsMessage FIT message's sessions field.
+     */
     quint16 sessions;
+
+    /*!
+     * The TotalsMessage FIT message's activeTime field.
+     */
     quint32 activeTime;
+
+    /*!
+     * The TotalsMessage FIT message's sportIndex field.
+     */
     quint8 sportIndex;
 
     TotalsMessagePrivate() = delete;

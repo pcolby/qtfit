@@ -34,9 +34,24 @@ class DiveGasMessage;
 class DiveGasMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The DiveGasMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The DiveGasMessage FIT message's heliumContent field.
+     */
     quint8 heliumContent;
+
+    /*!
+     * The DiveGasMessage FIT message's oxygenContent field.
+     */
     quint8 oxygenContent;
+
+    /*!
+     * The DiveGasMessage FIT message's status field.
+     */
     DiveGasStatus status;
 
     DiveGasMessagePrivate() = delete;

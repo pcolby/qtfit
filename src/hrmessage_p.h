@@ -34,11 +34,34 @@ class HrMessage;
 class HrMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The HrMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The HrMessage FIT message's fractionalTimestamp field.
+     */
     quint16 fractionalTimestamp;
+
+    /*!
+     * The HrMessage FIT message's time256 field.
+     */
     quint8 time256;
+
+    /*!
+     * The HrMessage FIT message's filteredBpm field.
+     */
     quint8 filteredBpm;
+
+    /*!
+     * The HrMessage FIT message's eventTimestamp field.
+     */
     quint32 eventTimestamp;
+
+    /*!
+     * The HrMessage FIT message's eventTimestamp12 field.
+     */
     quint8 eventTimestamp12;
 
     HrMessagePrivate() = delete;

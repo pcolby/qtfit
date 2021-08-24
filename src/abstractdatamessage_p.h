@@ -31,7 +31,7 @@ class AbstractDataMessage;
 class AbstractDataMessagePrivate {
 
 public:
-    MesgNum globalMessageNumber;
+    MesgNum globalMessageNumber; ///< FIT Globla Message Number for this FIT Data Message.
 
     AbstractDataMessagePrivate() = delete;
     explicit AbstractDataMessagePrivate(AbstractDataMessage * const q);

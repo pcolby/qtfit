@@ -34,9 +34,32 @@ class MemoGlobMessage;
 class MemoGlobMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The MemoGlobMessage FIT message's partIndex field.
+     *
+     * Sequence number of memo blocks
+     */
     quint32 partIndex;
+
+    /*!
+     * The MemoGlobMessage FIT message's memo field.
+     *
+     * Block of utf8 bytes
+     */
     quint8 memo;
+
+    /*!
+     * The MemoGlobMessage FIT message's messageNumber field.
+     *
+     * Allows relating glob to another mesg  If used only required for first part of each memo_glob
+     */
     quint16 messageNumber;
+
+    /*!
+     * The MemoGlobMessage FIT message's messageIndex field.
+     *
+     * Index of external mesg
+     */
     MessageIndex messageIndex;
 
     MemoGlobMessagePrivate() = delete;

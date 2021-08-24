@@ -34,10 +34,33 @@ class CameraEventMessage;
 class CameraEventMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The CameraEventMessage FIT message's timestamp field.
+     *
+     * Whole second part of the timestamp.
+     */
     DateTime timestamp;
+
+    /*!
+     * The CameraEventMessage FIT message's timestampMs field.
+     *
+     * Millisecond part of the timestamp.
+     */
     quint16 timestampMs;
+
+    /*!
+     * The CameraEventMessage FIT message's cameraEventType field.
+     */
     CameraEventType cameraEventType;
+
+    /*!
+     * The CameraEventMessage FIT message's cameraFileUuid field.
+     */
     QString cameraFileUuid;
+
+    /*!
+     * The CameraEventMessage FIT message's cameraOrientation field.
+     */
     CameraOrientationType cameraOrientation;
 
     CameraEventMessagePrivate() = delete;

@@ -34,8 +34,23 @@ class VideoDescriptionMessage;
 class VideoDescriptionMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The VideoDescriptionMessage FIT message's messageIndex field.
+     *
+     * Long descriptions will be split into multiple parts
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The VideoDescriptionMessage FIT message's messageCount field.
+     *
+     * Total number of description parts
+     */
     quint16 messageCount;
+
+    /*!
+     * The VideoDescriptionMessage FIT message's text field.
+     */
     QString text;
 
     VideoDescriptionMessagePrivate() = delete;

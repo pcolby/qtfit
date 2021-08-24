@@ -34,18 +34,75 @@ class ConnectivityMessage;
 class ConnectivityMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ConnectivityMessage FIT message's bluetoothEnabled field.
+     *
+     * Use Bluetooth for connectivity features
+     */
     bool bluetoothEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's bluetoothLeEnabled field.
+     *
+     * Use Bluetooth Low Energy for connectivity features
+     */
     bool bluetoothLeEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's antEnabled field.
+     *
+     * Use ANT for connectivity features
+     */
     bool antEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's name field.
+     */
     QString name;
+
+    /*!
+     * The ConnectivityMessage FIT message's liveTrackingEnabled field.
+     */
     bool liveTrackingEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's weatherConditionsEnabled field.
+     */
     bool weatherConditionsEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's weatherAlertsEnabled field.
+     */
     bool weatherAlertsEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's autoActivityUploadEnabled field.
+     */
     bool autoActivityUploadEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's courseDownloadEnabled field.
+     */
     bool courseDownloadEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's workoutDownloadEnabled field.
+     */
     bool workoutDownloadEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's gpsEphemerisDownloadEnabled field.
+     */
     bool gpsEphemerisDownloadEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's incidentDetectionEnabled field.
+     */
     bool incidentDetectionEnabled;
+
+    /*!
+     * The ConnectivityMessage FIT message's grouptrackEnabled field.
+     */
     bool grouptrackEnabled;
 
     ConnectivityMessagePrivate() = delete;

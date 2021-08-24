@@ -34,13 +34,48 @@ class ActivityMessage;
 class ActivityMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ActivityMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The ActivityMessage FIT message's totalTimerTime field.
+     *
+     * Exclude pauses
+     */
     quint32 totalTimerTime;
+
+    /*!
+     * The ActivityMessage FIT message's numSessions field.
+     */
     quint16 numSessions;
+
+    /*!
+     * The ActivityMessage FIT message's type field.
+     */
     Activity type;
+
+    /*!
+     * The ActivityMessage FIT message's event field.
+     */
     Event event;
+
+    /*!
+     * The ActivityMessage FIT message's eventType field.
+     */
     EventType eventType;
+
+    /*!
+     * The ActivityMessage FIT message's localTimestamp field.
+     *
+     * timestamp epoch expressed in local time, used to convert activity timestamps to local time 
+     */
     LocalDateTime localTimestamp;
+
+    /*!
+     * The ActivityMessage FIT message's eventGroup field.
+     */
     quint8 eventGroup;
 
     ActivityMessagePrivate() = delete;

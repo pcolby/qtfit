@@ -34,10 +34,29 @@ class DeveloperDataIdMessage;
 class DeveloperDataIdMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The DeveloperDataIdMessage FIT message's developerId field.
+     */
     quint8 developerId;
+
+    /*!
+     * The DeveloperDataIdMessage FIT message's applicationId field.
+     */
     quint8 applicationId;
+
+    /*!
+     * The DeveloperDataIdMessage FIT message's manufacturerId field.
+     */
     Manufacturer manufacturerId;
+
+    /*!
+     * The DeveloperDataIdMessage FIT message's developerDataIndex field.
+     */
     quint8 developerDataIndex;
+
+    /*!
+     * The DeveloperDataIdMessage FIT message's applicationVersion field.
+     */
     quint32 applicationVersion;
 
     DeveloperDataIdMessagePrivate() = delete;

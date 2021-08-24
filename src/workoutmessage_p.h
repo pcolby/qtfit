@@ -34,12 +34,41 @@ class WorkoutMessage;
 class WorkoutMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The WorkoutMessage FIT message's sport field.
+     */
     Sport sport;
+
+    /*!
+     * The WorkoutMessage FIT message's capabilities field.
+     */
     WorkoutCapabilities capabilities;
+
+    /*!
+     * The WorkoutMessage FIT message's numValidSteps field.
+     *
+     * number of valid steps
+     */
     quint16 numValidSteps;
+
+    /*!
+     * The WorkoutMessage FIT message's wktName field.
+     */
     QString wktName;
+
+    /*!
+     * The WorkoutMessage FIT message's subSport field.
+     */
     SubSport subSport;
+
+    /*!
+     * The WorkoutMessage FIT message's poolLength field.
+     */
     quint16 poolLength;
+
+    /*!
+     * The WorkoutMessage FIT message's poolLengthUnit field.
+     */
     DisplayMeasure poolLengthUnit;
 
     WorkoutMessagePrivate() = delete;

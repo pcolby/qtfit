@@ -78,7 +78,9 @@ quint16 BarometerDataMessage::timestampMs() const
 /*!
  * Returns the BarometerDataMessage data message's \c sampleTimeOffset field's current value.
  *
- * Each time in the array describes the time at which the barometer sample with the corrosponding index was taken. The samples may span across seconds. Array size must match the number of samples in baro_cal
+ * Each time in the array describes the time at which the barometer sample with the
+ * corrosponding index was taken. The samples may span across seconds. Array size must match the
+ * number of samples in baro_cal
  *
  * \return the \c sampleTimeOffset field value.
  */
@@ -91,7 +93,8 @@ quint16 BarometerDataMessage::sampleTimeOffset() const
 /*!
  * Returns the BarometerDataMessage data message's \c baroPres field's current value.
  *
- * These are the raw ADC reading. The samples may span across seconds. A conversion will need to be done on this data once read.
+ * These are the raw ADC reading. The samples may span across seconds. A conversion will need to
+ * be done on this data once read.
  *
  * \return the \c baroPres field value.
  */

@@ -34,7 +34,14 @@ class FileCreatorMessage;
 class FileCreatorMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The FileCreatorMessage FIT message's softwareVersion field.
+     */
     quint16 softwareVersion;
+
+    /*!
+     * The FileCreatorMessage FIT message's hardwareVersion field.
+     */
     quint8 hardwareVersion;
 
     FileCreatorMessagePrivate() = delete;

@@ -34,9 +34,24 @@ class MetZoneMessage;
 class MetZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The MetZoneMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The MetZoneMessage FIT message's highBpm field.
+     */
     quint8 highBpm;
+
+    /*!
+     * The MetZoneMessage FIT message's calories field.
+     */
     quint16 calories;
+
+    /*!
+     * The MetZoneMessage FIT message's fatCalories field.
+     */
     quint8 fatCalories;
 
     MetZoneMessagePrivate() = delete;

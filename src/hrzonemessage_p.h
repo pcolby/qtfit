@@ -34,8 +34,19 @@ class HrZoneMessage;
 class HrZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The HrZoneMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The HrZoneMessage FIT message's highBpm field.
+     */
     quint8 highBpm;
+
+    /*!
+     * The HrZoneMessage FIT message's name field.
+     */
     QString name;
 
     HrZoneMessagePrivate() = delete;

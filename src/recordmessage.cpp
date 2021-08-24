@@ -829,7 +829,8 @@ quint16 RecordMessage::n2Load() const
 /*!
  * Returns the RecordMessage data message's \c grit field's current value.
  *
- * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time
+ * spent going over sharp turns or large grade slopes.
  *
  * \return the \c grit field value.
  */
@@ -842,7 +843,8 @@ float RecordMessage::grit() const
 /*!
  * Returns the RecordMessage data message's \c flow field's current value.
  *
- * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where
+ * deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c flow field value.
  */

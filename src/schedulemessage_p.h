@@ -34,12 +34,49 @@ class ScheduleMessage;
 class ScheduleMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ScheduleMessage FIT message's manufacturer field.
+     *
+     * Corresponds to file_id of scheduled workout / course.
+     */
     Manufacturer manufacturer;
+
+    /*!
+     * The ScheduleMessage FIT message's product field.
+     *
+     * Corresponds to file_id of scheduled workout / course.
+     */
     quint16 product;
+
+    /*!
+     * The ScheduleMessage FIT message's serialNumber field.
+     *
+     * Corresponds to file_id of scheduled workout / course.
+     */
     quint32z serialNumber;
+
+    /*!
+     * The ScheduleMessage FIT message's timeCreated field.
+     *
+     * Corresponds to file_id of scheduled workout / course.
+     */
     DateTime timeCreated;
+
+    /*!
+     * The ScheduleMessage FIT message's completed field.
+     *
+     * TRUE if this activity has been started
+     */
     bool completed;
+
+    /*!
+     * The ScheduleMessage FIT message's type field.
+     */
     Schedule type;
+
+    /*!
+     * The ScheduleMessage FIT message's scheduledTime field.
+     */
     LocalDateTime scheduledTime;
 
     ScheduleMessagePrivate() = delete;

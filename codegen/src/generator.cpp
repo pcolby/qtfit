@@ -149,7 +149,11 @@ int Generator::processMessages(Grantlee::Context &context)
                 qWarning() << "have both field number and ref field" << fieldNumber << refFieldName << refFieldValue;
                 return -1;
             }
-            field.insert(QSL("comment"), QString::fromUtf8(columns.at(13)));
+            const QString comment = QString::fromUtf8(columns.at(13));
+            if (!comment.isEmpty()) {
+                field.insert(QSL("comment"), comment);
+                field.insert(QSL("commentLines"), wrapLines(comment));
+            }
             const QByteArray products = columns.at(14);
             if (!products.isEmpty()) {
                 qWarning() << "column 14 (Products) is not empty" << products;
@@ -402,3 +406,13 @@ QString Generator::toCppType(const QString &fitType)
     return toCamelCase(fitType);
 }
 
+QStringList Generator::wrapLines(QString string, const int atColumn, const int minColumn) {
+    QStringList lines;
+    while (!string.isEmpty()) {
+        int pos = string.lastIndexOf(QLatin1Char(' '), atColumn-1);
+        if (pos < minColumn) pos = string.indexOf(QLatin1Char(' '), atColumn);
+        lines += string.mid(0, pos);
+        if (pos < 0) string.clear(); else string = string.mid(pos+1);
+    }
+    return lines;
+}

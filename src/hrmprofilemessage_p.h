@@ -34,10 +34,29 @@ class HrmProfileMessage;
 class HrmProfileMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The HrmProfileMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The HrmProfileMessage FIT message's enabled field.
+     */
     bool enabled;
+
+    /*!
+     * The HrmProfileMessage FIT message's hrmAntId field.
+     */
     quint16z hrmAntId;
+
+    /*!
+     * The HrmProfileMessage FIT message's logHrv field.
+     */
     bool logHrv;
+
+    /*!
+     * The HrmProfileMessage FIT message's hrmAntIdTransType field.
+     */
     quint8z hrmAntIdTransType;
 
     HrmProfileMessagePrivate() = delete;

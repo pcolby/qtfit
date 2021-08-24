@@ -34,11 +34,34 @@ class TrainingFileMessage;
 class TrainingFileMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The TrainingFileMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The TrainingFileMessage FIT message's type field.
+     */
     File type;
+
+    /*!
+     * The TrainingFileMessage FIT message's manufacturer field.
+     */
     Manufacturer manufacturer;
+
+    /*!
+     * The TrainingFileMessage FIT message's product field.
+     */
     quint16 product;
+
+    /*!
+     * The TrainingFileMessage FIT message's serialNumber field.
+     */
     quint32z serialNumber;
+
+    /*!
+     * The TrainingFileMessage FIT message's timeCreated field.
+     */
     DateTime timeCreated;
 
     TrainingFileMessagePrivate() = delete;

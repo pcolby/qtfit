@@ -34,11 +34,41 @@ class MonitoringInfoMessage;
 class MonitoringInfoMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The MonitoringInfoMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The MonitoringInfoMessage FIT message's localTimestamp field.
+     *
+     * Use to convert activity timestamps to local time if device does not support time zone and
+     * daylight savings time correction.
+     */
     LocalDateTime localTimestamp;
+
+    /*!
+     * The MonitoringInfoMessage FIT message's activityType field.
+     */
     ActivityType activityType;
+
+    /*!
+     * The MonitoringInfoMessage FIT message's cyclesToDistance field.
+     *
+     * Indexed by activity_type
+     */
     quint16 cyclesToDistance;
+
+    /*!
+     * The MonitoringInfoMessage FIT message's cyclesToCalories field.
+     *
+     * Indexed by activity_type
+     */
     quint16 cyclesToCalories;
+
+    /*!
+     * The MonitoringInfoMessage FIT message's restingMetabolicRate field.
+     */
     quint16 restingMetabolicRate;
 
     MonitoringInfoMessagePrivate() = delete;

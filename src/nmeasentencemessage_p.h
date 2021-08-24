@@ -34,8 +34,25 @@ class NmeaSentenceMessage;
 class NmeaSentenceMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The NmeaSentenceMessage FIT message's timestamp field.
+     *
+     * Timestamp message was output
+     */
     DateTime timestamp;
+
+    /*!
+     * The NmeaSentenceMessage FIT message's timestampMs field.
+     *
+     * Fractional part of timestamp, added to timestamp
+     */
     quint16 timestampMs;
+
+    /*!
+     * The NmeaSentenceMessage FIT message's sentence field.
+     *
+     * NMEA sentence
+     */
     QString sentence;
 
     NmeaSentenceMessagePrivate() = delete;

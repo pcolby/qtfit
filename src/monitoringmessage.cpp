@@ -65,7 +65,8 @@ DateTime MonitoringMessage::timestamp() const
 /*!
  * Returns the MonitoringMessage data message's \c deviceIndex field's current value.
  *
- * Associates this data to device_info message.  Not required for file with single device (sensor).
+ * Associates this data to device_info message.  Not required for file with single device
+ * (sensor).
  *
  * \return the \c deviceIndex field value.
  */
@@ -78,7 +79,8 @@ DeviceIndex MonitoringMessage::deviceIndex() const
 /*!
  * Returns the MonitoringMessage data message's \c calories field's current value.
  *
- * Accumulated total calories.  Maintained by MonitoringReader for each activity_type.  See SDK documentation
+ * Accumulated total calories.  Maintained by MonitoringReader for each activity_type.  See SDK
+ * documentation
  *
  * \return the \c calories field value.
  */
@@ -91,7 +93,8 @@ quint16 MonitoringMessage::calories() const
 /*!
  * Returns the MonitoringMessage data message's \c distance field's current value.
  *
- * Accumulated distance.  Maintained by MonitoringReader for each activity_type.  See SDK documentation.
+ * Accumulated distance.  Maintained by MonitoringReader for each activity_type.  See SDK
+ * documentation.
  *
  * \return the \c distance field value.
  */
@@ -104,7 +107,8 @@ quint32 MonitoringMessage::distance() const
 /*!
  * Returns the MonitoringMessage data message's \c cycles field's current value.
  *
- * Accumulated cycles.  Maintained by MonitoringReader for each activity_type.  See SDK documentation.
+ * Accumulated cycles.  Maintained by MonitoringReader for each activity_type.  See SDK
+ * documentation.
  *
  * \return the \c cycles field value.
  */

@@ -34,8 +34,21 @@ class VideoMessage;
 class VideoMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The VideoMessage FIT message's url field.
+     */
     QString url;
+
+    /*!
+     * The VideoMessage FIT message's hostingProvider field.
+     */
     QString hostingProvider;
+
+    /*!
+     * The VideoMessage FIT message's duration field.
+     *
+     * Playback time of video
+     */
     quint32 duration;
 
     VideoMessagePrivate() = delete;

@@ -34,16 +34,59 @@ class ExdDataConceptConfigurationMessage;
 class ExdDataConceptConfigurationMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's screenIndex field.
+     */
     quint8 screenIndex;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's conceptField field.
+     */
     quint8 conceptField;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's fieldId field.
+     */
     quint8 fieldId;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's conceptIndex field.
+     */
     quint8 conceptIndex;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's dataPage field.
+     */
     quint8 dataPage;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's conceptKey field.
+     */
     quint8 conceptKey;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's scaling field.
+     */
     quint8 scaling;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's dataUnits field.
+     */
     ExdDataUnits dataUnits;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's qualifier field.
+     */
     ExdQualifiers qualifier;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's descriptor field.
+     */
     ExdDescriptors descriptor;
+
+    /*!
+     * The ExdDataConceptConfigurationMessage FIT message's isSigned field.
+     */
     bool isSigned;
 
     ExdDataConceptConfigurationMessagePrivate() = delete;

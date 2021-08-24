@@ -48,6 +48,7 @@ protected:
     static QString safeEnumLabel(const QString &string);
     static QString toCamelCase(const QString &string, const bool camelCase=false);
     static QString toCppType(const QString &fitType);
+    static QStringList wrapLines(QString string, const int atColumn=94, const int minColumn=20);
 
 private:
     const QDir outputDir;

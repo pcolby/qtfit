@@ -34,10 +34,29 @@ class AntChannelIdMessage;
 class AntChannelIdMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The AntChannelIdMessage FIT message's channelNumber field.
+     */
     quint8 channelNumber;
+
+    /*!
+     * The AntChannelIdMessage FIT message's deviceType field.
+     */
     quint8z deviceType;
+
+    /*!
+     * The AntChannelIdMessage FIT message's deviceNumber field.
+     */
     quint16z deviceNumber;
+
+    /*!
+     * The AntChannelIdMessage FIT message's transmissionType field.
+     */
     quint8z transmissionType;
+
+    /*!
+     * The AntChannelIdMessage FIT message's deviceIndex field.
+     */
     DeviceIndex deviceIndex;
 
     AntChannelIdMessagePrivate() = delete;

@@ -34,7 +34,14 @@ class OhrSettingsMessage;
 class OhrSettingsMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The OhrSettingsMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The OhrSettingsMessage FIT message's enabled field.
+     */
     Switch enabled;
 
     OhrSettingsMessagePrivate() = delete;

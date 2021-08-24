@@ -133,7 +133,8 @@ quint16 GpsMetadataMessage::heading() const
 /*!
  * Returns the GpsMetadataMessage data message's \c utcTimestamp field's current value.
  *
- * Used to correlate UTC to system time if the timestamp of the message is in system time.  This UTC time is derived from the GPS data.
+ * Used to correlate UTC to system time if the timestamp of the message is in system time.  This
+ * UTC time is derived from the GPS data.
  *
  * \return the \c utcTimestamp field value.
  */

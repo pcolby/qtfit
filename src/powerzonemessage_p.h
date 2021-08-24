@@ -34,8 +34,19 @@ class PowerZoneMessage;
 class PowerZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The PowerZoneMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The PowerZoneMessage FIT message's highValue field.
+     */
     quint16 highValue;
+
+    /*!
+     * The PowerZoneMessage FIT message's name field.
+     */
     QString name;
 
     PowerZoneMessagePrivate() = delete;

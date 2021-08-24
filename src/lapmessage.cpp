@@ -269,7 +269,8 @@ quint8 LapMessage::maxHeartRate() const
 /*!
  * Returns the LapMessage data message's \c avgCadence field's current value.
  *
- * total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles / total_elapsed_time
+ * total_cycles / total_timer_time if non_zero_avg_cadence otherwise total_cycles /
+ * total_elapsed_time
  *
  * \return the \c avgCadence field value.
  */
@@ -293,7 +294,8 @@ quint8 LapMessage::maxCadence() const
 /*!
  * Returns the LapMessage data message's \c avgPower field's current value.
  *
- * total_power / total_timer_time if non_zero_avg_power otherwise total_power / total_elapsed_time
+ * total_power / total_timer_time if non_zero_avg_power otherwise total_power /
+ * total_elapsed_time
  *
  * \return the \c avgPower field value.
  */
@@ -1286,7 +1288,8 @@ quint16 LapMessage::avgVam() const
 /*!
  * Returns the LapMessage data message's \c totalGrit field's current value.
  *
- * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time
+ * spent going over sharp turns or large grade slopes.
  *
  * \return the \c totalGrit field value.
  */
@@ -1299,7 +1302,8 @@ float LapMessage::totalGrit() const
 /*!
  * Returns the LapMessage data message's \c totalFlow field's current value.
  *
- * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where
+ * deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c totalFlow field value.
  */
@@ -1323,7 +1327,8 @@ quint16 LapMessage::jumpCount() const
 /*!
  * Returns the LapMessage data message's \c avgGrit field's current value.
  *
- * The grit score estimates how challenging a route could be for a cyclist in terms of time spent going over sharp turns or large grade slopes.
+ * The grit score estimates how challenging a route could be for a cyclist in terms of time
+ * spent going over sharp turns or large grade slopes.
  *
  * \return the \c avgGrit field value.
  */
@@ -1336,7 +1341,8 @@ float LapMessage::avgGrit() const
 /*!
  * Returns the LapMessage data message's \c avgFlow field's current value.
  *
- * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where deacceleration is unnecessary such as smooth turns or small grade angle intervals.
+ * The flow score estimates how long distance wise a cyclist deaccelerates over intervals where
+ * deacceleration is unnecessary such as smooth turns or small grade angle intervals.
  *
  * \return the \c avgFlow field value.
  */

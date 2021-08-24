@@ -34,12 +34,39 @@ class WorkoutSessionMessage;
 class WorkoutSessionMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The WorkoutSessionMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The WorkoutSessionMessage FIT message's sport field.
+     */
     Sport sport;
+
+    /*!
+     * The WorkoutSessionMessage FIT message's subSport field.
+     */
     SubSport subSport;
+
+    /*!
+     * The WorkoutSessionMessage FIT message's numValidSteps field.
+     */
     quint16 numValidSteps;
+
+    /*!
+     * The WorkoutSessionMessage FIT message's firstStepIndex field.
+     */
     quint16 firstStepIndex;
+
+    /*!
+     * The WorkoutSessionMessage FIT message's poolLength field.
+     */
     quint16 poolLength;
+
+    /*!
+     * The WorkoutSessionMessage FIT message's poolLengthUnit field.
+     */
     DisplayMeasure poolLengthUnit;
 
     WorkoutSessionMessagePrivate() = delete;

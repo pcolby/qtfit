@@ -34,15 +34,56 @@ class JumpMessage;
 class JumpMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The JumpMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The JumpMessage FIT message's distance field.
+     */
     float distance;
+
+    /*!
+     * The JumpMessage FIT message's height field.
+     */
     float height;
+
+    /*!
+     * The JumpMessage FIT message's rotations field.
+     */
     quint8 rotations;
+
+    /*!
+     * The JumpMessage FIT message's hangTime field.
+     */
     float hangTime;
+
+    /*!
+     * The JumpMessage FIT message's score field.
+     *
+     * A score for a jump calculated based on hang time, rotations, and distance.
+     */
     float score;
+
+    /*!
+     * The JumpMessage FIT message's positionLat field.
+     */
     qint32 positionLat;
+
+    /*!
+     * The JumpMessage FIT message's positionLong field.
+     */
     qint32 positionLong;
+
+    /*!
+     * The JumpMessage FIT message's speed field.
+     */
     quint16 speed;
+
+    /*!
+     * The JumpMessage FIT message's enhancedSpeed field.
+     */
     quint32 enhancedSpeed;
 
     JumpMessagePrivate() = delete;

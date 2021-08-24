@@ -34,8 +34,23 @@ class VideoTitleMessage;
 class VideoTitleMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The VideoTitleMessage FIT message's messageIndex field.
+     *
+     * Long titles will be split into multiple parts
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The VideoTitleMessage FIT message's messageCount field.
+     *
+     * Total number of title parts
+     */
     quint16 messageCount;
+
+    /*!
+     * The VideoTitleMessage FIT message's text field.
+     */
     QString text;
 
     VideoTitleMessagePrivate() = delete;

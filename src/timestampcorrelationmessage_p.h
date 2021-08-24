@@ -34,12 +34,53 @@ class TimestampCorrelationMessage;
 class TimestampCorrelationMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The TimestampCorrelationMessage FIT message's timestamp field.
+     *
+     * Whole second part of UTC timestamp at the time the system timestamp was recorded.
+     */
     DateTime timestamp;
+
+    /*!
+     * The TimestampCorrelationMessage FIT message's fractionalTimestamp field.
+     *
+     * Fractional part of the UTC timestamp at the time the system timestamp was recorded.
+     */
     quint16 fractionalTimestamp;
+
+    /*!
+     * The TimestampCorrelationMessage FIT message's systemTimestamp field.
+     *
+     * Whole second part of the system timestamp
+     */
     DateTime systemTimestamp;
+
+    /*!
+     * The TimestampCorrelationMessage FIT message's fractionalSystemTimestamp field.
+     *
+     * Fractional part of the system timestamp
+     */
     quint16 fractionalSystemTimestamp;
+
+    /*!
+     * The TimestampCorrelationMessage FIT message's localTimestamp field.
+     *
+     * timestamp epoch expressed in local time used to convert timestamps to local time
+     */
     LocalDateTime localTimestamp;
+
+    /*!
+     * The TimestampCorrelationMessage FIT message's timestampMs field.
+     *
+     * Millisecond part of the UTC timestamp at the time the system timestamp was recorded.
+     */
     quint16 timestampMs;
+
+    /*!
+     * The TimestampCorrelationMessage FIT message's systemTimestampMs field.
+     *
+     * Millisecond part of the system timestamp
+     */
     quint16 systemTimestampMs;
 
     TimestampCorrelationMessagePrivate() = delete;

@@ -34,8 +34,25 @@ class VideoFrameMessage;
 class VideoFrameMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The VideoFrameMessage FIT message's timestamp field.
+     *
+     * Whole second part of the timestamp
+     */
     DateTime timestamp;
+
+    /*!
+     * The VideoFrameMessage FIT message's timestampMs field.
+     *
+     * Millisecond part of the timestamp.
+     */
     quint16 timestampMs;
+
+    /*!
+     * The VideoFrameMessage FIT message's frameNumber field.
+     *
+     * Number of the frame that the timestamp and timestamp_ms correlate to
+     */
     quint32 frameNumber;
 
     VideoFrameMessagePrivate() = delete;

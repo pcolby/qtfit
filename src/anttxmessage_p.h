@@ -34,11 +34,34 @@ class AntTxMessage;
 class AntTxMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The AntTxMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The AntTxMessage FIT message's fractionalTimestamp field.
+     */
     quint16 fractionalTimestamp;
+
+    /*!
+     * The AntTxMessage FIT message's mesgId field.
+     */
     quint8 mesgId;
+
+    /*!
+     * The AntTxMessage FIT message's mesgData field.
+     */
     quint8 mesgData;
+
+    /*!
+     * The AntTxMessage FIT message's channelNumber field.
+     */
     quint8 channelNumber;
+
+    /*!
+     * The AntTxMessage FIT message's data field.
+     */
     quint8 data;
 
     AntTxMessagePrivate() = delete;

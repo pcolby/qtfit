@@ -78,7 +78,10 @@ quint16 AccelerometerDataMessage::timestampMs() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c sampleTimeOffset field's current value.
  *
- * Each time in the array describes the time at which the accelerometer sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in accel_x and accel_y and accel_z
+ * Each time in the array describes the time at which the accelerometer sample with the
+ * corrosponding index was taken. Limited to 30 samples in each message. The samples may span
+ * across seconds. Array size must match the number of samples in accel_x and accel_y and
+ * accel_z
  *
  * \return the \c sampleTimeOffset field value.
  */
@@ -91,7 +94,8 @@ quint16 AccelerometerDataMessage::sampleTimeOffset() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c accelX field's current value.
  *
- * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+ * may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c accelX field value.
  */
@@ -104,7 +108,8 @@ quint16 AccelerometerDataMessage::accelX() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c accelY field's current value.
  *
- * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+ * may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c accelY field value.
  */
@@ -117,7 +122,8 @@ quint16 AccelerometerDataMessage::accelY() const
 /*!
  * Returns the AccelerometerDataMessage data message's \c accelZ field's current value.
  *
- * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.
+ * These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples
+ * may span across seconds. A conversion will need to be done on this data once read.
  *
  * \return the \c accelZ field value.
  */

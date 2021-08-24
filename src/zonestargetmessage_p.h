@@ -34,10 +34,29 @@ class ZonesTargetMessage;
 class ZonesTargetMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ZonesTargetMessage FIT message's maxHeartRate field.
+     */
     quint8 maxHeartRate;
+
+    /*!
+     * The ZonesTargetMessage FIT message's thresholdHeartRate field.
+     */
     quint8 thresholdHeartRate;
+
+    /*!
+     * The ZonesTargetMessage FIT message's functionalThresholdPower field.
+     */
     quint16 functionalThresholdPower;
+
+    /*!
+     * The ZonesTargetMessage FIT message's hrCalcType field.
+     */
     HrZoneCalc hrCalcType;
+
+    /*!
+     * The ZonesTargetMessage FIT message's pwrCalcType field.
+     */
     PwrZoneCalc pwrCalcType;
 
     ZonesTargetMessagePrivate() = delete;

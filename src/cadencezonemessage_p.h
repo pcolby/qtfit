@@ -34,8 +34,19 @@ class CadenceZoneMessage;
 class CadenceZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The CadenceZoneMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The CadenceZoneMessage FIT message's highValue field.
+     */
     quint8 highValue;
+
+    /*!
+     * The CadenceZoneMessage FIT message's name field.
+     */
     QString name;
 
     CadenceZoneMessagePrivate() = delete;

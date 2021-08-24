@@ -34,8 +34,19 @@ class SpeedZoneMessage;
 class SpeedZoneMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The SpeedZoneMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The SpeedZoneMessage FIT message's highValue field.
+     */
     quint16 highValue;
+
+    /*!
+     * The SpeedZoneMessage FIT message's name field.
+     */
     QString name;
 
     SpeedZoneMessagePrivate() = delete;

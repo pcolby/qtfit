@@ -34,14 +34,66 @@ class SegmentFileMessage;
 class SegmentFileMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The SegmentFileMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The SegmentFileMessage FIT message's fileUuid field.
+     *
+     * UUID of the segment file
+     */
     QString fileUuid;
+
+    /*!
+     * The SegmentFileMessage FIT message's enabled field.
+     *
+     * Enabled state of the segment file
+     */
     bool enabled;
+
+    /*!
+     * The SegmentFileMessage FIT message's userProfilePrimaryKey field.
+     *
+     * Primary key of the user that created the segment file
+     */
     quint32 userProfilePrimaryKey;
+
+    /*!
+     * The SegmentFileMessage FIT message's leaderType field.
+     *
+     * Leader type of each leader in the segment file
+     */
     SegmentLeaderboardType leaderType;
+
+    /*!
+     * The SegmentFileMessage FIT message's leaderGroupPrimaryKey field.
+     *
+     * Group primary key of each leader in the segment file
+     */
     quint32 leaderGroupPrimaryKey;
+
+    /*!
+     * The SegmentFileMessage FIT message's leaderActivityId field.
+     *
+     * Activity ID of each leader in the segment file
+     */
     quint32 leaderActivityId;
+
+    /*!
+     * The SegmentFileMessage FIT message's leaderActivityIdString field.
+     *
+     * String version of the activity ID of each leader in the segment file. 21 characters long for
+     * each ID, express in decimal
+     */
     QString leaderActivityIdString;
+
+    /*!
+     * The SegmentFileMessage FIT message's defaultRaceLeader field.
+     *
+     * Index for the Leader Board entry selected as the default race participant
+     */
     quint8 defaultRaceLeader;
 
     SegmentFileMessagePrivate() = delete;

@@ -63,7 +63,8 @@ DateTime MonitoringInfoMessage::timestamp() const
 /*!
  * Returns the MonitoringInfoMessage data message's \c localTimestamp field's current value.
  *
- * Use to convert activity timestamps to local time if device does not support time zone and daylight savings time correction.
+ * Use to convert activity timestamps to local time if device does not support time zone and
+ * daylight savings time correction.
  *
  * \return the \c localTimestamp field value.
  */

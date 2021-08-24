@@ -34,18 +34,69 @@ class GoalMessage;
 class GoalMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The GoalMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The GoalMessage FIT message's sport field.
+     */
     Sport sport;
+
+    /*!
+     * The GoalMessage FIT message's subSport field.
+     */
     SubSport subSport;
+
+    /*!
+     * The GoalMessage FIT message's startDate field.
+     */
     DateTime startDate;
+
+    /*!
+     * The GoalMessage FIT message's endDate field.
+     */
     DateTime endDate;
+
+    /*!
+     * The GoalMessage FIT message's type field.
+     */
     Goal type;
+
+    /*!
+     * The GoalMessage FIT message's value field.
+     */
     quint32 value;
+
+    /*!
+     * The GoalMessage FIT message's repeat field.
+     */
     bool repeat;
+
+    /*!
+     * The GoalMessage FIT message's targetValue field.
+     */
     quint32 targetValue;
+
+    /*!
+     * The GoalMessage FIT message's recurrence field.
+     */
     GoalRecurrence recurrence;
+
+    /*!
+     * The GoalMessage FIT message's recurrenceValue field.
+     */
     quint16 recurrenceValue;
+
+    /*!
+     * The GoalMessage FIT message's enabled field.
+     */
     bool enabled;
+
+    /*!
+     * The GoalMessage FIT message's source field.
+     */
     GoalSource source;
 
     GoalMessagePrivate() = delete;

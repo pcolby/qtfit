@@ -34,14 +34,71 @@ class ObdiiDataMessage;
 class ObdiiDataMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ObdiiDataMessage FIT message's timestamp field.
+     *
+     * Timestamp message was output
+     */
     DateTime timestamp;
+
+    /*!
+     * The ObdiiDataMessage FIT message's timestampMs field.
+     *
+     * Fractional part of timestamp, added to timestamp
+     */
     quint16 timestampMs;
+
+    /*!
+     * The ObdiiDataMessage FIT message's timeOffset field.
+     *
+     * Offset of PID reading [i] from start_timestamp+start_timestamp_ms. Readings may span accross
+     * seconds.
+     */
     quint16 timeOffset;
+
+    /*!
+     * The ObdiiDataMessage FIT message's pid field.
+     *
+     * Parameter ID
+     */
     quint8 pid;
+
+    /*!
+     * The ObdiiDataMessage FIT message's rawData field.
+     *
+     * Raw parameter data
+     */
     quint8 rawData;
+
+    /*!
+     * The ObdiiDataMessage FIT message's pidDataSize field.
+     *
+     * Optional, data size of PID[i].  If not specified refer to SAE J1979.
+     */
     quint8 pidDataSize;
+
+    /*!
+     * The ObdiiDataMessage FIT message's systemTime field.
+     *
+     * System time associated with sample expressed in ms, can be used instead of time_offset. 
+     * There will be a system_time value for each raw_data element.  For multibyte pids the
+     * system_time is repeated.
+     */
     quint32 systemTime;
+
+    /*!
+     * The ObdiiDataMessage FIT message's startTimestamp field.
+     *
+     * Timestamp of first sample recorded in the message.  Used with time_offset to generate time of
+     * each sample
+     */
     DateTime startTimestamp;
+
+    /*!
+     * The ObdiiDataMessage FIT message's startTimestampMs field.
+     *
+     * Fractional part of start_timestamp
+     */
     quint16 startTimestampMs;
 
     ObdiiDataMessagePrivate() = delete;

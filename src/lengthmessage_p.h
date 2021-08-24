@@ -34,23 +34,98 @@ class LengthMessage;
 class LengthMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The LengthMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The LengthMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The LengthMessage FIT message's event field.
+     */
     Event event;
+
+    /*!
+     * The LengthMessage FIT message's eventType field.
+     */
     EventType eventType;
+
+    /*!
+     * The LengthMessage FIT message's startTime field.
+     */
     DateTime startTime;
+
+    /*!
+     * The LengthMessage FIT message's totalElapsedTime field.
+     */
     quint32 totalElapsedTime;
+
+    /*!
+     * The LengthMessage FIT message's totalTimerTime field.
+     */
     quint32 totalTimerTime;
+
+    /*!
+     * The LengthMessage FIT message's totalStrokes field.
+     */
     quint16 totalStrokes;
+
+    /*!
+     * The LengthMessage FIT message's avgSpeed field.
+     */
     quint16 avgSpeed;
+
+    /*!
+     * The LengthMessage FIT message's swimStroke field.
+     */
     SwimStroke swimStroke;
+
+    /*!
+     * The LengthMessage FIT message's avgSwimmingCadence field.
+     */
     quint8 avgSwimmingCadence;
+
+    /*!
+     * The LengthMessage FIT message's eventGroup field.
+     */
     quint8 eventGroup;
+
+    /*!
+     * The LengthMessage FIT message's totalCalories field.
+     */
     quint16 totalCalories;
+
+    /*!
+     * The LengthMessage FIT message's lengthType field.
+     */
     LengthType lengthType;
+
+    /*!
+     * The LengthMessage FIT message's playerScore field.
+     */
     quint16 playerScore;
+
+    /*!
+     * The LengthMessage FIT message's opponentScore field.
+     */
     quint16 opponentScore;
+
+    /*!
+     * The LengthMessage FIT message's strokeCount field.
+     *
+     * stroke_type enum used as the index
+     */
     quint16 strokeCount;
+
+    /*!
+     * The LengthMessage FIT message's zoneCount field.
+     *
+     * zone number used as the index
+     */
     quint16 zoneCount;
 
     LengthMessagePrivate() = delete;

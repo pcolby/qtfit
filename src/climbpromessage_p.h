@@ -34,12 +34,39 @@ class ClimbProMessage;
 class ClimbProMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ClimbProMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The ClimbProMessage FIT message's positionLat field.
+     */
     qint32 positionLat;
+
+    /*!
+     * The ClimbProMessage FIT message's positionLong field.
+     */
     qint32 positionLong;
+
+    /*!
+     * The ClimbProMessage FIT message's climbProEvent field.
+     */
     ClimbProEvent climbProEvent;
+
+    /*!
+     * The ClimbProMessage FIT message's climbNumber field.
+     */
     quint16 climbNumber;
+
+    /*!
+     * The ClimbProMessage FIT message's climbCategory field.
+     */
     quint8 climbCategory;
+
+    /*!
+     * The ClimbProMessage FIT message's currentDist field.
+     */
     float currentDist;
 
     ClimbProMessagePrivate() = delete;

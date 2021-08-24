@@ -34,12 +34,43 @@ class VideoClipMessage;
 class VideoClipMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The VideoClipMessage FIT message's clipNumber field.
+     */
     quint16 clipNumber;
+
+    /*!
+     * The VideoClipMessage FIT message's startTimestamp field.
+     */
     DateTime startTimestamp;
+
+    /*!
+     * The VideoClipMessage FIT message's startTimestampMs field.
+     */
     quint16 startTimestampMs;
+
+    /*!
+     * The VideoClipMessage FIT message's endTimestamp field.
+     */
     DateTime endTimestamp;
+
+    /*!
+     * The VideoClipMessage FIT message's endTimestampMs field.
+     */
     quint16 endTimestampMs;
+
+    /*!
+     * The VideoClipMessage FIT message's clipStart field.
+     *
+     * Start of clip in video time
+     */
     quint32 clipStart;
+
+    /*!
+     * The VideoClipMessage FIT message's clipEnd field.
+     *
+     * End of clip in video time
+     */
     quint32 clipEnd;
 
     VideoClipMessagePrivate() = delete;

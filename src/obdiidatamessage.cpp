@@ -78,7 +78,8 @@ quint16 ObdiiDataMessage::timestampMs() const
 /*!
  * Returns the ObdiiDataMessage data message's \c timeOffset field's current value.
  *
- * Offset of PID reading [i] from start_timestamp+start_timestamp_ms. Readings may span accross seconds.
+ * Offset of PID reading [i] from start_timestamp+start_timestamp_ms. Readings may span accross
+ * seconds.
  *
  * \return the \c timeOffset field value.
  */
@@ -130,7 +131,9 @@ quint8 ObdiiDataMessage::pidDataSize() const
 /*!
  * Returns the ObdiiDataMessage data message's \c systemTime field's current value.
  *
- * System time associated with sample expressed in ms, can be used instead of time_offset.  There will be a system_time value for each raw_data element.  For multibyte pids the system_time is repeated.
+ * System time associated with sample expressed in ms, can be used instead of time_offset. 
+ * There will be a system_time value for each raw_data element.  For multibyte pids the
+ * system_time is repeated.
  *
  * \return the \c systemTime field value.
  */
@@ -143,7 +146,8 @@ quint32 ObdiiDataMessage::systemTime() const
 /*!
  * Returns the ObdiiDataMessage data message's \c startTimestamp field's current value.
  *
- * Timestamp of first sample recorded in the message.  Used with time_offset to generate time of each sample
+ * Timestamp of first sample recorded in the message.  Used with time_offset to generate time of
+ * each sample
  *
  * \return the \c startTimestamp field value.
  */

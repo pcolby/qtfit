@@ -34,10 +34,29 @@ class MesgCapabilitiesMessage;
 class MesgCapabilitiesMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The MesgCapabilitiesMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The MesgCapabilitiesMessage FIT message's file field.
+     */
     File file;
+
+    /*!
+     * The MesgCapabilitiesMessage FIT message's mesgNum field.
+     */
     MesgNum mesgNum;
+
+    /*!
+     * The MesgCapabilitiesMessage FIT message's countType field.
+     */
     MesgCount countType;
+
+    /*!
+     * The MesgCapabilitiesMessage FIT message's count field.
+     */
     quint16 count;
 
     MesgCapabilitiesMessagePrivate() = delete;

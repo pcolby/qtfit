@@ -34,14 +34,67 @@ class SegmentIdMessage;
 class SegmentIdMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The SegmentIdMessage FIT message's name field.
+     *
+     * Friendly name assigned to segment
+     */
     QString name;
+
+    /*!
+     * The SegmentIdMessage FIT message's uuid field.
+     *
+     * UUID of the segment
+     */
     QString uuid;
+
+    /*!
+     * The SegmentIdMessage FIT message's sport field.
+     *
+     * Sport associated with the segment
+     */
     Sport sport;
+
+    /*!
+     * The SegmentIdMessage FIT message's enabled field.
+     *
+     * Segment enabled for evaluation
+     */
     bool enabled;
+
+    /*!
+     * The SegmentIdMessage FIT message's userProfilePrimaryKey field.
+     *
+     * Primary key of the user that created the segment
+     */
     quint32 userProfilePrimaryKey;
+
+    /*!
+     * The SegmentIdMessage FIT message's deviceId field.
+     *
+     * ID of the device that created the segment
+     */
     quint32 deviceId;
+
+    /*!
+     * The SegmentIdMessage FIT message's defaultRaceLeader field.
+     *
+     * Index for the Leader Board entry selected as the default race participant
+     */
     quint8 defaultRaceLeader;
+
+    /*!
+     * The SegmentIdMessage FIT message's deleteStatus field.
+     *
+     * Indicates if any segments should be deleted
+     */
     SegmentDeleteStatus deleteStatus;
+
+    /*!
+     * The SegmentIdMessage FIT message's selectionType field.
+     *
+     * Indicates how the segment was selected to be sent to the device
+     */
     SegmentSelectionType selectionType;
 
     SegmentIdMessagePrivate() = delete;

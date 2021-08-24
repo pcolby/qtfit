@@ -34,6 +34,11 @@ class HrvMessage;
 class HrvMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The HrvMessage FIT message's time field.
+     *
+     * Time between beats
+     */
     quint16 time;
 
     HrvMessagePrivate() = delete;

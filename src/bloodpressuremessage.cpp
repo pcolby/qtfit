@@ -162,7 +162,8 @@ BpStatus BloodPressureMessage::status() const
 /*!
  * Returns the BloodPressureMessage data message's \c userProfileIndex field's current value.
  *
- * Associates this blood pressure message to a user.  This corresponds to the index of the user profile message in the blood pressure file.
+ * Associates this blood pressure message to a user.  This corresponds to the index of the user
+ * profile message in the blood pressure file.
  *
  * \return the \c userProfileIndex field value.
  */

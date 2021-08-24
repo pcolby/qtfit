@@ -34,11 +34,34 @@ class FileCapabilitiesMessage;
 class FileCapabilitiesMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The FileCapabilitiesMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The FileCapabilitiesMessage FIT message's type field.
+     */
     File type;
+
+    /*!
+     * The FileCapabilitiesMessage FIT message's flags field.
+     */
     FileFlags flags;
+
+    /*!
+     * The FileCapabilitiesMessage FIT message's directory field.
+     */
     QString directory;
+
+    /*!
+     * The FileCapabilitiesMessage FIT message's maxCount field.
+     */
     quint16 maxCount;
+
+    /*!
+     * The FileCapabilitiesMessage FIT message's maxSize field.
+     */
     quint32 maxSize;
 
     FileCapabilitiesMessagePrivate() = delete;

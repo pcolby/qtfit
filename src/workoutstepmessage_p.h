@@ -34,20 +34,79 @@ class WorkoutStepMessage;
 class WorkoutStepMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The WorkoutStepMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The WorkoutStepMessage FIT message's wktStepName field.
+     */
     QString wktStepName;
+
+    /*!
+     * The WorkoutStepMessage FIT message's durationType field.
+     */
     WktStepDuration durationType;
+
+    /*!
+     * The WorkoutStepMessage FIT message's durationValue field.
+     */
     quint32 durationValue;
+
+    /*!
+     * The WorkoutStepMessage FIT message's targetType field.
+     */
     WktStepTarget targetType;
+
+    /*!
+     * The WorkoutStepMessage FIT message's targetValue field.
+     */
     quint32 targetValue;
+
+    /*!
+     * The WorkoutStepMessage FIT message's customTargetValueLow field.
+     */
     quint32 customTargetValueLow;
+
+    /*!
+     * The WorkoutStepMessage FIT message's customTargetValueHigh field.
+     */
     quint32 customTargetValueHigh;
+
+    /*!
+     * The WorkoutStepMessage FIT message's intensity field.
+     */
     Intensity intensity;
+
+    /*!
+     * The WorkoutStepMessage FIT message's notes field.
+     */
     QString notes;
+
+    /*!
+     * The WorkoutStepMessage FIT message's equipment field.
+     */
     WorkoutEquipment equipment;
+
+    /*!
+     * The WorkoutStepMessage FIT message's exerciseCategory field.
+     */
     ExerciseCategory exerciseCategory;
+
+    /*!
+     * The WorkoutStepMessage FIT message's exerciseName field.
+     */
     quint16 exerciseName;
+
+    /*!
+     * The WorkoutStepMessage FIT message's exerciseWeight field.
+     */
     quint16 exerciseWeight;
+
+    /*!
+     * The WorkoutStepMessage FIT message's weightDisplayUnit field.
+     */
     FitBaseUnit weightDisplayUnit;
 
     WorkoutStepMessagePrivate() = delete;

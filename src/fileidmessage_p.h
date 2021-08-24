@@ -34,12 +34,45 @@ class FileIdMessage;
 class FileIdMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The FileIdMessage FIT message's type field.
+     */
     File type;
+
+    /*!
+     * The FileIdMessage FIT message's manufacturer field.
+     */
     Manufacturer manufacturer;
+
+    /*!
+     * The FileIdMessage FIT message's product field.
+     */
     quint16 product;
+
+    /*!
+     * The FileIdMessage FIT message's serialNumber field.
+     */
     quint32z serialNumber;
+
+    /*!
+     * The FileIdMessage FIT message's timeCreated field.
+     *
+     * Only set for files that are can be created/erased.
+     */
     DateTime timeCreated;
+
+    /*!
+     * The FileIdMessage FIT message's number field.
+     *
+     * Only set for files that are not created/erased.
+     */
     quint16 number;
+
+    /*!
+     * The FileIdMessage FIT message's productName field.
+     *
+     * Optional free form string to indicate the devices name or model
+     */
     QString productName;
 
     FileIdMessagePrivate() = delete;

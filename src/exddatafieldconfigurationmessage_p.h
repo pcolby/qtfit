@@ -34,11 +34,34 @@ class ExdDataFieldConfigurationMessage;
 class ExdDataFieldConfigurationMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ExdDataFieldConfigurationMessage FIT message's screenIndex field.
+     */
     quint8 screenIndex;
+
+    /*!
+     * The ExdDataFieldConfigurationMessage FIT message's conceptField field.
+     */
     quint8 conceptField;
+
+    /*!
+     * The ExdDataFieldConfigurationMessage FIT message's fieldId field.
+     */
     quint8 fieldId;
+
+    /*!
+     * The ExdDataFieldConfigurationMessage FIT message's conceptCount field.
+     */
     quint8 conceptCount;
+
+    /*!
+     * The ExdDataFieldConfigurationMessage FIT message's displayType field.
+     */
     ExdDisplayType displayType;
+
+    /*!
+     * The ExdDataFieldConfigurationMessage FIT message's title field.
+     */
     QString title;
 
     ExdDataFieldConfigurationMessagePrivate() = delete;

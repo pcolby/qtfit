@@ -34,8 +34,19 @@ class WatchfaceSettingsMessage;
 class WatchfaceSettingsMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The WatchfaceSettingsMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The WatchfaceSettingsMessage FIT message's mode field.
+     */
     WatchfaceMode mode;
+
+    /*!
+     * The WatchfaceSettingsMessage FIT message's layout field.
+     */
     quint8 layout;
 
     WatchfaceSettingsMessagePrivate() = delete;

@@ -34,9 +34,24 @@ class ExerciseTitleMessage;
 class ExerciseTitleMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The ExerciseTitleMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The ExerciseTitleMessage FIT message's exerciseCategory field.
+     */
     ExerciseCategory exerciseCategory;
+
+    /*!
+     * The ExerciseTitleMessage FIT message's exerciseName field.
+     */
     quint16 exerciseName;
+
+    /*!
+     * The ExerciseTitleMessage FIT message's wktStepName field.
+     */
     QString wktStepName;
 
     ExerciseTitleMessagePrivate() = delete;

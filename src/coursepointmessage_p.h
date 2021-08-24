@@ -34,13 +34,44 @@ class CoursePointMessage;
 class CoursePointMessagePrivate : public AbstractDataMessagePrivate {
 
 public:
+    /*!
+     * The CoursePointMessage FIT message's messageIndex field.
+     */
     MessageIndex messageIndex;
+
+    /*!
+     * The CoursePointMessage FIT message's timestamp field.
+     */
     DateTime timestamp;
+
+    /*!
+     * The CoursePointMessage FIT message's positionLat field.
+     */
     qint32 positionLat;
+
+    /*!
+     * The CoursePointMessage FIT message's positionLong field.
+     */
     qint32 positionLong;
+
+    /*!
+     * The CoursePointMessage FIT message's distance field.
+     */
     quint32 distance;
+
+    /*!
+     * The CoursePointMessage FIT message's type field.
+     */
     CoursePoint type;
+
+    /*!
+     * The CoursePointMessage FIT message's name field.
+     */
     QString name;
+
+    /*!
+     * The CoursePointMessage FIT message's favorite field.
+     */
     bool favorite;
 
     CoursePointMessagePrivate() = delete;

@@ -13,9 +13,18 @@ class {{ClassName}}Private : public AbstractDataMessagePrivate {
 
 public:
 {% for field in fields %}
-    {{field.cppType}} {{field.name}};
+    /*!
+     * The {{ClassName}} FIT message's {{field.name}} field.
+{% if field.comment %}
+     *
+{% for line in field.commentLines %}
+     * {{line}}
 {% endfor %}
+{% endif %}
+     */
+    {{field.cppType}} {{field.name}};
 
+{% endfor %}
     {{ClassName}}Private() = delete;
     explicit {{ClassName}}Private({{ClassName}} * const q);
     virtual ~{{ClassName}}Private();
