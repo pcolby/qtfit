@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid AviationAttitudeMessage object.
+ * Constructs a AviationAttitudeMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 AviationAttitudeMessage::AviationAttitudeMessage() : AbstractDataMessage(new AviationAttitudeMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a AviationAttitudeMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+AviationAttitudeMessage::AviationAttitudeMessage(AviationAttitudeMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

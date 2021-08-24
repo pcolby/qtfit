@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid CameraEventMessage object.
+ * Constructs a CameraEventMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 CameraEventMessage::CameraEventMessage() : AbstractDataMessage(new CameraEventMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a CameraEventMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+CameraEventMessage::CameraEventMessage(CameraEventMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

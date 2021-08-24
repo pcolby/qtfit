@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid VideoClipMessage object.
+ * Constructs a VideoClipMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 VideoClipMessage::VideoClipMessage() : AbstractDataMessage(new VideoClipMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a VideoClipMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+VideoClipMessage::VideoClipMessage(VideoClipMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

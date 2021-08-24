@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid MesgCapabilitiesMessage object.
+ * Constructs a MesgCapabilitiesMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 MesgCapabilitiesMessage::MesgCapabilitiesMessage() : AbstractDataMessage(new MesgCapabilitiesMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a MesgCapabilitiesMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+MesgCapabilitiesMessage::MesgCapabilitiesMessage(MesgCapabilitiesMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

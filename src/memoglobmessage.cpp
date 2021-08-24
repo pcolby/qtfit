@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid MemoGlobMessage object.
+ * Constructs a MemoGlobMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 MemoGlobMessage::MemoGlobMessage() : AbstractDataMessage(new MemoGlobMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a MemoGlobMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+MemoGlobMessage::MemoGlobMessage(MemoGlobMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

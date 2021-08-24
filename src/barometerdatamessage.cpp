@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid BarometerDataMessage object.
+ * Constructs a BarometerDataMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 BarometerDataMessage::BarometerDataMessage() : AbstractDataMessage(new BarometerDataMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a BarometerDataMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+BarometerDataMessage::BarometerDataMessage(BarometerDataMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

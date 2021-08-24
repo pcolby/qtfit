@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid ThreeDSensorCalibrationMessage object.
+ * Constructs a ThreeDSensorCalibrationMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage() : AbstractDataMessage(new ThreeDSensorCalibrationMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a ThreeDSensorCalibrationMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+ThreeDSensorCalibrationMessage::ThreeDSensorCalibrationMessage(ThreeDSensorCalibrationMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

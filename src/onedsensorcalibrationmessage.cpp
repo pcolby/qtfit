@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid OneDSensorCalibrationMessage object.
+ * Constructs a OneDSensorCalibrationMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 OneDSensorCalibrationMessage::OneDSensorCalibrationMessage() : AbstractDataMessage(new OneDSensorCalibrationMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a OneDSensorCalibrationMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+OneDSensorCalibrationMessage::OneDSensorCalibrationMessage(OneDSensorCalibrationMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

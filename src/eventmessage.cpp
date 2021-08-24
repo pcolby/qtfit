@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid EventMessage object.
+ * Constructs a EventMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 EventMessage::EventMessage() : AbstractDataMessage(new EventMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a EventMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+EventMessage::EventMessage(EventMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

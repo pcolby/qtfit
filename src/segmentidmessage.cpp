@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SegmentIdMessage object.
+ * Constructs a SegmentIdMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SegmentIdMessage::SegmentIdMessage() : AbstractDataMessage(new SegmentIdMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SegmentIdMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SegmentIdMessage::SegmentIdMessage(SegmentIdMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid ZonesTargetMessage object.
+ * Constructs a ZonesTargetMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 ZonesTargetMessage::ZonesTargetMessage() : AbstractDataMessage(new ZonesTargetMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a ZonesTargetMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+ZonesTargetMessage::ZonesTargetMessage(ZonesTargetMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid CapabilitiesMessage object.
+ * Constructs a CapabilitiesMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 CapabilitiesMessage::CapabilitiesMessage() : AbstractDataMessage(new CapabilitiesMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a CapabilitiesMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+CapabilitiesMessage::CapabilitiesMessage(CapabilitiesMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

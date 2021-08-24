@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid HrmProfileMessage object.
+ * Constructs a HrmProfileMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 HrmProfileMessage::HrmProfileMessage() : AbstractDataMessage(new HrmProfileMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a HrmProfileMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+HrmProfileMessage::HrmProfileMessage(HrmProfileMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

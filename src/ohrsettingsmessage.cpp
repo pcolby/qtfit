@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid OhrSettingsMessage object.
+ * Constructs a OhrSettingsMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 OhrSettingsMessage::OhrSettingsMessage() : AbstractDataMessage(new OhrSettingsMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a OhrSettingsMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+OhrSettingsMessage::OhrSettingsMessage(OhrSettingsMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

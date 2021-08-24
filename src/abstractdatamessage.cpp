@@ -33,7 +33,7 @@ QTFIT_BEGIN_NAMESPACE
 /*!
  * \internal
  *
- * Constructs a AbstractDataMessage with private implementation \a q.
+ * Constructs a AbstractDataMessage with private implementation \a d.
  *
  * \param d Pointer to private implementation.
  */

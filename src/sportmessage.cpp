@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SportMessage object.
+ * Constructs a SportMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SportMessage::SportMessage() : AbstractDataMessage(new SportMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SportMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SportMessage::SportMessage(SportMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

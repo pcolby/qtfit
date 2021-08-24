@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid AntRxMessage object.
+ * Constructs a AntRxMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 AntRxMessage::AntRxMessage() : AbstractDataMessage(new AntRxMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a AntRxMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+AntRxMessage::AntRxMessage(AntRxMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

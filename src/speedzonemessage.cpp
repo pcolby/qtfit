@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SpeedZoneMessage object.
+ * Constructs a SpeedZoneMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SpeedZoneMessage::SpeedZoneMessage() : AbstractDataMessage(new SpeedZoneMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SpeedZoneMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SpeedZoneMessage::SpeedZoneMessage(SpeedZoneMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

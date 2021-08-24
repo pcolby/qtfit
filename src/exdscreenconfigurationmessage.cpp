@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid ExdScreenConfigurationMessage object.
+ * Constructs a ExdScreenConfigurationMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 ExdScreenConfigurationMessage::ExdScreenConfigurationMessage() : AbstractDataMessage(new ExdScreenConfigurationMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a ExdScreenConfigurationMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+ExdScreenConfigurationMessage::ExdScreenConfigurationMessage(ExdScreenConfigurationMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

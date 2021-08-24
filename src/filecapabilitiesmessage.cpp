@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid FileCapabilitiesMessage object.
+ * Constructs a FileCapabilitiesMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 FileCapabilitiesMessage::FileCapabilitiesMessage() : AbstractDataMessage(new FileCapabilitiesMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a FileCapabilitiesMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+FileCapabilitiesMessage::FileCapabilitiesMessage(FileCapabilitiesMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid ExerciseTitleMessage object.
+ * Constructs a ExerciseTitleMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 ExerciseTitleMessage::ExerciseTitleMessage() : AbstractDataMessage(new ExerciseTitleMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a ExerciseTitleMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+ExerciseTitleMessage::ExerciseTitleMessage(ExerciseTitleMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

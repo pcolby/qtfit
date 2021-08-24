@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid WeightScaleMessage object.
+ * Constructs a WeightScaleMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 WeightScaleMessage::WeightScaleMessage() : AbstractDataMessage(new WeightScaleMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a WeightScaleMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+WeightScaleMessage::WeightScaleMessage(WeightScaleMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

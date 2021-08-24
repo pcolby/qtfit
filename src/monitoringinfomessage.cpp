@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid MonitoringInfoMessage object.
+ * Constructs a MonitoringInfoMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 MonitoringInfoMessage::MonitoringInfoMessage() : AbstractDataMessage(new MonitoringInfoMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a MonitoringInfoMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+MonitoringInfoMessage::MonitoringInfoMessage(MonitoringInfoMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

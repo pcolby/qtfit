@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid DeviceSettingsMessage object.
+ * Constructs a DeviceSettingsMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 DeviceSettingsMessage::DeviceSettingsMessage() : AbstractDataMessage(new DeviceSettingsMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a DeviceSettingsMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+DeviceSettingsMessage::DeviceSettingsMessage(DeviceSettingsMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

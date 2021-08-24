@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid FileCreatorMessage object.
+ * Constructs a FileCreatorMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 FileCreatorMessage::FileCreatorMessage() : AbstractDataMessage(new FileCreatorMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a FileCreatorMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+FileCreatorMessage::FileCreatorMessage(FileCreatorMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

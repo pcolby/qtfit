@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid GpsMetadataMessage object.
+ * Constructs a GpsMetadataMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 GpsMetadataMessage::GpsMetadataMessage() : AbstractDataMessage(new GpsMetadataMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a GpsMetadataMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+GpsMetadataMessage::GpsMetadataMessage(GpsMetadataMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

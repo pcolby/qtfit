@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid PowerZoneMessage object.
+ * Constructs a PowerZoneMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 PowerZoneMessage::PowerZoneMessage() : AbstractDataMessage(new PowerZoneMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a PowerZoneMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+PowerZoneMessage::PowerZoneMessage(PowerZoneMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid WorkoutSessionMessage object.
+ * Constructs a WorkoutSessionMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 WorkoutSessionMessage::WorkoutSessionMessage() : AbstractDataMessage(new WorkoutSessionMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a WorkoutSessionMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+WorkoutSessionMessage::WorkoutSessionMessage(WorkoutSessionMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

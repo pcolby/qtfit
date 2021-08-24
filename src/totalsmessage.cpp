@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid TotalsMessage object.
+ * Constructs a TotalsMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 TotalsMessage::TotalsMessage() : AbstractDataMessage(new TotalsMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a TotalsMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+TotalsMessage::TotalsMessage(TotalsMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

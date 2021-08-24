@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid ActivityMessage object.
+ * Constructs a ActivityMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 ActivityMessage::ActivityMessage() : AbstractDataMessage(new ActivityMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a ActivityMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+ActivityMessage::ActivityMessage(ActivityMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

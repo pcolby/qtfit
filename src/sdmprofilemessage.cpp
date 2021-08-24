@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SdmProfileMessage object.
+ * Constructs a SdmProfileMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SdmProfileMessage::SdmProfileMessage() : AbstractDataMessage(new SdmProfileMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SdmProfileMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SdmProfileMessage::SdmProfileMessage(SdmProfileMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

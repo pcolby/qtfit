@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid MetZoneMessage object.
+ * Constructs a MetZoneMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 MetZoneMessage::MetZoneMessage() : AbstractDataMessage(new MetZoneMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a MetZoneMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+MetZoneMessage::MetZoneMessage(MetZoneMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

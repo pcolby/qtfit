@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid DiveSettingsMessage object.
+ * Constructs a DiveSettingsMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 DiveSettingsMessage::DiveSettingsMessage() : AbstractDataMessage(new DiveSettingsMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a DiveSettingsMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+DiveSettingsMessage::DiveSettingsMessage(DiveSettingsMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

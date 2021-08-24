@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid FieldDescriptionMessage object.
+ * Constructs a FieldDescriptionMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 FieldDescriptionMessage::FieldDescriptionMessage() : AbstractDataMessage(new FieldDescriptionMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a FieldDescriptionMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+FieldDescriptionMessage::FieldDescriptionMessage(FieldDescriptionMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid CadenceZoneMessage object.
+ * Constructs a CadenceZoneMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 CadenceZoneMessage::CadenceZoneMessage() : AbstractDataMessage(new CadenceZoneMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a CadenceZoneMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+CadenceZoneMessage::CadenceZoneMessage(CadenceZoneMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

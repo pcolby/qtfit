@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid CoursePointMessage object.
+ * Constructs a CoursePointMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 CoursePointMessage::CoursePointMessage() : AbstractDataMessage(new CoursePointMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a CoursePointMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+CoursePointMessage::CoursePointMessage(CoursePointMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

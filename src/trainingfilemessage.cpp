@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid TrainingFileMessage object.
+ * Constructs a TrainingFileMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 TrainingFileMessage::TrainingFileMessage() : AbstractDataMessage(new TrainingFileMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a TrainingFileMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+TrainingFileMessage::TrainingFileMessage(TrainingFileMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

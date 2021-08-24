@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid LengthMessage object.
+ * Constructs a LengthMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 LengthMessage::LengthMessage() : AbstractDataMessage(new LengthMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a LengthMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+LengthMessage::LengthMessage(LengthMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

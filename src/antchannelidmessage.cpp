@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid AntChannelIdMessage object.
+ * Constructs a AntChannelIdMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 AntChannelIdMessage::AntChannelIdMessage() : AbstractDataMessage(new AntChannelIdMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a AntChannelIdMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+AntChannelIdMessage::AntChannelIdMessage(AntChannelIdMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

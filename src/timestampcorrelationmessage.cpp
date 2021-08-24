@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid TimestampCorrelationMessage object.
+ * Constructs a TimestampCorrelationMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 TimestampCorrelationMessage::TimestampCorrelationMessage() : AbstractDataMessage(new TimestampCorrelationMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a TimestampCorrelationMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+TimestampCorrelationMessage::TimestampCorrelationMessage(TimestampCorrelationMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

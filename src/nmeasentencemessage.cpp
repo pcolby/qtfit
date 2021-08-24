@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid NmeaSentenceMessage object.
+ * Constructs a NmeaSentenceMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 NmeaSentenceMessage::NmeaSentenceMessage() : AbstractDataMessage(new NmeaSentenceMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a NmeaSentenceMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+NmeaSentenceMessage::NmeaSentenceMessage(NmeaSentenceMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

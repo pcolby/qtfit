@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid WatchfaceSettingsMessage object.
+ * Constructs a WatchfaceSettingsMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 WatchfaceSettingsMessage::WatchfaceSettingsMessage() : AbstractDataMessage(new WatchfaceSettingsMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a WatchfaceSettingsMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+WatchfaceSettingsMessage::WatchfaceSettingsMessage(WatchfaceSettingsMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

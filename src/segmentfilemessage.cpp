@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SegmentFileMessage object.
+ * Constructs a SegmentFileMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SegmentFileMessage::SegmentFileMessage() : AbstractDataMessage(new SegmentFileMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SegmentFileMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SegmentFileMessage::SegmentFileMessage(SegmentFileMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid StressLevelMessage object.
+ * Constructs a StressLevelMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 StressLevelMessage::StressLevelMessage() : AbstractDataMessage(new StressLevelMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a StressLevelMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+StressLevelMessage::StressLevelMessage(StressLevelMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

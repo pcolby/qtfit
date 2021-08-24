@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SoftwareMessage object.
+ * Constructs a SoftwareMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SoftwareMessage::SoftwareMessage() : AbstractDataMessage(new SoftwareMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SoftwareMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SoftwareMessage::SoftwareMessage(SoftwareMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

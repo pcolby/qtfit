@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid HrZoneMessage object.
+ * Constructs a HrZoneMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 HrZoneMessage::HrZoneMessage() : AbstractDataMessage(new HrZoneMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a HrZoneMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+HrZoneMessage::HrZoneMessage(HrZoneMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

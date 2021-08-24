@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid RecordMessage object.
+ * Constructs a RecordMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 RecordMessage::RecordMessage() : AbstractDataMessage(new RecordMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a RecordMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+RecordMessage::RecordMessage(RecordMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

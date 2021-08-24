@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid WorkoutStepMessage object.
+ * Constructs a WorkoutStepMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 WorkoutStepMessage::WorkoutStepMessage() : AbstractDataMessage(new WorkoutStepMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a WorkoutStepMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+WorkoutStepMessage::WorkoutStepMessage(WorkoutStepMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

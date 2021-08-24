@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid JumpMessage object.
+ * Constructs a JumpMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 JumpMessage::JumpMessage() : AbstractDataMessage(new JumpMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a JumpMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+JumpMessage::JumpMessage(JumpMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

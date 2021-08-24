@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SessionMessage object.
+ * Constructs a SessionMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SessionMessage::SessionMessage() : AbstractDataMessage(new SessionMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SessionMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SessionMessage::SessionMessage(SessionMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

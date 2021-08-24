@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid ScheduleMessage object.
+ * Constructs a ScheduleMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 ScheduleMessage::ScheduleMessage() : AbstractDataMessage(new ScheduleMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a ScheduleMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+ScheduleMessage::ScheduleMessage(ScheduleMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

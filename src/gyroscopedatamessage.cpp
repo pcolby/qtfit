@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid GyroscopeDataMessage object.
+ * Constructs a GyroscopeDataMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 GyroscopeDataMessage::GyroscopeDataMessage() : AbstractDataMessage(new GyroscopeDataMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a GyroscopeDataMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+GyroscopeDataMessage::GyroscopeDataMessage(GyroscopeDataMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

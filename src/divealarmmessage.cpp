@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid DiveAlarmMessage object.
+ * Constructs a DiveAlarmMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 DiveAlarmMessage::DiveAlarmMessage() : AbstractDataMessage(new DiveAlarmMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a DiveAlarmMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+DiveAlarmMessage::DiveAlarmMessage(DiveAlarmMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

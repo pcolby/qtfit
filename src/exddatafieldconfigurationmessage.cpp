@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid ExdDataFieldConfigurationMessage object.
+ * Constructs a ExdDataFieldConfigurationMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 ExdDataFieldConfigurationMessage::ExdDataFieldConfigurationMessage() : AbstractDataMessage(new ExdDataFieldConfigurationMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a ExdDataFieldConfigurationMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+ExdDataFieldConfigurationMessage::ExdDataFieldConfigurationMessage(ExdDataFieldConfigurationMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

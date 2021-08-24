@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SegmentLapMessage object.
+ * Constructs a SegmentLapMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SegmentLapMessage::SegmentLapMessage() : AbstractDataMessage(new SegmentLapMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SegmentLapMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SegmentLapMessage::SegmentLapMessage(SegmentLapMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

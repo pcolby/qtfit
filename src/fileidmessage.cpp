@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid FileIdMessage object.
+ * Constructs a FileIdMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 FileIdMessage::FileIdMessage() : AbstractDataMessage(new FileIdMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a FileIdMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+FileIdMessage::FileIdMessage(FileIdMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }

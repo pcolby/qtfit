@@ -39,12 +39,24 @@ QTFIT_BEGIN_NAMESPACE
  */
 
 /*!
- * Constructs an invalid SetMessage object.
+ * Constructs a SetMessage object.
  *
  * Typically, instances of this class will be returned by FitStreamReader::readNext, but this
  * constructor may be used, along with the relevant setter methods, to create a valid message.
  */
 SetMessage::SetMessage() : AbstractDataMessage(new SetMessagePrivate(this))
+{
+
+}
+
+/*!
+ * \internal
+ *
+ * Constructs a SetMessage object with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+SetMessage::SetMessage(SetMessagePrivate * const d) : AbstractDataMessage(d)
 {
 
 }
