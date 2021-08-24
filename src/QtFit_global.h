@@ -36,7 +36,7 @@
 #endif
 
 #ifndef QTFIT_NAMESPACE
-#define QTFIT_NAMESPACE fit ///< @todo Consider moving this to a CMake option.
+#define QTFIT_NAMESPACE fit ///< \todo Consider moving this to a CMake option.
 #endif
 
 #ifdef QTFIT_NAMESPACE

@@ -36,14 +36,14 @@ class FitStreamReaderPrivate {
 
 public:
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    typedef qsizetype size_t;
+    typedef qsizetype size_t; ///< Size type for size-related operations.
 #else
-    typedef int size_t;
+    typedef int size_t; ///< Size type for size-related operations.
 #endif
 
-    QByteArray data;
-    size_t dataOffset;
-    QIODevice *device;
+    QByteArray data;   ///< FIT File data (alternative to \c device).
+    size_t dataOffset; ///< Current position within \c data.
+    QIODevice *device; ///< FIT File IO stream (alternative to \c data and \c dataOffset).
 
     explicit FitStreamReaderPrivate(FitStreamReader * const q);
     virtual ~FitStreamReaderPrivate();
@@ -64,9 +64,9 @@ protected:
 
 private:
 //    quint8 headerSize;
-    QVersionNumber protocolVersion;
-    QVersionNumber profileVersion;
-    quint32 expectedDataSize;
+    QVersionNumber protocolVersion; ///< Protocol version read from the parsed FIT file header.
+    QVersionNumber profileVersion;  ///< Protocol version read from the parsed FIT file header.
+    quint32 expectedDataSize;       ///< Total size, in bytes, expected to comprise the FIT file.
 //    quint32 expectedChecksum;
 
     QHash<int, DataDefinition> dataDefinitions; ///< Local message types to current data definitions.

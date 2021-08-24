@@ -54,10 +54,10 @@ public:
     AbstractDataMessage * readNext(); // Will consume the file header, defn records, and data message headers.
 
 protected:
-    /// @cond internal
+    /// \cond internal
     FitStreamReaderPrivate * const d_ptr; ///< Internal d-pointer.
     explicit FitStreamReader(FitStreamReaderPrivate * const d);
-    /// @endcond
+    /// \endcond
 
 private:
     Q_DECLARE_PRIVATE(FitStreamReader)

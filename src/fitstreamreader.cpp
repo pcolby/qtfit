@@ -88,6 +88,19 @@ FitStreamReader::FitStreamReader(QIODevice *device) : d_ptr(new FitStreamReaderP
 }
 
 /*!
+ * \cond internal
+ *
+ * Constructs a FIT stream reader with private implementation \a d.
+ *
+ * \param d Pointer to private implementation.
+ */
+FitStreamReader::FitStreamReader(FitStreamReaderPrivate * const d) : d_ptr(d)
+{
+
+}
+/// \endcond
+
+/*!
  * Destroys the FIT stream reader.
  */
 FitStreamReader::~FitStreamReader()
@@ -124,7 +137,7 @@ void FitStreamReader::addData(const QByteArray &data)
  */
 bool FitStreamReader::atEnd() const
 {
-    return false; /// @todo Implement this method.
+    return false; /// \todo Implement this method.
 }
 
 /*!
@@ -161,9 +174,6 @@ QIODevice * FitStreamReader::device() const
     Q_D(const FitStreamReader);
     return d->device;
 }
-
-// [enum] Error error() const; or lastError?
-// QString errorString() const;
 
 /*!
  * Sets the current device to \c device, and resets the stream to its initial state.
@@ -264,29 +274,70 @@ AbstractDataMessage * FitStreamReader::readNext()
 
 /// \cond internal
 
+/*!
+ * \class FitStreamReaderPrivate
+ *
+ * Provides private implementation for FitStreamReader.
+ */
+
+/*!
+ * Constructs a FitStreamReaderPrivate object, with public implementation \a q.
+ *
+ * \param q Pointer to public implementation.
+ */
+
 FitStreamReaderPrivate::FitStreamReaderPrivate(FitStreamReader * const q)
     : dataOffset(0), device(nullptr), q_ptr(q)
 {
 
 }
 
+/*!
+ * Destroys the FitStreamReaderPrivate object.
+ */
 FitStreamReaderPrivate::~FitStreamReaderPrivate()
 {
 
 }
 
+/*!
+ * \fn FitStreamReaderPrivate::bytesAvailable
+ *
+ * Returns the number of bytes currently available for reading.
+ *
+ * \return the number of bytes available for reading.
+ */
+
+/*!
+ * Specialisation for reading from QByteArray objects.
+ *
+ * \return the number of bytes available for reading.
+ */
 template<> FitStreamReaderPrivate::size_t FitStreamReaderPrivate::bytesAvailable<QByteArray>() const
 {
     Q_ASSERT(device == nullptr);
     return data.size() - dataOffset;
 }
 
+/*!
+ * Specialisation for reading from QIODevice streams.
+ *
+ * \return the number of bytes available for reading.
+ */
 template<> FitStreamReaderPrivate::size_t FitStreamReaderPrivate::bytesAvailable<QIODevice>() const
 {
     Q_ASSERT(device != nullptr);
     return device->bytesAvailable();
 }
 
+/*!
+ * Reads and parses the FIT stream's file header.
+ *
+ * \todo Provide, and document, a way for the caller to distingish errors from simply not-enough-
+ * bytes-yet, when \c false it returned.
+ *
+ * \return \c true if the header was successfully read and parsed, \c false otherwise.
+ */
 template<class T> bool FitStreamReaderPrivate::parseFileHeader()
 {
     Q_ASSERT(protocolVersion.isNull());
@@ -296,12 +347,12 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
     const QByteArray header = readFileHeader<T>();
     qDebug() << "Header size" << header.size() << "bytes";
     if (header.isEmpty()) {
-        /// @todo set not-enough-bytes; ie might need to wait for more bytes.
+        /// \todo set not-enough-bytes; ie might need to wait for more bytes.
         qDebug() << "not enough bytes for header";
         return false;
     }
     if (header.size() < 12) {
-        /// @todo set invalid header size error; ie FIT stream is corrupt / invalid.
+        /// \todo set invalid header size error; ie FIT stream is corrupt / invalid.
         qDebug() << "invalid header size";
         return false;
     }
@@ -324,7 +375,7 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
     const QByteArray dataType = header.mid(8,4);
     qDebug() << "Data type" << dataType;
     if (dataType != QByteArray(".FIT")) {
-        /// @todo set invalid header data type (must be ".FIT").
+        /// \todo set invalid header data type (must be ".FIT").
         return false;
     }
 
@@ -338,7 +389,7 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
             qDebug() << "Header checksum" << expectedChecksum << calculatedChecksum;
             if (calculatedChecksum != expectedChecksum) {
                 qWarning() << "Checksum failure:" << calculatedChecksum << "!=" << expectedChecksum;
-                /// @todo set error, and return false here?
+                /// \todo set error, and return false here?
             } else {
                 qDebug() << "Checkums match";
             }
@@ -347,6 +398,15 @@ template<class T> bool FitStreamReaderPrivate::parseFileHeader()
     return true;
 }
 
+/*!
+ * Reads and parses a FIT Definition Message.
+ *
+ * Note, this function assumes that the next item in the FIT stream is indeed a Definition Message
+ * (the caller should have already determined this). Though it is perfectly acceptable that the
+ * message may not be completely available yet (in which case \c false will be returned).
+ *
+ * \return \c true if the Definition Message was successfully read and parsed, \c false otherwise.
+ */
 template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
 {
     // Parse the record header.
@@ -439,6 +499,19 @@ template<class T> bool FitStreamReaderPrivate::parseDefinitionMessage()
     return true;
 }
 
+/*!
+ * Reads and parses a FIT Data Message.
+ *
+ * Note, this function assumes that the next item in the FIT stream is indeed a Data Message
+ * (the caller should have already determined this). Though it is perfectly acceptable that the
+ * message may not be completely available yet (in which case \c false will be returned).
+ *
+ * This fuction will, as part of decoding the message, look-up the Data Message's definition, which
+ * must have been stored previously by one or more Definition Messages being processed earlier. If
+ * no matching definition is found, \c false will be returned.
+ *
+ * \return \c true if the Data Message was successfully read and parsed, \c false otherwise.
+ */
 template<class T> AbstractDataMessage * FitStreamReaderPrivate::parseDataMessage()
 {
     Q_ASSERT(bytesAvailable<T>());
@@ -486,12 +559,45 @@ template<class T> AbstractDataMessage * FitStreamReaderPrivate::parseDataMessage
     return AbstractDataMessage::fromData(&defn, record.mid(1));
 }
 
+/*!
+ * \fn FitStreamReaderPrivate::peekByte
+ *
+ * Peeks the next \a pos'th byte in the FIT stream.
+ *
+ * If less than \a pos bytes are available, \c 0 will be returned. It is the caller's responsibility
+ * to first check that there are enough bytes availble (eg via bytesAvailable) before calling this,
+ * otherwise it would be impossible to distinguish between not-enough-bytes-available and reading a
+ * valid \c 0x00 byte.
+ *
+ * Of course, we could provide a better error feedback mechanism, but as this is an internal private
+ * function, and all of our callers need to check for bytes first anyway, this is the more efficient
+ * pattern here.
+ *
+ * \param pos The position (relative to the current stream position) to peek.
+ *
+ * \return the next \a pos'th byte, or \c 0 if not enough bytes were available.
+ */
+
+/*!
+ * Specialisation for reading from QByteArray objects.
+ *
+ * \param pos The position (relative to the current stream position) to peek.
+ *
+ * \return the next \a pos'th byte, or \c 0 if not enough bytes were available.
+ */
 template<> quint8 FitStreamReaderPrivate::peekByte<QByteArray>(const int pos) const
 {
     Q_ASSERT(device == nullptr);
     return (data.size() > (dataOffset + pos)) ? data.at(dataOffset+pos) : 0;
 }
 
+/*!
+ * Specialisation for reading from QIODevice streams.
+ *
+ * \param pos The position (relative to the current stream position) to peek.
+ *
+ * \return the next \a pos'th byte, or \c 0 if not enough bytes were available.
+ */
 template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>(const int pos) const
 {
     Q_ASSERT(device != nullptr);
@@ -499,24 +605,69 @@ template<> quint8 FitStreamReaderPrivate::peekByte<QIODevice>(const int pos) con
     return (bytes.size() > pos) ? bytes.at(pos) : 0;
 }
 
+/*!
+ * \fn FitStreamReaderPrivate::readBytes
+ *
+ * Reads the next \a size bytes from the FIT stream.
+ *
+ * \param size The number of bytes to read.
+ *
+ * \return the next \a size bytes, or an empty \c QDataArray if less than \a size bytes were available.
+ */
+
+/*!
+ * Specialisation for reading from QIODevice streams.
+ *
+ * \param size The number of bytes to read.
+ *
+ * \return the next \a size bytes, or an empty \c QDataArray if less than \a size bytes were available.
+ */
 template<> QByteArray FitStreamReaderPrivate::readBytes<QByteArray>(const size_t size)
 {
     Q_ASSERT(device == nullptr);
     return ((data.size() - dataOffset) < size) ? QByteArray() : data.mid((dataOffset+=size)-size, size);
 }
 
+/*!
+ * Specialisation for reading from QIODevice streams.
+ *
+ * \param size The number of bytes to read.
+ *
+ * \return the next \a size bytes, or an empty \c QDataArray if less than \a size bytes were available.
+ */
 template<> QByteArray FitStreamReaderPrivate::readBytes<QIODevice>(const size_t size)
 {
     Q_ASSERT(device != nullptr);
     return (device->bytesAvailable() < size) ? QByteArray() : device->read(size);
 }
 
+/*!
+ * Reads all bytes of the FIT stream file header.
+ *
+ * This function will first peek the header length (if available), and then read the entire header
+ * if (and only if) all header bytes are available.
+ *
+ * \return the FIT file header, or an empty \c QByteArray if not enough bytes were available.
+ */
 template<class T> QByteArray FitStreamReaderPrivate::readFileHeader()
 {
     // Return `n` bytes, where `n` is given by the first byte (ie a length-prefixed buffer).
     return (bytesAvailable<T>()) ? readBytes<T>(peekByte<T>()) : QByteArray();
 }
 
+/*!
+ * Reads up to, and including, the next FIT Data Message.
+ *
+ * This function will continue reading the FIT stream until either no bytes are available, or a FIT
+ * Data Message has been located and parsed (or failed to be parsed). If (as expected) Definition
+ * Messages are found in the process, then they will be parse, and their definitions cached for
+ * interpreting future Data Messages.
+ *
+ * \note The caller takes ownership of the returned pointer (if not \c nullptr), and is responsible
+ * for deleting object when finished with.
+ *
+ * \return the next FIT Data Message, or a \c nullptr if none found, or an error occurred.
+ */
 template<class T> AbstractDataMessage * FitStreamReaderPrivate::readNextDataMessage()
 {
     // If we haven't parsed the FIT File Header yet, do so now.
@@ -535,6 +686,13 @@ template<class T> AbstractDataMessage * FitStreamReaderPrivate::readNextDataMess
     return nullptr;
 }
 
+/*!
+ * Returns \c true if \a recordHeader indicates a Definition Message, otherwise \c false.
+ *
+ * \param recordHeader A FIT Data Record header byte.
+ *
+ * \return \c true if \a recordHeader indicates a Definition Message, otherwise \c false.
+ */
 bool FitStreamReaderPrivate::isDefinitionMessage(const quint8 recordHeader)
 {
     // For definition messages, bit 7 must be off (bit 7 on would indicate a Compressed Timestamp
