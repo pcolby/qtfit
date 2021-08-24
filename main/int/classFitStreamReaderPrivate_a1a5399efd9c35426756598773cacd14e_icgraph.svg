@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Returns true if recordHeader indicates a Definition Message, otherwise false.">
 <polygon fill="#bfbfbf" stroke="black" points="176,-49.5 176,-79.5 309,-79.5 309,-49.5 176,-49.5"/>
 <text text-anchor="start" x="184" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitStreamReaderPrivate</text>
 <text text-anchor="middle" x="242.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">::isDefinitionMessage</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classFitStreamReaderPrivate.html#a22a1abf66b6330dc8b77f5be421f117d" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classFitStreamReaderPrivate.html#a4c08b06daf62ca841e563d3582da44da" target="_top" xlink:title="Reads and parses a FIT Data Message.">
 <polygon fill="none" stroke="black" points="3.5,-98.5 3.5,-128.5 136.5,-128.5 136.5,-98.5 3.5,-98.5"/>
 <text text-anchor="start" x="11.5" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitStreamReaderPrivate</text>
 <text text-anchor="middle" x="70" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">::parseDataMessage</text>
@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classFitStreamReaderPrivate.html#a1dd45f588b8ecb89cc8968c6c5d0381f" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classFitStreamReaderPrivate.html#a1dd45f588b8ecb89cc8968c6c5d0381f" target="_top" xlink:title="Reads and parses a FIT Definition Message.">
 <polygon fill="none" stroke="black" points="0,-49.5 0,-79.5 140,-79.5 140,-49.5 0,-49.5"/>
 <text text-anchor="start" x="8" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitStreamReaderPrivate</text>
 <text text-anchor="middle" x="70" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">::parseDefinitionMessage</text>
@@ -53,7 +53,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classFitStreamReaderPrivate.html#a742261bda7db9743510330a529b3ecc2" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classFitStreamReaderPrivate.html#a0fe05991aa88701417151c05781871c4" target="_top" xlink:title="Reads up to, and including, the next FIT Data Message.">
 <polygon fill="none" stroke="black" points="3,-0.5 3,-30.5 137,-30.5 137,-0.5 3,-0.5"/>
 <text text-anchor="start" x="11" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitStreamReaderPrivate</text>
 <text text-anchor="middle" x="70" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::readNextDataMessage</text>

@@ -1,11 +1,11 @@
 <map id="divealarmmessage.cpp" name="divealarmmessage.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="177,5,352,32"/>
-<area shape="rect" id="node2" href="$divealarmmessage_8h.html" title=" " alt="" coords="5,80,164,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="157,304,231,331"/>
-<area shape="rect" id="node8" title=" " alt="" coords="240,80,415,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="439,80,520,107"/>
-<area shape="rect" id="node3" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="17,155,152,181"/>
-<area shape="rect" id="node4" href="$QtFit__global_8h_source.html" title=" " alt="" coords="14,304,126,331"/>
-<area shape="rect" id="node6" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="93,229,164,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="31,379,109,405"/>
+<area shape="rect" id="node1" title=" " alt="" coords="193,5,368,32"/>
+<area shape="rect" id="node2" href="$divealarmmessage_8h.html" title=" " alt="" coords="17,80,176,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="173,304,247,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="256,80,431,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="455,80,536,107"/>
+<area shape="rect" id="node3" href="$abstractdatamessage_8h_source.html" title=" " alt="" coords="5,155,180,181"/>
+<area shape="rect" id="node4" href="$QtFit__global_8h_source.html" title=" " alt="" coords="30,304,142,331"/>
+<area shape="rect" id="node6" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="109,229,180,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="47,379,125,405"/>
 </map>

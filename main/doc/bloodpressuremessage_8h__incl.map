@@ -1,6 +1,6 @@
 <map id="bloodpressuremessage.h" name="bloodpressuremessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,191,32"/>
-<area shape="rect" id="node2" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="31,80,165,107"/>
+<area shape="rect" id="node2" href="$abstractdatamessage_8h_source.html" title=" " alt="" coords="11,80,185,107"/>
 <area shape="rect" id="node3" href="$QtFit__global_8h_source.html" title=" " alt="" coords="6,229,118,256"/>
 <area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="100,155,171,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="23,304,101,331"/>

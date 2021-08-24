@@ -116,13 +116,13 @@ $(document).ready(function(){initNavTree('monitoringmessage_8h_source.html','');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_MONITORINGMESSAGE_H</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_MONITORINGMESSAGE_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;fitdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>MonitoringMessagePrivate;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classMonitoringMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classMonitoringMessage.html">MonitoringMessage</a> : <span class="keyword">public</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classMonitoringMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classMonitoringMessage.html">MonitoringMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classMonitoringMessage.html">MonitoringMessage</a>();</div>
@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('monitoringmessage_8h_source.html','');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    quint32 activeTime() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="types_8h.html#a39772d8d944397339ec241c93a23923b">ActivityType</a> activityType() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77">ActivitySubtype</a> activitySubtype() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ActivityLevel activityLevel() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="types_8h.html#a792db4d9e557b8239671ea03454f30ce">ActivityLevel</a> activityLevel() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    quint16 distance16() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    quint16 cycles16() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    quint16 activeTime16() <span class="keyword">const</span>;</div>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('monitoringmessage_8h_source.html','');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> setActiveTime(<span class="keyword">const</span> quint32 activeTime);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setActivityType(<span class="keyword">const</span> <a class="code" href="types_8h.html#a39772d8d944397339ec241c93a23923b">ActivityType</a> activityType);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setActivitySubtype(<span class="keyword">const</span> <a class="code" href="types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77">ActivitySubtype</a> activitySubtype);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setActivityLevel(<span class="keyword">const</span> ActivityLevel activityLevel);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setActivityLevel(<span class="keyword">const</span> <a class="code" href="types_8h.html#a792db4d9e557b8239671ea03454f30ce">ActivityLevel</a> activityLevel);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> setDistance16(<span class="keyword">const</span> quint16 distance16);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> setCycles16(<span class="keyword">const</span> quint16 cycles16);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> setActiveTime16(<span class="keyword">const</span> quint16 activeTime16);</div>
@@ -189,9 +189,9 @@ $(document).ready(function(){initNavTree('monitoringmessage_8h_source.html','');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> setVigorousActivityMinutes(<span class="keyword">const</span> quint16 vigorousActivityMinutes);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    /// \cond internal</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classMonitoringMessage.html">MonitoringMessage</a>(MonitoringMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    /// \endcond</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classMonitoringMessage.html">MonitoringMessage</a>)</div>
@@ -202,13 +202,14 @@ $(document).ready(function(){initNavTree('monitoringmessage_8h_source.html','');
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;QTFIT_END_NAMESPACE</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_MONITORINGMESSAGE_H</span></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> abstractdatamessage.h:31</div></div>
 <div class="ttc" id="aclassMonitoringMessage_html"><div class="ttname"><a href="classMonitoringMessage.html">MonitoringMessage</a></div><div class="ttdoc">The MonitoringMessage class represents a FIT MonitoringMessage data message.</div><div class="ttdef"><b>Definition:</b> monitoringmessage.h:34</div></div>
-<div class="ttc" id="atypes_8h_html_a0265c2aab789a2c900c4d1fd9cf26bcb"><div class="ttname"><a href="types_8h.html#a0265c2aab789a2c900c4d1fd9cf26bcb">LocalDateTime</a></div><div class="ttdeci">LocalDateTime</div><div class="ttdoc">seconds since 00:00 Dec 31 1989 in local time zone</div><div class="ttdef"><b>Definition:</b> types.h:189</div></div>
-<div class="ttc" id="atypes_8h_html_a39772d8d944397339ec241c93a23923b"><div class="ttname"><a href="types_8h.html#a39772d8d944397339ec241c93a23923b">ActivityType</a></div><div class="ttdeci">ActivityType</div><div class="ttdef"><b>Definition:</b> types.h:1638</div></div>
-<div class="ttc" id="atypes_8h_html_a490fe83ca1f85eab28e987e34be14292"><div class="ttname"><a href="types_8h.html#a490fe83ca1f85eab28e987e34be14292">DeviceIndex</a></div><div class="ttdeci">DeviceIndex</div><div class="ttdef"><b>Definition:</b> types.h:199</div></div>
-<div class="ttc" id="atypes_8h_html_ace1a438eed58c4c63a0cd7213ff9ef77"><div class="ttname"><a href="types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77">ActivitySubtype</a></div><div class="ttdeci">ActivitySubtype</div><div class="ttdef"><b>Definition:</b> types.h:1650</div></div>
-<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> types.h:184</div></div>
+<div class="ttc" id="atypes_8h_html_a0265c2aab789a2c900c4d1fd9cf26bcb"><div class="ttname"><a href="types_8h.html#a0265c2aab789a2c900c4d1fd9cf26bcb">LocalDateTime</a></div><div class="ttdeci">LocalDateTime</div><div class="ttdoc">Seconds since 00:00 Dec 31 1989 in local time zone.</div><div class="ttdef"><b>Definition:</b> types.h:250</div></div>
+<div class="ttc" id="atypes_8h_html_a39772d8d944397339ec241c93a23923b"><div class="ttname"><a href="types_8h.html#a39772d8d944397339ec241c93a23923b">ActivityType</a></div><div class="ttdeci">ActivityType</div><div class="ttdoc">Garmin FIT ActivityType type.</div><div class="ttdef"><b>Definition:</b> types.h:2271</div></div>
+<div class="ttc" id="atypes_8h_html_a490fe83ca1f85eab28e987e34be14292"><div class="ttname"><a href="types_8h.html#a490fe83ca1f85eab28e987e34be14292">DeviceIndex</a></div><div class="ttdeci">DeviceIndex</div><div class="ttdoc">Garmin FIT DeviceIndex type.</div><div class="ttdef"><b>Definition:</b> types.h:278</div></div>
+<div class="ttc" id="atypes_8h_html_a792db4d9e557b8239671ea03454f30ce"><div class="ttname"><a href="types_8h.html#a792db4d9e557b8239671ea03454f30ce">ActivityLevel</a></div><div class="ttdeci">ActivityLevel</div><div class="ttdoc">Garmin FIT ActivityLevel type.</div><div class="ttdef"><b>Definition:</b> types.h:2324</div></div>
+<div class="ttc" id="atypes_8h_html_ace1a438eed58c4c63a0cd7213ff9ef77"><div class="ttname"><a href="types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77">ActivitySubtype</a></div><div class="ttdeci">ActivitySubtype</div><div class="ttdoc">Garmin FIT ActivitySubtype type.</div><div class="ttdef"><b>Definition:</b> types.h:2292</div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> types.h:237</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

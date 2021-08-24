@@ -2,6 +2,7 @@ var classDiveAlarmMessage =
 [
     [ "DiveAlarmMessage", "classDiveAlarmMessage.html#a6d72ce08847d73e4e041120928670901", null ],
     [ "~DiveAlarmMessage", "classDiveAlarmMessage.html#a3de39c020434b0e1d32d50b643845ec5", null ],
+    [ "DiveAlarmMessage", "classDiveAlarmMessage.html#aa94bd96ca7e73d978cf1440810b77941", null ],
     [ "alarmType", "classDiveAlarmMessage.html#a0f685f8afd72af0b8c71585e6e7d0838", null ],
     [ "depth", "classDiveAlarmMessage.html#a5485191c6cf19c06c99d9b4ef0775ba3", null ],
     [ "diveTypes", "classDiveAlarmMessage.html#ab90d9faa552d78138bbf0b4a065f5e1e", null ],

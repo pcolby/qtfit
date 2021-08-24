@@ -2,6 +2,7 @@ var classSdmProfileMessage =
 [
     [ "SdmProfileMessage", "classSdmProfileMessage.html#af951ab9a4e4da79a4e7528402604dd70", null ],
     [ "~SdmProfileMessage", "classSdmProfileMessage.html#af8688b48e804d2cfcea2ccd25f9ab118", null ],
+    [ "SdmProfileMessage", "classSdmProfileMessage.html#ad85be5735e662f617ff7ba97df691dd0", null ],
     [ "enabled", "classSdmProfileMessage.html#a521ed559d2b381b07851b70be04e9354", null ],
     [ "messageIndex", "classSdmProfileMessage.html#aadd5508f7bb6cc9a67741529edc30fa6", null ],
     [ "odometer", "classSdmProfileMessage.html#a822ebbb12d17f14f6b3ddf77d2eb0587", null ],

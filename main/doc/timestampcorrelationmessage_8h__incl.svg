@@ -20,9 +20,9 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="fitdatamessage_8h_source.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="37.5,-168.5 37.5,-187.5 138.5,-187.5 138.5,-168.5 37.5,-168.5"/>
-<text text-anchor="middle" x="88" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitdatamessage.h</text>
+<g id="a_node2"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="22.5,-168.5 22.5,-187.5 153.5,-187.5 153.5,-168.5 22.5,-168.5"/>
+<text text-anchor="middle" x="88" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
 </g>
 </g>

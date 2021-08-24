@@ -20,9 +20,9 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="fitdatamessage__p_8h.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="38,-224.5 38,-243.5 151,-243.5 151,-224.5 38,-224.5"/>
-<text text-anchor="middle" x="94.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitdatamessage_p.h</text>
+<g id="a_node2"><a xlink:href="abstractdatamessage__p_8h_source.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="23,-224.5 23,-243.5 166,-243.5 166,-224.5 23,-224.5"/>
+<text text-anchor="middle" x="94.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage_p.h</text>
 </a>
 </g>
 </g>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="6.5,-56.5 6.5,-75.5 90.5,-75.5 90.5,-56.5 6.5,-56.5"/>
 <text text-anchor="middle" x="48.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>
@@ -65,7 +65,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="types__p_8h.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="types__p_8h_source.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="122.5,-168.5 122.5,-187.5 186.5,-187.5 186.5,-168.5 122.5,-168.5"/>
 <text text-anchor="middle" x="154.5" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">types_p.h</text>
 </a>

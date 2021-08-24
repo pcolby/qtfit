@@ -116,13 +116,13 @@ $(document).ready(function(){initNavTree('trainingfilemessage_8h_source.html',''
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_TRAININGFILEMESSAGE_H</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_TRAININGFILEMESSAGE_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;fitdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>TrainingFileMessagePrivate;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classTrainingFileMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classTrainingFileMessage.html">TrainingFileMessage</a> : <span class="keyword">public</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classTrainingFileMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classTrainingFileMessage.html">TrainingFileMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classTrainingFileMessage.html">TrainingFileMessage</a>();</div>
@@ -132,20 +132,20 @@ $(document).ready(function(){initNavTree('trainingfilemessage_8h_source.html',''
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="types_8h.html#af10f27103f941f5cbafc9d21d6554e56">File</a> type() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a> manufacturer() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    quint16 product() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    quint32z serialNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="types_8h.html#af8923988212a718608f45e6ac0164095">quint32z</a> serialNumber() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timeCreated() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> setTimestamp(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> setType(<span class="keyword">const</span> <a class="code" href="types_8h.html#af10f27103f941f5cbafc9d21d6554e56">File</a> type);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> setManufacturer(<span class="keyword">const</span> <a class="code" href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a> manufacturer);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> setProduct(<span class="keyword">const</span> quint16 product);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> setSerialNumber(<span class="keyword">const</span> quint32z serialNumber);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> setSerialNumber(<span class="keyword">const</span> <a class="code" href="types_8h.html#af8923988212a718608f45e6ac0164095">quint32z</a> serialNumber);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> setTimeCreated(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timeCreated);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /// \cond internal</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classTrainingFileMessage.html">TrainingFileMessage</a>(TrainingFileMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    /// \endcond</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classTrainingFileMessage.html">TrainingFileMessage</a>)</div>
@@ -156,11 +156,12 @@ $(document).ready(function(){initNavTree('trainingfilemessage_8h_source.html',''
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;QTFIT_END_NAMESPACE</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_TRAININGFILEMESSAGE_H</span></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> abstractdatamessage.h:31</div></div>
 <div class="ttc" id="aclassTrainingFileMessage_html"><div class="ttname"><a href="classTrainingFileMessage.html">TrainingFileMessage</a></div><div class="ttdoc">The TrainingFileMessage class represents a FIT TrainingFileMessage data message.</div><div class="ttdef"><b>Definition:</b> trainingfilemessage.h:34</div></div>
-<div class="ttc" id="atypes_8h_html_abff0cc6077b6b352288453cfaef93f80"><div class="ttname"><a href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a></div><div class="ttdeci">Manufacturer</div><div class="ttdef"><b>Definition:</b> types.h:971</div></div>
-<div class="ttc" id="atypes_8h_html_af10f27103f941f5cbafc9d21d6554e56"><div class="ttname"><a href="types_8h.html#af10f27103f941f5cbafc9d21d6554e56">File</a></div><div class="ttdeci">File</div><div class="ttdef"><b>Definition:</b> types.h:50</div></div>
-<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> types.h:184</div></div>
+<div class="ttc" id="atypes_8h_html_abff0cc6077b6b352288453cfaef93f80"><div class="ttname"><a href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a></div><div class="ttdeci">Manufacturer</div><div class="ttdoc">Garmin FIT Manufacturer type.</div><div class="ttdef"><b>Definition:</b> types.h:1480</div></div>
+<div class="ttc" id="atypes_8h_html_af10f27103f941f5cbafc9d21d6554e56"><div class="ttname"><a href="types_8h.html#af10f27103f941f5cbafc9d21d6554e56">File</a></div><div class="ttdeci">File</div><div class="ttdoc">Garmin FIT File type.</div><div class="ttdef"><b>Definition:</b> types.h:59</div></div>
+<div class="ttc" id="atypes_8h_html_af8923988212a718608f45e6ac0164095"><div class="ttname"><a href="types_8h.html#af8923988212a718608f45e6ac0164095">quint32z</a></div><div class="ttdeci">quint32 quint32z</div><div class="ttdoc">32-bit unsigned integer, with 0-is-invalid semantics.</div><div class="ttdef"><b>Definition:</b> types.h:47</div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> types.h:237</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

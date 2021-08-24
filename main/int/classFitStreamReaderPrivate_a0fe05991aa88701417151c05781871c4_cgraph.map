@@ -1,0 +1,4 @@
+<map id="FitStreamReaderPrivate::readNextDataMessage" name="FitStreamReaderPrivate::readNextDataMessage">
+<area shape="rect" id="node1" title="Reads up to, and including, the next FIT Data Message." alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node2" href="$classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e" title="Returns true if recordHeader indicates a Definition Message, otherwise false." alt="" coords="232,5,409,47"/>
+</map>

@@ -1,5 +1,8 @@
 var files_dup =
 [
+    [ "abstractdatamessage.cpp", "abstractdatamessage_8cpp_source.html", null ],
+    [ "abstractdatamessage.h", "abstractdatamessage_8h_source.html", null ],
+    [ "abstractdatamessage_p.h", "abstractdatamessage__p_8h_source.html", null ],
     [ "accelerometerdatamessage.cpp", "accelerometerdatamessage_8cpp.html", null ],
     [ "accelerometerdatamessage.h", "accelerometerdatamessage_8h.html", [
       [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html", "classAccelerometerDataMessage" ]
@@ -231,21 +234,10 @@ var files_dup =
     [ "fileidmessage_p.h", "fileidmessage__p_8h.html", [
       [ "FileIdMessagePrivate", "classFileIdMessagePrivate.html", "classFileIdMessagePrivate" ]
     ] ],
-    [ "fitdatamessage.cpp", "fitdatamessage_8cpp.html", "fitdatamessage_8cpp" ],
-    [ "fitdatamessage.h", "fitdatamessage_8h.html", [
-      [ "FitDataMessage", "classFitDataMessage.html", "classFitDataMessage" ]
-    ] ],
-    [ "fitdatamessage_p.h", "fitdatamessage__p_8h.html", [
-      [ "FitDataMessagePrivate", "classFitDataMessagePrivate.html", "classFitDataMessagePrivate" ]
-    ] ],
     [ "fitdatamessages.cpp", "fitdatamessages_8cpp.html", null ],
-    [ "fitstreamreader.cpp", "fitstreamreader_8cpp.html", "fitstreamreader_8cpp" ],
-    [ "fitstreamreader.h", "fitstreamreader_8h.html", [
-      [ "FitStreamReader", "classFitStreamReader.html", "classFitStreamReader" ]
-    ] ],
-    [ "fitstreamreader_p.h", "fitstreamreader__p_8h.html", [
-      [ "FitStreamReaderPrivate", "classFitStreamReaderPrivate.html", "classFitStreamReaderPrivate" ]
-    ] ],
+    [ "fitstreamreader.cpp", "fitstreamreader_8cpp_source.html", null ],
+    [ "fitstreamreader.h", "fitstreamreader_8h_source.html", null ],
+    [ "fitstreamreader_p.h", "fitstreamreader__p_8h_source.html", null ],
     [ "goalmessage.cpp", "goalmessage_8cpp.html", null ],
     [ "goalmessage.h", "goalmessage_8h.html", [
       [ "GoalMessage", "classGoalMessage.html", "classGoalMessage" ]
@@ -393,7 +385,7 @@ var files_dup =
     [ "powerzonemessage_p.h", "powerzonemessage__p_8h.html", [
       [ "PowerZoneMessagePrivate", "classPowerZoneMessagePrivate.html", "classPowerZoneMessagePrivate" ]
     ] ],
-    [ "QtFit_global.h", "QtFit__global_8h.html", "QtFit__global_8h" ],
+    [ "QtFit_global.h", "QtFit__global_8h_source.html", null ],
     [ "recordmessage.cpp", "recordmessage_8cpp.html", null ],
     [ "recordmessage.h", "recordmessage_8h.html", [
       [ "RecordMessage", "classRecordMessage.html", "classRecordMessage" ]
@@ -529,7 +521,7 @@ var files_dup =
     ] ],
     [ "types.cpp", "types_8cpp.html", "types_8cpp" ],
     [ "types.h", "types_8h.html", "types_8h" ],
-    [ "types_p.h", "types__p_8h.html", "types__p_8h" ],
+    [ "types_p.h", "types__p_8h_source.html", null ],
     [ "userprofilemessage.cpp", "userprofilemessage_8cpp.html", null ],
     [ "userprofilemessage.h", "userprofilemessage_8h.html", [
       [ "UserProfileMessage", "classUserProfileMessage.html", "classUserProfileMessage" ]

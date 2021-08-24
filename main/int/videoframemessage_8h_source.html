@@ -116,17 +116,17 @@ $(document).ready(function(){initNavTree('videoframemessage_8h_source.html','');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_VIDEOFRAMEMESSAGE_H</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_VIDEOFRAMEMESSAGE_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fitdatamessage_8h.html">fitdatamessage.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="classVideoFrameMessagePrivate.html">VideoFrameMessagePrivate</a>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classVideoFrameMessage.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a> <a class="code" href="classVideoFrameMessage.html">VideoFrameMessage</a> : <span class="keyword">public</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classVideoFrameMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classVideoFrameMessage.html">VideoFrameMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classVideoFrameMessage.html">VideoFrameMessage</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classVideoFrameMessage.html#adc50a502e7aad6306cc65bfb40d5be26">   38</a></span>&#160;    <a class="code" href="classVideoFrameMessage.html#adc50a502e7aad6306cc65bfb40d5be26">~VideoFrameMessage</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classVideoFrameMessage.html">VideoFrameMessage</a>();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    quint16 timestampMs() <span class="keyword">const</span>;</div>
@@ -137,9 +137,9 @@ $(document).ready(function(){initNavTree('videoframemessage_8h_source.html','');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> setFrameNumber(<span class="keyword">const</span> quint32 frameNumber);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    /// \cond internal</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classVideoFrameMessage.html">VideoFrameMessage</a>(<a class="code" href="classVideoFrameMessagePrivate.html">VideoFrameMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    /// \endcond</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classVideoFrameMessage.html">VideoFrameMessage</a>)</div>
@@ -147,18 +147,13 @@ $(document).ready(function(){initNavTree('videoframemessage_8h_source.html','');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;QTFIT_END_NAMESPACE</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_VIDEOFRAMEMESSAGE_H</span></div>
-<div class="ttc" id="aQtFit__global_8h_html_a0e93dab66b5e7c93148056660a6c416c"><div class="ttname"><a href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a></div><div class="ttdeci">#define QTFIT_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00032">QtFit_global.h:32</a></div></div>
-<div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
-<div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
 <div class="ttc" id="aclassVideoFrameMessagePrivate_html"><div class="ttname"><a href="classVideoFrameMessagePrivate.html">VideoFrameMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage__p_8h_source.html#l00034">videoframemessage_p.h:34</a></div></div>
 <div class="ttc" id="aclassVideoFrameMessage_html"><div class="ttname"><a href="classVideoFrameMessage.html">VideoFrameMessage</a></div><div class="ttdoc">The VideoFrameMessage class represents a FIT VideoFrameMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage_8h_source.html#l00034">videoframemessage.h:34</a></div></div>
-<div class="ttc" id="aclassVideoFrameMessage_html_adc50a502e7aad6306cc65bfb40d5be26"><div class="ttname"><a href="classVideoFrameMessage.html#adc50a502e7aad6306cc65bfb40d5be26">VideoFrameMessage::~VideoFrameMessage</a></div><div class="ttdeci">~VideoFrameMessage()</div></div>
-<div class="ttc" id="afitdatamessage_8h_html"><div class="ttname"><a href="fitdatamessage_8h.html">fitdatamessage.h</a></div></div>
-<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00184">types.h:184</a></div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00237">types.h:237</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

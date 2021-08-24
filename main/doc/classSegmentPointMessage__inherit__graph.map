@@ -1,4 +1,4 @@
 <map id="SegmentPointMessage" name="SegmentPointMessage">
 <area shape="rect" id="node1" title="The SegmentPointMessage class represents a FIT SegmentPointMessage data message." alt="" coords="5,80,176,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="27,5,154,32"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="8,5,173,32"/>
 </map>

@@ -2,6 +2,7 @@ var classCadenceZoneMessage =
 [
     [ "CadenceZoneMessage", "classCadenceZoneMessage.html#abdf40abfc541048ba819bb44923e3ceb", null ],
     [ "~CadenceZoneMessage", "classCadenceZoneMessage.html#a851b1cbe33ba2589369dd0f1d03e4c6a", null ],
+    [ "CadenceZoneMessage", "classCadenceZoneMessage.html#aa61e635fdbde0bc12e62fc96d1bec49e", null ],
     [ "highValue", "classCadenceZoneMessage.html#ac31beb38c4b41b9124123f46eac59f43", null ],
     [ "messageIndex", "classCadenceZoneMessage.html#ae2961dd526b14822fff44dcf41161098", null ],
     [ "name", "classCadenceZoneMessage.html#a4c507c9af474ca4b0e3eeccd318080d5", null ],

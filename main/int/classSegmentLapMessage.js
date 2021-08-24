@@ -2,6 +2,7 @@ var classSegmentLapMessage =
 [
     [ "SegmentLapMessage", "classSegmentLapMessage.html#a21ef628dc2390e0acec47aeb7fe3ee59", null ],
     [ "~SegmentLapMessage", "classSegmentLapMessage.html#aa4a1487ca9593984e18819f756bb9187", null ],
+    [ "SegmentLapMessage", "classSegmentLapMessage.html#ac313611f3383f883b75e69310c0b135b", null ],
     [ "activeTime", "classSegmentLapMessage.html#a3428a5922c16c485af7552c2b9b4ce51", null ],
     [ "avgAltitude", "classSegmentLapMessage.html#a4a50f66035c0f4c0d5e10a89a80e812c", null ],
     [ "avgCadence", "classSegmentLapMessage.html#a0262fac915790e5c71c12a5c164298e4", null ],

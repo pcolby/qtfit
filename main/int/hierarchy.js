@@ -1,9 +1,6 @@
 var hierarchy =
 [
-    [ "DataDefinition", "structDataDefinition.html", null ],
-    [ "DeveloperFieldDefinition", "structDeveloperFieldDefinition.html", null ],
-    [ "FieldDefinition", "structFieldDefinition.html", null ],
-    [ "FitDataMessage", "classFitDataMessage.html", [
+    [ "AbstractDataMessage", "classAbstractDataMessage.html", [
       [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html", null ],
       [ "ActivityMessage", "classActivityMessage.html", null ],
       [ "AntChannelIdMessage", "classAntChannelIdMessage.html", null ],
@@ -92,7 +89,7 @@ var hierarchy =
       [ "WorkoutStepMessage", "classWorkoutStepMessage.html", null ],
       [ "ZonesTargetMessage", "classZonesTargetMessage.html", null ]
     ] ],
-    [ "FitDataMessagePrivate", "classFitDataMessagePrivate.html", [
+    [ "AbstractDataMessagePrivate", "classAbstractDataMessagePrivate.html", [
       [ "AccelerometerDataMessagePrivate", "classAccelerometerDataMessagePrivate.html", null ],
       [ "ActivityMessagePrivate", "classActivityMessagePrivate.html", null ],
       [ "AntChannelIdMessagePrivate", "classAntChannelIdMessagePrivate.html", null ],
@@ -181,6 +178,9 @@ var hierarchy =
       [ "WorkoutStepMessagePrivate", "classWorkoutStepMessagePrivate.html", null ],
       [ "ZonesTargetMessagePrivate", "classZonesTargetMessagePrivate.html", null ]
     ] ],
+    [ "DataDefinition", "structDataDefinition.html", null ],
+    [ "DeveloperFieldDefinition", "structDeveloperFieldDefinition.html", null ],
+    [ "FieldDefinition", "structFieldDefinition.html", null ],
     [ "FitStreamReader", "classFitStreamReader.html", null ],
     [ "FitStreamReaderPrivate", "classFitStreamReaderPrivate.html", null ]
 ];

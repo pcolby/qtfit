@@ -1,0 +1,4 @@
+<map id="BikeProfileMessage::setFrontGearNum" name="BikeProfileMessage::setFrontGearNum">
+<area shape="rect" id="node1" title="Sets the frontGearNum field to frontGearNum." alt="" coords="5,5,155,47"/>
+<area shape="rect" id="node2" href="$classBikeProfileMessage.html#a82cbbf85e24bfc1b2513299270a48358" title="Returns the BikeProfileMessage data message&#39;s frontGearNum field&#39;s current value." alt="" coords="203,5,352,47"/>
+</map>

@@ -2,6 +2,7 @@ var classBikeProfileMessage =
 [
     [ "BikeProfileMessage", "classBikeProfileMessage.html#a4e3d5c3dff1b8d35bc381fbd62b454da", null ],
     [ "~BikeProfileMessage", "classBikeProfileMessage.html#a3a5beb493b9aa06e66fc0beb522a94f8", null ],
+    [ "BikeProfileMessage", "classBikeProfileMessage.html#abef0b32b962f1b64244a35f2f7d6d34d", null ],
     [ "autoPowerZero", "classBikeProfileMessage.html#a9d13f27c4c47ed1e0fe52168159172d4", null ],
     [ "autoWheelCal", "classBikeProfileMessage.html#a825f410e1271878707426b8b0176f714", null ],
     [ "autoWheelsize", "classBikeProfileMessage.html#a5e87da4ba7af932968cdc87bbcac2569", null ],

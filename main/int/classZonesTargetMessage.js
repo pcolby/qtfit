@@ -2,6 +2,7 @@ var classZonesTargetMessage =
 [
     [ "ZonesTargetMessage", "classZonesTargetMessage.html#aa69aa86babea1880e9a9759b380d7995", null ],
     [ "~ZonesTargetMessage", "classZonesTargetMessage.html#a769fc0229044c81edecc324f0062677e", null ],
+    [ "ZonesTargetMessage", "classZonesTargetMessage.html#ac238e1c67bf47b5ec924df7383419b1f", null ],
     [ "functionalThresholdPower", "classZonesTargetMessage.html#a5aad61661d309ca4a636f2a545aa8dd3", null ],
     [ "hrCalcType", "classZonesTargetMessage.html#afac374cbf5f498b247c21c859d6d22c8", null ],
     [ "maxHeartRate", "classZonesTargetMessage.html#ab31579ca8bf5db2a88137110d0236f1a", null ],

@@ -2,6 +2,7 @@ var classScheduleMessage =
 [
     [ "ScheduleMessage", "classScheduleMessage.html#a88d35f7eac9a925ed8cc2023e3ecc0ca", null ],
     [ "~ScheduleMessage", "classScheduleMessage.html#a3abca165d583530b0b5a91d82ad370fd", null ],
+    [ "ScheduleMessage", "classScheduleMessage.html#adafabc66398b568c6fe90d7a9e0f875b", null ],
     [ "completed", "classScheduleMessage.html#a08d8e334bee6e15df1e8018db3df619b", null ],
     [ "manufacturer", "classScheduleMessage.html#ac08bf3a8ed9da41fcfbd1fe6de8dda22", null ],
     [ "product", "classScheduleMessage.html#a82f69c272c69116776ec158cfe4e665e", null ],

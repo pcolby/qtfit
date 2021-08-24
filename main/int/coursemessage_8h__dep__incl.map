@@ -1,5 +1,5 @@
 <map id="coursemessage.h" name="coursemessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="102,5,238,32"/>
 <area shape="rect" id="node2" href="$coursemessage_8cpp.html" title=" " alt="" coords="5,80,156,107"/>
-<area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title="Provides the FitDataMessage::fromData implementation." alt="" coords="181,80,338,107"/>
+<area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title="Provides the AbstractDataMessage::fromData implementation." alt="" coords="181,80,338,107"/>
 </map>

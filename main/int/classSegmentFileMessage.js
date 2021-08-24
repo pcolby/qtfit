@@ -2,6 +2,7 @@ var classSegmentFileMessage =
 [
     [ "SegmentFileMessage", "classSegmentFileMessage.html#a7e8bd7ae8707ef6051bc14d7236121c2", null ],
     [ "~SegmentFileMessage", "classSegmentFileMessage.html#a1e985c842aa7aa1390aac06b845becb6", null ],
+    [ "SegmentFileMessage", "classSegmentFileMessage.html#a2093ecece0ba542045796d9fbc3190e1", null ],
     [ "defaultRaceLeader", "classSegmentFileMessage.html#a17220bf845ad2fac2ee28f2a3a135d13", null ],
     [ "enabled", "classSegmentFileMessage.html#ab5b8787c9a6e13abd278888818a8eeff", null ],
     [ "fileUuid", "classSegmentFileMessage.html#a4bd1ee272bd234aa98c3bfe709af123f", null ],

@@ -1,4 +1,4 @@
 <map id="WatchfaceSettingsMessage" name="WatchfaceSettingsMessage">
 <area shape="rect" id="node1" title="The WatchfaceSettingsMessage class represents a FIT WatchfaceSettingsMessage data message." alt="" coords="5,80,207,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="43,5,169,32"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="23,5,189,32"/>
 </map>

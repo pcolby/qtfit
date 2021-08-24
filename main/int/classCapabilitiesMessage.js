@@ -2,6 +2,7 @@ var classCapabilitiesMessage =
 [
     [ "CapabilitiesMessage", "classCapabilitiesMessage.html#ac0db35f36adc5e3ad11969c4edb1e7ad", null ],
     [ "~CapabilitiesMessage", "classCapabilitiesMessage.html#aa709ed85d4fe0c7635f04ba27205b0c3", null ],
+    [ "CapabilitiesMessage", "classCapabilitiesMessage.html#ac67b9a08d90cc7bad386b05a34294282", null ],
     [ "connectivitySupported", "classCapabilitiesMessage.html#abb6687fbe6048400a92f38e539e96d25", null ],
     [ "languages", "classCapabilitiesMessage.html#a2cb76e819111275042871750301cdcb8", null ],
     [ "setConnectivitySupported", "classCapabilitiesMessage.html#acc824ad86a514da60949637b6c0b1ea0", null ],

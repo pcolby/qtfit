@@ -2,6 +2,7 @@ var classWeatherAlertMessage =
 [
     [ "WeatherAlertMessage", "classWeatherAlertMessage.html#a79ad3b20fcd214278d65f80d61f1419e", null ],
     [ "~WeatherAlertMessage", "classWeatherAlertMessage.html#a00854b423a57207464dc03aabb596eb3", null ],
+    [ "WeatherAlertMessage", "classWeatherAlertMessage.html#ab565cea9cfc17b53759e3ac63cc2e237", null ],
     [ "expireTime", "classWeatherAlertMessage.html#a392e983a9c4efe82927093ec4003a4e1", null ],
     [ "issueTime", "classWeatherAlertMessage.html#a0a976c1aba856f6dbcb3c984664937a1", null ],
     [ "reportId", "classWeatherAlertMessage.html#a9efc3a3af5b5984a3949484090b27eda", null ],

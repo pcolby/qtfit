@@ -1,0 +1,5 @@
+<map id="FitStreamReaderPrivate::parseDataMessage" name="FitStreamReaderPrivate::parseDataMessage">
+<area shape="rect" id="node1" title="Reads and parses a FIT Data Message." alt="" coords="5,39,183,80"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html#af4fbf27d7c622819e6ad37e75f3bae8a" title="Constructs the relevant AbstractDataMessage&#45;derived class to parse record according to defn." alt="" coords="237,5,402,47"/>
+<area shape="rect" id="node3" href="$classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e" title="Returns true if recordHeader indicates a Definition Message, otherwise false." alt="" coords="231,71,408,112"/>
+</map>

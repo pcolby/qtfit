@@ -2,6 +2,7 @@ var classAntTxMessage =
 [
     [ "AntTxMessage", "classAntTxMessage.html#ac7f14ffb30047e5be05bc97c5dc0b023", null ],
     [ "~AntTxMessage", "classAntTxMessage.html#a90be014d751e3048593b44d6f97f6a59", null ],
+    [ "AntTxMessage", "classAntTxMessage.html#a01686adf0e4b20c6eef01183600d3f24", null ],
     [ "channelNumber", "classAntTxMessage.html#a5fa5c7d1ccca23ad447af813508919d8", null ],
     [ "data", "classAntTxMessage.html#a2b52ec558faf005ed58024a7b5a26d86", null ],
     [ "fractionalTimestamp", "classAntTxMessage.html#a6a79953eb683b2c83d5bdd7c52887ff0", null ],

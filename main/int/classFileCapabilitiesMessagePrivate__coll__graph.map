@@ -1,5 +1,5 @@
 <map id="FileCapabilitiesMessagePrivate" name="FileCapabilitiesMessagePrivate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,232,197"/>
-<area shape="rect" id="node2" href="$classFitDataMessagePrivate.html" title=" " alt="" coords="32,95,205,121"/>
-<area shape="rect" id="node3" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="55,5,182,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,232,121"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="165,5,376,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="256,95,421,121"/>
 </map>

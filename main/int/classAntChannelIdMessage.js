@@ -2,6 +2,7 @@ var classAntChannelIdMessage =
 [
     [ "AntChannelIdMessage", "classAntChannelIdMessage.html#a4f7d7233841daa4c54d3707930f4fccb", null ],
     [ "~AntChannelIdMessage", "classAntChannelIdMessage.html#a93b35f9d591aeec8e16524f3edb603af", null ],
+    [ "AntChannelIdMessage", "classAntChannelIdMessage.html#a7b11cace179078cea205dba6a1cac7cf", null ],
     [ "channelNumber", "classAntChannelIdMessage.html#a0f08a7e3114db3264e0f85f06b76acc4", null ],
     [ "deviceIndex", "classAntChannelIdMessage.html#a16aa510abeaeac5639d78c7c61f54e0a", null ],
     [ "deviceNumber", "classAntChannelIdMessage.html#aa0a65658fabb479673c52fdd0663dfa7", null ],

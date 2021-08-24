@@ -2,6 +2,7 @@ var classHrmProfileMessage =
 [
     [ "HrmProfileMessage", "classHrmProfileMessage.html#a519428418371718feebec355f8659094", null ],
     [ "~HrmProfileMessage", "classHrmProfileMessage.html#ad6c78ec8be1f960f27cd5fca3560ccc1", null ],
+    [ "HrmProfileMessage", "classHrmProfileMessage.html#a33ea78fd514182105659c0879bc1e49b", null ],
     [ "enabled", "classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b", null ],
     [ "hrmAntId", "classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9", null ],
     [ "hrmAntIdTransType", "classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7", null ],

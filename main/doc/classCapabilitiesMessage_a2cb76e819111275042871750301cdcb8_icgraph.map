@@ -1,0 +1,4 @@
+<map id="CapabilitiesMessage::languages" name="CapabilitiesMessage::languages">
+<area shape="rect" id="node1" title="Returns the CapabilitiesMessage data message&#39;s languages field&#39;s current value." alt="" coords="211,5,368,47"/>
+<area shape="rect" id="node2" href="$classCapabilitiesMessage.html#a2144d788f09aae68e13cccedf72c1fa2" title="Sets the languages field to languages." alt="" coords="5,5,163,47"/>
+</map>

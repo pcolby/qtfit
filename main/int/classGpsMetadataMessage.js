@@ -2,6 +2,7 @@ var classGpsMetadataMessage =
 [
     [ "GpsMetadataMessage", "classGpsMetadataMessage.html#ae42c7ad53ea6b3d4e0a7b19cad7e446b", null ],
     [ "~GpsMetadataMessage", "classGpsMetadataMessage.html#a366726c588d4797a3c7a09f187e15a4d", null ],
+    [ "GpsMetadataMessage", "classGpsMetadataMessage.html#af44cc204e89bf531f7b8a2e97ee8f9fc", null ],
     [ "enhancedAltitude", "classGpsMetadataMessage.html#af4af42d838adddb1042519f58a6d3a4e", null ],
     [ "enhancedSpeed", "classGpsMetadataMessage.html#a03065412eaa0135f93b7974e4d82601b", null ],
     [ "heading", "classGpsMetadataMessage.html#a5c9fb171dde0fde7de46025905ec8a67", null ],

@@ -1,0 +1,4 @@
+<map id="SdmProfileMessage::sdmAntIdTransType" name="SdmProfileMessage::sdmAntIdTransType">
+<area shape="rect" id="node1" title="Returns the SdmProfileMessage data message&#39;s sdmAntIdTransType field&#39;s current value." alt="" coords="223,5,381,47"/>
+<area shape="rect" id="node2" href="$classSdmProfileMessage.html#a12cbbfed6b3dd701bd695bda938f1ea3" title="Sets the sdmAntIdTransType field to sdmAntIdTransType." alt="" coords="5,5,175,47"/>
+</map>

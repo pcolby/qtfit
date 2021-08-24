@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('sportmessage_8cpp_source.html',''); in
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QtEndian&gt;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*!</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * \class SportMessage</span></div>
@@ -130,169 +130,178 @@ $(document).ready(function(){initNavTree('sportmessage_8cpp_source.html',''); in
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> * Constructs an invalid SportMessage object.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> * Constructs a SportMessage object.</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> * Typically, instances of this class will be returned by FitStreamReader::readNext, but this</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"> * constructor may be used, along with the relevant setter methods, to create a valid message.</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd">   47</a></span>&#160;<a class="code" href="classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd">SportMessage::SportMessage</a>() : <a class="code" href="classFitDataMessage.html">FitDataMessage</a>(new <a class="code" href="classSportMessagePrivate.html">SportMessagePrivate</a>(this))</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd">   47</a></span>&#160;<a class="code" href="classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd">SportMessage::SportMessage</a>() : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(new <a class="code" href="classSportMessagePrivate.html">SportMessagePrivate</a>(this))</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> * Returns the SportMessage data message&#39;s \c sport field&#39;s current value.</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> * \internal</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * \return the \c sport field value.</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">   57</a></span>&#160;<a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> <a class="code" href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">SportMessage::sport</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSportMessage.html">SportMessage</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> d-&gt;sport;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> * Returns the SportMessage data message&#39;s \c subSport field&#39;s current value.</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> * \return the \c subSport field value.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">   68</a></span>&#160;<a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> <a class="code" href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">SportMessage::subSport</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSportMessage.html">SportMessage</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> d-&gt;subSport;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * Returns the SportMessage data message&#39;s \c name field&#39;s current value.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> * \return the \c name field value.</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">   79</a></span>&#160;QString <a class="code" href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">SportMessage::name</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSportMessage.html">SportMessage</a>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> d-&gt;name;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> * Sets the \c sport field to \a sport.</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> * \param sport The field value to set.</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classSportMessage.html#a8ecd2b0a6e5e852dc46d87c84848e0e0">   90</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSportMessage.html#a8ecd2b0a6e5e852dc46d87c84848e0e0">SportMessage::setSport</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    Q_D(<a class="code" href="classSportMessage.html">SportMessage</a>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    d-&gt;sport = <a class="code" href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">sport</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}<span class="comment"></span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> * Sets the \c subSport field to \a subSport.</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * \param subSport The field value to set.</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classSportMessage.html#a87a791c80bdc98624c50026a5c4ff9de">  100</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSportMessage.html#a87a791c80bdc98624c50026a5c4ff9de">SportMessage::setSubSport</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> subSport)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    Q_D(<a class="code" href="classSportMessage.html">SportMessage</a>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    d-&gt;subSport = <a class="code" href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">subSport</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}<span class="comment"></span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"> * Sets the \c name field to \a name.</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"> * \param name The field value to set.</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classSportMessage.html#aceadee0d3f2dd30657718624bd005613">  110</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSportMessage.html#aceadee0d3f2dd30657718624bd005613">SportMessage::setName</a>(<span class="keyword">const</span> QString name)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Q_D(<a class="code" href="classSportMessage.html">SportMessage</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    d-&gt;name = <a class="code" href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">name</a>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"> * \internal</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"> * \class SportMessagePrivate</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> * The SportMessagePrivate class provides private implementation for the SportMessage.</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"> * \sa SportMessage</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> * \internal</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"> * Constructs a SportMessagePrivate object with public implementation \a q.</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> * \param q Pointer to public implementaton.</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classSportMessagePrivate.html#afcf31284c8aec8f2a3dd28a748a30e80">  133</a></span>&#160;<a class="code" href="classSportMessagePrivate.html#a9bb8a71aadb099b331c0113de9f87d05">SportMessagePrivate::SportMessagePrivate</a>(<a class="code" href="classSportMessage.html">SportMessage</a> * <span class="keyword">const</span> q)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  : <a class="code" href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  , sport(static_cast&lt;<a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a>&gt;(-1))</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  , subSport(static_cast&lt;<a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a>&gt;(-1))</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">globalMessageNumber</a> = <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca96faa3e6c45bb5a07bcc0bcd3be37654">MesgNum::Sport</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"> * \internal</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> * Destroys the SportMessagePrivate object.</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classSportMessagePrivate.html#adf808254a7568abc874234710d43aab9">  146</a></span>&#160;<a class="code" href="classSportMessagePrivate.html#adf808254a7568abc874234710d43aab9">SportMessagePrivate::~SportMessagePrivate</a>()</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b">  151</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b">SportMessagePrivate::setField</a>(</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray &amp;data, <span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, <span class="keyword">const</span> <span class="keywordtype">bool</span> bigEndian)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:sport.sport</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;sport.sport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        this-&gt;<a class="code" href="classSportMessagePrivate.html#a039e874f779f887e1f625c693a1afb5b">sport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:sport.subSport</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a>, <span class="stringliteral">&quot;sport.subSport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        this-&gt;<a class="code" href="classSportMessagePrivate.html#ac255e31f9e78bfdabb8c88d0411b59f1">subSport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:sport.name</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">verify</a>(data, baseType, 1, <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a>, <span class="stringliteral">&quot;sport.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        this-&gt;<a class="code" href="classSportMessagePrivate.html#ad709b92818c488a8a96182cc8dc7d14b">name</a> = QString::fromUtf8(data);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown sport message field number&quot;</span> &lt;&lt; fieldId;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a>(fieldId, data, baseType, bigEndian);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
-<div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00044">QtFit_global.h:44</a></div></div>
-<div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00043">QtFit_global.h:43</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html"><div class="ttname"><a href="classFitDataMessagePrivate.html">FitDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00031">fitdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a4a9a5ee83dbe87dcc25f3fc5f50f2284"><div class="ttname"><a href="classFitDataMessagePrivate.html#a4a9a5ee83dbe87dcc25f3fc5f50f2284">FitDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00245">fitdatamessage.cpp:245</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a80365775402f7e855a8af29238d128a3"><div class="ttname"><a href="classFitDataMessagePrivate.html#a80365775402f7e855a8af29238d128a3">FitDataMessagePrivate::setField</a></div><div class="ttdeci">virtual bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian)</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8cpp_source.html#l00188">fitdatamessage.cpp:188</a></div></div>
-<div class="ttc" id="aclassFitDataMessagePrivate_html_a99934de65f3151c99c9d62035acbacae"><div class="ttname"><a href="classFitDataMessagePrivate.html#a99934de65f3151c99c9d62035acbacae">FitDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage__p_8h_source.html#l00034">fitdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="fitdatamessage_8h_source.html#l00031">fitdatamessage.h:31</a></div></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * Constructs a SportMessage object with private implementation \a d.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * \param d Pointer to private implementation.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classSportMessage.html#a4c0ffc3ba5e951ffb5dddbea0d518f16">   59</a></span>&#160;<a class="code" href="classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd">SportMessage::SportMessage</a>(<a class="code" href="classSportMessagePrivate.html">SportMessagePrivate</a> * <span class="keyword">const</span> d) : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> * Returns the SportMessage data message&#39;s \c sport field&#39;s current value.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> * \return the \c sport field value.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">   69</a></span>&#160;<a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> <a class="code" href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">SportMessage::sport</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSportMessage.html">SportMessage</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;sport;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * Returns the SportMessage data message&#39;s \c subSport field&#39;s current value.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> * \return the \c subSport field value.</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">   80</a></span>&#160;<a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> <a class="code" href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">SportMessage::subSport</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSportMessage.html">SportMessage</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;subSport;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> * Returns the SportMessage data message&#39;s \c name field&#39;s current value.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> * \return the \c name field value.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">   91</a></span>&#160;QString <a class="code" href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">SportMessage::name</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSportMessage.html">SportMessage</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;name;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * Sets the \c sport field to \a sport.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"> * \param sport The field value to set.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classSportMessage.html#a8ecd2b0a6e5e852dc46d87c84848e0e0">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSportMessage.html#a8ecd2b0a6e5e852dc46d87c84848e0e0">SportMessage::setSport</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<a class="code" href="classSportMessage.html">SportMessage</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    d-&gt;sport = <a class="code" href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">sport</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}<span class="comment"></span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"> * Sets the \c subSport field to \a subSport.</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"> * \param subSport The field value to set.</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classSportMessage.html#a87a791c80bdc98624c50026a5c4ff9de">  112</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSportMessage.html#a87a791c80bdc98624c50026a5c4ff9de">SportMessage::setSubSport</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a> subSport)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    Q_D(<a class="code" href="classSportMessage.html">SportMessage</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    d-&gt;subSport = <a class="code" href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">subSport</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}<span class="comment"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"> * Sets the \c name field to \a name.</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"> * \param name The field value to set.</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classSportMessage.html#aceadee0d3f2dd30657718624bd005613">  122</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSportMessage.html#aceadee0d3f2dd30657718624bd005613">SportMessage::setName</a>(<span class="keyword">const</span> QString name)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    Q_D(<a class="code" href="classSportMessage.html">SportMessage</a>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    d-&gt;name = <a class="code" href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">name</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">/// \cond internal</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> * \internal</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"> * \class SportMessagePrivate</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"> * The SportMessagePrivate class provides private implementation for the SportMessage.</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> * \sa SportMessage</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"> * \internal</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> * Constructs a SportMessagePrivate object with public implementation \a q.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"> * \param q Pointer to public implementaton.</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classSportMessagePrivate.html#afcf31284c8aec8f2a3dd28a748a30e80">  147</a></span>&#160;SportMessagePrivate::SportMessagePrivate(<a class="code" href="classSportMessage.html">SportMessage</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  , sport(static_cast&lt;<a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a>&gt;(-1))</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  , subSport(static_cast&lt;<a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a>&gt;(-1))</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::Sport;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"> * \internal</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"> * Destroys the SportMessagePrivate object.</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classSportMessagePrivate.html#adf808254a7568abc874234710d43aab9">  160</a></span>&#160;<a class="code" href="classSportMessagePrivate.html#adf808254a7568abc874234710d43aab9">SportMessagePrivate::~SportMessagePrivate</a>()</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b">  165</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b">SportMessagePrivate::setField</a>(</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray &amp;data, <span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, <span class="keyword">const</span> <span class="keywordtype">bool</span> bigEndian)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:sport.sport</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Enum, <span class="stringliteral">&quot;sport.sport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        this-&gt;<a class="code" href="classSportMessagePrivate.html#a039e874f779f887e1f625c693a1afb5b">sport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:sport.subSport</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Enum, <span class="stringliteral">&quot;sport.subSport&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        this-&gt;<a class="code" href="classSportMessagePrivate.html#ac255e31f9e78bfdabb8c88d0411b59f1">subSport</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:sport.name</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::String, <span class="stringliteral">&quot;sport.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        this-&gt;<a class="code" href="classSportMessagePrivate.html#ad709b92818c488a8a96182cc8dc7d14b">name</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown sport message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">/// \endcond</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;QTFIT_END_NAMESPACE</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
 <div class="ttc" id="aclassSportMessagePrivate_html"><div class="ttname"><a href="classSportMessagePrivate.html">SportMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="sportmessage__p_8h_source.html#l00034">sportmessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassSportMessagePrivate_html_a039e874f779f887e1f625c693a1afb5b"><div class="ttname"><a href="classSportMessagePrivate.html#a039e874f779f887e1f625c693a1afb5b">SportMessagePrivate::sport</a></div><div class="ttdeci">Sport sport</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage__p_8h_source.html#l00037">sportmessage_p.h:37</a></div></div>
-<div class="ttc" id="aclassSportMessagePrivate_html_a941daed00e8f2f9fcd94c2556af2426b"><div class="ttname"><a href="classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b">SportMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian) override</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00151">sportmessage.cpp:151</a></div></div>
-<div class="ttc" id="aclassSportMessagePrivate_html_a9bb8a71aadb099b331c0113de9f87d05"><div class="ttname"><a href="classSportMessagePrivate.html#a9bb8a71aadb099b331c0113de9f87d05">SportMessagePrivate::SportMessagePrivate</a></div><div class="ttdeci">SportMessagePrivate()=delete</div></div>
-<div class="ttc" id="aclassSportMessagePrivate_html_ac255e31f9e78bfdabb8c88d0411b59f1"><div class="ttname"><a href="classSportMessagePrivate.html#ac255e31f9e78bfdabb8c88d0411b59f1">SportMessagePrivate::subSport</a></div><div class="ttdeci">SubSport subSport</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage__p_8h_source.html#l00038">sportmessage_p.h:38</a></div></div>
-<div class="ttc" id="aclassSportMessagePrivate_html_ad709b92818c488a8a96182cc8dc7d14b"><div class="ttname"><a href="classSportMessagePrivate.html#ad709b92818c488a8a96182cc8dc7d14b">SportMessagePrivate::name</a></div><div class="ttdeci">QString name</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage__p_8h_source.html#l00039">sportmessage_p.h:39</a></div></div>
-<div class="ttc" id="aclassSportMessagePrivate_html_adf808254a7568abc874234710d43aab9"><div class="ttname"><a href="classSportMessagePrivate.html#adf808254a7568abc874234710d43aab9">SportMessagePrivate::~SportMessagePrivate</a></div><div class="ttdeci">virtual ~SportMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00146">sportmessage.cpp:146</a></div></div>
+<div class="ttc" id="aclassSportMessagePrivate_html_a039e874f779f887e1f625c693a1afb5b"><div class="ttname"><a href="classSportMessagePrivate.html#a039e874f779f887e1f625c693a1afb5b">SportMessagePrivate::sport</a></div><div class="ttdeci">Sport sport</div><div class="ttdoc">The SportMessage FIT message's sport field.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage__p_8h_source.html#l00040">sportmessage_p.h:40</a></div></div>
+<div class="ttc" id="aclassSportMessagePrivate_html_a941daed00e8f2f9fcd94c2556af2426b"><div class="ttname"><a href="classSportMessagePrivate.html#a941daed00e8f2f9fcd94c2556af2426b">SportMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian) override</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00165">sportmessage.cpp:165</a></div></div>
+<div class="ttc" id="aclassSportMessagePrivate_html_ac255e31f9e78bfdabb8c88d0411b59f1"><div class="ttname"><a href="classSportMessagePrivate.html#ac255e31f9e78bfdabb8c88d0411b59f1">SportMessagePrivate::subSport</a></div><div class="ttdeci">SubSport subSport</div><div class="ttdoc">The SportMessage FIT message's subSport field.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage__p_8h_source.html#l00045">sportmessage_p.h:45</a></div></div>
+<div class="ttc" id="aclassSportMessagePrivate_html_ad709b92818c488a8a96182cc8dc7d14b"><div class="ttname"><a href="classSportMessagePrivate.html#ad709b92818c488a8a96182cc8dc7d14b">SportMessagePrivate::name</a></div><div class="ttdeci">QString name</div><div class="ttdoc">The SportMessage FIT message's name field.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage__p_8h_source.html#l00050">sportmessage_p.h:50</a></div></div>
+<div class="ttc" id="aclassSportMessagePrivate_html_adf808254a7568abc874234710d43aab9"><div class="ttname"><a href="classSportMessagePrivate.html#adf808254a7568abc874234710d43aab9">SportMessagePrivate::~SportMessagePrivate</a></div><div class="ttdeci">virtual ~SportMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00160">sportmessage.cpp:160</a></div></div>
 <div class="ttc" id="aclassSportMessage_html"><div class="ttname"><a href="classSportMessage.html">SportMessage</a></div><div class="ttdoc">The SportMessage class represents a FIT SportMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8h_source.html#l00034">sportmessage.h:34</a></div></div>
-<div class="ttc" id="aclassSportMessage_html_a35b4c6e0958e6f396452a7b0f5a617dd"><div class="ttname"><a href="classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd">SportMessage::SportMessage</a></div><div class="ttdeci">SportMessage()</div><div class="ttdoc">Constructs an invalid SportMessage object.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00047">sportmessage.cpp:47</a></div></div>
-<div class="ttc" id="aclassSportMessage_html_a80db9b06a5527f2fcc23816e5a765e14"><div class="ttname"><a href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">SportMessage::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdoc">Returns the SportMessage data message's name field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00079">sportmessage.cpp:79</a></div></div>
-<div class="ttc" id="aclassSportMessage_html_a87a791c80bdc98624c50026a5c4ff9de"><div class="ttname"><a href="classSportMessage.html#a87a791c80bdc98624c50026a5c4ff9de">SportMessage::setSubSport</a></div><div class="ttdeci">void setSubSport(const SubSport subSport)</div><div class="ttdoc">Sets the subSport field to subSport.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00100">sportmessage.cpp:100</a></div></div>
-<div class="ttc" id="aclassSportMessage_html_a8ecd2b0a6e5e852dc46d87c84848e0e0"><div class="ttname"><a href="classSportMessage.html#a8ecd2b0a6e5e852dc46d87c84848e0e0">SportMessage::setSport</a></div><div class="ttdeci">void setSport(const Sport sport)</div><div class="ttdoc">Sets the sport field to sport.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00090">sportmessage.cpp:90</a></div></div>
-<div class="ttc" id="aclassSportMessage_html_aab4699858f3204306676f30916ac4f51"><div class="ttname"><a href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">SportMessage::sport</a></div><div class="ttdeci">Sport sport() const</div><div class="ttdoc">Returns the SportMessage data message's sport field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00057">sportmessage.cpp:57</a></div></div>
-<div class="ttc" id="aclassSportMessage_html_aceadee0d3f2dd30657718624bd005613"><div class="ttname"><a href="classSportMessage.html#aceadee0d3f2dd30657718624bd005613">SportMessage::setName</a></div><div class="ttdeci">void setName(const QString name)</div><div class="ttdoc">Sets the name field to name.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00110">sportmessage.cpp:110</a></div></div>
-<div class="ttc" id="aclassSportMessage_html_adb37c607c70835212eafc15086a36e6e"><div class="ttname"><a href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">SportMessage::subSport</a></div><div class="ttdeci">SubSport subSport() const</div><div class="ttdoc">Returns the SportMessage data message's subSport field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00068">sportmessage.cpp:68</a></div></div>
+<div class="ttc" id="aclassSportMessage_html_a35b4c6e0958e6f396452a7b0f5a617dd"><div class="ttname"><a href="classSportMessage.html#a35b4c6e0958e6f396452a7b0f5a617dd">SportMessage::SportMessage</a></div><div class="ttdeci">SportMessage()</div><div class="ttdoc">Constructs a SportMessage object.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00047">sportmessage.cpp:47</a></div></div>
+<div class="ttc" id="aclassSportMessage_html_a80db9b06a5527f2fcc23816e5a765e14"><div class="ttname"><a href="classSportMessage.html#a80db9b06a5527f2fcc23816e5a765e14">SportMessage::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdoc">Returns the SportMessage data message's name field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00091">sportmessage.cpp:91</a></div></div>
+<div class="ttc" id="aclassSportMessage_html_a87a791c80bdc98624c50026a5c4ff9de"><div class="ttname"><a href="classSportMessage.html#a87a791c80bdc98624c50026a5c4ff9de">SportMessage::setSubSport</a></div><div class="ttdeci">void setSubSport(const SubSport subSport)</div><div class="ttdoc">Sets the subSport field to subSport.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00112">sportmessage.cpp:112</a></div></div>
+<div class="ttc" id="aclassSportMessage_html_a8ecd2b0a6e5e852dc46d87c84848e0e0"><div class="ttname"><a href="classSportMessage.html#a8ecd2b0a6e5e852dc46d87c84848e0e0">SportMessage::setSport</a></div><div class="ttdeci">void setSport(const Sport sport)</div><div class="ttdoc">Sets the sport field to sport.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00102">sportmessage.cpp:102</a></div></div>
+<div class="ttc" id="aclassSportMessage_html_aab4699858f3204306676f30916ac4f51"><div class="ttname"><a href="classSportMessage.html#aab4699858f3204306676f30916ac4f51">SportMessage::sport</a></div><div class="ttdeci">Sport sport() const</div><div class="ttdoc">Returns the SportMessage data message's sport field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00069">sportmessage.cpp:69</a></div></div>
+<div class="ttc" id="aclassSportMessage_html_aceadee0d3f2dd30657718624bd005613"><div class="ttname"><a href="classSportMessage.html#aceadee0d3f2dd30657718624bd005613">SportMessage::setName</a></div><div class="ttdeci">void setName(const QString name)</div><div class="ttdoc">Sets the name field to name.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00122">sportmessage.cpp:122</a></div></div>
+<div class="ttc" id="aclassSportMessage_html_adb37c607c70835212eafc15086a36e6e"><div class="ttname"><a href="classSportMessage.html#adb37c607c70835212eafc15086a36e6e">SportMessage::subSport</a></div><div class="ttdeci">SubSport subSport() const</div><div class="ttdoc">Returns the SportMessage data message's subSport field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sportmessage_8cpp_source.html#l00080">sportmessage.cpp:80</a></div></div>
 <div class="ttc" id="asportmessage_8h_html"><div class="ttname"><a href="sportmessage_8h.html">sportmessage.h</a></div></div>
 <div class="ttc" id="asportmessage__p_8h_html"><div class="ttname"><a href="sportmessage__p_8h.html">sportmessage_p.h</a></div></div>
-<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a></div><div class="ttdeci">FitBaseType</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l02342">types.h:2342</a></div></div>
-<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05a27118326006d3829667a400ad23d5d98">FitBaseType::String</a></div><div class="ttdeci">@ String</div></div>
-<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05acf20423ed48998082c20099488a0917c">FitBaseType::Enum</a></div><div class="ttdeci">@ Enum</div></div>
-<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00481">types.h:481</a></div></div>
-<div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22ca96faa3e6c45bb5a07bcc0bcd3be37654"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22ca96faa3e6c45bb5a07bcc0bcd3be37654">MesgNum::Sport</a></div><div class="ttdeci">@ Sport</div></div>
-<div class="ttc" id="atypes_8h_html_aed10717f0596999a72fa9b81a529b08b"><div class="ttname"><a href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a></div><div class="ttdeci">SubSport</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00612">types.h:612</a></div></div>
+<div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a></div><div class="ttdeci">FitBaseType</div><div class="ttdoc">Garmin FIT FitBaseType type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l03378">types.h:3378</a></div></div>
+<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdoc">Garmin FIT Sport type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00685">types.h:685</a></div></div>
+<div class="ttc" id="atypes_8h_html_aed10717f0596999a72fa9b81a529b08b"><div class="ttname"><a href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a></div><div class="ttdeci">SubSport</div><div class="ttdoc">Garmin FIT SubSport type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00881">types.h:881</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

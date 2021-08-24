@@ -1,0 +1,4 @@
+<map id="BikeProfileMessage::setBikeSpdcadAntIdTransType" name="BikeProfileMessage::setBikeSpdcadAntIdTransType">
+<area shape="rect" id="node1" title="Sets the bikeSpdcadAntIdTransType field to bikeSpdcadAntIdTransType." alt="" coords="5,5,228,47"/>
+<area shape="rect" id="node2" href="$classBikeProfileMessage.html#ae0e3036af2d00686ac1226d2bf0072da" title="Returns the BikeProfileMessage data message&#39;s bikeSpdcadAntIdTransType field&#39;s current value." alt="" coords="276,5,479,47"/>
+</map>

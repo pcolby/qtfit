@@ -21,9 +21,9 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classFitDataMessagePrivate.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="20,-67.5 20,-86.5 150,-86.5 150,-67.5 20,-67.5"/>
-<text text-anchor="middle" x="85" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitDataMessagePrivate</text>
+<g id="a_node2"><a xlink:href="classAbstractDataMessagePrivate.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="6,-67.5 6,-86.5 164,-86.5 164,-67.5 6,-67.5"/>
+<text text-anchor="middle" x="85" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDataMessagePrivate</text>
 </a>
 </g>
 </g>

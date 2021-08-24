@@ -116,13 +116,13 @@ $(document).ready(function(){initNavTree('recordmessage_8h_source.html',''); ini
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_RECORDMESSAGE_H</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_RECORDMESSAGE_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;fitdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>RecordMessagePrivate;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classRecordMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classRecordMessage.html">RecordMessage</a> : <span class="keyword">public</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classRecordMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classRecordMessage.html">RecordMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classRecordMessage.html">RecordMessage</a>();</div>
@@ -279,9 +279,9 @@ $(document).ready(function(){initNavTree('recordmessage_8h_source.html',''); ini
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> setCoreTemperature(<span class="keyword">const</span> quint16 coreTemperature);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">    /// \cond internal</span></div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classRecordMessage.html">RecordMessage</a>(RecordMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    /// \endcond</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classRecordMessage.html">RecordMessage</a>)</div>
@@ -292,13 +292,13 @@ $(document).ready(function(){initNavTree('recordmessage_8h_source.html',''); ini
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;QTFIT_END_NAMESPACE</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_RECORDMESSAGE_H</span></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> abstractdatamessage.h:31</div></div>
 <div class="ttc" id="aclassRecordMessage_html"><div class="ttname"><a href="classRecordMessage.html">RecordMessage</a></div><div class="ttdoc">The RecordMessage class represents a FIT RecordMessage data message.</div><div class="ttdef"><b>Definition:</b> recordmessage.h:34</div></div>
-<div class="ttc" id="atypes_8h_html_a38636cc2bf98962a1f3f41432d64b4ab"><div class="ttname"><a href="types_8h.html#a38636cc2bf98962a1f3f41432d64b4ab">LeftRightBalance</a></div><div class="ttdeci">LeftRightBalance</div><div class="ttdef"><b>Definition:</b> types.h:1684</div></div>
-<div class="ttc" id="atypes_8h_html_a39772d8d944397339ec241c93a23923b"><div class="ttname"><a href="types_8h.html#a39772d8d944397339ec241c93a23923b">ActivityType</a></div><div class="ttdeci">ActivityType</div><div class="ttdef"><b>Definition:</b> types.h:1638</div></div>
-<div class="ttc" id="atypes_8h_html_a490fe83ca1f85eab28e987e34be14292"><div class="ttname"><a href="types_8h.html#a490fe83ca1f85eab28e987e34be14292">DeviceIndex</a></div><div class="ttdeci">DeviceIndex</div><div class="ttdef"><b>Definition:</b> types.h:199</div></div>
-<div class="ttc" id="atypes_8h_html_a8f718445e86f6443489c95d1e396bab4"><div class="ttname"><a href="types_8h.html#a8f718445e86f6443489c95d1e396bab4">StrokeType</a></div><div class="ttdeci">StrokeType</div><div class="ttdef"><b>Definition:</b> types.h:1877</div></div>
-<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> types.h:184</div></div>
+<div class="ttc" id="atypes_8h_html_a38636cc2bf98962a1f3f41432d64b4ab"><div class="ttname"><a href="types_8h.html#a38636cc2bf98962a1f3f41432d64b4ab">LeftRightBalance</a></div><div class="ttdeci">LeftRightBalance</div><div class="ttdoc">Garmin FIT LeftRightBalance type.</div><div class="ttdef"><b>Definition:</b> types.h:2353</div></div>
+<div class="ttc" id="atypes_8h_html_a39772d8d944397339ec241c93a23923b"><div class="ttname"><a href="types_8h.html#a39772d8d944397339ec241c93a23923b">ActivityType</a></div><div class="ttdeci">ActivityType</div><div class="ttdoc">Garmin FIT ActivityType type.</div><div class="ttdef"><b>Definition:</b> types.h:2271</div></div>
+<div class="ttc" id="atypes_8h_html_a490fe83ca1f85eab28e987e34be14292"><div class="ttname"><a href="types_8h.html#a490fe83ca1f85eab28e987e34be14292">DeviceIndex</a></div><div class="ttdeci">DeviceIndex</div><div class="ttdoc">Garmin FIT DeviceIndex type.</div><div class="ttdef"><b>Definition:</b> types.h:278</div></div>
+<div class="ttc" id="atypes_8h_html_a8f718445e86f6443489c95d1e396bab4"><div class="ttname"><a href="types_8h.html#a8f718445e86f6443489c95d1e396bab4">StrokeType</a></div><div class="ttdeci">StrokeType</div><div class="ttdoc">Garmin FIT StrokeType type.</div><div class="ttdef"><b>Definition:</b> types.h:2643</div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> types.h:237</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['warmupexercisename_3529',['WarmUpExerciseName',['../types_8h.html#a2874688c94d48de1ccd33e6786286fbf',1,'types.h']]],
-  ['weatherreport_3530',['WeatherReport',['../types_8h.html#a3802a7a02b9155d946be6a018c45f043',1,'types.h']]],
-  ['workoutcapabilities_3531',['WorkoutCapabilities',['../types_8h.html#ac76b47805040089da0368a7273a87655',1,'types.h']]],
-  ['workouthr_3532',['WorkoutHr',['../types_8h.html#a6e018cdb980c3425ca5fe5f3e0dd52fe',1,'types.h']]],
-  ['workoutpower_3533',['WorkoutPower',['../types_8h.html#a9f158d36c7d8f3b966661b7e37ef0efd',1,'types.h']]]
+  ['plankexercisename_3692',['PlankExerciseName',['../types_8h.html#a17c9d8de027c09e02b07fda419c76507',1,'types.h']]],
+  ['plyoexercisename_3693',['PlyoExerciseName',['../types_8h.html#aa38779be7755efe28b3e81b7ac6d658c',1,'types.h']]],
+  ['powerphasetype_3694',['PowerPhaseType',['../types_8h.html#a6aabacef84bb70552eb805d7ba3ac82b',1,'types.h']]],
+  ['pullupexercisename_3695',['PullUpExerciseName',['../types_8h.html#af55e655a92a6a777f412b85aff15e0af',1,'types.h']]],
+  ['pushupexercisename_3696',['PushUpExerciseName',['../types_8h.html#a6230df23cf868e87b9d6a76cb6870bc9',1,'types.h']]],
+  ['pwrzonecalc_3697',['PwrZoneCalc',['../types_8h.html#a98a6372ff77b602f3529528997c3c9a3',1,'types.h']]]
 ];

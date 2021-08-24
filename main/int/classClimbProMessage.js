@@ -2,6 +2,7 @@ var classClimbProMessage =
 [
     [ "ClimbProMessage", "classClimbProMessage.html#a9fbd53e193529c5d75f160d400a1801e", null ],
     [ "~ClimbProMessage", "classClimbProMessage.html#a4d455e5ab0ed4dad6502d8a8405cd015", null ],
+    [ "ClimbProMessage", "classClimbProMessage.html#aad4f99af3f34ae5422efe9f0fc230e30", null ],
     [ "climbCategory", "classClimbProMessage.html#aa05c22845945146ac0f66c4ff0bc454c", null ],
     [ "climbNumber", "classClimbProMessage.html#ae12f1c06aa675aa31106b208331fc7ee", null ],
     [ "climbProEvent", "classClimbProMessage.html#a8264da3b31f61cb82df0bfc82dfcc38d", null ],

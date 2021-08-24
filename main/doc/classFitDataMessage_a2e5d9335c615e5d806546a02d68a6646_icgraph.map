@@ -1,5 +1,0 @@
-<map id="FitDataMessage::isNull" name="FitDataMessage::isNull">
-<area shape="rect" id="node1" title="Returns true if this is not a valid data message, otherwise false." alt="" coords="293,31,465,57"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html#a46dd90c4c2605fe62601279c92779d99" title="Copies a FitDataMessage." alt="" coords="5,5,245,32"/>
-<area shape="rect" id="node3" href="$classFitDataMessage.html#a7546b9d7d9696f6095592380afd9c680" title="Assigns a FitDataMessage to this one." alt="" coords="25,56,226,83"/>
-</map>

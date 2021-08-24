@@ -1,5 +1,5 @@
 <map id="DeviceSettingsMessagePrivate" name="DeviceSettingsMessagePrivate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,229,197"/>
-<area shape="rect" id="node2" href="$classFitDataMessagePrivate.html" title=" " alt="" coords="31,95,204,121"/>
-<area shape="rect" id="node3" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="54,5,181,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,229,121"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="163,5,373,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="253,95,419,121"/>
 </map>

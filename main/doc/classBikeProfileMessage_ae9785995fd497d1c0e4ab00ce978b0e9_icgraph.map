@@ -1,0 +1,4 @@
+<map id="BikeProfileMessage::rearGear" name="BikeProfileMessage::rearGear">
+<area shape="rect" id="node1" title="Returns the BikeProfileMessage data message&#39;s rearGear field&#39;s current value." alt="" coords="203,5,352,47"/>
+<area shape="rect" id="node2" href="$classBikeProfileMessage.html#aefbe221f14aacdf4fcfc0db8e637d588" title="Sets the rearGear field to rearGear." alt="" coords="5,5,155,47"/>
+</map>

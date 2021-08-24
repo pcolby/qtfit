@@ -2,6 +2,7 @@ var classExerciseTitleMessage =
 [
     [ "ExerciseTitleMessage", "classExerciseTitleMessage.html#a89745e9a0b8c08483298ce7d88927e63", null ],
     [ "~ExerciseTitleMessage", "classExerciseTitleMessage.html#ae64410137f17544efa78e423b997a3d4", null ],
+    [ "ExerciseTitleMessage", "classExerciseTitleMessage.html#a13dc93de6730a156508b74168f19b42f", null ],
     [ "exerciseCategory", "classExerciseTitleMessage.html#a4ab82f98511d30ae817d090a0f923f6f", null ],
     [ "exerciseName", "classExerciseTitleMessage.html#a0d59e68fd9518104bdad730781254fbe", null ],
     [ "messageIndex", "classExerciseTitleMessage.html#ab344fc96b09db171e41322c0f0ac22c0", null ],

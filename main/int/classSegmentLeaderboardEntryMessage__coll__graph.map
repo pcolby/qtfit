@@ -1,4 +1,5 @@
 <map id="SegmentLeaderboardEntryMessage" name="SegmentLeaderboardEntryMessage">
-<area shape="rect" id="node1" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message..." alt="" coords="5,80,259,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="69,5,195,32"/>
+<area shape="rect" id="node1" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message..." alt="" coords="5,95,259,121"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="237,5,403,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="283,95,493,121"/>
 </map>

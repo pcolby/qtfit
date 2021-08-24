@@ -1,0 +1,4 @@
+<map id="AntChannelIdMessage::deviceType" name="AntChannelIdMessage::deviceType">
+<area shape="rect" id="node1" title="Returns the AntChannelIdMessage data message&#39;s deviceType field&#39;s current value." alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node2" href="$classAntChannelIdMessage.html#a054679667f215882bc95ddcda9250a49" title="Sets the deviceType field to deviceType." alt="" coords="5,5,172,47"/>
+</map>

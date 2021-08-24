@@ -116,13 +116,13 @@ $(document).ready(function(){initNavTree('developerdataidmessage_8h_source.html'
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_DEVELOPERDATAIDMESSAGE_H</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_DEVELOPERDATAIDMESSAGE_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;fitdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>DeveloperDataIdMessagePrivate;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classDeveloperDataIdMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classDeveloperDataIdMessage.html">DeveloperDataIdMessage</a> : <span class="keyword">public</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classDeveloperDataIdMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classDeveloperDataIdMessage.html">DeveloperDataIdMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classDeveloperDataIdMessage.html">DeveloperDataIdMessage</a>();</div>
@@ -141,9 +141,9 @@ $(document).ready(function(){initNavTree('developerdataidmessage_8h_source.html'
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> setApplicationVersion(<span class="keyword">const</span> quint32 applicationVersion);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    /// \cond internal</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classDeveloperDataIdMessage.html">DeveloperDataIdMessage</a>(DeveloperDataIdMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /// \endcond</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classDeveloperDataIdMessage.html">DeveloperDataIdMessage</a>)</div>
@@ -154,9 +154,9 @@ $(document).ready(function(){initNavTree('developerdataidmessage_8h_source.html'
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;QTFIT_END_NAMESPACE</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_DEVELOPERDATAIDMESSAGE_H</span></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> abstractdatamessage.h:31</div></div>
 <div class="ttc" id="aclassDeveloperDataIdMessage_html"><div class="ttname"><a href="classDeveloperDataIdMessage.html">DeveloperDataIdMessage</a></div><div class="ttdoc">The DeveloperDataIdMessage class represents a FIT DeveloperDataIdMessage data message.</div><div class="ttdef"><b>Definition:</b> developerdataidmessage.h:34</div></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
-<div class="ttc" id="atypes_8h_html_abff0cc6077b6b352288453cfaef93f80"><div class="ttname"><a href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a></div><div class="ttdeci">Manufacturer</div><div class="ttdef"><b>Definition:</b> types.h:971</div></div>
+<div class="ttc" id="atypes_8h_html_abff0cc6077b6b352288453cfaef93f80"><div class="ttname"><a href="types_8h.html#abff0cc6077b6b352288453cfaef93f80">Manufacturer</a></div><div class="ttdeci">Manufacturer</div><div class="ttdoc">Garmin FIT Manufacturer type.</div><div class="ttdef"><b>Definition:</b> types.h:1480</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

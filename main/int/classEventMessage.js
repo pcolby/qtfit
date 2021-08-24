@@ -2,6 +2,7 @@ var classEventMessage =
 [
     [ "EventMessage", "classEventMessage.html#a1af65b34ed2337c476357d1e8c666308", null ],
     [ "~EventMessage", "classEventMessage.html#a4bfc58900acc2840e4913faa837c6319", null ],
+    [ "EventMessage", "classEventMessage.html#a1eb2e25eb95ebd441ce91b55f897ad9a", null ],
     [ "data", "classEventMessage.html#a327c4082f4456cc06b881a49d18f6f06", null ],
     [ "data16", "classEventMessage.html#a1281b41fe9cc86d4afd46b6352990d54", null ],
     [ "deviceIndex", "classEventMessage.html#a34422e551a9bd7411abbbd9125206fc4", null ],

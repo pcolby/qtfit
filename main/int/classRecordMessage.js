@@ -2,6 +2,7 @@ var classRecordMessage =
 [
     [ "RecordMessage", "classRecordMessage.html#a2777c9a096fa6f48415f23524d7d8f70", null ],
     [ "~RecordMessage", "classRecordMessage.html#ab6021666394184e875c097eedccba5ef", null ],
+    [ "RecordMessage", "classRecordMessage.html#ae9c0215511072159ba539079d18776be", null ],
     [ "absolutePressure", "classRecordMessage.html#a3e90041b337720420e3c44085f770bdc", null ],
     [ "accumulatedPower", "classRecordMessage.html#a34997e3a815584b32c6c1ff89c12faad", null ],
     [ "activityType", "classRecordMessage.html#a1afd1fad1028b8a955e842a06e7f47af", null ],

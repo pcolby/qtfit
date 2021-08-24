@@ -1,4 +1,5 @@
 <map id="SoftwareMessage" name="SoftwareMessage">
-<area shape="rect" id="node1" title="The SoftwareMessage class represents a FIT SoftwareMessage data message." alt="" coords="5,80,143,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="11,5,137,32"/>
+<area shape="rect" id="node1" title="The SoftwareMessage class represents a FIT SoftwareMessage data message." alt="" coords="5,95,143,121"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="122,5,287,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="167,95,378,121"/>
 </map>

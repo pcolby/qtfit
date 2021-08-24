@@ -2,6 +2,7 @@ var classBarometerDataMessage =
 [
     [ "BarometerDataMessage", "classBarometerDataMessage.html#aaeadbb72bb537970dcb9a4abb9d06744", null ],
     [ "~BarometerDataMessage", "classBarometerDataMessage.html#af44e0cb1a0b4816818be8c74dc2d653f", null ],
+    [ "BarometerDataMessage", "classBarometerDataMessage.html#aee87c5fc39449202f8409f88ac8af85f", null ],
     [ "baroPres", "classBarometerDataMessage.html#a01d73a28eafd527d34c24abaf134ef25", null ],
     [ "sampleTimeOffset", "classBarometerDataMessage.html#a7766400bcb23fc4d0b66b90e6059d36f", null ],
     [ "setBaroPres", "classBarometerDataMessage.html#a80ff7c0415bd94131ee6261e1e5b6d26", null ],

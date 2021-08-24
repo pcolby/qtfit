@@ -2,6 +2,7 @@ var classFileCapabilitiesMessage =
 [
     [ "FileCapabilitiesMessage", "classFileCapabilitiesMessage.html#adfb990a78b117704e7abf4d564456651", null ],
     [ "~FileCapabilitiesMessage", "classFileCapabilitiesMessage.html#afb9d270446e797f3ae570504f0a565ae", null ],
+    [ "FileCapabilitiesMessage", "classFileCapabilitiesMessage.html#a95bc593ad2f5d9a1057e8ada1ac2ba1b", null ],
     [ "directory", "classFileCapabilitiesMessage.html#a4db00dc4a4f35dea085ddadbcbb688fa", null ],
     [ "flags", "classFileCapabilitiesMessage.html#aefdf4b18a032bbbb1802e6ae61cd77a3", null ],
     [ "maxCount", "classFileCapabilitiesMessage.html#a38e3e7c8e2b8589b3fd8d275000bd8ad", null ],

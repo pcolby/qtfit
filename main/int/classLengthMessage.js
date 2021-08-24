@@ -2,6 +2,7 @@ var classLengthMessage =
 [
     [ "LengthMessage", "classLengthMessage.html#ad3c97122176d312fda43b83290b17012", null ],
     [ "~LengthMessage", "classLengthMessage.html#a066f4a40edc75f20d1a3a46a8873ec98", null ],
+    [ "LengthMessage", "classLengthMessage.html#ad916c73cdbbee10ef0f3ae057ec6c221", null ],
     [ "avgSpeed", "classLengthMessage.html#a0e1056c80b532b4053cac54b367d0997", null ],
     [ "avgSwimmingCadence", "classLengthMessage.html#aad62364b6e77d3e6d66f60acb33af358", null ],
     [ "event", "classLengthMessage.html#a17a504e6230bcbe1ec7f28f9caf52989", null ],

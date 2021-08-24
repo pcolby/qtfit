@@ -2,6 +2,7 @@ var classGoalMessage =
 [
     [ "GoalMessage", "classGoalMessage.html#a14c983dae9a159c102bdaa1a51874fc5", null ],
     [ "~GoalMessage", "classGoalMessage.html#aa2c69f41c80f48e893c1cf24d185e6a6", null ],
+    [ "GoalMessage", "classGoalMessage.html#a530411e4375327c1cfcbdbbbdc9288f7", null ],
     [ "enabled", "classGoalMessage.html#a187f919c0d04883a2b669cbd9e5742d3", null ],
     [ "endDate", "classGoalMessage.html#aefe4621299083429fb40efa1767bbc97", null ],
     [ "messageIndex", "classGoalMessage.html#a1535265f54cdaf3a6d81aed7b35709a6", null ],

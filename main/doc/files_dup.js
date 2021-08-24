@@ -1,5 +1,6 @@
 var files_dup =
 [
+    [ "abstractdatamessage.h", "abstractdatamessage_8h_source.html", null ],
     [ "accelerometerdatamessage.cpp", "accelerometerdatamessage_8cpp.html", null ],
     [ "accelerometerdatamessage.h", "accelerometerdatamessage_8h.html", [
       [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html", "classAccelerometerDataMessage" ]
@@ -132,7 +133,6 @@ var files_dup =
     [ "fileidmessage.h", "fileidmessage_8h.html", [
       [ "FileIdMessage", "classFileIdMessage.html", "classFileIdMessage" ]
     ] ],
-    [ "fitdatamessage.h", "fitdatamessage_8h_source.html", null ],
     [ "fitdatamessages.cpp", "fitdatamessages_8cpp.html", null ],
     [ "fitstreamreader.h", "fitstreamreader_8h_source.html", null ],
     [ "goalmessage.cpp", "goalmessage_8cpp.html", null ],

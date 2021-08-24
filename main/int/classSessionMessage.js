@@ -2,6 +2,7 @@ var classSessionMessage =
 [
     [ "SessionMessage", "classSessionMessage.html#a784d3afdb367d622437e7c8d1b215186", null ],
     [ "~SessionMessage", "classSessionMessage.html#ac428dddca81ef824ac5559d0d018e5ab", null ],
+    [ "SessionMessage", "classSessionMessage.html#a9fb7cd7211964a1377d5c49753826f53", null ],
     [ "avgAltitude", "classSessionMessage.html#a6f927bc81f90c0a7ea3dab0fa97fc6db", null ],
     [ "avgBallSpeed", "classSessionMessage.html#a3446fc93da8e8e5ff0dcc172444b6760", null ],
     [ "avgCadence", "classSessionMessage.html#a275d2c3c3c53469191f46a1eaf97a6f1", null ],

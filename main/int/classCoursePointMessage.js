@@ -2,6 +2,7 @@ var classCoursePointMessage =
 [
     [ "CoursePointMessage", "classCoursePointMessage.html#a63c1d67204cb5d1052fca3e962521291", null ],
     [ "~CoursePointMessage", "classCoursePointMessage.html#a374cb4503db32fd5a2f5a480a3b0b0c6", null ],
+    [ "CoursePointMessage", "classCoursePointMessage.html#a3196410390bd4e4cf2cad85cf0883db4", null ],
     [ "distance", "classCoursePointMessage.html#a225af795765f4c029f278ba7880eb8f1", null ],
     [ "favorite", "classCoursePointMessage.html#a9f4a3d2438e7744fe1685765a78a612d", null ],
     [ "messageIndex", "classCoursePointMessage.html#a94b85a8b8e0da8e45ca53f75dc51608a", null ],

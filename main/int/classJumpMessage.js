@@ -2,6 +2,7 @@ var classJumpMessage =
 [
     [ "JumpMessage", "classJumpMessage.html#a9a665f641505213e71f402ab493da785", null ],
     [ "~JumpMessage", "classJumpMessage.html#a6e592996bf64da7c1b19b70f4f9444d7", null ],
+    [ "JumpMessage", "classJumpMessage.html#adc3f3fe006de139297e65c206849fc2f", null ],
     [ "distance", "classJumpMessage.html#a83dedfe4e14e782418493e1adc69b37c", null ],
     [ "enhancedSpeed", "classJumpMessage.html#a40245a44d156f772374461d7b765f57a", null ],
     [ "hangTime", "classJumpMessage.html#ae19ee8f06f8b532cb8e055d67a960355", null ],

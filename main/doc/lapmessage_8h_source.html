@@ -116,13 +116,13 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_LAPMESSAGE_H</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_LAPMESSAGE_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;fitdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>LapMessagePrivate;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classLapMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classLapMessage.html">LapMessage</a> : <span class="keyword">public</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classLapMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classLapMessage.html">LapMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classLapMessage.html">LapMessage</a>();</div>
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a> event() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    EventType eventType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="types_8h.html#a2628ea8d12e8b2563c32f05dc7fff6fa">EventType</a> eventType() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> startTime() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    qint32 startPositionLat() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    qint32 startPositionLong() <span class="keyword">const</span>;</div>
@@ -153,8 +153,8 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    quint16 maxPower() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    quint16 totalAscent() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    quint16 totalDescent() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Intensity intensity() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    LapTrigger lapTrigger() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="types_8h.html#a5d567f144bddb8d834b7904e76fbc375">Intensity</a> intensity() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="types_8h.html#a424d5e31cd7ae4f1aed469f162d2331f">LapTrigger</a> lapTrigger() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    quint8 eventGroup() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    quint16 numLengths() <span class="keyword">const</span>;</div>
@@ -248,7 +248,7 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> setMessageIndex(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> setTimestamp(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> timestamp);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> setEvent(<span class="keyword">const</span> <a class="code" href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a> event);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> setEventType(<span class="keyword">const</span> EventType eventType);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> setEventType(<span class="keyword">const</span> <a class="code" href="types_8h.html#a2628ea8d12e8b2563c32f05dc7fff6fa">EventType</a> eventType);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> setStartTime(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> startTime);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> setStartPositionLat(<span class="keyword">const</span> qint32 startPositionLat);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">void</span> setStartPositionLong(<span class="keyword">const</span> qint32 startPositionLong);</div>
@@ -270,8 +270,8 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">void</span> setMaxPower(<span class="keyword">const</span> quint16 maxPower);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> setTotalAscent(<span class="keyword">const</span> quint16 totalAscent);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> setTotalDescent(<span class="keyword">const</span> quint16 totalDescent);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> setIntensity(<span class="keyword">const</span> Intensity intensity);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> setLapTrigger(<span class="keyword">const</span> LapTrigger lapTrigger);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> setIntensity(<span class="keyword">const</span> <a class="code" href="types_8h.html#a5d567f144bddb8d834b7904e76fbc375">Intensity</a> intensity);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> setLapTrigger(<span class="keyword">const</span> <a class="code" href="types_8h.html#a424d5e31cd7ae4f1aed469f162d2331f">LapTrigger</a> lapTrigger);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> setSport(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a> sport);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">void</span> setEventGroup(<span class="keyword">const</span> quint8 eventGroup);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> setNumLengths(<span class="keyword">const</span> quint16 numLengths);</div>
@@ -363,9 +363,9 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">void</span> setMaxCoreTemperature(<span class="keyword">const</span> quint16 maxCoreTemperature);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">    /// \cond internal</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classLapMessage.html">LapMessage</a>(LapMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">    /// \endcond</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classLapMessage.html">LapMessage</a>)</div>
@@ -376,15 +376,18 @@ $(document).ready(function(){initNavTree('lapmessage_8h_source.html',''); initRe
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;QTFIT_END_NAMESPACE</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_LAPMESSAGE_H</span></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> abstractdatamessage.h:31</div></div>
 <div class="ttc" id="aclassLapMessage_html"><div class="ttname"><a href="classLapMessage.html">LapMessage</a></div><div class="ttdoc">The LapMessage class represents a FIT LapMessage data message.</div><div class="ttdef"><b>Definition:</b> lapmessage.h:34</div></div>
-<div class="ttc" id="atypes_8h_html_a024199a3d93e059de66ed7ae51a7bea5"><div class="ttname"><a href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a></div><div class="ttdeci">SwimStroke</div><div class="ttdef"><b>Definition:</b> types.h:1628</div></div>
-<div class="ttc" id="atypes_8h_html_a5667b805d857c6d28f83f6038a0272d3"><div class="ttname"><a href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a></div><div class="ttdeci">Event</div><div class="ttdef"><b>Definition:</b> types.h:762</div></div>
-<div class="ttc" id="atypes_8h_html_a8694a8a27008597aaea010c38e16520c"><div class="ttname"><a href="types_8h.html#a8694a8a27008597aaea010c38e16520c">LeftRightBalance100</a></div><div class="ttdeci">LeftRightBalance100</div><div class="ttdef"><b>Definition:</b> types.h:1689</div></div>
-<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdef"><b>Definition:</b> types.h:481</div></div>
-<div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdef"><b>Definition:</b> types.h:193</div></div>
-<div class="ttc" id="atypes_8h_html_aed10717f0596999a72fa9b81a529b08b"><div class="ttname"><a href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a></div><div class="ttdeci">SubSport</div><div class="ttdef"><b>Definition:</b> types.h:612</div></div>
-<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">seconds since UTC 00:00 Dec 31 1989</div><div class="ttdef"><b>Definition:</b> types.h:184</div></div>
+<div class="ttc" id="atypes_8h_html_a024199a3d93e059de66ed7ae51a7bea5"><div class="ttname"><a href="types_8h.html#a024199a3d93e059de66ed7ae51a7bea5">SwimStroke</a></div><div class="ttdeci">SwimStroke</div><div class="ttdoc">Garmin FIT SwimStroke type.</div><div class="ttdef"><b>Definition:</b> types.h:2252</div></div>
+<div class="ttc" id="atypes_8h_html_a2628ea8d12e8b2563c32f05dc7fff6fa"><div class="ttname"><a href="types_8h.html#a2628ea8d12e8b2563c32f05dc7fff6fa">EventType</a></div><div class="ttdeci">EventType</div><div class="ttdoc">Garmin FIT EventType type.</div><div class="ttdef"><b>Definition:</b> types.h:1178</div></div>
+<div class="ttc" id="atypes_8h_html_a424d5e31cd7ae4f1aed469f162d2331f"><div class="ttname"><a href="types_8h.html#a424d5e31cd7ae4f1aed469f162d2331f">LapTrigger</a></div><div class="ttdeci">LapTrigger</div><div class="ttdoc">Garmin FIT LapTrigger type.</div><div class="ttdef"><b>Definition:</b> types.h:1044</div></div>
+<div class="ttc" id="atypes_8h_html_a5667b805d857c6d28f83f6038a0272d3"><div class="ttname"><a href="types_8h.html#a5667b805d857c6d28f83f6038a0272d3">Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Garmin FIT Event type.</div><div class="ttdef"><b>Definition:</b> types.h:1129</div></div>
+<div class="ttc" id="atypes_8h_html_a5d567f144bddb8d834b7904e76fbc375"><div class="ttname"><a href="types_8h.html#a5d567f144bddb8d834b7904e76fbc375">Intensity</a></div><div class="ttdeci">Intensity</div><div class="ttdoc">Garmin FIT Intensity type.</div><div class="ttdef"><b>Definition:</b> types.h:990</div></div>
+<div class="ttc" id="atypes_8h_html_a8694a8a27008597aaea010c38e16520c"><div class="ttname"><a href="types_8h.html#a8694a8a27008597aaea010c38e16520c">LeftRightBalance100</a></div><div class="ttdeci">LeftRightBalance100</div><div class="ttdoc">Garmin FIT LeftRightBalance100 type.</div><div class="ttdef"><b>Definition:</b> types.h:2367</div></div>
+<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdoc">Garmin FIT Sport type.</div><div class="ttdef"><b>Definition:</b> types.h:685</div></div>
+<div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdoc">Garmin FIT MessageIndex type.</div><div class="ttdef"><b>Definition:</b> types.h:263</div></div>
+<div class="ttc" id="atypes_8h_html_aed10717f0596999a72fa9b81a529b08b"><div class="ttname"><a href="types_8h.html#aed10717f0596999a72fa9b81a529b08b">SubSport</a></div><div class="ttdeci">SubSport</div><div class="ttdoc">Garmin FIT SubSport type.</div><div class="ttdef"><b>Definition:</b> types.h:881</div></div>
+<div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> types.h:237</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

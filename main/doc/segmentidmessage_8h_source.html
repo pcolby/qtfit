@@ -116,13 +116,13 @@ $(document).ready(function(){initNavTree('segmentidmessage_8h_source.html',''); 
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_SEGMENTIDMESSAGE_H</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_SEGMENTIDMESSAGE_H</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;fitdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>SegmentIdMessagePrivate;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classSegmentIdMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a> : <span class="keyword">public</span> <a class="code" href="classFitDataMessage.html">FitDataMessage</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classSegmentIdMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>();</div>
@@ -135,8 +135,8 @@ $(document).ready(function(){initNavTree('segmentidmessage_8h_source.html',''); 
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    quint32 userProfilePrimaryKey() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    quint32 deviceId() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    quint8 defaultRaceLeader() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    SegmentDeleteStatus deleteStatus() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    SegmentSelectionType selectionType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="types_8h.html#a4b28f6697cd8c1d8c42b3103f1923310">SegmentDeleteStatus</a> deleteStatus() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="types_8h.html#ac1318c4bfd86ee72ccce29cb1c9e6b22">SegmentSelectionType</a> selectionType() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> setName(<span class="keyword">const</span> QString name);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> setUuid(<span class="keyword">const</span> QString uuid);</div>
@@ -145,13 +145,13 @@ $(document).ready(function(){initNavTree('segmentidmessage_8h_source.html',''); 
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> setUserProfilePrimaryKey(<span class="keyword">const</span> quint32 userProfilePrimaryKey);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> setDeviceId(<span class="keyword">const</span> quint32 deviceId);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> setDefaultRaceLeader(<span class="keyword">const</span> quint8 defaultRaceLeader);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> setDeleteStatus(<span class="keyword">const</span> SegmentDeleteStatus deleteStatus);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> setSelectionType(<span class="keyword">const</span> SegmentSelectionType selectionType);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> setDeleteStatus(<span class="keyword">const</span> <a class="code" href="types_8h.html#a4b28f6697cd8c1d8c42b3103f1923310">SegmentDeleteStatus</a> deleteStatus);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> setSelectionType(<span class="keyword">const</span> <a class="code" href="types_8h.html#ac1318c4bfd86ee72ccce29cb1c9e6b22">SegmentSelectionType</a> selectionType);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    /// \cond internal</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>(SegmentIdMessagePrivate * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    /// \endcond</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSegmentIdMessage.html">SegmentIdMessage</a>)</div>
@@ -162,9 +162,11 @@ $(document).ready(function(){initNavTree('segmentidmessage_8h_source.html',''); 
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;QTFIT_END_NAMESPACE</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_SEGMENTIDMESSAGE_H</span></div>
-<div class="ttc" id="aclassFitDataMessage_html"><div class="ttname"><a href="classFitDataMessage.html">FitDataMessage</a></div><div class="ttdoc">The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> fitdatamessage.h:31</div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> abstractdatamessage.h:31</div></div>
 <div class="ttc" id="aclassSegmentIdMessage_html"><div class="ttname"><a href="classSegmentIdMessage.html">SegmentIdMessage</a></div><div class="ttdoc">The SegmentIdMessage class represents a FIT SegmentIdMessage data message.</div><div class="ttdef"><b>Definition:</b> segmentidmessage.h:34</div></div>
-<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdef"><b>Definition:</b> types.h:481</div></div>
+<div class="ttc" id="atypes_8h_html_a4b28f6697cd8c1d8c42b3103f1923310"><div class="ttname"><a href="types_8h.html#a4b28f6697cd8c1d8c42b3103f1923310">SegmentDeleteStatus</a></div><div class="ttdeci">SegmentDeleteStatus</div><div class="ttdoc">Garmin FIT SegmentDeleteStatus type.</div><div class="ttdef"><b>Definition:</b> types.h:2750</div></div>
+<div class="ttc" id="atypes_8h_html_a8df0bd47295070f98af72ed3d9959878"><div class="ttname"><a href="types_8h.html#a8df0bd47295070f98af72ed3d9959878">Sport</a></div><div class="ttdeci">Sport</div><div class="ttdoc">Garmin FIT Sport type.</div><div class="ttdef"><b>Definition:</b> types.h:685</div></div>
+<div class="ttc" id="atypes_8h_html_ac1318c4bfd86ee72ccce29cb1c9e6b22"><div class="ttname"><a href="types_8h.html#ac1318c4bfd86ee72ccce29cb1c9e6b22">SegmentSelectionType</a></div><div class="ttdeci">SegmentSelectionType</div><div class="ttdoc">Garmin FIT SegmentSelectionType type.</div><div class="ttdef"><b>Definition:</b> types.h:2765</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

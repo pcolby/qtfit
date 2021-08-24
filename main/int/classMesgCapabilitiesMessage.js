@@ -2,6 +2,7 @@ var classMesgCapabilitiesMessage =
 [
     [ "MesgCapabilitiesMessage", "classMesgCapabilitiesMessage.html#a36ce6147ab13763e4562df65460fd257", null ],
     [ "~MesgCapabilitiesMessage", "classMesgCapabilitiesMessage.html#a577cd9b1672fbb25e859f8f0f62d85d9", null ],
+    [ "MesgCapabilitiesMessage", "classMesgCapabilitiesMessage.html#aed24b8ba07ebaf8aa069b724271b5873", null ],
     [ "count", "classMesgCapabilitiesMessage.html#a13f659d7253faadacdfa58abcf7b5c91", null ],
     [ "countType", "classMesgCapabilitiesMessage.html#a503ff7f872fdd77bc3fc1b8f1284e715", null ],
     [ "file", "classMesgCapabilitiesMessage.html#aa4605fe4803760a52f2a7e6cad704a32", null ],

@@ -80,22 +80,22 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="fitdatamessage_8h.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="51.5,-168.5 51.5,-187.5 152.5,-187.5 152.5,-168.5 51.5,-168.5"/>
-<text text-anchor="middle" x="102" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitdatamessage.h</text>
+<g id="a_node3"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="21.5,-168.5 21.5,-187.5 152.5,-187.5 152.5,-168.5 21.5,-168.5"/>
+<text text-anchor="middle" x="87" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M76.2,-280.37C80.72,-262.62 91.14,-221.67 97.27,-197.6"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="100.74,-198.15 99.81,-187.59 93.95,-196.42 100.74,-198.15"/>
+<path fill="none" stroke="midnightblue" d="M75.02,-280.37C77.12,-262.62 81.96,-221.67 84.8,-197.6"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="88.29,-197.93 85.98,-187.59 81.34,-197.11 88.29,-197.93"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="139,-56.5 139,-75.5 223,-75.5 223,-56.5 139,-56.5"/>
 <text text-anchor="middle" x="181" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>
@@ -104,8 +104,8 @@
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M108.2,-168.37C121.24,-150.22 151.7,-107.8 168.8,-83.99"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="171.84,-85.76 174.83,-75.59 166.15,-81.67 171.84,-85.76"/>
+<path fill="none" stroke="midnightblue" d="M94.38,-168.37C110.03,-150.05 146.78,-107.05 167.02,-83.36"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="169.82,-85.47 173.66,-75.59 164.5,-80.92 169.82,-85.47"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
@@ -119,8 +119,8 @@
 <!-- Node3&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node3&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M123.23,-168.44C145.38,-159.52 180.32,-145.44 205.44,-135.32"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="206.9,-138.5 214.87,-131.52 204.28,-132.01 206.9,-138.5"/>
+<path fill="none" stroke="midnightblue" d="M110.61,-168.44C135.46,-159.44 174.77,-145.19 202.75,-135.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="204.29,-138.21 212.5,-131.52 201.91,-131.63 204.29,-138.21"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -152,9 +152,9 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="fitdatamessage__p_8h.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="182.5,-224.5 182.5,-243.5 295.5,-243.5 295.5,-224.5 182.5,-224.5"/>
-<text text-anchor="middle" x="239" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitdatamessage_p.h</text>
+<g id="a_node9"><a xlink:href="abstractdatamessage__p_8h_source.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="167.5,-224.5 167.5,-243.5 310.5,-243.5 310.5,-224.5 167.5,-224.5"/>
+<text text-anchor="middle" x="239" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage_p.h</text>
 </a>
 </g>
 </g>
@@ -179,7 +179,7 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="types__p_8h.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="types__p_8h_source.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-168.5 261,-187.5 325,-187.5 325,-168.5 261,-168.5"/>
 <text text-anchor="middle" x="293" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">types_p.h</text>
 </a>

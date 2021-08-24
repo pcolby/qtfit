@@ -2,6 +2,7 @@ var classVideoClipMessage =
 [
     [ "VideoClipMessage", "classVideoClipMessage.html#a949566942c7c873bc0dbdf527d939481", null ],
     [ "~VideoClipMessage", "classVideoClipMessage.html#ae42f9a04c7ec464a466084be8d0d42db", null ],
+    [ "VideoClipMessage", "classVideoClipMessage.html#a1a80fbbdc65b43e1637ad00c87426efd", null ],
     [ "clipEnd", "classVideoClipMessage.html#a906b16fec24d1a55ccf4a1e68216ad82", null ],
     [ "clipNumber", "classVideoClipMessage.html#a73a8d3641167a36f427fcaf9e380394c", null ],
     [ "clipStart", "classVideoClipMessage.html#ab032b29431047e6664757f5407ce1391", null ],

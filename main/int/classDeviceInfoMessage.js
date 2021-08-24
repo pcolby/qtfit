@@ -2,6 +2,7 @@ var classDeviceInfoMessage =
 [
     [ "DeviceInfoMessage", "classDeviceInfoMessage.html#a8a819c2784be3ae6b1e0776d69d7ff09", null ],
     [ "~DeviceInfoMessage", "classDeviceInfoMessage.html#acd956f4c619170c1ecd96e0ca718ed74", null ],
+    [ "DeviceInfoMessage", "classDeviceInfoMessage.html#a29a327a071d7372cf1c3fddb3e48330e", null ],
     [ "antDeviceNumber", "classDeviceInfoMessage.html#ae1db94e97defba7712d86b161d058e0b", null ],
     [ "antNetwork", "classDeviceInfoMessage.html#a9c06e4e7ca89d557e080415e30bcc089", null ],
     [ "antTransmissionType", "classDeviceInfoMessage.html#a36695f2a7df50da22bb1b9c00a2b8a7d", null ],

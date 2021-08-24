@@ -1,0 +1,4 @@
+<map id="DeviceInfoMessage::antTransmissionType" name="DeviceInfoMessage::antTransmissionType">
+<area shape="rect" id="node1" title="Returns the DeviceInfoMessage data message&#39;s antTransmissionType field&#39;s current value." alt="" coords="232,5,391,47"/>
+<area shape="rect" id="node2" href="$classDeviceInfoMessage.html#ae53d89859fdea4cd032d7f4c185f7ec0" title="Sets the antTransmissionType field to antTransmissionType." alt="" coords="5,5,184,47"/>
+</map>

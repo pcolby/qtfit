@@ -93,76 +93,33 @@ $(document).ready(function(){initNavTree('structDeveloperFieldDefinition.html','
 </div><!--header-->
 <div class="contents">
 
+<p>Custom developer field definition.  
+ <a href="structDeveloperFieldDefinition.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="types__p_8h_source.html">types_p.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a0cdc4a4b6f65cafba216ff551f308001"><td class="memItemLeft" align="right" valign="top">quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeveloperFieldDefinition.html#a0cdc4a4b6f65cafba216ff551f308001">fieldNumber</a></td></tr>
+<tr class="memitem:a0cdc4a4b6f65cafba216ff551f308001"><td class="memItemLeft" align="right" valign="top"><a id="a0cdc4a4b6f65cafba216ff551f308001"></a>
+quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeveloperFieldDefinition.html#a0cdc4a4b6f65cafba216ff551f308001">fieldNumber</a></td></tr>
+<tr class="memdesc:a0cdc4a4b6f65cafba216ff551f308001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps to the field_definition_number of a field_description Message. <br /></td></tr>
 <tr class="separator:a0cdc4a4b6f65cafba216ff551f308001"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a449a9c8747def15719597d27ae7ed00b"><td class="memItemLeft" align="right" valign="top">quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeveloperFieldDefinition.html#a449a9c8747def15719597d27ae7ed00b">size</a></td></tr>
+<tr class="memitem:a449a9c8747def15719597d27ae7ed00b"><td class="memItemLeft" align="right" valign="top"><a id="a449a9c8747def15719597d27ae7ed00b"></a>
+quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeveloperFieldDefinition.html#a449a9c8747def15719597d27ae7ed00b">size</a></td></tr>
+<tr class="memdesc:a449a9c8747def15719597d27ae7ed00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size (in bytes) of the specified FIT message’s field. <br /></td></tr>
 <tr class="separator:a449a9c8747def15719597d27ae7ed00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d607b902765d25b429a423e3206ff11"><td class="memItemLeft" align="right" valign="top">quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeveloperFieldDefinition.html#a5d607b902765d25b429a423e3206ff11">devDataIndex</a></td></tr>
+<tr class="memitem:a5d607b902765d25b429a423e3206ff11"><td class="memItemLeft" align="right" valign="top"><a id="a5d607b902765d25b429a423e3206ff11"></a>
+quint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeveloperFieldDefinition.html#a5d607b902765d25b429a423e3206ff11">devDataIndex</a></td></tr>
+<tr class="memdesc:a5d607b902765d25b429a423e3206ff11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps to the developer_data_index of a developer_data_id Message. <br /></td></tr>
 <tr class="separator:a5d607b902765d25b429a423e3206ff11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00034">34</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5d607b902765d25b429a423e3206ff11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d607b902765d25b429a423e3206ff11">&#9670;&nbsp;</a></span>devDataIndex</h2>
+<div class="textblock"><p>Custom developer field definition. </p>
+<p>Typically, these definitions are extracted from FIT Definition Messages, then used to interpret subsequent FIT Data Messages.</p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://developer.garmin.com/fit/protocol/#developerdatafielddescription">https://developer.garmin.com/fit/protocol/#developerdatafielddescription</a> </dd></dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">quint8 DeveloperFieldDefinition::devDataIndex</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00037">37</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00348">FitStreamReaderPrivate::parseDefinitionMessage()</a>.</p>
-
-</div>
-</div>
-<a id="a0cdc4a4b6f65cafba216ff551f308001"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cdc4a4b6f65cafba216ff551f308001">&#9670;&nbsp;</a></span>fieldNumber</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">quint8 DeveloperFieldDefinition::fieldNumber</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00035">35</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00348">FitStreamReaderPrivate::parseDefinitionMessage()</a>.</p>
-
-</div>
-</div>
-<a id="a449a9c8747def15719597d27ae7ed00b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a449a9c8747def15719597d27ae7ed00b">&#9670;&nbsp;</a></span>size</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">quint8 DeveloperFieldDefinition::size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00036">36</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00348">FitStreamReaderPrivate::parseDefinitionMessage()</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00050">50</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="types__p_8h_source.html">types_p.h</a></li>
 </ul>
 </div><!-- contents -->

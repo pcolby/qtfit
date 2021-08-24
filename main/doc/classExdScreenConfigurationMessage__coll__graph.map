@@ -1,4 +1,4 @@
 <map id="ExdScreenConfigurationMessage" name="ExdScreenConfigurationMessage">
 <area shape="rect" id="node1" title="The ExdScreenConfigurationMessage class represents a FIT ExdScreenConfigurationMessage data message." alt="" coords="5,80,240,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="59,5,186,32"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="40,5,205,32"/>
 </map>

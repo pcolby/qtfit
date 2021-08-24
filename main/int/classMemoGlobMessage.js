@@ -2,6 +2,7 @@ var classMemoGlobMessage =
 [
     [ "MemoGlobMessage", "classMemoGlobMessage.html#a604b974c8e80d9bf224afa01ff8e8446", null ],
     [ "~MemoGlobMessage", "classMemoGlobMessage.html#a0364bb572481da29c3b6bcf33db02c47", null ],
+    [ "MemoGlobMessage", "classMemoGlobMessage.html#a048f3d99087f2ec98b1892f5ee2df430", null ],
     [ "memo", "classMemoGlobMessage.html#a6e24c46f17788a2bd208782f5a05b177", null ],
     [ "messageIndex", "classMemoGlobMessage.html#ae702ca29a161e5b3aeef95b2d63a26ad", null ],
     [ "messageNumber", "classMemoGlobMessage.html#a81b3a17689b6529ce8d7cf10786f3948", null ],

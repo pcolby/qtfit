@@ -1,5 +1,5 @@
 <map id="ScheduleMessagePrivate" name="ScheduleMessagePrivate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,191,197"/>
-<area shape="rect" id="node2" href="$classFitDataMessagePrivate.html" title=" " alt="" coords="11,95,185,121"/>
-<area shape="rect" id="node3" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="35,5,161,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,191,121"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="125,5,335,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="215,95,381,121"/>
 </map>

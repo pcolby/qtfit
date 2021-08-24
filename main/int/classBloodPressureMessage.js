@@ -2,6 +2,7 @@ var classBloodPressureMessage =
 [
     [ "BloodPressureMessage", "classBloodPressureMessage.html#af4c263d8690b6fa595ef11b0c369b70e", null ],
     [ "~BloodPressureMessage", "classBloodPressureMessage.html#a9a37c671abc3b0e8e7191a7c9b8ac76f", null ],
+    [ "BloodPressureMessage", "classBloodPressureMessage.html#a5d3c64607d979fe47cc3f6a5a4a8eee3", null ],
     [ "diastolicPressure", "classBloodPressureMessage.html#a28c8a3470695567bce4deb62f2497e80", null ],
     [ "heartRate", "classBloodPressureMessage.html#a699899f8bd4cae90677182036f9a9ce9", null ],
     [ "heartRateType", "classBloodPressureMessage.html#a2fc7eb9a7099b6790c848a5db7354dc1", null ],

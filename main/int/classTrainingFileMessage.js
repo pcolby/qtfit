@@ -2,6 +2,7 @@ var classTrainingFileMessage =
 [
     [ "TrainingFileMessage", "classTrainingFileMessage.html#a9d6911298088ba55c2f39216f7380c81", null ],
     [ "~TrainingFileMessage", "classTrainingFileMessage.html#a9237fe277746bfb25c62cf2253089721", null ],
+    [ "TrainingFileMessage", "classTrainingFileMessage.html#a100590a51509ca470a32145301521a0b", null ],
     [ "manufacturer", "classTrainingFileMessage.html#a13960edbf1e16a632644bc338a1f09cc", null ],
     [ "product", "classTrainingFileMessage.html#a6fcbf72a9b2cf8ab61f820a8c4d1c935", null ],
     [ "serialNumber", "classTrainingFileMessage.html#a636f87756d3540fada078bd7e8ce5b80", null ],

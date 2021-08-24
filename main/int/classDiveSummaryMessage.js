@@ -2,6 +2,7 @@ var classDiveSummaryMessage =
 [
     [ "DiveSummaryMessage", "classDiveSummaryMessage.html#ab7629a66581101a5d74401e9cb89ebb0", null ],
     [ "~DiveSummaryMessage", "classDiveSummaryMessage.html#ab8c7cace44c42520598d3fcce5a344ea", null ],
+    [ "DiveSummaryMessage", "classDiveSummaryMessage.html#a39ac17c86a2db7416d9747c74793678b", null ],
     [ "avgDepth", "classDiveSummaryMessage.html#a25cf49a622c660fce4216f3780ef5edb", null ],
     [ "bottomTime", "classDiveSummaryMessage.html#a49487fd6108c515ab8ca15064dfdbf79", null ],
     [ "diveNumber", "classDiveSummaryMessage.html#a04a5e68737c0052abaa4c95753748c5d", null ],

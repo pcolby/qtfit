@@ -2,6 +2,7 @@ var classSetMessage =
 [
     [ "SetMessage", "classSetMessage.html#a2e82d6f4563eff7a28507acc9ac1ac7d", null ],
     [ "~SetMessage", "classSetMessage.html#ad0434dae3f7f05d13d829944c2cfeb10", null ],
+    [ "SetMessage", "classSetMessage.html#a725a713583537d72bd6593d8e3804aeb", null ],
     [ "category", "classSetMessage.html#a7269687e2b7a132bd348671952c5648f", null ],
     [ "categorySubtype", "classSetMessage.html#af79f5f9b0e6bf26aff01cfe370ec3763", null ],
     [ "duration", "classSetMessage.html#ad7ca1ebd3fb4b24e3d5e3ee648dd3f36", null ],

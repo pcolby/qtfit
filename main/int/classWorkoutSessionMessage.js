@@ -2,6 +2,7 @@ var classWorkoutSessionMessage =
 [
     [ "WorkoutSessionMessage", "classWorkoutSessionMessage.html#a614ef7d2e3e0938a04f26bf537d44923", null ],
     [ "~WorkoutSessionMessage", "classWorkoutSessionMessage.html#a9f76b4513a3f914ba6e6e4bf17bd9118", null ],
+    [ "WorkoutSessionMessage", "classWorkoutSessionMessage.html#a52d9822705937158c1233879366c53b1", null ],
     [ "firstStepIndex", "classWorkoutSessionMessage.html#a6125f0f68cf0ad59ffd925b72fff1f7a", null ],
     [ "messageIndex", "classWorkoutSessionMessage.html#a6f96eeb64d55551edf0bd28697f5a926", null ],
     [ "numValidSteps", "classWorkoutSessionMessage.html#ae921aa78ceae57ba40dfe978c8c2a9f4", null ],

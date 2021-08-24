@@ -1,4 +1,5 @@
 <map id="AviationAttitudeMessage" name="AviationAttitudeMessage">
-<area shape="rect" id="node1" title="The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message." alt="" coords="5,80,191,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="35,5,161,32"/>
+<area shape="rect" id="node1" title="The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message." alt="" coords="5,95,191,121"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="170,5,335,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="215,95,426,121"/>
 </map>

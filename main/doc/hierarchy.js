@@ -1,6 +1,6 @@
 var hierarchy =
 [
-    [ "FitDataMessage", "classFitDataMessage.html", [
+    [ "AbstractDataMessage", "classAbstractDataMessage.html", [
       [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html", null ],
       [ "ActivityMessage", "classActivityMessage.html", null ],
       [ "AntChannelIdMessage", "classAntChannelIdMessage.html", null ],

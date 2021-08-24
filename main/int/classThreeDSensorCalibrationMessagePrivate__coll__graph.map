@@ -1,5 +1,5 @@
 <map id="ThreeDSensorCalibrationMessagePrivate" name="ThreeDSensorCalibrationMessagePrivate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,248,212"/>
-<area shape="rect" id="node2" href="$classFitDataMessagePrivate.html" title=" " alt="" coords="40,95,213,121"/>
-<area shape="rect" id="node3" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="63,5,190,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,248,136"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="181,5,392,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="272,102,437,129"/>
 </map>

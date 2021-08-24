@@ -2,6 +2,7 @@ var classCameraEventMessage =
 [
     [ "CameraEventMessage", "classCameraEventMessage.html#a310af7b1dc2ca423cf90c2d6dc7876b7", null ],
     [ "~CameraEventMessage", "classCameraEventMessage.html#a828e3f7f70d77afa90034026b7d0f7f1", null ],
+    [ "CameraEventMessage", "classCameraEventMessage.html#ac53dc897f0be2f0874c9cc724197304a", null ],
     [ "cameraEventType", "classCameraEventMessage.html#afeebcd03ee5bd9bb840ca530cfde0ca4", null ],
     [ "cameraFileUuid", "classCameraEventMessage.html#ab34ea677b9e9d20aa2dd03cfa9b17584", null ],
     [ "cameraOrientation", "classCameraEventMessage.html#a8d71b20bb263f20722ff8f01001a6dc4", null ],

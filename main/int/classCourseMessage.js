@@ -2,6 +2,7 @@ var classCourseMessage =
 [
     [ "CourseMessage", "classCourseMessage.html#a0f8586c70ec1884bc62ea86e4b41851e", null ],
     [ "~CourseMessage", "classCourseMessage.html#ac2172430ec6cdf962939a27904092048", null ],
+    [ "CourseMessage", "classCourseMessage.html#a1c4506be38cc6d1e037d548dfe97dceb", null ],
     [ "capabilities", "classCourseMessage.html#ad83127ce209eddd7cb25276d0cf503c3", null ],
     [ "name", "classCourseMessage.html#ae56e97de5a5717b74de2c32d6cdd02ad", null ],
     [ "setCapabilities", "classCourseMessage.html#a6c9d34ff01bc275c14deb035cedaa35f", null ],

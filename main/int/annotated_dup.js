@@ -1,5 +1,7 @@
 var annotated_dup =
 [
+    [ "AbstractDataMessage", "classAbstractDataMessage.html", "classAbstractDataMessage" ],
+    [ "AbstractDataMessagePrivate", "classAbstractDataMessagePrivate.html", "classAbstractDataMessagePrivate" ],
     [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html", "classAccelerometerDataMessage" ],
     [ "AccelerometerDataMessagePrivate", "classAccelerometerDataMessagePrivate.html", "classAccelerometerDataMessagePrivate" ],
     [ "ActivityMessage", "classActivityMessage.html", "classActivityMessage" ],
@@ -69,8 +71,6 @@ var annotated_dup =
     [ "FileCreatorMessagePrivate", "classFileCreatorMessagePrivate.html", "classFileCreatorMessagePrivate" ],
     [ "FileIdMessage", "classFileIdMessage.html", "classFileIdMessage" ],
     [ "FileIdMessagePrivate", "classFileIdMessagePrivate.html", "classFileIdMessagePrivate" ],
-    [ "FitDataMessage", "classFitDataMessage.html", "classFitDataMessage" ],
-    [ "FitDataMessagePrivate", "classFitDataMessagePrivate.html", "classFitDataMessagePrivate" ],
     [ "FitStreamReader", "classFitStreamReader.html", "classFitStreamReader" ],
     [ "FitStreamReaderPrivate", "classFitStreamReaderPrivate.html", "classFitStreamReaderPrivate" ],
     [ "GoalMessage", "classGoalMessage.html", "classGoalMessage" ],

@@ -2,6 +2,7 @@ var classActivityMessage =
 [
     [ "ActivityMessage", "classActivityMessage.html#a62390ab83912628bf31457195ca0c64c", null ],
     [ "~ActivityMessage", "classActivityMessage.html#ae838000d5a5deb0acb4cce2456d9f4f7", null ],
+    [ "ActivityMessage", "classActivityMessage.html#a7e9833527e45414317d1a06ebd043d8f", null ],
     [ "event", "classActivityMessage.html#a25782f7a7660506b157f141229afd5df", null ],
     [ "eventGroup", "classActivityMessage.html#af0e4d1f0363c31d32a8c44975d840712", null ],
     [ "eventType", "classActivityMessage.html#adfcae5c8c43e0f1878a38283544bc5da", null ],

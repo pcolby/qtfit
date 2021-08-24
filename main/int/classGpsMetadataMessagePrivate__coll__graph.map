@@ -1,5 +1,5 @@
 <map id="GpsMetadataMessagePrivate" name="GpsMetadataMessagePrivate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,219,197"/>
-<area shape="rect" id="node2" href="$classFitDataMessagePrivate.html" title=" " alt="" coords="25,95,199,121"/>
-<area shape="rect" id="node3" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="49,5,175,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,219,121"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessagePrivate.html" title=" " alt="" coords="152,5,363,32"/>
+<area shape="rect" id="node3" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="243,95,408,121"/>
 </map>

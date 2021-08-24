@@ -1,5 +1,5 @@
 <map id="divegasmessage.h" name="divegasmessage.h">
 <area shape="rect" id="node1" title=" " alt="" coords="103,5,247,32"/>
 <area shape="rect" id="node2" href="$divegasmessage_8cpp.html" title=" " alt="" coords="5,80,164,107"/>
-<area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title="Provides the FitDataMessage::fromData implementation." alt="" coords="189,80,346,107"/>
+<area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title="Provides the AbstractDataMessage::fromData implementation." alt="" coords="189,80,346,107"/>
 </map>

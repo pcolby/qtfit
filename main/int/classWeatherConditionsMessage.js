@@ -2,6 +2,7 @@ var classWeatherConditionsMessage =
 [
     [ "WeatherConditionsMessage", "classWeatherConditionsMessage.html#a3df57a69e060a136ad2cbca3d12d3f65", null ],
     [ "~WeatherConditionsMessage", "classWeatherConditionsMessage.html#adaa5adef687c57b4bd5d71d7f99c2e7c", null ],
+    [ "WeatherConditionsMessage", "classWeatherConditionsMessage.html#a4d7ebd5e8c0da4c1ba9cdd7750a8d7b0", null ],
     [ "condition", "classWeatherConditionsMessage.html#aa09fa460744dceaf65a1495e129c051c", null ],
     [ "dayOfWeek", "classWeatherConditionsMessage.html#a8d5a589cabf385e8c3eaa242961e52e0", null ],
     [ "highTemperature", "classWeatherConditionsMessage.html#ae0dfdb870eb13c8140ce8b2bc2f88d6d", null ],

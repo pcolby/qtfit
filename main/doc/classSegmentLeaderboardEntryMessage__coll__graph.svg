@@ -20,9 +20,9 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classFitDataMessage.html" target="_top" xlink:title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes.">
-<polygon fill="none" stroke="black" points="47.5,-56.5 47.5,-75.5 142.5,-75.5 142.5,-56.5 47.5,-56.5"/>
-<text text-anchor="middle" x="95" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitDataMessage</text>
+<g id="a_node2"><a xlink:href="classAbstractDataMessage.html" target="_top" xlink:title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.">
+<polygon fill="none" stroke="black" points="33,-56.5 33,-75.5 157,-75.5 157,-56.5 33,-56.5"/>
+<text text-anchor="middle" x="95" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDataMessage</text>
 </a>
 </g>
 </g>

@@ -2,6 +2,7 @@ var classMonitoringMessage =
 [
     [ "MonitoringMessage", "classMonitoringMessage.html#ad65e837516c5beb2565df14885de06dc", null ],
     [ "~MonitoringMessage", "classMonitoringMessage.html#aadbc2b6e8f5a8b3af418d9eca2d0d837", null ],
+    [ "MonitoringMessage", "classMonitoringMessage.html#a73d20203ac5d419949ee940e34edbfeb", null ],
     [ "activeCalories", "classMonitoringMessage.html#a3ce9f6eb06b99adf8df9c1efcf6a46a0", null ],
     [ "activeTime", "classMonitoringMessage.html#abfc8b72a353288af2635223c31e5298b", null ],
     [ "activeTime16", "classMonitoringMessage.html#a4b5dfc05ebf278eec4e2e29b524e569f", null ],

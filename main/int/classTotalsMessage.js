@@ -2,6 +2,7 @@ var classTotalsMessage =
 [
     [ "TotalsMessage", "classTotalsMessage.html#a4becf953633fb2d9f1991d94c80fc33b", null ],
     [ "~TotalsMessage", "classTotalsMessage.html#aae9b5e29cff53ca5cfdda0f9dcdd2ce2", null ],
+    [ "TotalsMessage", "classTotalsMessage.html#ab94b4e88d12a2741e9c7ab613bcb8433", null ],
     [ "activeTime", "classTotalsMessage.html#a66990d919e8af49810caaf050ed35894", null ],
     [ "calories", "classTotalsMessage.html#a07184263ad299ddb9dd8aa94a12f610c", null ],
     [ "distance", "classTotalsMessage.html#a85aa280781c1660b697290cf72c24aaf", null ],

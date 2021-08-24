@@ -2,6 +2,7 @@ var classAccelerometerDataMessage =
 [
     [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html#acab3b9236184368216b6caf0df5f658f", null ],
     [ "~AccelerometerDataMessage", "classAccelerometerDataMessage.html#a850b030dbaac1432df3af9bfaac3a3c1", null ],
+    [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html#a622561e07f0fad089648bf71032dbcda", null ],
     [ "accelX", "classAccelerometerDataMessage.html#a7d789529e4f58b2a0b53d93f89bd823f", null ],
     [ "accelY", "classAccelerometerDataMessage.html#adc90d693af5f515514e33e48242bfd67", null ],
     [ "accelZ", "classAccelerometerDataMessage.html#a3fc1905be38628eff860b1bd6f94b5c8", null ],

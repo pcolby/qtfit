@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Reads and parses a FIT Definition Message.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-30.5 140,-30.5 140,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitStreamReaderPrivate</text>
 <text text-anchor="middle" x="70" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::parseDefinitionMessage</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e" target="_top" xlink:title="Returns true if recordHeader indicates a Definition Message, otherwise false.">
 <polygon fill="none" stroke="black" points="176,-0.5 176,-30.5 309,-30.5 309,-0.5 176,-0.5"/>
 <text text-anchor="start" x="184" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">FitStreamReaderPrivate</text>
 <text text-anchor="middle" x="242.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::isDefinitionMessage</text>

@@ -1,0 +1,4 @@
+<map id="AbstractDataMessage::fromData" name="AbstractDataMessage::fromData">
+<area shape="rect" id="node1" title="Constructs the relevant AbstractDataMessage&#45;derived class to parse record according to defn." alt="" coords="231,5,396,47"/>
+<area shape="rect" id="node2" href="$classFitStreamReaderPrivate.html#a4c08b06daf62ca841e563d3582da44da" title="Reads and parses a FIT Data Message." alt="" coords="5,5,183,47"/>
+</map>

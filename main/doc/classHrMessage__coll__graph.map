@@ -1,4 +1,4 @@
 <map id="HrMessage" name="HrMessage">
-<area shape="rect" id="node1" title="The HrMessage class represents a FIT HrMessage data message." alt="" coords="21,80,116,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node1" title="The HrMessage class represents a FIT HrMessage data message." alt="" coords="41,80,135,107"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="5,5,171,32"/>
 </map>

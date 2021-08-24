@@ -1,9 +1,9 @@
 <map id="types.h" name="types.h">
-<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="8569,5,8640,32"/>
-<area shape="rect" id="node2" href="$fitdatamessage_8h_source.html" title=" " alt="" coords="8471,80,8605,107"/>
-<area shape="rect" id="node100" href="$types_8cpp.html" title="QDebug stream operators for types defined by the ANT+ FIT SDK." alt="" coords="8630,80,8715,107"/>
+<area shape="rect" id="node1" title="Types defined by the ANT+ FIT SDK." alt="" coords="8580,5,8651,32"/>
+<area shape="rect" id="node2" href="$abstractdatamessage_8h_source.html" title=" " alt="" coords="8451,80,8625,107"/>
+<area shape="rect" id="node100" href="$types_8cpp.html" title="QDebug stream operators for types defined by the ANT+ FIT SDK." alt="" coords="8650,80,8735,107"/>
 <area shape="rect" id="node3" href="$accelerometerdatamessage_8h.html" title=" " alt="" coords="58,155,274,181"/>
-<area shape="rect" id="node5" href="$fitdatamessages_8cpp.html" title="Provides the FitDataMessage::fromData implementation." alt="" coords="8355,229,8513,256"/>
+<area shape="rect" id="node5" href="$fitdatamessages_8cpp.html" title="Provides the AbstractDataMessage::fromData implementation." alt="" coords="8355,229,8513,256"/>
 <area shape="rect" id="node6" href="$activitymessage_8h.html" title=" " alt="" coords="299,155,441,181"/>
 <area shape="rect" id="node8" href="$antchannelidmessage_8h.html" title=" " alt="" coords="465,155,643,181"/>
 <area shape="rect" id="node10" href="$antrxmessage_8h.html" title=" " alt="" coords="667,155,793,181"/>

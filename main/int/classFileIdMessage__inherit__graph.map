@@ -1,4 +1,4 @@
 <map id="FileIdMessage" name="FileIdMessage">
-<area shape="rect" id="node1" title="The FileIdMessage class represents a FIT FileIdMessage data message." alt="" coords="11,80,126,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node1" title="The FileIdMessage class represents a FIT FileIdMessage data message." alt="" coords="31,80,145,107"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="5,5,171,32"/>
 </map>

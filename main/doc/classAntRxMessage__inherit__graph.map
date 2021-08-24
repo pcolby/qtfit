@@ -1,4 +1,4 @@
 <map id="AntRxMessage" name="AntRxMessage">
-<area shape="rect" id="node1" title="The AntRxMessage class represents a FIT AntRxMessage data message." alt="" coords="9,80,128,107"/>
-<area shape="rect" id="node2" href="$classFitDataMessage.html" title="The FitDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node1" title="The AntRxMessage class represents a FIT AntRxMessage data message." alt="" coords="29,80,147,107"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessage.html" title="The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes." alt="" coords="5,5,171,32"/>
 </map>

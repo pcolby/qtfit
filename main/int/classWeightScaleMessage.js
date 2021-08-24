@@ -2,6 +2,7 @@ var classWeightScaleMessage =
 [
     [ "WeightScaleMessage", "classWeightScaleMessage.html#ad71e8a73df8ab8a42c9c194cfd992bd8", null ],
     [ "~WeightScaleMessage", "classWeightScaleMessage.html#a8d61433b53bf7b49d8b3a3a8a93ec5b7", null ],
+    [ "WeightScaleMessage", "classWeightScaleMessage.html#aad49b083809f11d7ad1b5e7ad50a5323", null ],
     [ "activeMet", "classWeightScaleMessage.html#a3be903be5d6b6e511f199c27ecbf20f3", null ],
     [ "basalMet", "classWeightScaleMessage.html#afa3c2cd8be2c95a855a2380ac1eddd49", null ],
     [ "boneMass", "classWeightScaleMessage.html#a05f0f53a212fc164a9aa6ce875f7f3c2", null ],
