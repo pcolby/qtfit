@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the FieldCapabilitiesMessage, and FieldCapabilitiesMessagePrivate classes.
+ */
+
 #include "fieldcapabilitiesmessage.h"
 #include "fieldcapabilitiesmessage_p.h"
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the HrvMessage, and HrvMessagePrivate classes.
+ */
+
 #include "hrvmessage.h"
 #include "hrvmessage_p.h"
 

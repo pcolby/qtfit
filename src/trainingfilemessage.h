@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the TrainingFileMessage class.
+ */
+
 #ifndef QTFIT_TRAININGFILEMESSAGE_H
 #define QTFIT_TRAININGFILEMESSAGE_H
 

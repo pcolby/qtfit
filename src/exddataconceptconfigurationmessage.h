@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ExdDataConceptConfigurationMessage class.
+ */
+
 #ifndef QTFIT_EXDDATACONCEPTCONFIGURATIONMESSAGE_H
 #define QTFIT_EXDDATACONCEPTCONFIGURATIONMESSAGE_H
 

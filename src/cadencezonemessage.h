@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the CadenceZoneMessage class.
+ */
+
 #ifndef QTFIT_CADENCEZONEMESSAGE_H
 #define QTFIT_CADENCEZONEMESSAGE_H
 

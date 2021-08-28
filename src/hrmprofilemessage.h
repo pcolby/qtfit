@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the HrmProfileMessage class.
+ */
+
 #ifndef QTFIT_HRMPROFILEMESSAGE_H
 #define QTFIT_HRMPROFILEMESSAGE_H
 

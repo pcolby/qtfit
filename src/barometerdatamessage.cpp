@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the BarometerDataMessage, and BarometerDataMessagePrivate classes.
+ */
+
 #include "barometerdatamessage.h"
 #include "barometerdatamessage_p.h"
 

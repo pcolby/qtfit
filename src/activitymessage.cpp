@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the ActivityMessage, and ActivityMessagePrivate classes.
+ */
+
 #include "activitymessage.h"
 #include "activitymessage_p.h"
 

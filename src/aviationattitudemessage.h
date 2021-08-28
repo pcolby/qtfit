@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the AviationAttitudeMessage class.
+ */
+
 #ifndef QTFIT_AVIATIONATTITUDEMESSAGE_H
 #define QTFIT_AVIATIONATTITUDEMESSAGE_H
 

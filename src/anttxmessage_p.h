@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the AntTxMessagePrivate class.
+ */
 #ifndef QTFIT_ANTTXMESSAGE_P_H
 #define QTFIT_ANTTXMESSAGE_P_H
 

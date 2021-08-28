@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the GoalMessage, and GoalMessagePrivate classes.
+ */
+
 #include "goalmessage.h"
 #include "goalmessage_p.h"
 

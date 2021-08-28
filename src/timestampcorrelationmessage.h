@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the TimestampCorrelationMessage class.
+ */
+
 #ifndef QTFIT_TIMESTAMPCORRELATIONMESSAGE_H
 #define QTFIT_TIMESTAMPCORRELATIONMESSAGE_H
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ClimbProMessage class.
+ */
+
 #ifndef QTFIT_CLIMBPROMESSAGE_H
 #define QTFIT_CLIMBPROMESSAGE_H
 

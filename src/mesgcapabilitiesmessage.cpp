@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the MesgCapabilitiesMessage, and MesgCapabilitiesMessagePrivate classes.
+ */
+
 #include "mesgcapabilitiesmessage.h"
 #include "mesgcapabilitiesmessage_p.h"
 

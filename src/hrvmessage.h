@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the HrvMessage class.
+ */
+
 #ifndef QTFIT_HRVMESSAGE_H
 #define QTFIT_HRVMESSAGE_H
 

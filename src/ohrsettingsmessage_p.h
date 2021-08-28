@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the OhrSettingsMessagePrivate class.
+ */
 #ifndef QTFIT_OHRSETTINGSMESSAGE_P_H
 #define QTFIT_OHRSETTINGSMESSAGE_P_H
 

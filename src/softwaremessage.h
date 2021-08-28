@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SoftwareMessage class.
+ */
+
 #ifndef QTFIT_SOFTWAREMESSAGE_H
 #define QTFIT_SOFTWAREMESSAGE_H
 

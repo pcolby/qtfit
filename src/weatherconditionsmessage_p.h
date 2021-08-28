@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the WeatherConditionsMessagePrivate class.
+ */
 #ifndef QTFIT_WEATHERCONDITIONSMESSAGE_P_H
 #define QTFIT_WEATHERCONDITIONSMESSAGE_P_H
 

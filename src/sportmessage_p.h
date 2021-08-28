@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SportMessagePrivate class.
+ */
 #ifndef QTFIT_SPORTMESSAGE_P_H
 #define QTFIT_SPORTMESSAGE_P_H
 

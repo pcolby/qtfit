@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ThreeDSensorCalibrationMessage class.
+ */
+
 #ifndef QTFIT_THREEDSENSORCALIBRATIONMESSAGE_H
 #define QTFIT_THREEDSENSORCALIBRATIONMESSAGE_H
 

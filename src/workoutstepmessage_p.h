@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the WorkoutStepMessagePrivate class.
+ */
 #ifndef QTFIT_WORKOUTSTEPMESSAGE_P_H
 #define QTFIT_WORKOUTSTEPMESSAGE_P_H
 

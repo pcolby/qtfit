@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the StressLevelMessage class.
+ */
+
 #ifndef QTFIT_STRESSLEVELMESSAGE_H
 #define QTFIT_STRESSLEVELMESSAGE_H
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the BikeProfileMessage, and BikeProfileMessagePrivate classes.
+ */
+
 #include "bikeprofilemessage.h"
 #include "bikeprofilemessage_p.h"
 

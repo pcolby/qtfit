@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the AviationAttitudeMessagePrivate class.
+ */
 #ifndef QTFIT_AVIATIONATTITUDEMESSAGE_P_H
 #define QTFIT_AVIATIONATTITUDEMESSAGE_P_H
 

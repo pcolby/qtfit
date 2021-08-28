@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the FileIdMessage, and FileIdMessagePrivate classes.
+ */
+
 #include "fileidmessage.h"
 #include "fileidmessage_p.h"
 

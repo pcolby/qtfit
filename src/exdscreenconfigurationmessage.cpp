@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the ExdScreenConfigurationMessage, and ExdScreenConfigurationMessagePrivate classes.
+ */
+
 #include "exdscreenconfigurationmessage.h"
 #include "exdscreenconfigurationmessage_p.h"
 

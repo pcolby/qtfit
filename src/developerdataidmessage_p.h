@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the DeveloperDataIdMessagePrivate class.
+ */
 #ifndef QTFIT_DEVELOPERDATAIDMESSAGE_P_H
 #define QTFIT_DEVELOPERDATAIDMESSAGE_P_H
 

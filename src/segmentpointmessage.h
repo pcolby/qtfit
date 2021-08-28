@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SegmentPointMessage class.
+ */
+
 #ifndef QTFIT_SEGMENTPOINTMESSAGE_H
 #define QTFIT_SEGMENTPOINTMESSAGE_H
 

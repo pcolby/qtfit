@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the CadenceZoneMessage, and CadenceZoneMessagePrivate classes.
+ */
+
 #include "cadencezonemessage.h"
 #include "cadencezonemessage_p.h"
 

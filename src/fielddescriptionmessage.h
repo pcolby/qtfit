@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the FieldDescriptionMessage class.
+ */
+
 #ifndef QTFIT_FIELDDESCRIPTIONMESSAGE_H
 #define QTFIT_FIELDDESCRIPTIONMESSAGE_H
 

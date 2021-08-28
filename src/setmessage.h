@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SetMessage class.
+ */
+
 #ifndef QTFIT_SETMESSAGE_H
 #define QTFIT_SETMESSAGE_H
 

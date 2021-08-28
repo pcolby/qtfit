@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the WatchfaceSettingsMessage class.
+ */
+
 #ifndef QTFIT_WATCHFACESETTINGSMESSAGE_H
 #define QTFIT_WATCHFACESETTINGSMESSAGE_H
 

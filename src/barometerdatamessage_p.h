@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the BarometerDataMessagePrivate class.
+ */
 #ifndef QTFIT_BAROMETERDATAMESSAGE_P_H
 #define QTFIT_BAROMETERDATAMESSAGE_P_H
 

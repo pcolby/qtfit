@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the MonitoringMessage class.
+ */
+
 #ifndef QTFIT_MONITORINGMESSAGE_H
 #define QTFIT_MONITORINGMESSAGE_H
 

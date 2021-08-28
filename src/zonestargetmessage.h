@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ZonesTargetMessage class.
+ */
+
 #ifndef QTFIT_ZONESTARGETMESSAGE_H
 #define QTFIT_ZONESTARGETMESSAGE_H
 

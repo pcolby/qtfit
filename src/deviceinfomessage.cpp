@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the DeviceInfoMessage, and DeviceInfoMessagePrivate classes.
+ */
+
 #include "deviceinfomessage.h"
 #include "deviceinfomessage_p.h"
 

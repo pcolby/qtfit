@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the LengthMessage class.
+ */
+
 #ifndef QTFIT_LENGTHMESSAGE_H
 #define QTFIT_LENGTHMESSAGE_H
 

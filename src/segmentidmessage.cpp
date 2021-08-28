@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the SegmentIdMessage, and SegmentIdMessagePrivate classes.
+ */
+
 #include "segmentidmessage.h"
 #include "segmentidmessage_p.h"
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the DiveAlarmMessage, and DiveAlarmMessagePrivate classes.
+ */
+
 #include "divealarmmessage.h"
 #include "divealarmmessage_p.h"
 

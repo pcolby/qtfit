@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the SlaveDeviceMessage, and SlaveDeviceMessagePrivate classes.
+ */
+
 #include "slavedevicemessage.h"
 #include "slavedevicemessage_p.h"
 

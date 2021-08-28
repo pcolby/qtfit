@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the FileCreatorMessage, and FileCreatorMessagePrivate classes.
+ */
+
 #include "filecreatormessage.h"
 #include "filecreatormessage_p.h"
 

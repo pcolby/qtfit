@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the DiveSettingsMessage class.
+ */
+
 #ifndef QTFIT_DIVESETTINGSMESSAGE_H
 #define QTFIT_DIVESETTINGSMESSAGE_H
 

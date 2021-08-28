@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the WatchfaceSettingsMessage, and WatchfaceSettingsMessagePrivate classes.
+ */
+
 #include "watchfacesettingsmessage.h"
 #include "watchfacesettingsmessage_p.h"
 

@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the FileIdMessagePrivate class.
+ */
 #ifndef QTFIT_FILEIDMESSAGE_P_H
 #define QTFIT_FILEIDMESSAGE_P_H
 

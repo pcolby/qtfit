@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the AntRxMessage, and AntRxMessagePrivate classes.
+ */
+
 #include "antrxmessage.h"
 #include "antrxmessage_p.h"
 

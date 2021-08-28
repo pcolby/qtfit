@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the CoursePointMessage class.
+ */
+
 #ifndef QTFIT_COURSEPOINTMESSAGE_H
 #define QTFIT_COURSEPOINTMESSAGE_H
 

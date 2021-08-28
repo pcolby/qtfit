@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the RecordMessage, and RecordMessagePrivate classes.
+ */
+
 #include "recordmessage.h"
 #include "recordmessage_p.h"
 

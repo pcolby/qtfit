@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the EventMessagePrivate class.
+ */
 #ifndef QTFIT_EVENTMESSAGE_P_H
 #define QTFIT_EVENTMESSAGE_P_H
 

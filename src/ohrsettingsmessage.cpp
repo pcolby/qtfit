@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the OhrSettingsMessage, and OhrSettingsMessagePrivate classes.
+ */
+
 #include "ohrsettingsmessage.h"
 #include "ohrsettingsmessage_p.h"
 

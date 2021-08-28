@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the DeviceInfoMessage class.
+ */
+
 #ifndef QTFIT_DEVICEINFOMESSAGE_H
 #define QTFIT_DEVICEINFOMESSAGE_H
 

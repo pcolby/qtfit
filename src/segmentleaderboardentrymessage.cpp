@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the SegmentLeaderboardEntryMessage, and SegmentLeaderboardEntryMessagePrivate classes.
+ */
+
 #include "segmentleaderboardentrymessage.h"
 #include "segmentleaderboardentrymessage_p.h"
 

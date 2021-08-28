@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the OneDSensorCalibrationMessage class.
+ */
+
 #ifndef QTFIT_ONEDSENSORCALIBRATIONMESSAGE_H
 #define QTFIT_ONEDSENSORCALIBRATIONMESSAGE_H
 

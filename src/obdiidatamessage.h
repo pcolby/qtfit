@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ObdiiDataMessage class.
+ */
+
 #ifndef QTFIT_OBDIIDATAMESSAGE_H
 #define QTFIT_OBDIIDATAMESSAGE_H
 

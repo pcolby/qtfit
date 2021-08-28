@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ScheduleMessagePrivate class.
+ */
 #ifndef QTFIT_SCHEDULEMESSAGE_P_H
 #define QTFIT_SCHEDULEMESSAGE_P_H
 

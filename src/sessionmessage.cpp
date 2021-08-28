@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the SessionMessage, and SessionMessagePrivate classes.
+ */
+
 #include "sessionmessage.h"
 #include "sessionmessage_p.h"
 

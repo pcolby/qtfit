@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ActivityMessagePrivate class.
+ */
 #ifndef QTFIT_ACTIVITYMESSAGE_P_H
 #define QTFIT_ACTIVITYMESSAGE_P_H
 

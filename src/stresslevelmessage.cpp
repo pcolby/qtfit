@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the StressLevelMessage, and StressLevelMessagePrivate classes.
+ */
+
 #include "stresslevelmessage.h"
 #include "stresslevelmessage_p.h"
 

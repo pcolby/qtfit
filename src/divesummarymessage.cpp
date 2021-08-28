@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the DiveSummaryMessage, and DiveSummaryMessagePrivate classes.
+ */
+
 #include "divesummarymessage.h"
 #include "divesummarymessage_p.h"
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SegmentLeaderboardEntryMessage class.
+ */
+
 #ifndef QTFIT_SEGMENTLEADERBOARDENTRYMESSAGE_H
 #define QTFIT_SEGMENTLEADERBOARDENTRYMESSAGE_H
 

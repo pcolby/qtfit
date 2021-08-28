@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the FileCapabilitiesMessage class.
+ */
+
 #ifndef QTFIT_FILECAPABILITIESMESSAGE_H
 #define QTFIT_FILECAPABILITIESMESSAGE_H
 

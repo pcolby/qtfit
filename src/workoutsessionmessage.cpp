@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the WorkoutSessionMessage, and WorkoutSessionMessagePrivate classes.
+ */
+
 #include "workoutsessionmessage.h"
 #include "workoutsessionmessage_p.h"
 

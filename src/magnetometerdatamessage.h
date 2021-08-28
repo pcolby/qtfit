@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the MagnetometerDataMessage class.
+ */
+
 #ifndef QTFIT_MAGNETOMETERDATAMESSAGE_H
 #define QTFIT_MAGNETOMETERDATAMESSAGE_H
 

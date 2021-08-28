@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the FieldDescriptionMessage, and FieldDescriptionMessagePrivate classes.
+ */
+
 #include "fielddescriptionmessage.h"
 #include "fielddescriptionmessage_p.h"
 

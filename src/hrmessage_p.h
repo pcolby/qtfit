@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the HrMessagePrivate class.
+ */
 #ifndef QTFIT_HRMESSAGE_P_H
 #define QTFIT_HRMESSAGE_P_H
 

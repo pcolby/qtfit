@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SlaveDeviceMessage class.
+ */
+
 #ifndef QTFIT_SLAVEDEVICEMESSAGE_H
 #define QTFIT_SLAVEDEVICEMESSAGE_H
 

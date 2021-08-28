@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the VideoDescriptionMessage class.
+ */
+
 #ifndef QTFIT_VIDEODESCRIPTIONMESSAGE_H
 #define QTFIT_VIDEODESCRIPTIONMESSAGE_H
 

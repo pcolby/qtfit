@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the GoalMessagePrivate class.
+ */
 #ifndef QTFIT_GOALMESSAGE_P_H
 #define QTFIT_GOALMESSAGE_P_H
 

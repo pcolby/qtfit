@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the AntTxMessage, and AntTxMessagePrivate classes.
+ */
+
 #include "anttxmessage.h"
 #include "anttxmessage_p.h"
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the FieldCapabilitiesMessage class.
+ */
+
 #ifndef QTFIT_FIELDCAPABILITIESMESSAGE_H
 #define QTFIT_FIELDCAPABILITIESMESSAGE_H
 

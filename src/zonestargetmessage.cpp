@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the ZonesTargetMessage, and ZonesTargetMessagePrivate classes.
+ */
+
 #include "zonestargetmessage.h"
 #include "zonestargetmessage_p.h"
 

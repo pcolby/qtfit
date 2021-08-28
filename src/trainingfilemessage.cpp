@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the TrainingFileMessage, and TrainingFileMessagePrivate classes.
+ */
+
 #include "trainingfilemessage.h"
 #include "trainingfilemessage_p.h"
 

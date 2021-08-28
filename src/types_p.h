@@ -17,6 +17,11 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*!
+ * \file
+ * Internal types used by QtFit classes.
+ */
+
 #ifndef QTFIT_TYPES_P_H
 #define QTFIT_TYPES_P_H
 

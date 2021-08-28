@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SessionMessagePrivate class.
+ */
 #ifndef QTFIT_SESSIONMESSAGE_P_H
 #define QTFIT_SESSIONMESSAGE_P_H
 

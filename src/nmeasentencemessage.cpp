@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the NmeaSentenceMessage, and NmeaSentenceMessagePrivate classes.
+ */
+
 #include "nmeasentencemessage.h"
 #include "nmeasentencemessage_p.h"
 

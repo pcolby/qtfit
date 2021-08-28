@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the UserProfileMessagePrivate class.
+ */
 #ifndef QTFIT_USERPROFILEMESSAGE_P_H
 #define QTFIT_USERPROFILEMESSAGE_P_H
 

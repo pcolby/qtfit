@@ -17,6 +17,11 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*!
+ * \file
+ * Declares the AbstractDataMessagePrivate class.
+ */
+
 #ifndef QTFIT_ABSTRACTDATAMESSAGE_P_H
 #define QTFIT_ABSTRACTDATAMESSAGE_P_H
 

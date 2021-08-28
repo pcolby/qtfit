@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the MemoGlobMessage, and MemoGlobMessagePrivate classes.
+ */
+
 #include "memoglobmessage.h"
 #include "memoglobmessage_p.h"
 

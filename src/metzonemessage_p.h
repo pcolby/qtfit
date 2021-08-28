@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the MetZoneMessagePrivate class.
+ */
 #ifndef QTFIT_METZONEMESSAGE_P_H
 #define QTFIT_METZONEMESSAGE_P_H
 

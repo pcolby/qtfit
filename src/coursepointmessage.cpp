@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the CoursePointMessage, and CoursePointMessagePrivate classes.
+ */
+
 #include "coursepointmessage.h"
 #include "coursepointmessage_p.h"
 

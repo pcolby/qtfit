@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the MonitoringInfoMessage, and MonitoringInfoMessagePrivate classes.
+ */
+
 #include "monitoringinfomessage.h"
 #include "monitoringinfomessage_p.h"
 

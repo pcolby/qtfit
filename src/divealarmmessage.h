@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the DiveAlarmMessage class.
+ */
+
 #ifndef QTFIT_DIVEALARMMESSAGE_H
 #define QTFIT_DIVEALARMMESSAGE_H
 

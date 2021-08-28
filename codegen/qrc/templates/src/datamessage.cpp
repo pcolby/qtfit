@@ -1,5 +1,10 @@
 {% include "license.txt" %}
 {% include "autogen.txt" %}
+/*!
+ * \file
+ * Defines the {{ClassName}}, and {{ClassName}}Private classes.
+ */
+
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 

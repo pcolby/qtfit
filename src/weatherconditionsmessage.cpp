@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the WeatherConditionsMessage, and WeatherConditionsMessagePrivate classes.
+ */
+
 #include "weatherconditionsmessage.h"
 #include "weatherconditionsmessage_p.h"
 

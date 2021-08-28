@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the BikeProfileMessage class.
+ */
+
 #ifndef QTFIT_BIKEPROFILEMESSAGE_H
 #define QTFIT_BIKEPROFILEMESSAGE_H
 

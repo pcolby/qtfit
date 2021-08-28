@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the LapMessage, and LapMessagePrivate classes.
+ */
+
 #include "lapmessage.h"
 #include "lapmessage_p.h"
 

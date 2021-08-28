@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the TotalsMessage class.
+ */
+
 #ifndef QTFIT_TOTALSMESSAGE_H
 #define QTFIT_TOTALSMESSAGE_H
 

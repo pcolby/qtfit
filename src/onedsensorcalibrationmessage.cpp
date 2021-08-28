@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the OneDSensorCalibrationMessage, and OneDSensorCalibrationMessagePrivate classes.
+ */
+
 #include "onedsensorcalibrationmessage.h"
 #include "onedsensorcalibrationmessage_p.h"
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the ConnectivityMessage class.
+ */
+
 #ifndef QTFIT_CONNECTIVITYMESSAGE_H
 #define QTFIT_CONNECTIVITYMESSAGE_H
 

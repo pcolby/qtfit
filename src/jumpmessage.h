@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the JumpMessage class.
+ */
+
 #ifndef QTFIT_JUMPMESSAGE_H
 #define QTFIT_JUMPMESSAGE_H
 

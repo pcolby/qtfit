@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the TotalsMessage, and TotalsMessagePrivate classes.
+ */
+
 #include "totalsmessage.h"
 #include "totalsmessage_p.h"
 

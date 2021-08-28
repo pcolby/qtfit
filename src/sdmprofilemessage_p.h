@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SdmProfileMessagePrivate class.
+ */
 #ifndef QTFIT_SDMPROFILEMESSAGE_P_H
 #define QTFIT_SDMPROFILEMESSAGE_P_H
 

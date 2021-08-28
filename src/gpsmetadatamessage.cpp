@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the GpsMetadataMessage, and GpsMetadataMessagePrivate classes.
+ */
+
 #include "gpsmetadatamessage.h"
 #include "gpsmetadatamessage_p.h"
 

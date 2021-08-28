@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the AntChannelIdMessagePrivate class.
+ */
 #ifndef QTFIT_ANTCHANNELIDMESSAGE_P_H
 #define QTFIT_ANTCHANNELIDMESSAGE_P_H
 

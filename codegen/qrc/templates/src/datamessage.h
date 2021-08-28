@@ -1,5 +1,10 @@
 {% include "license.txt" %}
 {% include "autogen.txt" %}
+/*!
+ * \file
+ * Declares the {{ClassName}} class.
+ */
+
 #ifndef {{ProjectName|upper}}_{{ClassName|upper}}_H
 #define {{ProjectName|upper}}_{{ClassName|upper}}_H
 

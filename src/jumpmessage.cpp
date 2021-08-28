@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the JumpMessage, and JumpMessagePrivate classes.
+ */
+
 #include "jumpmessage.h"
 #include "jumpmessage_p.h"
 

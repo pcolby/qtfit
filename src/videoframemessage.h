@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the VideoFrameMessage class.
+ */
+
 #ifndef QTFIT_VIDEOFRAMEMESSAGE_H
 #define QTFIT_VIDEOFRAMEMESSAGE_H
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the TimestampCorrelationMessage, and TimestampCorrelationMessagePrivate classes.
+ */
+
 #include "timestampcorrelationmessage.h"
 #include "timestampcorrelationmessage_p.h"
 

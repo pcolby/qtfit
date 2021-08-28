@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the MesgCapabilitiesMessagePrivate class.
+ */
 #ifndef QTFIT_MESGCAPABILITIESMESSAGE_P_H
 #define QTFIT_MESGCAPABILITIESMESSAGE_P_H
 

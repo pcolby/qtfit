@@ -17,6 +17,11 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*!
+ * \file
+ * Declares the FitStreamReader class.
+ */
+
 #ifndef FITSTREAMREADER_H
 #define FITSTREAMREADER_H
 

@@ -1,5 +1,9 @@
 {% include "license.txt" %}
 {% include "autogen.txt" %}
+/*!
+ * \file
+ * Declares the {{ClassName}}Private class.
+ */
 #ifndef {{ProjectName|upper}}_{{ClassName|upper}}_P_H
 #define {{ProjectName|upper}}_{{ClassName|upper}}_P_H
 

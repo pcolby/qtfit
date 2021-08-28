@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the UserProfileMessage class.
+ */
+
 #ifndef QTFIT_USERPROFILEMESSAGE_H
 #define QTFIT_USERPROFILEMESSAGE_H
 

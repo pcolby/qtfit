@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SegmentFileMessagePrivate class.
+ */
 #ifndef QTFIT_SEGMENTFILEMESSAGE_P_H
 #define QTFIT_SEGMENTFILEMESSAGE_P_H
 

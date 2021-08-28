@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the BloodPressureMessage class.
+ */
+
 #ifndef QTFIT_BLOODPRESSUREMESSAGE_H
 #define QTFIT_BLOODPRESSUREMESSAGE_H
 

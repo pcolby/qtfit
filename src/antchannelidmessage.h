@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the AntChannelIdMessage class.
+ */
+
 #ifndef QTFIT_ANTCHANNELIDMESSAGE_H
 #define QTFIT_ANTCHANNELIDMESSAGE_H
 

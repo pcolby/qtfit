@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the VideoClipMessage, and VideoClipMessagePrivate classes.
+ */
+
 #include "videoclipmessage.h"
 #include "videoclipmessage_p.h"
 

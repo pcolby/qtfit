@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the SegmentPointMessage, and SegmentPointMessagePrivate classes.
+ */
+
 #include "segmentpointmessage.h"
 #include "segmentpointmessage_p.h"
 

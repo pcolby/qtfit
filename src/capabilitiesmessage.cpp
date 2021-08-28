@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the CapabilitiesMessage, and CapabilitiesMessagePrivate classes.
+ */
+
 #include "capabilitiesmessage.h"
 #include "capabilitiesmessage_p.h"
 

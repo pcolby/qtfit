@@ -22,6 +22,10 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the RecordMessagePrivate class.
+ */
 #ifndef QTFIT_RECORDMESSAGE_P_H
 #define QTFIT_RECORDMESSAGE_P_H
 

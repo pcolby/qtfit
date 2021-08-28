@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the LengthMessage, and LengthMessagePrivate classes.
+ */
+
 #include "lengthmessage.h"
 #include "lengthmessage_p.h"
 

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the BloodPressureMessage, and BloodPressureMessagePrivate classes.
+ */
+
 #include "bloodpressuremessage.h"
 #include "bloodpressuremessage_p.h"
 

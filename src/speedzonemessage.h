@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Declares the SpeedZoneMessage class.
+ */
+
 #ifndef QTFIT_SPEEDZONEMESSAGE_H
 #define QTFIT_SPEEDZONEMESSAGE_H
 

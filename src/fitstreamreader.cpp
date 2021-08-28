@@ -17,6 +17,11 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*!
+ * \file
+ * Defines the FitStreamReader, and FitStreamReaderPrivate classes.
+ */
+
 #include "abstractdatamessage.h"
 #include "fitstreamreader.h"
 #include "fitstreamreader_p.h"
@@ -195,6 +200,7 @@ void FitStreamReader::setDevice(QIODevice *device)
     if (device) d->parseFileHeader<QIODevice>();
 }
 
+/// \cond internal
 /*!
  * \internal
  *
@@ -221,6 +227,7 @@ quint16 fitChecksum(const QByteArray &data) {
     }
     return checksum;
 }
+/// \endcond
 
 /*!
  * Returns the profile version read from the FIT file header, otherwise a null QVersionNumber.

@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the EventMessage, and EventMessagePrivate classes.
+ */
+
 #include "eventmessage.h"
 #include "eventmessage_p.h"
 

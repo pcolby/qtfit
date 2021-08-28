@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the VideoDescriptionMessage, and VideoDescriptionMessagePrivate classes.
+ */
+
 #include "videodescriptionmessage.h"
 #include "videodescriptionmessage_p.h"
 

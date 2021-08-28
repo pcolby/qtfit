@@ -17,6 +17,11 @@
     along with QtFit.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*!
+ * \file
+ * Defines the AbstractDataMessage, and AbstractDataMessagePrivate classes.
+ */
+
 #include "abstractdatamessage.h"
 #include "abstractdatamessage_p.h"
 

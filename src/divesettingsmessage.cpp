@@ -22,6 +22,11 @@
  * \note This file is automatcially generated. Any changes here are likely to be overwritten.
  */
 
+/*!
+ * \file
+ * Defines the DiveSettingsMessage, and DiveSettingsMessagePrivate classes.
+ */
+
 #include "divesettingsmessage.h"
 #include "divesettingsmessage_p.h"
 
