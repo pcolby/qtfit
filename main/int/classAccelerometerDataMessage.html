@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -219,7 +219,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classAccelerometerDataMessage.html" title="The AccelerometerDataMessage class represents a FIT AccelerometerDataMessage data message.">AccelerometerDataMessage</a> class represents a FIT <a class="el" href="classAccelerometerDataMessage.html" title="The AccelerometerDataMessage class represents a FIT AccelerometerDataMessage data message.">AccelerometerDataMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8h_source.html#l00034">34</a> of file <a class="el" href="accelerometerdatamessage_8h_source.html">accelerometerdatamessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8h_source.html#l00039">39</a> of file <a class="el" href="accelerometerdatamessage_8h_source.html">accelerometerdatamessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acab3b9236184368216b6caf0df5f658f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acab3b9236184368216b6caf0df5f658f">&#9670;&nbsp;</a></span>AccelerometerDataMessage() <span class="overload">[1/2]</span></h2>
@@ -239,13 +239,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classAccelerometerDataMessage.html" title="The AccelerometerDataMessage class represents a FIT AccelerometerDataMessage data message.">AccelerometerDataMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                   : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classAccelerometerDataMessagePrivate.html">AccelerometerDataMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassAccelerometerDataMessagePrivate_html"><div class="ttname"><a href="classAccelerometerDataMessagePrivate.html">AccelerometerDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage__p_8h_source.html#l00034">accelerometerdatamessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                   : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classAccelerometerDataMessagePrivate.html">AccelerometerDataMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassAccelerometerDataMessagePrivate_html"><div class="ttname"><a href="classAccelerometerDataMessagePrivate.html">AccelerometerDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage__p_8h_source.html#l00038">accelerometerdatamessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,11 +280,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                            : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                                            : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -308,14 +308,14 @@ Additional Inherited Members</h2></td></tr>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>accelX</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00114">114</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelX;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html"><div class="ttname"><a href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a></div><div class="ttdoc">The AccelerometerDataMessage class represents a FIT AccelerometerDataMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8h_source.html#l00034">accelerometerdatamessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00119">119</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelX;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html"><div class="ttname"><a href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a></div><div class="ttdoc">The AccelerometerDataMessage class represents a FIT AccelerometerDataMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8h_source.html#l00039">accelerometerdatamessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00261">setAccelX()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00266">setAccelX()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -344,13 +344,13 @@ Here is the caller graph for this function:</div>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>accelY</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelY;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00133">133</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelY;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00271">setAccelY()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00276">setAccelY()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -379,13 +379,13 @@ Here is the caller graph for this function:</div>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>accelZ</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00142">142</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelZ;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00147">147</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelZ;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00281">setAccelZ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00286">setAccelZ()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -414,13 +414,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated accel reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibratedAccelX</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00155">155</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedAccelX;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00160">160</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedAccelX;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00291">setCalibratedAccelX()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00296">setCalibratedAccelX()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -449,13 +449,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated accel reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibratedAccelY</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00168">168</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;{</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedAccelY;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00173">173</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedAccelY;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00301">setCalibratedAccelY()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00306">setCalibratedAccelY()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -484,13 +484,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated accel reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibratedAccelZ</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00181">181</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedAccelZ;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00186">186</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedAccelZ;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00311">setCalibratedAccelZ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00316">setCalibratedAccelZ()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -519,13 +519,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated accel reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>compressedCalibratedAccelX</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00194">194</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;{</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> d-&gt;compressedCalibratedAccelX;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00199">199</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">return</span> d-&gt;compressedCalibratedAccelX;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00321">setCompressedCalibratedAccelX()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00326">setCompressedCalibratedAccelX()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -554,13 +554,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated accel reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>compressedCalibratedAccelY</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00207">207</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> d-&gt;compressedCalibratedAccelY;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00212">212</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> d-&gt;compressedCalibratedAccelY;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00331">setCompressedCalibratedAccelY()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00336">setCompressedCalibratedAccelY()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -589,13 +589,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated accel reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>compressedCalibratedAccelZ</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00220">220</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> d-&gt;compressedCalibratedAccelZ;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00225">225</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> d-&gt;compressedCalibratedAccelZ;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00341">setCompressedCalibratedAccelZ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00346">setCompressedCalibratedAccelZ()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -624,13 +624,13 @@ Here is the caller graph for this function:</div>
 <p>Each time in the array describes the time at which the accelerometer sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in accel_x and accel_y and accel_z</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>sampleTimeOffset</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00100">100</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> d-&gt;sampleTimeOffset;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00105">105</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> d-&gt;sampleTimeOffset;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00251">setSampleTimeOffset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00256">setSampleTimeOffset()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -664,14 +664,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00261">261</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    d-&gt;accelX = <a class="code" href="classAccelerometerDataMessage.html#a7d789529e4f58b2a0b53d93f89bd823f">accelX</a>;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a7d789529e4f58b2a0b53d93f89bd823f"><div class="ttname"><a href="classAccelerometerDataMessage.html#a7d789529e4f58b2a0b53d93f89bd823f">AccelerometerDataMessage::accelX</a></div><div class="ttdeci">quint16 accelX() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's accelX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00114">accelerometerdatamessage.cpp:114</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00266">266</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    d-&gt;accelX = <a class="code" href="classAccelerometerDataMessage.html#a7d789529e4f58b2a0b53d93f89bd823f">accelX</a>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a7d789529e4f58b2a0b53d93f89bd823f"><div class="ttname"><a href="classAccelerometerDataMessage.html#a7d789529e4f58b2a0b53d93f89bd823f">AccelerometerDataMessage::accelX</a></div><div class="ttdeci">quint16 accelX() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's accelX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00119">accelerometerdatamessage.cpp:119</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00114">accelX()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00119">accelX()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -705,14 +705,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00271">271</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    d-&gt;accelY = <a class="code" href="classAccelerometerDataMessage.html#adc90d693af5f515514e33e48242bfd67">accelY</a>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_adc90d693af5f515514e33e48242bfd67"><div class="ttname"><a href="classAccelerometerDataMessage.html#adc90d693af5f515514e33e48242bfd67">AccelerometerDataMessage::accelY</a></div><div class="ttdeci">quint16 accelY() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's accelY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00128">accelerometerdatamessage.cpp:128</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00276">276</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    d-&gt;accelY = <a class="code" href="classAccelerometerDataMessage.html#adc90d693af5f515514e33e48242bfd67">accelY</a>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_adc90d693af5f515514e33e48242bfd67"><div class="ttname"><a href="classAccelerometerDataMessage.html#adc90d693af5f515514e33e48242bfd67">AccelerometerDataMessage::accelY</a></div><div class="ttdeci">quint16 accelY() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's accelY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00133">accelerometerdatamessage.cpp:133</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00128">accelY()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00133">accelY()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -746,14 +746,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00281">281</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;{</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    d-&gt;accelZ = <a class="code" href="classAccelerometerDataMessage.html#a3fc1905be38628eff860b1bd6f94b5c8">accelZ</a>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a3fc1905be38628eff860b1bd6f94b5c8"><div class="ttname"><a href="classAccelerometerDataMessage.html#a3fc1905be38628eff860b1bd6f94b5c8">AccelerometerDataMessage::accelZ</a></div><div class="ttdeci">quint16 accelZ() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's accelZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00142">accelerometerdatamessage.cpp:142</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00286">286</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    d-&gt;accelZ = <a class="code" href="classAccelerometerDataMessage.html#a3fc1905be38628eff860b1bd6f94b5c8">accelZ</a>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a3fc1905be38628eff860b1bd6f94b5c8"><div class="ttname"><a href="classAccelerometerDataMessage.html#a3fc1905be38628eff860b1bd6f94b5c8">AccelerometerDataMessage::accelZ</a></div><div class="ttdeci">quint16 accelZ() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's accelZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00147">accelerometerdatamessage.cpp:147</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00142">accelZ()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00147">accelZ()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -787,14 +787,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00291">291</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;{</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    d-&gt;calibratedAccelX = <a class="code" href="classAccelerometerDataMessage.html#a525a05505676e7eea6bca151fb28e7b6">calibratedAccelX</a>;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a525a05505676e7eea6bca151fb28e7b6"><div class="ttname"><a href="classAccelerometerDataMessage.html#a525a05505676e7eea6bca151fb28e7b6">AccelerometerDataMessage::calibratedAccelX</a></div><div class="ttdeci">float calibratedAccelX() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's calibratedAccelX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00155">accelerometerdatamessage.cpp:155</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00296">296</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    d-&gt;calibratedAccelX = <a class="code" href="classAccelerometerDataMessage.html#a525a05505676e7eea6bca151fb28e7b6">calibratedAccelX</a>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a525a05505676e7eea6bca151fb28e7b6"><div class="ttname"><a href="classAccelerometerDataMessage.html#a525a05505676e7eea6bca151fb28e7b6">AccelerometerDataMessage::calibratedAccelX</a></div><div class="ttdeci">float calibratedAccelX() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's calibratedAccelX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00160">accelerometerdatamessage.cpp:160</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00155">calibratedAccelX()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00160">calibratedAccelX()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -828,14 +828,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00301">301</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    d-&gt;calibratedAccelY = <a class="code" href="classAccelerometerDataMessage.html#a2205bc6c1fd7739dcfd81f83ba189fce">calibratedAccelY</a>;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a2205bc6c1fd7739dcfd81f83ba189fce"><div class="ttname"><a href="classAccelerometerDataMessage.html#a2205bc6c1fd7739dcfd81f83ba189fce">AccelerometerDataMessage::calibratedAccelY</a></div><div class="ttdeci">float calibratedAccelY() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's calibratedAccelY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00168">accelerometerdatamessage.cpp:168</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00306">306</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    d-&gt;calibratedAccelY = <a class="code" href="classAccelerometerDataMessage.html#a2205bc6c1fd7739dcfd81f83ba189fce">calibratedAccelY</a>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a2205bc6c1fd7739dcfd81f83ba189fce"><div class="ttname"><a href="classAccelerometerDataMessage.html#a2205bc6c1fd7739dcfd81f83ba189fce">AccelerometerDataMessage::calibratedAccelY</a></div><div class="ttdeci">float calibratedAccelY() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's calibratedAccelY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00173">accelerometerdatamessage.cpp:173</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00168">calibratedAccelY()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00173">calibratedAccelY()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -869,14 +869,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00311">311</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;{</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    d-&gt;calibratedAccelZ = <a class="code" href="classAccelerometerDataMessage.html#a8a12441377ce9fee735ee64cdf0b9b0f">calibratedAccelZ</a>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a8a12441377ce9fee735ee64cdf0b9b0f"><div class="ttname"><a href="classAccelerometerDataMessage.html#a8a12441377ce9fee735ee64cdf0b9b0f">AccelerometerDataMessage::calibratedAccelZ</a></div><div class="ttdeci">float calibratedAccelZ() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's calibratedAccelZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00181">accelerometerdatamessage.cpp:181</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00316">316</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    d-&gt;calibratedAccelZ = <a class="code" href="classAccelerometerDataMessage.html#a8a12441377ce9fee735ee64cdf0b9b0f">calibratedAccelZ</a>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a8a12441377ce9fee735ee64cdf0b9b0f"><div class="ttname"><a href="classAccelerometerDataMessage.html#a8a12441377ce9fee735ee64cdf0b9b0f">AccelerometerDataMessage::calibratedAccelZ</a></div><div class="ttdeci">float calibratedAccelZ() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's calibratedAccelZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00186">accelerometerdatamessage.cpp:186</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00181">calibratedAccelZ()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00186">calibratedAccelZ()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -910,14 +910,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00321">321</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    d-&gt;compressedCalibratedAccelX = <a class="code" href="classAccelerometerDataMessage.html#acb31c63febbe161f4d65c9116c98765f">compressedCalibratedAccelX</a>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_acb31c63febbe161f4d65c9116c98765f"><div class="ttname"><a href="classAccelerometerDataMessage.html#acb31c63febbe161f4d65c9116c98765f">AccelerometerDataMessage::compressedCalibratedAccelX</a></div><div class="ttdeci">qint16 compressedCalibratedAccelX() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's compressedCalibratedAccelX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00194">accelerometerdatamessage.cpp:194</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00326">326</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;{</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    d-&gt;compressedCalibratedAccelX = <a class="code" href="classAccelerometerDataMessage.html#acb31c63febbe161f4d65c9116c98765f">compressedCalibratedAccelX</a>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_acb31c63febbe161f4d65c9116c98765f"><div class="ttname"><a href="classAccelerometerDataMessage.html#acb31c63febbe161f4d65c9116c98765f">AccelerometerDataMessage::compressedCalibratedAccelX</a></div><div class="ttdeci">qint16 compressedCalibratedAccelX() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's compressedCalibratedAccelX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00199">accelerometerdatamessage.cpp:199</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00194">compressedCalibratedAccelX()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00199">compressedCalibratedAccelX()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -951,14 +951,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00331">331</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    d-&gt;compressedCalibratedAccelY = <a class="code" href="classAccelerometerDataMessage.html#a8921d8d8d26316343107145e06f04a39">compressedCalibratedAccelY</a>;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a8921d8d8d26316343107145e06f04a39"><div class="ttname"><a href="classAccelerometerDataMessage.html#a8921d8d8d26316343107145e06f04a39">AccelerometerDataMessage::compressedCalibratedAccelY</a></div><div class="ttdeci">qint16 compressedCalibratedAccelY() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's compressedCalibratedAccelY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00207">accelerometerdatamessage.cpp:207</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00336">336</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;{</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    d-&gt;compressedCalibratedAccelY = <a class="code" href="classAccelerometerDataMessage.html#a8921d8d8d26316343107145e06f04a39">compressedCalibratedAccelY</a>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a8921d8d8d26316343107145e06f04a39"><div class="ttname"><a href="classAccelerometerDataMessage.html#a8921d8d8d26316343107145e06f04a39">AccelerometerDataMessage::compressedCalibratedAccelY</a></div><div class="ttdeci">qint16 compressedCalibratedAccelY() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's compressedCalibratedAccelY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00212">accelerometerdatamessage.cpp:212</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00207">compressedCalibratedAccelY()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00212">compressedCalibratedAccelY()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -992,14 +992,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00341">341</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;{</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    d-&gt;compressedCalibratedAccelZ = <a class="code" href="classAccelerometerDataMessage.html#ac1fbb3a5e0de5a837e4d0d51d8cb524f">compressedCalibratedAccelZ</a>;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_ac1fbb3a5e0de5a837e4d0d51d8cb524f"><div class="ttname"><a href="classAccelerometerDataMessage.html#ac1fbb3a5e0de5a837e4d0d51d8cb524f">AccelerometerDataMessage::compressedCalibratedAccelZ</a></div><div class="ttdeci">qint16 compressedCalibratedAccelZ() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's compressedCalibratedAccelZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00220">accelerometerdatamessage.cpp:220</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00346">346</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;{</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    d-&gt;compressedCalibratedAccelZ = <a class="code" href="classAccelerometerDataMessage.html#ac1fbb3a5e0de5a837e4d0d51d8cb524f">compressedCalibratedAccelZ</a>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_ac1fbb3a5e0de5a837e4d0d51d8cb524f"><div class="ttname"><a href="classAccelerometerDataMessage.html#ac1fbb3a5e0de5a837e4d0d51d8cb524f">AccelerometerDataMessage::compressedCalibratedAccelZ</a></div><div class="ttdeci">qint16 compressedCalibratedAccelZ() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's compressedCalibratedAccelZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00225">accelerometerdatamessage.cpp:225</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00220">compressedCalibratedAccelZ()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00225">compressedCalibratedAccelZ()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1033,14 +1033,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00251">251</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    d-&gt;sampleTimeOffset = <a class="code" href="classAccelerometerDataMessage.html#a83a19717e23bfa34de1e6ea2ad460a5d">sampleTimeOffset</a>;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a83a19717e23bfa34de1e6ea2ad460a5d"><div class="ttname"><a href="classAccelerometerDataMessage.html#a83a19717e23bfa34de1e6ea2ad460a5d">AccelerometerDataMessage::sampleTimeOffset</a></div><div class="ttdeci">quint16 sampleTimeOffset() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's sampleTimeOffset field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00100">accelerometerdatamessage.cpp:100</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00256">256</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    d-&gt;sampleTimeOffset = <a class="code" href="classAccelerometerDataMessage.html#a83a19717e23bfa34de1e6ea2ad460a5d">sampleTimeOffset</a>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a83a19717e23bfa34de1e6ea2ad460a5d"><div class="ttname"><a href="classAccelerometerDataMessage.html#a83a19717e23bfa34de1e6ea2ad460a5d">AccelerometerDataMessage::sampleTimeOffset</a></div><div class="ttdeci">quint16 sampleTimeOffset() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's sampleTimeOffset field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00105">accelerometerdatamessage.cpp:105</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00100">sampleTimeOffset()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00105">sampleTimeOffset()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1074,14 +1074,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00231">231</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    d-&gt;timestamp = <a class="code" href="classAccelerometerDataMessage.html#ae00276eda6422160ba77a46cd03780e4">timestamp</a>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_ae00276eda6422160ba77a46cd03780e4"><div class="ttname"><a href="classAccelerometerDataMessage.html#ae00276eda6422160ba77a46cd03780e4">AccelerometerDataMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00071">accelerometerdatamessage.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00236">236</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    d-&gt;timestamp = <a class="code" href="classAccelerometerDataMessage.html#ae00276eda6422160ba77a46cd03780e4">timestamp</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_ae00276eda6422160ba77a46cd03780e4"><div class="ttname"><a href="classAccelerometerDataMessage.html#ae00276eda6422160ba77a46cd03780e4">AccelerometerDataMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00076">accelerometerdatamessage.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00071">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00076">timestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1115,14 +1115,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00241">241</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    d-&gt;timestampMs = <a class="code" href="classAccelerometerDataMessage.html#a6f5a28756c49260d3ca9cd877f87447b">timestampMs</a>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
-<div class="ttc" id="aclassAccelerometerDataMessage_html_a6f5a28756c49260d3ca9cd877f87447b"><div class="ttname"><a href="classAccelerometerDataMessage.html#a6f5a28756c49260d3ca9cd877f87447b">AccelerometerDataMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00084">accelerometerdatamessage.cpp:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00246">246</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;{</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    Q_D(<a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    d-&gt;timestampMs = <a class="code" href="classAccelerometerDataMessage.html#a6f5a28756c49260d3ca9cd877f87447b">timestampMs</a>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
+<div class="ttc" id="aclassAccelerometerDataMessage_html_a6f5a28756c49260d3ca9cd877f87447b"><div class="ttname"><a href="classAccelerometerDataMessage.html#a6f5a28756c49260d3ca9cd877f87447b">AccelerometerDataMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the AccelerometerDataMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="accelerometerdatamessage_8cpp_source.html#l00089">accelerometerdatamessage.cpp:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00084">timestampMs()</a>.</p>
+<p class="reference">References <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00089">timestampMs()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1151,13 +1151,13 @@ Here is the call graph for this function:</div>
 <p>Whole second part of the timestamp</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00071">71</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00076">76</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00231">setTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00236">setTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1186,13 +1186,13 @@ Here is the caller graph for this function:</div>
 <p>Millisecond part of the timestamp.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestampMs</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00084">84</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00089">89</a> of file <a class="el" href="accelerometerdatamessage_8cpp_source.html">accelerometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAccelerometerDataMessage.html">AccelerometerDataMessage</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00241">setTimestampMs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accelerometerdatamessage_8cpp_source.html#l00246">setTimestampMs()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

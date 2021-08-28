@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -189,7 +189,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classScheduleMessage.html" title="The ScheduleMessage class represents a FIT ScheduleMessage data message.">ScheduleMessage</a> class represents a FIT <a class="el" href="classScheduleMessage.html" title="The ScheduleMessage class represents a FIT ScheduleMessage data message.">ScheduleMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8h_source.html#l00034">34</a> of file <a class="el" href="schedulemessage_8h_source.html">schedulemessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8h_source.html#l00039">39</a> of file <a class="el" href="schedulemessage_8h_source.html">schedulemessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a88d35f7eac9a925ed8cc2023e3ecc0ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88d35f7eac9a925ed8cc2023e3ecc0ca">&#9670;&nbsp;</a></span>ScheduleMessage() <span class="overload">[1/2]</span></h2>
@@ -209,13 +209,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classScheduleMessage.html" title="The ScheduleMessage class represents a FIT ScheduleMessage data message.">ScheduleMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classScheduleMessagePrivate.html">ScheduleMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassScheduleMessagePrivate_html"><div class="ttname"><a href="classScheduleMessagePrivate.html">ScheduleMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage__p_8h_source.html#l00034">schedulemessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classScheduleMessagePrivate.html">ScheduleMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassScheduleMessagePrivate_html"><div class="ttname"><a href="classScheduleMessagePrivate.html">ScheduleMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage__p_8h_source.html#l00038">schedulemessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,11 +250,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -278,14 +278,14 @@ Additional Inherited Members</h2></td></tr>
 <p>TRUE if this activity has been started</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>completed</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00123">123</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> d-&gt;completed;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html"><div class="ttname"><a href="classScheduleMessage.html">ScheduleMessage</a></div><div class="ttdoc">The ScheduleMessage class represents a FIT ScheduleMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8h_source.html#l00034">schedulemessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> d-&gt;completed;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html"><div class="ttname"><a href="classScheduleMessage.html">ScheduleMessage</a></div><div class="ttdoc">The ScheduleMessage class represents a FIT ScheduleMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8h_source.html#l00039">schedulemessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00196">setCompleted()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00201">setCompleted()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -314,13 +314,13 @@ Here is the caller graph for this function:</div>
 <p>Corresponds to file_id of scheduled workout / course.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>manufacturer</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00071">71</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> d-&gt;manufacturer;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00076">76</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> d-&gt;manufacturer;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00156">setManufacturer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00161">setManufacturer()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -349,13 +349,13 @@ Here is the caller graph for this function:</div>
 <p>Corresponds to file_id of scheduled workout / course.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>product</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00084">84</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;product;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00089">89</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> d-&gt;product;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00166">setProduct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00171">setProduct()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -383,13 +383,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classScheduleMessage.html" title="The ScheduleMessage class represents a FIT ScheduleMessage data message.">ScheduleMessage</a> data message's <code>scheduledTime</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>scheduledTime</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00145">145</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> d-&gt;scheduledTime;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00150">150</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> d-&gt;scheduledTime;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00216">setScheduledTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00221">setScheduledTime()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -418,13 +418,13 @@ Here is the caller graph for this function:</div>
 <p>Corresponds to file_id of scheduled workout / course.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>serialNumber</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00097">97</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> d-&gt;serialNumber;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;serialNumber;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00176">setSerialNumber()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00181">setSerialNumber()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -458,14 +458,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00196">196</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    d-&gt;completed = <a class="code" href="classScheduleMessage.html#a08d8e334bee6e15df1e8018db3df619b">completed</a>;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html_a08d8e334bee6e15df1e8018db3df619b"><div class="ttname"><a href="classScheduleMessage.html#a08d8e334bee6e15df1e8018db3df619b">ScheduleMessage::completed</a></div><div class="ttdeci">bool completed() const</div><div class="ttdoc">Returns the ScheduleMessage data message's completed field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00123">schedulemessage.cpp:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00201">201</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    d-&gt;completed = <a class="code" href="classScheduleMessage.html#a08d8e334bee6e15df1e8018db3df619b">completed</a>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html_a08d8e334bee6e15df1e8018db3df619b"><div class="ttname"><a href="classScheduleMessage.html#a08d8e334bee6e15df1e8018db3df619b">ScheduleMessage::completed</a></div><div class="ttdeci">bool completed() const</div><div class="ttdoc">Returns the ScheduleMessage data message's completed field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00128">schedulemessage.cpp:128</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00123">completed()</a>.</p>
+<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00128">completed()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -499,14 +499,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00156">156</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    d-&gt;manufacturer = <a class="code" href="classScheduleMessage.html#ac08bf3a8ed9da41fcfbd1fe6de8dda22">manufacturer</a>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html_ac08bf3a8ed9da41fcfbd1fe6de8dda22"><div class="ttname"><a href="classScheduleMessage.html#ac08bf3a8ed9da41fcfbd1fe6de8dda22">ScheduleMessage::manufacturer</a></div><div class="ttdeci">Manufacturer manufacturer() const</div><div class="ttdoc">Returns the ScheduleMessage data message's manufacturer field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00071">schedulemessage.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00161">161</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    d-&gt;manufacturer = <a class="code" href="classScheduleMessage.html#ac08bf3a8ed9da41fcfbd1fe6de8dda22">manufacturer</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html_ac08bf3a8ed9da41fcfbd1fe6de8dda22"><div class="ttname"><a href="classScheduleMessage.html#ac08bf3a8ed9da41fcfbd1fe6de8dda22">ScheduleMessage::manufacturer</a></div><div class="ttdeci">Manufacturer manufacturer() const</div><div class="ttdoc">Returns the ScheduleMessage data message's manufacturer field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00076">schedulemessage.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00071">manufacturer()</a>.</p>
+<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00076">manufacturer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -540,14 +540,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00166">166</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    d-&gt;product = <a class="code" href="classScheduleMessage.html#a82f69c272c69116776ec158cfe4e665e">product</a>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html_a82f69c272c69116776ec158cfe4e665e"><div class="ttname"><a href="classScheduleMessage.html#a82f69c272c69116776ec158cfe4e665e">ScheduleMessage::product</a></div><div class="ttdeci">quint16 product() const</div><div class="ttdoc">Returns the ScheduleMessage data message's product field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00084">schedulemessage.cpp:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00171">171</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    d-&gt;product = <a class="code" href="classScheduleMessage.html#a82f69c272c69116776ec158cfe4e665e">product</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html_a82f69c272c69116776ec158cfe4e665e"><div class="ttname"><a href="classScheduleMessage.html#a82f69c272c69116776ec158cfe4e665e">ScheduleMessage::product</a></div><div class="ttdeci">quint16 product() const</div><div class="ttdoc">Returns the ScheduleMessage data message's product field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00089">schedulemessage.cpp:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00084">product()</a>.</p>
+<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00089">product()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -581,14 +581,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00216">216</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    d-&gt;scheduledTime = <a class="code" href="classScheduleMessage.html#a658d882bd321911f2b16c03807226855">scheduledTime</a>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html_a658d882bd321911f2b16c03807226855"><div class="ttname"><a href="classScheduleMessage.html#a658d882bd321911f2b16c03807226855">ScheduleMessage::scheduledTime</a></div><div class="ttdeci">LocalDateTime scheduledTime() const</div><div class="ttdoc">Returns the ScheduleMessage data message's scheduledTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00145">schedulemessage.cpp:145</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00221">221</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    d-&gt;scheduledTime = <a class="code" href="classScheduleMessage.html#a658d882bd321911f2b16c03807226855">scheduledTime</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html_a658d882bd321911f2b16c03807226855"><div class="ttname"><a href="classScheduleMessage.html#a658d882bd321911f2b16c03807226855">ScheduleMessage::scheduledTime</a></div><div class="ttdeci">LocalDateTime scheduledTime() const</div><div class="ttdoc">Returns the ScheduleMessage data message's scheduledTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00150">schedulemessage.cpp:150</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00145">scheduledTime()</a>.</p>
+<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00150">scheduledTime()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -622,14 +622,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00176">176</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    d-&gt;serialNumber = <a class="code" href="classScheduleMessage.html#aa3bfdc16b45198b47d684b0603b2848e">serialNumber</a>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html_aa3bfdc16b45198b47d684b0603b2848e"><div class="ttname"><a href="classScheduleMessage.html#aa3bfdc16b45198b47d684b0603b2848e">ScheduleMessage::serialNumber</a></div><div class="ttdeci">quint32z serialNumber() const</div><div class="ttdoc">Returns the ScheduleMessage data message's serialNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00097">schedulemessage.cpp:97</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00181">181</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    d-&gt;serialNumber = <a class="code" href="classScheduleMessage.html#aa3bfdc16b45198b47d684b0603b2848e">serialNumber</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html_aa3bfdc16b45198b47d684b0603b2848e"><div class="ttname"><a href="classScheduleMessage.html#aa3bfdc16b45198b47d684b0603b2848e">ScheduleMessage::serialNumber</a></div><div class="ttdeci">quint32z serialNumber() const</div><div class="ttdoc">Returns the ScheduleMessage data message's serialNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00102">schedulemessage.cpp:102</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00097">serialNumber()</a>.</p>
+<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00102">serialNumber()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -663,14 +663,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00186">186</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    d-&gt;timeCreated = <a class="code" href="classScheduleMessage.html#ac404e9bcecde672ff1a5fa7445743600">timeCreated</a>;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html_ac404e9bcecde672ff1a5fa7445743600"><div class="ttname"><a href="classScheduleMessage.html#ac404e9bcecde672ff1a5fa7445743600">ScheduleMessage::timeCreated</a></div><div class="ttdeci">DateTime timeCreated() const</div><div class="ttdoc">Returns the ScheduleMessage data message's timeCreated field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00110">schedulemessage.cpp:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00191">191</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    d-&gt;timeCreated = <a class="code" href="classScheduleMessage.html#ac404e9bcecde672ff1a5fa7445743600">timeCreated</a>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html_ac404e9bcecde672ff1a5fa7445743600"><div class="ttname"><a href="classScheduleMessage.html#ac404e9bcecde672ff1a5fa7445743600">ScheduleMessage::timeCreated</a></div><div class="ttdeci">DateTime timeCreated() const</div><div class="ttdoc">Returns the ScheduleMessage data message's timeCreated field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00115">schedulemessage.cpp:115</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00110">timeCreated()</a>.</p>
+<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00115">timeCreated()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -704,14 +704,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00206">206</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    d-&gt;type = <a class="code" href="classScheduleMessage.html#a6fbe81c3216662dabd782d9a8fe9fba1">type</a>;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
-<div class="ttc" id="aclassScheduleMessage_html_a6fbe81c3216662dabd782d9a8fe9fba1"><div class="ttname"><a href="classScheduleMessage.html#a6fbe81c3216662dabd782d9a8fe9fba1">ScheduleMessage::type</a></div><div class="ttdeci">Schedule type() const</div><div class="ttdoc">Returns the ScheduleMessage data message's type field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00134">schedulemessage.cpp:134</a></div></div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00211">211</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    Q_D(<a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    d-&gt;type = <a class="code" href="classScheduleMessage.html#a6fbe81c3216662dabd782d9a8fe9fba1">type</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
+<div class="ttc" id="aclassScheduleMessage_html_a6fbe81c3216662dabd782d9a8fe9fba1"><div class="ttname"><a href="classScheduleMessage.html#a6fbe81c3216662dabd782d9a8fe9fba1">ScheduleMessage::type</a></div><div class="ttdeci">Schedule type() const</div><div class="ttdoc">Returns the ScheduleMessage data message's type field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="schedulemessage_8cpp_source.html#l00139">schedulemessage.cpp:139</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00134">type()</a>.</p>
+<p class="reference">References <a class="el" href="schedulemessage_8cpp_source.html#l00139">type()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -740,13 +740,13 @@ Here is the call graph for this function:</div>
 <p>Corresponds to file_id of scheduled workout / course.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timeCreated</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00110">110</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> d-&gt;timeCreated;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00115">115</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> d-&gt;timeCreated;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00186">setTimeCreated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00191">setTimeCreated()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -774,13 +774,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classScheduleMessage.html" title="The ScheduleMessage class represents a FIT ScheduleMessage data message.">ScheduleMessage</a> data message's <code>type</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>type</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00134">134</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> d-&gt;type;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="schedulemessage_8cpp_source.html#l00139">139</a> of file <a class="el" href="schedulemessage_8cpp_source.html">schedulemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classScheduleMessage.html">ScheduleMessage</a>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> d-&gt;type;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00206">setType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="schedulemessage_8cpp_source.html#l00211">setType()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

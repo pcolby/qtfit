@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -127,11 +127,11 @@ $(document).ready(function(){initNavTree('types_8h_source.html',''); initResizab
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifndef QTFIT_TYPES_H</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define QTFIT_TYPES_H</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;QtFit_global.h&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="QtFit__global_8h.html">QtFit_global.h</a>&quot;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">   45</a></span>&#160;<span class="keyword">typedef</span> quint8  <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a>;  <span class="comment">///&lt;  8-bit unsigned integer, with 0-is-invalid semantics.</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">   46</a></span>&#160;<span class="keyword">typedef</span> quint16 <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a>; <span class="comment">///&lt; 16-bit unsigned integer, with 0-is-invalid semantics.</span></div>
@@ -5555,9 +5555,12 @@ $(document).ready(function(){initNavTree('types_8h_source.html',''); initResizab
 <div class="line"><a name="l05464"></a><span class="lineno"> 5464</span>&#160;QDebug <a class="code" href="types_8h.html#a09867a7d5b0c30f5cd9d32d1017a7040">operator&lt;&lt;</a>(QDebug debug, <span class="keyword">const</span> <a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a> value);</div>
 <div class="line"><a name="l05465"></a><span class="lineno"> 5465</span>&#160;QDebug <a class="code" href="types_8h.html#a09867a7d5b0c30f5cd9d32d1017a7040">operator&lt;&lt;</a>(QDebug debug, <span class="keyword">const</span> <a class="code" href="types_8h.html#a2f240718a5d600fde8b3366ebb453dc0">RadarThreatLevelType</a> value);</div>
 <div class="line"><a name="l05466"></a><span class="lineno"> 5466</span>&#160; </div>
-<div class="line"><a name="l05467"></a><span class="lineno"> 5467</span>&#160;QTFIT_END_NAMESPACE</div>
+<div class="line"><a name="l05467"></a><span class="lineno"> 5467</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
 <div class="line"><a name="l05468"></a><span class="lineno"> 5468</span>&#160; </div>
 <div class="line"><a name="l05469"></a><span class="lineno"> 5469</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_TYPES_H</span></div>
+<div class="ttc" id="aQtFit__global_8h_html"><div class="ttname"><a href="QtFit__global_8h.html">QtFit_global.h</a></div><div class="ttdoc">Global QtFit library macros.</div></div>
+<div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdoc">Macro for ending the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00078">QtFit_global.h:78</a></div></div>
+<div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdoc">Macro for starting the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00077">QtFit_global.h:77</a></div></div>
 <div class="ttc" id="atypes_8h_html_a0075eba93954c2e5609975a91b29d562"><div class="ttname"><a href="types_8h.html#a0075eba93954c2e5609975a91b29d562">WeatherStatus</a></div><div class="ttdeci">WeatherStatus</div><div class="ttdoc">Garmin FIT WeatherStatus type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l02474">types.h:2474</a></div></div>
 <div class="ttc" id="atypes_8h_html_a00eecc1db747a403407ee496ccd56103"><div class="ttname"><a href="types_8h.html#a00eecc1db747a403407ee496ccd56103">GarminProduct</a></div><div class="ttdeci">GarminProduct</div><div class="ttdoc">Garmin FIT GarminProduct type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01682">types.h:1682</a></div></div>
 <div class="ttc" id="atypes_8h_html_a00eecc1db747a403407ee496ccd56103a20156dbb01d0d0b06a8fe60a18b1b39f"><div class="ttname"><a href="types_8h.html#a00eecc1db747a403407ee496ccd56103a20156dbb01d0d0b06a8fe60a18b1b39f">GarminProduct::DescentMk2Asia</a></div><div class="ttdeci">@ DescentMk2Asia</div><div class="ttdoc">Mk2 and Mk2i.</div></div>

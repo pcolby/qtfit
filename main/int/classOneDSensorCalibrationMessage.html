@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -183,7 +183,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> class represents a FIT <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8h_source.html#l00034">34</a> of file <a class="el" href="onedsensorcalibrationmessage_8h_source.html">onedsensorcalibrationmessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8h_source.html#l00039">39</a> of file <a class="el" href="onedsensorcalibrationmessage_8h_source.html">onedsensorcalibrationmessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8957086a6e25f77206cfc589d40104ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8957086a6e25f77206cfc589d40104ac">&#9670;&nbsp;</a></span>OneDSensorCalibrationMessage() <span class="overload">[1/2]</span></h2>
@@ -203,13 +203,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                           : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classOneDSensorCalibrationMessagePrivate.html">OneDSensorCalibrationMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html">OneDSensorCalibrationMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00034">onedsensorcalibrationmessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                           : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classOneDSensorCalibrationMessagePrivate.html">OneDSensorCalibrationMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html">OneDSensorCalibrationMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00038">onedsensorcalibrationmessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,11 +244,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                                        : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                                                        : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -272,14 +272,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Calibration factor divisor</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibrationDivisor</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00110">110</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibrationDivisor;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessage_html"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a></div><div class="ttdoc">The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8h_source.html#l00034">onedsensorcalibrationmessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00115">115</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibrationDivisor;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessage_html"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a></div><div class="ttdoc">The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8h_source.html#l00039">onedsensorcalibrationmessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00177">setCalibrationDivisor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00182">setCalibrationDivisor()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -308,13 +308,13 @@ Here is the caller graph for this function:</div>
 <p>Calibration factor used to convert from raw ADC value to degrees, g, etc.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibrationFactor</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00097">97</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibrationFactor;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibrationFactor;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00167">setCalibrationFactor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00172">setCalibrationFactor()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -343,13 +343,13 @@ Here is the caller graph for this function:</div>
 <p>Level shift value used to shift the ADC value back into range</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>levelShift</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00123">123</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> d-&gt;levelShift;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> d-&gt;levelShift;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00187">setLevelShift()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00192">setLevelShift()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -378,13 +378,13 @@ Here is the caller graph for this function:</div>
 <p>Internal Calibration factor</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>offsetCal</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00136">136</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> d-&gt;offsetCal;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00141">141</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> d-&gt;offsetCal;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00197">setOffsetCal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00202">setOffsetCal()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -413,13 +413,13 @@ Here is the caller graph for this function:</div>
 <p>Indicates which sensor the calibration is for</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>sensorType</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00084">84</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;sensorType;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00089">89</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> d-&gt;sensorType;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00157">setSensorType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00162">setSensorType()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -453,14 +453,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00177">177</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    d-&gt;calibrationDivisor = <a class="code" href="classOneDSensorCalibrationMessage.html#acd61a04f063e0b7f0602dcc7ebca9195">calibrationDivisor</a>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_acd61a04f063e0b7f0602dcc7ebca9195"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#acd61a04f063e0b7f0602dcc7ebca9195">OneDSensorCalibrationMessage::calibrationDivisor</a></div><div class="ttdeci">quint32 calibrationDivisor() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's calibrationDivisor field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00110">onedsensorcalibrationmessage.cpp:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00182">182</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    d-&gt;calibrationDivisor = <a class="code" href="classOneDSensorCalibrationMessage.html#acd61a04f063e0b7f0602dcc7ebca9195">calibrationDivisor</a>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_acd61a04f063e0b7f0602dcc7ebca9195"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#acd61a04f063e0b7f0602dcc7ebca9195">OneDSensorCalibrationMessage::calibrationDivisor</a></div><div class="ttdeci">quint32 calibrationDivisor() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's calibrationDivisor field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00115">onedsensorcalibrationmessage.cpp:115</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00110">calibrationDivisor()</a>.</p>
+<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00115">calibrationDivisor()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -494,14 +494,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00167">167</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    d-&gt;calibrationFactor = <a class="code" href="classOneDSensorCalibrationMessage.html#a3e80e2a2cf1729fd06529ca753bf2306">calibrationFactor</a>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_a3e80e2a2cf1729fd06529ca753bf2306"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#a3e80e2a2cf1729fd06529ca753bf2306">OneDSensorCalibrationMessage::calibrationFactor</a></div><div class="ttdeci">quint32 calibrationFactor() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's calibrationFactor field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00097">onedsensorcalibrationmessage.cpp:97</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00172">172</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    d-&gt;calibrationFactor = <a class="code" href="classOneDSensorCalibrationMessage.html#a3e80e2a2cf1729fd06529ca753bf2306">calibrationFactor</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_a3e80e2a2cf1729fd06529ca753bf2306"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#a3e80e2a2cf1729fd06529ca753bf2306">OneDSensorCalibrationMessage::calibrationFactor</a></div><div class="ttdeci">quint32 calibrationFactor() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's calibrationFactor field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00102">onedsensorcalibrationmessage.cpp:102</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00097">calibrationFactor()</a>.</p>
+<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00102">calibrationFactor()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -535,14 +535,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00187">187</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;{</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    d-&gt;levelShift = <a class="code" href="classOneDSensorCalibrationMessage.html#ad110b7859064665bc5a56299ead339cf">levelShift</a>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_ad110b7859064665bc5a56299ead339cf"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#ad110b7859064665bc5a56299ead339cf">OneDSensorCalibrationMessage::levelShift</a></div><div class="ttdeci">quint32 levelShift() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's levelShift field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00123">onedsensorcalibrationmessage.cpp:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00192">192</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    d-&gt;levelShift = <a class="code" href="classOneDSensorCalibrationMessage.html#ad110b7859064665bc5a56299ead339cf">levelShift</a>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_ad110b7859064665bc5a56299ead339cf"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#ad110b7859064665bc5a56299ead339cf">OneDSensorCalibrationMessage::levelShift</a></div><div class="ttdeci">quint32 levelShift() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's levelShift field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00128">onedsensorcalibrationmessage.cpp:128</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00123">levelShift()</a>.</p>
+<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00128">levelShift()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -576,14 +576,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00197">197</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    d-&gt;offsetCal = <a class="code" href="classOneDSensorCalibrationMessage.html#aed0eeb9eca3f793bb2836aff9966abdb">offsetCal</a>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_aed0eeb9eca3f793bb2836aff9966abdb"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#aed0eeb9eca3f793bb2836aff9966abdb">OneDSensorCalibrationMessage::offsetCal</a></div><div class="ttdeci">qint32 offsetCal() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's offsetCal field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00136">onedsensorcalibrationmessage.cpp:136</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00202">202</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    d-&gt;offsetCal = <a class="code" href="classOneDSensorCalibrationMessage.html#aed0eeb9eca3f793bb2836aff9966abdb">offsetCal</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_aed0eeb9eca3f793bb2836aff9966abdb"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#aed0eeb9eca3f793bb2836aff9966abdb">OneDSensorCalibrationMessage::offsetCal</a></div><div class="ttdeci">qint32 offsetCal() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's offsetCal field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00141">onedsensorcalibrationmessage.cpp:141</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00136">offsetCal()</a>.</p>
+<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00141">offsetCal()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -617,14 +617,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00157">157</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    d-&gt;sensorType = <a class="code" href="classOneDSensorCalibrationMessage.html#a97df1df873bfe02b600e5fdd79e186f6">sensorType</a>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_a97df1df873bfe02b600e5fdd79e186f6"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#a97df1df873bfe02b600e5fdd79e186f6">OneDSensorCalibrationMessage::sensorType</a></div><div class="ttdeci">SensorType sensorType() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's sensorType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00084">onedsensorcalibrationmessage.cpp:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00162">162</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    d-&gt;sensorType = <a class="code" href="classOneDSensorCalibrationMessage.html#a97df1df873bfe02b600e5fdd79e186f6">sensorType</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_a97df1df873bfe02b600e5fdd79e186f6"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#a97df1df873bfe02b600e5fdd79e186f6">OneDSensorCalibrationMessage::sensorType</a></div><div class="ttdeci">SensorType sensorType() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's sensorType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00089">onedsensorcalibrationmessage.cpp:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00084">sensorType()</a>.</p>
+<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00089">sensorType()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -658,14 +658,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00147">147</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    d-&gt;timestamp = <a class="code" href="classOneDSensorCalibrationMessage.html#af27ef0bfb99e06f146ecf21b0d47c34e">timestamp</a>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_af27ef0bfb99e06f146ecf21b0d47c34e"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#af27ef0bfb99e06f146ecf21b0d47c34e">OneDSensorCalibrationMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00071">onedsensorcalibrationmessage.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00152">152</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Q_D(<a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    d-&gt;timestamp = <a class="code" href="classOneDSensorCalibrationMessage.html#af27ef0bfb99e06f146ecf21b0d47c34e">timestamp</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessage_html_af27ef0bfb99e06f146ecf21b0d47c34e"><div class="ttname"><a href="classOneDSensorCalibrationMessage.html#af27ef0bfb99e06f146ecf21b0d47c34e">OneDSensorCalibrationMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the OneDSensorCalibrationMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage_8cpp_source.html#l00076">onedsensorcalibrationmessage.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00071">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00076">timestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -694,13 +694,13 @@ Here is the call graph for this function:</div>
 <p>Whole second part of the timestamp</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00071">71</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00076">76</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classOneDSensorCalibrationMessage.html">OneDSensorCalibrationMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00147">setTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00152">setTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

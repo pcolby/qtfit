@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -112,69 +112,78 @@ $(document).ready(function(){initNavTree('fielddescriptionmessage_8h_source.html
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * \file</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * \note This file is automatcially generated. Any changes here are likely to be overwritten.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_FIELDDESCRIPTIONMESSAGE_H</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_FIELDDESCRIPTIONMESSAGE_H</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * \file</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Declares the FieldDescriptionMessage class.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="classFieldDescriptionMessagePrivate.html">FieldDescriptionMessagePrivate</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classFieldDescriptionMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    quint8 developerDataIndex() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    quint8 fieldDefinitionNumber() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> fitBaseTypeId() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QString fieldName() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    quint8 array() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QString components() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    quint8 scale() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    qint8 offset() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QString units() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QString bits() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    QString accumulate() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="types_8h.html#aab67a28cf8a7a7cbff3811b898d9a28e">FitBaseUnit</a> fitBaseUnitId() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22c">MesgNum</a> nativeMesgNum() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    quint8 nativeFieldNum() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> setDeveloperDataIndex(<span class="keyword">const</span> quint8 developerDataIndex);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> setFieldDefinitionNumber(<span class="keyword">const</span> quint8 fieldDefinitionNumber);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> setFitBaseTypeId(<span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> fitBaseTypeId);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> setFieldName(<span class="keyword">const</span> QString fieldName);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> setArray(<span class="keyword">const</span> quint8 array);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> setComponents(<span class="keyword">const</span> QString components);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> setScale(<span class="keyword">const</span> quint8 scale);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setOffset(<span class="keyword">const</span> qint8 offset);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> setUnits(<span class="keyword">const</span> QString units);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setBits(<span class="keyword">const</span> QString bits);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setAccumulate(<span class="keyword">const</span> QString accumulate);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setFitBaseUnitId(<span class="keyword">const</span> <a class="code" href="types_8h.html#aab67a28cf8a7a7cbff3811b898d9a28e">FitBaseUnit</a> fitBaseUnitId);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setNativeMesgNum(<span class="keyword">const</span> <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22c">MesgNum</a> nativeMesgNum);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setNativeFieldNum(<span class="keyword">const</span> quint8 nativeFieldNum);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    /// \cond internal</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>(<a class="code" href="classFieldDescriptionMessagePrivate.html">FieldDescriptionMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    /// \endcond</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">//Q_DISABLE_COPY(FieldDescriptionMessage)</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;QTFIT_END_NAMESPACE</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_FIELDDESCRIPTIONMESSAGE_H</span></div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassFieldDescriptionMessagePrivate_html"><div class="ttname"><a href="classFieldDescriptionMessagePrivate.html">FieldDescriptionMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fielddescriptionmessage__p_8h_source.html#l00034">fielddescriptionmessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassFieldDescriptionMessage_html"><div class="ttname"><a href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a></div><div class="ttdoc">The FieldDescriptionMessage class represents a FIT FieldDescriptionMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="fielddescriptionmessage_8h_source.html#l00034">fielddescriptionmessage.h:34</a></div></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef QTFIT_FIELDDESCRIPTIONMESSAGE_H</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define QTFIT_FIELDDESCRIPTIONMESSAGE_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="abstractdatamessage_8h.html">abstractdatamessage.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">class </span><a class="code" href="classFieldDescriptionMessagePrivate.html">FieldDescriptionMessagePrivate</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classFieldDescriptionMessage.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a> <a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ~<a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    quint8 developerDataIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    quint8 fieldDefinitionNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> fitBaseTypeId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QString fieldName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    quint8 array() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    QString components() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    quint8 scale() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    qint8 offset() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QString units() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QString bits() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QString accumulate() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="types_8h.html#aab67a28cf8a7a7cbff3811b898d9a28e">FitBaseUnit</a> fitBaseUnitId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22c">MesgNum</a> nativeMesgNum() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    quint8 nativeFieldNum() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> setDeveloperDataIndex(<span class="keyword">const</span> quint8 developerDataIndex);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> setFieldDefinitionNumber(<span class="keyword">const</span> quint8 fieldDefinitionNumber);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setFitBaseTypeId(<span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> fitBaseTypeId);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> setFieldName(<span class="keyword">const</span> QString fieldName);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setArray(<span class="keyword">const</span> quint8 array);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setComponents(<span class="keyword">const</span> QString components);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setScale(<span class="keyword">const</span> quint8 scale);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setOffset(<span class="keyword">const</span> qint8 offset);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setUnits(<span class="keyword">const</span> QString units);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> setBits(<span class="keyword">const</span> QString bits);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setAccumulate(<span class="keyword">const</span> QString accumulate);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setFitBaseUnitId(<span class="keyword">const</span> <a class="code" href="types_8h.html#aab67a28cf8a7a7cbff3811b898d9a28e">FitBaseUnit</a> fitBaseUnitId);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setNativeMesgNum(<span class="keyword">const</span> <a class="code" href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22c">MesgNum</a> nativeMesgNum);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setNativeFieldNum(<span class="keyword">const</span> quint8 nativeFieldNum);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">    /// \cond internal</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>(<a class="code" href="classFieldDescriptionMessagePrivate.html">FieldDescriptionMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    /// \endcond</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">//Q_DISABLE_COPY(FieldDescriptionMessage)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_FIELDDESCRIPTIONMESSAGE_H</span></div>
+<div class="ttc" id="aQtFit__global_8h_html_a0e93dab66b5e7c93148056660a6c416c"><div class="ttname"><a href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a></div><div class="ttdeci">#define QTFIT_EXPORT</div><div class="ttdoc">QtFit library export/import macro.</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00042">QtFit_global.h:42</a></div></div>
+<div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdoc">Macro for ending the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00078">QtFit_global.h:78</a></div></div>
+<div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdoc">Macro for starting the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00077">QtFit_global.h:77</a></div></div>
+<div class="ttc" id="aabstractdatamessage_8h_html"><div class="ttname"><a href="abstractdatamessage_8h.html">abstractdatamessage.h</a></div><div class="ttdoc">Declares the AbstractDataMessage class.</div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassFieldDescriptionMessagePrivate_html"><div class="ttname"><a href="classFieldDescriptionMessagePrivate.html">FieldDescriptionMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="fielddescriptionmessage__p_8h_source.html#l00038">fielddescriptionmessage_p.h:38</a></div></div>
+<div class="ttc" id="aclassFieldDescriptionMessage_html"><div class="ttname"><a href="classFieldDescriptionMessage.html">FieldDescriptionMessage</a></div><div class="ttdoc">The FieldDescriptionMessage class represents a FIT FieldDescriptionMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="fielddescriptionmessage_8h_source.html#l00039">fielddescriptionmessage.h:39</a></div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a></div><div class="ttdeci">FitBaseType</div><div class="ttdoc">Garmin FIT FitBaseType type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l03378">types.h:3378</a></div></div>
 <div class="ttc" id="atypes_8h_html_aab67a28cf8a7a7cbff3811b898d9a28e"><div class="ttname"><a href="types_8h.html#aab67a28cf8a7a7cbff3811b898d9a28e">FitBaseUnit</a></div><div class="ttdeci">FitBaseUnit</div><div class="ttdoc">Garmin FIT FitBaseUnit type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l03471">types.h:3471</a></div></div>
 <div class="ttc" id="atypes_8h_html_aac99da303e65f2fd0821198e4b6cf22c"><div class="ttname"><a href="types_8h.html#aac99da303e65f2fd0821198e4b6cf22c">MesgNum</a></div><div class="ttdeci">MesgNum</div><div class="ttdoc">Garmin FIT MesgNum type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00091">types.h:91</a></div></div>

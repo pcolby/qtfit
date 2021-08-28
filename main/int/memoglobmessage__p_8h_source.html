@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -112,73 +112,80 @@ $(document).ready(function(){initNavTree('memoglobmessage__p_8h_source.html','')
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * \file</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * \note This file is automatcially generated. Any changes here are likely to be overwritten.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_MEMOGLOBMESSAGE_P_H</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_MEMOGLOBMESSAGE_P_H</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage_p.h&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * \file</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Declares the MemoGlobMessagePrivate class.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef QTFIT_MEMOGLOBMESSAGE_P_H</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define QTFIT_MEMOGLOBMESSAGE_P_H</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="classMemoGlobMessage.html">MemoGlobMessage</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="abstractdatamessage__p_8h.html">abstractdatamessage_p.h</a>&quot;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    /*!</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s partIndex field.</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     * Sequence number of memo blocks</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a947528a988407fc3f388c99c7fcc9cc2">   42</a></span>&#160;    quint32 <a class="code" href="classMemoGlobMessagePrivate.html#a947528a988407fc3f388c99c7fcc9cc2">partIndex</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    /*!</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s memo field.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">     * Block of utf8 bytes</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a91b822d7fc462b94ee14f4c82b98146f">   49</a></span>&#160;    quint8 <a class="code" href="classMemoGlobMessagePrivate.html#a91b822d7fc462b94ee14f4c82b98146f">memo</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    /*!</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s messageNumber field.</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     * Allows relating glob to another mesg  If used only required for first part of each memo_glob</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a7521bc03c6edeffa568d80f97313571b">   56</a></span>&#160;    quint16 <a class="code" href="classMemoGlobMessagePrivate.html#a7521bc03c6edeffa568d80f97313571b">messageNumber</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    /*!</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s messageIndex field.</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">     * Index of external mesg</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a0836ac8e45381039139a4d07b5051c0f">   63</a></span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> <a class="code" href="classMemoGlobMessagePrivate.html#a0836ac8e45381039139a4d07b5051c0f">messageIndex</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a>(<a class="code" href="classMemoGlobMessage.html">MemoGlobMessage</a> * <span class="keyword">const</span> q);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classMemoGlobMessagePrivate.html#a7a3ec2b16509d8664dfdea281cb1b534">~MemoGlobMessagePrivate</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span><a class="code" href="classMemoGlobMessage.html">MemoGlobMessage</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    /*!</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s partIndex field.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">     * Sequence number of memo blocks</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a947528a988407fc3f388c99c7fcc9cc2">   46</a></span>&#160;    quint32 <a class="code" href="classMemoGlobMessagePrivate.html#a947528a988407fc3f388c99c7fcc9cc2">partIndex</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    /*!</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s memo field.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">     * Block of utf8 bytes</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a91b822d7fc462b94ee14f4c82b98146f">   53</a></span>&#160;    quint8 <a class="code" href="classMemoGlobMessagePrivate.html#a91b822d7fc462b94ee14f4c82b98146f">memo</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /*!</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s messageNumber field.</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     * Allows relating glob to another mesg  If used only required for first part of each memo_glob</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a7521bc03c6edeffa568d80f97313571b">   60</a></span>&#160;    quint16 <a class="code" href="classMemoGlobMessagePrivate.html#a7521bc03c6edeffa568d80f97313571b">messageNumber</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    /*!</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">     * The MemoGlobMessage FIT message&#39;s messageIndex field.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">     * Index of external mesg</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classMemoGlobMessagePrivate.html#a0836ac8e45381039139a4d07b5051c0f">   67</a></span>&#160;    <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> <a class="code" href="classMemoGlobMessagePrivate.html#a0836ac8e45381039139a4d07b5051c0f">messageIndex</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classMemoGlobMessagePrivate.html#a0d13f6bc341199b50aa9c5dbd8bd1bbf">setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray &amp;data,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                  <span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, <span class="keyword">const</span> <span class="keywordtype">bool</span> bigEndian) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a>(<a class="code" href="classMemoGlobMessage.html">MemoGlobMessage</a> * <span class="keyword">const</span> q);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classMemoGlobMessagePrivate.html#a7a3ec2b16509d8664dfdea281cb1b534">~MemoGlobMessagePrivate</a>();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Q_DECLARE_PUBLIC(<a class="code" href="classMemoGlobMessage.html">MemoGlobMessage</a>)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classMemoGlobMessagePrivate.html#a0d13f6bc341199b50aa9c5dbd8bd1bbf">setField</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray &amp;data,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                  <span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, <span class="keyword">const</span> <span class="keywordtype">bool</span> bigEndian) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;QTFIT_END_NAMESPACE</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_DECLARE_PUBLIC(<a class="code" href="classMemoGlobMessage.html">MemoGlobMessage</a>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a>)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_MEMOGLOBMESSAGE_P_H</span></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessagePrivate_html"><div class="ttname"><a href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00034">memoglobmessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a0836ac8e45381039139a4d07b5051c0f"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a0836ac8e45381039139a4d07b5051c0f">MemoGlobMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The MemoGlobMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00063">memoglobmessage_p.h:63</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a0d13f6bc341199b50aa9c5dbd8bd1bbf"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a0d13f6bc341199b50aa9c5dbd8bd1bbf">MemoGlobMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian) override</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage_8cpp_source.html#l00196">memoglobmessage.cpp:196</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a7521bc03c6edeffa568d80f97313571b"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a7521bc03c6edeffa568d80f97313571b">MemoGlobMessagePrivate::messageNumber</a></div><div class="ttdeci">quint16 messageNumber</div><div class="ttdoc">The MemoGlobMessage FIT message's messageNumber field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00056">memoglobmessage_p.h:56</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a7a3ec2b16509d8664dfdea281cb1b534"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a7a3ec2b16509d8664dfdea281cb1b534">MemoGlobMessagePrivate::~MemoGlobMessagePrivate</a></div><div class="ttdeci">virtual ~MemoGlobMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage_8cpp_source.html#l00191">memoglobmessage.cpp:191</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a91b822d7fc462b94ee14f4c82b98146f"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a91b822d7fc462b94ee14f4c82b98146f">MemoGlobMessagePrivate::memo</a></div><div class="ttdeci">quint8 memo</div><div class="ttdoc">The MemoGlobMessage FIT message's memo field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00049">memoglobmessage_p.h:49</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a947528a988407fc3f388c99c7fcc9cc2"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a947528a988407fc3f388c99c7fcc9cc2">MemoGlobMessagePrivate::partIndex</a></div><div class="ttdeci">quint32 partIndex</div><div class="ttdoc">The MemoGlobMessage FIT message's partIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00042">memoglobmessage_p.h:42</a></div></div>
-<div class="ttc" id="aclassMemoGlobMessage_html"><div class="ttname"><a href="classMemoGlobMessage.html">MemoGlobMessage</a></div><div class="ttdoc">The MemoGlobMessage class represents a FIT MemoGlobMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage_8h_source.html#l00034">memoglobmessage.h:34</a></div></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_MEMOGLOBMESSAGE_P_H</span></div>
+<div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdoc">Macro for ending the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00078">QtFit_global.h:78</a></div></div>
+<div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdoc">Macro for starting the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00077">QtFit_global.h:77</a></div></div>
+<div class="ttc" id="aabstractdatamessage__p_8h_html"><div class="ttname"><a href="abstractdatamessage__p_8h.html">abstractdatamessage_p.h</a></div><div class="ttdoc">Declares the AbstractDataMessagePrivate class.</div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessagePrivate_html"><div class="ttname"><a href="classMemoGlobMessagePrivate.html">MemoGlobMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00038">memoglobmessage_p.h:38</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a0836ac8e45381039139a4d07b5051c0f"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a0836ac8e45381039139a4d07b5051c0f">MemoGlobMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The MemoGlobMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00067">memoglobmessage_p.h:67</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a0d13f6bc341199b50aa9c5dbd8bd1bbf"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a0d13f6bc341199b50aa9c5dbd8bd1bbf">MemoGlobMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian) override</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage_8cpp_source.html#l00201">memoglobmessage.cpp:201</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a7521bc03c6edeffa568d80f97313571b"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a7521bc03c6edeffa568d80f97313571b">MemoGlobMessagePrivate::messageNumber</a></div><div class="ttdeci">quint16 messageNumber</div><div class="ttdoc">The MemoGlobMessage FIT message's messageNumber field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00060">memoglobmessage_p.h:60</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a7a3ec2b16509d8664dfdea281cb1b534"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a7a3ec2b16509d8664dfdea281cb1b534">MemoGlobMessagePrivate::~MemoGlobMessagePrivate</a></div><div class="ttdeci">virtual ~MemoGlobMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage_8cpp_source.html#l00196">memoglobmessage.cpp:196</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a91b822d7fc462b94ee14f4c82b98146f"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a91b822d7fc462b94ee14f4c82b98146f">MemoGlobMessagePrivate::memo</a></div><div class="ttdeci">quint8 memo</div><div class="ttdoc">The MemoGlobMessage FIT message's memo field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00053">memoglobmessage_p.h:53</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessagePrivate_html_a947528a988407fc3f388c99c7fcc9cc2"><div class="ttname"><a href="classMemoGlobMessagePrivate.html#a947528a988407fc3f388c99c7fcc9cc2">MemoGlobMessagePrivate::partIndex</a></div><div class="ttdeci">quint32 partIndex</div><div class="ttdoc">The MemoGlobMessage FIT message's partIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage__p_8h_source.html#l00046">memoglobmessage_p.h:46</a></div></div>
+<div class="ttc" id="aclassMemoGlobMessage_html"><div class="ttname"><a href="classMemoGlobMessage.html">MemoGlobMessage</a></div><div class="ttdoc">The MemoGlobMessage class represents a FIT MemoGlobMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="memoglobmessage_8h_source.html#l00039">memoglobmessage.h:39</a></div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a></div><div class="ttdeci">FitBaseType</div><div class="ttdoc">Garmin FIT FitBaseType type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l03378">types.h:3378</a></div></div>
 <div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdoc">Garmin FIT MessageIndex type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00263">types.h:263</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

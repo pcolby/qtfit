@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Declares the OneDSensorCalibrationMessage class.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-224.5 0,-243.5 178,-243.5 178,-224.5 0,-224.5"/>
 <text text-anchor="middle" x="89" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">onedsensorcalibrationmessage.h</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="abstractdatamessage_8h.html" target="_top" xlink:title="Declares the AbstractDataMessage class.">
 <polygon fill="none" stroke="black" points="23.5,-168.5 23.5,-187.5 154.5,-187.5 154.5,-168.5 23.5,-168.5"/>
 <text text-anchor="middle" x="89" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title="Global QtFit library macros.">
 <polygon fill="none" stroke="black" points="20,-56.5 20,-75.5 104,-75.5 104,-56.5 20,-56.5"/>
 <text text-anchor="middle" x="62" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>

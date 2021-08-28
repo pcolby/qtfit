@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -183,7 +183,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classSegmentPointMessage.html" title="The SegmentPointMessage class represents a FIT SegmentPointMessage data message.">SegmentPointMessage</a> class represents a FIT <a class="el" href="classSegmentPointMessage.html" title="The SegmentPointMessage class represents a FIT SegmentPointMessage data message.">SegmentPointMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8h_source.html#l00034">34</a> of file <a class="el" href="segmentpointmessage_8h_source.html">segmentpointmessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8h_source.html#l00039">39</a> of file <a class="el" href="segmentpointmessage_8h_source.html">segmentpointmessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aeff7ec5d3f62ba9f52e62bd9040766e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeff7ec5d3f62ba9f52e62bd9040766e2">&#9670;&nbsp;</a></span>SegmentPointMessage() <span class="overload">[1/2]</span></h2>
@@ -203,13 +203,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classSegmentPointMessage.html" title="The SegmentPointMessage class represents a FIT SegmentPointMessage data message.">SegmentPointMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classSegmentPointMessagePrivate.html">SegmentPointMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassSegmentPointMessagePrivate_html"><div class="ttname"><a href="classSegmentPointMessagePrivate.html">SegmentPointMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage__p_8h_source.html#l00034">segmentpointmessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classSegmentPointMessagePrivate.html">SegmentPointMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassSegmentPointMessagePrivate_html"><div class="ttname"><a href="classSegmentPointMessagePrivate.html">SegmentPointMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage__p_8h_source.html#l00038">segmentpointmessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,11 +244,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                             : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                             : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -272,14 +272,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Accumulated altitude along the segment at the described point</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>altitude</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00117">117</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> d-&gt;altitude;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentPointMessage_html"><div class="ttname"><a href="classSegmentPointMessage.html">SegmentPointMessage</a></div><div class="ttdoc">The SegmentPointMessage class represents a FIT SegmentPointMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8h_source.html#l00034">segmentpointmessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00122">122</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> d-&gt;altitude;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentPointMessage_html"><div class="ttname"><a href="classSegmentPointMessage.html">SegmentPointMessage</a></div><div class="ttdoc">The SegmentPointMessage class represents a FIT SegmentPointMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8h_source.html#l00039">segmentpointmessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00182">setAltitude()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00187">setAltitude()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -308,13 +308,13 @@ Here is the caller graph for this function:</div>
 <p>Accumulated distance along the segment at the described point</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>distance</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00104">104</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> d-&gt;distance;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00109">109</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> d-&gt;distance;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00172">setDistance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00177">setDistance()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -343,13 +343,13 @@ Here is the caller graph for this function:</div>
 <p>Accumualted time each leader board member required to reach the described point. This value is zero for all leader board members at the starting point of the segment.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>leaderTime</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00131">131</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderTime;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00136">136</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderTime;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00192">setLeaderTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00197">setLeaderTime()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -377,13 +377,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSegmentPointMessage.html" title="The SegmentPointMessage class represents a FIT SegmentPointMessage data message.">SegmentPointMessage</a> data message's <code>messageIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>messageIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00142">setMessageIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00147">setMessageIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -411,13 +411,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSegmentPointMessage.html" title="The SegmentPointMessage class represents a FIT SegmentPointMessage data message.">SegmentPointMessage</a> data message's <code>positionLat</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>positionLat</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;positionLat;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;positionLat;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00152">setPositionLat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00157">setPositionLat()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -445,13 +445,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSegmentPointMessage.html" title="The SegmentPointMessage class represents a FIT SegmentPointMessage data message.">SegmentPointMessage</a> data message's <code>positionLong</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>positionLong</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00091">91</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;positionLong;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00096">96</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;positionLong;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00162">setPositionLong()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentpointmessage_8cpp_source.html#l00167">setPositionLong()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -485,14 +485,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00182">182</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    d-&gt;altitude = <a class="code" href="classSegmentPointMessage.html#ab1849af6e8be1bbcd31f476eac8b8ada">altitude</a>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentPointMessage_html_ab1849af6e8be1bbcd31f476eac8b8ada"><div class="ttname"><a href="classSegmentPointMessage.html#ab1849af6e8be1bbcd31f476eac8b8ada">SegmentPointMessage::altitude</a></div><div class="ttdeci">quint16 altitude() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's altitude field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00117">segmentpointmessage.cpp:117</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00187">187</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;{</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    d-&gt;altitude = <a class="code" href="classSegmentPointMessage.html#ab1849af6e8be1bbcd31f476eac8b8ada">altitude</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentPointMessage_html_ab1849af6e8be1bbcd31f476eac8b8ada"><div class="ttname"><a href="classSegmentPointMessage.html#ab1849af6e8be1bbcd31f476eac8b8ada">SegmentPointMessage::altitude</a></div><div class="ttdeci">quint16 altitude() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's altitude field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00122">segmentpointmessage.cpp:122</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00117">altitude()</a>.</p>
+<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00122">altitude()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -526,14 +526,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00172">172</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    d-&gt;distance = <a class="code" href="classSegmentPointMessage.html#a8b6a59b942d71556c3e90704224d59c4">distance</a>;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentPointMessage_html_a8b6a59b942d71556c3e90704224d59c4"><div class="ttname"><a href="classSegmentPointMessage.html#a8b6a59b942d71556c3e90704224d59c4">SegmentPointMessage::distance</a></div><div class="ttdeci">quint32 distance() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's distance field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00104">segmentpointmessage.cpp:104</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00177">177</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    d-&gt;distance = <a class="code" href="classSegmentPointMessage.html#a8b6a59b942d71556c3e90704224d59c4">distance</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentPointMessage_html_a8b6a59b942d71556c3e90704224d59c4"><div class="ttname"><a href="classSegmentPointMessage.html#a8b6a59b942d71556c3e90704224d59c4">SegmentPointMessage::distance</a></div><div class="ttdeci">quint32 distance() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's distance field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00109">segmentpointmessage.cpp:109</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00104">distance()</a>.</p>
+<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00109">distance()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -567,14 +567,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00192">192</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    d-&gt;leaderTime = <a class="code" href="classSegmentPointMessage.html#a7304ec68800db3edf1c93a3ce6651944">leaderTime</a>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentPointMessage_html_a7304ec68800db3edf1c93a3ce6651944"><div class="ttname"><a href="classSegmentPointMessage.html#a7304ec68800db3edf1c93a3ce6651944">SegmentPointMessage::leaderTime</a></div><div class="ttdeci">quint32 leaderTime() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's leaderTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00131">segmentpointmessage.cpp:131</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00197">197</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    d-&gt;leaderTime = <a class="code" href="classSegmentPointMessage.html#a7304ec68800db3edf1c93a3ce6651944">leaderTime</a>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentPointMessage_html_a7304ec68800db3edf1c93a3ce6651944"><div class="ttname"><a href="classSegmentPointMessage.html#a7304ec68800db3edf1c93a3ce6651944">SegmentPointMessage::leaderTime</a></div><div class="ttdeci">quint32 leaderTime() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's leaderTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00136">segmentpointmessage.cpp:136</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00131">leaderTime()</a>.</p>
+<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00136">leaderTime()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -608,14 +608,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00142">142</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    d-&gt;messageIndex = <a class="code" href="classSegmentPointMessage.html#a19577da80768db0faafa3f2b3e8becf5">messageIndex</a>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentPointMessage_html_a19577da80768db0faafa3f2b3e8becf5"><div class="ttname"><a href="classSegmentPointMessage.html#a19577da80768db0faafa3f2b3e8becf5">SegmentPointMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00069">segmentpointmessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00147">147</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    d-&gt;messageIndex = <a class="code" href="classSegmentPointMessage.html#a19577da80768db0faafa3f2b3e8becf5">messageIndex</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentPointMessage_html_a19577da80768db0faafa3f2b3e8becf5"><div class="ttname"><a href="classSegmentPointMessage.html#a19577da80768db0faafa3f2b3e8becf5">SegmentPointMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00074">segmentpointmessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00069">messageIndex()</a>.</p>
+<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00074">messageIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -649,14 +649,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00152">152</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    d-&gt;positionLat = <a class="code" href="classSegmentPointMessage.html#a6064ec29e7605e3d75c5fc0f36bce07b">positionLat</a>;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentPointMessage_html_a6064ec29e7605e3d75c5fc0f36bce07b"><div class="ttname"><a href="classSegmentPointMessage.html#a6064ec29e7605e3d75c5fc0f36bce07b">SegmentPointMessage::positionLat</a></div><div class="ttdeci">qint32 positionLat() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's positionLat field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00080">segmentpointmessage.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00157">157</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    d-&gt;positionLat = <a class="code" href="classSegmentPointMessage.html#a6064ec29e7605e3d75c5fc0f36bce07b">positionLat</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentPointMessage_html_a6064ec29e7605e3d75c5fc0f36bce07b"><div class="ttname"><a href="classSegmentPointMessage.html#a6064ec29e7605e3d75c5fc0f36bce07b">SegmentPointMessage::positionLat</a></div><div class="ttdeci">qint32 positionLat() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's positionLat field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00085">segmentpointmessage.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00080">positionLat()</a>.</p>
+<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00085">positionLat()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -690,14 +690,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00162">162</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    d-&gt;positionLong = <a class="code" href="classSegmentPointMessage.html#a167ffd3a85f2f10f617950c025d03534">positionLong</a>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentPointMessage_html_a167ffd3a85f2f10f617950c025d03534"><div class="ttname"><a href="classSegmentPointMessage.html#a167ffd3a85f2f10f617950c025d03534">SegmentPointMessage::positionLong</a></div><div class="ttdeci">qint32 positionLong() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's positionLong field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00091">segmentpointmessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentpointmessage_8cpp_source.html#l00167">167</a> of file <a class="el" href="segmentpointmessage_8cpp_source.html">segmentpointmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    Q_D(<a class="code" href="classSegmentPointMessage.html">SegmentPointMessage</a>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    d-&gt;positionLong = <a class="code" href="classSegmentPointMessage.html#a167ffd3a85f2f10f617950c025d03534">positionLong</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentPointMessage_html_a167ffd3a85f2f10f617950c025d03534"><div class="ttname"><a href="classSegmentPointMessage.html#a167ffd3a85f2f10f617950c025d03534">SegmentPointMessage::positionLong</a></div><div class="ttdeci">qint32 positionLong() const</div><div class="ttdoc">Returns the SegmentPointMessage data message's positionLong field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentpointmessage_8cpp_source.html#l00096">segmentpointmessage.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00091">positionLong()</a>.</p>
+<p class="reference">References <a class="el" href="segmentpointmessage_8cpp_source.html#l00096">positionLong()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

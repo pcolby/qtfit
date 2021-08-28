@@ -1,8 +1,18 @@
 var NAVTREEINDEX0 =
 {
+"QtFit__global_8h.html":[4,0,169],
+"QtFit__global_8h.html#a04f0529fdd7f7d0ff3a2d284cf167b14":[4,0,169,3],
+"QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c":[4,0,169,2],
+"QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139":[4,0,169,1],
+"QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e":[4,0,169,0],
 "QtFit__global_8h_source.html":[4,0,169],
+"abstractdatamessage_8cpp.html":[4,0,0],
+"abstractdatamessage_8cpp.html#a0d4ab57f84f4b95732a6af0267777873":[4,0,0,1],
+"abstractdatamessage_8cpp.html#a3d7ec006b7bf32e4ea754e0ce7a0d3a4":[4,0,0,0],
 "abstractdatamessage_8cpp_source.html":[4,0,0],
+"abstractdatamessage_8h.html":[4,0,1],
 "abstractdatamessage_8h_source.html":[4,0,1],
+"abstractdatamessage__p_8h.html":[4,0,2],
 "abstractdatamessage__p_8h_source.html":[4,0,2],
 "accelerometerdatamessage_8cpp.html":[4,0,3],
 "accelerometerdatamessage_8cpp_source.html":[4,0,3],
@@ -239,15 +249,5 @@ var NAVTREEINDEX0 =
 "classAntTxMessage.html#ac7f14ffb30047e5be05bc97c5dc0b023":[3,0,10,0],
 "classAntTxMessage.html#acefd5a2afe37b3e4c95d17a3872435e9":[3,0,10,6],
 "classAntTxMessagePrivate.html":[3,0,11],
-"classAntTxMessagePrivate.html#a152c6f14f160b45cb1f7a38574ff70d1":[3,0,11,7],
-"classAntTxMessagePrivate.html#a28a7dcb5c25cb0c9e15dedce628a5390":[3,0,11,3],
-"classAntTxMessagePrivate.html#a439ca6411c32ea597f98a46b56567f85":[3,0,11,2],
-"classAntTxMessagePrivate.html#a5a04ca24339b5b6ea0f9f4d1b70149cb":[3,0,11,6],
-"classAntTxMessagePrivate.html#a784b96ac4c046cd0bae2091d88177257":[3,0,11,5],
-"classAntTxMessagePrivate.html#a8934b1701b7713b8cac5ac8e270c1f4a":[3,0,11,1],
-"classAntTxMessagePrivate.html#ad3bb588e9b55361849e22512c83e1aa8":[3,0,11,0],
-"classAntTxMessagePrivate.html#ad52b6fd80ca775093201973a5395c6ee":[3,0,11,9],
-"classAntTxMessagePrivate.html#aebcf1a205044e5ec5fd3a48c722ee0ee":[3,0,11,4],
-"classAntTxMessagePrivate.html#afbb97df1b0e00944a308732c69fb677b":[3,0,11,8],
-"classAviationAttitudeMessage.html":[3,0,12]
+"classAntTxMessagePrivate.html#a152c6f14f160b45cb1f7a38574ff70d1":[3,0,11,7]
 };

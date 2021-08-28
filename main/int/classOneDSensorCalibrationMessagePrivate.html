@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -167,7 +167,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classOneDSensorCalibrationMessagePrivate.html">OneDSensorCalibrationMessagePrivate</a> class provides private implementation for the <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af0321ed0521145bf8d5ae860c8a6a861"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0321ed0521145bf8d5ae860c8a6a861">&#9670;&nbsp;</a></span>OneDSensorCalibrationMessagePrivate()</h2>
@@ -200,29 +200,29 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00222">222</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a5aacc4217c59ce68b80bd5661259d2fa">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a351185dcbd69479e7ac0238e11437cb4">sensorType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a213c434cb928c4ca22513e2302632435">SensorType</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a2f622591fc5f0bde95d51ab7a2ca8243">calibrationFactor</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a0625d3e8e786b2828749f1806c2fd43e">calibrationDivisor</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#abefc9b22cf71f09909e9021033a79650">levelShift</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#ae4da3ef94280e1d3d37cd86e8c5d788d">offsetCal</a>(0x7FFFFFFF)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::OneDSensorCalibration;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a0625d3e8e786b2828749f1806c2fd43e"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a0625d3e8e786b2828749f1806c2fd43e">OneDSensorCalibrationMessagePrivate::calibrationDivisor</a></div><div class="ttdeci">quint32 calibrationDivisor</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's calibrationDivisor field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00063">onedsensorcalibrationmessage_p.h:63</a></div></div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a2f622591fc5f0bde95d51ab7a2ca8243"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a2f622591fc5f0bde95d51ab7a2ca8243">OneDSensorCalibrationMessagePrivate::calibrationFactor</a></div><div class="ttdeci">quint32 calibrationFactor</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's calibrationFactor field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00056">onedsensorcalibrationmessage_p.h:56</a></div></div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a351185dcbd69479e7ac0238e11437cb4"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a351185dcbd69479e7ac0238e11437cb4">OneDSensorCalibrationMessagePrivate::sensorType</a></div><div class="ttdeci">SensorType sensorType</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's sensorType field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00049">onedsensorcalibrationmessage_p.h:49</a></div></div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a5aacc4217c59ce68b80bd5661259d2fa"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a5aacc4217c59ce68b80bd5661259d2fa">OneDSensorCalibrationMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00042">onedsensorcalibrationmessage_p.h:42</a></div></div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_abefc9b22cf71f09909e9021033a79650"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#abefc9b22cf71f09909e9021033a79650">OneDSensorCalibrationMessagePrivate::levelShift</a></div><div class="ttdeci">quint32 levelShift</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's levelShift field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00070">onedsensorcalibrationmessage_p.h:70</a></div></div>
-<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_ae4da3ef94280e1d3d37cd86e8c5d788d"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#ae4da3ef94280e1d3d37cd86e8c5d788d">OneDSensorCalibrationMessagePrivate::offsetCal</a></div><div class="ttdeci">qint32 offsetCal</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's offsetCal field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00077">onedsensorcalibrationmessage_p.h:77</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00227">227</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a5aacc4217c59ce68b80bd5661259d2fa">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a351185dcbd69479e7ac0238e11437cb4">sensorType</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a213c434cb928c4ca22513e2302632435">SensorType</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a2f622591fc5f0bde95d51ab7a2ca8243">calibrationFactor</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a0625d3e8e786b2828749f1806c2fd43e">calibrationDivisor</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#abefc9b22cf71f09909e9021033a79650">levelShift</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  , <a class="code" href="classOneDSensorCalibrationMessagePrivate.html#ae4da3ef94280e1d3d37cd86e8c5d788d">offsetCal</a>(0x7FFFFFFF)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::OneDSensorCalibration;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a0625d3e8e786b2828749f1806c2fd43e"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a0625d3e8e786b2828749f1806c2fd43e">OneDSensorCalibrationMessagePrivate::calibrationDivisor</a></div><div class="ttdeci">quint32 calibrationDivisor</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's calibrationDivisor field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00067">onedsensorcalibrationmessage_p.h:67</a></div></div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a2f622591fc5f0bde95d51ab7a2ca8243"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a2f622591fc5f0bde95d51ab7a2ca8243">OneDSensorCalibrationMessagePrivate::calibrationFactor</a></div><div class="ttdeci">quint32 calibrationFactor</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's calibrationFactor field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00060">onedsensorcalibrationmessage_p.h:60</a></div></div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a351185dcbd69479e7ac0238e11437cb4"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a351185dcbd69479e7ac0238e11437cb4">OneDSensorCalibrationMessagePrivate::sensorType</a></div><div class="ttdeci">SensorType sensorType</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's sensorType field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00053">onedsensorcalibrationmessage_p.h:53</a></div></div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_a5aacc4217c59ce68b80bd5661259d2fa"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#a5aacc4217c59ce68b80bd5661259d2fa">OneDSensorCalibrationMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00046">onedsensorcalibrationmessage_p.h:46</a></div></div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_abefc9b22cf71f09909e9021033a79650"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#abefc9b22cf71f09909e9021033a79650">OneDSensorCalibrationMessagePrivate::levelShift</a></div><div class="ttdeci">quint32 levelShift</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's levelShift field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00074">onedsensorcalibrationmessage_p.h:74</a></div></div>
+<div class="ttc" id="aclassOneDSensorCalibrationMessagePrivate_html_ae4da3ef94280e1d3d37cd86e8c5d788d"><div class="ttname"><a href="classOneDSensorCalibrationMessagePrivate.html#ae4da3ef94280e1d3d37cd86e8c5d788d">OneDSensorCalibrationMessagePrivate::offsetCal</a></div><div class="ttdeci">qint32 offsetCal</div><div class="ttdoc">The OneDSensorCalibrationMessage FIT message's offsetCal field.</div><div class="ttdef"><b>Definition:</b> <a href="onedsensorcalibrationmessage__p_8h_source.html#l00081">onedsensorcalibrationmessage_p.h:81</a></div></div>
 <div class="ttc" id="atypes_8h_html_a213c434cb928c4ca22513e2302632435"><div class="ttname"><a href="types_8h.html#a213c434cb928c4ca22513e2302632435">SensorType</a></div><div class="ttdeci">SensorType</div><div class="ttdoc">Garmin FIT SensorType type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l02946">types.h:2946</a></div></div>
 <div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00237">types.h:237</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00034">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00039">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
 
 </div>
 </div>
@@ -250,10 +250,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys the <a class="el" href="classOneDSensorCalibrationMessagePrivate.html">OneDSensorCalibrationMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00239">239</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;{</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00244">244</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -318,46 +318,46 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractDataMessagePrivate.html#ae4d13bcc7f39d6050db131e3afe8b4d3">AbstractDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00244">244</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;{</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.timestamp</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a5aacc4217c59ce68b80bd5661259d2fa">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.sensorType</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Enum, <span class="stringliteral">&quot;one_d_sensor_calibration.sensorType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a351185dcbd69479e7ac0238e11437cb4">sensorType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a213c434cb928c4ca22513e2302632435">SensorType</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.calibrationFactor</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.calibrationFactor&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a2f622591fc5f0bde95d51ab7a2ca8243">calibrationFactor</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.calibrationDivisor</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.calibrationDivisor&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a0625d3e8e786b2828749f1806c2fd43e">calibrationDivisor</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.levelShift</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.levelShift&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#abefc9b22cf71f09909e9021033a79650">levelShift</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.offsetCal</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Sint32, <span class="stringliteral">&quot;one_d_sensor_calibration.offsetCal&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#ae4da3ef94280e1d3d37cd86e8c5d788d">offsetCal</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown one_d_sensor_calibration message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html#l00249">249</a> of file <a class="el" href="onedsensorcalibrationmessage_8cpp_source.html">onedsensorcalibrationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.timestamp</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a5aacc4217c59ce68b80bd5661259d2fa">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.sensorType</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Enum, <span class="stringliteral">&quot;one_d_sensor_calibration.sensorType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a351185dcbd69479e7ac0238e11437cb4">sensorType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#a213c434cb928c4ca22513e2302632435">SensorType</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.calibrationFactor</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.calibrationFactor&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a2f622591fc5f0bde95d51ab7a2ca8243">calibrationFactor</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.calibrationDivisor</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.calibrationDivisor&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#a0625d3e8e786b2828749f1806c2fd43e">calibrationDivisor</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.levelShift</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;one_d_sensor_calibration.levelShift&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#abefc9b22cf71f09909e9021033a79650">levelShift</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:one_d_sensor_calibration.offsetCal</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Sint32, <span class="stringliteral">&quot;one_d_sensor_calibration.offsetCal&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        this-&gt;<a class="code" href="classOneDSensorCalibrationMessagePrivate.html#ae4da3ef94280e1d3d37cd86e8c5d788d">offsetCal</a> = <span class="keyword">static_cast&lt;</span>qint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint32&gt;(data) : qFromLittleEndian&lt; qint32&gt;(data));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown one_d_sensor_calibration message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00194">AbstractDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00199">AbstractDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classOneDSensorCalibrationMessagePrivate_a51a0a83355fb6d3e9a72d23007328321_cgraph.svg" width="500" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classOneDSensorCalibrationMessagePrivate_a51a0a83355fb6d3e9a72d23007328321_cgraph.svg" width="670" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -379,7 +379,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> FIT message's calibrationDivisor field. </p>
 <p>Calibration factor divisor </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00063">63</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00067">67</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -398,7 +398,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> FIT message's calibrationFactor field. </p>
 <p>Calibration factor used to convert from raw ADC value to degrees, g, etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00056">56</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00060">60</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> FIT message's levelShift field. </p>
 <p>Level shift value used to shift the ADC value back into range </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00070">70</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00074">74</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +436,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> FIT message's offsetCal field. </p>
 <p>Internal Calibration factor </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00077">77</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00081">81</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> FIT message's sensorType field. </p>
 <p>Indicates which sensor the calibration is for </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00053">53</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +474,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classOneDSensorCalibrationMessage.html" title="The OneDSensorCalibrationMessage class represents a FIT OneDSensorCalibrationMessage data message.">OneDSensorCalibrationMessage</a> FIT message's timestamp field. </p>
 <p>Whole second part of the timestamp </p>
 
-<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="onedsensorcalibrationmessage__p_8h_source.html">onedsensorcalibrationmessage_p.h</a>.</p>
 
 </div>
 </div>

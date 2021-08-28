@@ -1,9 +1,9 @@
 <map id="segmentleaderboardentrymessage_p.h" name="segmentleaderboardentrymessage_p.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,283,32"/>
-<area shape="rect" id="node2" href="$abstractdatamessage__p_8h_source.html" title=" " alt="" coords="49,80,239,107"/>
-<area shape="rect" id="node3" href="$QtFit__global_8h_source.html" title=" " alt="" coords="27,304,139,331"/>
+<area shape="rect" id="node1" title="Declares the SegmentLeaderboardEntryMessagePrivate class." alt="" coords="5,5,283,32"/>
+<area shape="rect" id="node2" href="$abstractdatamessage__p_8h.html" title="Declares the AbstractDataMessagePrivate class." alt="" coords="49,80,239,107"/>
+<area shape="rect" id="node3" href="$QtFit__global_8h.html" title="Global QtFit library macros." alt="" coords="27,304,139,331"/>
 <area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="121,229,191,256"/>
-<area shape="rect" id="node7" href="$types__p_8h_source.html" title=" " alt="" coords="181,155,267,181"/>
+<area shape="rect" id="node7" href="$types__p_8h.html" title="Internal types used by QtFit classes." alt="" coords="181,155,267,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="43,379,122,405"/>
 <area shape="rect" id="node6" title=" " alt="" coords="163,304,237,331"/>
 <area shape="rect" id="node8" title=" " alt="" coords="215,229,270,256"/>

@@ -1,5 +1,15 @@
 var NAVTREEINDEX4 =
 {
+"classDiveSummaryMessagePrivate.html#a772557949b58caf244bfc70909619330":[3,0,49,12],
+"classDiveSummaryMessagePrivate.html#a80162bfa5d458fddab9af34c69f3d6ea":[3,0,49,13],
+"classDiveSummaryMessagePrivate.html#a851d5c6f3d4fd118ef1bfe5d077e61da":[3,0,49,9],
+"classDiveSummaryMessagePrivate.html#a8fa991861f43c32edb17ebfdea7e46ca":[3,0,49,1],
+"classDiveSummaryMessagePrivate.html#aa6b47c4f893aa61f61818dda1aef3cf3":[3,0,49,10],
+"classDiveSummaryMessagePrivate.html#aa7f2e8dc37c15050f2b1a772f5debadf":[3,0,49,16],
+"classDiveSummaryMessagePrivate.html#aa83d8f77a1eb8826b1167a93a4c3d824":[3,0,49,14],
+"classDiveSummaryMessagePrivate.html#ab2a078dd226d4d3083219bf9cdaeda82":[3,0,49,7],
+"classDiveSummaryMessagePrivate.html#ada2d2382d7efcaf75858135440a60552":[3,0,49,3],
+"classEventMessage.html":[3,0,50],
 "classEventMessage.html#a046b72e2da2719616e38a472d6f1dec3":[3,0,50,14],
 "classEventMessage.html#a1281b41fe9cc86d4afd46b6352990d54":[3,0,50,4],
 "classEventMessage.html#a1af65b34ed2337c476357d1e8c666308":[3,0,50,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX4 =
 "classFieldDescriptionMessagePrivate.html#af519fa0076d26a6285c4284ba663f956":[3,0,64,0],
 "classFieldDescriptionMessagePrivate.html#afaab9409784219b40863df19c57b476d":[3,0,64,5],
 "classFieldDescriptionMessagePrivate.html#aff8af4cea602b6376311b8322e441b12":[3,0,64,3],
-"classFileCapabilitiesMessage.html":[3,0,65],
-"classFileCapabilitiesMessage.html#a03ecb4247b7db4c7d68bcbcb1747f3da":[3,0,65,12],
-"classFileCapabilitiesMessage.html#a284b654d7bb10066ff8b124ea395f0dd":[3,0,65,10],
-"classFileCapabilitiesMessage.html#a2a9a836755660a6e1433095c8848a654":[3,0,65,6],
-"classFileCapabilitiesMessage.html#a38e3e7c8e2b8589b3fd8d275000bd8ad":[3,0,65,5],
-"classFileCapabilitiesMessage.html#a4bd228c83fc3028ed0fa209dcc07532e":[3,0,65,14],
-"classFileCapabilitiesMessage.html#a4db00dc4a4f35dea085ddadbcbb688fa":[3,0,65,3],
-"classFileCapabilitiesMessage.html#a515193c04fe1a507089181cf78a56bb6":[3,0,65,9],
-"classFileCapabilitiesMessage.html#a74c6e8d6fbfbb2947c0af193cc7f6455":[3,0,65,7],
-"classFileCapabilitiesMessage.html#a75017165d7dadbe8bb9533b41c7dc096":[3,0,65,8],
-"classFileCapabilitiesMessage.html#a95bc593ad2f5d9a1057e8ada1ac2ba1b":[3,0,65,2]
+"classFileCapabilitiesMessage.html":[3,0,65]
 };

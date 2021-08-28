@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -189,7 +189,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classTimestampCorrelationMessage.html" title="The TimestampCorrelationMessage class represents a FIT TimestampCorrelationMessage data message.">TimestampCorrelationMessage</a> class represents a FIT <a class="el" href="classTimestampCorrelationMessage.html" title="The TimestampCorrelationMessage class represents a FIT TimestampCorrelationMessage data message.">TimestampCorrelationMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8h_source.html#l00034">34</a> of file <a class="el" href="timestampcorrelationmessage_8h_source.html">timestampcorrelationmessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8h_source.html#l00039">39</a> of file <a class="el" href="timestampcorrelationmessage_8h_source.html">timestampcorrelationmessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad8d3063465cd3872cc947d9cb1aad2f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8d3063465cd3872cc947d9cb1aad2f6">&#9670;&nbsp;</a></span>TimestampCorrelationMessage() <span class="overload">[1/2]</span></h2>
@@ -209,13 +209,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classTimestampCorrelationMessage.html" title="The TimestampCorrelationMessage class represents a FIT TimestampCorrelationMessage data message.">TimestampCorrelationMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classTimestampCorrelationMessagePrivate.html">TimestampCorrelationMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassTimestampCorrelationMessagePrivate_html"><div class="ttname"><a href="classTimestampCorrelationMessagePrivate.html">TimestampCorrelationMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage__p_8h_source.html#l00034">timestampcorrelationmessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classTimestampCorrelationMessagePrivate.html">TimestampCorrelationMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassTimestampCorrelationMessagePrivate_html"><div class="ttname"><a href="classTimestampCorrelationMessagePrivate.html">TimestampCorrelationMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage__p_8h_source.html#l00038">timestampcorrelationmessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,11 +250,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                                     : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                                                     : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -278,14 +278,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Fractional part of the system timestamp</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>fractionalSystemTimestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00110">110</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> d-&gt;fractionalSystemTimestamp;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html"><div class="ttname"><a href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a></div><div class="ttdoc">The TimestampCorrelationMessage class represents a FIT TimestampCorrelationMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8h_source.html#l00034">timestampcorrelationmessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00115">115</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> d-&gt;fractionalSystemTimestamp;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html"><div class="ttname"><a href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a></div><div class="ttdoc">The TimestampCorrelationMessage class represents a FIT TimestampCorrelationMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8h_source.html#l00039">timestampcorrelationmessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00190">setFractionalSystemTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00195">setFractionalSystemTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -314,13 +314,13 @@ Here is the caller graph for this function:</div>
 <p>Fractional part of the UTC timestamp at the time the system timestamp was recorded.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>fractionalTimestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00084">84</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;fractionalTimestamp;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00089">89</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> d-&gt;fractionalTimestamp;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00170">setFractionalTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00175">setFractionalTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -349,13 +349,13 @@ Here is the caller graph for this function:</div>
 <p>timestamp epoch expressed in local time used to convert timestamps to local time</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>localTimestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00123">123</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> d-&gt;localTimestamp;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> d-&gt;localTimestamp;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00200">setLocalTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00205">setLocalTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -389,14 +389,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00190">190</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    d-&gt;fractionalSystemTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#a65d7684f1cc5c60852f85469a097f596">fractionalSystemTimestamp</a>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html_a65d7684f1cc5c60852f85469a097f596"><div class="ttname"><a href="classTimestampCorrelationMessage.html#a65d7684f1cc5c60852f85469a097f596">TimestampCorrelationMessage::fractionalSystemTimestamp</a></div><div class="ttdeci">quint16 fractionalSystemTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's fractionalSystemTimestamp field's current valu...</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00110">timestampcorrelationmessage.cpp:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00195">195</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;{</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    d-&gt;fractionalSystemTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#a65d7684f1cc5c60852f85469a097f596">fractionalSystemTimestamp</a>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html_a65d7684f1cc5c60852f85469a097f596"><div class="ttname"><a href="classTimestampCorrelationMessage.html#a65d7684f1cc5c60852f85469a097f596">TimestampCorrelationMessage::fractionalSystemTimestamp</a></div><div class="ttdeci">quint16 fractionalSystemTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's fractionalSystemTimestamp field's current valu...</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00115">timestampcorrelationmessage.cpp:115</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00110">fractionalSystemTimestamp()</a>.</p>
+<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00115">fractionalSystemTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -430,14 +430,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00170">170</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    d-&gt;fractionalTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#ad32e792511a7174a36bd5fb038e6af14">fractionalTimestamp</a>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html_ad32e792511a7174a36bd5fb038e6af14"><div class="ttname"><a href="classTimestampCorrelationMessage.html#ad32e792511a7174a36bd5fb038e6af14">TimestampCorrelationMessage::fractionalTimestamp</a></div><div class="ttdeci">quint16 fractionalTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's fractionalTimestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00084">timestampcorrelationmessage.cpp:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00175">175</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    d-&gt;fractionalTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#ad32e792511a7174a36bd5fb038e6af14">fractionalTimestamp</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html_ad32e792511a7174a36bd5fb038e6af14"><div class="ttname"><a href="classTimestampCorrelationMessage.html#ad32e792511a7174a36bd5fb038e6af14">TimestampCorrelationMessage::fractionalTimestamp</a></div><div class="ttdeci">quint16 fractionalTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's fractionalTimestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00089">timestampcorrelationmessage.cpp:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00084">fractionalTimestamp()</a>.</p>
+<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00089">fractionalTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -471,14 +471,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00200">200</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    d-&gt;localTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#af160dd432917f1563df59a374695cc5e">localTimestamp</a>;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html_af160dd432917f1563df59a374695cc5e"><div class="ttname"><a href="classTimestampCorrelationMessage.html#af160dd432917f1563df59a374695cc5e">TimestampCorrelationMessage::localTimestamp</a></div><div class="ttdeci">LocalDateTime localTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's localTimestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00123">timestampcorrelationmessage.cpp:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00205">205</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    d-&gt;localTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#af160dd432917f1563df59a374695cc5e">localTimestamp</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html_af160dd432917f1563df59a374695cc5e"><div class="ttname"><a href="classTimestampCorrelationMessage.html#af160dd432917f1563df59a374695cc5e">TimestampCorrelationMessage::localTimestamp</a></div><div class="ttdeci">LocalDateTime localTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's localTimestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00128">timestampcorrelationmessage.cpp:128</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00123">localTimestamp()</a>.</p>
+<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00128">localTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -512,14 +512,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00180">180</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;{</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    d-&gt;systemTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#afdf0a0df16917843d66e6447ebf1bcf9">systemTimestamp</a>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html_afdf0a0df16917843d66e6447ebf1bcf9"><div class="ttname"><a href="classTimestampCorrelationMessage.html#afdf0a0df16917843d66e6447ebf1bcf9">TimestampCorrelationMessage::systemTimestamp</a></div><div class="ttdeci">DateTime systemTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's systemTimestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00097">timestampcorrelationmessage.cpp:97</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00185">185</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    d-&gt;systemTimestamp = <a class="code" href="classTimestampCorrelationMessage.html#afdf0a0df16917843d66e6447ebf1bcf9">systemTimestamp</a>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html_afdf0a0df16917843d66e6447ebf1bcf9"><div class="ttname"><a href="classTimestampCorrelationMessage.html#afdf0a0df16917843d66e6447ebf1bcf9">TimestampCorrelationMessage::systemTimestamp</a></div><div class="ttdeci">DateTime systemTimestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's systemTimestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00102">timestampcorrelationmessage.cpp:102</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00097">systemTimestamp()</a>.</p>
+<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00102">systemTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -553,14 +553,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00220">220</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    d-&gt;systemTimestampMs = <a class="code" href="classTimestampCorrelationMessage.html#a952e574409c61a7289e2874b7b91d923">systemTimestampMs</a>;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html_a952e574409c61a7289e2874b7b91d923"><div class="ttname"><a href="classTimestampCorrelationMessage.html#a952e574409c61a7289e2874b7b91d923">TimestampCorrelationMessage::systemTimestampMs</a></div><div class="ttdeci">quint16 systemTimestampMs() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's systemTimestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00149">timestampcorrelationmessage.cpp:149</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00225">225</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    d-&gt;systemTimestampMs = <a class="code" href="classTimestampCorrelationMessage.html#a952e574409c61a7289e2874b7b91d923">systemTimestampMs</a>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html_a952e574409c61a7289e2874b7b91d923"><div class="ttname"><a href="classTimestampCorrelationMessage.html#a952e574409c61a7289e2874b7b91d923">TimestampCorrelationMessage::systemTimestampMs</a></div><div class="ttdeci">quint16 systemTimestampMs() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's systemTimestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00154">timestampcorrelationmessage.cpp:154</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00149">systemTimestampMs()</a>.</p>
+<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00154">systemTimestampMs()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -594,14 +594,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00160">160</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    d-&gt;timestamp = <a class="code" href="classTimestampCorrelationMessage.html#a9573a473cea19c7c59e54bec99ace404">timestamp</a>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html_a9573a473cea19c7c59e54bec99ace404"><div class="ttname"><a href="classTimestampCorrelationMessage.html#a9573a473cea19c7c59e54bec99ace404">TimestampCorrelationMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00071">timestampcorrelationmessage.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00165">165</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    d-&gt;timestamp = <a class="code" href="classTimestampCorrelationMessage.html#a9573a473cea19c7c59e54bec99ace404">timestamp</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html_a9573a473cea19c7c59e54bec99ace404"><div class="ttname"><a href="classTimestampCorrelationMessage.html#a9573a473cea19c7c59e54bec99ace404">TimestampCorrelationMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00076">timestampcorrelationmessage.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00071">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00076">timestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -635,14 +635,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00210">210</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    d-&gt;timestampMs = <a class="code" href="classTimestampCorrelationMessage.html#ab62a7e7324d957bb5345ebb6c7652e72">timestampMs</a>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
-<div class="ttc" id="aclassTimestampCorrelationMessage_html_ab62a7e7324d957bb5345ebb6c7652e72"><div class="ttname"><a href="classTimestampCorrelationMessage.html#ab62a7e7324d957bb5345ebb6c7652e72">TimestampCorrelationMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00136">timestampcorrelationmessage.cpp:136</a></div></div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00215">215</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    Q_D(<a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    d-&gt;timestampMs = <a class="code" href="classTimestampCorrelationMessage.html#ab62a7e7324d957bb5345ebb6c7652e72">timestampMs</a>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}</div>
+<div class="ttc" id="aclassTimestampCorrelationMessage_html_ab62a7e7324d957bb5345ebb6c7652e72"><div class="ttname"><a href="classTimestampCorrelationMessage.html#ab62a7e7324d957bb5345ebb6c7652e72">TimestampCorrelationMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the TimestampCorrelationMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="timestampcorrelationmessage_8cpp_source.html#l00141">timestampcorrelationmessage.cpp:141</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00136">timestampMs()</a>.</p>
+<p class="reference">References <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00141">timestampMs()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -671,13 +671,13 @@ Here is the call graph for this function:</div>
 <p>Whole second part of the system timestamp</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>systemTimestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00097">97</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> d-&gt;systemTimestamp;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;systemTimestamp;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00180">setSystemTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00185">setSystemTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -706,13 +706,13 @@ Here is the caller graph for this function:</div>
 <p>Millisecond part of the system timestamp</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>systemTimestampMs</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00149">149</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> d-&gt;systemTimestampMs;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00154">154</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> d-&gt;systemTimestampMs;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00220">setSystemTimestampMs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00225">setSystemTimestampMs()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -741,13 +741,13 @@ Here is the caller graph for this function:</div>
 <p>Whole second part of UTC timestamp at the time the system timestamp was recorded.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00071">71</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00076">76</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00160">setTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00165">setTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -776,13 +776,13 @@ Here is the caller graph for this function:</div>
 <p>Millisecond part of the UTC timestamp at the time the system timestamp was recorded.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestampMs</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00136">136</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00141">141</a> of file <a class="el" href="timestampcorrelationmessage_8cpp_source.html">timestampcorrelationmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classTimestampCorrelationMessage.html">TimestampCorrelationMessage</a>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00210">setTimestampMs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="timestampcorrelationmessage_8cpp_source.html#l00215">setTimestampMs()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -112,89 +112,98 @@ $(document).ready(function(){initNavTree('devicesettingsmessage_8h_source.html',
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * \file</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * \note This file is automatcially generated. Any changes here are likely to be overwritten.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef QTFIT_DEVICESETTINGSMESSAGE_H</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define QTFIT_DEVICESETTINGSMESSAGE_H</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;abstractdatamessage.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * \file</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Declares the DeviceSettingsMessage class.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classDeviceSettingsMessage.html">   34</a></span>&#160;<span class="keyword">class </span>QTFIT_EXPORT <a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    quint8 activeTimeZone() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    quint32 utcOffset() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    quint32 timeOffset() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a> timeMode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    qint8 timeZoneOffset() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a> backlightMode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> activityTrackerEnabled() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> clockTime() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    quint16 pagesEnabled() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> moveAlertEnabled() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a> dateMode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> displayOrientation() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a> mountingSide() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    quint16 defaultPage() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    quint16 autosyncMinSteps() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    quint16 autosyncMinTime() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> lactateThresholdAutodetectEnabled() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> bleAutoUploadEnabled() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a> autoSyncFrequency() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a> autoActivityDetect() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    quint8 numberOfScreens() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> smartNotificationDisplayOrientation() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a> tapInterface() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a> tapSensitivity() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setActiveTimeZone(<span class="keyword">const</span> quint8 activeTimeZone);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setUtcOffset(<span class="keyword">const</span> quint32 utcOffset);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setTimeOffset(<span class="keyword">const</span> quint32 timeOffset);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setTimeMode(<span class="keyword">const</span> <a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a> timeMode);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> setTimeZoneOffset(<span class="keyword">const</span> qint8 timeZoneOffset);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setBacklightMode(<span class="keyword">const</span> <a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a> backlightMode);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setActivityTrackerEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> activityTrackerEnabled);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setClockTime(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> clockTime);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setPagesEnabled(<span class="keyword">const</span> quint16 pagesEnabled);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> setMoveAlertEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> moveAlertEnabled);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> setDateMode(<span class="keyword">const</span> <a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a> dateMode);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setDisplayOrientation(<span class="keyword">const</span> <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> displayOrientation);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setMountingSide(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a> mountingSide);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setDefaultPage(<span class="keyword">const</span> quint16 defaultPage);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> setAutosyncMinSteps(<span class="keyword">const</span> quint16 autosyncMinSteps);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> setAutosyncMinTime(<span class="keyword">const</span> quint16 autosyncMinTime);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> setLactateThresholdAutodetectEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> lactateThresholdAutodetectEnabled);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> setBleAutoUploadEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> bleAutoUploadEnabled);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> setAutoSyncFrequency(<span class="keyword">const</span> <a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a> autoSyncFrequency);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> setAutoActivityDetect(<span class="keyword">const</span> <a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a> autoActivityDetect);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> setNumberOfScreens(<span class="keyword">const</span> quint8 numberOfScreens);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> setSmartNotificationDisplayOrientation(<span class="keyword">const</span> <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> smartNotificationDisplayOrientation);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> setTapInterface(<span class="keyword">const</span> <a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a> tapInterface);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> setTapSensitivity(<span class="keyword">const</span> <a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a> tapSensitivity);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    /// \cond internal</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>(<a class="code" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    /// \endcond</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">//Q_DISABLE_COPY(DeviceSettingsMessage)</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;QTFIT_END_NAMESPACE</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_DEVICESETTINGSMESSAGE_H</span></div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassDeviceSettingsMessagePrivate_html"><div class="ttname"><a href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage__p_8h_source.html#l00034">devicesettingsmessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassDeviceSettingsMessage_html"><div class="ttname"><a href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a></div><div class="ttdoc">The DeviceSettingsMessage class represents a FIT DeviceSettingsMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage_8h_source.html#l00034">devicesettingsmessage.h:34</a></div></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef QTFIT_DEVICESETTINGSMESSAGE_H</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define QTFIT_DEVICESETTINGSMESSAGE_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="abstractdatamessage_8h.html">abstractdatamessage.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">class </span><a class="code" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classDeviceSettingsMessage.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a> <a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a> : <span class="keyword">public</span> <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ~<a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    quint8 activeTimeZone() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    quint32 utcOffset() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    quint32 timeOffset() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a> timeMode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    qint8 timeZoneOffset() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a> backlightMode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> activityTrackerEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> clockTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    quint16 pagesEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> moveAlertEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a> dateMode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> displayOrientation() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a> mountingSide() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    quint16 defaultPage() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    quint16 autosyncMinSteps() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    quint16 autosyncMinTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> lactateThresholdAutodetectEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">bool</span> bleAutoUploadEnabled() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a> autoSyncFrequency() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a> autoActivityDetect() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    quint8 numberOfScreens() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> smartNotificationDisplayOrientation() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a> tapInterface() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a> tapSensitivity() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setActiveTimeZone(<span class="keyword">const</span> quint8 activeTimeZone);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setUtcOffset(<span class="keyword">const</span> quint32 utcOffset);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setTimeOffset(<span class="keyword">const</span> quint32 timeOffset);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setTimeMode(<span class="keyword">const</span> <a class="code" href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a> timeMode);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> setTimeZoneOffset(<span class="keyword">const</span> qint8 timeZoneOffset);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> setBacklightMode(<span class="keyword">const</span> <a class="code" href="types_8h.html#af3c3ba1c12e84e21d407359dfbd1466b">BacklightMode</a> backlightMode);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setActivityTrackerEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> activityTrackerEnabled);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setClockTime(<span class="keyword">const</span> <a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a> clockTime);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setPagesEnabled(<span class="keyword">const</span> quint16 pagesEnabled);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> setMoveAlertEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> moveAlertEnabled);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> setDateMode(<span class="keyword">const</span> <a class="code" href="types_8h.html#a7d7dea00373facbc30a8b1be0b1fb2da">DateMode</a> dateMode);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> setDisplayOrientation(<span class="keyword">const</span> <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> displayOrientation);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> setMountingSide(<span class="keyword">const</span> <a class="code" href="types_8h.html#a8c0137d7160ad71b6ed265c53c99ed00">Side</a> mountingSide);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> setDefaultPage(<span class="keyword">const</span> quint16 defaultPage);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> setAutosyncMinSteps(<span class="keyword">const</span> quint16 autosyncMinSteps);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> setAutosyncMinTime(<span class="keyword">const</span> quint16 autosyncMinTime);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> setLactateThresholdAutodetectEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> lactateThresholdAutodetectEnabled);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> setBleAutoUploadEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> bleAutoUploadEnabled);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> setAutoSyncFrequency(<span class="keyword">const</span> <a class="code" href="types_8h.html#a58825158661f0ab5a8432abc7cfa4d6e">AutoSyncFrequency</a> autoSyncFrequency);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> setAutoActivityDetect(<span class="keyword">const</span> <a class="code" href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a> autoActivityDetect);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> setNumberOfScreens(<span class="keyword">const</span> quint8 numberOfScreens);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> setSmartNotificationDisplayOrientation(<span class="keyword">const</span> <a class="code" href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a> smartNotificationDisplayOrientation);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> setTapInterface(<span class="keyword">const</span> <a class="code" href="types_8h.html#a9f3c28a2cb05bdcc618b542e49bfda3f">Switch</a> tapInterface);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> setTapSensitivity(<span class="keyword">const</span> <a class="code" href="types_8h.html#a902d9cd1c2a809175a6bdf3beaeeb3e1">TapSensitivity</a> tapSensitivity);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">    /// \cond internal</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"></span>    <span class="keyword">explicit</span> <a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>(<a class="code" href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    /// \endcond</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a>)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">//Q_DISABLE_COPY(DeviceSettingsMessage)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// QTFIT_DEVICESETTINGSMESSAGE_H</span></div>
+<div class="ttc" id="aQtFit__global_8h_html_a0e93dab66b5e7c93148056660a6c416c"><div class="ttname"><a href="QtFit__global_8h.html#a0e93dab66b5e7c93148056660a6c416c">QTFIT_EXPORT</a></div><div class="ttdeci">#define QTFIT_EXPORT</div><div class="ttdoc">QtFit library export/import macro.</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00042">QtFit_global.h:42</a></div></div>
+<div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdoc">Macro for ending the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00078">QtFit_global.h:78</a></div></div>
+<div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdoc">Macro for starting the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00077">QtFit_global.h:77</a></div></div>
+<div class="ttc" id="aabstractdatamessage_8h_html"><div class="ttname"><a href="abstractdatamessage_8h.html">abstractdatamessage.h</a></div><div class="ttdoc">Declares the AbstractDataMessage class.</div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassDeviceSettingsMessagePrivate_html"><div class="ttname"><a href="classDeviceSettingsMessagePrivate.html">DeviceSettingsMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage__p_8h_source.html#l00038">devicesettingsmessage_p.h:38</a></div></div>
+<div class="ttc" id="aclassDeviceSettingsMessage_html"><div class="ttname"><a href="classDeviceSettingsMessage.html">DeviceSettingsMessage</a></div><div class="ttdoc">The DeviceSettingsMessage class represents a FIT DeviceSettingsMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="devicesettingsmessage_8h_source.html#l00039">devicesettingsmessage.h:39</a></div></div>
 <div class="ttc" id="atypes_8h_html_a1be109160dc894bc6f52ad9fc24e1796"><div class="ttname"><a href="types_8h.html#a1be109160dc894bc6f52ad9fc24e1796">AutoActivityDetect</a></div><div class="ttdeci">AutoActivityDetect</div><div class="ttdoc">Garmin FIT AutoActivityDetect type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l03339">types.h:3339</a></div></div>
 <div class="ttc" id="atypes_8h_html_a2a4e52b0210a441665a23dc88317d9e5"><div class="ttname"><a href="types_8h.html#a2a4e52b0210a441665a23dc88317d9e5">TimeMode</a></div><div class="ttdeci">TimeMode</div><div class="ttdoc">Garmin FIT TimeMode type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l01065">types.h:1065</a></div></div>
 <div class="ttc" id="atypes_8h_html_a38bd6ad994c4baaac737cf426fbf23ea"><div class="ttname"><a href="types_8h.html#a38bd6ad994c4baaac737cf426fbf23ea">DisplayOrientation</a></div><div class="ttdeci">DisplayOrientation</div><div class="ttdoc">Garmin FIT DisplayOrientation type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l02808">types.h:2808</a></div></div>

@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -219,7 +219,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classAviationAttitudeMessage.html" title="The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.">AviationAttitudeMessage</a> class represents a FIT <a class="el" href="classAviationAttitudeMessage.html" title="The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.">AviationAttitudeMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8h_source.html#l00034">34</a> of file <a class="el" href="aviationattitudemessage_8h_source.html">aviationattitudemessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8h_source.html#l00039">39</a> of file <a class="el" href="aviationattitudemessage_8h_source.html">aviationattitudemessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f5f8583c4acad1997baeb521c5820b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f5f8583c4acad1997baeb521c5820b7">&#9670;&nbsp;</a></span>AviationAttitudeMessage() <span class="overload">[1/2]</span></h2>
@@ -239,13 +239,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classAviationAttitudeMessage.html" title="The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.">AviationAttitudeMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classAviationAttitudeMessagePrivate.html">AviationAttitudeMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassAviationAttitudeMessagePrivate_html"><div class="ttname"><a href="classAviationAttitudeMessagePrivate.html">AviationAttitudeMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage__p_8h_source.html#l00034">aviationattitudemessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classAviationAttitudeMessagePrivate.html">AviationAttitudeMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassAviationAttitudeMessagePrivate_html"><div class="ttname"><a href="classAviationAttitudeMessagePrivate.html">AviationAttitudeMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage__p_8h_source.html#l00038">aviationattitudemessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,11 +280,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -308,14 +308,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Range -78.4 to +78.4 (-8 Gs to 8 Gs)</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>accelLateral</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00136">136</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelLateral;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html"><div class="ttname"><a href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a></div><div class="ttdoc">The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8h_source.html#l00034">aviationattitudemessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00141">141</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelLateral;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html"><div class="ttname"><a href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a></div><div class="ttdoc">The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8h_source.html#l00039">aviationattitudemessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00272">setAccelLateral()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00277">setAccelLateral()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -344,13 +344,13 @@ Here is the caller graph for this function:</div>
 <p>Range -78.4 to +78.4 (-8 Gs to 8 Gs)</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>accelNormal</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00149">149</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelNormal;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00154">154</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> d-&gt;accelNormal;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00282">setAccelNormal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00287">setAccelNormal()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -379,13 +379,13 @@ Here is the caller graph for this function:</div>
 <p>The percent complete of the current attitude stage. Set to 0 for attitude stages 0, 1 and 2 and to 100 for attitude stage 3 by AHRS modules that do not support it. Range - 100</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>attitudeStageComplete</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00187">187</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;{</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> d-&gt;attitudeStageComplete;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00192">192</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">return</span> d-&gt;attitudeStageComplete;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00312">setAttitudeStageComplete()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00317">setAttitudeStageComplete()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -414,13 +414,13 @@ Here is the caller graph for this function:</div>
 <p>Range -PI/2 to +PI/2</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>pitch</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00110">110</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> d-&gt;pitch;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00115">115</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> d-&gt;pitch;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00252">setPitch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00257">setPitch()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -449,13 +449,13 @@ Here is the caller graph for this function:</div>
 <p>Range -PI to +PI</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>roll</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00123">123</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> d-&gt;roll;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> d-&gt;roll;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00262">setRoll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00267">setRoll()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -489,14 +489,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00272">272</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    d-&gt;accelLateral = <a class="code" href="classAviationAttitudeMessage.html#a9cd9577072f899ada961dd5a5d7b4a45">accelLateral</a>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a9cd9577072f899ada961dd5a5d7b4a45"><div class="ttname"><a href="classAviationAttitudeMessage.html#a9cd9577072f899ada961dd5a5d7b4a45">AviationAttitudeMessage::accelLateral</a></div><div class="ttdeci">qint16 accelLateral() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's accelLateral field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00136">aviationattitudemessage.cpp:136</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00277">277</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    d-&gt;accelLateral = <a class="code" href="classAviationAttitudeMessage.html#a9cd9577072f899ada961dd5a5d7b4a45">accelLateral</a>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a9cd9577072f899ada961dd5a5d7b4a45"><div class="ttname"><a href="classAviationAttitudeMessage.html#a9cd9577072f899ada961dd5a5d7b4a45">AviationAttitudeMessage::accelLateral</a></div><div class="ttdeci">qint16 accelLateral() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's accelLateral field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00141">aviationattitudemessage.cpp:141</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00136">accelLateral()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00141">accelLateral()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -530,14 +530,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00282">282</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;{</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    d-&gt;accelNormal = <a class="code" href="classAviationAttitudeMessage.html#a8f8d4ea84e5ef2388807023c6d3ab1bf">accelNormal</a>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a8f8d4ea84e5ef2388807023c6d3ab1bf"><div class="ttname"><a href="classAviationAttitudeMessage.html#a8f8d4ea84e5ef2388807023c6d3ab1bf">AviationAttitudeMessage::accelNormal</a></div><div class="ttdeci">qint16 accelNormal() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's accelNormal field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00149">aviationattitudemessage.cpp:149</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00287">287</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    d-&gt;accelNormal = <a class="code" href="classAviationAttitudeMessage.html#a8f8d4ea84e5ef2388807023c6d3ab1bf">accelNormal</a>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a8f8d4ea84e5ef2388807023c6d3ab1bf"><div class="ttname"><a href="classAviationAttitudeMessage.html#a8f8d4ea84e5ef2388807023c6d3ab1bf">AviationAttitudeMessage::accelNormal</a></div><div class="ttdeci">qint16 accelNormal() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's accelNormal field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00154">aviationattitudemessage.cpp:154</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00149">accelNormal()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00154">accelNormal()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -571,14 +571,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00312">312</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    d-&gt;attitudeStageComplete = <a class="code" href="classAviationAttitudeMessage.html#ace7664436da7c768f5fe77e561ab8967">attitudeStageComplete</a>;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_ace7664436da7c768f5fe77e561ab8967"><div class="ttname"><a href="classAviationAttitudeMessage.html#ace7664436da7c768f5fe77e561ab8967">AviationAttitudeMessage::attitudeStageComplete</a></div><div class="ttdeci">quint8 attitudeStageComplete() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's attitudeStageComplete field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00187">aviationattitudemessage.cpp:187</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00317">317</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;{</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    d-&gt;attitudeStageComplete = <a class="code" href="classAviationAttitudeMessage.html#ace7664436da7c768f5fe77e561ab8967">attitudeStageComplete</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_ace7664436da7c768f5fe77e561ab8967"><div class="ttname"><a href="classAviationAttitudeMessage.html#ace7664436da7c768f5fe77e561ab8967">AviationAttitudeMessage::attitudeStageComplete</a></div><div class="ttdeci">quint8 attitudeStageComplete() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's attitudeStageComplete field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00192">aviationattitudemessage.cpp:192</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00187">attitudeStageComplete()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00192">attitudeStageComplete()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -612,14 +612,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00252">252</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    d-&gt;pitch = <a class="code" href="classAviationAttitudeMessage.html#a0f56ca98984f48dbecd18dbd24f4cb6e">pitch</a>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a0f56ca98984f48dbecd18dbd24f4cb6e"><div class="ttname"><a href="classAviationAttitudeMessage.html#a0f56ca98984f48dbecd18dbd24f4cb6e">AviationAttitudeMessage::pitch</a></div><div class="ttdeci">qint16 pitch() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's pitch field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00110">aviationattitudemessage.cpp:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00257">257</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    d-&gt;pitch = <a class="code" href="classAviationAttitudeMessage.html#a0f56ca98984f48dbecd18dbd24f4cb6e">pitch</a>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a0f56ca98984f48dbecd18dbd24f4cb6e"><div class="ttname"><a href="classAviationAttitudeMessage.html#a0f56ca98984f48dbecd18dbd24f4cb6e">AviationAttitudeMessage::pitch</a></div><div class="ttdeci">qint16 pitch() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's pitch field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00115">aviationattitudemessage.cpp:115</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00110">pitch()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00115">pitch()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -653,14 +653,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00262">262</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    d-&gt;roll = <a class="code" href="classAviationAttitudeMessage.html#a1822bdcc48a32c705bfbef5db4193aa1">roll</a>;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a1822bdcc48a32c705bfbef5db4193aa1"><div class="ttname"><a href="classAviationAttitudeMessage.html#a1822bdcc48a32c705bfbef5db4193aa1">AviationAttitudeMessage::roll</a></div><div class="ttdeci">qint16 roll() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's roll field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00123">aviationattitudemessage.cpp:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00267">267</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;{</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    d-&gt;roll = <a class="code" href="classAviationAttitudeMessage.html#a1822bdcc48a32c705bfbef5db4193aa1">roll</a>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a1822bdcc48a32c705bfbef5db4193aa1"><div class="ttname"><a href="classAviationAttitudeMessage.html#a1822bdcc48a32c705bfbef5db4193aa1">AviationAttitudeMessage::roll</a></div><div class="ttdeci">qint16 roll() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's roll field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00128">aviationattitudemessage.cpp:128</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00123">roll()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00128">roll()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -694,14 +694,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00302">302</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;{</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    d-&gt;stage = <a class="code" href="classAviationAttitudeMessage.html#ae0e61ed7e49feda37b8fd05972c14001">stage</a>;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_ae0e61ed7e49feda37b8fd05972c14001"><div class="ttname"><a href="classAviationAttitudeMessage.html#ae0e61ed7e49feda37b8fd05972c14001">AviationAttitudeMessage::stage</a></div><div class="ttdeci">AttitudeStage stage() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's stage field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00173">aviationattitudemessage.cpp:173</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00307">307</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    d-&gt;stage = <a class="code" href="classAviationAttitudeMessage.html#ae0e61ed7e49feda37b8fd05972c14001">stage</a>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_ae0e61ed7e49feda37b8fd05972c14001"><div class="ttname"><a href="classAviationAttitudeMessage.html#ae0e61ed7e49feda37b8fd05972c14001">AviationAttitudeMessage::stage</a></div><div class="ttdeci">AttitudeStage stage() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's stage field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00178">aviationattitudemessage.cpp:178</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00173">stage()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00178">stage()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -735,14 +735,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00242">242</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    d-&gt;systemTime = <a class="code" href="classAviationAttitudeMessage.html#a624a822f55eb6fb44bd2626fae132c6a">systemTime</a>;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a624a822f55eb6fb44bd2626fae132c6a"><div class="ttname"><a href="classAviationAttitudeMessage.html#a624a822f55eb6fb44bd2626fae132c6a">AviationAttitudeMessage::systemTime</a></div><div class="ttdeci">quint32 systemTime() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's systemTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00097">aviationattitudemessage.cpp:97</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00247">247</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;{</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    d-&gt;systemTime = <a class="code" href="classAviationAttitudeMessage.html#a624a822f55eb6fb44bd2626fae132c6a">systemTime</a>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a624a822f55eb6fb44bd2626fae132c6a"><div class="ttname"><a href="classAviationAttitudeMessage.html#a624a822f55eb6fb44bd2626fae132c6a">AviationAttitudeMessage::systemTime</a></div><div class="ttdeci">quint32 systemTime() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's systemTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00102">aviationattitudemessage.cpp:102</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00097">systemTime()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00102">systemTime()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -776,14 +776,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00222">222</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    d-&gt;timestamp = <a class="code" href="classAviationAttitudeMessage.html#a815ea7a26722b2165d8737ced70a44e3">timestamp</a>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a815ea7a26722b2165d8737ced70a44e3"><div class="ttname"><a href="classAviationAttitudeMessage.html#a815ea7a26722b2165d8737ced70a44e3">AviationAttitudeMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00071">aviationattitudemessage.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00227">227</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;{</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    d-&gt;timestamp = <a class="code" href="classAviationAttitudeMessage.html#a815ea7a26722b2165d8737ced70a44e3">timestamp</a>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a815ea7a26722b2165d8737ced70a44e3"><div class="ttname"><a href="classAviationAttitudeMessage.html#a815ea7a26722b2165d8737ced70a44e3">AviationAttitudeMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00076">aviationattitudemessage.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00071">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00076">timestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -817,14 +817,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00232">232</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;{</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    d-&gt;timestampMs = <a class="code" href="classAviationAttitudeMessage.html#aa8b2d11c78bc6cd8615e1a6c06b2f369">timestampMs</a>;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_aa8b2d11c78bc6cd8615e1a6c06b2f369"><div class="ttname"><a href="classAviationAttitudeMessage.html#aa8b2d11c78bc6cd8615e1a6c06b2f369">AviationAttitudeMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00084">aviationattitudemessage.cpp:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00237">237</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;{</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    d-&gt;timestampMs = <a class="code" href="classAviationAttitudeMessage.html#aa8b2d11c78bc6cd8615e1a6c06b2f369">timestampMs</a>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_aa8b2d11c78bc6cd8615e1a6c06b2f369"><div class="ttname"><a href="classAviationAttitudeMessage.html#aa8b2d11c78bc6cd8615e1a6c06b2f369">AviationAttitudeMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00089">aviationattitudemessage.cpp:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00084">timestampMs()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00089">timestampMs()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -858,14 +858,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00322">322</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    d-&gt;track = <a class="code" href="classAviationAttitudeMessage.html#a7e885c1fdfedf12b81f966c171641437">track</a>;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a7e885c1fdfedf12b81f966c171641437"><div class="ttname"><a href="classAviationAttitudeMessage.html#a7e885c1fdfedf12b81f966c171641437">AviationAttitudeMessage::track</a></div><div class="ttdeci">quint16 track() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's track field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00200">aviationattitudemessage.cpp:200</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00327">327</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;{</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    d-&gt;track = <a class="code" href="classAviationAttitudeMessage.html#a7e885c1fdfedf12b81f966c171641437">track</a>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a7e885c1fdfedf12b81f966c171641437"><div class="ttname"><a href="classAviationAttitudeMessage.html#a7e885c1fdfedf12b81f966c171641437">AviationAttitudeMessage::track</a></div><div class="ttdeci">quint16 track() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's track field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00205">aviationattitudemessage.cpp:205</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00200">track()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00205">track()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -899,14 +899,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00292">292</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;{</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    d-&gt;turnRate = <a class="code" href="classAviationAttitudeMessage.html#a20ad943a0e6c344f7854ef2816c90527">turnRate</a>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a20ad943a0e6c344f7854ef2816c90527"><div class="ttname"><a href="classAviationAttitudeMessage.html#a20ad943a0e6c344f7854ef2816c90527">AviationAttitudeMessage::turnRate</a></div><div class="ttdeci">qint16 turnRate() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's turnRate field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00162">aviationattitudemessage.cpp:162</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00297">297</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    d-&gt;turnRate = <a class="code" href="classAviationAttitudeMessage.html#a20ad943a0e6c344f7854ef2816c90527">turnRate</a>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a20ad943a0e6c344f7854ef2816c90527"><div class="ttname"><a href="classAviationAttitudeMessage.html#a20ad943a0e6c344f7854ef2816c90527">AviationAttitudeMessage::turnRate</a></div><div class="ttdeci">qint16 turnRate() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's turnRate field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00167">aviationattitudemessage.cpp:167</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00162">turnRate()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00167">turnRate()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -940,14 +940,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00332">332</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;{</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    d-&gt;validity = <a class="code" href="classAviationAttitudeMessage.html#a2e500c31138864f2d0fb5612797b927a">validity</a>;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
-<div class="ttc" id="aclassAviationAttitudeMessage_html_a2e500c31138864f2d0fb5612797b927a"><div class="ttname"><a href="classAviationAttitudeMessage.html#a2e500c31138864f2d0fb5612797b927a">AviationAttitudeMessage::validity</a></div><div class="ttdeci">AttitudeValidity validity() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's validity field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00211">aviationattitudemessage.cpp:211</a></div></div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00337">337</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;{</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    Q_D(<a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    d-&gt;validity = <a class="code" href="classAviationAttitudeMessage.html#a2e500c31138864f2d0fb5612797b927a">validity</a>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="ttc" id="aclassAviationAttitudeMessage_html_a2e500c31138864f2d0fb5612797b927a"><div class="ttname"><a href="classAviationAttitudeMessage.html#a2e500c31138864f2d0fb5612797b927a">AviationAttitudeMessage::validity</a></div><div class="ttdeci">AttitudeValidity validity() const</div><div class="ttdoc">Returns the AviationAttitudeMessage data message's validity field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="aviationattitudemessage_8cpp_source.html#l00216">aviationattitudemessage.cpp:216</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00211">validity()</a>.</p>
+<p class="reference">References <a class="el" href="aviationattitudemessage_8cpp_source.html#l00216">validity()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -975,13 +975,13 @@ Here is the call graph for this function:</div>
 <p>Returns the <a class="el" href="classAviationAttitudeMessage.html" title="The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.">AviationAttitudeMessage</a> data message's <code>stage</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>stage</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00173">173</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> d-&gt;stage;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00178">178</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> d-&gt;stage;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00302">setStage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00307">setStage()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1010,13 +1010,13 @@ Here is the caller graph for this function:</div>
 <p>System time associated with sample expressed in ms.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>systemTime</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00097">97</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> d-&gt;systemTime;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;systemTime;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00242">setSystemTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00247">setSystemTime()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1045,13 +1045,13 @@ Here is the caller graph for this function:</div>
 <p>Timestamp message was output</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00071">71</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00076">76</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00222">setTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00227">setTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1080,13 +1080,13 @@ Here is the caller graph for this function:</div>
 <p>Fractional part of timestamp, added to timestamp</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestampMs</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00084">84</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00089">89</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00232">setTimestampMs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00237">setTimestampMs()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1115,13 +1115,13 @@ Here is the caller graph for this function:</div>
 <p>Track Angle/Heading Range 0 - 2pi</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>track</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00200">200</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> d-&gt;track;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00205">205</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> d-&gt;track;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00322">setTrack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00327">setTrack()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1150,13 +1150,13 @@ Here is the caller graph for this function:</div>
 <p>Range -8.727 to +8.727 (-500 degs/sec to +500 degs/sec)</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>turnRate</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00162">162</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> d-&gt;turnRate;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00167">167</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> d-&gt;turnRate;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00292">setTurnRate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00297">setTurnRate()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1184,13 +1184,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classAviationAttitudeMessage.html" title="The AviationAttitudeMessage class represents a FIT AviationAttitudeMessage data message.">AviationAttitudeMessage</a> data message's <code>validity</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>validity</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00211">211</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">return</span> d-&gt;validity;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="aviationattitudemessage_8cpp_source.html#l00216">216</a> of file <a class="el" href="aviationattitudemessage_8cpp_source.html">aviationattitudemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAviationAttitudeMessage.html">AviationAttitudeMessage</a>);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">return</span> d-&gt;validity;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00332">setValidity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aviationattitudemessage_8cpp_source.html#l00337">setValidity()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

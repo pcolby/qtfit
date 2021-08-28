@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -201,7 +201,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classSegmentFileMessage.html" title="The SegmentFileMessage class represents a FIT SegmentFileMessage data message.">SegmentFileMessage</a> class represents a FIT <a class="el" href="classSegmentFileMessage.html" title="The SegmentFileMessage class represents a FIT SegmentFileMessage data message.">SegmentFileMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8h_source.html#l00034">34</a> of file <a class="el" href="segmentfilemessage_8h_source.html">segmentfilemessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8h_source.html#l00039">39</a> of file <a class="el" href="segmentfilemessage_8h_source.html">segmentfilemessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e8bd7ae8707ef6051bc14d7236121c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e8bd7ae8707ef6051bc14d7236121c2">&#9670;&nbsp;</a></span>SegmentFileMessage() <span class="overload">[1/2]</span></h2>
@@ -221,13 +221,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classSegmentFileMessage.html" title="The SegmentFileMessage class represents a FIT SegmentFileMessage data message.">SegmentFileMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classSegmentFileMessagePrivate.html">SegmentFileMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassSegmentFileMessagePrivate_html"><div class="ttname"><a href="classSegmentFileMessagePrivate.html">SegmentFileMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage__p_8h_source.html#l00034">segmentfilemessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classSegmentFileMessagePrivate.html">SegmentFileMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassSegmentFileMessagePrivate_html"><div class="ttname"><a href="classSegmentFileMessagePrivate.html">SegmentFileMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage__p_8h_source.html#l00038">segmentfilemessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -262,11 +262,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -290,14 +290,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Index for the Leader Board entry selected as the default race participant</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>defaultRaceLeader</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00174">174</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> d-&gt;defaultRaceLeader;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html"><div class="ttname"><a href="classSegmentFileMessage.html">SegmentFileMessage</a></div><div class="ttdoc">The SegmentFileMessage class represents a FIT SegmentFileMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8h_source.html#l00034">segmentfilemessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00179">179</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">return</span> d-&gt;defaultRaceLeader;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html"><div class="ttname"><a href="classSegmentFileMessage.html">SegmentFileMessage</a></div><div class="ttdoc">The SegmentFileMessage class represents a FIT SegmentFileMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8h_source.html#l00039">segmentfilemessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00265">setDefaultRaceLeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00270">setDefaultRaceLeader()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -326,13 +326,13 @@ Here is the caller graph for this function:</div>
 <p>Enabled state of the segment file</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>enabled</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00095">95</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> d-&gt;enabled;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00100">100</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> d-&gt;enabled;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00205">setEnabled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00210">setEnabled()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -361,13 +361,13 @@ Here is the caller graph for this function:</div>
 <p>UUID of the segment file</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>fileUuid</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00082">82</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> d-&gt;fileUuid;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00087">87</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> d-&gt;fileUuid;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00195">setFileUuid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00200">setFileUuid()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -396,13 +396,13 @@ Here is the caller graph for this function:</div>
 <p>Activity ID of each leader in the segment file</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>leaderActivityId</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00147">147</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderActivityId;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00152">152</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderActivityId;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00245">setLeaderActivityId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00250">setLeaderActivityId()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -431,13 +431,13 @@ Here is the caller graph for this function:</div>
 <p>String version of the activity ID of each leader in the segment file. 21 characters long for each ID, express in decimal</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>leaderActivityIdString</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00161">161</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderActivityIdString;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00166">166</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderActivityIdString;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00255">setLeaderActivityIdString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00260">setLeaderActivityIdString()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -466,13 +466,13 @@ Here is the caller graph for this function:</div>
 <p>Group primary key of each leader in the segment file</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>leaderGroupPrimaryKey</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00134">134</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderGroupPrimaryKey;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00139">139</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderGroupPrimaryKey;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00235">setLeaderGroupPrimaryKey()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00240">setLeaderGroupPrimaryKey()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -501,13 +501,13 @@ Here is the caller graph for this function:</div>
 <p>Leader type of each leader in the segment file</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>leaderType</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00121">121</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderType;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00126">126</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> d-&gt;leaderType;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00225">setLeaderType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00230">setLeaderType()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -535,13 +535,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSegmentFileMessage.html" title="The SegmentFileMessage class represents a FIT SegmentFileMessage data message.">SegmentFileMessage</a> data message's <code>messageIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>messageIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00185">setMessageIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00190">setMessageIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -575,14 +575,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00265">265</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    d-&gt;defaultRaceLeader = <a class="code" href="classSegmentFileMessage.html#a17220bf845ad2fac2ee28f2a3a135d13">defaultRaceLeader</a>;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_a17220bf845ad2fac2ee28f2a3a135d13"><div class="ttname"><a href="classSegmentFileMessage.html#a17220bf845ad2fac2ee28f2a3a135d13">SegmentFileMessage::defaultRaceLeader</a></div><div class="ttdeci">quint8 defaultRaceLeader() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's defaultRaceLeader field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00174">segmentfilemessage.cpp:174</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00270">270</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    d-&gt;defaultRaceLeader = <a class="code" href="classSegmentFileMessage.html#a17220bf845ad2fac2ee28f2a3a135d13">defaultRaceLeader</a>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_a17220bf845ad2fac2ee28f2a3a135d13"><div class="ttname"><a href="classSegmentFileMessage.html#a17220bf845ad2fac2ee28f2a3a135d13">SegmentFileMessage::defaultRaceLeader</a></div><div class="ttdeci">quint8 defaultRaceLeader() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's defaultRaceLeader field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00179">segmentfilemessage.cpp:179</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00174">defaultRaceLeader()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00179">defaultRaceLeader()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -616,14 +616,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00205">205</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    d-&gt;enabled = <a class="code" href="classSegmentFileMessage.html#ab5b8787c9a6e13abd278888818a8eeff">enabled</a>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_ab5b8787c9a6e13abd278888818a8eeff"><div class="ttname"><a href="classSegmentFileMessage.html#ab5b8787c9a6e13abd278888818a8eeff">SegmentFileMessage::enabled</a></div><div class="ttdeci">bool enabled() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's enabled field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00095">segmentfilemessage.cpp:95</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00210">210</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    d-&gt;enabled = <a class="code" href="classSegmentFileMessage.html#ab5b8787c9a6e13abd278888818a8eeff">enabled</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_ab5b8787c9a6e13abd278888818a8eeff"><div class="ttname"><a href="classSegmentFileMessage.html#ab5b8787c9a6e13abd278888818a8eeff">SegmentFileMessage::enabled</a></div><div class="ttdeci">bool enabled() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's enabled field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00100">segmentfilemessage.cpp:100</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00095">enabled()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00100">enabled()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -657,14 +657,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00195">195</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;{</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    d-&gt;fileUuid = <a class="code" href="classSegmentFileMessage.html#a4bd1ee272bd234aa98c3bfe709af123f">fileUuid</a>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_a4bd1ee272bd234aa98c3bfe709af123f"><div class="ttname"><a href="classSegmentFileMessage.html#a4bd1ee272bd234aa98c3bfe709af123f">SegmentFileMessage::fileUuid</a></div><div class="ttdeci">QString fileUuid() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's fileUuid field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00082">segmentfilemessage.cpp:82</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00200">200</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    d-&gt;fileUuid = <a class="code" href="classSegmentFileMessage.html#a4bd1ee272bd234aa98c3bfe709af123f">fileUuid</a>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_a4bd1ee272bd234aa98c3bfe709af123f"><div class="ttname"><a href="classSegmentFileMessage.html#a4bd1ee272bd234aa98c3bfe709af123f">SegmentFileMessage::fileUuid</a></div><div class="ttdeci">QString fileUuid() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's fileUuid field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00087">segmentfilemessage.cpp:87</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00082">fileUuid()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00087">fileUuid()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -698,14 +698,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00245">245</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;{</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    d-&gt;leaderActivityId = <a class="code" href="classSegmentFileMessage.html#afbd5044c22be74d729b434dcf7fb48e3">leaderActivityId</a>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_afbd5044c22be74d729b434dcf7fb48e3"><div class="ttname"><a href="classSegmentFileMessage.html#afbd5044c22be74d729b434dcf7fb48e3">SegmentFileMessage::leaderActivityId</a></div><div class="ttdeci">quint32 leaderActivityId() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderActivityId field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00147">segmentfilemessage.cpp:147</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00250">250</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    d-&gt;leaderActivityId = <a class="code" href="classSegmentFileMessage.html#afbd5044c22be74d729b434dcf7fb48e3">leaderActivityId</a>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_afbd5044c22be74d729b434dcf7fb48e3"><div class="ttname"><a href="classSegmentFileMessage.html#afbd5044c22be74d729b434dcf7fb48e3">SegmentFileMessage::leaderActivityId</a></div><div class="ttdeci">quint32 leaderActivityId() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderActivityId field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00152">segmentfilemessage.cpp:152</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00147">leaderActivityId()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00152">leaderActivityId()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -739,14 +739,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00255">255</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    d-&gt;leaderActivityIdString = <a class="code" href="classSegmentFileMessage.html#a3166ebfaf78bc601efa3e22deb63f3b0">leaderActivityIdString</a>;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_a3166ebfaf78bc601efa3e22deb63f3b0"><div class="ttname"><a href="classSegmentFileMessage.html#a3166ebfaf78bc601efa3e22deb63f3b0">SegmentFileMessage::leaderActivityIdString</a></div><div class="ttdeci">QString leaderActivityIdString() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderActivityIdString field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00161">segmentfilemessage.cpp:161</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00260">260</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;{</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    d-&gt;leaderActivityIdString = <a class="code" href="classSegmentFileMessage.html#a3166ebfaf78bc601efa3e22deb63f3b0">leaderActivityIdString</a>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_a3166ebfaf78bc601efa3e22deb63f3b0"><div class="ttname"><a href="classSegmentFileMessage.html#a3166ebfaf78bc601efa3e22deb63f3b0">SegmentFileMessage::leaderActivityIdString</a></div><div class="ttdeci">QString leaderActivityIdString() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderActivityIdString field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00166">segmentfilemessage.cpp:166</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00161">leaderActivityIdString()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00166">leaderActivityIdString()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -780,14 +780,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00235">235</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    d-&gt;leaderGroupPrimaryKey = <a class="code" href="classSegmentFileMessage.html#a9824867399fa9b7a7b9cc6b0f1f2b756">leaderGroupPrimaryKey</a>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_a9824867399fa9b7a7b9cc6b0f1f2b756"><div class="ttname"><a href="classSegmentFileMessage.html#a9824867399fa9b7a7b9cc6b0f1f2b756">SegmentFileMessage::leaderGroupPrimaryKey</a></div><div class="ttdeci">quint32 leaderGroupPrimaryKey() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderGroupPrimaryKey field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00134">segmentfilemessage.cpp:134</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00240">240</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;{</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    d-&gt;leaderGroupPrimaryKey = <a class="code" href="classSegmentFileMessage.html#a9824867399fa9b7a7b9cc6b0f1f2b756">leaderGroupPrimaryKey</a>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_a9824867399fa9b7a7b9cc6b0f1f2b756"><div class="ttname"><a href="classSegmentFileMessage.html#a9824867399fa9b7a7b9cc6b0f1f2b756">SegmentFileMessage::leaderGroupPrimaryKey</a></div><div class="ttdeci">quint32 leaderGroupPrimaryKey() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderGroupPrimaryKey field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00139">segmentfilemessage.cpp:139</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00134">leaderGroupPrimaryKey()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00139">leaderGroupPrimaryKey()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -821,14 +821,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00225">225</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    d-&gt;leaderType = <a class="code" href="classSegmentFileMessage.html#ada21bc9a8f0279b4aba0cd6f94b3d91f">leaderType</a>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_ada21bc9a8f0279b4aba0cd6f94b3d91f"><div class="ttname"><a href="classSegmentFileMessage.html#ada21bc9a8f0279b4aba0cd6f94b3d91f">SegmentFileMessage::leaderType</a></div><div class="ttdeci">SegmentLeaderboardType leaderType() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00121">segmentfilemessage.cpp:121</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00230">230</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    d-&gt;leaderType = <a class="code" href="classSegmentFileMessage.html#ada21bc9a8f0279b4aba0cd6f94b3d91f">leaderType</a>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_ada21bc9a8f0279b4aba0cd6f94b3d91f"><div class="ttname"><a href="classSegmentFileMessage.html#ada21bc9a8f0279b4aba0cd6f94b3d91f">SegmentFileMessage::leaderType</a></div><div class="ttdeci">SegmentLeaderboardType leaderType() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's leaderType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00126">segmentfilemessage.cpp:126</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00121">leaderType()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00126">leaderType()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -862,14 +862,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00185">185</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    d-&gt;messageIndex = <a class="code" href="classSegmentFileMessage.html#a5974834e8a2bc5346557bc1a178e06a7">messageIndex</a>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_a5974834e8a2bc5346557bc1a178e06a7"><div class="ttname"><a href="classSegmentFileMessage.html#a5974834e8a2bc5346557bc1a178e06a7">SegmentFileMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00069">segmentfilemessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00190">190</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    d-&gt;messageIndex = <a class="code" href="classSegmentFileMessage.html#a5974834e8a2bc5346557bc1a178e06a7">messageIndex</a>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_a5974834e8a2bc5346557bc1a178e06a7"><div class="ttname"><a href="classSegmentFileMessage.html#a5974834e8a2bc5346557bc1a178e06a7">SegmentFileMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00074">segmentfilemessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00069">messageIndex()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00074">messageIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -903,14 +903,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00215">215</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    d-&gt;userProfilePrimaryKey = <a class="code" href="classSegmentFileMessage.html#a3aaae1692a1de06ff5a8dba535bacbf0">userProfilePrimaryKey</a>;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}</div>
-<div class="ttc" id="aclassSegmentFileMessage_html_a3aaae1692a1de06ff5a8dba535bacbf0"><div class="ttname"><a href="classSegmentFileMessage.html#a3aaae1692a1de06ff5a8dba535bacbf0">SegmentFileMessage::userProfilePrimaryKey</a></div><div class="ttdeci">quint32 userProfilePrimaryKey() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's userProfilePrimaryKey field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00108">segmentfilemessage.cpp:108</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00220">220</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    Q_D(<a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    d-&gt;userProfilePrimaryKey = <a class="code" href="classSegmentFileMessage.html#a3aaae1692a1de06ff5a8dba535bacbf0">userProfilePrimaryKey</a>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="ttc" id="aclassSegmentFileMessage_html_a3aaae1692a1de06ff5a8dba535bacbf0"><div class="ttname"><a href="classSegmentFileMessage.html#a3aaae1692a1de06ff5a8dba535bacbf0">SegmentFileMessage::userProfilePrimaryKey</a></div><div class="ttdeci">quint32 userProfilePrimaryKey() const</div><div class="ttdoc">Returns the SegmentFileMessage data message's userProfilePrimaryKey field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="segmentfilemessage_8cpp_source.html#l00113">segmentfilemessage.cpp:113</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00108">userProfilePrimaryKey()</a>.</p>
+<p class="reference">References <a class="el" href="segmentfilemessage_8cpp_source.html#l00113">userProfilePrimaryKey()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -939,13 +939,13 @@ Here is the call graph for this function:</div>
 <p>Primary key of the user that created the segment file</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>userProfilePrimaryKey</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00108">108</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> d-&gt;userProfilePrimaryKey;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentfilemessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="segmentfilemessage_8cpp_source.html">segmentfilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSegmentFileMessage.html">SegmentFileMessage</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> d-&gt;userProfilePrimaryKey;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00215">setUserProfilePrimaryKey()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="segmentfilemessage_8cpp_source.html#l00220">setUserProfilePrimaryKey()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

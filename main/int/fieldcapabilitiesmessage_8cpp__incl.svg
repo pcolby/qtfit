@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Defines the FieldCapabilitiesMessage, and FieldCapabilitiesMessagePrivate classes.">
 <polygon fill="#bfbfbf" stroke="black" points="218.5,-336.5 218.5,-355.5 376.5,-355.5 376.5,-336.5 218.5,-336.5"/>
 <text text-anchor="middle" x="297.5" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">fieldcapabilitiesmessage.cpp</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="fieldcapabilitiesmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="fieldcapabilitiesmessage_8h.html" target="_top" xlink:title="Declares the FieldCapabilitiesMessage class.">
 <polygon fill="none" stroke="black" points="0,-280.5 0,-299.5 147,-299.5 147,-280.5 0,-280.5"/>
 <text text-anchor="middle" x="73.5" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">fieldcapabilitiesmessage.h</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="fieldcapabilitiesmessage__p_8h.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="fieldcapabilitiesmessage__p_8h.html" target="_top" xlink:title="Declares the FieldCapabilitiesMessagePrivate class.">
 <polygon fill="none" stroke="black" points="165.5,-280.5 165.5,-299.5 323.5,-299.5 323.5,-280.5 165.5,-280.5"/>
 <text text-anchor="middle" x="244.5" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">fieldcapabilitiesmessage_p.h</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="abstractdatamessage_8h.html" target="_top" xlink:title="Declares the AbstractDataMessage class.">
 <polygon fill="none" stroke="black" points="20,-168.5 20,-187.5 151,-187.5 151,-168.5 20,-168.5"/>
 <text text-anchor="middle" x="85.5" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title="Global QtFit library macros.">
 <polygon fill="none" stroke="black" points="137.5,-56.5 137.5,-75.5 221.5,-75.5 221.5,-56.5 137.5,-56.5"/>
 <text text-anchor="middle" x="179.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>
@@ -152,7 +152,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="abstractdatamessage__p_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="abstractdatamessage__p_8h.html" target="_top" xlink:title="Declares the AbstractDataMessagePrivate class.">
 <polygon fill="none" stroke="black" points="166,-224.5 166,-243.5 309,-243.5 309,-224.5 166,-224.5"/>
 <text text-anchor="middle" x="237.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage_p.h</text>
 </a>
@@ -179,7 +179,7 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="types__p_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="types__p_8h.html" target="_top" xlink:title="Internal types used by QtFit classes.">
 <polygon fill="none" stroke="black" points="259.5,-168.5 259.5,-187.5 323.5,-187.5 323.5,-168.5 259.5,-168.5"/>
 <text text-anchor="middle" x="291.5" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">types_p.h</text>
 </a>

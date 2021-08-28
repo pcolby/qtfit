@@ -1,31 +1,5 @@
 var searchData=
 [
-  ['schedulemessage_2ecpp_2167',['schedulemessage.cpp',['../schedulemessage_8cpp.html',1,'']]],
-  ['schedulemessage_2eh_2168',['schedulemessage.h',['../schedulemessage_8h.html',1,'']]],
-  ['sdmprofilemessage_2ecpp_2169',['sdmprofilemessage.cpp',['../sdmprofilemessage_8cpp.html',1,'']]],
-  ['sdmprofilemessage_2eh_2170',['sdmprofilemessage.h',['../sdmprofilemessage_8h.html',1,'']]],
-  ['segmentfilemessage_2ecpp_2171',['segmentfilemessage.cpp',['../segmentfilemessage_8cpp.html',1,'']]],
-  ['segmentfilemessage_2eh_2172',['segmentfilemessage.h',['../segmentfilemessage_8h.html',1,'']]],
-  ['segmentidmessage_2ecpp_2173',['segmentidmessage.cpp',['../segmentidmessage_8cpp.html',1,'']]],
-  ['segmentidmessage_2eh_2174',['segmentidmessage.h',['../segmentidmessage_8h.html',1,'']]],
-  ['segmentlapmessage_2ecpp_2175',['segmentlapmessage.cpp',['../segmentlapmessage_8cpp.html',1,'']]],
-  ['segmentlapmessage_2eh_2176',['segmentlapmessage.h',['../segmentlapmessage_8h.html',1,'']]],
-  ['segmentleaderboardentrymessage_2ecpp_2177',['segmentleaderboardentrymessage.cpp',['../segmentleaderboardentrymessage_8cpp.html',1,'']]],
-  ['segmentleaderboardentrymessage_2eh_2178',['segmentleaderboardentrymessage.h',['../segmentleaderboardentrymessage_8h.html',1,'']]],
-  ['segmentpointmessage_2ecpp_2179',['segmentpointmessage.cpp',['../segmentpointmessage_8cpp.html',1,'']]],
-  ['segmentpointmessage_2eh_2180',['segmentpointmessage.h',['../segmentpointmessage_8h.html',1,'']]],
-  ['sessionmessage_2ecpp_2181',['sessionmessage.cpp',['../sessionmessage_8cpp.html',1,'']]],
-  ['sessionmessage_2eh_2182',['sessionmessage.h',['../sessionmessage_8h.html',1,'']]],
-  ['setmessage_2ecpp_2183',['setmessage.cpp',['../setmessage_8cpp.html',1,'']]],
-  ['setmessage_2eh_2184',['setmessage.h',['../setmessage_8h.html',1,'']]],
-  ['slavedevicemessage_2ecpp_2185',['slavedevicemessage.cpp',['../slavedevicemessage_8cpp.html',1,'']]],
-  ['slavedevicemessage_2eh_2186',['slavedevicemessage.h',['../slavedevicemessage_8h.html',1,'']]],
-  ['softwaremessage_2ecpp_2187',['softwaremessage.cpp',['../softwaremessage_8cpp.html',1,'']]],
-  ['softwaremessage_2eh_2188',['softwaremessage.h',['../softwaremessage_8h.html',1,'']]],
-  ['speedzonemessage_2ecpp_2189',['speedzonemessage.cpp',['../speedzonemessage_8cpp.html',1,'']]],
-  ['speedzonemessage_2eh_2190',['speedzonemessage.h',['../speedzonemessage_8h.html',1,'']]],
-  ['sportmessage_2ecpp_2191',['sportmessage.cpp',['../sportmessage_8cpp.html',1,'']]],
-  ['sportmessage_2eh_2192',['sportmessage.h',['../sportmessage_8h.html',1,'']]],
-  ['stresslevelmessage_2ecpp_2193',['stresslevelmessage.cpp',['../stresslevelmessage_8cpp.html',1,'']]],
-  ['stresslevelmessage_2eh_2194',['stresslevelmessage.h',['../stresslevelmessage_8h.html',1,'']]]
+  ['recordmessage_2ecpp_2174',['recordmessage.cpp',['../recordmessage_8cpp.html',1,'']]],
+  ['recordmessage_2eh_2175',['recordmessage.h',['../recordmessage_8h.html',1,'']]]
 ];

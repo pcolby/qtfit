@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -171,7 +171,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classExerciseTitleMessage.html" title="The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.">ExerciseTitleMessage</a> class represents a FIT <a class="el" href="classExerciseTitleMessage.html" title="The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.">ExerciseTitleMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8h_source.html#l00034">34</a> of file <a class="el" href="exercisetitlemessage_8h_source.html">exercisetitlemessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8h_source.html#l00039">39</a> of file <a class="el" href="exercisetitlemessage_8h_source.html">exercisetitlemessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a89745e9a0b8c08483298ce7d88927e63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89745e9a0b8c08483298ce7d88927e63">&#9670;&nbsp;</a></span>ExerciseTitleMessage() <span class="overload">[1/2]</span></h2>
@@ -191,13 +191,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classExerciseTitleMessage.html" title="The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.">ExerciseTitleMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                           : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classExerciseTitleMessagePrivate.html">ExerciseTitleMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassExerciseTitleMessagePrivate_html"><div class="ttname"><a href="classExerciseTitleMessagePrivate.html">ExerciseTitleMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage__p_8h_source.html#l00034">exercisetitlemessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                           : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classExerciseTitleMessagePrivate.html">ExerciseTitleMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassExerciseTitleMessagePrivate_html"><div class="ttname"><a href="classExerciseTitleMessagePrivate.html">ExerciseTitleMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage__p_8h_source.html#l00038">exercisetitlemessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,11 +232,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                                : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -259,14 +259,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the <a class="el" href="classExerciseTitleMessage.html" title="The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.">ExerciseTitleMessage</a> data message's <code>exerciseCategory</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>exerciseCategory</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;exerciseCategory;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="ttc" id="aclassExerciseTitleMessage_html"><div class="ttname"><a href="classExerciseTitleMessage.html">ExerciseTitleMessage</a></div><div class="ttdoc">The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8h_source.html#l00034">exercisetitlemessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;exerciseCategory;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="aclassExerciseTitleMessage_html"><div class="ttname"><a href="classExerciseTitleMessage.html">ExerciseTitleMessage</a></div><div class="ttdoc">The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8h_source.html#l00039">exercisetitlemessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00123">setExerciseCategory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00128">setExerciseCategory()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -294,13 +294,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classExerciseTitleMessage.html" title="The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.">ExerciseTitleMessage</a> data message's <code>exerciseName</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>exerciseName</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00091">91</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;exerciseName;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00096">96</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;exerciseName;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00133">setExerciseName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00138">setExerciseName()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -328,13 +328,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classExerciseTitleMessage.html" title="The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.">ExerciseTitleMessage</a> data message's <code>messageIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>messageIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00113">setMessageIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00118">setMessageIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -368,14 +368,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00123">123</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    d-&gt;exerciseCategory = <a class="code" href="classExerciseTitleMessage.html#a4ab82f98511d30ae817d090a0f923f6f">exerciseCategory</a>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="ttc" id="aclassExerciseTitleMessage_html_a4ab82f98511d30ae817d090a0f923f6f"><div class="ttname"><a href="classExerciseTitleMessage.html#a4ab82f98511d30ae817d090a0f923f6f">ExerciseTitleMessage::exerciseCategory</a></div><div class="ttdeci">ExerciseCategory exerciseCategory() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's exerciseCategory field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00080">exercisetitlemessage.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    d-&gt;exerciseCategory = <a class="code" href="classExerciseTitleMessage.html#a4ab82f98511d30ae817d090a0f923f6f">exerciseCategory</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="ttc" id="aclassExerciseTitleMessage_html_a4ab82f98511d30ae817d090a0f923f6f"><div class="ttname"><a href="classExerciseTitleMessage.html#a4ab82f98511d30ae817d090a0f923f6f">ExerciseTitleMessage::exerciseCategory</a></div><div class="ttdeci">ExerciseCategory exerciseCategory() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's exerciseCategory field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00085">exercisetitlemessage.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00080">exerciseCategory()</a>.</p>
+<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00085">exerciseCategory()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -409,14 +409,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00133">133</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    d-&gt;exerciseName = <a class="code" href="classExerciseTitleMessage.html#a0d59e68fd9518104bdad730781254fbe">exerciseName</a>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
-<div class="ttc" id="aclassExerciseTitleMessage_html_a0d59e68fd9518104bdad730781254fbe"><div class="ttname"><a href="classExerciseTitleMessage.html#a0d59e68fd9518104bdad730781254fbe">ExerciseTitleMessage::exerciseName</a></div><div class="ttdeci">quint16 exerciseName() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's exerciseName field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00091">exercisetitlemessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00138">138</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    d-&gt;exerciseName = <a class="code" href="classExerciseTitleMessage.html#a0d59e68fd9518104bdad730781254fbe">exerciseName</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="ttc" id="aclassExerciseTitleMessage_html_a0d59e68fd9518104bdad730781254fbe"><div class="ttname"><a href="classExerciseTitleMessage.html#a0d59e68fd9518104bdad730781254fbe">ExerciseTitleMessage::exerciseName</a></div><div class="ttdeci">quint16 exerciseName() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's exerciseName field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00096">exercisetitlemessage.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00091">exerciseName()</a>.</p>
+<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00096">exerciseName()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -450,14 +450,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    d-&gt;messageIndex = <a class="code" href="classExerciseTitleMessage.html#ab344fc96b09db171e41322c0f0ac22c0">messageIndex</a>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="ttc" id="aclassExerciseTitleMessage_html_ab344fc96b09db171e41322c0f0ac22c0"><div class="ttname"><a href="classExerciseTitleMessage.html#ab344fc96b09db171e41322c0f0ac22c0">ExerciseTitleMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00069">exercisetitlemessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00118">118</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    d-&gt;messageIndex = <a class="code" href="classExerciseTitleMessage.html#ab344fc96b09db171e41322c0f0ac22c0">messageIndex</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="ttc" id="aclassExerciseTitleMessage_html_ab344fc96b09db171e41322c0f0ac22c0"><div class="ttname"><a href="classExerciseTitleMessage.html#ab344fc96b09db171e41322c0f0ac22c0">ExerciseTitleMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00074">exercisetitlemessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00069">messageIndex()</a>.</p>
+<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00074">messageIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -491,14 +491,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00143">143</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    d-&gt;wktStepName = <a class="code" href="classExerciseTitleMessage.html#a9c991e1a3bc1c41f30b69c8c7e0a4b1f">wktStepName</a>;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
-<div class="ttc" id="aclassExerciseTitleMessage_html_a9c991e1a3bc1c41f30b69c8c7e0a4b1f"><div class="ttname"><a href="classExerciseTitleMessage.html#a9c991e1a3bc1c41f30b69c8c7e0a4b1f">ExerciseTitleMessage::wktStepName</a></div><div class="ttdeci">QString wktStepName() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's wktStepName field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00102">exercisetitlemessage.cpp:102</a></div></div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00148">148</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    Q_D(<a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    d-&gt;wktStepName = <a class="code" href="classExerciseTitleMessage.html#a9c991e1a3bc1c41f30b69c8c7e0a4b1f">wktStepName</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="ttc" id="aclassExerciseTitleMessage_html_a9c991e1a3bc1c41f30b69c8c7e0a4b1f"><div class="ttname"><a href="classExerciseTitleMessage.html#a9c991e1a3bc1c41f30b69c8c7e0a4b1f">ExerciseTitleMessage::wktStepName</a></div><div class="ttdeci">QString wktStepName() const</div><div class="ttdoc">Returns the ExerciseTitleMessage data message's wktStepName field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="exercisetitlemessage_8cpp_source.html#l00107">exercisetitlemessage.cpp:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00102">wktStepName()</a>.</p>
+<p class="reference">References <a class="el" href="exercisetitlemessage_8cpp_source.html#l00107">wktStepName()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -526,13 +526,13 @@ Here is the call graph for this function:</div>
 <p>Returns the <a class="el" href="classExerciseTitleMessage.html" title="The ExerciseTitleMessage class represents a FIT ExerciseTitleMessage data message.">ExerciseTitleMessage</a> data message's <code>wktStepName</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>wktStepName</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;wktStepName;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="exercisetitlemessage_8cpp_source.html#l00107">107</a> of file <a class="el" href="exercisetitlemessage_8cpp_source.html">exercisetitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classExerciseTitleMessage.html">ExerciseTitleMessage</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> d-&gt;wktStepName;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00143">setWktStepName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="exercisetitlemessage_8cpp_source.html#l00148">setWktStepName()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

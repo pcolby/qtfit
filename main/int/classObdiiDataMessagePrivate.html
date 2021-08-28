@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -176,7 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classObdiiDataMessagePrivate.html">ObdiiDataMessagePrivate</a> class provides private implementation for the <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aff524c779c6ba360a163c85813a6d7e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff524c779c6ba360a163c85813a6d7e8">&#9670;&nbsp;</a></span>ObdiiDataMessagePrivate()</h2>
@@ -209,34 +209,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage_8cpp_source.html#l00295">295</a> of file <a class="el" href="obdiidatamessage_8cpp_source.html">obdiidatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a6c4a01c5431d4be508362cda4eb106ab">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#abed4c48fc0d2c68a3a78562988c762df">timestampMs</a>(0xFFFF)</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#ac48ecce47111adefca17c2c64544e184">timeOffset</a>(0xFFFF)</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a8c5d193d51fde87f5345cdf79d83f118">pid</a>(0xFF)</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a727032bd3895f9d2b193844d9ad0f541">rawData</a>(0xFF)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#aad8bd01002b663548a37570740918801">pidDataSize</a>(0xFF)</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#aac3108be98da90faf56e0bf6a2e7630f">systemTime</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#aef176b78260bbe4e7d64951f953849c4">startTimestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a48da4d8e3d54a0e476599239e81980e3">startTimestampMs</a>(0xFFFF)</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::ObdiiData;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a48da4d8e3d54a0e476599239e81980e3"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a48da4d8e3d54a0e476599239e81980e3">ObdiiDataMessagePrivate::startTimestampMs</a></div><div class="ttdeci">quint16 startTimestampMs</div><div class="ttdoc">The ObdiiDataMessage FIT message's startTimestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00102">obdiidatamessage_p.h:102</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a6c4a01c5431d4be508362cda4eb106ab"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a6c4a01c5431d4be508362cda4eb106ab">ObdiiDataMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The ObdiiDataMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00042">obdiidatamessage_p.h:42</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a727032bd3895f9d2b193844d9ad0f541"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a727032bd3895f9d2b193844d9ad0f541">ObdiiDataMessagePrivate::rawData</a></div><div class="ttdeci">quint8 rawData</div><div class="ttdoc">The ObdiiDataMessage FIT message's rawData field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00071">obdiidatamessage_p.h:71</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a8c5d193d51fde87f5345cdf79d83f118"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a8c5d193d51fde87f5345cdf79d83f118">ObdiiDataMessagePrivate::pid</a></div><div class="ttdeci">quint8 pid</div><div class="ttdoc">The ObdiiDataMessage FIT message's pid field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00064">obdiidatamessage_p.h:64</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_aac3108be98da90faf56e0bf6a2e7630f"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#aac3108be98da90faf56e0bf6a2e7630f">ObdiiDataMessagePrivate::systemTime</a></div><div class="ttdeci">quint32 systemTime</div><div class="ttdoc">The ObdiiDataMessage FIT message's systemTime field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00087">obdiidatamessage_p.h:87</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_aad8bd01002b663548a37570740918801"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#aad8bd01002b663548a37570740918801">ObdiiDataMessagePrivate::pidDataSize</a></div><div class="ttdeci">quint8 pidDataSize</div><div class="ttdoc">The ObdiiDataMessage FIT message's pidDataSize field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00078">obdiidatamessage_p.h:78</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_abed4c48fc0d2c68a3a78562988c762df"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#abed4c48fc0d2c68a3a78562988c762df">ObdiiDataMessagePrivate::timestampMs</a></div><div class="ttdeci">quint16 timestampMs</div><div class="ttdoc">The ObdiiDataMessage FIT message's timestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00049">obdiidatamessage_p.h:49</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_ac48ecce47111adefca17c2c64544e184"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#ac48ecce47111adefca17c2c64544e184">ObdiiDataMessagePrivate::timeOffset</a></div><div class="ttdeci">quint16 timeOffset</div><div class="ttdoc">The ObdiiDataMessage FIT message's timeOffset field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00057">obdiidatamessage_p.h:57</a></div></div>
-<div class="ttc" id="aclassObdiiDataMessagePrivate_html_aef176b78260bbe4e7d64951f953849c4"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#aef176b78260bbe4e7d64951f953849c4">ObdiiDataMessagePrivate::startTimestamp</a></div><div class="ttdeci">DateTime startTimestamp</div><div class="ttdoc">The ObdiiDataMessage FIT message's startTimestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00095">obdiidatamessage_p.h:95</a></div></div>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage_8cpp_source.html#l00300">300</a> of file <a class="el" href="obdiidatamessage_8cpp_source.html">obdiidatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a6c4a01c5431d4be508362cda4eb106ab">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#abed4c48fc0d2c68a3a78562988c762df">timestampMs</a>(0xFFFF)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#ac48ecce47111adefca17c2c64544e184">timeOffset</a>(0xFFFF)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a8c5d193d51fde87f5345cdf79d83f118">pid</a>(0xFF)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a727032bd3895f9d2b193844d9ad0f541">rawData</a>(0xFF)</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#aad8bd01002b663548a37570740918801">pidDataSize</a>(0xFF)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#aac3108be98da90faf56e0bf6a2e7630f">systemTime</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#aef176b78260bbe4e7d64951f953849c4">startTimestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  , <a class="code" href="classObdiiDataMessagePrivate.html#a48da4d8e3d54a0e476599239e81980e3">startTimestampMs</a>(0xFFFF)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;{</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::ObdiiData;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a48da4d8e3d54a0e476599239e81980e3"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a48da4d8e3d54a0e476599239e81980e3">ObdiiDataMessagePrivate::startTimestampMs</a></div><div class="ttdeci">quint16 startTimestampMs</div><div class="ttdoc">The ObdiiDataMessage FIT message's startTimestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00106">obdiidatamessage_p.h:106</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a6c4a01c5431d4be508362cda4eb106ab"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a6c4a01c5431d4be508362cda4eb106ab">ObdiiDataMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The ObdiiDataMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00046">obdiidatamessage_p.h:46</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a727032bd3895f9d2b193844d9ad0f541"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a727032bd3895f9d2b193844d9ad0f541">ObdiiDataMessagePrivate::rawData</a></div><div class="ttdeci">quint8 rawData</div><div class="ttdoc">The ObdiiDataMessage FIT message's rawData field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00075">obdiidatamessage_p.h:75</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_a8c5d193d51fde87f5345cdf79d83f118"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#a8c5d193d51fde87f5345cdf79d83f118">ObdiiDataMessagePrivate::pid</a></div><div class="ttdeci">quint8 pid</div><div class="ttdoc">The ObdiiDataMessage FIT message's pid field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00068">obdiidatamessage_p.h:68</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_aac3108be98da90faf56e0bf6a2e7630f"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#aac3108be98da90faf56e0bf6a2e7630f">ObdiiDataMessagePrivate::systemTime</a></div><div class="ttdeci">quint32 systemTime</div><div class="ttdoc">The ObdiiDataMessage FIT message's systemTime field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00091">obdiidatamessage_p.h:91</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_aad8bd01002b663548a37570740918801"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#aad8bd01002b663548a37570740918801">ObdiiDataMessagePrivate::pidDataSize</a></div><div class="ttdeci">quint8 pidDataSize</div><div class="ttdoc">The ObdiiDataMessage FIT message's pidDataSize field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00082">obdiidatamessage_p.h:82</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_abed4c48fc0d2c68a3a78562988c762df"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#abed4c48fc0d2c68a3a78562988c762df">ObdiiDataMessagePrivate::timestampMs</a></div><div class="ttdeci">quint16 timestampMs</div><div class="ttdoc">The ObdiiDataMessage FIT message's timestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00053">obdiidatamessage_p.h:53</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_ac48ecce47111adefca17c2c64544e184"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#ac48ecce47111adefca17c2c64544e184">ObdiiDataMessagePrivate::timeOffset</a></div><div class="ttdeci">quint16 timeOffset</div><div class="ttdoc">The ObdiiDataMessage FIT message's timeOffset field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00061">obdiidatamessage_p.h:61</a></div></div>
+<div class="ttc" id="aclassObdiiDataMessagePrivate_html_aef176b78260bbe4e7d64951f953849c4"><div class="ttname"><a href="classObdiiDataMessagePrivate.html#aef176b78260bbe4e7d64951f953849c4">ObdiiDataMessagePrivate::startTimestamp</a></div><div class="ttdeci">DateTime startTimestamp</div><div class="ttdoc">The ObdiiDataMessage FIT message's startTimestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="obdiidatamessage__p_8h_source.html#l00099">obdiidatamessage_p.h:99</a></div></div>
 <div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00237">types.h:237</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00034">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00039">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
 
 </div>
 </div>
@@ -264,10 +264,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys the <a class="el" href="classObdiiDataMessagePrivate.html">ObdiiDataMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage_8cpp_source.html#l00315">315</a> of file <a class="el" href="obdiidatamessage_8cpp_source.html">obdiidatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;{</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage_8cpp_source.html#l00320">320</a> of file <a class="el" href="obdiidatamessage_8cpp_source.html">obdiidatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -332,58 +332,58 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractDataMessagePrivate.html#ae4d13bcc7f39d6050db131e3afe8b4d3">AbstractDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage_8cpp_source.html#l00320">320</a> of file <a class="el" href="obdiidatamessage_8cpp_source.html">obdiidatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:obdii_data.timestamp</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;obdii_data.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a6c4a01c5431d4be508362cda4eb106ab">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:obdii_data.timestampMs</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;obdii_data.timestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#abed4c48fc0d2c68a3a78562988c762df">timestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:obdii_data.timeOffset</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;obdii_data.timeOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#ac48ecce47111adefca17c2c64544e184">timeOffset</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:obdii_data.pid</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Byte, <span class="stringliteral">&quot;obdii_data.pid&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a8c5d193d51fde87f5345cdf79d83f118">pid</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:obdii_data.rawData</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Byte, <span class="stringliteral">&quot;obdii_data.rawData&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a727032bd3895f9d2b193844d9ad0f541">rawData</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:obdii_data.pidDataSize</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Uint8, <span class="stringliteral">&quot;obdii_data.pidDataSize&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#aad8bd01002b663548a37570740918801">pidDataSize</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:obdii_data.systemTime</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;obdii_data.systemTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#aac3108be98da90faf56e0bf6a2e7630f">systemTime</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:obdii_data.startTimestamp</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;obdii_data.startTimestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#aef176b78260bbe4e7d64951f953849c4">startTimestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">case</span> 7: <span class="comment">// See Profile.xlsx::Messages:obdii_data.startTimestampMs</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;obdii_data.startTimestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a48da4d8e3d54a0e476599239e81980e3">startTimestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown obdii_data message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage_8cpp_source.html#l00325">325</a> of file <a class="el" href="obdiidatamessage_8cpp_source.html">obdiidatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;{</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:obdii_data.timestamp</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;obdii_data.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a6c4a01c5431d4be508362cda4eb106ab">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:obdii_data.timestampMs</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;obdii_data.timestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#abed4c48fc0d2c68a3a78562988c762df">timestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:obdii_data.timeOffset</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;obdii_data.timeOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#ac48ecce47111adefca17c2c64544e184">timeOffset</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:obdii_data.pid</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Byte, <span class="stringliteral">&quot;obdii_data.pid&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a8c5d193d51fde87f5345cdf79d83f118">pid</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:obdii_data.rawData</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Byte, <span class="stringliteral">&quot;obdii_data.rawData&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a727032bd3895f9d2b193844d9ad0f541">rawData</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:obdii_data.pidDataSize</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Uint8, <span class="stringliteral">&quot;obdii_data.pidDataSize&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#aad8bd01002b663548a37570740918801">pidDataSize</a> = <span class="keyword">static_cast&lt;</span>quint8<span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:obdii_data.systemTime</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;obdii_data.systemTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#aac3108be98da90faf56e0bf6a2e7630f">systemTime</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:obdii_data.startTimestamp</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;obdii_data.startTimestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#aef176b78260bbe4e7d64951f953849c4">startTimestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">case</span> 7: <span class="comment">// See Profile.xlsx::Messages:obdii_data.startTimestampMs</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;obdii_data.startTimestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        this-&gt;<a class="code" href="classObdiiDataMessagePrivate.html#a48da4d8e3d54a0e476599239e81980e3">startTimestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown obdii_data message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00194">AbstractDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00199">AbstractDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classObdiiDataMessagePrivate_a5ad8282e29a549b1690d09d677e606e6_cgraph.svg" width="460" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classObdiiDataMessagePrivate_a5ad8282e29a549b1690d09d677e606e6_cgraph.svg" width="630" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -405,7 +405,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's pid field. </p>
 <p>Parameter ID </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00064">64</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00068">68</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's pidDataSize field. </p>
 <p>Optional, data size of PID[i]. If not specified refer to SAE J1979. </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00078">78</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00082">82</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +443,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's rawData field. </p>
 <p>Raw parameter data </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00071">71</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00075">75</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -462,7 +462,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's startTimestamp field. </p>
 <p>Timestamp of first sample recorded in the message. Used with time_offset to generate time of each sample </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00095">95</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00099">99</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +481,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's startTimestampMs field. </p>
 <p>Fractional part of start_timestamp </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00102">102</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00106">106</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -500,7 +500,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's systemTime field. </p>
 <p>System time associated with sample expressed in ms, can be used instead of time_offset. There will be a system_time value for each raw_data element. For multibyte pids the system_time is repeated. </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00087">87</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00091">91</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +519,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's timeOffset field. </p>
 <p>Offset of PID reading [i] from start_timestamp+start_timestamp_ms. Readings may span accross seconds. </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00057">57</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00061">61</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -538,7 +538,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's timestamp field. </p>
 <p>Timestamp message was output </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -557,7 +557,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classObdiiDataMessage.html" title="The ObdiiDataMessage class represents a FIT ObdiiDataMessage data message.">ObdiiDataMessage</a> FIT message's timestampMs field. </p>
 <p>Fractional part of timestamp, added to timestamp </p>
 
-<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="obdiidatamessage__p_8h_source.html#l00053">53</a> of file <a class="el" href="obdiidatamessage__p_8h_source.html">obdiidatamessage_p.h</a>.</p>
 
 </div>
 </div>

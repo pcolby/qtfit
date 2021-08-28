@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Declares the SessionMessage class.">
 <polygon fill="#bfbfbf" stroke="black" points="15.5,-224.5 15.5,-243.5 122.5,-243.5 122.5,-224.5 15.5,-224.5"/>
 <text text-anchor="middle" x="69" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">sessionmessage.h</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="abstractdatamessage_8h.html" target="_top" xlink:title="Declares the AbstractDataMessage class.">
 <polygon fill="none" stroke="black" points="3.5,-168.5 3.5,-187.5 134.5,-187.5 134.5,-168.5 3.5,-168.5"/>
 <text text-anchor="middle" x="69" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title="Global QtFit library macros.">
 <polygon fill="none" stroke="black" points="0,-56.5 0,-75.5 84,-75.5 84,-56.5 0,-56.5"/>
 <text text-anchor="middle" x="42" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Declares the SegmentIdMessage class.">
 <polygon fill="#bfbfbf" stroke="black" points="70,-56.5 70,-75.5 192,-75.5 192,-56.5 70,-56.5"/>
 <text text-anchor="middle" x="131" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentidmessage.h</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="segmentidmessage_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="segmentidmessage_8cpp.html" target="_top" xlink:title="Defines the SegmentIdMessage, and SegmentIdMessagePrivate classes.">
 <polygon fill="none" stroke="black" points="136.5,-0.5 136.5,-19.5 269.5,-19.5 269.5,-0.5 136.5,-0.5"/>
 <text text-anchor="middle" x="203" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentidmessage.cpp</text>
 </a>

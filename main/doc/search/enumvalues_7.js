@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['handcycling_3848',['HandCycling',['../types_8h.html#aed10717f0596999a72fa9b81a529b08bad178d3bc17bb5033f98c41b724cd0369',1,'HandCycling():&#160;types.h'],['../types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77ad178d3bc17bb5033f98c41b724cd0369',1,'HandCycling():&#160;types.h']]],
-  ['heartrate_3849',['HeartRate',['../types_8h.html#ac76b47805040089da0368a7273a87655a8e7cbd7e748020187a486ace0a1f13c9',1,'types.h']]],
-  ['hour24_3850',['Hour24',['../types_8h.html#a2a4e52b0210a441665a23dc88317d9e5ac26b4fa01eed52047e45bc5530d11cbd',1,'types.h']]],
-  ['hrhighalert_3851',['HrHighAlert',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a368dc698c5f9e5d0cea6247d939f48d9',1,'types.h']]],
-  ['hrlowalert_3852',['HrLowAlert',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a0216bd3a9ebc1c5cbc14530c7cddbff8',1,'types.h']]],
-  ['hrm4runsinglebyteproductid_3853',['Hrm4RunSingleByteProductId',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a7f20854e463bf660aae48a51d5e5fe52',1,'types.h']]],
-  ['hrmdual_3854',['HrmDual',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a209bb702ad5cd22e47019a85fa1348c9',1,'types.h']]],
-  ['hrmpro_3855',['HrmPro',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a74ab9d2632948ff9c0f3e49a82aaf901',1,'types.h']]],
-  ['hrmrunsinglebyteproductid_3856',['HrmRunSingleByteProductId',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a6a4e9fb288474a21c465335aa3815cee',1,'types.h']]],
-  ['hrmtri_3857',['HrmTri',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a51a001e498f76ee39b07eeaf9966ba95',1,'types.h']]],
-  ['hrmtrisinglebyteproductid_3858',['HrmTriSingleByteProductId',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a5c0f872ab60aca65b15f20dc42fa18ea',1,'types.h']]],
-  ['hungariangrid_3859',['HungarianGrid',['../types_8h.html#ac48f2fc76319f7b3d77afeeaf6f592e4a25cf667905ab81d732d005a65421cc96',1,'types.h']]]
+  ['handcycling_3857',['HandCycling',['../types_8h.html#aed10717f0596999a72fa9b81a529b08bad178d3bc17bb5033f98c41b724cd0369',1,'HandCycling():&#160;types.h'],['../types_8h.html#ace1a438eed58c4c63a0cd7213ff9ef77ad178d3bc17bb5033f98c41b724cd0369',1,'HandCycling():&#160;types.h']]],
+  ['heartrate_3858',['HeartRate',['../types_8h.html#ac76b47805040089da0368a7273a87655a8e7cbd7e748020187a486ace0a1f13c9',1,'types.h']]],
+  ['hour24_3859',['Hour24',['../types_8h.html#a2a4e52b0210a441665a23dc88317d9e5ac26b4fa01eed52047e45bc5530d11cbd',1,'types.h']]],
+  ['hrhighalert_3860',['HrHighAlert',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a368dc698c5f9e5d0cea6247d939f48d9',1,'types.h']]],
+  ['hrlowalert_3861',['HrLowAlert',['../types_8h.html#a5667b805d857c6d28f83f6038a0272d3a0216bd3a9ebc1c5cbc14530c7cddbff8',1,'types.h']]],
+  ['hrm4runsinglebyteproductid_3862',['Hrm4RunSingleByteProductId',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a7f20854e463bf660aae48a51d5e5fe52',1,'types.h']]],
+  ['hrmdual_3863',['HrmDual',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a209bb702ad5cd22e47019a85fa1348c9',1,'types.h']]],
+  ['hrmpro_3864',['HrmPro',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a74ab9d2632948ff9c0f3e49a82aaf901',1,'types.h']]],
+  ['hrmrunsinglebyteproductid_3865',['HrmRunSingleByteProductId',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a6a4e9fb288474a21c465335aa3815cee',1,'types.h']]],
+  ['hrmtri_3866',['HrmTri',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a51a001e498f76ee39b07eeaf9966ba95',1,'types.h']]],
+  ['hrmtrisinglebyteproductid_3867',['HrmTriSingleByteProductId',['../types_8h.html#a00eecc1db747a403407ee496ccd56103a5c0f872ab60aca65b15f20dc42fa18ea',1,'types.h']]],
+  ['hungariangrid_3868',['HungarianGrid',['../types_8h.html#ac48f2fc76319f7b3d77afeeaf6f592e4a25cf667905ab81d732d005a65421cc96',1,'types.h']]]
 ];

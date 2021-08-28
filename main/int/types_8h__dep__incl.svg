@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="abstractdatamessage_8h.html" target="_top" xlink:title="Declares the AbstractDataMessage class.">
 <polygon fill="none" stroke="black" points="6616.5,-112.5 6616.5,-131.5 6747.5,-131.5 6747.5,-112.5 6616.5,-112.5"/>
 <text text-anchor="middle" x="6682" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node181 -->
 <g id="node94" class="node">
 <title>Node181</title>
-<g id="a_node94"><a xlink:href="abstractdatamessage__p_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node94"><a xlink:href="abstractdatamessage__p_8h.html" target="_top" xlink:title="Declares the AbstractDataMessagePrivate class.">
 <polygon fill="none" stroke="red" points="12989.5,-56.5 12989.5,-75.5 13132.5,-75.5 13132.5,-56.5 12989.5,-56.5"/>
 <text text-anchor="middle" x="13061" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage_p.h</text>
 </a>
@@ -65,7 +65,7 @@
 <!-- Node270 -->
 <g id="node100" class="node">
 <title>Node270</title>
-<g id="a_node100"><a xlink:href="types__p_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node100"><a xlink:href="types__p_8h.html" target="_top" xlink:title="Internal types used by QtFit classes.">
 <polygon fill="none" stroke="red" points="13029,-112.5 13029,-131.5 13093,-131.5 13093,-112.5 13029,-112.5"/>
 <text text-anchor="middle" x="13061" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">types_p.h</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="abstractdatamessage_8cpp_source.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="abstractdatamessage_8cpp.html" target="_top" xlink:title="Defines the AbstractDataMessage, and AbstractDataMessagePrivate classes.">
 <polygon fill="none" stroke="black" points="12840.5,-0.5 12840.5,-19.5 12983.5,-19.5 12983.5,-0.5 12840.5,-0.5"/>
 <text text-anchor="middle" x="12912" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.cpp</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="accelerometerdatamessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="accelerometerdatamessage_8h.html" target="_top" xlink:title="Declares the AccelerometerDataMessage class.">
 <polygon fill="none" stroke="red" points="10869,-56.5 10869,-75.5 11031,-75.5 11031,-56.5 10869,-56.5"/>
 <text text-anchor="middle" x="10950" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">accelerometerdatamessage.h</text>
 </a>
@@ -125,7 +125,7 @@
 <!-- Node7 -->
 <g id="node6" class="node">
 <title>Node7</title>
-<g id="a_node6"><a xlink:href="activitymessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="activitymessage_8h.html" target="_top" xlink:title="Declares the ActivityMessage class.">
 <polygon fill="none" stroke="red" points="11049.5,-56.5 11049.5,-75.5 11156.5,-75.5 11156.5,-56.5 11049.5,-56.5"/>
 <text text-anchor="middle" x="11103" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">activitymessage.h</text>
 </a>
@@ -140,7 +140,7 @@
 <!-- Node9 -->
 <g id="node7" class="node">
 <title>Node9</title>
-<g id="a_node7"><a xlink:href="antchannelidmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="antchannelidmessage_8h.html" target="_top" xlink:title="Declares the AntChannelIdMessage class.">
 <polygon fill="none" stroke="red" points="11174.5,-56.5 11174.5,-75.5 11307.5,-75.5 11307.5,-56.5 11174.5,-56.5"/>
 <text text-anchor="middle" x="11241" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">antchannelidmessage.h</text>
 </a>
@@ -155,7 +155,7 @@
 <!-- Node11 -->
 <g id="node8" class="node">
 <title>Node11</title>
-<g id="a_node8"><a xlink:href="antrxmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="antrxmessage_8h.html" target="_top" xlink:title="Declares the AntRxMessage class.">
 <polygon fill="none" stroke="red" points="11325.5,-56.5 11325.5,-75.5 11420.5,-75.5 11420.5,-56.5 11325.5,-56.5"/>
 <text text-anchor="middle" x="11373" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">antrxmessage.h</text>
 </a>
@@ -170,7 +170,7 @@
 <!-- Node13 -->
 <g id="node9" class="node">
 <title>Node13</title>
-<g id="a_node9"><a xlink:href="anttxmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="anttxmessage_8h.html" target="_top" xlink:title="Declares the AntTxMessage class.">
 <polygon fill="none" stroke="red" points="11438.5,-56.5 11438.5,-75.5 11533.5,-75.5 11533.5,-56.5 11438.5,-56.5"/>
 <text text-anchor="middle" x="11486" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">anttxmessage.h</text>
 </a>
@@ -185,7 +185,7 @@
 <!-- Node15 -->
 <g id="node10" class="node">
 <title>Node15</title>
-<g id="a_node10"><a xlink:href="aviationattitudemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="aviationattitudemessage_8h.html" target="_top" xlink:title="Declares the AviationAttitudeMessage class.">
 <polygon fill="none" stroke="red" points="11552,-56.5 11552,-75.5 11700,-75.5 11700,-56.5 11552,-56.5"/>
 <text text-anchor="middle" x="11626" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">aviationattitudemessage.h</text>
 </a>
@@ -200,7 +200,7 @@
 <!-- Node17 -->
 <g id="node11" class="node">
 <title>Node17</title>
-<g id="a_node11"><a xlink:href="barometerdatamessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="barometerdatamessage_8h.html" target="_top" xlink:title="Declares the BarometerDataMessage class.">
 <polygon fill="none" stroke="red" points="11718.5,-56.5 11718.5,-75.5 11861.5,-75.5 11861.5,-56.5 11718.5,-56.5"/>
 <text text-anchor="middle" x="11790" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">barometerdatamessage.h</text>
 </a>
@@ -215,7 +215,7 @@
 <!-- Node19 -->
 <g id="node12" class="node">
 <title>Node19</title>
-<g id="a_node12"><a xlink:href="bikeprofilemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="bikeprofilemessage_8h.html" target="_top" xlink:title="Declares the BikeProfileMessage class.">
 <polygon fill="none" stroke="red" points="11879.5,-56.5 11879.5,-75.5 12000.5,-75.5 12000.5,-56.5 11879.5,-56.5"/>
 <text text-anchor="middle" x="11940" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">bikeprofilemessage.h</text>
 </a>
@@ -230,7 +230,7 @@
 <!-- Node21 -->
 <g id="node13" class="node">
 <title>Node21</title>
-<g id="a_node13"><a xlink:href="bloodpressuremessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="bloodpressuremessage_8h.html" target="_top" xlink:title="Declares the BloodPressureMessage class.">
 <polygon fill="none" stroke="red" points="12018.5,-56.5 12018.5,-75.5 12157.5,-75.5 12157.5,-56.5 12018.5,-56.5"/>
 <text text-anchor="middle" x="12088" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">bloodpressuremessage.h</text>
 </a>
@@ -245,7 +245,7 @@
 <!-- Node23 -->
 <g id="node14" class="node">
 <title>Node23</title>
-<g id="a_node14"><a xlink:href="cadencezonemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="cadencezonemessage_8h.html" target="_top" xlink:title="Declares the CadenceZoneMessage class.">
 <polygon fill="none" stroke="red" points="12176,-56.5 12176,-75.5 12310,-75.5 12310,-56.5 12176,-56.5"/>
 <text text-anchor="middle" x="12243" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">cadencezonemessage.h</text>
 </a>
@@ -260,7 +260,7 @@
 <!-- Node25 -->
 <g id="node15" class="node">
 <title>Node25</title>
-<g id="a_node15"><a xlink:href="cameraeventmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="cameraeventmessage_8h.html" target="_top" xlink:title="Declares the CameraEventMessage class.">
 <polygon fill="none" stroke="red" points="12328,-56.5 12328,-75.5 12462,-75.5 12462,-56.5 12328,-56.5"/>
 <text text-anchor="middle" x="12395" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">cameraeventmessage.h</text>
 </a>
@@ -275,7 +275,7 @@
 <!-- Node27 -->
 <g id="node16" class="node">
 <title>Node27</title>
-<g id="a_node16"><a xlink:href="capabilitiesmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="capabilitiesmessage_8h.html" target="_top" xlink:title="Declares the CapabilitiesMessage class.">
 <polygon fill="none" stroke="red" points="12480,-56.5 12480,-75.5 12606,-75.5 12606,-56.5 12480,-56.5"/>
 <text text-anchor="middle" x="12543" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">capabilitiesmessage.h</text>
 </a>
@@ -290,7 +290,7 @@
 <!-- Node29 -->
 <g id="node17" class="node">
 <title>Node29</title>
-<g id="a_node17"><a xlink:href="climbpromessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="climbpromessage_8h.html" target="_top" xlink:title="Declares the ClimbProMessage class.">
 <polygon fill="none" stroke="red" points="12624.5,-56.5 12624.5,-75.5 12737.5,-75.5 12737.5,-56.5 12624.5,-56.5"/>
 <text text-anchor="middle" x="12681" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">climbpromessage.h</text>
 </a>
@@ -305,7 +305,7 @@
 <!-- Node31 -->
 <g id="node18" class="node">
 <title>Node31</title>
-<g id="a_node18"><a xlink:href="connectivitymessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="connectivitymessage_8h.html" target="_top" xlink:title="Declares the ConnectivityMessage class.">
 <polygon fill="none" stroke="red" points="0,-56.5 0,-75.5 130,-75.5 130,-56.5 0,-56.5"/>
 <text text-anchor="middle" x="65" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">connectivitymessage.h</text>
 </a>
@@ -320,7 +320,7 @@
 <!-- Node33 -->
 <g id="node19" class="node">
 <title>Node33</title>
-<g id="a_node19"><a xlink:href="coursemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="coursemessage_8h.html" target="_top" xlink:title="Declares the CourseMessage class.">
 <polygon fill="none" stroke="red" points="148,-56.5 148,-75.5 250,-75.5 250,-56.5 148,-56.5"/>
 <text text-anchor="middle" x="199" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">coursemessage.h</text>
 </a>
@@ -335,7 +335,7 @@
 <!-- Node35 -->
 <g id="node20" class="node">
 <title>Node35</title>
-<g id="a_node20"><a xlink:href="coursepointmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="coursepointmessage_8h.html" target="_top" xlink:title="Declares the CoursePointMessage class.">
 <polygon fill="none" stroke="red" points="268.5,-56.5 268.5,-75.5 395.5,-75.5 395.5,-56.5 268.5,-56.5"/>
 <text text-anchor="middle" x="332" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">coursepointmessage.h</text>
 </a>
@@ -350,7 +350,7 @@
 <!-- Node37 -->
 <g id="node21" class="node">
 <title>Node37</title>
-<g id="a_node21"><a xlink:href="developerdataidmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="developerdataidmessage_8h.html" target="_top" xlink:title="Declares the DeveloperDataIdMessage class.">
 <polygon fill="none" stroke="red" points="413.5,-56.5 413.5,-75.5 562.5,-75.5 562.5,-56.5 413.5,-56.5"/>
 <text text-anchor="middle" x="488" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">developerdataidmessage.h</text>
 </a>
@@ -365,7 +365,7 @@
 <!-- Node39 -->
 <g id="node22" class="node">
 <title>Node39</title>
-<g id="a_node22"><a xlink:href="deviceinfomessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="deviceinfomessage_8h.html" target="_top" xlink:title="Declares the DeviceInfoMessage class.">
 <polygon fill="none" stroke="red" points="580.5,-56.5 580.5,-75.5 701.5,-75.5 701.5,-56.5 580.5,-56.5"/>
 <text text-anchor="middle" x="641" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">deviceinfomessage.h</text>
 </a>
@@ -380,7 +380,7 @@
 <!-- Node41 -->
 <g id="node23" class="node">
 <title>Node41</title>
-<g id="a_node23"><a xlink:href="devicesettingsmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="devicesettingsmessage_8h.html" target="_top" xlink:title="Declares the DeviceSettingsMessage class.">
 <polygon fill="none" stroke="red" points="719.5,-56.5 719.5,-75.5 860.5,-75.5 860.5,-56.5 719.5,-56.5"/>
 <text text-anchor="middle" x="790" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">devicesettingsmessage.h</text>
 </a>
@@ -395,7 +395,7 @@
 <!-- Node43 -->
 <g id="node24" class="node">
 <title>Node43</title>
-<g id="a_node24"><a xlink:href="divealarmmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node24"><a xlink:href="divealarmmessage_8h.html" target="_top" xlink:title="Declares the DiveAlarmMessage class.">
 <polygon fill="none" stroke="red" points="878.5,-56.5 878.5,-75.5 997.5,-75.5 997.5,-56.5 878.5,-56.5"/>
 <text text-anchor="middle" x="938" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">divealarmmessage.h</text>
 </a>
@@ -410,7 +410,7 @@
 <!-- Node45 -->
 <g id="node25" class="node">
 <title>Node45</title>
-<g id="a_node25"><a xlink:href="divegasmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="divegasmessage_8h.html" target="_top" xlink:title="Declares the DiveGasMessage class.">
 <polygon fill="none" stroke="red" points="1016,-56.5 1016,-75.5 1124,-75.5 1124,-56.5 1016,-56.5"/>
 <text text-anchor="middle" x="1070" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">divegasmessage.h</text>
 </a>
@@ -425,7 +425,7 @@
 <!-- Node47 -->
 <g id="node26" class="node">
 <title>Node47</title>
-<g id="a_node26"><a xlink:href="divesettingsmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node26"><a xlink:href="divesettingsmessage_8h.html" target="_top" xlink:title="Declares the DiveSettingsMessage class.">
 <polygon fill="none" stroke="red" points="1142,-56.5 1142,-75.5 1272,-75.5 1272,-56.5 1142,-56.5"/>
 <text text-anchor="middle" x="1207" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">divesettingsmessage.h</text>
 </a>
@@ -440,7 +440,7 @@
 <!-- Node49 -->
 <g id="node27" class="node">
 <title>Node49</title>
-<g id="a_node27"><a xlink:href="divesummarymessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node27"><a xlink:href="divesummarymessage_8h.html" target="_top" xlink:title="Declares the DiveSummaryMessage class.">
 <polygon fill="none" stroke="red" points="1290.5,-56.5 1290.5,-75.5 1427.5,-75.5 1427.5,-56.5 1290.5,-56.5"/>
 <text text-anchor="middle" x="1359" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">divesummarymessage.h</text>
 </a>
@@ -455,7 +455,7 @@
 <!-- Node51 -->
 <g id="node28" class="node">
 <title>Node51</title>
-<g id="a_node28"><a xlink:href="eventmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node28"><a xlink:href="eventmessage_8h.html" target="_top" xlink:title="Declares the EventMessage class.">
 <polygon fill="none" stroke="red" points="1446,-56.5 1446,-75.5 1544,-75.5 1544,-56.5 1446,-56.5"/>
 <text text-anchor="middle" x="1495" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">eventmessage.h</text>
 </a>
@@ -470,7 +470,7 @@
 <!-- Node53 -->
 <g id="node29" class="node">
 <title>Node53</title>
-<g id="a_node29"><a xlink:href="exddataconceptconfigurationmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node29"><a xlink:href="exddataconceptconfigurationmessage_8h.html" target="_top" xlink:title="Declares the ExdDataConceptConfigurationMessage class.">
 <polygon fill="none" stroke="red" points="1562,-56.5 1562,-75.5 1774,-75.5 1774,-56.5 1562,-56.5"/>
 <text text-anchor="middle" x="1668" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">exddataconceptconfigurationmessage.h</text>
 </a>
@@ -485,7 +485,7 @@
 <!-- Node55 -->
 <g id="node30" class="node">
 <title>Node55</title>
-<g id="a_node30"><a xlink:href="exddatafieldconfigurationmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node30"><a xlink:href="exddatafieldconfigurationmessage_8h.html" target="_top" xlink:title="Declares the ExdDataFieldConfigurationMessage class.">
 <polygon fill="none" stroke="red" points="1792,-56.5 1792,-75.5 1986,-75.5 1986,-56.5 1792,-56.5"/>
 <text text-anchor="middle" x="1889" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">exddatafieldconfigurationmessage.h</text>
 </a>
@@ -500,7 +500,7 @@
 <!-- Node57 -->
 <g id="node31" class="node">
 <title>Node57</title>
-<g id="a_node31"><a xlink:href="exdscreenconfigurationmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node31"><a xlink:href="exdscreenconfigurationmessage_8h.html" target="_top" xlink:title="Declares the ExdScreenConfigurationMessage class.">
 <polygon fill="none" stroke="red" points="2004,-56.5 2004,-75.5 2188,-75.5 2188,-56.5 2004,-56.5"/>
 <text text-anchor="middle" x="2096" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">exdscreenconfigurationmessage.h</text>
 </a>
@@ -515,7 +515,7 @@
 <!-- Node59 -->
 <g id="node32" class="node">
 <title>Node59</title>
-<g id="a_node32"><a xlink:href="exercisetitlemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node32"><a xlink:href="exercisetitlemessage_8h.html" target="_top" xlink:title="Declares the ExerciseTitleMessage class.">
 <polygon fill="none" stroke="red" points="2206,-56.5 2206,-75.5 2336,-75.5 2336,-56.5 2206,-56.5"/>
 <text text-anchor="middle" x="2271" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">exercisetitlemessage.h</text>
 </a>
@@ -530,7 +530,7 @@
 <!-- Node61 -->
 <g id="node33" class="node">
 <title>Node61</title>
-<g id="a_node33"><a xlink:href="fieldcapabilitiesmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node33"><a xlink:href="fieldcapabilitiesmessage_8h.html" target="_top" xlink:title="Declares the FieldCapabilitiesMessage class.">
 <polygon fill="none" stroke="red" points="2354.5,-56.5 2354.5,-75.5 2501.5,-75.5 2501.5,-56.5 2354.5,-56.5"/>
 <text text-anchor="middle" x="2428" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">fieldcapabilitiesmessage.h</text>
 </a>
@@ -545,7 +545,7 @@
 <!-- Node63 -->
 <g id="node34" class="node">
 <title>Node63</title>
-<g id="a_node34"><a xlink:href="fielddescriptionmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node34"><a xlink:href="fielddescriptionmessage_8h.html" target="_top" xlink:title="Declares the FieldDescriptionMessage class.">
 <polygon fill="none" stroke="red" points="2519.5,-56.5 2519.5,-75.5 2664.5,-75.5 2664.5,-56.5 2519.5,-56.5"/>
 <text text-anchor="middle" x="2592" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">fielddescriptionmessage.h</text>
 </a>
@@ -560,7 +560,7 @@
 <!-- Node65 -->
 <g id="node35" class="node">
 <title>Node65</title>
-<g id="a_node35"><a xlink:href="filecapabilitiesmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node35"><a xlink:href="filecapabilitiesmessage_8h.html" target="_top" xlink:title="Declares the FileCapabilitiesMessage class.">
 <polygon fill="none" stroke="red" points="2682.5,-56.5 2682.5,-75.5 2823.5,-75.5 2823.5,-56.5 2682.5,-56.5"/>
 <text text-anchor="middle" x="2753" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">filecapabilitiesmessage.h</text>
 </a>
@@ -575,7 +575,7 @@
 <!-- Node67 -->
 <g id="node36" class="node">
 <title>Node67</title>
-<g id="a_node36"><a xlink:href="filecreatormessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node36"><a xlink:href="filecreatormessage_8h.html" target="_top" xlink:title="Declares the FileCreatorMessage class.">
 <polygon fill="none" stroke="red" points="2841.5,-56.5 2841.5,-75.5 2960.5,-75.5 2960.5,-56.5 2841.5,-56.5"/>
 <text text-anchor="middle" x="2901" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">filecreatormessage.h</text>
 </a>
@@ -590,7 +590,7 @@
 <!-- Node69 -->
 <g id="node37" class="node">
 <title>Node69</title>
-<g id="a_node37"><a xlink:href="fileidmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node37"><a xlink:href="fileidmessage_8h.html" target="_top" xlink:title="Declares the FileIdMessage class.">
 <polygon fill="none" stroke="red" points="2979,-56.5 2979,-75.5 3073,-75.5 3073,-56.5 2979,-56.5"/>
 <text text-anchor="middle" x="3026" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">fileidmessage.h</text>
 </a>
@@ -605,7 +605,7 @@
 <!-- Node71 -->
 <g id="node38" class="node">
 <title>Node71</title>
-<g id="a_node38"><a xlink:href="fitstreamreader_8cpp_source.html" target="_top" xlink:title=" ">
+<g id="a_node38"><a xlink:href="fitstreamreader_8cpp.html" target="_top" xlink:title="Defines the FitStreamReader, and FitStreamReaderPrivate classes.">
 <polygon fill="none" stroke="black" points="12710,-0.5 12710,-19.5 12822,-19.5 12822,-0.5 12710,-0.5"/>
 <text text-anchor="middle" x="12766" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitstreamreader.cpp</text>
 </a>
@@ -620,7 +620,7 @@
 <!-- Node72 -->
 <g id="node39" class="node">
 <title>Node72</title>
-<g id="a_node39"><a xlink:href="fitstreamreader_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node39"><a xlink:href="fitstreamreader_8h.html" target="_top" xlink:title="Declares the FitStreamReader class.">
 <polygon fill="none" stroke="black" points="12794.5,-56.5 12794.5,-75.5 12895.5,-75.5 12895.5,-56.5 12794.5,-56.5"/>
 <text text-anchor="middle" x="12845" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">fitstreamreader.h</text>
 </a>
@@ -635,7 +635,7 @@
 <!-- Node73 -->
 <g id="node40" class="node">
 <title>Node73</title>
-<g id="a_node40"><a xlink:href="goalmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node40"><a xlink:href="goalmessage_8h.html" target="_top" xlink:title="Declares the GoalMessage class.">
 <polygon fill="none" stroke="red" points="3091.5,-56.5 3091.5,-75.5 3182.5,-75.5 3182.5,-56.5 3091.5,-56.5"/>
 <text text-anchor="middle" x="3137" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">goalmessage.h</text>
 </a>
@@ -650,7 +650,7 @@
 <!-- Node75 -->
 <g id="node41" class="node">
 <title>Node75</title>
-<g id="a_node41"><a xlink:href="gpsmetadatamessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node41"><a xlink:href="gpsmetadatamessage_8h.html" target="_top" xlink:title="Declares the GpsMetadataMessage class.">
 <polygon fill="none" stroke="red" points="3201,-56.5 3201,-75.5 3335,-75.5 3335,-56.5 3201,-56.5"/>
 <text text-anchor="middle" x="3268" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">gpsmetadatamessage.h</text>
 </a>
@@ -665,7 +665,7 @@
 <!-- Node77 -->
 <g id="node42" class="node">
 <title>Node77</title>
-<g id="a_node42"><a xlink:href="gyroscopedatamessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node42"><a xlink:href="gyroscopedatamessage_8h.html" target="_top" xlink:title="Declares the GyroscopeDataMessage class.">
 <polygon fill="none" stroke="red" points="3353,-56.5 3353,-75.5 3495,-75.5 3495,-56.5 3353,-56.5"/>
 <text text-anchor="middle" x="3424" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">gyroscopedatamessage.h</text>
 </a>
@@ -680,7 +680,7 @@
 <!-- Node79 -->
 <g id="node43" class="node">
 <title>Node79</title>
-<g id="a_node43"><a xlink:href="hrmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node43"><a xlink:href="hrmessage_8h.html" target="_top" xlink:title="Declares the HrMessage class.">
 <polygon fill="none" stroke="red" points="3513,-56.5 3513,-75.5 3593,-75.5 3593,-56.5 3513,-56.5"/>
 <text text-anchor="middle" x="3553" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">hrmessage.h</text>
 </a>
@@ -695,7 +695,7 @@
 <!-- Node81 -->
 <g id="node44" class="node">
 <title>Node81</title>
-<g id="a_node44"><a xlink:href="hrmprofilemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node44"><a xlink:href="hrmprofilemessage_8h.html" target="_top" xlink:title="Declares the HrmProfileMessage class.">
 <polygon fill="none" stroke="red" points="3611,-56.5 3611,-75.5 3731,-75.5 3731,-56.5 3611,-56.5"/>
 <text text-anchor="middle" x="3671" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">hrmprofilemessage.h</text>
 </a>
@@ -710,7 +710,7 @@
 <!-- Node83 -->
 <g id="node45" class="node">
 <title>Node83</title>
-<g id="a_node45"><a xlink:href="hrvmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node45"><a xlink:href="hrvmessage_8h.html" target="_top" xlink:title="Declares the HrvMessage class.">
 <polygon fill="none" stroke="red" points="3749,-56.5 3749,-75.5 3835,-75.5 3835,-56.5 3749,-56.5"/>
 <text text-anchor="middle" x="3792" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">hrvmessage.h</text>
 </a>
@@ -725,7 +725,7 @@
 <!-- Node85 -->
 <g id="node46" class="node">
 <title>Node85</title>
-<g id="a_node46"><a xlink:href="hrzonemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node46"><a xlink:href="hrzonemessage_8h.html" target="_top" xlink:title="Declares the HrZoneMessage class.">
 <polygon fill="none" stroke="red" points="3853.5,-56.5 3853.5,-75.5 3956.5,-75.5 3956.5,-56.5 3853.5,-56.5"/>
 <text text-anchor="middle" x="3905" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">hrzonemessage.h</text>
 </a>
@@ -740,7 +740,7 @@
 <!-- Node87 -->
 <g id="node47" class="node">
 <title>Node87</title>
-<g id="a_node47"><a xlink:href="jumpmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node47"><a xlink:href="jumpmessage_8h.html" target="_top" xlink:title="Declares the JumpMessage class.">
 <polygon fill="none" stroke="red" points="3974.5,-56.5 3974.5,-75.5 4069.5,-75.5 4069.5,-56.5 3974.5,-56.5"/>
 <text text-anchor="middle" x="4022" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">jumpmessage.h</text>
 </a>
@@ -755,7 +755,7 @@
 <!-- Node89 -->
 <g id="node48" class="node">
 <title>Node89</title>
-<g id="a_node48"><a xlink:href="lapmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node48"><a xlink:href="lapmessage_8h.html" target="_top" xlink:title="Declares the LapMessage class.">
 <polygon fill="none" stroke="red" points="4087.5,-56.5 4087.5,-75.5 4172.5,-75.5 4172.5,-56.5 4087.5,-56.5"/>
 <text text-anchor="middle" x="4130" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">lapmessage.h</text>
 </a>
@@ -770,7 +770,7 @@
 <!-- Node91 -->
 <g id="node49" class="node">
 <title>Node91</title>
-<g id="a_node49"><a xlink:href="lengthmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node49"><a xlink:href="lengthmessage_8h.html" target="_top" xlink:title="Declares the LengthMessage class.">
 <polygon fill="none" stroke="red" points="4190.5,-56.5 4190.5,-75.5 4291.5,-75.5 4291.5,-56.5 4190.5,-56.5"/>
 <text text-anchor="middle" x="4241" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">lengthmessage.h</text>
 </a>
@@ -785,7 +785,7 @@
 <!-- Node93 -->
 <g id="node50" class="node">
 <title>Node93</title>
-<g id="a_node50"><a xlink:href="magnetometerdatamessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node50"><a xlink:href="magnetometerdatamessage_8h.html" target="_top" xlink:title="Declares the MagnetometerDataMessage class.">
 <polygon fill="none" stroke="red" points="4310,-56.5 4310,-75.5 4474,-75.5 4474,-56.5 4310,-56.5"/>
 <text text-anchor="middle" x="4392" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">magnetometerdatamessage.h</text>
 </a>
@@ -800,7 +800,7 @@
 <!-- Node95 -->
 <g id="node51" class="node">
 <title>Node95</title>
-<g id="a_node51"><a xlink:href="memoglobmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node51"><a xlink:href="memoglobmessage_8h.html" target="_top" xlink:title="Declares the MemoGlobMessage class.">
 <polygon fill="none" stroke="red" points="4492,-56.5 4492,-75.5 4614,-75.5 4614,-56.5 4492,-56.5"/>
 <text text-anchor="middle" x="4553" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">memoglobmessage.h</text>
 </a>
@@ -815,7 +815,7 @@
 <!-- Node97 -->
 <g id="node52" class="node">
 <title>Node97</title>
-<g id="a_node52"><a xlink:href="mesgcapabilitiesmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node52"><a xlink:href="mesgcapabilitiesmessage_8h.html" target="_top" xlink:title="Declares the MesgCapabilitiesMessage class.">
 <polygon fill="none" stroke="red" points="4632.5,-56.5 4632.5,-75.5 4785.5,-75.5 4785.5,-56.5 4632.5,-56.5"/>
 <text text-anchor="middle" x="4709" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">mesgcapabilitiesmessage.h</text>
 </a>
@@ -830,7 +830,7 @@
 <!-- Node99 -->
 <g id="node53" class="node">
 <title>Node99</title>
-<g id="a_node53"><a xlink:href="metzonemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node53"><a xlink:href="metzonemessage_8h.html" target="_top" xlink:title="Declares the MetZoneMessage class.">
 <polygon fill="none" stroke="red" points="4803.5,-56.5 4803.5,-75.5 4916.5,-75.5 4916.5,-56.5 4803.5,-56.5"/>
 <text text-anchor="middle" x="4860" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">metzonemessage.h</text>
 </a>
@@ -845,7 +845,7 @@
 <!-- Node101 -->
 <g id="node54" class="node">
 <title>Node101</title>
-<g id="a_node54"><a xlink:href="monitoringinfomessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node54"><a xlink:href="monitoringinfomessage_8h.html" target="_top" xlink:title="Declares the MonitoringInfoMessage class.">
 <polygon fill="none" stroke="red" points="4935,-56.5 4935,-75.5 5077,-75.5 5077,-56.5 4935,-56.5"/>
 <text text-anchor="middle" x="5006" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">monitoringinfomessage.h</text>
 </a>
@@ -860,7 +860,7 @@
 <!-- Node103 -->
 <g id="node55" class="node">
 <title>Node103</title>
-<g id="a_node55"><a xlink:href="monitoringmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node55"><a xlink:href="monitoringmessage_8h.html" target="_top" xlink:title="Declares the MonitoringMessage class.">
 <polygon fill="none" stroke="red" points="5095.5,-56.5 5095.5,-75.5 5218.5,-75.5 5218.5,-56.5 5095.5,-56.5"/>
 <text text-anchor="middle" x="5157" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">monitoringmessage.h</text>
 </a>
@@ -875,7 +875,7 @@
 <!-- Node105 -->
 <g id="node56" class="node">
 <title>Node105</title>
-<g id="a_node56"><a xlink:href="nmeasentencemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node56"><a xlink:href="nmeasentencemessage_8h.html" target="_top" xlink:title="Declares the NmeaSentenceMessage class.">
 <polygon fill="none" stroke="red" points="5237,-56.5 5237,-75.5 5379,-75.5 5379,-56.5 5237,-56.5"/>
 <text text-anchor="middle" x="5308" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">nmeasentencemessage.h</text>
 </a>
@@ -890,7 +890,7 @@
 <!-- Node107 -->
 <g id="node57" class="node">
 <title>Node107</title>
-<g id="a_node57"><a xlink:href="obdiidatamessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node57"><a xlink:href="obdiidatamessage_8h.html" target="_top" xlink:title="Declares the ObdiiDataMessage class.">
 <polygon fill="none" stroke="red" points="5397,-56.5 5397,-75.5 5513,-75.5 5513,-56.5 5397,-56.5"/>
 <text text-anchor="middle" x="5455" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">obdiidatamessage.h</text>
 </a>
@@ -905,7 +905,7 @@
 <!-- Node109 -->
 <g id="node58" class="node">
 <title>Node109</title>
-<g id="a_node58"><a xlink:href="ohrsettingsmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node58"><a xlink:href="ohrsettingsmessage_8h.html" target="_top" xlink:title="Declares the OhrSettingsMessage class.">
 <polygon fill="none" stroke="red" points="5531.5,-56.5 5531.5,-75.5 5656.5,-75.5 5656.5,-56.5 5531.5,-56.5"/>
 <text text-anchor="middle" x="5594" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">ohrsettingsmessage.h</text>
 </a>
@@ -920,7 +920,7 @@
 <!-- Node111 -->
 <g id="node59" class="node">
 <title>Node111</title>
-<g id="a_node59"><a xlink:href="onedsensorcalibrationmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node59"><a xlink:href="onedsensorcalibrationmessage_8h.html" target="_top" xlink:title="Declares the OneDSensorCalibrationMessage class.">
 <polygon fill="none" stroke="red" points="5675,-56.5 5675,-75.5 5853,-75.5 5853,-56.5 5675,-56.5"/>
 <text text-anchor="middle" x="5764" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">onedsensorcalibrationmessage.h</text>
 </a>
@@ -935,7 +935,7 @@
 <!-- Node113 -->
 <g id="node60" class="node">
 <title>Node113</title>
-<g id="a_node60"><a xlink:href="powerzonemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node60"><a xlink:href="powerzonemessage_8h.html" target="_top" xlink:title="Declares the PowerZoneMessage class.">
 <polygon fill="none" stroke="red" points="5871.5,-56.5 5871.5,-75.5 5994.5,-75.5 5994.5,-56.5 5871.5,-56.5"/>
 <text text-anchor="middle" x="5933" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">powerzonemessage.h</text>
 </a>
@@ -950,7 +950,7 @@
 <!-- Node115 -->
 <g id="node61" class="node">
 <title>Node115</title>
-<g id="a_node61"><a xlink:href="recordmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node61"><a xlink:href="recordmessage_8h.html" target="_top" xlink:title="Declares the RecordMessage class.">
 <polygon fill="none" stroke="red" points="6012.5,-56.5 6012.5,-75.5 6113.5,-75.5 6113.5,-56.5 6012.5,-56.5"/>
 <text text-anchor="middle" x="6063" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">recordmessage.h</text>
 </a>
@@ -965,7 +965,7 @@
 <!-- Node117 -->
 <g id="node62" class="node">
 <title>Node117</title>
-<g id="a_node62"><a xlink:href="schedulemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node62"><a xlink:href="schedulemessage_8h.html" target="_top" xlink:title="Declares the ScheduleMessage class.">
 <polygon fill="none" stroke="red" points="6131.5,-56.5 6131.5,-75.5 6244.5,-75.5 6244.5,-56.5 6131.5,-56.5"/>
 <text text-anchor="middle" x="6188" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">schedulemessage.h</text>
 </a>
@@ -980,7 +980,7 @@
 <!-- Node119 -->
 <g id="node63" class="node">
 <title>Node119</title>
-<g id="a_node63"><a xlink:href="sdmprofilemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node63"><a xlink:href="sdmprofilemessage_8h.html" target="_top" xlink:title="Declares the SdmProfileMessage class.">
 <polygon fill="none" stroke="red" points="6263,-56.5 6263,-75.5 6385,-75.5 6385,-56.5 6263,-56.5"/>
 <text text-anchor="middle" x="6324" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">sdmprofilemessage.h</text>
 </a>
@@ -995,7 +995,7 @@
 <!-- Node121 -->
 <g id="node64" class="node">
 <title>Node121</title>
-<g id="a_node64"><a xlink:href="segmentfilemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node64"><a xlink:href="segmentfilemessage_8h.html" target="_top" xlink:title="Declares the SegmentFileMessage class.">
 <polygon fill="none" stroke="red" points="6403,-56.5 6403,-75.5 6531,-75.5 6531,-56.5 6403,-56.5"/>
 <text text-anchor="middle" x="6467" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentfilemessage.h</text>
 </a>
@@ -1010,7 +1010,7 @@
 <!-- Node123 -->
 <g id="node65" class="node">
 <title>Node123</title>
-<g id="a_node65"><a xlink:href="segmentidmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node65"><a xlink:href="segmentidmessage_8h.html" target="_top" xlink:title="Declares the SegmentIdMessage class.">
 <polygon fill="none" stroke="red" points="6549,-56.5 6549,-75.5 6671,-75.5 6671,-56.5 6549,-56.5"/>
 <text text-anchor="middle" x="6610" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentidmessage.h</text>
 </a>
@@ -1025,7 +1025,7 @@
 <!-- Node125 -->
 <g id="node66" class="node">
 <title>Node125</title>
-<g id="a_node66"><a xlink:href="segmentlapmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node66"><a xlink:href="segmentlapmessage_8h.html" target="_top" xlink:title="Declares the SegmentLapMessage class.">
 <polygon fill="none" stroke="red" points="6689,-56.5 6689,-75.5 6817,-75.5 6817,-56.5 6689,-56.5"/>
 <text text-anchor="middle" x="6753" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentlapmessage.h</text>
 </a>
@@ -1040,7 +1040,7 @@
 <!-- Node127 -->
 <g id="node67" class="node">
 <title>Node127</title>
-<g id="a_node67"><a xlink:href="segmentleaderboardentrymessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node67"><a xlink:href="segmentleaderboardentrymessage_8h.html" target="_top" xlink:title="Declares the SegmentLeaderboardEntryMessage class.">
 <polygon fill="none" stroke="red" points="6835.5,-56.5 6835.5,-75.5 7032.5,-75.5 7032.5,-56.5 6835.5,-56.5"/>
 <text text-anchor="middle" x="6934" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentleaderboardentrymessage.h</text>
 </a>
@@ -1055,7 +1055,7 @@
 <!-- Node129 -->
 <g id="node68" class="node">
 <title>Node129</title>
-<g id="a_node68"><a xlink:href="segmentpointmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node68"><a xlink:href="segmentpointmessage_8h.html" target="_top" xlink:title="Declares the SegmentPointMessage class.">
 <polygon fill="none" stroke="red" points="7050.5,-56.5 7050.5,-75.5 7187.5,-75.5 7187.5,-56.5 7050.5,-56.5"/>
 <text text-anchor="middle" x="7119" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentpointmessage.h</text>
 </a>
@@ -1070,7 +1070,7 @@
 <!-- Node131 -->
 <g id="node69" class="node">
 <title>Node131</title>
-<g id="a_node69"><a xlink:href="sessionmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node69"><a xlink:href="sessionmessage_8h.html" target="_top" xlink:title="Declares the SessionMessage class.">
 <polygon fill="none" stroke="red" points="7205.5,-56.5 7205.5,-75.5 7312.5,-75.5 7312.5,-56.5 7205.5,-56.5"/>
 <text text-anchor="middle" x="7259" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">sessionmessage.h</text>
 </a>
@@ -1085,7 +1085,7 @@
 <!-- Node133 -->
 <g id="node70" class="node">
 <title>Node133</title>
-<g id="a_node70"><a xlink:href="setmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node70"><a xlink:href="setmessage_8h.html" target="_top" xlink:title="Declares the SetMessage class.">
 <polygon fill="none" stroke="red" points="7330.5,-56.5 7330.5,-75.5 7415.5,-75.5 7415.5,-56.5 7330.5,-56.5"/>
 <text text-anchor="middle" x="7373" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">setmessage.h</text>
 </a>
@@ -1100,7 +1100,7 @@
 <!-- Node135 -->
 <g id="node71" class="node">
 <title>Node135</title>
-<g id="a_node71"><a xlink:href="slavedevicemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node71"><a xlink:href="slavedevicemessage_8h.html" target="_top" xlink:title="Declares the SlaveDeviceMessage class.">
 <polygon fill="none" stroke="red" points="7434,-56.5 7434,-75.5 7562,-75.5 7562,-56.5 7434,-56.5"/>
 <text text-anchor="middle" x="7498" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">slavedevicemessage.h</text>
 </a>
@@ -1115,7 +1115,7 @@
 <!-- Node137 -->
 <g id="node72" class="node">
 <title>Node137</title>
-<g id="a_node72"><a xlink:href="softwaremessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node72"><a xlink:href="softwaremessage_8h.html" target="_top" xlink:title="Declares the SoftwareMessage class.">
 <polygon fill="none" stroke="red" points="7580,-56.5 7580,-75.5 7692,-75.5 7692,-56.5 7580,-56.5"/>
 <text text-anchor="middle" x="7636" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">softwaremessage.h</text>
 </a>
@@ -1130,7 +1130,7 @@
 <!-- Node139 -->
 <g id="node73" class="node">
 <title>Node139</title>
-<g id="a_node73"><a xlink:href="speedzonemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node73"><a xlink:href="speedzonemessage_8h.html" target="_top" xlink:title="Declares the SpeedZoneMessage class.">
 <polygon fill="none" stroke="red" points="7710,-56.5 7710,-75.5 7832,-75.5 7832,-56.5 7710,-56.5"/>
 <text text-anchor="middle" x="7771" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">speedzonemessage.h</text>
 </a>
@@ -1145,7 +1145,7 @@
 <!-- Node141 -->
 <g id="node74" class="node">
 <title>Node141</title>
-<g id="a_node74"><a xlink:href="sportmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node74"><a xlink:href="sportmessage_8h.html" target="_top" xlink:title="Declares the SportMessage class.">
 <polygon fill="none" stroke="red" points="7850.5,-56.5 7850.5,-75.5 7945.5,-75.5 7945.5,-56.5 7850.5,-56.5"/>
 <text text-anchor="middle" x="7898" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">sportmessage.h</text>
 </a>
@@ -1160,7 +1160,7 @@
 <!-- Node143 -->
 <g id="node75" class="node">
 <title>Node143</title>
-<g id="a_node75"><a xlink:href="stresslevelmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node75"><a xlink:href="stresslevelmessage_8h.html" target="_top" xlink:title="Declares the StressLevelMessage class.">
 <polygon fill="none" stroke="red" points="7963.5,-56.5 7963.5,-75.5 8086.5,-75.5 8086.5,-56.5 7963.5,-56.5"/>
 <text text-anchor="middle" x="8025" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">stresslevelmessage.h</text>
 </a>
@@ -1175,7 +1175,7 @@
 <!-- Node145 -->
 <g id="node76" class="node">
 <title>Node145</title>
-<g id="a_node76"><a xlink:href="threedsensorcalibrationmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node76"><a xlink:href="threedsensorcalibrationmessage_8h.html" target="_top" xlink:title="Declares the ThreeDSensorCalibrationMessage class.">
 <polygon fill="none" stroke="red" points="8104.5,-56.5 8104.5,-75.5 8289.5,-75.5 8289.5,-56.5 8104.5,-56.5"/>
 <text text-anchor="middle" x="8197" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">threedsensorcalibrationmessage.h</text>
 </a>
@@ -1190,7 +1190,7 @@
 <!-- Node147 -->
 <g id="node77" class="node">
 <title>Node147</title>
-<g id="a_node77"><a xlink:href="timestampcorrelationmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node77"><a xlink:href="timestampcorrelationmessage_8h.html" target="_top" xlink:title="Declares the TimestampCorrelationMessage class.">
 <polygon fill="none" stroke="red" points="8307,-56.5 8307,-75.5 8483,-75.5 8483,-56.5 8307,-56.5"/>
 <text text-anchor="middle" x="8395" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">timestampcorrelationmessage.h</text>
 </a>
@@ -1205,7 +1205,7 @@
 <!-- Node149 -->
 <g id="node78" class="node">
 <title>Node149</title>
-<g id="a_node78"><a xlink:href="totalsmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node78"><a xlink:href="totalsmessage_8h.html" target="_top" xlink:title="Declares the TotalsMessage class.">
 <polygon fill="none" stroke="red" points="8501,-56.5 8501,-75.5 8599,-75.5 8599,-56.5 8501,-56.5"/>
 <text text-anchor="middle" x="8550" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">totalsmessage.h</text>
 </a>
@@ -1220,7 +1220,7 @@
 <!-- Node151 -->
 <g id="node79" class="node">
 <title>Node151</title>
-<g id="a_node79"><a xlink:href="trainingfilemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node79"><a xlink:href="trainingfilemessage_8h.html" target="_top" xlink:title="Declares the TrainingFileMessage class.">
 <polygon fill="none" stroke="red" points="8617,-56.5 8617,-75.5 8739,-75.5 8739,-56.5 8617,-56.5"/>
 <text text-anchor="middle" x="8678" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">trainingfilemessage.h</text>
 </a>
@@ -1235,7 +1235,7 @@
 <!-- Node153 -->
 <g id="node80" class="node">
 <title>Node153</title>
-<g id="a_node80"><a xlink:href="userprofilemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node80"><a xlink:href="userprofilemessage_8h.html" target="_top" xlink:title="Declares the UserProfileMessage class.">
 <polygon fill="none" stroke="red" points="8757,-56.5 8757,-75.5 8879,-75.5 8879,-56.5 8757,-56.5"/>
 <text text-anchor="middle" x="8818" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">userprofilemessage.h</text>
 </a>
@@ -1250,7 +1250,7 @@
 <!-- Node155 -->
 <g id="node81" class="node">
 <title>Node155</title>
-<g id="a_node81"><a xlink:href="videoclipmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node81"><a xlink:href="videoclipmessage_8h.html" target="_top" xlink:title="Declares the VideoClipMessage class.">
 <polygon fill="none" stroke="red" points="8897,-56.5 8897,-75.5 9011,-75.5 9011,-56.5 8897,-56.5"/>
 <text text-anchor="middle" x="8954" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">videoclipmessage.h</text>
 </a>
@@ -1265,7 +1265,7 @@
 <!-- Node157 -->
 <g id="node82" class="node">
 <title>Node157</title>
-<g id="a_node82"><a xlink:href="videodescriptionmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node82"><a xlink:href="videodescriptionmessage_8h.html" target="_top" xlink:title="Declares the VideoDescriptionMessage class.">
 <polygon fill="none" stroke="red" points="9029.5,-56.5 9029.5,-75.5 9180.5,-75.5 9180.5,-56.5 9029.5,-56.5"/>
 <text text-anchor="middle" x="9105" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">videodescriptionmessage.h</text>
 </a>
@@ -1280,7 +1280,7 @@
 <!-- Node159 -->
 <g id="node83" class="node">
 <title>Node159</title>
-<g id="a_node83"><a xlink:href="videoframemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node83"><a xlink:href="videoframemessage_8h.html" target="_top" xlink:title="Declares the VideoFrameMessage class.">
 <polygon fill="none" stroke="red" points="9199,-56.5 9199,-75.5 9325,-75.5 9325,-56.5 9199,-56.5"/>
 <text text-anchor="middle" x="9262" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">videoframemessage.h</text>
 </a>
@@ -1295,7 +1295,7 @@
 <!-- Node161 -->
 <g id="node84" class="node">
 <title>Node161</title>
-<g id="a_node84"><a xlink:href="videomessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node84"><a xlink:href="videomessage_8h.html" target="_top" xlink:title="Declares the VideoMessage class.">
 <polygon fill="none" stroke="red" points="9343.5,-56.5 9343.5,-75.5 9440.5,-75.5 9440.5,-56.5 9343.5,-56.5"/>
 <text text-anchor="middle" x="9392" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">videomessage.h</text>
 </a>
@@ -1310,7 +1310,7 @@
 <!-- Node163 -->
 <g id="node85" class="node">
 <title>Node163</title>
-<g id="a_node85"><a xlink:href="videotitlemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node85"><a xlink:href="videotitlemessage_8h.html" target="_top" xlink:title="Declares the VideoTitleMessage class.">
 <polygon fill="none" stroke="red" points="9459,-56.5 9459,-75.5 9575,-75.5 9575,-56.5 9459,-56.5"/>
 <text text-anchor="middle" x="9517" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">videotitlemessage.h</text>
 </a>
@@ -1325,7 +1325,7 @@
 <!-- Node165 -->
 <g id="node86" class="node">
 <title>Node165</title>
-<g id="a_node86"><a xlink:href="watchfacesettingsmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node86"><a xlink:href="watchfacesettingsmessage_8h.html" target="_top" xlink:title="Declares the WatchfaceSettingsMessage class.">
 <polygon fill="none" stroke="red" points="9593.5,-56.5 9593.5,-75.5 9752.5,-75.5 9752.5,-56.5 9593.5,-56.5"/>
 <text text-anchor="middle" x="9673" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">watchfacesettingsmessage.h</text>
 </a>
@@ -1340,7 +1340,7 @@
 <!-- Node167 -->
 <g id="node87" class="node">
 <title>Node167</title>
-<g id="a_node87"><a xlink:href="weatheralertmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node87"><a xlink:href="weatheralertmessage_8h.html" target="_top" xlink:title="Declares the WeatherAlertMessage class.">
 <polygon fill="none" stroke="red" points="9771,-56.5 9771,-75.5 9903,-75.5 9903,-56.5 9771,-56.5"/>
 <text text-anchor="middle" x="9837" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">weatheralertmessage.h</text>
 </a>
@@ -1355,7 +1355,7 @@
 <!-- Node169 -->
 <g id="node88" class="node">
 <title>Node169</title>
-<g id="a_node88"><a xlink:href="weatherconditionsmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node88"><a xlink:href="weatherconditionsmessage_8h.html" target="_top" xlink:title="Declares the WeatherConditionsMessage class.">
 <polygon fill="none" stroke="red" points="9921,-56.5 9921,-75.5 10081,-75.5 10081,-56.5 9921,-56.5"/>
 <text text-anchor="middle" x="10001" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">weatherconditionsmessage.h</text>
 </a>
@@ -1370,7 +1370,7 @@
 <!-- Node171 -->
 <g id="node89" class="node">
 <title>Node171</title>
-<g id="a_node89"><a xlink:href="weightscalemessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node89"><a xlink:href="weightscalemessage_8h.html" target="_top" xlink:title="Declares the WeightScaleMessage class.">
 <polygon fill="none" stroke="red" points="10099,-56.5 10099,-75.5 10227,-75.5 10227,-56.5 10099,-56.5"/>
 <text text-anchor="middle" x="10163" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">weightscalemessage.h</text>
 </a>
@@ -1385,7 +1385,7 @@
 <!-- Node173 -->
 <g id="node90" class="node">
 <title>Node173</title>
-<g id="a_node90"><a xlink:href="workoutmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node90"><a xlink:href="workoutmessage_8h.html" target="_top" xlink:title="Declares the WorkoutMessage class.">
 <polygon fill="none" stroke="red" points="10245.5,-56.5 10245.5,-75.5 10354.5,-75.5 10354.5,-56.5 10245.5,-56.5"/>
 <text text-anchor="middle" x="10300" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">workoutmessage.h</text>
 </a>
@@ -1400,7 +1400,7 @@
 <!-- Node175 -->
 <g id="node91" class="node">
 <title>Node175</title>
-<g id="a_node91"><a xlink:href="workoutsessionmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node91"><a xlink:href="workoutsessionmessage_8h.html" target="_top" xlink:title="Declares the WorkoutSessionMessage class.">
 <polygon fill="none" stroke="red" points="10373,-56.5 10373,-75.5 10519,-75.5 10519,-56.5 10373,-56.5"/>
 <text text-anchor="middle" x="10446" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">workoutsessionmessage.h</text>
 </a>
@@ -1415,7 +1415,7 @@
 <!-- Node177 -->
 <g id="node92" class="node">
 <title>Node177</title>
-<g id="a_node92"><a xlink:href="workoutstepmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node92"><a xlink:href="workoutstepmessage_8h.html" target="_top" xlink:title="Declares the WorkoutStepMessage class.">
 <polygon fill="none" stroke="red" points="10537,-56.5 10537,-75.5 10667,-75.5 10667,-56.5 10537,-56.5"/>
 <text text-anchor="middle" x="10602" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">workoutstepmessage.h</text>
 </a>
@@ -1430,7 +1430,7 @@
 <!-- Node179 -->
 <g id="node93" class="node">
 <title>Node179</title>
-<g id="a_node93"><a xlink:href="zonestargetmessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node93"><a xlink:href="zonestargetmessage_8h.html" target="_top" xlink:title="Declares the ZonesTargetMessage class.">
 <polygon fill="none" stroke="red" points="10685,-56.5 10685,-75.5 10813,-75.5 10813,-56.5 10685,-56.5"/>
 <text text-anchor="middle" x="10749" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">zonestargetmessage.h</text>
 </a>
@@ -1985,7 +1985,7 @@
 <!-- Node182 -->
 <g id="node95" class="node">
 <title>Node182</title>
-<g id="a_node95"><a xlink:href="accelerometerdatamessage__p_8h.html" target="_top" xlink:title=" ">
+<g id="a_node95"><a xlink:href="accelerometerdatamessage__p_8h.html" target="_top" xlink:title="Declares the AccelerometerDataMessagePrivate class.">
 <polygon fill="none" stroke="red" points="13425.5,-0.5 13425.5,-19.5 13598.5,-19.5 13598.5,-0.5 13425.5,-0.5"/>
 <text text-anchor="middle" x="13512" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">accelerometerdatamessage_p.h</text>
 </a>
@@ -2000,7 +2000,7 @@
 <!-- Node183 -->
 <g id="node96" class="node">
 <title>Node183</title>
-<g id="a_node96"><a xlink:href="activitymessage__p_8h.html" target="_top" xlink:title=" ">
+<g id="a_node96"><a xlink:href="activitymessage__p_8h.html" target="_top" xlink:title="Declares the ActivityMessagePrivate class.">
 <polygon fill="none" stroke="red" points="13002,-0.5 13002,-19.5 13120,-19.5 13120,-0.5 13002,-0.5"/>
 <text text-anchor="middle" x="13061" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">activitymessage_p.h</text>
 </a>
@@ -2015,7 +2015,7 @@
 <!-- Node184 -->
 <g id="node97" class="node">
 <title>Node184</title>
-<g id="a_node97"><a xlink:href="antchannelidmessage__p_8h.html" target="_top" xlink:title=" ">
+<g id="a_node97"><a xlink:href="antchannelidmessage__p_8h.html" target="_top" xlink:title="Declares the AntChannelIdMessagePrivate class.">
 <polygon fill="none" stroke="red" points="13138,-0.5 13138,-19.5 13282,-19.5 13282,-0.5 13138,-0.5"/>
 <text text-anchor="middle" x="13210" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">antchannelidmessage_p.h</text>
 </a>
@@ -2030,7 +2030,7 @@
 <!-- Node185 -->
 <g id="node98" class="node">
 <title>Node185</title>
-<g id="a_node98"><a xlink:href="antrxmessage__p_8h.html" target="_top" xlink:title=" ">
+<g id="a_node98"><a xlink:href="antrxmessage__p_8h.html" target="_top" xlink:title="Declares the AntRxMessagePrivate class.">
 <polygon fill="none" stroke="red" points="13300.5,-0.5 13300.5,-19.5 13407.5,-19.5 13407.5,-0.5 13300.5,-0.5"/>
 <text text-anchor="middle" x="13354" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">antrxmessage_p.h</text>
 </a>

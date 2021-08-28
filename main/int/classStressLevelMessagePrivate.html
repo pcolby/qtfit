@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -156,7 +156,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classStressLevelMessagePrivate.html">StressLevelMessagePrivate</a> class provides private implementation for the <a class="el" href="classStressLevelMessage.html" title="The StressLevelMessage class represents a FIT StressLevelMessage data message.">StressLevelMessage</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classStressLevelMessage.html" title="The StressLevelMessage class represents a FIT StressLevelMessage data message.">StressLevelMessage</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="stresslevelmessage__p_8h_source.html">stresslevelmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="stresslevelmessage__p_8h_source.html">stresslevelmessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a77fefea82277f801f76fc37c7d7f90c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77fefea82277f801f76fc37c7d7f90c0">&#9670;&nbsp;</a></span>StressLevelMessagePrivate()</h2>
@@ -189,20 +189,20 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00128">128</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  , <a class="code" href="classStressLevelMessagePrivate.html#ac69e6dc4d84adb5fd7c975aa3bfac489">stressLevelValue</a>(0x7FFF)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  , <a class="code" href="classStressLevelMessagePrivate.html#ae29574bcd10fef81b3b2a6ed51b55b3c">stressLevelTime</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::StressLevel;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassStressLevelMessagePrivate_html_ac69e6dc4d84adb5fd7c975aa3bfac489"><div class="ttname"><a href="classStressLevelMessagePrivate.html#ac69e6dc4d84adb5fd7c975aa3bfac489">StressLevelMessagePrivate::stressLevelValue</a></div><div class="ttdeci">qint16 stressLevelValue</div><div class="ttdoc">The StressLevelMessage FIT message's stressLevelValue field.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage__p_8h_source.html#l00040">stresslevelmessage_p.h:40</a></div></div>
-<div class="ttc" id="aclassStressLevelMessagePrivate_html_ae29574bcd10fef81b3b2a6ed51b55b3c"><div class="ttname"><a href="classStressLevelMessagePrivate.html#ae29574bcd10fef81b3b2a6ed51b55b3c">StressLevelMessagePrivate::stressLevelTime</a></div><div class="ttdeci">DateTime stressLevelTime</div><div class="ttdoc">The StressLevelMessage FIT message's stressLevelTime field.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage__p_8h_source.html#l00047">stresslevelmessage_p.h:47</a></div></div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00133">133</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  , <a class="code" href="classStressLevelMessagePrivate.html#ac69e6dc4d84adb5fd7c975aa3bfac489">stressLevelValue</a>(0x7FFF)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  , <a class="code" href="classStressLevelMessagePrivate.html#ae29574bcd10fef81b3b2a6ed51b55b3c">stressLevelTime</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::StressLevel;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassStressLevelMessagePrivate_html_ac69e6dc4d84adb5fd7c975aa3bfac489"><div class="ttname"><a href="classStressLevelMessagePrivate.html#ac69e6dc4d84adb5fd7c975aa3bfac489">StressLevelMessagePrivate::stressLevelValue</a></div><div class="ttdeci">qint16 stressLevelValue</div><div class="ttdoc">The StressLevelMessage FIT message's stressLevelValue field.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage__p_8h_source.html#l00044">stresslevelmessage_p.h:44</a></div></div>
+<div class="ttc" id="aclassStressLevelMessagePrivate_html_ae29574bcd10fef81b3b2a6ed51b55b3c"><div class="ttname"><a href="classStressLevelMessagePrivate.html#ae29574bcd10fef81b3b2a6ed51b55b3c">StressLevelMessagePrivate::stressLevelTime</a></div><div class="ttdeci">DateTime stressLevelTime</div><div class="ttdoc">The StressLevelMessage FIT message's stressLevelTime field.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage__p_8h_source.html#l00051">stresslevelmessage_p.h:51</a></div></div>
 <div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00237">types.h:237</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00034">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00039">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
 
 </div>
 </div>
@@ -230,10 +230,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys the <a class="el" href="classStressLevelMessagePrivate.html">StressLevelMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00141">141</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00146">146</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -298,30 +298,30 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractDataMessagePrivate.html#ae4d13bcc7f39d6050db131e3afe8b4d3">AbstractDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00146">146</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:stress_level.stressLevelValue</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Sint16, <span class="stringliteral">&quot;stress_level.stressLevelValue&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        this-&gt;<a class="code" href="classStressLevelMessagePrivate.html#ac69e6dc4d84adb5fd7c975aa3bfac489">stressLevelValue</a> = <span class="keyword">static_cast&lt;</span>qint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint16&gt;(data) : qFromLittleEndian&lt; qint16&gt;(data));</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:stress_level.stressLevelTime</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;stress_level.stressLevelTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        this-&gt;<a class="code" href="classStressLevelMessagePrivate.html#ae29574bcd10fef81b3b2a6ed51b55b3c">stressLevelTime</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown stress_level message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00151">151</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:stress_level.stressLevelValue</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Sint16, <span class="stringliteral">&quot;stress_level.stressLevelValue&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        this-&gt;<a class="code" href="classStressLevelMessagePrivate.html#ac69e6dc4d84adb5fd7c975aa3bfac489">stressLevelValue</a> = <span class="keyword">static_cast&lt;</span>qint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt; qint16&gt;(data) : qFromLittleEndian&lt; qint16&gt;(data));</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:stress_level.stressLevelTime</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;stress_level.stressLevelTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        this-&gt;<a class="code" href="classStressLevelMessagePrivate.html#ae29574bcd10fef81b3b2a6ed51b55b3c">stressLevelTime</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown stress_level message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00194">AbstractDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00199">AbstractDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStressLevelMessagePrivate_a0f67b1aa0edf83e4ccd7fe3a44a811ea_cgraph.svg" width="471" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStressLevelMessagePrivate_a0f67b1aa0edf83e4ccd7fe3a44a811ea_cgraph.svg" width="640" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -343,7 +343,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classStressLevelMessage.html" title="The StressLevelMessage class represents a FIT StressLevelMessage data message.">StressLevelMessage</a> FIT message's stressLevelTime field. </p>
 <p>Time stress score was calculated </p>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage__p_8h_source.html#l00047">47</a> of file <a class="el" href="stresslevelmessage__p_8h_source.html">stresslevelmessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage__p_8h_source.html#l00051">51</a> of file <a class="el" href="stresslevelmessage__p_8h_source.html">stresslevelmessage_p.h</a>.</p>
 
 </div>
 </div>

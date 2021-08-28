@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -112,252 +112,259 @@ $(document).ready(function(){initNavTree('hrmprofilemessage_8cpp_source.html',''
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * \file</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * \note This file is automatcially generated. Any changes here are likely to be overwritten.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hrmprofilemessage_8h.html">hrmprofilemessage.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hrmprofilemessage__p_8h.html">hrmprofilemessage_p.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QtEndian&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;QTFIT_BEGIN_NAMESPACE</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * \class HrmProfileMessage</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * The HrmProfileMessage class represents a FIT HrmProfileMessage data message.</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * \sa DataMessage</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> * Constructs a HrmProfileMessage object.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> * Typically, instances of this class will be returned by FitStreamReader::readNext, but this</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"> * constructor may be used, along with the relevant setter methods, to create a valid message.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">   47</a></span>&#160;<a class="code" href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">HrmProfileMessage::HrmProfileMessage</a>() : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(new <a class="code" href="classHrmProfileMessagePrivate.html">HrmProfileMessagePrivate</a>(this))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> * \internal</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * Constructs a HrmProfileMessage object with private implementation \a d.</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * \param d Pointer to private implementation.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a33ea78fd514182105659c0879bc1e49b">   59</a></span>&#160;<a class="code" href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">HrmProfileMessage::HrmProfileMessage</a>(<a class="code" href="classHrmProfileMessagePrivate.html">HrmProfileMessagePrivate</a> * <span class="keyword">const</span> d) : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c messageIndex field&#39;s current value.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> * \return the \c messageIndex field value.</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">   69</a></span>&#160;<a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> <a class="code" href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">HrmProfileMessage::messageIndex</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c enabled field&#39;s current value.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> * \return the \c enabled field value.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">   80</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">HrmProfileMessage::enabled</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;enabled;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c hrmAntId field&#39;s current value.</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> * \return the \c hrmAntId field value.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">   91</a></span>&#160;<a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> <a class="code" href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">HrmProfileMessage::hrmAntId</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;hrmAntId;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c logHrv field&#39;s current value.</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"> * \return the \c logHrv field value.</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">  102</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">HrmProfileMessage::logHrv</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;logHrv;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c hrmAntIdTransType field&#39;s current value.</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> * \return the \c hrmAntIdTransType field value.</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">  113</a></span>&#160;<a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> <a class="code" href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">HrmProfileMessage::hrmAntIdTransType</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> d-&gt;hrmAntIdTransType;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"> * Sets the \c messageIndex field to \a messageIndex.</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"> * \param messageIndex The field value to set.</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ad4f1962b656334633a5f15227b6c248f">  124</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#ad4f1962b656334633a5f15227b6c248f">HrmProfileMessage::setMessageIndex</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    d-&gt;messageIndex = <a class="code" href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">messageIndex</a>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}<span class="comment"></span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment"> * Sets the \c enabled field to \a enabled.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> * \param enabled The field value to set.</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a13f1ead9acfb034250be4ed94e99c939">  134</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#a13f1ead9acfb034250be4ed94e99c939">HrmProfileMessage::setEnabled</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled)</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    d-&gt;enabled = <a class="code" href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">enabled</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}<span class="comment"></span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"> * Sets the \c hrmAntId field to \a hrmAntId.</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"> * \param hrmAntId The field value to set.</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a36f5828f4d6f8f1b1927382073adc890">  144</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#a36f5828f4d6f8f1b1927382073adc890">HrmProfileMessage::setHrmAntId</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> hrmAntId)</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    d-&gt;hrmAntId = <a class="code" href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">hrmAntId</a>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}<span class="comment"></span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"> * Sets the \c logHrv field to \a logHrv.</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"> * \param logHrv The field value to set.</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ab7619b0275376d86630bcf43ed6c49d7">  154</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#ab7619b0275376d86630bcf43ed6c49d7">HrmProfileMessage::setLogHrv</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> logHrv)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    d-&gt;logHrv = <a class="code" href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">logHrv</a>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}<span class="comment"></span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"> * Sets the \c hrmAntIdTransType field to \a hrmAntIdTransType.</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"> * \param hrmAntIdTransType The field value to set.</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a85447a14f1d6ffe72a8f2b02e99ead88">  164</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#a85447a14f1d6ffe72a8f2b02e99ead88">HrmProfileMessage::setHrmAntIdTransType</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> hrmAntIdTransType)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    d-&gt;hrmAntIdTransType = <a class="code" href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">hrmAntIdTransType</a>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">/// \cond internal</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"></span><span class="comment"></span> </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment"> * \internal</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment"> * \class HrmProfileMessagePrivate</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment"> * The HrmProfileMessagePrivate class provides private implementation for the HrmProfileMessage.</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment"> * \sa HrmProfileMessage</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"> * \internal</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment"> * Constructs a HrmProfileMessagePrivate object with public implementation \a q.</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment"> * \param q Pointer to public implementaton.</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classHrmProfileMessagePrivate.html#a2faed75e8bde4fc6e6c8eaa1ca1c2104">  189</a></span>&#160;HrmProfileMessagePrivate::HrmProfileMessagePrivate(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a> * <span class="keyword">const</span> q)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  , messageIndex(static_cast&lt;<a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a>&gt;(-1))</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  , enabled(static_cast&lt;bool&gt;(-1))</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  , hrmAntId(0)</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  , logHrv(static_cast&lt;bool&gt;(-1))</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  , hrmAntIdTransType(static_cast&lt;<a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a>&gt;(-1))</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;{</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::HrmProfile;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">/*!</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment"> * \internal</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"> * Destroys the HrmProfileMessagePrivate object.</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classHrmProfileMessagePrivate.html#a0e3ed040ea8acb40c8cc8ffa20e66b62">  205</a></span>&#160;<a class="code" href="classHrmProfileMessagePrivate.html#a0e3ed040ea8acb40c8cc8ffa20e66b62">HrmProfileMessagePrivate::~HrmProfileMessagePrivate</a>()</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classHrmProfileMessagePrivate.html#ac3a5c828ec439cc28c74bb25a1d5a05b">  210</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classHrmProfileMessagePrivate.html#ac3a5c828ec439cc28c74bb25a1d5a05b">HrmProfileMessagePrivate::setField</a>(</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray &amp;data, <span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, <span class="keyword">const</span> <span class="keywordtype">bool</span> bigEndian)</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.messageIndex</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;hrm_profile.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#a9c7ba2a9178ce8e59b993c2e889251d1">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.enabled</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 0, FitBaseType::Byte, <span class="stringliteral">&quot;hrm_profile.enabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#ab6c27b2773435c58c55a5b6b0bb3f7af">enabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.hrmAntId</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16z, <span class="stringliteral">&quot;hrm_profile.hrmAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#ab4b908ac2e9a9336ab37026d71ec60a3">hrmAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.logHrv</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 0, FitBaseType::Byte, <span class="stringliteral">&quot;hrm_profile.logHrv&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#a05ac0f07a10b763bbe37111cd63c36d5">logHrv</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.hrmAntIdTransType</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Uint8z, <span class="stringliteral">&quot;hrm_profile.hrmAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#a79762ea29409f4588366ab4dd13761cb">hrmAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown hrm_profile message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">/// \endcond</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;QTFIT_END_NAMESPACE</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html"><div class="ttname"><a href="classHrmProfileMessagePrivate.html">HrmProfileMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00034">hrmprofilemessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a05ac0f07a10b763bbe37111cd63c36d5"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a05ac0f07a10b763bbe37111cd63c36d5">HrmProfileMessagePrivate::logHrv</a></div><div class="ttdeci">bool logHrv</div><div class="ttdoc">The HrmProfileMessage FIT message's logHrv field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00055">hrmprofilemessage_p.h:55</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a0e3ed040ea8acb40c8cc8ffa20e66b62"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a0e3ed040ea8acb40c8cc8ffa20e66b62">HrmProfileMessagePrivate::~HrmProfileMessagePrivate</a></div><div class="ttdeci">virtual ~HrmProfileMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00205">hrmprofilemessage.cpp:205</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a79762ea29409f4588366ab4dd13761cb"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a79762ea29409f4588366ab4dd13761cb">HrmProfileMessagePrivate::hrmAntIdTransType</a></div><div class="ttdeci">quint8z hrmAntIdTransType</div><div class="ttdoc">The HrmProfileMessage FIT message's hrmAntIdTransType field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00060">hrmprofilemessage_p.h:60</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a9c7ba2a9178ce8e59b993c2e889251d1"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a9c7ba2a9178ce8e59b993c2e889251d1">HrmProfileMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The HrmProfileMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00040">hrmprofilemessage_p.h:40</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html_ab4b908ac2e9a9336ab37026d71ec60a3"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#ab4b908ac2e9a9336ab37026d71ec60a3">HrmProfileMessagePrivate::hrmAntId</a></div><div class="ttdeci">quint16z hrmAntId</div><div class="ttdoc">The HrmProfileMessage FIT message's hrmAntId field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00050">hrmprofilemessage_p.h:50</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html_ab6c27b2773435c58c55a5b6b0bb3f7af"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#ab6c27b2773435c58c55a5b6b0bb3f7af">HrmProfileMessagePrivate::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdoc">The HrmProfileMessage FIT message's enabled field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00045">hrmprofilemessage_p.h:45</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessagePrivate_html_ac3a5c828ec439cc28c74bb25a1d5a05b"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#ac3a5c828ec439cc28c74bb25a1d5a05b">HrmProfileMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian) override</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00210">hrmprofilemessage.cpp:210</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html"><div class="ttname"><a href="classHrmProfileMessage.html">HrmProfileMessage</a></div><div class="ttdoc">The HrmProfileMessage class represents a FIT HrmProfileMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8h_source.html#l00034">hrmprofilemessage.h:34</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_a13f1ead9acfb034250be4ed94e99c939"><div class="ttname"><a href="classHrmProfileMessage.html#a13f1ead9acfb034250be4ed94e99c939">HrmProfileMessage::setEnabled</a></div><div class="ttdeci">void setEnabled(const bool enabled)</div><div class="ttdoc">Sets the enabled field to enabled.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00134">hrmprofilemessage.cpp:134</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_a36f5828f4d6f8f1b1927382073adc890"><div class="ttname"><a href="classHrmProfileMessage.html#a36f5828f4d6f8f1b1927382073adc890">HrmProfileMessage::setHrmAntId</a></div><div class="ttdeci">void setHrmAntId(const quint16z hrmAntId)</div><div class="ttdoc">Sets the hrmAntId field to hrmAntId.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00144">hrmprofilemessage.cpp:144</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_a4b025485fdeb7356dc7c47b3cf4ec6c7"><div class="ttname"><a href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">HrmProfileMessage::hrmAntIdTransType</a></div><div class="ttdeci">quint8z hrmAntIdTransType() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's hrmAntIdTransType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00113">hrmprofilemessage.cpp:113</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_a519428418371718feebec355f8659094"><div class="ttname"><a href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">HrmProfileMessage::HrmProfileMessage</a></div><div class="ttdeci">HrmProfileMessage()</div><div class="ttdoc">Constructs a HrmProfileMessage object.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00047">hrmprofilemessage.cpp:47</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_a85447a14f1d6ffe72a8f2b02e99ead88"><div class="ttname"><a href="classHrmProfileMessage.html#a85447a14f1d6ffe72a8f2b02e99ead88">HrmProfileMessage::setHrmAntIdTransType</a></div><div class="ttdeci">void setHrmAntIdTransType(const quint8z hrmAntIdTransType)</div><div class="ttdoc">Sets the hrmAntIdTransType field to hrmAntIdTransType.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00164">hrmprofilemessage.cpp:164</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_aa978d77f00931422cf099814ddac0c1b"><div class="ttname"><a href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">HrmProfileMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00069">hrmprofilemessage.cpp:69</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_ab7619b0275376d86630bcf43ed6c49d7"><div class="ttname"><a href="classHrmProfileMessage.html#ab7619b0275376d86630bcf43ed6c49d7">HrmProfileMessage::setLogHrv</a></div><div class="ttdeci">void setLogHrv(const bool logHrv)</div><div class="ttdoc">Sets the logHrv field to logHrv.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00154">hrmprofilemessage.cpp:154</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_ad12cb4b7107ded3dfc6f68881b72855b"><div class="ttname"><a href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">HrmProfileMessage::enabled</a></div><div class="ttdeci">bool enabled() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's enabled field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00080">hrmprofilemessage.cpp:80</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_ad4f1962b656334633a5f15227b6c248f"><div class="ttname"><a href="classHrmProfileMessage.html#ad4f1962b656334633a5f15227b6c248f">HrmProfileMessage::setMessageIndex</a></div><div class="ttdeci">void setMessageIndex(const MessageIndex messageIndex)</div><div class="ttdoc">Sets the messageIndex field to messageIndex.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00124">hrmprofilemessage.cpp:124</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_ad9cf77443e14b2d334744c883251dbd9"><div class="ttname"><a href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">HrmProfileMessage::hrmAntId</a></div><div class="ttdeci">quint16z hrmAntId() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's hrmAntId field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00091">hrmprofilemessage.cpp:91</a></div></div>
-<div class="ttc" id="aclassHrmProfileMessage_html_aefd7b1b3b3004d24bc0bd155947e69bc"><div class="ttname"><a href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">HrmProfileMessage::logHrv</a></div><div class="ttdeci">bool logHrv() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's logHrv field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00102">hrmprofilemessage.cpp:102</a></div></div>
-<div class="ttc" id="ahrmprofilemessage_8h_html"><div class="ttname"><a href="hrmprofilemessage_8h.html">hrmprofilemessage.h</a></div></div>
-<div class="ttc" id="ahrmprofilemessage__p_8h_html"><div class="ttname"><a href="hrmprofilemessage__p_8h.html">hrmprofilemessage_p.h</a></div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * \file</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Defines the HrmProfileMessage, and HrmProfileMessagePrivate classes.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hrmprofilemessage_8h.html">hrmprofilemessage.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hrmprofilemessage__p_8h.html">hrmprofilemessage_p.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;QtEndian&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * \class HrmProfileMessage</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * The HrmProfileMessage class represents a FIT HrmProfileMessage data message.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * \sa DataMessage</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> * Constructs a HrmProfileMessage object.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"> * Typically, instances of this class will be returned by FitStreamReader::readNext, but this</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> * constructor may be used, along with the relevant setter methods, to create a valid message.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">   52</a></span>&#160;<a class="code" href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">HrmProfileMessage::HrmProfileMessage</a>() : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(new <a class="code" href="classHrmProfileMessagePrivate.html">HrmProfileMessagePrivate</a>(this))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> * \internal</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> * Constructs a HrmProfileMessage object with private implementation \a d.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * \param d Pointer to private implementation.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a33ea78fd514182105659c0879bc1e49b">   64</a></span>&#160;<a class="code" href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">HrmProfileMessage::HrmProfileMessage</a>(<a class="code" href="classHrmProfileMessagePrivate.html">HrmProfileMessagePrivate</a> * <span class="keyword">const</span> d) : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c messageIndex field&#39;s current value.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * \return the \c messageIndex field value.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">   74</a></span>&#160;<a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> <a class="code" href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">HrmProfileMessage::messageIndex</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c enabled field&#39;s current value.</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * \return the \c enabled field value.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">   85</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">HrmProfileMessage::enabled</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;enabled;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c hrmAntId field&#39;s current value.</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * \return the \c hrmAntId field value.</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">   96</a></span>&#160;<a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> <a class="code" href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">HrmProfileMessage::hrmAntId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;hrmAntId;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c logHrv field&#39;s current value.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> * \return the \c logHrv field value.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">  107</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">HrmProfileMessage::logHrv</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> d-&gt;logHrv;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> * Returns the HrmProfileMessage data message&#39;s \c hrmAntIdTransType field&#39;s current value.</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> * \return the \c hrmAntIdTransType field value.</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">  118</a></span>&#160;<a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> <a class="code" href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">HrmProfileMessage::hrmAntIdTransType</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> d-&gt;hrmAntIdTransType;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> * Sets the \c messageIndex field to \a messageIndex.</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> * \param messageIndex The field value to set.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ad4f1962b656334633a5f15227b6c248f">  129</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#ad4f1962b656334633a5f15227b6c248f">HrmProfileMessage::setMessageIndex</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a> messageIndex)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    d-&gt;messageIndex = <a class="code" href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">messageIndex</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}<span class="comment"></span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"> * Sets the \c enabled field to \a enabled.</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> * \param enabled The field value to set.</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a13f1ead9acfb034250be4ed94e99c939">  139</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#a13f1ead9acfb034250be4ed94e99c939">HrmProfileMessage::setEnabled</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    d-&gt;enabled = <a class="code" href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">enabled</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}<span class="comment"></span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"> * Sets the \c hrmAntId field to \a hrmAntId.</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment"> * \param hrmAntId The field value to set.</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a36f5828f4d6f8f1b1927382073adc890">  149</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#a36f5828f4d6f8f1b1927382073adc890">HrmProfileMessage::setHrmAntId</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a> hrmAntId)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    d-&gt;hrmAntId = <a class="code" href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">hrmAntId</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}<span class="comment"></span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"> * Sets the \c logHrv field to \a logHrv.</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"> * \param logHrv The field value to set.</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#ab7619b0275376d86630bcf43ed6c49d7">  159</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#ab7619b0275376d86630bcf43ed6c49d7">HrmProfileMessage::setLogHrv</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> logHrv)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    d-&gt;logHrv = <a class="code" href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">logHrv</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}<span class="comment"></span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"> * Sets the \c hrmAntIdTransType field to \a hrmAntIdTransType.</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment"> * \param hrmAntIdTransType The field value to set.</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classHrmProfileMessage.html#a85447a14f1d6ffe72a8f2b02e99ead88">  169</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classHrmProfileMessage.html#a85447a14f1d6ffe72a8f2b02e99ead88">HrmProfileMessage::setHrmAntIdTransType</a>(<span class="keyword">const</span> <a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a> hrmAntIdTransType)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    Q_D(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    d-&gt;hrmAntIdTransType = <a class="code" href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">hrmAntIdTransType</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">/// \cond internal</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment"> * \internal</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"> * \class HrmProfileMessagePrivate</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment"> * The HrmProfileMessagePrivate class provides private implementation for the HrmProfileMessage.</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment"> * \sa HrmProfileMessage</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment"> * \internal</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"> * Constructs a HrmProfileMessagePrivate object with public implementation \a q.</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"> * \param q Pointer to public implementaton.</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classHrmProfileMessagePrivate.html#a2faed75e8bde4fc6e6c8eaa1ca1c2104">  194</a></span>&#160;HrmProfileMessagePrivate::HrmProfileMessagePrivate(<a class="code" href="classHrmProfileMessage.html">HrmProfileMessage</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  , messageIndex(static_cast&lt;<a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a>&gt;(-1))</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  , enabled(static_cast&lt;bool&gt;(-1))</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  , hrmAntId(0)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  , logHrv(static_cast&lt;bool&gt;(-1))</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  , hrmAntIdTransType(static_cast&lt;<a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a>&gt;(-1))</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::HrmProfile;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment"> * \internal</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"> * Destroys the HrmProfileMessagePrivate object.</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classHrmProfileMessagePrivate.html#a0e3ed040ea8acb40c8cc8ffa20e66b62">  210</a></span>&#160;<a class="code" href="classHrmProfileMessagePrivate.html#a0e3ed040ea8acb40c8cc8ffa20e66b62">HrmProfileMessagePrivate::~HrmProfileMessagePrivate</a>()</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classHrmProfileMessagePrivate.html#ac3a5c828ec439cc28c74bb25a1d5a05b">  215</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classHrmProfileMessagePrivate.html#ac3a5c828ec439cc28c74bb25a1d5a05b">HrmProfileMessagePrivate::setField</a>(</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> fieldId, <span class="keyword">const</span> QByteArray &amp;data, <span class="keyword">const</span> <a class="code" href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a> baseType, <span class="keyword">const</span> <span class="keywordtype">bool</span> bigEndian)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.messageIndex</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;hrm_profile.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#a9c7ba2a9178ce8e59b993c2e889251d1">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.enabled</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 0, FitBaseType::Byte, <span class="stringliteral">&quot;hrm_profile.enabled&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#ab6c27b2773435c58c55a5b6b0bb3f7af">enabled</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.hrmAntId</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16z, <span class="stringliteral">&quot;hrm_profile.hrmAntId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#ab4b908ac2e9a9336ab37026d71ec60a3">hrmAntId</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.logHrv</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 0, FitBaseType::Byte, <span class="stringliteral">&quot;hrm_profile.logHrv&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#a05ac0f07a10b763bbe37111cd63c36d5">logHrv</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:hrm_profile.hrmAntIdTransType</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Uint8z, <span class="stringliteral">&quot;hrm_profile.hrmAntIdTransType&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        this-&gt;<a class="code" href="classHrmProfileMessagePrivate.html#a79762ea29409f4588366ab4dd13761cb">hrmAntIdTransType</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#acf72d89cfaf9bb22ddf07c864153d0ec">quint8z</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown hrm_profile message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">/// \endcond</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<a class="code" href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div>
+<div class="ttc" id="aQtFit__global_8h_html_a26fff785bd189da2957d8a808c24b139"><div class="ttname"><a href="QtFit__global_8h.html#a26fff785bd189da2957d8a808c24b139">QTFIT_END_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_END_NAMESPACE</div><div class="ttdoc">Macro for ending the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00078">QtFit_global.h:78</a></div></div>
+<div class="ttc" id="aQtFit__global_8h_html_ac36d5aa349cd8fd2fc5a912e85dc4b2e"><div class="ttname"><a href="QtFit__global_8h.html#ac36d5aa349cd8fd2fc5a912e85dc4b2e">QTFIT_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define QTFIT_BEGIN_NAMESPACE</div><div class="ttdoc">Macro for starting the QtFit library's top-most namespace (if one is defined).</div><div class="ttdef"><b>Definition:</b> <a href="QtFit__global_8h_source.html#l00077">QtFit_global.h:77</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html"><div class="ttname"><a href="classHrmProfileMessagePrivate.html">HrmProfileMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00038">hrmprofilemessage_p.h:38</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a05ac0f07a10b763bbe37111cd63c36d5"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a05ac0f07a10b763bbe37111cd63c36d5">HrmProfileMessagePrivate::logHrv</a></div><div class="ttdeci">bool logHrv</div><div class="ttdoc">The HrmProfileMessage FIT message's logHrv field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00059">hrmprofilemessage_p.h:59</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a0e3ed040ea8acb40c8cc8ffa20e66b62"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a0e3ed040ea8acb40c8cc8ffa20e66b62">HrmProfileMessagePrivate::~HrmProfileMessagePrivate</a></div><div class="ttdeci">virtual ~HrmProfileMessagePrivate()</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00210">hrmprofilemessage.cpp:210</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a79762ea29409f4588366ab4dd13761cb"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a79762ea29409f4588366ab4dd13761cb">HrmProfileMessagePrivate::hrmAntIdTransType</a></div><div class="ttdeci">quint8z hrmAntIdTransType</div><div class="ttdoc">The HrmProfileMessage FIT message's hrmAntIdTransType field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00064">hrmprofilemessage_p.h:64</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html_a9c7ba2a9178ce8e59b993c2e889251d1"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#a9c7ba2a9178ce8e59b993c2e889251d1">HrmProfileMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The HrmProfileMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00044">hrmprofilemessage_p.h:44</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html_ab4b908ac2e9a9336ab37026d71ec60a3"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#ab4b908ac2e9a9336ab37026d71ec60a3">HrmProfileMessagePrivate::hrmAntId</a></div><div class="ttdeci">quint16z hrmAntId</div><div class="ttdoc">The HrmProfileMessage FIT message's hrmAntId field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00054">hrmprofilemessage_p.h:54</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html_ab6c27b2773435c58c55a5b6b0bb3f7af"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#ab6c27b2773435c58c55a5b6b0bb3f7af">HrmProfileMessagePrivate::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdoc">The HrmProfileMessage FIT message's enabled field.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage__p_8h_source.html#l00049">hrmprofilemessage_p.h:49</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessagePrivate_html_ac3a5c828ec439cc28c74bb25a1d5a05b"><div class="ttname"><a href="classHrmProfileMessagePrivate.html#ac3a5c828ec439cc28c74bb25a1d5a05b">HrmProfileMessagePrivate::setField</a></div><div class="ttdeci">bool setField(const int fieldId, const QByteArray &amp;data, const FitBaseType baseType, const bool bigEndian) override</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00215">hrmprofilemessage.cpp:215</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html"><div class="ttname"><a href="classHrmProfileMessage.html">HrmProfileMessage</a></div><div class="ttdoc">The HrmProfileMessage class represents a FIT HrmProfileMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8h_source.html#l00039">hrmprofilemessage.h:39</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_a13f1ead9acfb034250be4ed94e99c939"><div class="ttname"><a href="classHrmProfileMessage.html#a13f1ead9acfb034250be4ed94e99c939">HrmProfileMessage::setEnabled</a></div><div class="ttdeci">void setEnabled(const bool enabled)</div><div class="ttdoc">Sets the enabled field to enabled.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00139">hrmprofilemessage.cpp:139</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_a36f5828f4d6f8f1b1927382073adc890"><div class="ttname"><a href="classHrmProfileMessage.html#a36f5828f4d6f8f1b1927382073adc890">HrmProfileMessage::setHrmAntId</a></div><div class="ttdeci">void setHrmAntId(const quint16z hrmAntId)</div><div class="ttdoc">Sets the hrmAntId field to hrmAntId.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00149">hrmprofilemessage.cpp:149</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_a4b025485fdeb7356dc7c47b3cf4ec6c7"><div class="ttname"><a href="classHrmProfileMessage.html#a4b025485fdeb7356dc7c47b3cf4ec6c7">HrmProfileMessage::hrmAntIdTransType</a></div><div class="ttdeci">quint8z hrmAntIdTransType() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's hrmAntIdTransType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00118">hrmprofilemessage.cpp:118</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_a519428418371718feebec355f8659094"><div class="ttname"><a href="classHrmProfileMessage.html#a519428418371718feebec355f8659094">HrmProfileMessage::HrmProfileMessage</a></div><div class="ttdeci">HrmProfileMessage()</div><div class="ttdoc">Constructs a HrmProfileMessage object.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00052">hrmprofilemessage.cpp:52</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_a85447a14f1d6ffe72a8f2b02e99ead88"><div class="ttname"><a href="classHrmProfileMessage.html#a85447a14f1d6ffe72a8f2b02e99ead88">HrmProfileMessage::setHrmAntIdTransType</a></div><div class="ttdeci">void setHrmAntIdTransType(const quint8z hrmAntIdTransType)</div><div class="ttdoc">Sets the hrmAntIdTransType field to hrmAntIdTransType.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00169">hrmprofilemessage.cpp:169</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_aa978d77f00931422cf099814ddac0c1b"><div class="ttname"><a href="classHrmProfileMessage.html#aa978d77f00931422cf099814ddac0c1b">HrmProfileMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00074">hrmprofilemessage.cpp:74</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_ab7619b0275376d86630bcf43ed6c49d7"><div class="ttname"><a href="classHrmProfileMessage.html#ab7619b0275376d86630bcf43ed6c49d7">HrmProfileMessage::setLogHrv</a></div><div class="ttdeci">void setLogHrv(const bool logHrv)</div><div class="ttdoc">Sets the logHrv field to logHrv.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00159">hrmprofilemessage.cpp:159</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_ad12cb4b7107ded3dfc6f68881b72855b"><div class="ttname"><a href="classHrmProfileMessage.html#ad12cb4b7107ded3dfc6f68881b72855b">HrmProfileMessage::enabled</a></div><div class="ttdeci">bool enabled() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's enabled field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00085">hrmprofilemessage.cpp:85</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_ad4f1962b656334633a5f15227b6c248f"><div class="ttname"><a href="classHrmProfileMessage.html#ad4f1962b656334633a5f15227b6c248f">HrmProfileMessage::setMessageIndex</a></div><div class="ttdeci">void setMessageIndex(const MessageIndex messageIndex)</div><div class="ttdoc">Sets the messageIndex field to messageIndex.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00129">hrmprofilemessage.cpp:129</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_ad9cf77443e14b2d334744c883251dbd9"><div class="ttname"><a href="classHrmProfileMessage.html#ad9cf77443e14b2d334744c883251dbd9">HrmProfileMessage::hrmAntId</a></div><div class="ttdeci">quint16z hrmAntId() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's hrmAntId field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00096">hrmprofilemessage.cpp:96</a></div></div>
+<div class="ttc" id="aclassHrmProfileMessage_html_aefd7b1b3b3004d24bc0bd155947e69bc"><div class="ttname"><a href="classHrmProfileMessage.html#aefd7b1b3b3004d24bc0bd155947e69bc">HrmProfileMessage::logHrv</a></div><div class="ttdeci">bool logHrv() const</div><div class="ttdoc">Returns the HrmProfileMessage data message's logHrv field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="hrmprofilemessage_8cpp_source.html#l00107">hrmprofilemessage.cpp:107</a></div></div>
+<div class="ttc" id="ahrmprofilemessage_8h_html"><div class="ttname"><a href="hrmprofilemessage_8h.html">hrmprofilemessage.h</a></div><div class="ttdoc">Declares the HrmProfileMessage class.</div></div>
+<div class="ttc" id="ahrmprofilemessage__p_8h_html"><div class="ttname"><a href="hrmprofilemessage__p_8h.html">hrmprofilemessage_p.h</a></div><div class="ttdoc">Declares the HrmProfileMessagePrivate class.</div></div>
 <div class="ttc" id="atypes_8h_html_a762f1a1f27964f1fef3bf145d49adf05"><div class="ttname"><a href="types_8h.html#a762f1a1f27964f1fef3bf145d49adf05">FitBaseType</a></div><div class="ttdeci">FitBaseType</div><div class="ttdoc">Garmin FIT FitBaseType type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l03378">types.h:3378</a></div></div>
 <div class="ttc" id="atypes_8h_html_ab1f19760ebc204816d39999628339d7c"><div class="ttname"><a href="types_8h.html#ab1f19760ebc204816d39999628339d7c">quint16z</a></div><div class="ttdeci">quint16 quint16z</div><div class="ttdoc">16-bit unsigned integer, with 0-is-invalid semantics.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00046">types.h:46</a></div></div>
 <div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdoc">Garmin FIT MessageIndex type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00263">types.h:263</a></div></div>

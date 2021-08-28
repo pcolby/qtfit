@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"classDiveGasMessage.html#a44b3a4f463e6d214007701616e2d100a":[3,0,21,1],
+"classDiveGasMessage.html#a4aa9ee78683d591c96b6c78e7a81d76c":[3,0,21,2],
+"classDiveGasMessage.html#a7a53384ced57162484b1d4cfe99ef635":[3,0,21,8],
 "classDiveGasMessage.html#a9e497ff8b2610bda219b6aca3570d461":[3,0,21,6],
 "classDiveGasMessage.html#ae132aa7c0bad9615ef538e514b619bc4":[3,0,21,7],
 "classDiveSettingsMessage.html":[3,0,22],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "classFileIdMessage.html#a48a0bce58111804f711b8074e686d432":[3,0,33,8],
 "classFileIdMessage.html#a566f0cacb2ed4caf295d4ebf8f0f0248":[3,0,33,12],
 "classFileIdMessage.html#a725d33806638c79017e422d2462c82df":[3,0,33,2],
-"classFileIdMessage.html#a7577360415af508e9700407f450f0e1e":[3,0,33,13],
-"classFileIdMessage.html#a855e99a987a19c7d20527743f8717ec8":[3,0,33,10],
-"classFileIdMessage.html#a8f4263c75e0c81686135ae8795f41a4f":[3,0,33,1],
-"classFileIdMessage.html#a947154f2fc21667ab1665f8ea40c686c":[3,0,33,7]
+"classFileIdMessage.html#a7577360415af508e9700407f450f0e1e":[3,0,33,13]
 };

@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -177,7 +177,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> class represents a FIT <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8h_source.html#l00034">34</a> of file <a class="el" href="antchannelidmessage_8h_source.html">antchannelidmessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8h_source.html#l00039">39</a> of file <a class="el" href="antchannelidmessage_8h_source.html">antchannelidmessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4f7d7233841daa4c54d3707930f4fccb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f7d7233841daa4c54d3707930f4fccb">&#9670;&nbsp;</a></span>AntChannelIdMessage() <span class="overload">[1/2]</span></h2>
@@ -197,13 +197,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classAntChannelIdMessagePrivate.html">AntChannelIdMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassAntChannelIdMessagePrivate_html"><div class="ttname"><a href="classAntChannelIdMessagePrivate.html">AntChannelIdMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage__p_8h_source.html#l00034">antchannelidmessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classAntChannelIdMessagePrivate.html">AntChannelIdMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassAntChannelIdMessagePrivate_html"><div class="ttname"><a href="classAntChannelIdMessagePrivate.html">AntChannelIdMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage__p_8h_source.html#l00038">antchannelidmessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -238,11 +238,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                             : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                             : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -265,14 +265,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> data message's <code>channelNumber</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>channelNumber</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;channelNumber;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="ttc" id="aclassAntChannelIdMessage_html"><div class="ttname"><a href="classAntChannelIdMessage.html">AntChannelIdMessage</a></div><div class="ttdoc">The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8h_source.html#l00034">antchannelidmessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;channelNumber;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="ttc" id="aclassAntChannelIdMessage_html"><div class="ttname"><a href="classAntChannelIdMessage.html">AntChannelIdMessage</a></div><div class="ttdoc">The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8h_source.html#l00039">antchannelidmessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00124">setChannelNumber()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00129">setChannelNumber()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -300,13 +300,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> data message's <code>deviceIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>deviceIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceIndex;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00118">118</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceIndex;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00164">setDeviceIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00169">setDeviceIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -334,13 +334,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> data message's <code>deviceNumber</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>deviceNumber</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00091">91</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceNumber;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00096">96</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceNumber;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00144">setDeviceNumber()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00149">setDeviceNumber()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -368,13 +368,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> data message's <code>deviceType</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>deviceType</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceType;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceType;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00134">setDeviceType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00139">setDeviceType()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -408,14 +408,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00124">124</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    d-&gt;channelNumber = <a class="code" href="classAntChannelIdMessage.html#a0f08a7e3114db3264e0f85f06b76acc4">channelNumber</a>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="ttc" id="aclassAntChannelIdMessage_html_a0f08a7e3114db3264e0f85f06b76acc4"><div class="ttname"><a href="classAntChannelIdMessage.html#a0f08a7e3114db3264e0f85f06b76acc4">AntChannelIdMessage::channelNumber</a></div><div class="ttdeci">quint8 channelNumber() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's channelNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00069">antchannelidmessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00129">129</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    d-&gt;channelNumber = <a class="code" href="classAntChannelIdMessage.html#a0f08a7e3114db3264e0f85f06b76acc4">channelNumber</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="ttc" id="aclassAntChannelIdMessage_html_a0f08a7e3114db3264e0f85f06b76acc4"><div class="ttname"><a href="classAntChannelIdMessage.html#a0f08a7e3114db3264e0f85f06b76acc4">AntChannelIdMessage::channelNumber</a></div><div class="ttdeci">quint8 channelNumber() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's channelNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00074">antchannelidmessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00069">channelNumber()</a>.</p>
+<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00074">channelNumber()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -449,14 +449,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00164">164</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    d-&gt;deviceIndex = <a class="code" href="classAntChannelIdMessage.html#a16aa510abeaeac5639d78c7c61f54e0a">deviceIndex</a>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
-<div class="ttc" id="aclassAntChannelIdMessage_html_a16aa510abeaeac5639d78c7c61f54e0a"><div class="ttname"><a href="classAntChannelIdMessage.html#a16aa510abeaeac5639d78c7c61f54e0a">AntChannelIdMessage::deviceIndex</a></div><div class="ttdeci">DeviceIndex deviceIndex() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's deviceIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00113">antchannelidmessage.cpp:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00169">169</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    d-&gt;deviceIndex = <a class="code" href="classAntChannelIdMessage.html#a16aa510abeaeac5639d78c7c61f54e0a">deviceIndex</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="ttc" id="aclassAntChannelIdMessage_html_a16aa510abeaeac5639d78c7c61f54e0a"><div class="ttname"><a href="classAntChannelIdMessage.html#a16aa510abeaeac5639d78c7c61f54e0a">AntChannelIdMessage::deviceIndex</a></div><div class="ttdeci">DeviceIndex deviceIndex() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's deviceIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00118">antchannelidmessage.cpp:118</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00113">deviceIndex()</a>.</p>
+<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00118">deviceIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -490,14 +490,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00144">144</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    d-&gt;deviceNumber = <a class="code" href="classAntChannelIdMessage.html#aa0a65658fabb479673c52fdd0663dfa7">deviceNumber</a>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
-<div class="ttc" id="aclassAntChannelIdMessage_html_aa0a65658fabb479673c52fdd0663dfa7"><div class="ttname"><a href="classAntChannelIdMessage.html#aa0a65658fabb479673c52fdd0663dfa7">AntChannelIdMessage::deviceNumber</a></div><div class="ttdeci">quint16z deviceNumber() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's deviceNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00091">antchannelidmessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00149">149</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    d-&gt;deviceNumber = <a class="code" href="classAntChannelIdMessage.html#aa0a65658fabb479673c52fdd0663dfa7">deviceNumber</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="ttc" id="aclassAntChannelIdMessage_html_aa0a65658fabb479673c52fdd0663dfa7"><div class="ttname"><a href="classAntChannelIdMessage.html#aa0a65658fabb479673c52fdd0663dfa7">AntChannelIdMessage::deviceNumber</a></div><div class="ttdeci">quint16z deviceNumber() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's deviceNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00096">antchannelidmessage.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00091">deviceNumber()</a>.</p>
+<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00096">deviceNumber()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -531,14 +531,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00134">134</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    d-&gt;deviceType = <a class="code" href="classAntChannelIdMessage.html#a0ebbc0a9500c3f49016f2a4a81f46d0e">deviceType</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
-<div class="ttc" id="aclassAntChannelIdMessage_html_a0ebbc0a9500c3f49016f2a4a81f46d0e"><div class="ttname"><a href="classAntChannelIdMessage.html#a0ebbc0a9500c3f49016f2a4a81f46d0e">AntChannelIdMessage::deviceType</a></div><div class="ttdeci">quint8z deviceType() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's deviceType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00080">antchannelidmessage.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00139">139</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    d-&gt;deviceType = <a class="code" href="classAntChannelIdMessage.html#a0ebbc0a9500c3f49016f2a4a81f46d0e">deviceType</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="ttc" id="aclassAntChannelIdMessage_html_a0ebbc0a9500c3f49016f2a4a81f46d0e"><div class="ttname"><a href="classAntChannelIdMessage.html#a0ebbc0a9500c3f49016f2a4a81f46d0e">AntChannelIdMessage::deviceType</a></div><div class="ttdeci">quint8z deviceType() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's deviceType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00085">antchannelidmessage.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00080">deviceType()</a>.</p>
+<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00085">deviceType()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -572,14 +572,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00154">154</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    d-&gt;transmissionType = <a class="code" href="classAntChannelIdMessage.html#ab9bab1c8e1d59736d63b11255a2289fc">transmissionType</a>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
-<div class="ttc" id="aclassAntChannelIdMessage_html_ab9bab1c8e1d59736d63b11255a2289fc"><div class="ttname"><a href="classAntChannelIdMessage.html#ab9bab1c8e1d59736d63b11255a2289fc">AntChannelIdMessage::transmissionType</a></div><div class="ttdeci">quint8z transmissionType() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's transmissionType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00102">antchannelidmessage.cpp:102</a></div></div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00159">159</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    Q_D(<a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    d-&gt;transmissionType = <a class="code" href="classAntChannelIdMessage.html#ab9bab1c8e1d59736d63b11255a2289fc">transmissionType</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="ttc" id="aclassAntChannelIdMessage_html_ab9bab1c8e1d59736d63b11255a2289fc"><div class="ttname"><a href="classAntChannelIdMessage.html#ab9bab1c8e1d59736d63b11255a2289fc">AntChannelIdMessage::transmissionType</a></div><div class="ttdeci">quint8z transmissionType() const</div><div class="ttdoc">Returns the AntChannelIdMessage data message's transmissionType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="antchannelidmessage_8cpp_source.html#l00107">antchannelidmessage.cpp:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00102">transmissionType()</a>.</p>
+<p class="reference">References <a class="el" href="antchannelidmessage_8cpp_source.html#l00107">transmissionType()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -607,13 +607,13 @@ Here is the call graph for this function:</div>
 <p>Returns the <a class="el" href="classAntChannelIdMessage.html" title="The AntChannelIdMessage class represents a FIT AntChannelIdMessage data message.">AntChannelIdMessage</a> data message's <code>transmissionType</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>transmissionType</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;transmissionType;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="antchannelidmessage_8cpp_source.html#l00107">107</a> of file <a class="el" href="antchannelidmessage_8cpp_source.html">antchannelidmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAntChannelIdMessage.html">AntChannelIdMessage</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> d-&gt;transmissionType;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00154">setTransmissionType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="antchannelidmessage_8cpp_source.html#l00159">setTransmissionType()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -1,5 +1,15 @@
 var NAVTREEINDEX2 =
 {
+"classCameraEventMessage.html#ac5290afa9171d1b6612714fad5b0f0c9":[3,0,22,6],
+"classCameraEventMessage.html#ac53dc897f0be2f0874c9cc724197304a":[3,0,22,2],
+"classCameraEventMessage.html#af6bd01af61862007b4a145078619b3d5":[3,0,22,9],
+"classCameraEventMessage.html#afeebcd03ee5bd9bb840ca530cfde0ca4":[3,0,22,3],
+"classCameraEventMessagePrivate.html":[3,0,23],
+"classCameraEventMessagePrivate.html#a003272654726f73245b7720da8688454":[3,0,23,7],
+"classCameraEventMessagePrivate.html#a04bf1c49895c34e20d04815d97782f58":[3,0,23,5],
+"classCameraEventMessagePrivate.html#a09bf3189961498f9975a4ad0b7672701":[3,0,23,4],
+"classCameraEventMessagePrivate.html#a606b0beba8874fd5d6219856873a1560":[3,0,23,3],
+"classCameraEventMessagePrivate.html#aa6656408fa3fbf11db21e692c2dc1914":[3,0,23,6],
 "classCameraEventMessagePrivate.html#ae3d6d54c1c5eae1a70795b4d140649ac":[3,0,23,1],
 "classCameraEventMessagePrivate.html#ae588f20110353a5df65ff9b9bdaf4b02":[3,0,23,2],
 "classCameraEventMessagePrivate.html#af9aa561c8767b98b44211a02e6578057":[3,0,23,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX2 =
 "classDeviceInfoMessagePrivate.html#a90fbdb63055c0c102082124db94a2e42":[3,0,39,2],
 "classDeviceInfoMessagePrivate.html#a9211c0fb21507d37ae76d36ef805edc2":[3,0,39,12],
 "classDeviceInfoMessagePrivate.html#a99ecac05775420237a6a28b6e32394e1":[3,0,39,1],
-"classDeviceInfoMessagePrivate.html#ac43a44781dd2509acda6c4391435b4b2":[3,0,39,14],
-"classDeviceInfoMessagePrivate.html#ac65364291c887cc5a1019bcdf82283f4":[3,0,39,17],
-"classDeviceInfoMessagePrivate.html#acf90afa679dfd7619caeed015f3804e7":[3,0,39,18],
-"classDeviceInfoMessagePrivate.html#ae33ed17016d1f7660c1d73939ebd5f8b":[3,0,39,16],
-"classDeviceInfoMessagePrivate.html#af4a206c1e5a58d253f867d9846283357":[3,0,39,8],
-"classDeviceSettingsMessage.html":[3,0,40],
-"classDeviceSettingsMessage.html#a0164e03fec4b05fa2ed9acbc9f7ca875":[3,0,40,40],
-"classDeviceSettingsMessage.html#a01f2a48fffe315939a2936ee4a0c898f":[3,0,40,8],
-"classDeviceSettingsMessage.html#a085d7c9556463b0cad9e23b31fe8d47c":[3,0,40,16],
-"classDeviceSettingsMessage.html#a08cba8788069c4d8487b7e4107a620bd":[3,0,40,9],
-"classDeviceSettingsMessage.html#a0ba665a72ce6adf7a7859356cfa5f727":[3,0,40,29]
+"classDeviceInfoMessagePrivate.html#ac43a44781dd2509acda6c4391435b4b2":[3,0,39,14]
 };

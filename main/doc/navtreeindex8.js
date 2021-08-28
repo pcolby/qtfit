@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"classSessionMessage.html#aa8215d2273008cc717ebe5e5e777d86d":[3,0,64,26],
+"classSessionMessage.html#aa8334b5485b4bf7543a80130442382a1":[3,0,64,220],
+"classSessionMessage.html#aa8f5046d90683a86226f201376a2afa0":[3,0,64,170],
 "classSessionMessage.html#aa91577df3c5a50204f31f476d04f5025":[3,0,64,217],
 "classSessionMessage.html#aa930b3e0fe0707c74aa586871dc7ee14":[3,0,64,129],
 "classSessionMessage.html#aa970da56807839da99a5e51143a2ec11":[3,0,64,85],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "classUserProfileMessage.html#a762f55199e76b47edf9bee9eb1e923c6":[3,0,75,8],
 "classUserProfileMessage.html#a768891dd35867d242d0bbf47cb176e01":[3,0,75,41],
 "classUserProfileMessage.html#a7c2ccd2673ea49f4cf168da236319290":[3,0,75,30],
-"classUserProfileMessage.html#a803e1120be6a07b23fc9750e06aaa50f":[3,0,75,38],
-"classUserProfileMessage.html#a80c80273f61ba107db13da5767a6bb11":[3,0,75,54],
-"classUserProfileMessage.html#a82ca8ab7d98663ba09f1e82ada9bf54a":[3,0,75,15],
-"classUserProfileMessage.html#a8530287f7e882ec031fbec36a906ff16":[3,0,75,56]
+"classUserProfileMessage.html#a803e1120be6a07b23fc9750e06aaa50f":[3,0,75,38]
 };

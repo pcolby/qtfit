@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('structDataDefinition.html',''); initRe
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac48daaed22d72cd8a025c6c13c455b99"><td class="memItemLeft" align="right" valign="top"><a id="ac48daaed22d72cd8a025c6c13c455b99"></a>
-Architecture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataDefinition.html#ac48daaed22d72cd8a025c6c13c455b99">architecture</a></td></tr>
+<a class="el" href="types__p_8h.html#a9d29ee6d65ece8256e068c11186a92e8">Architecture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataDefinition.html#ac48daaed22d72cd8a025c6c13c455b99">architecture</a></td></tr>
 <tr class="memdesc:ac48daaed22d72cd8a025c6c13c455b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Architecture type for any multi-byte fields. <br /></td></tr>
 <tr class="separator:ac48daaed22d72cd8a025c6c13c455b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdf8d52c19ad998b469e68d3fc1b7ddd"><td class="memItemLeft" align="right" valign="top"><a id="acdf8d52c19ad998b469e68d3fc1b7ddd"></a>
@@ -125,7 +125,7 @@ QList&lt; <a class="el" href="structDeveloperFieldDefinition.html">DeveloperFiel
 <p>Typically, these definitions are extracted from FIT Definition Messages, then used to interpret subsequent FIT Data Messages.</p>
 <dl class="section see"><dt>See also</dt><dd><a href="https://developer.garmin.com/fit/protocol/#fielddefinition">https://developer.garmin.com/fit/protocol/#fielddefinition</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00078">78</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00083">83</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a970e98ec5a59edbea60452eadb71231a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a970e98ec5a59edbea60452eadb71231a">&#9670;&nbsp;</a></span>recordSize</h2>
@@ -142,9 +142,9 @@ QList&lt; <a class="el" href="structDeveloperFieldDefinition.html">DeveloperFiel
 <p>Total size, in byetes, of all fields in the described Data Message. </p>
 <p>This is the combined sum of all sizes in the <code>fieldDefinitions</code> and <code>developerFieldDefintions</code> members, which is calculated and stored when then definition is initially populated (by <a class="el" href="classFitStreamReaderPrivate.html#a1dd45f588b8ecb89cc8968c6c5d0381f" title="Reads and parses a FIT Definition Message.">FitStreamReaderPrivate::parseDefinitionMessage</a>) as an optimisation for code reading the definitions. </p>
 
-<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00096">96</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types__p_8h_source.html#l00101">101</a> of file <a class="el" href="types__p_8h_source.html">types_p.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00515">FitStreamReaderPrivate::parseDataMessage()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00410">FitStreamReaderPrivate::parseDefinitionMessage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fitstreamreader_8cpp_source.html#l00493">FitStreamReaderPrivate::parseDataMessage()</a>, and <a class="el" href="fitstreamreader_8cpp_source.html#l00388">FitStreamReaderPrivate::parseDefinitionMessage()</a>.</p>
 
 </div>
 </div>

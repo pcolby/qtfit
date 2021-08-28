@@ -1,0 +1,4 @@
+<map id="FitStreamReaderPrivate::fitChecksum" name="FitStreamReaderPrivate::fitChecksum">
+<area shape="rect" id="node1" title="Calculates a checksum, as per the algorithm used by FIT file headers." alt="" coords="231,5,408,47"/>
+<area shape="rect" id="node2" href="$classFitStreamReaderPrivate.html#ae158e9d75149893030cedf1b13d6b07b" title="Reads and parses the FIT stream&#39;s file header." alt="" coords="5,5,183,47"/>
+</map>

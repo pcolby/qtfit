@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -159,7 +159,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classVideoTitleMessagePrivate.html">VideoTitleMessagePrivate</a> class provides private implementation for the <a class="el" href="classVideoTitleMessage.html" title="The VideoTitleMessage class represents a FIT VideoTitleMessage data message.">VideoTitleMessage</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classVideoTitleMessage.html" title="The VideoTitleMessage class represents a FIT VideoTitleMessage data message.">VideoTitleMessage</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="videotitlemessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="videotitlemessage__p_8h_source.html">videotitlemessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videotitlemessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="videotitlemessage__p_8h_source.html">videotitlemessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4941fca9f9bff42fd736f1bfca7e875"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4941fca9f9bff42fd736f1bfca7e875">&#9670;&nbsp;</a></span>VideoTitleMessagePrivate()</h2>
@@ -192,20 +192,20 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="videotitlemessage_8cpp_source.html#l00151">151</a> of file <a class="el" href="videotitlemessage_8cpp_source.html">videotitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  , <a class="code" href="classVideoTitleMessagePrivate.html#abde3a4a768ed6f939c5526a94771fb5d">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  , <a class="code" href="classVideoTitleMessagePrivate.html#ac1f324cac1858fcb171077f2f4909293">messageCount</a>(0xFFFF)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::VideoTitle;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassVideoTitleMessagePrivate_html_abde3a4a768ed6f939c5526a94771fb5d"><div class="ttname"><a href="classVideoTitleMessagePrivate.html#abde3a4a768ed6f939c5526a94771fb5d">VideoTitleMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The VideoTitleMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="videotitlemessage__p_8h_source.html#l00042">videotitlemessage_p.h:42</a></div></div>
-<div class="ttc" id="aclassVideoTitleMessagePrivate_html_ac1f324cac1858fcb171077f2f4909293"><div class="ttname"><a href="classVideoTitleMessagePrivate.html#ac1f324cac1858fcb171077f2f4909293">VideoTitleMessagePrivate::messageCount</a></div><div class="ttdeci">quint16 messageCount</div><div class="ttdoc">The VideoTitleMessage FIT message's messageCount field.</div><div class="ttdef"><b>Definition:</b> <a href="videotitlemessage__p_8h_source.html#l00049">videotitlemessage_p.h:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videotitlemessage_8cpp_source.html#l00156">156</a> of file <a class="el" href="videotitlemessage_8cpp_source.html">videotitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  , <a class="code" href="classVideoTitleMessagePrivate.html#abde3a4a768ed6f939c5526a94771fb5d">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  , <a class="code" href="classVideoTitleMessagePrivate.html#ac1f324cac1858fcb171077f2f4909293">messageCount</a>(0xFFFF)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::VideoTitle;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassVideoTitleMessagePrivate_html_abde3a4a768ed6f939c5526a94771fb5d"><div class="ttname"><a href="classVideoTitleMessagePrivate.html#abde3a4a768ed6f939c5526a94771fb5d">VideoTitleMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The VideoTitleMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="videotitlemessage__p_8h_source.html#l00046">videotitlemessage_p.h:46</a></div></div>
+<div class="ttc" id="aclassVideoTitleMessagePrivate_html_ac1f324cac1858fcb171077f2f4909293"><div class="ttname"><a href="classVideoTitleMessagePrivate.html#ac1f324cac1858fcb171077f2f4909293">VideoTitleMessagePrivate::messageCount</a></div><div class="ttdeci">quint16 messageCount</div><div class="ttdoc">The VideoTitleMessage FIT message's messageCount field.</div><div class="ttdef"><b>Definition:</b> <a href="videotitlemessage__p_8h_source.html#l00053">videotitlemessage_p.h:53</a></div></div>
 <div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdoc">Garmin FIT MessageIndex type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00263">types.h:263</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00034">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00039">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
 
 </div>
 </div>
@@ -233,10 +233,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys the <a class="el" href="classVideoTitleMessagePrivate.html">VideoTitleMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="videotitlemessage_8cpp_source.html#l00164">164</a> of file <a class="el" href="videotitlemessage_8cpp_source.html">videotitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="videotitlemessage_8cpp_source.html#l00169">169</a> of file <a class="el" href="videotitlemessage_8cpp_source.html">videotitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,35 +301,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractDataMessagePrivate.html#ae4d13bcc7f39d6050db131e3afe8b4d3">AbstractDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="videotitlemessage_8cpp_source.html#l00169">169</a> of file <a class="el" href="videotitlemessage_8cpp_source.html">videotitlemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:video_title.messageIndex</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;video_title.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        this-&gt;<a class="code" href="classVideoTitleMessagePrivate.html#abde3a4a768ed6f939c5526a94771fb5d">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:video_title.messageCount</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;video_title.messageCount&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        this-&gt;<a class="code" href="classVideoTitleMessagePrivate.html#ac1f324cac1858fcb171077f2f4909293">messageCount</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:video_title.text</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::String, <span class="stringliteral">&quot;video_title.text&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        this-&gt;<a class="code" href="classVideoTitleMessagePrivate.html#a276ef744a04d6ba4471267aba56e3ef2">text</a> = QString::fromUtf8(data);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown video_title message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
-<div class="ttc" id="aclassVideoTitleMessagePrivate_html_a276ef744a04d6ba4471267aba56e3ef2"><div class="ttname"><a href="classVideoTitleMessagePrivate.html#a276ef744a04d6ba4471267aba56e3ef2">VideoTitleMessagePrivate::text</a></div><div class="ttdeci">QString text</div><div class="ttdoc">The VideoTitleMessage FIT message's text field.</div><div class="ttdef"><b>Definition:</b> <a href="videotitlemessage__p_8h_source.html#l00054">videotitlemessage_p.h:54</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videotitlemessage_8cpp_source.html#l00174">174</a> of file <a class="el" href="videotitlemessage_8cpp_source.html">videotitlemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:video_title.messageIndex</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;video_title.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        this-&gt;<a class="code" href="classVideoTitleMessagePrivate.html#abde3a4a768ed6f939c5526a94771fb5d">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:video_title.messageCount</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;video_title.messageCount&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        this-&gt;<a class="code" href="classVideoTitleMessagePrivate.html#ac1f324cac1858fcb171077f2f4909293">messageCount</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:video_title.text</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::String, <span class="stringliteral">&quot;video_title.text&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        this-&gt;<a class="code" href="classVideoTitleMessagePrivate.html#a276ef744a04d6ba4471267aba56e3ef2">text</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown video_title message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
+<div class="ttc" id="aclassVideoTitleMessagePrivate_html_a276ef744a04d6ba4471267aba56e3ef2"><div class="ttname"><a href="classVideoTitleMessagePrivate.html#a276ef744a04d6ba4471267aba56e3ef2">VideoTitleMessagePrivate::text</a></div><div class="ttdeci">QString text</div><div class="ttdoc">The VideoTitleMessage FIT message's text field.</div><div class="ttdef"><b>Definition:</b> <a href="videotitlemessage__p_8h_source.html#l00058">videotitlemessage_p.h:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00194">AbstractDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00199">AbstractDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoTitleMessagePrivate_ac9b5deee16c6a9dd3e2a4d1336e18f03_cgraph.svg" width="462" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoTitleMessagePrivate_ac9b5deee16c6a9dd3e2a4d1336e18f03_cgraph.svg" width="631" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -351,7 +351,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classVideoTitleMessage.html" title="The VideoTitleMessage class represents a FIT VideoTitleMessage data message.">VideoTitleMessage</a> FIT message's messageCount field. </p>
 <p>Total number of title parts </p>
 
-<p class="definition">Definition at line <a class="el" href="videotitlemessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="videotitlemessage__p_8h_source.html">videotitlemessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videotitlemessage__p_8h_source.html#l00053">53</a> of file <a class="el" href="videotitlemessage__p_8h_source.html">videotitlemessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -370,7 +370,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classVideoTitleMessage.html" title="The VideoTitleMessage class represents a FIT VideoTitleMessage data message.">VideoTitleMessage</a> FIT message's messageIndex field. </p>
 <p>Long titles will be split into multiple parts </p>
 
-<p class="definition">Definition at line <a class="el" href="videotitlemessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="videotitlemessage__p_8h_source.html">videotitlemessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videotitlemessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="videotitlemessage__p_8h_source.html">videotitlemessage_p.h</a>.</p>
 
 </div>
 </div>

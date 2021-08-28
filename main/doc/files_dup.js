@@ -1,6 +1,9 @@
 var files_dup =
 [
-    [ "abstractdatamessage.h", "abstractdatamessage_8h_source.html", null ],
+    [ "abstractdatamessage.cpp", "abstractdatamessage_8cpp.html", null ],
+    [ "abstractdatamessage.h", "abstractdatamessage_8h.html", [
+      [ "AbstractDataMessage", "classAbstractDataMessage.html", "classAbstractDataMessage" ]
+    ] ],
     [ "accelerometerdatamessage.cpp", "accelerometerdatamessage_8cpp.html", null ],
     [ "accelerometerdatamessage.h", "accelerometerdatamessage_8h.html", [
       [ "AccelerometerDataMessage", "classAccelerometerDataMessage.html", "classAccelerometerDataMessage" ]
@@ -134,7 +137,10 @@ var files_dup =
       [ "FileIdMessage", "classFileIdMessage.html", "classFileIdMessage" ]
     ] ],
     [ "fitdatamessages.cpp", "fitdatamessages_8cpp.html", null ],
-    [ "fitstreamreader.h", "fitstreamreader_8h_source.html", null ],
+    [ "fitstreamreader.cpp", "fitstreamreader_8cpp.html", null ],
+    [ "fitstreamreader.h", "fitstreamreader_8h.html", [
+      [ "FitStreamReader", "classFitStreamReader.html", "classFitStreamReader" ]
+    ] ],
     [ "goalmessage.cpp", "goalmessage_8cpp.html", null ],
     [ "goalmessage.h", "goalmessage_8h.html", [
       [ "GoalMessage", "classGoalMessage.html", "classGoalMessage" ]
@@ -219,7 +225,7 @@ var files_dup =
     [ "powerzonemessage.h", "powerzonemessage_8h.html", [
       [ "PowerZoneMessage", "classPowerZoneMessage.html", "classPowerZoneMessage" ]
     ] ],
-    [ "QtFit_global.h", "QtFit__global_8h_source.html", null ],
+    [ "QtFit_global.h", "QtFit__global_8h.html", null ],
     [ "recordmessage.cpp", "recordmessage_8cpp.html", null ],
     [ "recordmessage.h", "recordmessage_8h.html", [
       [ "RecordMessage", "classRecordMessage.html", "classRecordMessage" ]

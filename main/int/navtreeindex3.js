@@ -1,5 +1,15 @@
 var NAVTREEINDEX3 =
 {
+"classDeviceInfoMessagePrivate.html#ac65364291c887cc5a1019bcdf82283f4":[3,0,39,17],
+"classDeviceInfoMessagePrivate.html#acf90afa679dfd7619caeed015f3804e7":[3,0,39,18],
+"classDeviceInfoMessagePrivate.html#ae33ed17016d1f7660c1d73939ebd5f8b":[3,0,39,16],
+"classDeviceInfoMessagePrivate.html#af4a206c1e5a58d253f867d9846283357":[3,0,39,8],
+"classDeviceSettingsMessage.html":[3,0,40],
+"classDeviceSettingsMessage.html#a0164e03fec4b05fa2ed9acbc9f7ca875":[3,0,40,40],
+"classDeviceSettingsMessage.html#a01f2a48fffe315939a2936ee4a0c898f":[3,0,40,8],
+"classDeviceSettingsMessage.html#a085d7c9556463b0cad9e23b31fe8d47c":[3,0,40,16],
+"classDeviceSettingsMessage.html#a08cba8788069c4d8487b7e4107a620bd":[3,0,40,9],
+"classDeviceSettingsMessage.html#a0ba665a72ce6adf7a7859356cfa5f727":[3,0,40,29],
 "classDeviceSettingsMessage.html#a0fbda02cc22afebbae67b220a049af2b":[3,0,40,42],
 "classDeviceSettingsMessage.html#a266e744059d9b7b858c2c66d9393202c":[3,0,40,44],
 "classDeviceSettingsMessage.html#a2abf8520480ed9200ba9048ae3776800":[3,0,40,4],
@@ -239,15 +249,5 @@ var NAVTREEINDEX3 =
 "classDiveSummaryMessagePrivate.html#a526fbcffa56e2d6e9050b1f0d8c0deae":[3,0,49,6],
 "classDiveSummaryMessagePrivate.html#a59db8eabeeec17eac687786db89baea6":[3,0,49,4],
 "classDiveSummaryMessagePrivate.html#a6ac0acbbe524d51b104c8b117d5bf8f1":[3,0,49,2],
-"classDiveSummaryMessagePrivate.html#a6fc9c96a13a8a6747685924ae4b57588":[3,0,49,11],
-"classDiveSummaryMessagePrivate.html#a772557949b58caf244bfc70909619330":[3,0,49,12],
-"classDiveSummaryMessagePrivate.html#a80162bfa5d458fddab9af34c69f3d6ea":[3,0,49,13],
-"classDiveSummaryMessagePrivate.html#a851d5c6f3d4fd118ef1bfe5d077e61da":[3,0,49,9],
-"classDiveSummaryMessagePrivate.html#a8fa991861f43c32edb17ebfdea7e46ca":[3,0,49,1],
-"classDiveSummaryMessagePrivate.html#aa6b47c4f893aa61f61818dda1aef3cf3":[3,0,49,10],
-"classDiveSummaryMessagePrivate.html#aa7f2e8dc37c15050f2b1a772f5debadf":[3,0,49,16],
-"classDiveSummaryMessagePrivate.html#aa83d8f77a1eb8826b1167a93a4c3d824":[3,0,49,14],
-"classDiveSummaryMessagePrivate.html#ab2a078dd226d4d3083219bf9cdaeda82":[3,0,49,7],
-"classDiveSummaryMessagePrivate.html#ada2d2382d7efcaf75858135440a60552":[3,0,49,3],
-"classEventMessage.html":[3,0,50]
+"classDiveSummaryMessagePrivate.html#a6fc9c96a13a8a6747685924ae4b57588":[3,0,49,11]
 };

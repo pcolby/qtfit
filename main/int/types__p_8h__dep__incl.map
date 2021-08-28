@@ -1,0 +1,102 @@
+<map id="types_p.h" name="types_p.h">
+<area shape="rect" id="node1" title="Internal types used by QtFit classes." alt="" coords="9373,5,9458,32"/>
+<area shape="rect" id="node2" href="$abstractdatamessage__p_8h.html" title="Declares the AbstractDataMessagePrivate class." alt="" coords="9223,80,9413,107"/>
+<area shape="rect" id="node99" href="$fitstreamreader__p_8h.html" title="Declares the FitStreamReaderPrivate class." alt="" coords="14051,80,14201,107"/>
+<area shape="rect" id="node3" href="$abstractdatamessage_8cpp.html" title="Defines the AbstractDataMessage, and AbstractDataMessagePrivate classes." alt="" coords="5,155,196,181"/>
+<area shape="rect" id="node4" href="$accelerometerdatamessage__p_8h.html" title="Declares the AccelerometerDataMessagePrivate class." alt="" coords="220,155,451,181"/>
+<area shape="rect" id="node6" href="$activitymessage__p_8h.html" title="Declares the ActivityMessagePrivate class." alt="" coords="475,155,633,181"/>
+<area shape="rect" id="node8" href="$antchannelidmessage__p_8h.html" title="Declares the AntChannelIdMessagePrivate class." alt="" coords="657,155,849,181"/>
+<area shape="rect" id="node10" href="$antrxmessage__p_8h.html" title="Declares the AntRxMessagePrivate class." alt="" coords="873,155,1016,181"/>
+<area shape="rect" id="node12" href="$anttxmessage__p_8h.html" title="Declares the AntTxMessagePrivate class." alt="" coords="1040,155,1183,181"/>
+<area shape="rect" id="node14" href="$aviationattitudemessage__p_8h.html" title="Declares the AviationAttitudeMessagePrivate class." alt="" coords="1207,155,1419,181"/>
+<area shape="rect" id="node16" href="$barometerdatamessage__p_8h.html" title="Declares the BarometerDataMessagePrivate class." alt="" coords="1443,155,1649,181"/>
+<area shape="rect" id="node18" href="$bikeprofilemessage__p_8h.html" title="Declares the BikeProfileMessagePrivate class." alt="" coords="1673,155,1849,181"/>
+<area shape="rect" id="node19" href="$bloodpressuremessage__p_8h.html" title="Declares the BloodPressureMessagePrivate class." alt="" coords="1873,155,2073,181"/>
+<area shape="rect" id="node20" href="$cadencezonemessage__p_8h.html" title="Declares the CadenceZoneMessagePrivate class." alt="" coords="2097,155,2291,181"/>
+<area shape="rect" id="node21" href="$cameraeventmessage__p_8h.html" title="Declares the CameraEventMessagePrivate class." alt="" coords="2315,155,2510,181"/>
+<area shape="rect" id="node22" href="$capabilitiesmessage__p_8h.html" title="Declares the CapabilitiesMessagePrivate class." alt="" coords="2535,155,2717,181"/>
+<area shape="rect" id="node23" href="$climbpromessage__p_8h.html" title="Declares the ClimbProMessagePrivate class." alt="" coords="2742,155,2907,181"/>
+<area shape="rect" id="node24" href="$connectivitymessage__p_8h.html" title="Declares the ConnectivityMessagePrivate class." alt="" coords="2932,155,3120,181"/>
+<area shape="rect" id="node25" href="$coursemessage__p_8h.html" title="Declares the CourseMessagePrivate class." alt="" coords="3144,155,3295,181"/>
+<area shape="rect" id="node26" href="$coursepointmessage__p_8h.html" title="Declares the CoursePointMessagePrivate class." alt="" coords="3319,155,3503,181"/>
+<area shape="rect" id="node27" href="$developerdataidmessage__p_8h.html" title="Declares the DeveloperDataIdMessagePrivate class." alt="" coords="3528,155,3743,181"/>
+<area shape="rect" id="node28" href="$deviceinfomessage__p_8h.html" title="Declares the DeviceInfoMessagePrivate class." alt="" coords="3767,155,3943,181"/>
+<area shape="rect" id="node29" href="$devicesettingsmessage__p_8h.html" title="Declares the DeviceSettingsMessagePrivate class." alt="" coords="3967,155,4170,181"/>
+<area shape="rect" id="node30" href="$divealarmmessage__p_8h.html" title="Declares the DiveAlarmMessagePrivate class." alt="" coords="4195,155,4369,181"/>
+<area shape="rect" id="node31" href="$divegasmessage__p_8h.html" title="Declares the DiveGasMessagePrivate class." alt="" coords="4393,155,4552,181"/>
+<area shape="rect" id="node32" href="$divesettingsmessage__p_8h.html" title="Declares the DiveSettingsMessagePrivate class." alt="" coords="4576,155,4764,181"/>
+<area shape="rect" id="node33" href="$divesummarymessage__p_8h.html" title="Declares the DiveSummaryMessagePrivate class." alt="" coords="4788,155,4987,181"/>
+<area shape="rect" id="node34" href="$eventmessage__p_8h.html" title="Declares the EventMessagePrivate class." alt="" coords="5011,155,5156,181"/>
+<area shape="rect" id="node35" href="$exddataconceptconfigurationmessage__p_8h.html" title="Declares the ExdDataConceptConfigurationMessagePrivate class." alt="" coords="5180,155,5477,181"/>
+<area shape="rect" id="node36" href="$exddatafieldconfigurationmessage__p_8h.html" title="Declares the ExdDataFieldConfigurationMessagePrivate class." alt="" coords="5502,155,5777,181"/>
+<area shape="rect" id="node37" href="$exdscreenconfigurationmessage__p_8h.html" title="Declares the ExdScreenConfigurationMessagePrivate class." alt="" coords="5801,155,6061,181"/>
+<area shape="rect" id="node38" href="$exercisetitlemessage__p_8h.html" title="Declares the ExerciseTitleMessagePrivate class." alt="" coords="6085,155,6273,181"/>
+<area shape="rect" id="node39" href="$fieldcapabilitiesmessage__p_8h.html" title="Declares the FieldCapabilitiesMessagePrivate class." alt="" coords="6298,155,6509,181"/>
+<area shape="rect" id="node40" href="$fielddescriptionmessage__p_8h.html" title="Declares the FieldDescriptionMessagePrivate class." alt="" coords="6533,155,6741,181"/>
+<area shape="rect" id="node41" href="$filecapabilitiesmessage__p_8h.html" title="Declares the FileCapabilitiesMessagePrivate class." alt="" coords="6765,155,6967,181"/>
+<area shape="rect" id="node42" href="$filecreatormessage__p_8h.html" title="Declares the FileCreatorMessagePrivate class." alt="" coords="6992,155,7167,181"/>
+<area shape="rect" id="node43" href="$fileidmessage__p_8h.html" title="Declares the FileIdMessagePrivate class." alt="" coords="7191,155,7331,181"/>
+<area shape="rect" id="node44" href="$fitdatamessages_8cpp.html" title="Provides the AbstractDataMessage::fromData implementation." alt="" coords="7355,155,7513,181"/>
+<area shape="rect" id="node45" href="$goalmessage__p_8h.html" title="Declares the GoalMessagePrivate class." alt="" coords="7537,155,7673,181"/>
+<area shape="rect" id="node46" href="$gpsmetadatamessage__p_8h.html" title="Declares the GpsMetadataMessagePrivate class." alt="" coords="7697,155,7891,181"/>
+<area shape="rect" id="node47" href="$gyroscopedatamessage__p_8h.html" title="Declares the GyroscopeDataMessagePrivate class." alt="" coords="7916,155,8120,181"/>
+<area shape="rect" id="node48" href="$hrmessage__p_8h.html" title="Declares the HrMessagePrivate class." alt="" coords="8144,155,8265,181"/>
+<area shape="rect" id="node49" href="$hrmprofilemessage__p_8h.html" title="Declares the HrmProfileMessagePrivate class." alt="" coords="8289,155,8464,181"/>
+<area shape="rect" id="node50" href="$hrvmessage__p_8h.html" title="Declares the HrvMessagePrivate class." alt="" coords="8488,155,8617,181"/>
+<area shape="rect" id="node51" href="$hrzonemessage__p_8h.html" title="Declares the HrZoneMessagePrivate class." alt="" coords="8642,155,8794,181"/>
+<area shape="rect" id="node52" href="$jumpmessage__p_8h.html" title="Declares the JumpMessagePrivate class." alt="" coords="8818,155,8959,181"/>
+<area shape="rect" id="node53" href="$lapmessage__p_8h.html" title="Declares the LapMessagePrivate class." alt="" coords="8983,155,9111,181"/>
+<area shape="rect" id="node54" href="$lengthmessage__p_8h.html" title="Declares the LengthMessagePrivate class." alt="" coords="9135,155,9285,181"/>
+<area shape="rect" id="node55" href="$magnetometerdatamessage__p_8h.html" title="Declares the MagnetometerDataMessagePrivate class." alt="" coords="9309,155,9543,181"/>
+<area shape="rect" id="node56" href="$memoglobmessage__p_8h.html" title="Declares the MemoGlobMessagePrivate class." alt="" coords="9567,155,9746,181"/>
+<area shape="rect" id="node57" href="$mesgcapabilitiesmessage__p_8h.html" title="Declares the MesgCapabilitiesMessagePrivate class." alt="" coords="9770,155,9989,181"/>
+<area shape="rect" id="node58" href="$metzonemessage__p_8h.html" title="Declares the MetZoneMessagePrivate class." alt="" coords="10013,155,10178,181"/>
+<area shape="rect" id="node59" href="$monitoringinfomessage__p_8h.html" title="Declares the MonitoringInfoMessagePrivate class." alt="" coords="10203,155,10407,181"/>
+<area shape="rect" id="node60" href="$monitoringmessage__p_8h.html" title="Declares the MonitoringMessagePrivate class." alt="" coords="10431,155,10610,181"/>
+<area shape="rect" id="node61" href="$nmeasentencemessage__p_8h.html" title="Declares the NmeaSentenceMessagePrivate class." alt="" coords="10635,155,10839,181"/>
+<area shape="rect" id="node62" href="$obdiidatamessage__p_8h.html" title="Declares the ObdiiDataMessagePrivate class." alt="" coords="10863,155,11032,181"/>
+<area shape="rect" id="node63" href="$ohrsettingsmessage__p_8h.html" title="Declares the OhrSettingsMessagePrivate class." alt="" coords="11057,155,11238,181"/>
+<area shape="rect" id="node64" href="$onedsensorcalibrationmessage__p_8h.html" title="Declares the OneDSensorCalibrationMessagePrivate class." alt="" coords="11263,155,11515,181"/>
+<area shape="rect" id="node65" href="$powerzonemessage__p_8h.html" title="Declares the PowerZoneMessagePrivate class." alt="" coords="11539,155,11718,181"/>
+<area shape="rect" id="node66" href="$recordmessage__p_8h.html" title="Declares the RecordMessagePrivate class." alt="" coords="11742,155,11891,181"/>
+<area shape="rect" id="node67" href="$schedulemessage__p_8h.html" title="Declares the ScheduleMessagePrivate class." alt="" coords="11916,155,12083,181"/>
+<area shape="rect" id="node68" href="$sdmprofilemessage__p_8h.html" title="Declares the SdmProfileMessagePrivate class." alt="" coords="12107,155,12284,181"/>
+<area shape="rect" id="node69" href="$segmentfilemessage__p_8h.html" title="Declares the SegmentFileMessagePrivate class." alt="" coords="12308,155,12493,181"/>
+<area shape="rect" id="node70" href="$segmentidmessage__p_8h.html" title="Declares the SegmentIdMessagePrivate class." alt="" coords="12517,155,12695,181"/>
+<area shape="rect" id="node71" href="$segmentlapmessage__p_8h.html" title="Declares the SegmentLapMessagePrivate class." alt="" coords="12719,155,12904,181"/>
+<area shape="rect" id="node72" href="$segmentleaderboardentrymessage__p_8h.html" title="Declares the SegmentLeaderboardEntryMessagePrivate class." alt="" coords="12929,155,13206,181"/>
+<area shape="rect" id="node73" href="$segmentpointmessage__p_8h.html" title="Declares the SegmentPointMessagePrivate class." alt="" coords="13231,155,13429,181"/>
+<area shape="rect" id="node74" href="$sessionmessage__p_8h.html" title="Declares the SessionMessagePrivate class." alt="" coords="13454,155,13611,181"/>
+<area shape="rect" id="node75" href="$setmessage__p_8h.html" title="Declares the SetMessagePrivate class." alt="" coords="13635,155,13763,181"/>
+<area shape="rect" id="node76" href="$slavedevicemessage__p_8h.html" title="Declares the SlaveDeviceMessagePrivate class." alt="" coords="13787,155,13974,181"/>
+<area shape="rect" id="node77" href="$softwaremessage__p_8h.html" title="Declares the SoftwareMessagePrivate class." alt="" coords="13999,155,14163,181"/>
+<area shape="rect" id="node78" href="$speedzonemessage__p_8h.html" title="Declares the SpeedZoneMessagePrivate class." alt="" coords="14187,155,14366,181"/>
+<area shape="rect" id="node79" href="$sportmessage__p_8h.html" title="Declares the SportMessagePrivate class." alt="" coords="14390,155,14531,181"/>
+<area shape="rect" id="node80" href="$stresslevelmessage__p_8h.html" title="Declares the StressLevelMessagePrivate class." alt="" coords="14555,155,14734,181"/>
+<area shape="rect" id="node81" href="$threedsensorcalibrationmessage__p_8h.html" title="Declares the ThreeDSensorCalibrationMessagePrivate class." alt="" coords="14759,155,15021,181"/>
+<area shape="rect" id="node82" href="$timestampcorrelationmessage__p_8h.html" title="Declares the TimestampCorrelationMessagePrivate class." alt="" coords="15045,155,15295,181"/>
+<area shape="rect" id="node83" href="$totalsmessage__p_8h.html" title="Declares the TotalsMessagePrivate class." alt="" coords="15319,155,15464,181"/>
+<area shape="rect" id="node84" href="$trainingfilemessage__p_8h.html" title="Declares the TrainingFileMessagePrivate class." alt="" coords="15489,155,15667,181"/>
+<area shape="rect" id="node85" href="$userprofilemessage__p_8h.html" title="Declares the UserProfileMessagePrivate class." alt="" coords="15692,155,15869,181"/>
+<area shape="rect" id="node86" href="$videoclipmessage__p_8h.html" title="Declares the VideoClipMessagePrivate class." alt="" coords="15893,155,16060,181"/>
+<area shape="rect" id="node87" href="$videodescriptionmessage__p_8h.html" title="Declares the VideoDescriptionMessagePrivate class." alt="" coords="16085,155,16301,181"/>
+<area shape="rect" id="node88" href="$videoframemessage__p_8h.html" title="Declares the VideoFrameMessagePrivate class." alt="" coords="16325,155,16508,181"/>
+<area shape="rect" id="node89" href="$videomessage__p_8h.html" title="Declares the VideoMessagePrivate class." alt="" coords="16533,155,16677,181"/>
+<area shape="rect" id="node90" href="$videotitlemessage__p_8h.html" title="Declares the VideoTitleMessagePrivate class." alt="" coords="16701,155,16871,181"/>
+<area shape="rect" id="node91" href="$watchfacesettingsmessage__p_8h.html" title="Declares the WatchfaceSettingsMessagePrivate class." alt="" coords="16895,155,17122,181"/>
+<area shape="rect" id="node92" href="$weatheralertmessage__p_8h.html" title="Declares the WeatherAlertMessagePrivate class." alt="" coords="17147,155,17337,181"/>
+<area shape="rect" id="node93" href="$weatherconditionsmessage__p_8h.html" title="Declares the WeatherConditionsMessagePrivate class." alt="" coords="17361,155,17589,181"/>
+<area shape="rect" id="node94" href="$weightscalemessage__p_8h.html" title="Declares the WeightScaleMessagePrivate class." alt="" coords="17614,155,17801,181"/>
+<area shape="rect" id="node95" href="$workoutmessage__p_8h.html" title="Declares the WorkoutMessagePrivate class." alt="" coords="17825,155,17985,181"/>
+<area shape="rect" id="node96" href="$workoutsessionmessage__p_8h.html" title="Declares the WorkoutSessionMessagePrivate class." alt="" coords="18009,155,18219,181"/>
+<area shape="rect" id="node97" href="$workoutstepmessage__p_8h.html" title="Declares the WorkoutStepMessagePrivate class." alt="" coords="18243,155,18431,181"/>
+<area shape="rect" id="node98" href="$zonestargetmessage__p_8h.html" title="Declares the ZonesTargetMessagePrivate class." alt="" coords="18455,155,18640,181"/>
+<area shape="rect" id="node5" href="$accelerometerdatamessage_8cpp.html" title="Defines the AccelerometerDataMessage, and AccelerometerDataMessagePrivate classes." alt="" coords="220,229,451,256"/>
+<area shape="rect" id="node7" href="$activitymessage_8cpp.html" title="Defines the ActivityMessage, and ActivityMessagePrivate classes." alt="" coords="475,229,633,256"/>
+<area shape="rect" id="node9" href="$antchannelidmessage_8cpp.html" title="Defines the AntChannelIdMessage, and AntChannelIdMessagePrivate classes." alt="" coords="657,229,849,256"/>
+<area shape="rect" id="node11" href="$antrxmessage_8cpp.html" title="Defines the AntRxMessage, and AntRxMessagePrivate classes." alt="" coords="873,229,1016,256"/>
+<area shape="rect" id="node13" href="$anttxmessage_8cpp.html" title="Defines the AntTxMessage, and AntTxMessagePrivate classes." alt="" coords="1040,229,1183,256"/>
+<area shape="rect" id="node15" href="$aviationattitudemessage_8cpp.html" title="Defines the AviationAttitudeMessage, and AviationAttitudeMessagePrivate classes." alt="" coords="1207,229,1419,256"/>
+<area shape="rect" id="node17" href="$barometerdatamessage_8cpp.html" title="Defines the BarometerDataMessage, and BarometerDataMessagePrivate classes." alt="" coords="1443,229,1649,256"/>
+<area shape="rect" id="node100" href="$fitstreamreader_8cpp.html" title="Defines the FitStreamReader, and FitStreamReaderPrivate classes." alt="" coords="18665,155,18814,181"/>
+</map>

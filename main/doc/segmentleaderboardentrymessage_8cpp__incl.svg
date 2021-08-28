@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Defines the SegmentLeaderboardEntryMessage, and SegmentLeaderboardEntryMessagePrivate classes.">
 <polygon fill="#bfbfbf" stroke="black" points="187.5,-280.5 187.5,-299.5 395.5,-299.5 395.5,-280.5 187.5,-280.5"/>
 <text text-anchor="middle" x="291.5" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentleaderboardentrymessage.cpp</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="segmentleaderboardentrymessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="segmentleaderboardentrymessage_8h.html" target="_top" xlink:title="Declares the SegmentLeaderboardEntryMessage class.">
 <polygon fill="none" stroke="black" points="0,-224.5 0,-243.5 197,-243.5 197,-224.5 0,-224.5"/>
 <text text-anchor="middle" x="98.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">segmentleaderboardentrymessage.h</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="abstractdatamessage_8h.html" target="_top" xlink:title="Declares the AbstractDataMessage class.">
 <polygon fill="none" stroke="black" points="42,-168.5 42,-187.5 173,-187.5 173,-168.5 42,-168.5"/>
 <text text-anchor="middle" x="107.5" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title="Global QtFit library macros.">
 <polygon fill="none" stroke="black" points="76.5,-56.5 76.5,-75.5 160.5,-75.5 160.5,-56.5 76.5,-56.5"/>
 <text text-anchor="middle" x="118.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>

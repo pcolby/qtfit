@@ -6,6 +6,7 @@ var classFitStreamReaderPrivate =
     [ "bytesAvailable", "classFitStreamReaderPrivate.html#a9fd7e97c0d181adad6fce9e3385beee4", null ],
     [ "bytesAvailable", "classFitStreamReaderPrivate.html#a9fd7e97c0d181adad6fce9e3385beee4", null ],
     [ "bytesAvailable", "classFitStreamReaderPrivate.html#a645af0c055d34bd02b2034b3d9db62c6", null ],
+    [ "fitChecksum", "classFitStreamReaderPrivate.html#a4aa9e9225c85c1a34d28e700f9d55565", null ],
     [ "isDefinitionMessage", "classFitStreamReaderPrivate.html#a1a5399efd9c35426756598773cacd14e", null ],
     [ "parseDataMessage", "classFitStreamReaderPrivate.html#a4c08b06daf62ca841e563d3582da44da", null ],
     [ "parseDefinitionMessage", "classFitStreamReaderPrivate.html#a1dd45f588b8ecb89cc8968c6c5d0381f", null ],

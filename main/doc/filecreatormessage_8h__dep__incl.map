@@ -1,5 +1,5 @@
 <map id="filecreatormessage.h" name="filecreatormessage.h">
-<area shape="rect" id="node1" title=" " alt="" coords="108,5,267,32"/>
-<area shape="rect" id="node2" href="$filecreatormessage_8cpp.html" title=" " alt="" coords="5,80,180,107"/>
+<area shape="rect" id="node1" title="Declares the FileCreatorMessage class." alt="" coords="108,5,267,32"/>
+<area shape="rect" id="node2" href="$filecreatormessage_8cpp.html" title="Defines the FileCreatorMessage, and FileCreatorMessagePrivate classes." alt="" coords="5,80,180,107"/>
 <area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title="Provides the AbstractDataMessage::fromData implementation." alt="" coords="205,80,362,107"/>
 </map>

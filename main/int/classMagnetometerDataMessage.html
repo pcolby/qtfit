@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -201,7 +201,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classMagnetometerDataMessage.html" title="The MagnetometerDataMessage class represents a FIT MagnetometerDataMessage data message.">MagnetometerDataMessage</a> class represents a FIT <a class="el" href="classMagnetometerDataMessage.html" title="The MagnetometerDataMessage class represents a FIT MagnetometerDataMessage data message.">MagnetometerDataMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8h_source.html#l00034">34</a> of file <a class="el" href="magnetometerdatamessage_8h_source.html">magnetometerdatamessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8h_source.html#l00039">39</a> of file <a class="el" href="magnetometerdatamessage_8h_source.html">magnetometerdatamessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab4468d4f43726318974f0c0c65c0a0af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4468d4f43726318974f0c0c65c0a0af">&#9670;&nbsp;</a></span>MagnetometerDataMessage() <span class="overload">[1/2]</span></h2>
@@ -221,13 +221,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classMagnetometerDataMessage.html" title="The MagnetometerDataMessage class represents a FIT MagnetometerDataMessage data message.">MagnetometerDataMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classMagnetometerDataMessagePrivate.html">MagnetometerDataMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassMagnetometerDataMessagePrivate_html"><div class="ttname"><a href="classMagnetometerDataMessagePrivate.html">MagnetometerDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage__p_8h_source.html#l00034">magnetometerdatamessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classMagnetometerDataMessagePrivate.html">MagnetometerDataMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassMagnetometerDataMessagePrivate_html"><div class="ttname"><a href="classMagnetometerDataMessagePrivate.html">MagnetometerDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage__p_8h_source.html#l00038">magnetometerdatamessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -262,11 +262,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -290,14 +290,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Calibrated Magnetometer reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibratedMagX</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00154">154</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedMagX;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html"><div class="ttname"><a href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a></div><div class="ttdoc">The MagnetometerDataMessage class represents a FIT MagnetometerDataMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8h_source.html#l00034">magnetometerdatamessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00159">159</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedMagX;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html"><div class="ttname"><a href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a></div><div class="ttdoc">The MagnetometerDataMessage class represents a FIT MagnetometerDataMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8h_source.html#l00039">magnetometerdatamessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00251">setCalibratedMagX()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00256">setCalibratedMagX()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -326,13 +326,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated Magnetometer reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibratedMagY</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00167">167</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedMagY;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00172">172</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedMagY;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00261">setCalibratedMagY()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00266">setCalibratedMagY()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -361,13 +361,13 @@ Here is the caller graph for this function:</div>
 <p>Calibrated Magnetometer reading</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>calibratedMagZ</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00180">180</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;{</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedMagZ;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00185">185</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> d-&gt;calibratedMagZ;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00271">setCalibratedMagZ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00276">setCalibratedMagZ()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -396,13 +396,13 @@ Here is the caller graph for this function:</div>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>magX</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> d-&gt;magX;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00118">118</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> d-&gt;magX;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00221">setMagX()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00226">setMagX()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -431,13 +431,13 @@ Here is the caller graph for this function:</div>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>magY</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00127">127</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> d-&gt;magY;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00132">132</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> d-&gt;magY;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00231">setMagY()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00236">setMagY()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -466,13 +466,13 @@ Here is the caller graph for this function:</div>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>magZ</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00141">141</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> d-&gt;magZ;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00146">146</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> d-&gt;magZ;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00241">setMagZ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00246">setMagZ()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -501,13 +501,13 @@ Here is the caller graph for this function:</div>
 <p>Each time in the array describes the time at which the compass sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in cmps_x and cmps_y and cmps_z</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>sampleTimeOffset</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00099">99</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> d-&gt;sampleTimeOffset;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00104">104</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> d-&gt;sampleTimeOffset;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00211">setSampleTimeOffset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00216">setSampleTimeOffset()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -541,14 +541,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00251">251</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    d-&gt;calibratedMagX = <a class="code" href="classMagnetometerDataMessage.html#a8a20236cf56ae80bb3907015a7c21d16">calibratedMagX</a>;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_a8a20236cf56ae80bb3907015a7c21d16"><div class="ttname"><a href="classMagnetometerDataMessage.html#a8a20236cf56ae80bb3907015a7c21d16">MagnetometerDataMessage::calibratedMagX</a></div><div class="ttdeci">float calibratedMagX() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's calibratedMagX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00154">magnetometerdatamessage.cpp:154</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00256">256</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    d-&gt;calibratedMagX = <a class="code" href="classMagnetometerDataMessage.html#a8a20236cf56ae80bb3907015a7c21d16">calibratedMagX</a>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_a8a20236cf56ae80bb3907015a7c21d16"><div class="ttname"><a href="classMagnetometerDataMessage.html#a8a20236cf56ae80bb3907015a7c21d16">MagnetometerDataMessage::calibratedMagX</a></div><div class="ttdeci">float calibratedMagX() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's calibratedMagX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00159">magnetometerdatamessage.cpp:159</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00154">calibratedMagX()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00159">calibratedMagX()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -582,14 +582,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00261">261</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    d-&gt;calibratedMagY = <a class="code" href="classMagnetometerDataMessage.html#a138b9ec6ed84da9a4a613bdf050218b5">calibratedMagY</a>;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_a138b9ec6ed84da9a4a613bdf050218b5"><div class="ttname"><a href="classMagnetometerDataMessage.html#a138b9ec6ed84da9a4a613bdf050218b5">MagnetometerDataMessage::calibratedMagY</a></div><div class="ttdeci">float calibratedMagY() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's calibratedMagY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00167">magnetometerdatamessage.cpp:167</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00266">266</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    d-&gt;calibratedMagY = <a class="code" href="classMagnetometerDataMessage.html#a138b9ec6ed84da9a4a613bdf050218b5">calibratedMagY</a>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_a138b9ec6ed84da9a4a613bdf050218b5"><div class="ttname"><a href="classMagnetometerDataMessage.html#a138b9ec6ed84da9a4a613bdf050218b5">MagnetometerDataMessage::calibratedMagY</a></div><div class="ttdeci">float calibratedMagY() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's calibratedMagY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00172">magnetometerdatamessage.cpp:172</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00167">calibratedMagY()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00172">calibratedMagY()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -623,14 +623,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00271">271</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    d-&gt;calibratedMagZ = <a class="code" href="classMagnetometerDataMessage.html#a152d2f08302e91fe1297d406a640405c">calibratedMagZ</a>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_a152d2f08302e91fe1297d406a640405c"><div class="ttname"><a href="classMagnetometerDataMessage.html#a152d2f08302e91fe1297d406a640405c">MagnetometerDataMessage::calibratedMagZ</a></div><div class="ttdeci">float calibratedMagZ() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's calibratedMagZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00180">magnetometerdatamessage.cpp:180</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00276">276</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    d-&gt;calibratedMagZ = <a class="code" href="classMagnetometerDataMessage.html#a152d2f08302e91fe1297d406a640405c">calibratedMagZ</a>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_a152d2f08302e91fe1297d406a640405c"><div class="ttname"><a href="classMagnetometerDataMessage.html#a152d2f08302e91fe1297d406a640405c">MagnetometerDataMessage::calibratedMagZ</a></div><div class="ttdeci">float calibratedMagZ() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's calibratedMagZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00185">magnetometerdatamessage.cpp:185</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00180">calibratedMagZ()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00185">calibratedMagZ()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -664,14 +664,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00221">221</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    d-&gt;magX = <a class="code" href="classMagnetometerDataMessage.html#aee0d50b19389210e4fd219f22b8228d5">magX</a>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_aee0d50b19389210e4fd219f22b8228d5"><div class="ttname"><a href="classMagnetometerDataMessage.html#aee0d50b19389210e4fd219f22b8228d5">MagnetometerDataMessage::magX</a></div><div class="ttdeci">quint16 magX() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's magX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00113">magnetometerdatamessage.cpp:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00226">226</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    d-&gt;magX = <a class="code" href="classMagnetometerDataMessage.html#aee0d50b19389210e4fd219f22b8228d5">magX</a>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_aee0d50b19389210e4fd219f22b8228d5"><div class="ttname"><a href="classMagnetometerDataMessage.html#aee0d50b19389210e4fd219f22b8228d5">MagnetometerDataMessage::magX</a></div><div class="ttdeci">quint16 magX() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's magX field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00118">magnetometerdatamessage.cpp:118</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00113">magX()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00118">magX()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -705,14 +705,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00231">231</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    d-&gt;magY = <a class="code" href="classMagnetometerDataMessage.html#a0eeba7c7e0a07bcfd7854f8d3f445dc2">magY</a>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_a0eeba7c7e0a07bcfd7854f8d3f445dc2"><div class="ttname"><a href="classMagnetometerDataMessage.html#a0eeba7c7e0a07bcfd7854f8d3f445dc2">MagnetometerDataMessage::magY</a></div><div class="ttdeci">quint16 magY() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's magY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00127">magnetometerdatamessage.cpp:127</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00236">236</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    d-&gt;magY = <a class="code" href="classMagnetometerDataMessage.html#a0eeba7c7e0a07bcfd7854f8d3f445dc2">magY</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_a0eeba7c7e0a07bcfd7854f8d3f445dc2"><div class="ttname"><a href="classMagnetometerDataMessage.html#a0eeba7c7e0a07bcfd7854f8d3f445dc2">MagnetometerDataMessage::magY</a></div><div class="ttdeci">quint16 magY() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's magY field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00132">magnetometerdatamessage.cpp:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00127">magY()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00132">magY()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -746,14 +746,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00241">241</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    d-&gt;magZ = <a class="code" href="classMagnetometerDataMessage.html#af183af5b5f57fb239ed269631dacdc45">magZ</a>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_af183af5b5f57fb239ed269631dacdc45"><div class="ttname"><a href="classMagnetometerDataMessage.html#af183af5b5f57fb239ed269631dacdc45">MagnetometerDataMessage::magZ</a></div><div class="ttdeci">quint16 magZ() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's magZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00141">magnetometerdatamessage.cpp:141</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00246">246</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;{</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    d-&gt;magZ = <a class="code" href="classMagnetometerDataMessage.html#af183af5b5f57fb239ed269631dacdc45">magZ</a>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_af183af5b5f57fb239ed269631dacdc45"><div class="ttname"><a href="classMagnetometerDataMessage.html#af183af5b5f57fb239ed269631dacdc45">MagnetometerDataMessage::magZ</a></div><div class="ttdeci">quint16 magZ() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's magZ field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00146">magnetometerdatamessage.cpp:146</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00141">magZ()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00146">magZ()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -787,14 +787,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00211">211</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    d-&gt;sampleTimeOffset = <a class="code" href="classMagnetometerDataMessage.html#a08270d47c6f8770848b61c10d32b8f59">sampleTimeOffset</a>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_a08270d47c6f8770848b61c10d32b8f59"><div class="ttname"><a href="classMagnetometerDataMessage.html#a08270d47c6f8770848b61c10d32b8f59">MagnetometerDataMessage::sampleTimeOffset</a></div><div class="ttdeci">quint16 sampleTimeOffset() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's sampleTimeOffset field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00099">magnetometerdatamessage.cpp:99</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00216">216</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    d-&gt;sampleTimeOffset = <a class="code" href="classMagnetometerDataMessage.html#a08270d47c6f8770848b61c10d32b8f59">sampleTimeOffset</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_a08270d47c6f8770848b61c10d32b8f59"><div class="ttname"><a href="classMagnetometerDataMessage.html#a08270d47c6f8770848b61c10d32b8f59">MagnetometerDataMessage::sampleTimeOffset</a></div><div class="ttdeci">quint16 sampleTimeOffset() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's sampleTimeOffset field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00104">magnetometerdatamessage.cpp:104</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00099">sampleTimeOffset()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00104">sampleTimeOffset()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -828,14 +828,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00191">191</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    d-&gt;timestamp = <a class="code" href="classMagnetometerDataMessage.html#afdee6a87b1bb7fa88053c0a69ea9df64">timestamp</a>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_afdee6a87b1bb7fa88053c0a69ea9df64"><div class="ttname"><a href="classMagnetometerDataMessage.html#afdee6a87b1bb7fa88053c0a69ea9df64">MagnetometerDataMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00071">magnetometerdatamessage.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00196">196</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    d-&gt;timestamp = <a class="code" href="classMagnetometerDataMessage.html#afdee6a87b1bb7fa88053c0a69ea9df64">timestamp</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_afdee6a87b1bb7fa88053c0a69ea9df64"><div class="ttname"><a href="classMagnetometerDataMessage.html#afdee6a87b1bb7fa88053c0a69ea9df64">MagnetometerDataMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00076">magnetometerdatamessage.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00071">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00076">timestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -869,14 +869,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00201">201</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    d-&gt;timestampMs = <a class="code" href="classMagnetometerDataMessage.html#a4044cd0972d72e0dc0d554ff5226c529">timestampMs</a>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
-<div class="ttc" id="aclassMagnetometerDataMessage_html_a4044cd0972d72e0dc0d554ff5226c529"><div class="ttname"><a href="classMagnetometerDataMessage.html#a4044cd0972d72e0dc0d554ff5226c529">MagnetometerDataMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00084">magnetometerdatamessage.cpp:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00206">206</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    Q_D(<a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    d-&gt;timestampMs = <a class="code" href="classMagnetometerDataMessage.html#a4044cd0972d72e0dc0d554ff5226c529">timestampMs</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="ttc" id="aclassMagnetometerDataMessage_html_a4044cd0972d72e0dc0d554ff5226c529"><div class="ttname"><a href="classMagnetometerDataMessage.html#a4044cd0972d72e0dc0d554ff5226c529">MagnetometerDataMessage::timestampMs</a></div><div class="ttdeci">quint16 timestampMs() const</div><div class="ttdoc">Returns the MagnetometerDataMessage data message's timestampMs field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="magnetometerdatamessage_8cpp_source.html#l00089">magnetometerdatamessage.cpp:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00084">timestampMs()</a>.</p>
+<p class="reference">References <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00089">timestampMs()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -905,13 +905,13 @@ Here is the call graph for this function:</div>
 <p>Whole second part of the timestamp</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00071">71</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00076">76</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00191">setTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00196">setTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -940,13 +940,13 @@ Here is the caller graph for this function:</div>
 <p>Millisecond part of the timestamp.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestampMs</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00084">84</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00089">89</a> of file <a class="el" href="magnetometerdatamessage_8cpp_source.html">magnetometerdatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classMagnetometerDataMessage.html">MagnetometerDataMessage</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestampMs;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00201">setTimestampMs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="magnetometerdatamessage_8cpp_source.html#l00206">setTimestampMs()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

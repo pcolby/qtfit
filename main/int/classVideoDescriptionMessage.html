@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -165,7 +165,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classVideoDescriptionMessage.html" title="The VideoDescriptionMessage class represents a FIT VideoDescriptionMessage data message.">VideoDescriptionMessage</a> class represents a FIT <a class="el" href="classVideoDescriptionMessage.html" title="The VideoDescriptionMessage class represents a FIT VideoDescriptionMessage data message.">VideoDescriptionMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8h_source.html#l00034">34</a> of file <a class="el" href="videodescriptionmessage_8h_source.html">videodescriptionmessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8h_source.html#l00039">39</a> of file <a class="el" href="videodescriptionmessage_8h_source.html">videodescriptionmessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afbdeb18604589ad1055eb782685c59e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbdeb18604589ad1055eb782685c59e0">&#9670;&nbsp;</a></span>VideoDescriptionMessage() <span class="overload">[1/2]</span></h2>
@@ -185,13 +185,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classVideoDescriptionMessage.html" title="The VideoDescriptionMessage class represents a FIT VideoDescriptionMessage data message.">VideoDescriptionMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classVideoDescriptionMessagePrivate.html">VideoDescriptionMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassVideoDescriptionMessagePrivate_html"><div class="ttname"><a href="classVideoDescriptionMessagePrivate.html">VideoDescriptionMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage__p_8h_source.html#l00034">videodescriptionmessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                 : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classVideoDescriptionMessagePrivate.html">VideoDescriptionMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassVideoDescriptionMessagePrivate_html"><div class="ttname"><a href="classVideoDescriptionMessagePrivate.html">VideoDescriptionMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage__p_8h_source.html#l00038">videodescriptionmessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -226,11 +226,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                                         : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -254,14 +254,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Total number of description parts</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>messageCount</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00084">84</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageCount;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="ttc" id="aclassVideoDescriptionMessage_html"><div class="ttname"><a href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a></div><div class="ttdoc">The VideoDescriptionMessage class represents a FIT VideoDescriptionMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8h_source.html#l00034">videodescriptionmessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00089">89</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageCount;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="aclassVideoDescriptionMessage_html"><div class="ttname"><a href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a></div><div class="ttdoc">The VideoDescriptionMessage class represents a FIT VideoDescriptionMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8h_source.html#l00039">videodescriptionmessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="videodescriptionmessage_8cpp_source.html#l00116">setMessageCount()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="videodescriptionmessage_8cpp_source.html#l00121">setMessageCount()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -290,13 +290,13 @@ Here is the caller graph for this function:</div>
 <p>Long descriptions will be split into multiple parts</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>messageIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00071">71</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00076">76</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="videodescriptionmessage_8cpp_source.html#l00106">setMessageIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="videodescriptionmessage_8cpp_source.html#l00111">setMessageIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -330,14 +330,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00116">116</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    Q_D(<a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    d-&gt;messageCount = <a class="code" href="classVideoDescriptionMessage.html#ab6bce81afe57fa9326f04417ad98d053">messageCount</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
-<div class="ttc" id="aclassVideoDescriptionMessage_html_ab6bce81afe57fa9326f04417ad98d053"><div class="ttname"><a href="classVideoDescriptionMessage.html#ab6bce81afe57fa9326f04417ad98d053">VideoDescriptionMessage::messageCount</a></div><div class="ttdeci">quint16 messageCount() const</div><div class="ttdoc">Returns the VideoDescriptionMessage data message's messageCount field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8cpp_source.html#l00084">videodescriptionmessage.cpp:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00121">121</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    Q_D(<a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    d-&gt;messageCount = <a class="code" href="classVideoDescriptionMessage.html#ab6bce81afe57fa9326f04417ad98d053">messageCount</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="ttc" id="aclassVideoDescriptionMessage_html_ab6bce81afe57fa9326f04417ad98d053"><div class="ttname"><a href="classVideoDescriptionMessage.html#ab6bce81afe57fa9326f04417ad98d053">VideoDescriptionMessage::messageCount</a></div><div class="ttdeci">quint16 messageCount() const</div><div class="ttdoc">Returns the VideoDescriptionMessage data message's messageCount field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8cpp_source.html#l00089">videodescriptionmessage.cpp:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="videodescriptionmessage_8cpp_source.html#l00084">messageCount()</a>.</p>
+<p class="reference">References <a class="el" href="videodescriptionmessage_8cpp_source.html#l00089">messageCount()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -371,14 +371,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00106">106</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    Q_D(<a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    d-&gt;messageIndex = <a class="code" href="classVideoDescriptionMessage.html#ad1b7da3eb9ee87f074b0621635af1986">messageIndex</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
-<div class="ttc" id="aclassVideoDescriptionMessage_html_ad1b7da3eb9ee87f074b0621635af1986"><div class="ttname"><a href="classVideoDescriptionMessage.html#ad1b7da3eb9ee87f074b0621635af1986">VideoDescriptionMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the VideoDescriptionMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8cpp_source.html#l00071">videodescriptionmessage.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00111">111</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    Q_D(<a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    d-&gt;messageIndex = <a class="code" href="classVideoDescriptionMessage.html#ad1b7da3eb9ee87f074b0621635af1986">messageIndex</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="ttc" id="aclassVideoDescriptionMessage_html_ad1b7da3eb9ee87f074b0621635af1986"><div class="ttname"><a href="classVideoDescriptionMessage.html#ad1b7da3eb9ee87f074b0621635af1986">VideoDescriptionMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the VideoDescriptionMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8cpp_source.html#l00076">videodescriptionmessage.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="videodescriptionmessage_8cpp_source.html#l00071">messageIndex()</a>.</p>
+<p class="reference">References <a class="el" href="videodescriptionmessage_8cpp_source.html#l00076">messageIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -412,14 +412,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00126">126</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    Q_D(<a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    d-&gt;text = <a class="code" href="classVideoDescriptionMessage.html#ad626ed1ff0552d1adcbcd3c5997fcbb6">text</a>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
-<div class="ttc" id="aclassVideoDescriptionMessage_html_ad626ed1ff0552d1adcbcd3c5997fcbb6"><div class="ttname"><a href="classVideoDescriptionMessage.html#ad626ed1ff0552d1adcbcd3c5997fcbb6">VideoDescriptionMessage::text</a></div><div class="ttdeci">QString text() const</div><div class="ttdoc">Returns the VideoDescriptionMessage data message's text field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8cpp_source.html#l00095">videodescriptionmessage.cpp:95</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00131">131</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    Q_D(<a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    d-&gt;text = <a class="code" href="classVideoDescriptionMessage.html#ad626ed1ff0552d1adcbcd3c5997fcbb6">text</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="ttc" id="aclassVideoDescriptionMessage_html_ad626ed1ff0552d1adcbcd3c5997fcbb6"><div class="ttname"><a href="classVideoDescriptionMessage.html#ad626ed1ff0552d1adcbcd3c5997fcbb6">VideoDescriptionMessage::text</a></div><div class="ttdeci">QString text() const</div><div class="ttdoc">Returns the VideoDescriptionMessage data message's text field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="videodescriptionmessage_8cpp_source.html#l00100">videodescriptionmessage.cpp:100</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="videodescriptionmessage_8cpp_source.html#l00095">text()</a>.</p>
+<p class="reference">References <a class="el" href="videodescriptionmessage_8cpp_source.html#l00100">text()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -447,13 +447,13 @@ Here is the call graph for this function:</div>
 <p>Returns the <a class="el" href="classVideoDescriptionMessage.html" title="The VideoDescriptionMessage class represents a FIT VideoDescriptionMessage data message.">VideoDescriptionMessage</a> data message's <code>text</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>text</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00095">95</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> d-&gt;text;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="videodescriptionmessage_8cpp_source.html#l00100">100</a> of file <a class="el" href="videodescriptionmessage_8cpp_source.html">videodescriptionmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classVideoDescriptionMessage.html">VideoDescriptionMessage</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> d-&gt;text;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="videodescriptionmessage_8cpp_source.html#l00126">setText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="videodescriptionmessage_8cpp_source.html#l00131">setText()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

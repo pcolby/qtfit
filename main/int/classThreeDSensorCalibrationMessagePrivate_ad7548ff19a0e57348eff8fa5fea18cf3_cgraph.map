@@ -1,4 +1,6 @@
 <map id="ThreeDSensorCalibrationMessagePrivate::setField" name="ThreeDSensorCalibrationMessagePrivate::setField">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,248,47"/>
-<area shape="rect" id="node2" href="$classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc" title=" " alt="" coords="296,5,507,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,248,65"/>
+<area shape="rect" id="node2" href="$classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc" title=" " alt="" coords="296,23,507,65"/>
+<area shape="rect" id="node3" href="$abstractdatamessage_8cpp.html#a3d7ec006b7bf32e4ea754e0ce7a0d3a4" title=" " alt="" coords="555,5,676,32"/>
+<area shape="rect" id="node4" href="$abstractdatamessage_8cpp.html#a0d4ab57f84f4b95732a6af0267777873" title=" " alt="" coords="557,56,674,83"/>
 </map>

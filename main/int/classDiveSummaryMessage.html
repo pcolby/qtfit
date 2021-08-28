@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -225,7 +225,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> class represents a FIT <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8h_source.html#l00034">34</a> of file <a class="el" href="divesummarymessage_8h_source.html">divesummarymessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8h_source.html#l00039">39</a> of file <a class="el" href="divesummarymessage_8h_source.html">divesummarymessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab7629a66581101a5d74401e9cb89ebb0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7629a66581101a5d74401e9cb89ebb0">&#9670;&nbsp;</a></span>DiveSummaryMessage() <span class="overload">[1/2]</span></h2>
@@ -245,13 +245,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classDiveSummaryMessagePrivate.html">DiveSummaryMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassDiveSummaryMessagePrivate_html"><div class="ttname"><a href="classDiveSummaryMessagePrivate.html">DiveSummaryMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage__p_8h_source.html#l00034">divesummarymessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classDiveSummaryMessagePrivate.html">DiveSummaryMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassDiveSummaryMessagePrivate_html"><div class="ttname"><a href="classDiveSummaryMessagePrivate.html">DiveSummaryMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage__p_8h_source.html#l00038">divesummarymessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -286,11 +286,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -314,14 +314,14 @@ Additional Inherited Members</h2></td></tr>
 <p>0 if above water</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>avgDepth</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00104">104</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> d-&gt;avgDepth;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html"><div class="ttname"><a href="classDiveSummaryMessage.html">DiveSummaryMessage</a></div><div class="ttdoc">The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8h_source.html#l00034">divesummarymessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00109">109</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> d-&gt;avgDepth;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html"><div class="ttname"><a href="classDiveSummaryMessage.html">DiveSummaryMessage</a></div><div class="ttdoc">The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8h_source.html#l00039">divesummarymessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00248">setAvgDepth()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00253">setAvgDepth()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -349,13 +349,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>bottomTime</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>bottomTime</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00207">207</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> d-&gt;bottomTime;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00212">212</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> d-&gt;bottomTime;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00338">setBottomTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00343">setBottomTime()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -383,13 +383,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>diveNumber</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>diveNumber</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00196">196</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> d-&gt;diveNumber;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00201">201</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> d-&gt;diveNumber;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00328">setDiveNumber()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00333">setDiveNumber()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -417,13 +417,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>endCns</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>endCns</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00152">152</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> d-&gt;endCns;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00157">157</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> d-&gt;endCns;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00288">setEndCns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00293">setEndCns()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -451,13 +451,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>endN2</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>endN2</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00174">174</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> d-&gt;endN2;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00179">179</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">return</span> d-&gt;endN2;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00308">setEndN2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00313">setEndN2()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -486,13 +486,13 @@ Here is the caller graph for this function:</div>
 <p>0 if above water</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>maxDepth</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00117">117</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> d-&gt;maxDepth;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00122">122</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> d-&gt;maxDepth;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00258">setMaxDepth()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00263">setMaxDepth()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -520,13 +520,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>o2Toxicity</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>o2Toxicity</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00185">185</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> d-&gt;o2Toxicity;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00190">190</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">return</span> d-&gt;o2Toxicity;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00318">setO2Toxicity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00323">setO2Toxicity()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -554,13 +554,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>referenceIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>referenceIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00091">91</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;referenceIndex;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00096">96</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;referenceIndex;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00238">setReferenceIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00243">setReferenceIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -588,13 +588,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>referenceMesg</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>referenceMesg</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;referenceMesg;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;referenceMesg;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00228">setReferenceMesg()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00233">setReferenceMesg()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -628,14 +628,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00248">248</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    d-&gt;avgDepth = <a class="code" href="classDiveSummaryMessage.html#a25cf49a622c660fce4216f3780ef5edb">avgDepth</a>;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a25cf49a622c660fce4216f3780ef5edb"><div class="ttname"><a href="classDiveSummaryMessage.html#a25cf49a622c660fce4216f3780ef5edb">DiveSummaryMessage::avgDepth</a></div><div class="ttdeci">quint32 avgDepth() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's avgDepth field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00104">divesummarymessage.cpp:104</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00253">253</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;{</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    d-&gt;avgDepth = <a class="code" href="classDiveSummaryMessage.html#a25cf49a622c660fce4216f3780ef5edb">avgDepth</a>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a25cf49a622c660fce4216f3780ef5edb"><div class="ttname"><a href="classDiveSummaryMessage.html#a25cf49a622c660fce4216f3780ef5edb">DiveSummaryMessage::avgDepth</a></div><div class="ttdeci">quint32 avgDepth() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's avgDepth field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00109">divesummarymessage.cpp:109</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00104">avgDepth()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00109">avgDepth()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -669,14 +669,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00338">338</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;{</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    d-&gt;bottomTime = <a class="code" href="classDiveSummaryMessage.html#a49487fd6108c515ab8ca15064dfdbf79">bottomTime</a>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a49487fd6108c515ab8ca15064dfdbf79"><div class="ttname"><a href="classDiveSummaryMessage.html#a49487fd6108c515ab8ca15064dfdbf79">DiveSummaryMessage::bottomTime</a></div><div class="ttdeci">quint32 bottomTime() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's bottomTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00207">divesummarymessage.cpp:207</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00343">343</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;{</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    d-&gt;bottomTime = <a class="code" href="classDiveSummaryMessage.html#a49487fd6108c515ab8ca15064dfdbf79">bottomTime</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a49487fd6108c515ab8ca15064dfdbf79"><div class="ttname"><a href="classDiveSummaryMessage.html#a49487fd6108c515ab8ca15064dfdbf79">DiveSummaryMessage::bottomTime</a></div><div class="ttdeci">quint32 bottomTime() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's bottomTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00212">divesummarymessage.cpp:212</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00207">bottomTime()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00212">bottomTime()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -710,14 +710,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00328">328</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;{</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    d-&gt;diveNumber = <a class="code" href="classDiveSummaryMessage.html#a04a5e68737c0052abaa4c95753748c5d">diveNumber</a>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a04a5e68737c0052abaa4c95753748c5d"><div class="ttname"><a href="classDiveSummaryMessage.html#a04a5e68737c0052abaa4c95753748c5d">DiveSummaryMessage::diveNumber</a></div><div class="ttdeci">quint32 diveNumber() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's diveNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00196">divesummarymessage.cpp:196</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00333">333</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;{</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    d-&gt;diveNumber = <a class="code" href="classDiveSummaryMessage.html#a04a5e68737c0052abaa4c95753748c5d">diveNumber</a>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a04a5e68737c0052abaa4c95753748c5d"><div class="ttname"><a href="classDiveSummaryMessage.html#a04a5e68737c0052abaa4c95753748c5d">DiveSummaryMessage::diveNumber</a></div><div class="ttdeci">quint32 diveNumber() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's diveNumber field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00201">divesummarymessage.cpp:201</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00196">diveNumber()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00201">diveNumber()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -751,14 +751,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00288">288</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    d-&gt;endCns = <a class="code" href="classDiveSummaryMessage.html#a69d367448d9d09bb4a1bae51ee6fba20">endCns</a>;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a69d367448d9d09bb4a1bae51ee6fba20"><div class="ttname"><a href="classDiveSummaryMessage.html#a69d367448d9d09bb4a1bae51ee6fba20">DiveSummaryMessage::endCns</a></div><div class="ttdeci">quint8 endCns() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's endCns field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00152">divesummarymessage.cpp:152</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00293">293</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;{</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    d-&gt;endCns = <a class="code" href="classDiveSummaryMessage.html#a69d367448d9d09bb4a1bae51ee6fba20">endCns</a>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a69d367448d9d09bb4a1bae51ee6fba20"><div class="ttname"><a href="classDiveSummaryMessage.html#a69d367448d9d09bb4a1bae51ee6fba20">DiveSummaryMessage::endCns</a></div><div class="ttdeci">quint8 endCns() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's endCns field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00157">divesummarymessage.cpp:157</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00152">endCns()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00157">endCns()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -792,14 +792,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00308">308</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    d-&gt;endN2 = <a class="code" href="classDiveSummaryMessage.html#a9f70202d55d7590ebf30a4c8fdede36c">endN2</a>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a9f70202d55d7590ebf30a4c8fdede36c"><div class="ttname"><a href="classDiveSummaryMessage.html#a9f70202d55d7590ebf30a4c8fdede36c">DiveSummaryMessage::endN2</a></div><div class="ttdeci">quint16 endN2() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's endN2 field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00174">divesummarymessage.cpp:174</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00313">313</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;{</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    d-&gt;endN2 = <a class="code" href="classDiveSummaryMessage.html#a9f70202d55d7590ebf30a4c8fdede36c">endN2</a>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a9f70202d55d7590ebf30a4c8fdede36c"><div class="ttname"><a href="classDiveSummaryMessage.html#a9f70202d55d7590ebf30a4c8fdede36c">DiveSummaryMessage::endN2</a></div><div class="ttdeci">quint16 endN2() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's endN2 field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00179">divesummarymessage.cpp:179</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00174">endN2()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00179">endN2()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -833,14 +833,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00258">258</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;{</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    d-&gt;maxDepth = <a class="code" href="classDiveSummaryMessage.html#ad2463d7af2c741514a03fe0e701d7100">maxDepth</a>;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_ad2463d7af2c741514a03fe0e701d7100"><div class="ttname"><a href="classDiveSummaryMessage.html#ad2463d7af2c741514a03fe0e701d7100">DiveSummaryMessage::maxDepth</a></div><div class="ttdeci">quint32 maxDepth() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's maxDepth field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00117">divesummarymessage.cpp:117</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00263">263</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    d-&gt;maxDepth = <a class="code" href="classDiveSummaryMessage.html#ad2463d7af2c741514a03fe0e701d7100">maxDepth</a>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_ad2463d7af2c741514a03fe0e701d7100"><div class="ttname"><a href="classDiveSummaryMessage.html#ad2463d7af2c741514a03fe0e701d7100">DiveSummaryMessage::maxDepth</a></div><div class="ttdeci">quint32 maxDepth() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's maxDepth field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00122">divesummarymessage.cpp:122</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00117">maxDepth()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00122">maxDepth()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -874,14 +874,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00318">318</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    d-&gt;o2Toxicity = <a class="code" href="classDiveSummaryMessage.html#a58877bc9a0b5e18edf36f1e001839ede">o2Toxicity</a>;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a58877bc9a0b5e18edf36f1e001839ede"><div class="ttname"><a href="classDiveSummaryMessage.html#a58877bc9a0b5e18edf36f1e001839ede">DiveSummaryMessage::o2Toxicity</a></div><div class="ttdeci">quint16 o2Toxicity() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's o2Toxicity field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00185">divesummarymessage.cpp:185</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00323">323</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;{</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    d-&gt;o2Toxicity = <a class="code" href="classDiveSummaryMessage.html#a58877bc9a0b5e18edf36f1e001839ede">o2Toxicity</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a58877bc9a0b5e18edf36f1e001839ede"><div class="ttname"><a href="classDiveSummaryMessage.html#a58877bc9a0b5e18edf36f1e001839ede">DiveSummaryMessage::o2Toxicity</a></div><div class="ttdeci">quint16 o2Toxicity() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's o2Toxicity field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00190">divesummarymessage.cpp:190</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00185">o2Toxicity()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00190">o2Toxicity()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -915,14 +915,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00238">238</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;{</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    d-&gt;referenceIndex = <a class="code" href="classDiveSummaryMessage.html#aae53093e743aea82c9e541f1ccdb1046">referenceIndex</a>;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_aae53093e743aea82c9e541f1ccdb1046"><div class="ttname"><a href="classDiveSummaryMessage.html#aae53093e743aea82c9e541f1ccdb1046">DiveSummaryMessage::referenceIndex</a></div><div class="ttdeci">MessageIndex referenceIndex() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's referenceIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00091">divesummarymessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00243">243</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    d-&gt;referenceIndex = <a class="code" href="classDiveSummaryMessage.html#aae53093e743aea82c9e541f1ccdb1046">referenceIndex</a>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_aae53093e743aea82c9e541f1ccdb1046"><div class="ttname"><a href="classDiveSummaryMessage.html#aae53093e743aea82c9e541f1ccdb1046">DiveSummaryMessage::referenceIndex</a></div><div class="ttdeci">MessageIndex referenceIndex() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's referenceIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00096">divesummarymessage.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00091">referenceIndex()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00096">referenceIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -956,14 +956,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00228">228</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    d-&gt;referenceMesg = <a class="code" href="classDiveSummaryMessage.html#a9fb643402de64c9b9d3a51485e4bb27d">referenceMesg</a>;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a9fb643402de64c9b9d3a51485e4bb27d"><div class="ttname"><a href="classDiveSummaryMessage.html#a9fb643402de64c9b9d3a51485e4bb27d">DiveSummaryMessage::referenceMesg</a></div><div class="ttdeci">MesgNum referenceMesg() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's referenceMesg field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00080">divesummarymessage.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00233">233</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    d-&gt;referenceMesg = <a class="code" href="classDiveSummaryMessage.html#a9fb643402de64c9b9d3a51485e4bb27d">referenceMesg</a>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a9fb643402de64c9b9d3a51485e4bb27d"><div class="ttname"><a href="classDiveSummaryMessage.html#a9fb643402de64c9b9d3a51485e4bb27d">DiveSummaryMessage::referenceMesg</a></div><div class="ttdeci">MesgNum referenceMesg() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's referenceMesg field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00085">divesummarymessage.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00080">referenceMesg()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00085">referenceMesg()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -997,14 +997,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00278">278</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    d-&gt;startCns = <a class="code" href="classDiveSummaryMessage.html#a9ca402d908f3ba8515a9bac2e1489ebd">startCns</a>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a9ca402d908f3ba8515a9bac2e1489ebd"><div class="ttname"><a href="classDiveSummaryMessage.html#a9ca402d908f3ba8515a9bac2e1489ebd">DiveSummaryMessage::startCns</a></div><div class="ttdeci">quint8 startCns() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's startCns field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00141">divesummarymessage.cpp:141</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00283">283</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;{</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    d-&gt;startCns = <a class="code" href="classDiveSummaryMessage.html#a9ca402d908f3ba8515a9bac2e1489ebd">startCns</a>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a9ca402d908f3ba8515a9bac2e1489ebd"><div class="ttname"><a href="classDiveSummaryMessage.html#a9ca402d908f3ba8515a9bac2e1489ebd">DiveSummaryMessage::startCns</a></div><div class="ttdeci">quint8 startCns() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's startCns field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00146">divesummarymessage.cpp:146</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00141">startCns()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00146">startCns()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1038,14 +1038,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00298">298</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    d-&gt;startN2 = <a class="code" href="classDiveSummaryMessage.html#a03db6ee47029b6c10f9051e7124c29d6">startN2</a>;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a03db6ee47029b6c10f9051e7124c29d6"><div class="ttname"><a href="classDiveSummaryMessage.html#a03db6ee47029b6c10f9051e7124c29d6">DiveSummaryMessage::startN2</a></div><div class="ttdeci">quint16 startN2() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's startN2 field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00163">divesummarymessage.cpp:163</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00303">303</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    d-&gt;startN2 = <a class="code" href="classDiveSummaryMessage.html#a03db6ee47029b6c10f9051e7124c29d6">startN2</a>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a03db6ee47029b6c10f9051e7124c29d6"><div class="ttname"><a href="classDiveSummaryMessage.html#a03db6ee47029b6c10f9051e7124c29d6">DiveSummaryMessage::startN2</a></div><div class="ttdeci">quint16 startN2() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's startN2 field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00168">divesummarymessage.cpp:168</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00163">startN2()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00168">startN2()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1079,14 +1079,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00268">268</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    d-&gt;surfaceInterval = <a class="code" href="classDiveSummaryMessage.html#afbc14f17f6a4fb2a8d435eeda520888c">surfaceInterval</a>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_afbc14f17f6a4fb2a8d435eeda520888c"><div class="ttname"><a href="classDiveSummaryMessage.html#afbc14f17f6a4fb2a8d435eeda520888c">DiveSummaryMessage::surfaceInterval</a></div><div class="ttdeci">quint32 surfaceInterval() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's surfaceInterval field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00130">divesummarymessage.cpp:130</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00273">273</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    d-&gt;surfaceInterval = <a class="code" href="classDiveSummaryMessage.html#afbc14f17f6a4fb2a8d435eeda520888c">surfaceInterval</a>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_afbc14f17f6a4fb2a8d435eeda520888c"><div class="ttname"><a href="classDiveSummaryMessage.html#afbc14f17f6a4fb2a8d435eeda520888c">DiveSummaryMessage::surfaceInterval</a></div><div class="ttdeci">quint32 surfaceInterval() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's surfaceInterval field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00135">divesummarymessage.cpp:135</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00130">surfaceInterval()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00135">surfaceInterval()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1120,14 +1120,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00218">218</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    d-&gt;timestamp = <a class="code" href="classDiveSummaryMessage.html#a0f59e399cb0f1e062a47179c41e105a9">timestamp</a>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
-<div class="ttc" id="aclassDiveSummaryMessage_html_a0f59e399cb0f1e062a47179c41e105a9"><div class="ttname"><a href="classDiveSummaryMessage.html#a0f59e399cb0f1e062a47179c41e105a9">DiveSummaryMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00069">divesummarymessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00223">223</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;{</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    Q_D(<a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    d-&gt;timestamp = <a class="code" href="classDiveSummaryMessage.html#a0f59e399cb0f1e062a47179c41e105a9">timestamp</a>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="ttc" id="aclassDiveSummaryMessage_html_a0f59e399cb0f1e062a47179c41e105a9"><div class="ttname"><a href="classDiveSummaryMessage.html#a0f59e399cb0f1e062a47179c41e105a9">DiveSummaryMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the DiveSummaryMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="divesummarymessage_8cpp_source.html#l00074">divesummarymessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00069">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="divesummarymessage_8cpp_source.html#l00074">timestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1155,13 +1155,13 @@ Here is the call graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>startCns</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>startCns</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00141">141</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> d-&gt;startCns;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00146">146</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> d-&gt;startCns;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00278">setStartCns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00283">setStartCns()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1189,13 +1189,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>startN2</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>startN2</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00163">163</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> d-&gt;startN2;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00168">168</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;{</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> d-&gt;startN2;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00298">setStartN2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00303">setStartN2()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1224,13 +1224,13 @@ Here is the caller graph for this function:</div>
 <p>Time since end of last dive</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>surfaceInterval</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00130">130</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> d-&gt;surfaceInterval;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00135">135</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> d-&gt;surfaceInterval;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00268">setSurfaceInterval()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00273">setSurfaceInterval()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1258,13 +1258,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classDiveSummaryMessage.html" title="The DiveSummaryMessage class represents a FIT DiveSummaryMessage data message.">DiveSummaryMessage</a> data message's <code>timestamp</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="divesummarymessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="divesummarymessage_8cpp_source.html">divesummarymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classDiveSummaryMessage.html">DiveSummaryMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00218">setTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="divesummarymessage_8cpp_source.html#l00223">setTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -176,7 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classGyroscopeDataMessagePrivate.html">GyroscopeDataMessagePrivate</a> class provides private implementation for the <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a558fe283efba5585ba6cfb50a9808bfc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a558fe283efba5585ba6cfb50a9808bfc">&#9670;&nbsp;</a></span>GyroscopeDataMessagePrivate()</h2>
@@ -209,34 +209,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage_8cpp_source.html#l00296">296</a> of file <a class="el" href="gyroscopedatamessage_8cpp_source.html">gyroscopedatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a66059ef0864ef86ec14c2a5d474c1132">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#ab7d27caeaa061ec9ac4a2272339d104f">timestampMs</a>(0xFFFF)</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a7b80ced9ebb32845df99f8787ee8e242">sampleTimeOffset</a>(0xFFFF)</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a0c40baf7bf630d85ada78d967f710101">gyroX</a>(0xFFFF)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a320f8c522373960210f4a82973862f19">gyroY</a>(0xFFFF)</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#aa89596047af104cec60dca991750fda6">gyroZ</a>(0xFFFF)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::GyroscopeData;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a0c40baf7bf630d85ada78d967f710101"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a0c40baf7bf630d85ada78d967f710101">GyroscopeDataMessagePrivate::gyroX</a></div><div class="ttdeci">quint16 gyroX</div><div class="ttdoc">The GyroscopeDataMessage FIT message's gyroX field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00066">gyroscopedatamessage_p.h:66</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a320f8c522373960210f4a82973862f19"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a320f8c522373960210f4a82973862f19">GyroscopeDataMessagePrivate::gyroY</a></div><div class="ttdeci">quint16 gyroY</div><div class="ttdoc">The GyroscopeDataMessage FIT message's gyroY field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00074">gyroscopedatamessage_p.h:74</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a66059ef0864ef86ec14c2a5d474c1132"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a66059ef0864ef86ec14c2a5d474c1132">GyroscopeDataMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The GyroscopeDataMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00042">gyroscopedatamessage_p.h:42</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a74121e72329b8c968be838b4ca986f11"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">GyroscopeDataMessagePrivate::calibratedGyroX</a></div><div class="ttdeci">float calibratedGyroX</div><div class="ttdoc">The GyroscopeDataMessage FIT message's calibratedGyroX field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00089">gyroscopedatamessage_p.h:89</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a74fb4b2b92485a87045270413e1effb5"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">GyroscopeDataMessagePrivate::calibratedGyroY</a></div><div class="ttdeci">float calibratedGyroY</div><div class="ttdoc">The GyroscopeDataMessage FIT message's calibratedGyroY field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00096">gyroscopedatamessage_p.h:96</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a7b80ced9ebb32845df99f8787ee8e242"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a7b80ced9ebb32845df99f8787ee8e242">GyroscopeDataMessagePrivate::sampleTimeOffset</a></div><div class="ttdeci">quint16 sampleTimeOffset</div><div class="ttdoc">The GyroscopeDataMessage FIT message's sampleTimeOffset field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00058">gyroscopedatamessage_p.h:58</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_aa89596047af104cec60dca991750fda6"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#aa89596047af104cec60dca991750fda6">GyroscopeDataMessagePrivate::gyroZ</a></div><div class="ttdeci">quint16 gyroZ</div><div class="ttdoc">The GyroscopeDataMessage FIT message's gyroZ field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00082">gyroscopedatamessage_p.h:82</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_ab7d27caeaa061ec9ac4a2272339d104f"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#ab7d27caeaa061ec9ac4a2272339d104f">GyroscopeDataMessagePrivate::timestampMs</a></div><div class="ttdeci">quint16 timestampMs</div><div class="ttdoc">The GyroscopeDataMessage FIT message's timestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00049">gyroscopedatamessage_p.h:49</a></div></div>
-<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_aefc924968782710f222f689a1004ce2b"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">GyroscopeDataMessagePrivate::calibratedGyroZ</a></div><div class="ttdeci">float calibratedGyroZ</div><div class="ttdoc">The GyroscopeDataMessage FIT message's calibratedGyroZ field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00103">gyroscopedatamessage_p.h:103</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage_8cpp_source.html#l00301">301</a> of file <a class="el" href="gyroscopedatamessage_8cpp_source.html">gyroscopedatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a66059ef0864ef86ec14c2a5d474c1132">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#ab7d27caeaa061ec9ac4a2272339d104f">timestampMs</a>(0xFFFF)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a7b80ced9ebb32845df99f8787ee8e242">sampleTimeOffset</a>(0xFFFF)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a0c40baf7bf630d85ada78d967f710101">gyroX</a>(0xFFFF)</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a320f8c522373960210f4a82973862f19">gyroY</a>(0xFFFF)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#aa89596047af104cec60dca991750fda6">gyroZ</a>(0xFFFF)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  , <a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;{</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::GyroscopeData;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a0c40baf7bf630d85ada78d967f710101"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a0c40baf7bf630d85ada78d967f710101">GyroscopeDataMessagePrivate::gyroX</a></div><div class="ttdeci">quint16 gyroX</div><div class="ttdoc">The GyroscopeDataMessage FIT message's gyroX field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00070">gyroscopedatamessage_p.h:70</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a320f8c522373960210f4a82973862f19"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a320f8c522373960210f4a82973862f19">GyroscopeDataMessagePrivate::gyroY</a></div><div class="ttdeci">quint16 gyroY</div><div class="ttdoc">The GyroscopeDataMessage FIT message's gyroY field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00078">gyroscopedatamessage_p.h:78</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a66059ef0864ef86ec14c2a5d474c1132"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a66059ef0864ef86ec14c2a5d474c1132">GyroscopeDataMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The GyroscopeDataMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00046">gyroscopedatamessage_p.h:46</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a74121e72329b8c968be838b4ca986f11"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">GyroscopeDataMessagePrivate::calibratedGyroX</a></div><div class="ttdeci">float calibratedGyroX</div><div class="ttdoc">The GyroscopeDataMessage FIT message's calibratedGyroX field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00093">gyroscopedatamessage_p.h:93</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a74fb4b2b92485a87045270413e1effb5"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">GyroscopeDataMessagePrivate::calibratedGyroY</a></div><div class="ttdeci">float calibratedGyroY</div><div class="ttdoc">The GyroscopeDataMessage FIT message's calibratedGyroY field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00100">gyroscopedatamessage_p.h:100</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_a7b80ced9ebb32845df99f8787ee8e242"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#a7b80ced9ebb32845df99f8787ee8e242">GyroscopeDataMessagePrivate::sampleTimeOffset</a></div><div class="ttdeci">quint16 sampleTimeOffset</div><div class="ttdoc">The GyroscopeDataMessage FIT message's sampleTimeOffset field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00062">gyroscopedatamessage_p.h:62</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_aa89596047af104cec60dca991750fda6"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#aa89596047af104cec60dca991750fda6">GyroscopeDataMessagePrivate::gyroZ</a></div><div class="ttdeci">quint16 gyroZ</div><div class="ttdoc">The GyroscopeDataMessage FIT message's gyroZ field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00086">gyroscopedatamessage_p.h:86</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_ab7d27caeaa061ec9ac4a2272339d104f"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#ab7d27caeaa061ec9ac4a2272339d104f">GyroscopeDataMessagePrivate::timestampMs</a></div><div class="ttdeci">quint16 timestampMs</div><div class="ttdoc">The GyroscopeDataMessage FIT message's timestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00053">gyroscopedatamessage_p.h:53</a></div></div>
+<div class="ttc" id="aclassGyroscopeDataMessagePrivate_html_aefc924968782710f222f689a1004ce2b"><div class="ttname"><a href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">GyroscopeDataMessagePrivate::calibratedGyroZ</a></div><div class="ttdeci">float calibratedGyroZ</div><div class="ttdoc">The GyroscopeDataMessage FIT message's calibratedGyroZ field.</div><div class="ttdef"><b>Definition:</b> <a href="gyroscopedatamessage__p_8h_source.html#l00107">gyroscopedatamessage_p.h:107</a></div></div>
 <div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00237">types.h:237</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00034">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00039">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
 
 </div>
 </div>
@@ -264,10 +264,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys the <a class="el" href="classGyroscopeDataMessagePrivate.html">GyroscopeDataMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage_8cpp_source.html#l00316">316</a> of file <a class="el" href="gyroscopedatamessage_8cpp_source.html">gyroscopedatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage_8cpp_source.html#l00321">321</a> of file <a class="el" href="gyroscopedatamessage_8cpp_source.html">gyroscopedatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -332,85 +332,85 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractDataMessagePrivate.html#ae4d13bcc7f39d6050db131e3afe8b4d3">AbstractDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage_8cpp_source.html#l00321">321</a> of file <a class="el" href="gyroscopedatamessage_8cpp_source.html">gyroscopedatamessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.timestamp</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;gyroscope_data.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a66059ef0864ef86ec14c2a5d474c1132">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.timestampMs</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.timestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#ab7d27caeaa061ec9ac4a2272339d104f">timestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.sampleTimeOffset</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.sampleTimeOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a7b80ced9ebb32845df99f8787ee8e242">sampleTimeOffset</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.gyroX</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.gyroX&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a0c40baf7bf630d85ada78d967f710101">gyroX</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.gyroY</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.gyroY&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a320f8c522373960210f4a82973862f19">gyroY</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.gyroZ</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.gyroZ&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aa89596047af104cec60dca991750fda6">gyroZ</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.calibratedGyroX</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Float32, <span class="stringliteral">&quot;gyroscope_data.calibratedGyroX&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a>, &amp;localEndian, data.size());</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">        #else</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.calibratedGyroY</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Float32, <span class="stringliteral">&quot;gyroscope_data.calibratedGyroY&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a>, &amp;localEndian, data.size());</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        }</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">        #else</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">case</span> 7: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.calibratedGyroZ</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Float32, <span class="stringliteral">&quot;gyroscope_data.calibratedGyroZ&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a>, &amp;localEndian, data.size());</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        }</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">        #else</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown gyroscope_data message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage_8cpp_source.html#l00326">326</a> of file <a class="el" href="gyroscopedatamessage_8cpp_source.html">gyroscopedatamessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;{</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.timestamp</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;gyroscope_data.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a66059ef0864ef86ec14c2a5d474c1132">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.timestampMs</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.timestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#ab7d27caeaa061ec9ac4a2272339d104f">timestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.sampleTimeOffset</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.sampleTimeOffset&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a7b80ced9ebb32845df99f8787ee8e242">sampleTimeOffset</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.gyroX</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.gyroX&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a0c40baf7bf630d85ada78d967f710101">gyroX</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.gyroY</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.gyroY&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a320f8c522373960210f4a82973862f19">gyroY</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.gyroZ</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;gyroscope_data.gyroZ&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aa89596047af104cec60dca991750fda6">gyroZ</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.calibratedGyroX</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Float32, <span class="stringliteral">&quot;gyroscope_data.calibratedGyroX&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a>, &amp;localEndian, data.size());</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74121e72329b8c968be838b4ca986f11">calibratedGyroX</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">case</span> 6: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.calibratedGyroY</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Float32, <span class="stringliteral">&quot;gyroscope_data.calibratedGyroY&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a>, &amp;localEndian, data.size());</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#a74fb4b2b92485a87045270413e1effb5">calibratedGyroY</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">case</span> 7: <span class="comment">// See Profile.xlsx::Messages:gyroscope_data.calibratedGyroZ</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Float32, <span class="stringliteral">&quot;gyroscope_data.calibratedGyroZ&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">        #if QT_VERSION &lt; QT_VERSION_CHECK(5, 12, 0)</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        {   <span class="comment">// Qt&#39;s from-endian functions have no float/double specialisations prior to Qt 5.12.</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="keyword">const</span> quint32 localEndian = bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            static_assert(<span class="keyword">sizeof</span>(localEndian) == 4, <span class="stringliteral">&quot;src not expected size&quot;</span>);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            static_assert(<span class="keyword">sizeof</span>(this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a>) == 4, <span class="stringliteral">&quot;src and dst not the same size&quot;</span>);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            memcpy(&amp;this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a>, &amp;localEndian, data.size());</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        this-&gt;<a class="code" href="classGyroscopeDataMessagePrivate.html#aefc924968782710f222f689a1004ce2b">calibratedGyroZ</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;float&gt;(data) : qFromLittleEndian&lt;float&gt;(data));</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown gyroscope_data message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00194">AbstractDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00199">AbstractDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGyroscopeDataMessagePrivate_a300586325aaff100b4c1fa3dfac5163b_cgraph.svg" width="496" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGyroscopeDataMessagePrivate_a300586325aaff100b4c1fa3dfac5163b_cgraph.svg" width="666" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -432,7 +432,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's calibratedGyroX field. </p>
 <p>Calibrated gyro reading </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00089">89</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00093">93</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -451,7 +451,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's calibratedGyroY field. </p>
 <p>Calibrated gyro reading </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00096">96</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00100">100</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +470,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's calibratedGyroZ field. </p>
 <p>Calibrated gyro reading </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00103">103</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00107">107</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -489,7 +489,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's gyroX field. </p>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read. </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00066">66</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00070">70</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's gyroY field. </p>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read. </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00074">74</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00078">78</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's gyroZ field. </p>
 <p>These are the raw ADC reading. Maximum number of samples is 30 in each message. The samples may span across seconds. A conversion will need to be done on this data once read. </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00082">82</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00086">86</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -546,7 +546,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's sampleTimeOffset field. </p>
 <p>Each time in the array describes the time at which the gyro sample with the corrosponding index was taken. Limited to 30 samples in each message. The samples may span across seconds. Array size must match the number of samples in gyro_x and gyro_y and gyro_z </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00058">58</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00062">62</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -565,7 +565,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's timestamp field. </p>
 <p>Whole second part of the timestamp </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -584,7 +584,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classGyroscopeDataMessage.html" title="The GyroscopeDataMessage class represents a FIT GyroscopeDataMessage data message.">GyroscopeDataMessage</a> FIT message's timestampMs field. </p>
 <p>Millisecond part of the timestamp. </p>
 
-<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gyroscopedatamessage__p_8h_source.html#l00053">53</a> of file <a class="el" href="gyroscopedatamessage__p_8h_source.html">gyroscopedatamessage_p.h</a>.</p>
 
 </div>
 </div>

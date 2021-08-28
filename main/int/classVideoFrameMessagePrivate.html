@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -158,7 +158,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classVideoFrameMessagePrivate.html">VideoFrameMessagePrivate</a> class provides private implementation for the <a class="el" href="classVideoFrameMessage.html" title="The VideoFrameMessage class represents a FIT VideoFrameMessage data message.">VideoFrameMessage</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classVideoFrameMessage.html" title="The VideoFrameMessage class represents a FIT VideoFrameMessage data message.">VideoFrameMessage</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3284084834ec80e3691e1383e035e4b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3284084834ec80e3691e1383e035e4b5">&#9670;&nbsp;</a></span>VideoFrameMessagePrivate()</h2>
@@ -191,22 +191,22 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="videoframemessage_8cpp_source.html#l00153">153</a> of file <a class="el" href="videoframemessage_8cpp_source.html">videoframemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  , <a class="code" href="classVideoFrameMessagePrivate.html#ab567559988018b45c57bc385255c770b">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  , <a class="code" href="classVideoFrameMessagePrivate.html#a7797c3a683b9de08eeb3baf85eedc944">timestampMs</a>(0xFFFF)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  , <a class="code" href="classVideoFrameMessagePrivate.html#ae99d3e2a0503e795c03206ee54760748">frameNumber</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::VideoFrame;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassVideoFrameMessagePrivate_html_a7797c3a683b9de08eeb3baf85eedc944"><div class="ttname"><a href="classVideoFrameMessagePrivate.html#a7797c3a683b9de08eeb3baf85eedc944">VideoFrameMessagePrivate::timestampMs</a></div><div class="ttdeci">quint16 timestampMs</div><div class="ttdoc">The VideoFrameMessage FIT message's timestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage__p_8h_source.html#l00049">videoframemessage_p.h:49</a></div></div>
-<div class="ttc" id="aclassVideoFrameMessagePrivate_html_ab567559988018b45c57bc385255c770b"><div class="ttname"><a href="classVideoFrameMessagePrivate.html#ab567559988018b45c57bc385255c770b">VideoFrameMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The VideoFrameMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage__p_8h_source.html#l00042">videoframemessage_p.h:42</a></div></div>
-<div class="ttc" id="aclassVideoFrameMessagePrivate_html_ae99d3e2a0503e795c03206ee54760748"><div class="ttname"><a href="classVideoFrameMessagePrivate.html#ae99d3e2a0503e795c03206ee54760748">VideoFrameMessagePrivate::frameNumber</a></div><div class="ttdeci">quint32 frameNumber</div><div class="ttdoc">The VideoFrameMessage FIT message's frameNumber field.</div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage__p_8h_source.html#l00056">videoframemessage_p.h:56</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videoframemessage_8cpp_source.html#l00158">158</a> of file <a class="el" href="videoframemessage_8cpp_source.html">videoframemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  , <a class="code" href="classVideoFrameMessagePrivate.html#ab567559988018b45c57bc385255c770b">timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  , <a class="code" href="classVideoFrameMessagePrivate.html#a7797c3a683b9de08eeb3baf85eedc944">timestampMs</a>(0xFFFF)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  , <a class="code" href="classVideoFrameMessagePrivate.html#ae99d3e2a0503e795c03206ee54760748">frameNumber</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::VideoFrame;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassVideoFrameMessagePrivate_html_a7797c3a683b9de08eeb3baf85eedc944"><div class="ttname"><a href="classVideoFrameMessagePrivate.html#a7797c3a683b9de08eeb3baf85eedc944">VideoFrameMessagePrivate::timestampMs</a></div><div class="ttdeci">quint16 timestampMs</div><div class="ttdoc">The VideoFrameMessage FIT message's timestampMs field.</div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage__p_8h_source.html#l00053">videoframemessage_p.h:53</a></div></div>
+<div class="ttc" id="aclassVideoFrameMessagePrivate_html_ab567559988018b45c57bc385255c770b"><div class="ttname"><a href="classVideoFrameMessagePrivate.html#ab567559988018b45c57bc385255c770b">VideoFrameMessagePrivate::timestamp</a></div><div class="ttdeci">DateTime timestamp</div><div class="ttdoc">The VideoFrameMessage FIT message's timestamp field.</div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage__p_8h_source.html#l00046">videoframemessage_p.h:46</a></div></div>
+<div class="ttc" id="aclassVideoFrameMessagePrivate_html_ae99d3e2a0503e795c03206ee54760748"><div class="ttname"><a href="classVideoFrameMessagePrivate.html#ae99d3e2a0503e795c03206ee54760748">VideoFrameMessagePrivate::frameNumber</a></div><div class="ttdeci">quint32 frameNumber</div><div class="ttdoc">The VideoFrameMessage FIT message's frameNumber field.</div><div class="ttdef"><b>Definition:</b> <a href="videoframemessage__p_8h_source.html#l00060">videoframemessage_p.h:60</a></div></div>
 <div class="ttc" id="atypes_8h_html_affeea5aa18f8c9b38bac6a0ef0fa36d3"><div class="ttname"><a href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a></div><div class="ttdeci">DateTime</div><div class="ttdoc">Seconds since UTC 00:00 Dec 31 1989.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00237">types.h:237</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00034">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00039">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
 
 </div>
 </div>
@@ -234,10 +234,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys the <a class="el" href="classVideoFrameMessagePrivate.html">VideoFrameMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="videoframemessage_8cpp_source.html#l00167">167</a> of file <a class="el" href="videoframemessage_8cpp_source.html">videoframemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="videoframemessage_8cpp_source.html#l00172">172</a> of file <a class="el" href="videoframemessage_8cpp_source.html">videoframemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -302,34 +302,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractDataMessagePrivate.html#ae4d13bcc7f39d6050db131e3afe8b4d3">AbstractDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="videoframemessage_8cpp_source.html#l00172">172</a> of file <a class="el" href="videoframemessage_8cpp_source.html">videoframemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:video_frame.timestamp</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;video_frame.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        this-&gt;<a class="code" href="classVideoFrameMessagePrivate.html#ab567559988018b45c57bc385255c770b">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:video_frame.timestampMs</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;video_frame.timestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        this-&gt;<a class="code" href="classVideoFrameMessagePrivate.html#a7797c3a683b9de08eeb3baf85eedc944">timestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:video_frame.frameNumber</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;video_frame.frameNumber&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        this-&gt;<a class="code" href="classVideoFrameMessagePrivate.html#ae99d3e2a0503e795c03206ee54760748">frameNumber</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown video_frame message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
+<p class="definition">Definition at line <a class="el" href="videoframemessage_8cpp_source.html#l00177">177</a> of file <a class="el" href="videoframemessage_8cpp_source.html">videoframemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">case</span> 253: <span class="comment">// See Profile.xlsx::Messages:video_frame.timestamp</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;video_frame.timestamp&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        this-&gt;<a class="code" href="classVideoFrameMessagePrivate.html#ab567559988018b45c57bc385255c770b">timestamp</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#affeea5aa18f8c9b38bac6a0ef0fa36d3">DateTime</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:video_frame.timestampMs</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;video_frame.timestampMs&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        this-&gt;<a class="code" href="classVideoFrameMessagePrivate.html#a7797c3a683b9de08eeb3baf85eedc944">timestampMs</a> = <span class="keyword">static_cast&lt;</span>quint16<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:video_frame.frameNumber</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;video_frame.frameNumber&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        this-&gt;<a class="code" href="classVideoFrameMessagePrivate.html#ae99d3e2a0503e795c03206ee54760748">frameNumber</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown video_frame message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00194">AbstractDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00199">AbstractDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoFrameMessagePrivate_addc2d14b159c6b69d3f6fe5c6693e262_cgraph.svg" width="474" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVideoFrameMessagePrivate_addc2d14b159c6b69d3f6fe5c6693e262_cgraph.svg" width="643" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -351,7 +351,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classVideoFrameMessage.html" title="The VideoFrameMessage class represents a FIT VideoFrameMessage data message.">VideoFrameMessage</a> FIT message's frameNumber field. </p>
 <p>Number of the frame that the timestamp and timestamp_ms correlate to </p>
 
-<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00056">56</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00060">60</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -370,7 +370,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classVideoFrameMessage.html" title="The VideoFrameMessage class represents a FIT VideoFrameMessage data message.">VideoFrameMessage</a> FIT message's timestamp field. </p>
 <p>Whole second part of the timestamp </p>
 
-<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00042">42</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00046">46</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classVideoFrameMessage.html" title="The VideoFrameMessage class represents a FIT VideoFrameMessage data message.">VideoFrameMessage</a> FIT message's timestampMs field. </p>
 <p>Millisecond part of the timestamp. </p>
 
-<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00049">49</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="videoframemessage__p_8h_source.html#l00053">53</a> of file <a class="el" href="videoframemessage__p_8h_source.html">videoframemessage_p.h</a>.</p>
 
 </div>
 </div>

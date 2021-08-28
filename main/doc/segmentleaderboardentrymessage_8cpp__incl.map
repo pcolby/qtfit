@@ -1,11 +1,11 @@
 <map id="segmentleaderboardentrymessage.cpp" name="segmentleaderboardentrymessage.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="255,5,533,32"/>
-<area shape="rect" id="node2" href="$segmentleaderboardentrymessage_8h.html" title=" " alt="" coords="5,80,268,107"/>
+<area shape="rect" id="node1" title="Defines the SegmentLeaderboardEntryMessage, and SegmentLeaderboardEntryMessagePrivate classes." alt="" coords="255,5,533,32"/>
+<area shape="rect" id="node2" href="$segmentleaderboardentrymessage_8h.html" title="Declares the SegmentLeaderboardEntryMessage class." alt="" coords="5,80,268,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="255,304,330,331"/>
 <area shape="rect" id="node8" title=" " alt="" coords="343,80,621,107"/>
 <area shape="rect" id="node9" title=" " alt="" coords="645,80,727,107"/>
-<area shape="rect" id="node3" href="$abstractdatamessage_8h_source.html" title=" " alt="" coords="61,155,236,181"/>
-<area shape="rect" id="node4" href="$QtFit__global_8h_source.html" title=" " alt="" coords="107,304,219,331"/>
+<area shape="rect" id="node3" href="$abstractdatamessage_8h.html" title="Declares the AbstractDataMessage class." alt="" coords="61,155,236,181"/>
+<area shape="rect" id="node4" href="$QtFit__global_8h.html" title="Global QtFit library macros." alt="" coords="107,304,219,331"/>
 <area shape="rect" id="node6" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="187,229,257,256"/>
 <area shape="rect" id="node5" title=" " alt="" coords="124,379,203,405"/>
 </map>

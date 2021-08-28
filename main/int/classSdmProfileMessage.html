@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -195,7 +195,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> class represents a FIT <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8h_source.html#l00034">34</a> of file <a class="el" href="sdmprofilemessage_8h_source.html">sdmprofilemessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8h_source.html#l00039">39</a> of file <a class="el" href="sdmprofilemessage_8h_source.html">sdmprofilemessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af951ab9a4e4da79a4e7528402604dd70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af951ab9a4e4da79a4e7528402604dd70">&#9670;&nbsp;</a></span>SdmProfileMessage() <span class="overload">[1/2]</span></h2>
@@ -215,13 +215,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                     : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classSdmProfileMessagePrivate.html">SdmProfileMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassSdmProfileMessagePrivate_html"><div class="ttname"><a href="classSdmProfileMessagePrivate.html">SdmProfileMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage__p_8h_source.html#l00034">sdmprofilemessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                     : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classSdmProfileMessagePrivate.html">SdmProfileMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassSdmProfileMessagePrivate_html"><div class="ttname"><a href="classSdmProfileMessagePrivate.html">SdmProfileMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage__p_8h_source.html#l00038">sdmprofilemessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -256,11 +256,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -283,14 +283,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> data message's <code>enabled</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>enabled</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;enabled;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html"><div class="ttname"><a href="classSdmProfileMessage.html">SdmProfileMessage</a></div><div class="ttdoc">The SdmProfileMessage class represents a FIT SdmProfileMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8h_source.html#l00034">sdmprofilemessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;enabled;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html"><div class="ttname"><a href="classSdmProfileMessage.html">SdmProfileMessage</a></div><div class="ttdoc">The SdmProfileMessage class represents a FIT SdmProfileMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8h_source.html#l00039">sdmprofilemessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00171">setEnabled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00176">setEnabled()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -318,13 +318,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> data message's <code>messageIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>messageIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00161">setMessageIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00166">setMessageIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -352,13 +352,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> data message's <code>odometer</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>odometer</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> d-&gt;odometer;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00118">118</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> d-&gt;odometer;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00201">setOdometer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00206">setOdometer()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -387,13 +387,13 @@ Here is the caller graph for this function:</div>
 <p>Rollover counter that can be used to extend the odometer</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>odometerRollover</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00150">150</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> d-&gt;odometerRollover;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00155">155</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> d-&gt;odometerRollover;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00231">setOdometerRollover()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00236">setOdometerRollover()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -421,13 +421,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> data message's <code>sdmAntId</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>sdmAntId</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00091">91</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;sdmAntId;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00096">96</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;sdmAntId;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00181">setSdmAntId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00186">setSdmAntId()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -455,13 +455,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> data message's <code>sdmAntIdTransType</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>sdmAntIdTransType</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00137">137</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> d-&gt;sdmAntIdTransType;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00142">142</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> d-&gt;sdmAntIdTransType;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00221">setSdmAntIdTransType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00226">setSdmAntIdTransType()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -489,13 +489,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classSdmProfileMessage.html" title="The SdmProfileMessage class represents a FIT SdmProfileMessage data message.">SdmProfileMessage</a> data message's <code>sdmCalFactor</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>sdmCalFactor</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;sdmCalFactor;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00107">107</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> d-&gt;sdmCalFactor;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00191">setSdmCalFactor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00196">setSdmCalFactor()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -529,14 +529,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00171">171</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    d-&gt;enabled = <a class="code" href="classSdmProfileMessage.html#a521ed559d2b381b07851b70be04e9354">enabled</a>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_a521ed559d2b381b07851b70be04e9354"><div class="ttname"><a href="classSdmProfileMessage.html#a521ed559d2b381b07851b70be04e9354">SdmProfileMessage::enabled</a></div><div class="ttdeci">bool enabled() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's enabled field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00080">sdmprofilemessage.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00176">176</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    d-&gt;enabled = <a class="code" href="classSdmProfileMessage.html#a521ed559d2b381b07851b70be04e9354">enabled</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_a521ed559d2b381b07851b70be04e9354"><div class="ttname"><a href="classSdmProfileMessage.html#a521ed559d2b381b07851b70be04e9354">SdmProfileMessage::enabled</a></div><div class="ttdeci">bool enabled() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's enabled field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00085">sdmprofilemessage.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00080">enabled()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00085">enabled()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -570,14 +570,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00161">161</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    d-&gt;messageIndex = <a class="code" href="classSdmProfileMessage.html#aadd5508f7bb6cc9a67741529edc30fa6">messageIndex</a>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_aadd5508f7bb6cc9a67741529edc30fa6"><div class="ttname"><a href="classSdmProfileMessage.html#aadd5508f7bb6cc9a67741529edc30fa6">SdmProfileMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00069">sdmprofilemessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00166">166</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    d-&gt;messageIndex = <a class="code" href="classSdmProfileMessage.html#aadd5508f7bb6cc9a67741529edc30fa6">messageIndex</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_aadd5508f7bb6cc9a67741529edc30fa6"><div class="ttname"><a href="classSdmProfileMessage.html#aadd5508f7bb6cc9a67741529edc30fa6">SdmProfileMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00074">sdmprofilemessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00069">messageIndex()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00074">messageIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -611,14 +611,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00201">201</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    d-&gt;odometer = <a class="code" href="classSdmProfileMessage.html#a822ebbb12d17f14f6b3ddf77d2eb0587">odometer</a>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_a822ebbb12d17f14f6b3ddf77d2eb0587"><div class="ttname"><a href="classSdmProfileMessage.html#a822ebbb12d17f14f6b3ddf77d2eb0587">SdmProfileMessage::odometer</a></div><div class="ttdeci">quint32 odometer() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's odometer field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00113">sdmprofilemessage.cpp:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00206">206</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    d-&gt;odometer = <a class="code" href="classSdmProfileMessage.html#a822ebbb12d17f14f6b3ddf77d2eb0587">odometer</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_a822ebbb12d17f14f6b3ddf77d2eb0587"><div class="ttname"><a href="classSdmProfileMessage.html#a822ebbb12d17f14f6b3ddf77d2eb0587">SdmProfileMessage::odometer</a></div><div class="ttdeci">quint32 odometer() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's odometer field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00118">sdmprofilemessage.cpp:118</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00113">odometer()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00118">odometer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -652,14 +652,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00231">231</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    d-&gt;odometerRollover = <a class="code" href="classSdmProfileMessage.html#af89458cff023dc1b3f67e7b5e10b1233">odometerRollover</a>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_af89458cff023dc1b3f67e7b5e10b1233"><div class="ttname"><a href="classSdmProfileMessage.html#af89458cff023dc1b3f67e7b5e10b1233">SdmProfileMessage::odometerRollover</a></div><div class="ttdeci">quint8 odometerRollover() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's odometerRollover field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00150">sdmprofilemessage.cpp:150</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00236">236</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    d-&gt;odometerRollover = <a class="code" href="classSdmProfileMessage.html#af89458cff023dc1b3f67e7b5e10b1233">odometerRollover</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_af89458cff023dc1b3f67e7b5e10b1233"><div class="ttname"><a href="classSdmProfileMessage.html#af89458cff023dc1b3f67e7b5e10b1233">SdmProfileMessage::odometerRollover</a></div><div class="ttdeci">quint8 odometerRollover() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's odometerRollover field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00155">sdmprofilemessage.cpp:155</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00150">odometerRollover()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00155">odometerRollover()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -693,14 +693,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00181">181</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    d-&gt;sdmAntId = <a class="code" href="classSdmProfileMessage.html#a99d1f806921a60ba65c6e52462a16d64">sdmAntId</a>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_a99d1f806921a60ba65c6e52462a16d64"><div class="ttname"><a href="classSdmProfileMessage.html#a99d1f806921a60ba65c6e52462a16d64">SdmProfileMessage::sdmAntId</a></div><div class="ttdeci">quint16z sdmAntId() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's sdmAntId field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00091">sdmprofilemessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00186">186</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    d-&gt;sdmAntId = <a class="code" href="classSdmProfileMessage.html#a99d1f806921a60ba65c6e52462a16d64">sdmAntId</a>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_a99d1f806921a60ba65c6e52462a16d64"><div class="ttname"><a href="classSdmProfileMessage.html#a99d1f806921a60ba65c6e52462a16d64">SdmProfileMessage::sdmAntId</a></div><div class="ttdeci">quint16z sdmAntId() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's sdmAntId field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00096">sdmprofilemessage.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00091">sdmAntId()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00096">sdmAntId()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -734,14 +734,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00221">221</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    d-&gt;sdmAntIdTransType = <a class="code" href="classSdmProfileMessage.html#ac0e4b72b27fcba9ead65b6c2f92fc130">sdmAntIdTransType</a>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_ac0e4b72b27fcba9ead65b6c2f92fc130"><div class="ttname"><a href="classSdmProfileMessage.html#ac0e4b72b27fcba9ead65b6c2f92fc130">SdmProfileMessage::sdmAntIdTransType</a></div><div class="ttdeci">quint8z sdmAntIdTransType() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's sdmAntIdTransType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00137">sdmprofilemessage.cpp:137</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00226">226</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    d-&gt;sdmAntIdTransType = <a class="code" href="classSdmProfileMessage.html#ac0e4b72b27fcba9ead65b6c2f92fc130">sdmAntIdTransType</a>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_ac0e4b72b27fcba9ead65b6c2f92fc130"><div class="ttname"><a href="classSdmProfileMessage.html#ac0e4b72b27fcba9ead65b6c2f92fc130">SdmProfileMessage::sdmAntIdTransType</a></div><div class="ttdeci">quint8z sdmAntIdTransType() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's sdmAntIdTransType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00142">sdmprofilemessage.cpp:142</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00137">sdmAntIdTransType()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00142">sdmAntIdTransType()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -775,14 +775,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00191">191</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    d-&gt;sdmCalFactor = <a class="code" href="classSdmProfileMessage.html#a319313693a32789ae45c7c1ac900f705">sdmCalFactor</a>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_a319313693a32789ae45c7c1ac900f705"><div class="ttname"><a href="classSdmProfileMessage.html#a319313693a32789ae45c7c1ac900f705">SdmProfileMessage::sdmCalFactor</a></div><div class="ttdeci">quint16 sdmCalFactor() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's sdmCalFactor field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00102">sdmprofilemessage.cpp:102</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00196">196</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    d-&gt;sdmCalFactor = <a class="code" href="classSdmProfileMessage.html#a319313693a32789ae45c7c1ac900f705">sdmCalFactor</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_a319313693a32789ae45c7c1ac900f705"><div class="ttname"><a href="classSdmProfileMessage.html#a319313693a32789ae45c7c1ac900f705">SdmProfileMessage::sdmCalFactor</a></div><div class="ttdeci">quint16 sdmCalFactor() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's sdmCalFactor field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00107">sdmprofilemessage.cpp:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00102">sdmCalFactor()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00107">sdmCalFactor()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -816,14 +816,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00211">211</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    d-&gt;speedSource = <a class="code" href="classSdmProfileMessage.html#a95b6d64241638f5d230eb1d58ce86ac4">speedSource</a>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
-<div class="ttc" id="aclassSdmProfileMessage_html_a95b6d64241638f5d230eb1d58ce86ac4"><div class="ttname"><a href="classSdmProfileMessage.html#a95b6d64241638f5d230eb1d58ce86ac4">SdmProfileMessage::speedSource</a></div><div class="ttdeci">bool speedSource() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's speedSource field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00126">sdmprofilemessage.cpp:126</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00216">216</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    Q_D(<a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    d-&gt;speedSource = <a class="code" href="classSdmProfileMessage.html#a95b6d64241638f5d230eb1d58ce86ac4">speedSource</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
+<div class="ttc" id="aclassSdmProfileMessage_html_a95b6d64241638f5d230eb1d58ce86ac4"><div class="ttname"><a href="classSdmProfileMessage.html#a95b6d64241638f5d230eb1d58ce86ac4">SdmProfileMessage::speedSource</a></div><div class="ttdeci">bool speedSource() const</div><div class="ttdoc">Returns the SdmProfileMessage data message's speedSource field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="sdmprofilemessage_8cpp_source.html#l00131">sdmprofilemessage.cpp:131</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00126">speedSource()</a>.</p>
+<p class="reference">References <a class="el" href="sdmprofilemessage_8cpp_source.html#l00131">speedSource()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -852,13 +852,13 @@ Here is the call graph for this function:</div>
 <p>Use footpod for speed source instead of GPS</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>speedSource</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00126">126</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> d-&gt;speedSource;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdmprofilemessage_8cpp_source.html#l00131">131</a> of file <a class="el" href="sdmprofilemessage_8cpp_source.html">sdmprofilemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSdmProfileMessage.html">SdmProfileMessage</a>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> d-&gt;speedSource;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00211">setSpeedSource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sdmprofilemessage_8cpp_source.html#l00216">setSpeedSource()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

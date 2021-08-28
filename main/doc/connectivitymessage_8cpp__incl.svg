@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Defines the ConnectivityMessage, and ConnectivityMessagePrivate classes.">
 <polygon fill="#bfbfbf" stroke="black" points="138,-280.5 138,-299.5 279,-299.5 279,-280.5 138,-280.5"/>
 <text text-anchor="middle" x="208.5" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">connectivitymessage.cpp</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="connectivitymessage_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="connectivitymessage_8h.html" target="_top" xlink:title="Declares the ConnectivityMessage class.">
 <polygon fill="none" stroke="black" points="1.5,-224.5 1.5,-243.5 131.5,-243.5 131.5,-224.5 1.5,-224.5"/>
 <text text-anchor="middle" x="66.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">connectivitymessage.h</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="abstractdatamessage_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="abstractdatamessage_8h.html" target="_top" xlink:title="Declares the AbstractDataMessage class.">
 <polygon fill="none" stroke="black" points="0,-168.5 0,-187.5 131,-187.5 131,-168.5 0,-168.5"/>
 <text text-anchor="middle" x="65.5" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage.h</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title="Global QtFit library macros.">
 <polygon fill="none" stroke="black" points="18.5,-56.5 18.5,-75.5 102.5,-75.5 102.5,-56.5 18.5,-56.5"/>
 <text text-anchor="middle" x="60.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>

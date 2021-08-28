@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -159,7 +159,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classStressLevelMessage.html" title="The StressLevelMessage class represents a FIT StressLevelMessage data message.">StressLevelMessage</a> class represents a FIT <a class="el" href="classStressLevelMessage.html" title="The StressLevelMessage class represents a FIT StressLevelMessage data message.">StressLevelMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8h_source.html#l00034">34</a> of file <a class="el" href="stresslevelmessage_8h_source.html">stresslevelmessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8h_source.html#l00039">39</a> of file <a class="el" href="stresslevelmessage_8h_source.html">stresslevelmessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aec4046f18d70686072eb3d024ebdbd80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec4046f18d70686072eb3d024ebdbd80">&#9670;&nbsp;</a></span>StressLevelMessage() <span class="overload">[1/2]</span></h2>
@@ -179,13 +179,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classStressLevelMessage.html" title="The StressLevelMessage class represents a FIT StressLevelMessage data message.">StressLevelMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classStressLevelMessagePrivate.html">StressLevelMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassStressLevelMessagePrivate_html"><div class="ttname"><a href="classStressLevelMessagePrivate.html">StressLevelMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage__p_8h_source.html#l00034">stresslevelmessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classStressLevelMessagePrivate.html">StressLevelMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassStressLevelMessagePrivate_html"><div class="ttname"><a href="classStressLevelMessagePrivate.html">StressLevelMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage__p_8h_source.html#l00038">stresslevelmessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,11 +220,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -253,15 +253,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00103">103</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    Q_D(<a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    d-&gt;stressLevelTime = <a class="code" href="classStressLevelMessage.html#a172dbf23b1d33103bc28db80efcd8a4c">stressLevelTime</a>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="ttc" id="aclassStressLevelMessage_html"><div class="ttname"><a href="classStressLevelMessage.html">StressLevelMessage</a></div><div class="ttdoc">The StressLevelMessage class represents a FIT StressLevelMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage_8h_source.html#l00034">stresslevelmessage.h:34</a></div></div>
-<div class="ttc" id="aclassStressLevelMessage_html_a172dbf23b1d33103bc28db80efcd8a4c"><div class="ttname"><a href="classStressLevelMessage.html#a172dbf23b1d33103bc28db80efcd8a4c">StressLevelMessage::stressLevelTime</a></div><div class="ttdeci">DateTime stressLevelTime() const</div><div class="ttdoc">Returns the StressLevelMessage data message's stressLevelTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage_8cpp_source.html#l00082">stresslevelmessage.cpp:82</a></div></div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00108">108</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    Q_D(<a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    d-&gt;stressLevelTime = <a class="code" href="classStressLevelMessage.html#a172dbf23b1d33103bc28db80efcd8a4c">stressLevelTime</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="ttc" id="aclassStressLevelMessage_html"><div class="ttname"><a href="classStressLevelMessage.html">StressLevelMessage</a></div><div class="ttdoc">The StressLevelMessage class represents a FIT StressLevelMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage_8h_source.html#l00039">stresslevelmessage.h:39</a></div></div>
+<div class="ttc" id="aclassStressLevelMessage_html_a172dbf23b1d33103bc28db80efcd8a4c"><div class="ttname"><a href="classStressLevelMessage.html#a172dbf23b1d33103bc28db80efcd8a4c">StressLevelMessage::stressLevelTime</a></div><div class="ttdeci">DateTime stressLevelTime() const</div><div class="ttdoc">Returns the StressLevelMessage data message's stressLevelTime field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage_8cpp_source.html#l00087">stresslevelmessage.cpp:87</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="stresslevelmessage_8cpp_source.html#l00082">stressLevelTime()</a>.</p>
+<p class="reference">References <a class="el" href="stresslevelmessage_8cpp_source.html#l00087">stressLevelTime()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -295,14 +295,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00093">93</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    Q_D(<a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    d-&gt;stressLevelValue = <a class="code" href="classStressLevelMessage.html#ab7ad4eaa8c12e27126422479f80cec64">stressLevelValue</a>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="ttc" id="aclassStressLevelMessage_html_ab7ad4eaa8c12e27126422479f80cec64"><div class="ttname"><a href="classStressLevelMessage.html#ab7ad4eaa8c12e27126422479f80cec64">StressLevelMessage::stressLevelValue</a></div><div class="ttdeci">qint16 stressLevelValue() const</div><div class="ttdoc">Returns the StressLevelMessage data message's stressLevelValue field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage_8cpp_source.html#l00069">stresslevelmessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00098">98</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    Q_D(<a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    d-&gt;stressLevelValue = <a class="code" href="classStressLevelMessage.html#ab7ad4eaa8c12e27126422479f80cec64">stressLevelValue</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="ttc" id="aclassStressLevelMessage_html_ab7ad4eaa8c12e27126422479f80cec64"><div class="ttname"><a href="classStressLevelMessage.html#ab7ad4eaa8c12e27126422479f80cec64">StressLevelMessage::stressLevelValue</a></div><div class="ttdeci">qint16 stressLevelValue() const</div><div class="ttdoc">Returns the StressLevelMessage data message's stressLevelValue field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="stresslevelmessage_8cpp_source.html#l00074">stresslevelmessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="stresslevelmessage_8cpp_source.html#l00069">stressLevelValue()</a>.</p>
+<p class="reference">References <a class="el" href="stresslevelmessage_8cpp_source.html#l00074">stressLevelValue()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -331,13 +331,13 @@ Here is the call graph for this function:</div>
 <p>Time stress score was calculated</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>stressLevelTime</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00082">82</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> d-&gt;stressLevelTime;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00087">87</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> d-&gt;stressLevelTime;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="stresslevelmessage_8cpp_source.html#l00103">setStressLevelTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stresslevelmessage_8cpp_source.html#l00108">setStressLevelTime()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -365,13 +365,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classStressLevelMessage.html" title="The StressLevelMessage class represents a FIT StressLevelMessage data message.">StressLevelMessage</a> data message's <code>stressLevelValue</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>stressLevelValue</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;stressLevelValue;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="stresslevelmessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="stresslevelmessage_8cpp_source.html">stresslevelmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classStressLevelMessage.html">StressLevelMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;stressLevelValue;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="stresslevelmessage_8cpp_source.html#l00093">setStressLevelValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stresslevelmessage_8cpp_source.html#l00098">setStressLevelValue()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

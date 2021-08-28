@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Declares the WeatherConditionsMessagePrivate class.">
 <polygon fill="#bfbfbf" stroke="black" points="2.5,-280.5 2.5,-299.5 173.5,-299.5 173.5,-280.5 2.5,-280.5"/>
 <text text-anchor="middle" x="88" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">weatherconditionsmessage_p.h</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="abstractdatamessage__p_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="abstractdatamessage__p_8h.html" target="_top" xlink:title="Declares the AbstractDataMessagePrivate class.">
 <polygon fill="none" stroke="black" points="16.5,-224.5 16.5,-243.5 159.5,-243.5 159.5,-224.5 16.5,-224.5"/>
 <text text-anchor="middle" x="88" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstractdatamessage_p.h</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="QtFit__global_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="QtFit__global_8h.html" target="_top" xlink:title="Global QtFit library macros.">
 <polygon fill="none" stroke="black" points="0,-56.5 0,-75.5 84,-75.5 84,-56.5 0,-56.5"/>
 <text text-anchor="middle" x="42" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">QtFit_global.h</text>
 </a>
@@ -65,7 +65,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="types__p_8h_source.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="types__p_8h.html" target="_top" xlink:title="Internal types used by QtFit classes.">
 <polygon fill="none" stroke="black" points="116,-168.5 116,-187.5 180,-187.5 180,-168.5 116,-168.5"/>
 <text text-anchor="middle" x="148" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">types_p.h</text>
 </a>

@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -171,7 +171,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classSegmentLeaderboardEntryMessagePrivate.html">SegmentLeaderboardEntryMessagePrivate</a> class provides private implementation for the <a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00034">34</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00038">38</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a38984f96458d5053f5a449e120d73af8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38984f96458d5053f5a449e120d73af8">&#9670;&nbsp;</a></span>SegmentLeaderboardEntryMessagePrivate()</h2>
@@ -204,27 +204,27 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html#l00243">243</a> of file <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html">segmentleaderboardentrymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#a6ed4e8f937137c9e34127bee8f9f8a1f">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#af312a3786e60b9d7c59bc919fb3e7ddc">type</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aba8810113341f0bbbf1675b716335e37">SegmentLeaderboardType</a><span class="keyword">&gt;</span>(-1))</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#ab3800f8a2f9fe44b03a6888a1b00f77b">groupPrimaryKey</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aa7186fda5bc0a675c933e63956b53cdf">activityId</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aefb441fed8429f9fdaf886bb4d4f9a37">segmentTime</a>(0xFFFFFFFF)</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::SegmentLeaderboardEntry;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00031">abstractdatamessage_p.h:31</a></div></div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00034">abstractdatamessage_p.h:34</a></div></div>
-<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_a6ed4e8f937137c9e34127bee8f9f8a1f"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#a6ed4e8f937137c9e34127bee8f9f8a1f">SegmentLeaderboardEntryMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00040">segmentleaderboardentrymessage_p.h:40</a></div></div>
-<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_aa7186fda5bc0a675c933e63956b53cdf"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#aa7186fda5bc0a675c933e63956b53cdf">SegmentLeaderboardEntryMessagePrivate::activityId</a></div><div class="ttdeci">quint32 activityId</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's activityId field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00068">segmentleaderboardentrymessage_p.h:68</a></div></div>
-<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_ab3800f8a2f9fe44b03a6888a1b00f77b"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#ab3800f8a2f9fe44b03a6888a1b00f77b">SegmentLeaderboardEntryMessagePrivate::groupPrimaryKey</a></div><div class="ttdeci">quint32 groupPrimaryKey</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's groupPrimaryKey field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00061">segmentleaderboardentrymessage_p.h:61</a></div></div>
-<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_aefb441fed8429f9fdaf886bb4d4f9a37"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#aefb441fed8429f9fdaf886bb4d4f9a37">SegmentLeaderboardEntryMessagePrivate::segmentTime</a></div><div class="ttdeci">quint32 segmentTime</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's segmentTime field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00075">segmentleaderboardentrymessage_p.h:75</a></div></div>
-<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_af312a3786e60b9d7c59bc919fb3e7ddc"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#af312a3786e60b9d7c59bc919fb3e7ddc">SegmentLeaderboardEntryMessagePrivate::type</a></div><div class="ttdeci">SegmentLeaderboardType type</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's type field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00054">segmentleaderboardentrymessage_p.h:54</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html#l00248">248</a> of file <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html">segmentleaderboardentrymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  : <a class="code" href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a>(q)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#a6ed4e8f937137c9e34127bee8f9f8a1f">messageIndex</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#af312a3786e60b9d7c59bc919fb3e7ddc">type</a>(<span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aba8810113341f0bbbf1675b716335e37">SegmentLeaderboardType</a><span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#ab3800f8a2f9fe44b03a6888a1b00f77b">groupPrimaryKey</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aa7186fda5bc0a675c933e63956b53cdf">activityId</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  , <a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aefb441fed8429f9fdaf886bb4d4f9a37">segmentTime</a>(0xFFFFFFFF)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <a class="code" href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">globalMessageNumber</a> = MesgNum::SegmentLeaderboardEntry;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html"><div class="ttname"><a href="classAbstractDataMessagePrivate.html">AbstractDataMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00036">abstractdatamessage_p.h:36</a></div></div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_a082196758fa78973e09328c3785d68d7"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#a082196758fa78973e09328c3785d68d7">AbstractDataMessagePrivate::globalMessageNumber</a></div><div class="ttdeci">MesgNum globalMessageNumber</div><div class="ttdoc">FIT Globla Message Number for this FIT Data Message.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage__p_8h_source.html#l00039">abstractdatamessage_p.h:39</a></div></div>
+<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_a6ed4e8f937137c9e34127bee8f9f8a1f"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#a6ed4e8f937137c9e34127bee8f9f8a1f">SegmentLeaderboardEntryMessagePrivate::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's messageIndex field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00044">segmentleaderboardentrymessage_p.h:44</a></div></div>
+<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_aa7186fda5bc0a675c933e63956b53cdf"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#aa7186fda5bc0a675c933e63956b53cdf">SegmentLeaderboardEntryMessagePrivate::activityId</a></div><div class="ttdeci">quint32 activityId</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's activityId field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00072">segmentleaderboardentrymessage_p.h:72</a></div></div>
+<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_ab3800f8a2f9fe44b03a6888a1b00f77b"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#ab3800f8a2f9fe44b03a6888a1b00f77b">SegmentLeaderboardEntryMessagePrivate::groupPrimaryKey</a></div><div class="ttdeci">quint32 groupPrimaryKey</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's groupPrimaryKey field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00065">segmentleaderboardentrymessage_p.h:65</a></div></div>
+<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_aefb441fed8429f9fdaf886bb4d4f9a37"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#aefb441fed8429f9fdaf886bb4d4f9a37">SegmentLeaderboardEntryMessagePrivate::segmentTime</a></div><div class="ttdeci">quint32 segmentTime</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's segmentTime field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00079">segmentleaderboardentrymessage_p.h:79</a></div></div>
+<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_af312a3786e60b9d7c59bc919fb3e7ddc"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#af312a3786e60b9d7c59bc919fb3e7ddc">SegmentLeaderboardEntryMessagePrivate::type</a></div><div class="ttdeci">SegmentLeaderboardType type</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's type field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00058">segmentleaderboardentrymessage_p.h:58</a></div></div>
 <div class="ttc" id="atypes_8h_html_aba8810113341f0bbbf1675b716335e37"><div class="ttname"><a href="types_8h.html#aba8810113341f0bbbf1675b716335e37">SegmentLeaderboardType</a></div><div class="ttdeci">SegmentLeaderboardType</div><div class="ttdoc">Garmin FIT SegmentLeaderboardType type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l02727">types.h:2727</a></div></div>
 <div class="ttc" id="atypes_8h_html_abfee88418dda9113739692631a5c0818"><div class="ttname"><a href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a></div><div class="ttdeci">MessageIndex</div><div class="ttdoc">Garmin FIT MessageIndex type.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00263">types.h:263</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00034">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage__p_8h_source.html#l00039">AbstractDataMessagePrivate::globalMessageNumber</a>.</p>
 
 </div>
 </div>
@@ -252,10 +252,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Destroys the <a class="el" href="classSegmentLeaderboardEntryMessagePrivate.html">SegmentLeaderboardEntryMessagePrivate</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html#l00259">259</a> of file <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html">segmentleaderboardentrymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html#l00264">264</a> of file <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html">segmentleaderboardentrymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -320,52 +320,52 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classAbstractDataMessagePrivate.html#ae4d13bcc7f39d6050db131e3afe8b4d3">AbstractDataMessagePrivate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html#l00264">264</a> of file <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html">segmentleaderboardentrymessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.messageIndex</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;segment_leaderboard_entry.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#a6ed4e8f937137c9e34127bee8f9f8a1f">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.name</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::String, <span class="stringliteral">&quot;segment_leaderboard_entry.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#ae21f00b96b5329e376956778702611b4">name</a> = QString::fromUtf8(data);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.type</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Enum, <span class="stringliteral">&quot;segment_leaderboard_entry.type&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#af312a3786e60b9d7c59bc919fb3e7ddc">type</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aba8810113341f0bbbf1675b716335e37">SegmentLeaderboardType</a><span class="keyword">&gt;</span>(data.at(0));</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.groupPrimaryKey</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;segment_leaderboard_entry.groupPrimaryKey&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#ab3800f8a2f9fe44b03a6888a1b00f77b">groupPrimaryKey</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.activityId</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;segment_leaderboard_entry.activityId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aa7186fda5bc0a675c933e63956b53cdf">activityId</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.segmentTime</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;segment_leaderboard_entry.segmentTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aefb441fed8429f9fdaf886bb4d4f9a37">segmentTime</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.activityIdString</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::String, <span class="stringliteral">&quot;segment_leaderboard_entry.activityIdString&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#a0afe3b9d36b475e4184b55399c90364c">activityIdString</a> = QString::fromUtf8(data);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown segment_leaderboard_entry message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00194">abstractdatamessage.cpp:194</a></div></div>
-<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_a0afe3b9d36b475e4184b55399c90364c"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#a0afe3b9d36b475e4184b55399c90364c">SegmentLeaderboardEntryMessagePrivate::activityIdString</a></div><div class="ttdeci">QString activityIdString</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's activityIdString field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00082">segmentleaderboardentrymessage_p.h:82</a></div></div>
-<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_ae21f00b96b5329e376956778702611b4"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#ae21f00b96b5329e376956778702611b4">SegmentLeaderboardEntryMessagePrivate::name</a></div><div class="ttdeci">QString name</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's name field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00047">segmentleaderboardentrymessage_p.h:47</a></div></div>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html#l00269">269</a> of file <a class="el" href="segmentleaderboardentrymessage_8cpp_source.html">segmentleaderboardentrymessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">switch</span> (fieldId) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">case</span> 254: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.messageIndex</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 2, FitBaseType::Uint16, <span class="stringliteral">&quot;segment_leaderboard_entry.messageIndex&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#a6ed4e8f937137c9e34127bee8f9f8a1f">messageIndex</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#abfee88418dda9113739692631a5c0818">MessageIndex</a><span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint16&gt;(data) : qFromLittleEndian&lt;quint16&gt;(data));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.name</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::String, <span class="stringliteral">&quot;segment_leaderboard_entry.name&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#ae21f00b96b5329e376956778702611b4">name</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.type</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::Enum, <span class="stringliteral">&quot;segment_leaderboard_entry.type&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#af312a3786e60b9d7c59bc919fb3e7ddc">type</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="types_8h.html#aba8810113341f0bbbf1675b716335e37">SegmentLeaderboardType</a><span class="keyword">&gt;</span>(data.at(0));</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">case</span> 2: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.groupPrimaryKey</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;segment_leaderboard_entry.groupPrimaryKey&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#ab3800f8a2f9fe44b03a6888a1b00f77b">groupPrimaryKey</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">case</span> 3: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.activityId</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;segment_leaderboard_entry.activityId&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aa7186fda5bc0a675c933e63956b53cdf">activityId</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">case</span> 4: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.segmentTime</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 4, FitBaseType::Uint32, <span class="stringliteral">&quot;segment_leaderboard_entry.segmentTime&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#aefb441fed8429f9fdaf886bb4d4f9a37">segmentTime</a> = <span class="keyword">static_cast&lt;</span>quint32<span class="keyword">&gt;</span>(bigEndian ? qFromBigEndian&lt;quint32&gt;(data) : qFromLittleEndian&lt;quint32&gt;(data));</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">case</span> 5: <span class="comment">// See Profile.xlsx::Messages:segment_leaderboard_entry.activityIdString</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">verify</a>(data, baseType, 1, FitBaseType::String, <span class="stringliteral">&quot;segment_leaderboard_entry.activityIdString&quot;</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        this-&gt;<a class="code" href="classSegmentLeaderboardEntryMessagePrivate.html#a0afe3b9d36b475e4184b55399c90364c">activityIdString</a> = QString::fromUtf8(data);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring unknown segment_leaderboard_entry message field number&quot;</span> &lt;&lt; fieldId &lt;&lt; bigEndian;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">// Fall through to return true, as its still &#39;safe&#39; to continue parsing data messages.</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessagePrivate_html_ad11748b005c364c65c2f1f03eae674cc"><div class="ttname"><a href="classAbstractDataMessagePrivate.html#ad11748b005c364c65c2f1f03eae674cc">AbstractDataMessagePrivate::verify</a></div><div class="ttdeci">bool verify(const QByteArray &amp;data, const FitBaseType actualType, const int expectedSize, const FitBaseType expectedType, const char *messageFieldName)</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8cpp_source.html#l00199">abstractdatamessage.cpp:199</a></div></div>
+<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_a0afe3b9d36b475e4184b55399c90364c"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#a0afe3b9d36b475e4184b55399c90364c">SegmentLeaderboardEntryMessagePrivate::activityIdString</a></div><div class="ttdeci">QString activityIdString</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's activityIdString field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00086">segmentleaderboardentrymessage_p.h:86</a></div></div>
+<div class="ttc" id="aclassSegmentLeaderboardEntryMessagePrivate_html_ae21f00b96b5329e376956778702611b4"><div class="ttname"><a href="classSegmentLeaderboardEntryMessagePrivate.html#ae21f00b96b5329e376956778702611b4">SegmentLeaderboardEntryMessagePrivate::name</a></div><div class="ttdeci">QString name</div><div class="ttdoc">The SegmentLeaderboardEntryMessage FIT message's name field.</div><div class="ttdef"><b>Definition:</b> <a href="segmentleaderboardentrymessage__p_8h_source.html#l00051">segmentleaderboardentrymessage_p.h:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00194">AbstractDataMessagePrivate::verify()</a>.</p>
+<p class="reference">References <a class="el" href="abstractdatamessage_8cpp_source.html#l00199">AbstractDataMessagePrivate::verify()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentLeaderboardEntryMessagePrivate_ab78229de4ede830ca200aa595e22e38b_cgraph.svg" width="523" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentLeaderboardEntryMessagePrivate_ab78229de4ede830ca200aa595e22e38b_cgraph.svg" width="692" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -387,7 +387,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a> FIT message's activityId field. </p>
 <p>ID of the activity associated with this leader time </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00068">68</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00072">72</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +406,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a> FIT message's activityIdString field. </p>
 <p>String version of the activity_id. 21 characters long, express in decimal </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00082">82</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00086">86</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +425,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a> FIT message's groupPrimaryKey field. </p>
 <p>Primary user ID of this leader </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00061">61</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00065">65</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -444,7 +444,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a> FIT message's name field. </p>
 <p>Friendly name assigned to leader </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00047">47</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00051">51</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -463,7 +463,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a> FIT message's segmentTime field. </p>
 <p>Segment Time (includes pauses) </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00075">75</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00079">79</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
 
 </div>
 </div>
@@ -482,7 +482,7 @@ Here is the call graph for this function:</div>
 <p>The <a class="el" href="classSegmentLeaderboardEntryMessage.html" title="The SegmentLeaderboardEntryMessage class represents a FIT SegmentLeaderboardEntryMessage data message...">SegmentLeaderboardEntryMessage</a> FIT message's type field. </p>
 <p>Leader classification </p>
 
-<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00054">54</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html#l00058">58</a> of file <a class="el" href="segmentleaderboardentrymessage__p_8h_source.html">segmentleaderboardentrymessage_p.h</a>.</p>
 
 </div>
 </div>

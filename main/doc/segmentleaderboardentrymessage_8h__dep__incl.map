@@ -1,5 +1,5 @@
 <map id="segmentleaderboardentrymessage.h" name="segmentleaderboardentrymessage.h">
-<area shape="rect" id="node1" title=" " alt="" coords="73,5,335,32"/>
+<area shape="rect" id="node1" title="Declares the SegmentLeaderboardEntryMessage class." alt="" coords="73,5,335,32"/>
 <area shape="rect" id="node2" href="$fitdatamessages_8cpp.html" title="Provides the AbstractDataMessage::fromData implementation." alt="" coords="5,80,163,107"/>
-<area shape="rect" id="node3" href="$segmentleaderboardentrymessage_8cpp.html" title=" " alt="" coords="187,80,464,107"/>
+<area shape="rect" id="node3" href="$segmentleaderboardentrymessage_8cpp.html" title="Defines the SegmentLeaderboardEntryMessage, and SegmentLeaderboardEntryMessagePrivate classes." alt="" coords="187,80,464,107"/>
 </map>

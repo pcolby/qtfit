@@ -1,0 +1,11 @@
+<map id="abstractdatamessage.cpp" name="abstractdatamessage.cpp">
+<area shape="rect" id="node1" title="Defines the AbstractDataMessage, and AbstractDataMessagePrivate classes." alt="" coords="180,5,371,32"/>
+<area shape="rect" id="node2" href="$abstractdatamessage_8h.html" title="Declares the AbstractDataMessage class." alt="" coords="5,155,180,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="347,304,422,331"/>
+<area shape="rect" id="node7" href="$abstractdatamessage__p_8h.html" title="Declares the AbstractDataMessagePrivate class." alt="" coords="180,80,371,107"/>
+<area shape="rect" id="node3" href="$QtFit__global_8h.html" title="Global QtFit library macros." alt="" coords="158,304,270,331"/>
+<area shape="rect" id="node5" href="$types_8h.html" title="Types defined by the ANT+ FIT SDK." alt="" coords="252,229,323,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="175,379,253,405"/>
+<area shape="rect" id="node8" href="$types__p_8h.html" title="Internal types used by QtFit classes." alt="" coords="313,155,398,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="347,229,401,256"/>
+</map>

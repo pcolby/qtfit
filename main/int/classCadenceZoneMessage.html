@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -165,7 +165,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classCadenceZoneMessage.html" title="The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.">CadenceZoneMessage</a> class represents a FIT <a class="el" href="classCadenceZoneMessage.html" title="The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.">CadenceZoneMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8h_source.html#l00034">34</a> of file <a class="el" href="cadencezonemessage_8h_source.html">cadencezonemessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8h_source.html#l00039">39</a> of file <a class="el" href="cadencezonemessage_8h_source.html">cadencezonemessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abdf40abfc541048ba819bb44923e3ceb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abdf40abfc541048ba819bb44923e3ceb">&#9670;&nbsp;</a></span>CadenceZoneMessage() <span class="overload">[1/2]</span></h2>
@@ -185,13 +185,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classCadenceZoneMessage.html" title="The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.">CadenceZoneMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classCadenceZoneMessagePrivate.html">CadenceZoneMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassCadenceZoneMessagePrivate_html"><div class="ttname"><a href="classCadenceZoneMessagePrivate.html">CadenceZoneMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage__p_8h_source.html#l00034">cadencezonemessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                       : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classCadenceZoneMessagePrivate.html">CadenceZoneMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassCadenceZoneMessagePrivate_html"><div class="ttname"><a href="classCadenceZoneMessagePrivate.html">CadenceZoneMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage__p_8h_source.html#l00038">cadencezonemessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -226,11 +226,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                          : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -253,14 +253,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the <a class="el" href="classCadenceZoneMessage.html" title="The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.">CadenceZoneMessage</a> data message's <code>highValue</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>highValue</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;highValue;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="ttc" id="aclassCadenceZoneMessage_html"><div class="ttname"><a href="classCadenceZoneMessage.html">CadenceZoneMessage</a></div><div class="ttdoc">The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8h_source.html#l00034">cadencezonemessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;highValue;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="aclassCadenceZoneMessage_html"><div class="ttname"><a href="classCadenceZoneMessage.html">CadenceZoneMessage</a></div><div class="ttdoc">The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8h_source.html#l00039">cadencezonemessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="cadencezonemessage_8cpp_source.html#l00112">setHighValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cadencezonemessage_8cpp_source.html#l00117">setHighValue()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -288,13 +288,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classCadenceZoneMessage.html" title="The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.">CadenceZoneMessage</a> data message's <code>messageIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>messageIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;messageIndex;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="cadencezonemessage_8cpp_source.html#l00102">setMessageIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cadencezonemessage_8cpp_source.html#l00107">setMessageIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -322,13 +322,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classCadenceZoneMessage.html" title="The CadenceZoneMessage class represents a FIT CadenceZoneMessage data message.">CadenceZoneMessage</a> data message's <code>name</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>name</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00091">91</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;name;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00096">96</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;name;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="cadencezonemessage_8cpp_source.html#l00122">setName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cadencezonemessage_8cpp_source.html#l00127">setName()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -362,14 +362,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00112">112</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    Q_D(<a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    d-&gt;highValue = <a class="code" href="classCadenceZoneMessage.html#ac31beb38c4b41b9124123f46eac59f43">highValue</a>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="ttc" id="aclassCadenceZoneMessage_html_ac31beb38c4b41b9124123f46eac59f43"><div class="ttname"><a href="classCadenceZoneMessage.html#ac31beb38c4b41b9124123f46eac59f43">CadenceZoneMessage::highValue</a></div><div class="ttdeci">quint8 highValue() const</div><div class="ttdoc">Returns the CadenceZoneMessage data message's highValue field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8cpp_source.html#l00080">cadencezonemessage.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00117">117</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    Q_D(<a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    d-&gt;highValue = <a class="code" href="classCadenceZoneMessage.html#ac31beb38c4b41b9124123f46eac59f43">highValue</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="ttc" id="aclassCadenceZoneMessage_html_ac31beb38c4b41b9124123f46eac59f43"><div class="ttname"><a href="classCadenceZoneMessage.html#ac31beb38c4b41b9124123f46eac59f43">CadenceZoneMessage::highValue</a></div><div class="ttdeci">quint8 highValue() const</div><div class="ttdoc">Returns the CadenceZoneMessage data message's highValue field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8cpp_source.html#l00085">cadencezonemessage.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="cadencezonemessage_8cpp_source.html#l00080">highValue()</a>.</p>
+<p class="reference">References <a class="el" href="cadencezonemessage_8cpp_source.html#l00085">highValue()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -403,14 +403,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    d-&gt;messageIndex = <a class="code" href="classCadenceZoneMessage.html#ae2961dd526b14822fff44dcf41161098">messageIndex</a>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="ttc" id="aclassCadenceZoneMessage_html_ae2961dd526b14822fff44dcf41161098"><div class="ttname"><a href="classCadenceZoneMessage.html#ae2961dd526b14822fff44dcf41161098">CadenceZoneMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the CadenceZoneMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8cpp_source.html#l00069">cadencezonemessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00107">107</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Q_D(<a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    d-&gt;messageIndex = <a class="code" href="classCadenceZoneMessage.html#ae2961dd526b14822fff44dcf41161098">messageIndex</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="ttc" id="aclassCadenceZoneMessage_html_ae2961dd526b14822fff44dcf41161098"><div class="ttname"><a href="classCadenceZoneMessage.html#ae2961dd526b14822fff44dcf41161098">CadenceZoneMessage::messageIndex</a></div><div class="ttdeci">MessageIndex messageIndex() const</div><div class="ttdoc">Returns the CadenceZoneMessage data message's messageIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8cpp_source.html#l00074">cadencezonemessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="cadencezonemessage_8cpp_source.html#l00069">messageIndex()</a>.</p>
+<p class="reference">References <a class="el" href="cadencezonemessage_8cpp_source.html#l00074">messageIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -444,14 +444,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00122">122</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    Q_D(<a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    d-&gt;name = <a class="code" href="classCadenceZoneMessage.html#a4c507c9af474ca4b0e3eeccd318080d5">name</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
-<div class="ttc" id="aclassCadenceZoneMessage_html_a4c507c9af474ca4b0e3eeccd318080d5"><div class="ttname"><a href="classCadenceZoneMessage.html#a4c507c9af474ca4b0e3eeccd318080d5">CadenceZoneMessage::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdoc">Returns the CadenceZoneMessage data message's name field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8cpp_source.html#l00091">cadencezonemessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="cadencezonemessage_8cpp_source.html#l00127">127</a> of file <a class="el" href="cadencezonemessage_8cpp_source.html">cadencezonemessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    Q_D(<a class="code" href="classCadenceZoneMessage.html">CadenceZoneMessage</a>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    d-&gt;name = <a class="code" href="classCadenceZoneMessage.html#a4c507c9af474ca4b0e3eeccd318080d5">name</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="ttc" id="aclassCadenceZoneMessage_html_a4c507c9af474ca4b0e3eeccd318080d5"><div class="ttname"><a href="classCadenceZoneMessage.html#a4c507c9af474ca4b0e3eeccd318080d5">CadenceZoneMessage::name</a></div><div class="ttdeci">QString name() const</div><div class="ttdoc">Returns the CadenceZoneMessage data message's name field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="cadencezonemessage_8cpp_source.html#l00096">cadencezonemessage.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="cadencezonemessage_8cpp_source.html#l00091">name()</a>.</p>
+<p class="reference">References <a class="el" href="cadencezonemessage_8cpp_source.html#l00096">name()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -1,5 +1,16 @@
 var NAVTREEINDEX6 =
 {
+"classHrMessage.html#ae225c77135dfcda02a541d9f807e523c":[3,0,79,6],
+"classHrMessagePrivate.html":[3,0,80],
+"classHrMessagePrivate.html#a40fb01dd6b7486094bff8b89c02ff40b":[3,0,80,6],
+"classHrMessagePrivate.html#a41f9b05c9eb976fd9e26820657e4b841":[3,0,80,2],
+"classHrMessagePrivate.html#a672ade6c976f42061b5c5a9c2885c6ad":[3,0,80,8],
+"classHrMessagePrivate.html#a8064174f1d7ce4d37a3261ac689b7d2c":[3,0,80,0],
+"classHrMessagePrivate.html#a91b0cc940874be0ba1177a18a6727b4c":[3,0,80,1],
+"classHrMessagePrivate.html#aba46711739f4da695ad7af0c08dfed5d":[3,0,80,5],
+"classHrMessagePrivate.html#abe5129849527834e39c1c00d191aae61":[3,0,80,9],
+"classHrMessagePrivate.html#ac309a1d51fcac9b151752164d9f99b67":[3,0,80,4],
+"classHrMessagePrivate.html#aec70056e33f8af102c34aac835d83645":[3,0,80,3],
 "classHrMessagePrivate.html#af7d82bbfb562dabc15e7a7e5c7f23f33":[3,0,80,7],
 "classHrZoneMessage.html":[3,0,85],
 "classHrZoneMessage.html#a10cbb090c0e860151c38aee4b1b75037":[3,0,85,4],
@@ -238,16 +249,5 @@ var NAVTREEINDEX6 =
 "classLapMessage.html#aa1cd96224b4b2b0d609af707fc901b9c":[3,0,89,28],
 "classLapMessage.html#aa244b37a1073a00e6997a1be61d8457a":[3,0,89,233],
 "classLapMessage.html#aa2acc0627b7dd7733be3b44e8bcccb39":[3,0,89,180],
-"classLapMessage.html#aa4a64eb346786f5297fc054818cd257e":[3,0,89,221],
-"classLapMessage.html#aa534febcd93e1cbc0a2e567af354deff":[3,0,89,123],
-"classLapMessage.html#aa5b5c86e44b458e7ce0c4d867e1871ca":[3,0,89,225],
-"classLapMessage.html#aa707f13ffdd9edac50b5a7b5a5f825d9":[3,0,89,9],
-"classLapMessage.html#aa8009c37699cdd93988f63a9266662c6":[3,0,89,96],
-"classLapMessage.html#aa97787954d74fe011b56467483bda22f":[3,0,89,214],
-"classLapMessage.html#aa9c9da67792f540bb80e2e4baf3adef9":[3,0,89,67],
-"classLapMessage.html#aaac6477724584463af697ef693787dff":[3,0,89,121],
-"classLapMessage.html#aaba74449ec2ac3c787cad30bba541d50":[3,0,89,162],
-"classLapMessage.html#aac7db08fe16a19601736807bf369523b":[3,0,89,13],
-"classLapMessage.html#ab00179448d843ab22a9d73a6593cbdc6":[3,0,89,157],
-"classLapMessage.html#ab091eb8993e5ddd446b2590c00244326":[3,0,89,6]
+"classLapMessage.html#aa4a64eb346786f5297fc054818cd257e":[3,0,89,221]
 };

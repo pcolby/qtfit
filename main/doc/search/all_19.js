@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7eabstractdatamessage_1965',['~AbstractDataMessage',['../classAbstractDataMessage.html#a2fc0d93d9a90b182235f8f4ce6a0f212',1,'AbstractDataMessage']]],
-  ['_7efitstreamreader_1966',['~FitStreamReader',['../classFitStreamReader.html#a8e848ed37d37d7f2a9a3a734dc484524',1,'FitStreamReader']]]
+  ['_7eabstractdatamessage_1969',['~AbstractDataMessage',['../classAbstractDataMessage.html#a2fc0d93d9a90b182235f8f4ce6a0f212',1,'AbstractDataMessage']]],
+  ['_7efitstreamreader_1970',['~FitStreamReader',['../classFitStreamReader.html#a8e848ed37d37d7f2a9a3a734dc484524',1,'FitStreamReader']]]
 ];

@@ -1,5 +1,5 @@
 <map id="bloodpressuremessage.h" name="bloodpressuremessage.h">
-<area shape="rect" id="node1" title=" " alt="" coords="114,5,299,32"/>
-<area shape="rect" id="node2" href="$bloodpressuremessage_8cpp.html" title=" " alt="" coords="5,80,205,107"/>
+<area shape="rect" id="node1" title="Declares the BloodPressureMessage class." alt="" coords="114,5,299,32"/>
+<area shape="rect" id="node2" href="$bloodpressuremessage_8cpp.html" title="Defines the BloodPressureMessage, and BloodPressureMessagePrivate classes." alt="" coords="5,80,205,107"/>
 <area shape="rect" id="node3" href="$fitdatamessages_8cpp.html" title="Provides the AbstractDataMessage::fromData implementation." alt="" coords="229,80,387,107"/>
 </map>

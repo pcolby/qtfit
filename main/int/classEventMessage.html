@@ -30,7 +30,7 @@
    <div id="projectname">QtFit
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">Native Qt library for Garmin FIT format</div>
+   <div id="projectbrief">Internal library development documentation</div>
   </td>
  </tr>
  </tbody>
@@ -237,7 +237,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> class represents a FIT <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message. </p>
 <dl class="section see"><dt>See also</dt><dd>DataMessage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8h_source.html#l00034">34</a> of file <a class="el" href="eventmessage_8h_source.html">eventmessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8h_source.html#l00039">39</a> of file <a class="el" href="eventmessage_8h_source.html">eventmessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1af65b34ed2337c476357d1e8c666308"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1af65b34ed2337c476357d1e8c666308">&#9670;&nbsp;</a></span>EventMessage() <span class="overload">[1/2]</span></h2>
@@ -257,13 +257,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> object. </p>
 <p>Typically, instances of this class will be returned by <a class="el" href="classFitStreamReader.html#a472b94007b863b5d911086a910a1cb3a" title="Returns the next FIT data message from the underlying stream, or a null data message if none could be...">FitStreamReader::readNext</a>, but this constructor may be used, along with the relevant setter methods, to create a valid message. </p>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00047">47</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                           : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classEventMessagePrivate.html">EventMessagePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00031">abstractdatamessage.h:31</a></div></div>
-<div class="ttc" id="aclassEventMessagePrivate_html"><div class="ttname"><a href="classEventMessagePrivate.html">EventMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="eventmessage__p_8h_source.html#l00034">eventmessage_p.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00052">52</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                           : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(<span class="keyword">new</span> <a class="code" href="classEventMessagePrivate.html">EventMessagePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclassAbstractDataMessage_html"><div class="ttname"><a href="classAbstractDataMessage.html">AbstractDataMessage</a></div><div class="ttdoc">The AbstractDataMessage class is the polymorphic base class for all FIT Data Message classes.</div><div class="ttdef"><b>Definition:</b> <a href="abstractdatamessage_8h_source.html#l00036">abstractdatamessage.h:36</a></div></div>
+<div class="ttc" id="aclassEventMessagePrivate_html"><div class="ttname"><a href="classEventMessagePrivate.html">EventMessagePrivate</a></div><div class="ttdef"><b>Definition:</b> <a href="eventmessage__p_8h_source.html#l00038">eventmessage_p.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -298,11 +298,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00059">59</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                        : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00064">64</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                        : <a class="code" href="classAbstractDataMessage.html">AbstractDataMessage</a>(d)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -325,14 +325,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message's <code>data</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>data</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00113">113</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> d-&gt;data;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html"><div class="ttname"><a href="classEventMessage.html">EventMessage</a></div><div class="ttdoc">The EventMessage class represents a FIT EventMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8h_source.html#l00034">eventmessage.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00118">118</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> d-&gt;data;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html"><div class="ttname"><a href="classEventMessage.html">EventMessage</a></div><div class="ttdoc">The EventMessage class represents a FIT EventMessage data message.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8h_source.html#l00039">eventmessage.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00294">setData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00299">setData()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -360,13 +360,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message's <code>data16</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>data16</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00102">102</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;data16;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00107">107</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> d-&gt;data16;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00284">setData16()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00289">setData16()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -394,13 +394,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message's <code>deviceIndex</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>deviceIndex</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00217">217</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;{</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceIndex;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00222">222</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> d-&gt;deviceIndex;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00374">setDeviceIndex()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00379">setDeviceIndex()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -428,13 +428,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message's <code>event</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>event</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00080">80</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> d-&gt;event;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> d-&gt;event;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00264">setEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00269">setEvent()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -462,13 +462,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message's <code>eventGroup</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>eventGroup</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00124">124</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> d-&gt;eventGroup;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00129">129</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> d-&gt;eventGroup;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00304">setEventGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00309">setEventGroup()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -496,13 +496,13 @@ Here is the caller graph for this function:</div>
 <p>Returns the <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message's <code>eventType</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>eventType</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00091">91</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> d-&gt;eventType;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00096">96</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> d-&gt;eventType;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00274">setEventType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00279">setEventType()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -531,13 +531,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for gear_change subfield components. Number of front teeth.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>frontGear</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00178">178</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> d-&gt;frontGear;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00183">183</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">return</span> d-&gt;frontGear;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00344">setFrontGear()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00349">setFrontGear()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -566,13 +566,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for gear_change subfield components. Front gear number. 1 is innermost.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>frontGearNum</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00164">164</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> d-&gt;frontGearNum;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00169">169</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span> d-&gt;frontGearNum;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00334">setFrontGearNum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00339">setFrontGearNum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -601,13 +601,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for sport_point subfield components</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>opponentScore</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00150">150</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> d-&gt;opponentScore;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00155">155</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> d-&gt;opponentScore;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00324">setOpponentScore()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00329">setOpponentScore()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -636,13 +636,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for threat_alert subfield components.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>radarThreatCount</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00243">243</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> d-&gt;radarThreatCount;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00248">248</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> d-&gt;radarThreatCount;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00394">setRadarThreatCount()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00399">setRadarThreatCount()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -671,13 +671,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for threat_alert subfield components.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>radarThreatLevelMax</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00230">230</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> d-&gt;radarThreatLevelMax;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00235">235</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> d-&gt;radarThreatLevelMax;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00384">setRadarThreatLevelMax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00389">setRadarThreatLevelMax()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -706,13 +706,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for gear_change subfield components. Number of rear teeth.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>rearGear</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00206">206</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> d-&gt;rearGear;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00211">211</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">return</span> d-&gt;rearGear;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00364">setRearGear()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00369">setRearGear()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -741,13 +741,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for gear_change subfield components. Rear gear number. 1 is innermost.</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>rearGearNum</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00192">192</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">return</span> d-&gt;rearGearNum;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00197">197</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> d-&gt;rearGearNum;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00354">setRearGearNum()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00359">setRearGearNum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -776,13 +776,13 @@ Here is the caller graph for this function:</div>
 <p>Do not populate directly. Autogenerated by decoder for sport_point subfield components</p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>score</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00137">137</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> d-&gt;score;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00142">142</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> d-&gt;score;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00314">setScore()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00319">setScore()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -816,14 +816,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00294">294</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;{</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    d-&gt;data = <a class="code" href="classEventMessage.html#a327c4082f4456cc06b881a49d18f6f06">data</a>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a327c4082f4456cc06b881a49d18f6f06"><div class="ttname"><a href="classEventMessage.html#a327c4082f4456cc06b881a49d18f6f06">EventMessage::data</a></div><div class="ttdeci">quint32 data() const</div><div class="ttdoc">Returns the EventMessage data message's data field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00113">eventmessage.cpp:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00299">299</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    d-&gt;data = <a class="code" href="classEventMessage.html#a327c4082f4456cc06b881a49d18f6f06">data</a>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a327c4082f4456cc06b881a49d18f6f06"><div class="ttname"><a href="classEventMessage.html#a327c4082f4456cc06b881a49d18f6f06">EventMessage::data</a></div><div class="ttdeci">quint32 data() const</div><div class="ttdoc">Returns the EventMessage data message's data field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00118">eventmessage.cpp:118</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00113">data()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00118">data()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -857,14 +857,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00284">284</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    d-&gt;data16 = <a class="code" href="classEventMessage.html#a1281b41fe9cc86d4afd46b6352990d54">data16</a>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a1281b41fe9cc86d4afd46b6352990d54"><div class="ttname"><a href="classEventMessage.html#a1281b41fe9cc86d4afd46b6352990d54">EventMessage::data16</a></div><div class="ttdeci">quint16 data16() const</div><div class="ttdoc">Returns the EventMessage data message's data16 field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00102">eventmessage.cpp:102</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00289">289</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;{</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    d-&gt;data16 = <a class="code" href="classEventMessage.html#a1281b41fe9cc86d4afd46b6352990d54">data16</a>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a1281b41fe9cc86d4afd46b6352990d54"><div class="ttname"><a href="classEventMessage.html#a1281b41fe9cc86d4afd46b6352990d54">EventMessage::data16</a></div><div class="ttdeci">quint16 data16() const</div><div class="ttdoc">Returns the EventMessage data message's data16 field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00107">eventmessage.cpp:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00102">data16()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00107">data16()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -898,14 +898,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00374">374</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;{</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    d-&gt;deviceIndex = <a class="code" href="classEventMessage.html#a34422e551a9bd7411abbbd9125206fc4">deviceIndex</a>;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a34422e551a9bd7411abbbd9125206fc4"><div class="ttname"><a href="classEventMessage.html#a34422e551a9bd7411abbbd9125206fc4">EventMessage::deviceIndex</a></div><div class="ttdeci">DeviceIndex deviceIndex() const</div><div class="ttdoc">Returns the EventMessage data message's deviceIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00217">eventmessage.cpp:217</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00379">379</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;{</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    d-&gt;deviceIndex = <a class="code" href="classEventMessage.html#a34422e551a9bd7411abbbd9125206fc4">deviceIndex</a>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a34422e551a9bd7411abbbd9125206fc4"><div class="ttname"><a href="classEventMessage.html#a34422e551a9bd7411abbbd9125206fc4">EventMessage::deviceIndex</a></div><div class="ttdeci">DeviceIndex deviceIndex() const</div><div class="ttdoc">Returns the EventMessage data message's deviceIndex field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00222">eventmessage.cpp:222</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00217">deviceIndex()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00222">deviceIndex()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -939,14 +939,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00264">264</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    d-&gt;event = <a class="code" href="classEventMessage.html#a6c3ac74ddea78c0b0b61fd0b5f99255d">event</a>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a6c3ac74ddea78c0b0b61fd0b5f99255d"><div class="ttname"><a href="classEventMessage.html#a6c3ac74ddea78c0b0b61fd0b5f99255d">EventMessage::event</a></div><div class="ttdeci">Event event() const</div><div class="ttdoc">Returns the EventMessage data message's event field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00080">eventmessage.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00269">269</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    d-&gt;event = <a class="code" href="classEventMessage.html#a6c3ac74ddea78c0b0b61fd0b5f99255d">event</a>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a6c3ac74ddea78c0b0b61fd0b5f99255d"><div class="ttname"><a href="classEventMessage.html#a6c3ac74ddea78c0b0b61fd0b5f99255d">EventMessage::event</a></div><div class="ttdeci">Event event() const</div><div class="ttdoc">Returns the EventMessage data message's event field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00085">eventmessage.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00080">event()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00085">event()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -980,14 +980,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00304">304</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;{</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    d-&gt;eventGroup = <a class="code" href="classEventMessage.html#a8e4d59cf04fcb9a933d933d6aa0c8469">eventGroup</a>;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a8e4d59cf04fcb9a933d933d6aa0c8469"><div class="ttname"><a href="classEventMessage.html#a8e4d59cf04fcb9a933d933d6aa0c8469">EventMessage::eventGroup</a></div><div class="ttdeci">quint8 eventGroup() const</div><div class="ttdoc">Returns the EventMessage data message's eventGroup field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00124">eventmessage.cpp:124</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00309">309</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;{</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    d-&gt;eventGroup = <a class="code" href="classEventMessage.html#a8e4d59cf04fcb9a933d933d6aa0c8469">eventGroup</a>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a8e4d59cf04fcb9a933d933d6aa0c8469"><div class="ttname"><a href="classEventMessage.html#a8e4d59cf04fcb9a933d933d6aa0c8469">EventMessage::eventGroup</a></div><div class="ttdeci">quint8 eventGroup() const</div><div class="ttdoc">Returns the EventMessage data message's eventGroup field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00129">eventmessage.cpp:129</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00124">eventGroup()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00129">eventGroup()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1021,14 +1021,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00274">274</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    d-&gt;eventType = <a class="code" href="classEventMessage.html#a2392f75b73c5e4f9aae98f3aa1c1449c">eventType</a>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a2392f75b73c5e4f9aae98f3aa1c1449c"><div class="ttname"><a href="classEventMessage.html#a2392f75b73c5e4f9aae98f3aa1c1449c">EventMessage::eventType</a></div><div class="ttdeci">EventType eventType() const</div><div class="ttdoc">Returns the EventMessage data message's eventType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00091">eventmessage.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00279">279</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    d-&gt;eventType = <a class="code" href="classEventMessage.html#a2392f75b73c5e4f9aae98f3aa1c1449c">eventType</a>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a2392f75b73c5e4f9aae98f3aa1c1449c"><div class="ttname"><a href="classEventMessage.html#a2392f75b73c5e4f9aae98f3aa1c1449c">EventMessage::eventType</a></div><div class="ttdeci">EventType eventType() const</div><div class="ttdoc">Returns the EventMessage data message's eventType field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00096">eventmessage.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00091">eventType()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00096">eventType()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1062,14 +1062,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00344">344</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;{</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    d-&gt;frontGear = <a class="code" href="classEventMessage.html#a633f3100adcb062e11b0d68d07fac733">frontGear</a>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a633f3100adcb062e11b0d68d07fac733"><div class="ttname"><a href="classEventMessage.html#a633f3100adcb062e11b0d68d07fac733">EventMessage::frontGear</a></div><div class="ttdeci">quint8z frontGear() const</div><div class="ttdoc">Returns the EventMessage data message's frontGear field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00178">eventmessage.cpp:178</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00349">349</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;{</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    d-&gt;frontGear = <a class="code" href="classEventMessage.html#a633f3100adcb062e11b0d68d07fac733">frontGear</a>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a633f3100adcb062e11b0d68d07fac733"><div class="ttname"><a href="classEventMessage.html#a633f3100adcb062e11b0d68d07fac733">EventMessage::frontGear</a></div><div class="ttdeci">quint8z frontGear() const</div><div class="ttdoc">Returns the EventMessage data message's frontGear field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00183">eventmessage.cpp:183</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00178">frontGear()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00183">frontGear()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1103,14 +1103,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00334">334</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;{</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    d-&gt;frontGearNum = <a class="code" href="classEventMessage.html#a4d83bb8db0c52bb9b2b6d3fcb0b19749">frontGearNum</a>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a4d83bb8db0c52bb9b2b6d3fcb0b19749"><div class="ttname"><a href="classEventMessage.html#a4d83bb8db0c52bb9b2b6d3fcb0b19749">EventMessage::frontGearNum</a></div><div class="ttdeci">quint8z frontGearNum() const</div><div class="ttdoc">Returns the EventMessage data message's frontGearNum field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00164">eventmessage.cpp:164</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00339">339</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    d-&gt;frontGearNum = <a class="code" href="classEventMessage.html#a4d83bb8db0c52bb9b2b6d3fcb0b19749">frontGearNum</a>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a4d83bb8db0c52bb9b2b6d3fcb0b19749"><div class="ttname"><a href="classEventMessage.html#a4d83bb8db0c52bb9b2b6d3fcb0b19749">EventMessage::frontGearNum</a></div><div class="ttdeci">quint8z frontGearNum() const</div><div class="ttdoc">Returns the EventMessage data message's frontGearNum field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00169">eventmessage.cpp:169</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00164">frontGearNum()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00169">frontGearNum()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1144,14 +1144,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00324">324</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    d-&gt;opponentScore = <a class="code" href="classEventMessage.html#ac15d844882b9068647129917cbee1dd5">opponentScore</a>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_ac15d844882b9068647129917cbee1dd5"><div class="ttname"><a href="classEventMessage.html#ac15d844882b9068647129917cbee1dd5">EventMessage::opponentScore</a></div><div class="ttdeci">quint16 opponentScore() const</div><div class="ttdoc">Returns the EventMessage data message's opponentScore field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00150">eventmessage.cpp:150</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00329">329</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;{</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    d-&gt;opponentScore = <a class="code" href="classEventMessage.html#ac15d844882b9068647129917cbee1dd5">opponentScore</a>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_ac15d844882b9068647129917cbee1dd5"><div class="ttname"><a href="classEventMessage.html#ac15d844882b9068647129917cbee1dd5">EventMessage::opponentScore</a></div><div class="ttdeci">quint16 opponentScore() const</div><div class="ttdoc">Returns the EventMessage data message's opponentScore field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00155">eventmessage.cpp:155</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00150">opponentScore()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00155">opponentScore()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1185,14 +1185,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00394">394</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;{</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    d-&gt;radarThreatCount = <a class="code" href="classEventMessage.html#ad731424aea3651ec0cd0cb0f0c083777">radarThreatCount</a>;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_ad731424aea3651ec0cd0cb0f0c083777"><div class="ttname"><a href="classEventMessage.html#ad731424aea3651ec0cd0cb0f0c083777">EventMessage::radarThreatCount</a></div><div class="ttdeci">quint8 radarThreatCount() const</div><div class="ttdoc">Returns the EventMessage data message's radarThreatCount field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00243">eventmessage.cpp:243</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00399">399</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;{</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    d-&gt;radarThreatCount = <a class="code" href="classEventMessage.html#ad731424aea3651ec0cd0cb0f0c083777">radarThreatCount</a>;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_ad731424aea3651ec0cd0cb0f0c083777"><div class="ttname"><a href="classEventMessage.html#ad731424aea3651ec0cd0cb0f0c083777">EventMessage::radarThreatCount</a></div><div class="ttdeci">quint8 radarThreatCount() const</div><div class="ttdoc">Returns the EventMessage data message's radarThreatCount field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00248">eventmessage.cpp:248</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00243">radarThreatCount()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00248">radarThreatCount()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1226,14 +1226,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00384">384</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;{</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    d-&gt;radarThreatLevelMax = <a class="code" href="classEventMessage.html#ab44c7d61f18ed5d22abed0a1b3d369ba">radarThreatLevelMax</a>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_ab44c7d61f18ed5d22abed0a1b3d369ba"><div class="ttname"><a href="classEventMessage.html#ab44c7d61f18ed5d22abed0a1b3d369ba">EventMessage::radarThreatLevelMax</a></div><div class="ttdeci">RadarThreatLevelType radarThreatLevelMax() const</div><div class="ttdoc">Returns the EventMessage data message's radarThreatLevelMax field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00230">eventmessage.cpp:230</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00389">389</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;{</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    d-&gt;radarThreatLevelMax = <a class="code" href="classEventMessage.html#ab44c7d61f18ed5d22abed0a1b3d369ba">radarThreatLevelMax</a>;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_ab44c7d61f18ed5d22abed0a1b3d369ba"><div class="ttname"><a href="classEventMessage.html#ab44c7d61f18ed5d22abed0a1b3d369ba">EventMessage::radarThreatLevelMax</a></div><div class="ttdeci">RadarThreatLevelType radarThreatLevelMax() const</div><div class="ttdoc">Returns the EventMessage data message's radarThreatLevelMax field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00235">eventmessage.cpp:235</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00230">radarThreatLevelMax()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00235">radarThreatLevelMax()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1267,14 +1267,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00364">364</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;{</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    d-&gt;rearGear = <a class="code" href="classEventMessage.html#a046b72e2da2719616e38a472d6f1dec3">rearGear</a>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a046b72e2da2719616e38a472d6f1dec3"><div class="ttname"><a href="classEventMessage.html#a046b72e2da2719616e38a472d6f1dec3">EventMessage::rearGear</a></div><div class="ttdeci">quint8z rearGear() const</div><div class="ttdoc">Returns the EventMessage data message's rearGear field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00206">eventmessage.cpp:206</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00369">369</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    d-&gt;rearGear = <a class="code" href="classEventMessage.html#a046b72e2da2719616e38a472d6f1dec3">rearGear</a>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a046b72e2da2719616e38a472d6f1dec3"><div class="ttname"><a href="classEventMessage.html#a046b72e2da2719616e38a472d6f1dec3">EventMessage::rearGear</a></div><div class="ttdeci">quint8z rearGear() const</div><div class="ttdoc">Returns the EventMessage data message's rearGear field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00211">eventmessage.cpp:211</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00206">rearGear()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00211">rearGear()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1308,14 +1308,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00354">354</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;{</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    d-&gt;rearGearNum = <a class="code" href="classEventMessage.html#ad8cba6a5960b6983eb975da3d2f9e7ed">rearGearNum</a>;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_ad8cba6a5960b6983eb975da3d2f9e7ed"><div class="ttname"><a href="classEventMessage.html#ad8cba6a5960b6983eb975da3d2f9e7ed">EventMessage::rearGearNum</a></div><div class="ttdeci">quint8z rearGearNum() const</div><div class="ttdoc">Returns the EventMessage data message's rearGearNum field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00192">eventmessage.cpp:192</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00359">359</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;{</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    d-&gt;rearGearNum = <a class="code" href="classEventMessage.html#ad8cba6a5960b6983eb975da3d2f9e7ed">rearGearNum</a>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_ad8cba6a5960b6983eb975da3d2f9e7ed"><div class="ttname"><a href="classEventMessage.html#ad8cba6a5960b6983eb975da3d2f9e7ed">EventMessage::rearGearNum</a></div><div class="ttdeci">quint8z rearGearNum() const</div><div class="ttdoc">Returns the EventMessage data message's rearGearNum field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00197">eventmessage.cpp:197</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00192">rearGearNum()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00197">rearGearNum()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1349,14 +1349,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00314">314</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;{</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    d-&gt;score = <a class="code" href="classEventMessage.html#ac4ed5693ad36af63f7fa2925c761954c">score</a>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_ac4ed5693ad36af63f7fa2925c761954c"><div class="ttname"><a href="classEventMessage.html#ac4ed5693ad36af63f7fa2925c761954c">EventMessage::score</a></div><div class="ttdeci">quint16 score() const</div><div class="ttdoc">Returns the EventMessage data message's score field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00137">eventmessage.cpp:137</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00319">319</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;{</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    d-&gt;score = <a class="code" href="classEventMessage.html#ac4ed5693ad36af63f7fa2925c761954c">score</a>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_ac4ed5693ad36af63f7fa2925c761954c"><div class="ttname"><a href="classEventMessage.html#ac4ed5693ad36af63f7fa2925c761954c">EventMessage::score</a></div><div class="ttdeci">quint16 score() const</div><div class="ttdoc">Returns the EventMessage data message's score field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00142">eventmessage.cpp:142</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00137">score()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00142">score()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1390,14 +1390,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00254">254</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    d-&gt;timestamp = <a class="code" href="classEventMessage.html#a3f3ea6d2802ee51415b54d987fe90116">timestamp</a>;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
-<div class="ttc" id="aclassEventMessage_html_a3f3ea6d2802ee51415b54d987fe90116"><div class="ttname"><a href="classEventMessage.html#a3f3ea6d2802ee51415b54d987fe90116">EventMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the EventMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00069">eventmessage.cpp:69</a></div></div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00259">259</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    Q_D(<a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    d-&gt;timestamp = <a class="code" href="classEventMessage.html#a3f3ea6d2802ee51415b54d987fe90116">timestamp</a>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
+<div class="ttc" id="aclassEventMessage_html_a3f3ea6d2802ee51415b54d987fe90116"><div class="ttname"><a href="classEventMessage.html#a3f3ea6d2802ee51415b54d987fe90116">EventMessage::timestamp</a></div><div class="ttdeci">DateTime timestamp() const</div><div class="ttdoc">Returns the EventMessage data message's timestamp field's current value.</div><div class="ttdef"><b>Definition:</b> <a href="eventmessage_8cpp_source.html#l00074">eventmessage.cpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00069">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="eventmessage_8cpp_source.html#l00074">timestamp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1425,13 +1425,13 @@ Here is the call graph for this function:</div>
 <p>Returns the <a class="el" href="classEventMessage.html" title="The EventMessage class represents a FIT EventMessage data message.">EventMessage</a> data message's <code>timestamp</code> field's current value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <code>timestamp</code> field value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00069">69</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="eventmessage_8cpp_source.html#l00074">74</a> of file <a class="el" href="eventmessage_8cpp_source.html">eventmessage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classEventMessage.html">EventMessage</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> d-&gt;timestamp;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00254">setTimestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eventmessage_8cpp_source.html#l00259">setTimestamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
