@@ -65,6 +65,7 @@ protected:
     template<class T> QByteArray readFileHeader();
     template<class T> AbstractDataMessage * readNextDataMessage();
 
+    static inline quint16 fitChecksum(const QByteArray &data);
     static inline bool isDefinitionMessage(const quint8 recordHeader);
 
 private:

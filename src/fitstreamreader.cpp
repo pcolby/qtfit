@@ -200,35 +200,6 @@ void FitStreamReader::setDevice(QIODevice *device)
     if (device) d->parseFileHeader<QIODevice>();
 }
 
-/// \cond internal
-/*!
- * \internal
- *
- * Calculates a checksum, as per the algorithm used by FIT file headers.
- *
- * \todo Move this somewhere appropriate (probably FitStreamReaderPrivate).
- *
- * \param data FIT file header to calculate the checksum for.
- *
- * \return 16-bit checksum for \a data.
- */
-quint16 fitChecksum(const QByteArray &data) {
-    quint16 checksum=0;
-    for (const auto &byte: data) {
-        static const quint16 crcTable[16] = {
-            0x0000, 0xCC01, 0xD801, 0x1400, 0xF001, 0x3C00, 0x2800, 0xE401,
-            0xA001, 0x6C00, 0x7800, 0xB401, 0x5000, 0x9C01, 0x8801, 0x4400
-        };
-        for (int byteShift=0; byteShift<=4; byteShift+=4) {
-            const quint16 tmp = crcTable[checksum & 0xF];
-            checksum = (checksum >> 4) & 0x0FFF;
-            checksum = checksum ^ tmp ^ crcTable[(byte >> byteShift) & 0xF];
-        }
-    }
-    return checksum;
-}
-/// \endcond
-
 /*!
  * Returns the profile version read from the FIT file header, otherwise a null QVersionNumber.
  *
@@ -691,6 +662,34 @@ template<class T> AbstractDataMessage * FitStreamReaderPrivate::readNextDataMess
         } else return parseDataMessage<T>();
     }
     return nullptr;
+}
+
+/*!
+ * Calculates a checksum, as per the algorithm used by FIT file headers.
+ *
+ * \todo Move this somewhere appropriate; its not specific to FitStreamReader, but rather would be
+ * useful eventually for a FitStreamWriter class too. I guess its safe to keep in a private class
+ * for now, so it can then be moved without affecting the library's binary interface.
+ *
+ * \param data FIT file header to calculate the checksum for.
+ *
+ * \return 16-bit checksum for \a data.
+ */
+quint16 FitStreamReaderPrivate::fitChecksum(const QByteArray &data)
+{
+    quint16 checksum=0;
+    for (const auto &byte: data) {
+        static const quint16 crcTable[16] = {
+            0x0000, 0xCC01, 0xD801, 0x1400, 0xF001, 0x3C00, 0x2800, 0xE401,
+            0xA001, 0x6C00, 0x7800, 0xB401, 0x5000, 0x9C01, 0x8801, 0x4400
+        };
+        for (int byteShift=0; byteShift<=4; byteShift+=4) {
+            const quint16 tmp = crcTable[checksum & 0xF];
+            checksum = (checksum >> 4) & 0x0FFF;
+            checksum = checksum ^ tmp ^ crcTable[(byte >> byteShift) & 0xF];
+        }
+    }
+    return checksum;
 }
 
 /*!
