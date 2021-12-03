@@ -93,15 +93,15 @@ jobs:
         qt: [ '5.12.12', '5.15.2', '6.0.4', '6.1.3', '6.2.2' ]
         generator: [ 'MinGW Makefiles', 'NMake Makefiles' ]
         include:
-        - qt: '5.12.11'
+        - qt: '5.12.12'
           arch: win64_mingw73
         - qt: '5.15.2'
           arch: win64_mingw81
         - qt: '6.0.4'
           arch: win64_mingw81
-        - qt: '6.1.2'
+        - qt: '6.1.3'
           arch: win64_mingw81
-        - qt: '6.2.0'
+        - qt: '6.2.2'
           arch: win64_mingw81
     steps:
     - uses: actions/checkout@v2
