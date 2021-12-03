@@ -939,7 +939,11 @@ enum class SubSport {
     ApneaHunting         =  57, ///< Diving
     VirtualActivity      =  58,
     Obstacle             =  59, ///< Used for events where participants run, crawl through mud, climb over walls, etc.
+    Breathing            =  62,
     SailRace             =  65, ///< Sailing
+    Ultra                =  67, ///< Ultramarathon
+    IndoorClimbing       =  68, ///< Climbing
+    Bouldering           =  69, ///< Climbing
     All                  = 254,
 };
 
@@ -1611,6 +1615,7 @@ enum class Manufacturer : quint16 {
     GravaaByte             =  133,
     Sigeyi                 =  134,
     Coospo                 =  135,
+    Geoid                  =  136,
     Development            =  255,
     Healthandlife          =  257,
     Lezyne                 =  258,
@@ -1995,8 +2000,9 @@ enum class GarminProduct : quint16 {
     Lily                       =  3615,
     MarqAdventurer             =  3624,
     Enduro                     =  3638,
-    MarqAdventurerAsia         =  3648,
     Swim2Apac                  =  3639,
+    MarqAdventurerAsia         =  3648,
+    Fr945Lte                   =  3652,
     DescentMk2Asia             =  3702, ///< Mk2 and Mk2i
     Venu2                      =  3703,
     Venu2s                     =  3704,
@@ -2011,14 +2017,17 @@ enum class GarminProduct : quint16 {
     EnduroAsia                 =  3872,
     VenusqAsia                 =  3837,
     MarqGolferAsia             =  3850,
+    Fr55                       =  3869,
     ApproachG12                =  3927,
     DescentMk2sAsia            =  3930,
     ApproachS42                =  3934,
     Venu2sAsia                 =  3949,
     Venu2Asia                  =  3950,
+    Fr945LteAsia               =  3978,
     ApproachS12Asia            =  3986,
     ApproachG12Asia            =  4001,
     ApproachS42Asia            =  4002,
+    Fr55Asia                   =  4033,
     Sdm4                       = 10007, ///< SDM4 footpod
     EdgeRemote                 = 10014,
     TacxTrainingAppWin         = 20533,
@@ -2055,6 +2064,7 @@ enum class AntplusDeviceType : quint8 {
     Racquet                 =  26,
     ControlHub              =  27,
     MuscleOxygen            =  31,
+    Shifting                =  34,
     BikeLightMain           =  35,
     BikeLightShared         =  36,
     Exd                     =  38,

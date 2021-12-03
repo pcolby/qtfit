@@ -55,6 +55,11 @@ public:
     quint16 o2Toxicity() const;
     quint32 diveNumber() const;
     quint32 bottomTime() const;
+    qint32 avgAscentRate() const;
+    quint32 avgDescentRate() const;
+    quint32 maxAscentRate() const;
+    quint32 maxDescentRate() const;
+    quint32 hangTime() const;
 
     void setTimestamp(const DateTime timestamp);
     void setReferenceMesg(const MesgNum referenceMesg);
@@ -69,6 +74,11 @@ public:
     void setO2Toxicity(const quint16 o2Toxicity);
     void setDiveNumber(const quint32 diveNumber);
     void setBottomTime(const quint32 bottomTime);
+    void setAvgAscentRate(const qint32 avgAscentRate);
+    void setAvgDescentRate(const quint32 avgDescentRate);
+    void setMaxAscentRate(const quint32 maxAscentRate);
+    void setMaxDescentRate(const quint32 maxDescentRate);
+    void setHangTime(const quint32 hangTime);
 
 protected:
     /// \cond internal

@@ -552,7 +552,11 @@ sub_sport	enum
 		apnea_hunting	57	Diving
 		virtual_activity	58	
 		obstacle	59	Used for events where participants run, crawl through mud, climb over walls, etc.
+		breathing	62	
 		sail_race	65	Sailing
+		ultra	67	Ultramarathon
+		indoor_climbing	68	Climbing
+		bouldering	69	Climbing
 		all	254	
 sport_event	enum			
 		uncategorized	0	
@@ -927,6 +931,7 @@ manufacturer	uint16
 		gravaa_byte	133	
 		sigeyi	134	
 		coospo	135	
+		geoid	136	
 		development	255	
 		healthandlife	257	
 		lezyne	258	
@@ -1300,8 +1305,9 @@ garmin_product	uint16
 		lily	3615	
 		marq_adventurer	3624	
 		enduro	3638	
-		marq_adventurer_asia	3648	
 		swim2_apac	3639	
+		marq_adventurer_asia	3648	
+		fr945_lte	3652	
 		descent_mk2_asia	3702	Mk2 and Mk2i
 		venu2	3703	
 		venu2s	3704	
@@ -1316,14 +1322,17 @@ garmin_product	uint16
 		enduro_asia	3872	
 		venusq_asia	3837	
 		marq_golfer_asia	3850	
+		fr55	3869	
 		approach_g12	 3927	
 		descent_mk2s_asia	3930	
 		approach_s42	3934	
 		venu2s_asia	3949	
 		venu2_asia	3950	
+		fr945_lte_asia	3978	
 		approach_S12_asia	3986	
 		approach_g12_asia	 4001	
 		approach_s42_asia	4002	
+		fr55_asia	4033	
 		sdm4	10007	SDM4 footpod
 		edge_remote	10014	
 		tacx_training_app_win	20533	
@@ -1349,6 +1358,7 @@ antplus_device_type	uint8
 		racquet	26	
 		control_hub	27	
 		muscle_oxygen	31	
+		shifting	34	
 		bike_light_main	35	
 		bike_light_shared	36	
 		exd	38	

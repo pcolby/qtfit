@@ -109,6 +109,41 @@ public:
      */
     quint32 bottomTime;
 
+    /*!
+     * The DiveSummaryMessage FIT message's avgAscentRate field.
+     *
+     * Average ascent rate, not including descents or stops
+     */
+    qint32 avgAscentRate;
+
+    /*!
+     * The DiveSummaryMessage FIT message's avgDescentRate field.
+     *
+     * Average descent rate, not including ascents or stops
+     */
+    quint32 avgDescentRate;
+
+    /*!
+     * The DiveSummaryMessage FIT message's maxAscentRate field.
+     *
+     * Maximum ascent rate
+     */
+    quint32 maxAscentRate;
+
+    /*!
+     * The DiveSummaryMessage FIT message's maxDescentRate field.
+     *
+     * Maximum descent rate
+     */
+    quint32 maxDescentRate;
+
+    /*!
+     * The DiveSummaryMessage FIT message's hangTime field.
+     *
+     * Time spent neither ascending nor descending
+     */
+    quint32 hangTime;
+
     DiveSummaryMessagePrivate() = delete;
     explicit DiveSummaryMessagePrivate(DiveSummaryMessage * const q);
     virtual ~DiveSummaryMessagePrivate();

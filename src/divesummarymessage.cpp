@@ -216,6 +216,71 @@ quint32 DiveSummaryMessage::bottomTime() const
 }
 
 /*!
+ * Returns the DiveSummaryMessage data message's \c avgAscentRate field's current value.
+ *
+ * Average ascent rate, not including descents or stops
+ *
+ * \return the \c avgAscentRate field value.
+ */
+qint32 DiveSummaryMessage::avgAscentRate() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->avgAscentRate;
+}
+
+/*!
+ * Returns the DiveSummaryMessage data message's \c avgDescentRate field's current value.
+ *
+ * Average descent rate, not including ascents or stops
+ *
+ * \return the \c avgDescentRate field value.
+ */
+quint32 DiveSummaryMessage::avgDescentRate() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->avgDescentRate;
+}
+
+/*!
+ * Returns the DiveSummaryMessage data message's \c maxAscentRate field's current value.
+ *
+ * Maximum ascent rate
+ *
+ * \return the \c maxAscentRate field value.
+ */
+quint32 DiveSummaryMessage::maxAscentRate() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->maxAscentRate;
+}
+
+/*!
+ * Returns the DiveSummaryMessage data message's \c maxDescentRate field's current value.
+ *
+ * Maximum descent rate
+ *
+ * \return the \c maxDescentRate field value.
+ */
+quint32 DiveSummaryMessage::maxDescentRate() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->maxDescentRate;
+}
+
+/*!
+ * Returns the DiveSummaryMessage data message's \c hangTime field's current value.
+ *
+ * Time spent neither ascending nor descending
+ *
+ * \return the \c hangTime field value.
+ */
+quint32 DiveSummaryMessage::hangTime() const
+{
+    Q_D(const DiveSummaryMessage);
+    return d->hangTime;
+}
+
+/*!
  * Sets the \c timestamp field to \a timestamp.
  *
  * \param timestamp The field value to set.
@@ -345,6 +410,56 @@ void DiveSummaryMessage::setBottomTime(const quint32 bottomTime)
     Q_D(DiveSummaryMessage);
     d->bottomTime = bottomTime;
 }
+/*!
+ * Sets the \c avgAscentRate field to \a avgAscentRate.
+ *
+ * \param avgAscentRate The field value to set.
+ */
+void DiveSummaryMessage::setAvgAscentRate(const qint32 avgAscentRate)
+{
+    Q_D(DiveSummaryMessage);
+    d->avgAscentRate = avgAscentRate;
+}
+/*!
+ * Sets the \c avgDescentRate field to \a avgDescentRate.
+ *
+ * \param avgDescentRate The field value to set.
+ */
+void DiveSummaryMessage::setAvgDescentRate(const quint32 avgDescentRate)
+{
+    Q_D(DiveSummaryMessage);
+    d->avgDescentRate = avgDescentRate;
+}
+/*!
+ * Sets the \c maxAscentRate field to \a maxAscentRate.
+ *
+ * \param maxAscentRate The field value to set.
+ */
+void DiveSummaryMessage::setMaxAscentRate(const quint32 maxAscentRate)
+{
+    Q_D(DiveSummaryMessage);
+    d->maxAscentRate = maxAscentRate;
+}
+/*!
+ * Sets the \c maxDescentRate field to \a maxDescentRate.
+ *
+ * \param maxDescentRate The field value to set.
+ */
+void DiveSummaryMessage::setMaxDescentRate(const quint32 maxDescentRate)
+{
+    Q_D(DiveSummaryMessage);
+    d->maxDescentRate = maxDescentRate;
+}
+/*!
+ * Sets the \c hangTime field to \a hangTime.
+ *
+ * \param hangTime The field value to set.
+ */
+void DiveSummaryMessage::setHangTime(const quint32 hangTime)
+{
+    Q_D(DiveSummaryMessage);
+    d->hangTime = hangTime;
+}
 
 /// \cond internal
 
@@ -380,6 +495,11 @@ DiveSummaryMessagePrivate::DiveSummaryMessagePrivate(DiveSummaryMessage * const 
   , o2Toxicity(0xFFFF)
   , diveNumber(0xFFFFFFFF)
   , bottomTime(0xFFFFFFFF)
+  , avgAscentRate(0x7FFFFFFF)
+  , avgDescentRate(0xFFFFFFFF)
+  , maxAscentRate(0xFFFFFFFF)
+  , maxDescentRate(0xFFFFFFFF)
+  , hangTime(0xFFFFFFFF)
 {
     globalMessageNumber = MesgNum::DiveSummary;
 }
@@ -449,6 +569,26 @@ bool DiveSummaryMessagePrivate::setField(
     case 11: // See Profile.xlsx::Messages:dive_summary.bottomTime
         if (!verify(data, baseType, 4, FitBaseType::Uint32, "dive_summary.bottomTime")) return false;
         this->bottomTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 17: // See Profile.xlsx::Messages:dive_summary.avgAscentRate
+        if (!verify(data, baseType, 4, FitBaseType::Sint32, "dive_summary.avgAscentRate")) return false;
+        this->avgAscentRate = static_cast<qint32>(bigEndian ? qFromBigEndian< qint32>(data) : qFromLittleEndian< qint32>(data));
+        break;
+    case 22: // See Profile.xlsx::Messages:dive_summary.avgDescentRate
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "dive_summary.avgDescentRate")) return false;
+        this->avgDescentRate = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 23: // See Profile.xlsx::Messages:dive_summary.maxAscentRate
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "dive_summary.maxAscentRate")) return false;
+        this->maxAscentRate = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 24: // See Profile.xlsx::Messages:dive_summary.maxDescentRate
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "dive_summary.maxDescentRate")) return false;
+        this->maxDescentRate = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
+        break;
+    case 25: // See Profile.xlsx::Messages:dive_summary.hangTime
+        if (!verify(data, baseType, 4, FitBaseType::Uint32, "dive_summary.hangTime")) return false;
+        this->hangTime = static_cast<quint32>(bigEndian ? qFromBigEndian<quint32>(data) : qFromLittleEndian<quint32>(data));
         break;
     default:
         qWarning() << "ignoring unknown dive_summary message field number" << fieldId << bigEndian;

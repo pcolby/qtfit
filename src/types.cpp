@@ -1050,7 +1050,11 @@ QDebug operator<<(QDebug debug, const SubSport value)
     case SubSport::ApneaHunting        : debug << "ApneaHunting"; break;
     case SubSport::VirtualActivity     : debug << "VirtualActivity"; break;
     case SubSport::Obstacle            : debug << "Obstacle"; break;
+    case SubSport::Breathing           : debug << "Breathing"; break;
     case SubSport::SailRace            : debug << "SailRace"; break;
+    case SubSport::Ultra               : debug << "Ultra"; break;
+    case SubSport::IndoorClimbing      : debug << "IndoorClimbing"; break;
+    case SubSport::Bouldering          : debug << "Bouldering"; break;
     case SubSport::All                 : debug << "All"; break;
     default: debug << "unknown";
     }
@@ -1830,6 +1834,7 @@ QDebug operator<<(QDebug debug, const Manufacturer value)
     case Manufacturer::GravaaByte            : debug << "GravaaByte"; break;
     case Manufacturer::Sigeyi                : debug << "Sigeyi"; break;
     case Manufacturer::Coospo                : debug << "Coospo"; break;
+    case Manufacturer::Geoid                 : debug << "Geoid"; break;
     case Manufacturer::Development           : debug << "Development"; break;
     case Manufacturer::Healthandlife         : debug << "Healthandlife"; break;
     case Manufacturer::Lezyne                : debug << "Lezyne"; break;
@@ -2218,8 +2223,9 @@ QDebug operator<<(QDebug debug, const GarminProduct value)
     case GarminProduct::Lily                      : debug << "Lily"; break;
     case GarminProduct::MarqAdventurer            : debug << "MarqAdventurer"; break;
     case GarminProduct::Enduro                    : debug << "Enduro"; break;
-    case GarminProduct::MarqAdventurerAsia        : debug << "MarqAdventurerAsia"; break;
     case GarminProduct::Swim2Apac                 : debug << "Swim2Apac"; break;
+    case GarminProduct::MarqAdventurerAsia        : debug << "MarqAdventurerAsia"; break;
+    case GarminProduct::Fr945Lte                  : debug << "Fr945Lte"; break;
     case GarminProduct::DescentMk2Asia            : debug << "DescentMk2Asia"; break;
     case GarminProduct::Venu2                     : debug << "Venu2"; break;
     case GarminProduct::Venu2s                    : debug << "Venu2s"; break;
@@ -2234,14 +2240,17 @@ QDebug operator<<(QDebug debug, const GarminProduct value)
     case GarminProduct::EnduroAsia                : debug << "EnduroAsia"; break;
     case GarminProduct::VenusqAsia                : debug << "VenusqAsia"; break;
     case GarminProduct::MarqGolferAsia            : debug << "MarqGolferAsia"; break;
+    case GarminProduct::Fr55                      : debug << "Fr55"; break;
     case GarminProduct::ApproachG12               : debug << "ApproachG12"; break;
     case GarminProduct::DescentMk2sAsia           : debug << "DescentMk2sAsia"; break;
     case GarminProduct::ApproachS42               : debug << "ApproachS42"; break;
     case GarminProduct::Venu2sAsia                : debug << "Venu2sAsia"; break;
     case GarminProduct::Venu2Asia                 : debug << "Venu2Asia"; break;
+    case GarminProduct::Fr945LteAsia              : debug << "Fr945LteAsia"; break;
     case GarminProduct::ApproachS12Asia           : debug << "ApproachS12Asia"; break;
     case GarminProduct::ApproachG12Asia           : debug << "ApproachG12Asia"; break;
     case GarminProduct::ApproachS42Asia           : debug << "ApproachS42Asia"; break;
+    case GarminProduct::Fr55Asia                  : debug << "Fr55Asia"; break;
     case GarminProduct::Sdm4                      : debug << "Sdm4"; break;
     case GarminProduct::EdgeRemote                : debug << "EdgeRemote"; break;
     case GarminProduct::TacxTrainingAppWin        : debug << "TacxTrainingAppWin"; break;
@@ -2282,6 +2291,7 @@ QDebug operator<<(QDebug debug, const AntplusDeviceType value)
     case AntplusDeviceType::Racquet                : debug << "Racquet"; break;
     case AntplusDeviceType::ControlHub             : debug << "ControlHub"; break;
     case AntplusDeviceType::MuscleOxygen           : debug << "MuscleOxygen"; break;
+    case AntplusDeviceType::Shifting               : debug << "Shifting"; break;
     case AntplusDeviceType::BikeLightMain          : debug << "BikeLightMain"; break;
     case AntplusDeviceType::BikeLightShared        : debug << "BikeLightShared"; break;
     case AntplusDeviceType::Exd                    : debug << "Exd"; break;

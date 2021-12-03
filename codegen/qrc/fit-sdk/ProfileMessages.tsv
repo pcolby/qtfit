@@ -92,7 +92,7 @@ device_settings
 	94	number_of_screens	uint8										Number of screens configured to display		
 	95	smart_notification_display_orientation	display_orientation										Smart Notification display orientation		
 	134	tap_interface	switch												
-	174	tap_sensitivity	tap_sensitivity				1						Used to hold the tap threshold setting		1
+	174	tap_sensitivity	tap_sensitivity										Used to hold the tap threshold setting		1
 user_profile															
 	254	message_index	message_index												1
 	0	friendly_name	string												16
@@ -722,9 +722,6 @@ training_file													Corresponds to file_id of workout or course.
 	3	serial_number	uint32z												1
 	4	time_created	date_time												1
 															
-hrv													Heart rate variability		
-	0	time	uint16	[N]		1000		s					Time between beats		1
-															
 weather_conditions															
 	253	timestamp	date_time										time of update for current conditions, else forecast time		1
 	0	weather_report	weather_report										Current or forecast		1
@@ -911,6 +908,36 @@ jump
 	6	position_long	sint32					semicircles							
 	7	speed	uint16		enhanced_speed	1000		m/s	16						
 	8	enhanced_speed	uint32			1000		m/s							
+climb_pro															
+	253	timestamp	date_time					s							
+	0	position_lat	sint32					semicircles							
+	1	position_long	sint32					semicircles							
+	2	climb_pro_event	climb_pro_event												
+	3	climb_number	uint16												
+	4	climb_category	uint8												
+	5	current_dist	float32					m							
+field_description													Must be logged before developer field is used		
+	0	developer_data_index	uint8												1
+	1	field_definition_number	uint8												1
+	2	fit_base_type_id	fit_base_type												1
+	3	field_name	string	[N]											64
+	4	array	uint8												0
+	5	components	string												0
+	6	scale	uint8												1
+	7	offset	sint8												1
+	8	units	string	[N]											16
+	9	bits	string												0
+	10	accumulate	string												0
+	13	fit_base_unit_id	fit_base_unit												1
+	14	native_mesg_num	mesg_num												1
+	15	native_field_num	uint8												1
+															
+developer_data_id													Must be logged before field description		
+	0	developer_id	byte	[N]											16
+	1	application_id	byte	[N]											16
+	2	manufacturer_id	manufacturer												1
+	3	developer_data_index	uint8												1
+	4	application_version	uint32												1
 			COURSE FILE MESSAGES												
 course															
 	4	sport	sport												1
@@ -1288,28 +1315,6 @@ exd_data_concept_configuration
 	9	qualifier	exd_qualifiers												1
 	10	descriptor	exd_descriptors												1
 	11	is_signed	bool												1
-field_description													Must be logged before developer field is used		
-	0	developer_data_index	uint8												1
-	1	field_definition_number	uint8												1
-	2	fit_base_type_id	fit_base_type												1
-	3	field_name	string	[N]											64
-	4	array	uint8												0
-	5	components	string												0
-	6	scale	uint8												1
-	7	offset	sint8												1
-	8	units	string	[N]											16
-	9	bits	string												0
-	10	accumulate	string												0
-	13	fit_base_unit_id	fit_base_unit												1
-	14	native_mesg_num	mesg_num												1
-	15	native_field_num	uint8												1
-															
-developer_data_id													Must be logged before field description		
-	0	developer_id	byte	[N]											16
-	1	application_id	byte	[N]											16
-	2	manufacturer_id	manufacturer												1
-	3	developer_data_index	uint8												1
-	4	application_version	uint32												1
 dive_summary															
 	253	timestamp	date_time					s							
 	0	reference_mesg	mesg_num												
@@ -1324,11 +1329,10 @@ dive_summary
 	9	o2_toxicity	uint16					OTUs							
 	10	dive_number	uint32												
 	11	bottom_time	uint32			1000		s							
-climb_pro															
-	253	timestamp	date_time					s							
-	0	position_lat	sint32					semicircles							
-	1	position_long	sint32					semicircles							
-	2	climb_pro_event	climb_pro_event												
-	3	climb_number	uint16												
-	4	climb_category	uint8												
-	5	current_dist	float32					m							
+	17	avg_ascent_rate	sint32			1000		m/s					Average ascent rate, not including descents or stops		
+	22	avg_descent_rate	uint32			1000		m/s					Average descent rate, not including ascents or stops		
+	23	max_ascent_rate	uint32			1000		m/s					Maximum ascent rate		
+	24	max_descent_rate	uint32			1000		m/s					Maximum descent rate		
+	25	hang_time	uint32			1000		s					Time spent neither ascending nor descending		
+hrv													Heart rate variability		
+	0	time	uint16	[N]		1000		s					Time between beats		1
