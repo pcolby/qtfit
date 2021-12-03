@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nmeasentencemessage_2394',['NmeaSentenceMessage',['../classNmeaSentenceMessage.html',1,'']]],
-  ['nmeasentencemessageprivate_2395',['NmeaSentenceMessagePrivate',['../classNmeaSentenceMessagePrivate.html',1,'']]]
+  ['nmeasentencemessage_2402',['NmeaSentenceMessage',['../classNmeaSentenceMessage.html',1,'']]],
+  ['nmeasentencemessageprivate_2403',['NmeaSentenceMessagePrivate',['../classNmeaSentenceMessagePrivate.html',1,'']]]
 ];

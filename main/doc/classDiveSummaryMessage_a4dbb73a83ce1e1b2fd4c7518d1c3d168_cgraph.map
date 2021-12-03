@@ -1,0 +1,4 @@
+<map id="DiveSummaryMessage::setAvgAscentRate" name="DiveSummaryMessage::setAvgAscentRate">
+<area shape="rect" id="node1" title="Sets the avgAscentRate field to avgAscentRate." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node2" href="$classDiveSummaryMessage.html#a7ccac26169fa45c6b6e9359c47b96aa4" title="Returns the DiveSummaryMessage data message&#39;s avgAscentRate field&#39;s current value." alt="" coords="227,5,400,47"/>
+</map>

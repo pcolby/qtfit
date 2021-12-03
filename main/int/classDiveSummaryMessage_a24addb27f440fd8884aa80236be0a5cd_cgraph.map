@@ -1,0 +1,4 @@
+<map id="DiveSummaryMessage::setMaxAscentRate" name="DiveSummaryMessage::setMaxAscentRate">
+<area shape="rect" id="node1" title="Sets the maxAscentRate field to maxAscentRate." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node2" href="$classDiveSummaryMessage.html#a6d7462540de17a27c6bc52875211ac54" title="Returns the DiveSummaryMessage data message&#39;s maxAscentRate field&#39;s current value." alt="" coords="227,5,400,47"/>
+</map>

@@ -1,5 +1,15 @@
 var NAVTREEINDEX10 =
 {
+"classWorkoutStepMessage.html#adc90ac00711145c7a7e51933e732466f":[3,0,87,0],
+"classWorkoutStepMessage.html#aec3ce59bdb008c56be56eac39c37dfff":[3,0,87,13],
+"classWorkoutStepMessage.html#af54a2ead672944e3901940cb13c2b839":[3,0,87,18],
+"classZonesTargetMessage.html":[3,0,88],
+"classZonesTargetMessage.html#a0216be0ca57e1cb98a83e3b19b24f8e6":[3,0,88,6],
+"classZonesTargetMessage.html#a0d2df3a25ca1f39316a705851cd6d639":[3,0,88,9],
+"classZonesTargetMessage.html#a17cafe3ace59b24d7a75f72074773b7d":[3,0,88,7],
+"classZonesTargetMessage.html#a43d5dd7671454005165407bab5e704f7":[3,0,88,11],
+"classZonesTargetMessage.html#a44d0f149581cc3c972567cf66508703b":[3,0,88,5],
+"classZonesTargetMessage.html#a5aad61661d309ca4a636f2a545aa8dd3":[3,0,88,2],
 "classZonesTargetMessage.html#a769fc0229044c81edecc324f0062677e":[3,0,88,1],
 "classZonesTargetMessage.html#a8ce3129e7eefa20a8f217cc0b662b6f4":[3,0,88,10],
 "classZonesTargetMessage.html#aa69aa86babea1880e9a9759b380d7995":[3,0,88,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX10 =
 "segmentlapmessage_8h.html":[4,0,125],
 "segmentlapmessage_8h_source.html":[4,0,125],
 "segmentleaderboardentrymessage_8cpp.html":[4,0,126],
-"segmentleaderboardentrymessage_8h.html":[4,0,127],
-"segmentleaderboardentrymessage_8h_source.html":[4,0,127],
-"segmentpointmessage_8cpp.html":[4,0,128],
-"segmentpointmessage_8h.html":[4,0,129],
-"segmentpointmessage_8h_source.html":[4,0,129],
-"sessionmessage_8cpp.html":[4,0,130],
-"sessionmessage_8h.html":[4,0,131],
-"sessionmessage_8h_source.html":[4,0,131],
-"setmessage_8cpp.html":[4,0,132],
-"setmessage_8h.html":[4,0,133],
-"setmessage_8h_source.html":[4,0,133]
+"segmentleaderboardentrymessage_8h.html":[4,0,127]
 };

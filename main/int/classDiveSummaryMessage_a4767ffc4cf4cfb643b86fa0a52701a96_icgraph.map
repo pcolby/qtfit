@@ -1,0 +1,4 @@
+<map id="DiveSummaryMessage::hangTime" name="DiveSummaryMessage::hangTime">
+<area shape="rect" id="node1" title="Returns the DiveSummaryMessage data message&#39;s hangTime field&#39;s current value." alt="" coords="227,5,400,47"/>
+<area shape="rect" id="node2" href="$classDiveSummaryMessage.html#a485c9496f5047b54b7d66de4d05e78b5" title="Sets the hangTime field to hangTime." alt="" coords="5,5,179,47"/>
+</map>
