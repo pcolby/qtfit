@@ -141,7 +141,7 @@ void TestFitStreamReader::protocolVersion_data()
     QTest::addColumn<QByteArray>("header");
     int c=0;
     qDebug() << "protocolVersion_data" << ++c;
-    QTest::addColumn<QVersionNumber>("version");
+    QTest::addColumn<QVersionNumber>("versionX");
     qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v0.0:12"  ) << QByteArray("\x0C\x00\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(0,0);
     qDebug() << "protocolVersion_data" << ++c;
@@ -176,13 +176,13 @@ void TestFitStreamReader::protocolVersion()
     qDebug() << "one";
     QFETCH(QByteArray, header);
     qDebug() << "two";
-    QFETCH(QVersionNumber, version);
+    QFETCH(QVersionNumber, versionX);
     qDebug() << "three";
     fit::FitStreamReader reader(header);
     qDebug() << "four";
-    QCOMPARE(reader.protocolVersion().toString(), version.toString()); // Nicer failure output.
+    QCOMPARE(reader.protocolVersion().toString(), versionX.toString()); // Nicer failure output.
     qDebug() << "five";
-    QCOMPARE(reader.protocolVersion(), version);                       // The *real* test.
+    QCOMPARE(reader.protocolVersion(), versionX);                       // The *real* test.
     qDebug() << "six";
 }
 
