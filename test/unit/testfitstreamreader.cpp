@@ -139,19 +139,34 @@ void TestFitStreamReader::protocolVersion_data()
 {
     qDebug() << "protocolVersion_data" << "begin";
     QTest::addColumn<QByteArray>("header");
+    int c=0;
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addColumn<QVersionNumber>("version");
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v0.0:12"  ) << QByteArray("\x0C\x00\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(0,0);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v1.2:12"  ) << QByteArray("\x0C\x12\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(1,2);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v2.1:12"  ) << QByteArray("\x0C\x21\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(2,1);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v0.15:12" ) << QByteArray("\x0C\x0F\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(0,15);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v15.0:12" ) << QByteArray("\x0C\xF0\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(15,0);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v15.15:12") << QByteArray("\x0C\xFF\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(15,15);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v0.0:14"  ) << QByteArray("\x0E\x00\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(0,0);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v1.2:14"  ) << QByteArray("\x0E\x12\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(1,2);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v2.1:14"  ) << QByteArray("\x0E\x21\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(2,1);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v0.15:14" ) << QByteArray("\x0E\x0F\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(0,15);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v15.0:14" ) << QByteArray("\x0E\xF0\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(15,0);
+    qDebug() << "protocolVersion_data" << ++c;
     QTest::addRow("v15.15:14") << QByteArray("\x0E\xFF\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(15,15);
+    qDebug() << "protocolVersion_data" << ++c;
     qDebug() << "protocolVersion_data" << "end";
 }
 
