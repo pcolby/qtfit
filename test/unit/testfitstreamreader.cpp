@@ -146,11 +146,17 @@ void TestFitStreamReader::protocolVersion_data()
 
 void TestFitStreamReader::protocolVersion()
 {
+    qDebug() << "one";
     QFETCH(QByteArray, header);
+    qDebug() << "two";
     QFETCH(QVersionNumber, version);
+    qDebug() << "three";
     fit::FitStreamReader reader(header);
+    qDebug() << "four";
     QCOMPARE(reader.protocolVersion().toString(), version.toString()); // Nicer failure output.
+    qDebug() << "five";
     QCOMPARE(reader.protocolVersion(), version);                       // The *real* test.
+    qDebug() << "six";
 }
 
 void TestFitStreamReader::profileVersion_data()
