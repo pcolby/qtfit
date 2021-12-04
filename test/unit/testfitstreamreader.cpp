@@ -137,6 +137,7 @@ void TestFitStreamReader::device()
 
 void TestFitStreamReader::protocolVersion_data()
 {
+    qDebug() << "protocolVersion_data" << "begin";
     QTest::addColumn<QByteArray>("header");
     QTest::addColumn<QVersionNumber>("version");
     QTest::addRow("v0.0:12"  ) << QByteArray("\x0C\x00\x00\x00\x00\x00\x00\x00.FIT", 12) << QVersionNumber(0,0);
@@ -151,10 +152,12 @@ void TestFitStreamReader::protocolVersion_data()
     QTest::addRow("v0.15:14" ) << QByteArray("\x0E\x0F\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(0,15);
     QTest::addRow("v15.0:14" ) << QByteArray("\x0E\xF0\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(15,0);
     QTest::addRow("v15.15:14") << QByteArray("\x0E\xFF\x00\x00\x00\x00\x00\x00.FIT\x00\x00", 14) << QVersionNumber(15,15);
+    qDebug() << "protocolVersion_data" << "end";
 }
 
 void TestFitStreamReader::protocolVersion()
 {
+    qDebug() << "protocolVersion";
     qDebug() << "one";
     QFETCH(QByteArray, header);
     qDebug() << "two";
