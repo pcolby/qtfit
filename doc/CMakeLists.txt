@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2021-2022 Paul Colby <git@colby.id.au>
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
   unset(DOX_ENABLED_SECTIONS)

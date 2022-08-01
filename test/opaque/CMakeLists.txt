@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2021-2022 Paul Colby <git@colby.id.au>
+# SPDX-License-Identifier: LGPL-3.0-or-later
+
 find_package(Qt${QT_VERSION_MAJOR}Test REQUIRED)
 add_executable(testSdkExamples testsdkexamples.h testsdkexamples.cpp)
 add_test(NAME testSdkExamples COMMAND testSdkExamples)
