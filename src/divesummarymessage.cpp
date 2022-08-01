@@ -27,7 +27,7 @@
  * Defines the DiveSummaryMessage, and DiveSummaryMessagePrivate classes.
  */
 
-#include "divesummarymessage.h"
+#include <qtfit/divesummarymessage.h>
 #include "divesummarymessage_p.h"
 
 #include <QDebug>

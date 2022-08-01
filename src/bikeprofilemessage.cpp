@@ -27,7 +27,7 @@
  * Defines the BikeProfileMessage, and BikeProfileMessagePrivate classes.
  */
 
-#include "bikeprofilemessage.h"
+#include <qtfit/bikeprofilemessage.h>
 #include "bikeprofilemessage_p.h"
 
 #include <QDebug>

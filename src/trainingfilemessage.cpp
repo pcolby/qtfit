@@ -27,7 +27,7 @@
  * Defines the TrainingFileMessage, and TrainingFileMessagePrivate classes.
  */
 
-#include "trainingfilemessage.h"
+#include <qtfit/trainingfilemessage.h>
 #include "trainingfilemessage_p.h"
 
 #include <QDebug>

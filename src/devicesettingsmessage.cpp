@@ -27,7 +27,7 @@
  * Defines the DeviceSettingsMessage, and DeviceSettingsMessagePrivate classes.
  */
 
-#include "devicesettingsmessage.h"
+#include <qtfit/devicesettingsmessage.h>
 #include "devicesettingsmessage_p.h"
 
 #include <QDebug>

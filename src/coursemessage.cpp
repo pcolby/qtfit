@@ -27,7 +27,7 @@
  * Defines the CourseMessage, and CourseMessagePrivate classes.
  */
 
-#include "coursemessage.h"
+#include <qtfit/coursemessage.h>
 #include "coursemessage_p.h"
 
 #include <QDebug>

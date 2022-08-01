@@ -19,7 +19,7 @@
 
 #include "testsdkexamples.h"
 
-#include "fitstreamreader.h"
+#include <qtfit/fitstreamreader.h>
 #include "fitstreamreader_p.h"
 
 void TestSdkExamples::parseFitFile_data()

@@ -27,7 +27,7 @@
  * Defines the SlaveDeviceMessage, and SlaveDeviceMessagePrivate classes.
  */
 
-#include "slavedevicemessage.h"
+#include <qtfit/slavedevicemessage.h>
 #include "slavedevicemessage_p.h"
 
 #include <QDebug>

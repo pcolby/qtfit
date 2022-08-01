@@ -27,7 +27,7 @@
  * Defines the SegmentLapMessage, and SegmentLapMessagePrivate classes.
  */
 
-#include "segmentlapmessage.h"
+#include <qtfit/segmentlapmessage.h>
 #include "segmentlapmessage_p.h"
 
 #include <QDebug>

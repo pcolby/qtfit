@@ -27,7 +27,7 @@
  * Defines the TotalsMessage, and TotalsMessagePrivate classes.
  */
 
-#include "totalsmessage.h"
+#include <qtfit/totalsmessage.h>
 #include "totalsmessage_p.h"
 
 #include <QDebug>

@@ -22,8 +22,8 @@
  * Defines the FitStreamReader, and FitStreamReaderPrivate classes.
  */
 
-#include "abstractdatamessage.h"
-#include "fitstreamreader.h"
+#include <qtfit/abstractdatamessage.h>
+#include <qtfit/fitstreamreader.h>
 #include "fitstreamreader_p.h"
 
 #include <QDebug>

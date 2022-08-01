@@ -27,7 +27,7 @@
  * Defines the DiveAlarmMessage, and DiveAlarmMessagePrivate classes.
  */
 
-#include "divealarmmessage.h"
+#include <qtfit/divealarmmessage.h>
 #include "divealarmmessage_p.h"
 
 #include <QDebug>

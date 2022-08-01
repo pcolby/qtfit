@@ -27,7 +27,7 @@
  * Defines the AviationAttitudeMessage, and AviationAttitudeMessagePrivate classes.
  */
 
-#include "aviationattitudemessage.h"
+#include <qtfit/aviationattitudemessage.h>
 #include "aviationattitudemessage_p.h"
 
 #include <QDebug>

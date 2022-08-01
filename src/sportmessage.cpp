@@ -27,7 +27,7 @@
  * Defines the SportMessage, and SportMessagePrivate classes.
  */
 
-#include "sportmessage.h"
+#include <qtfit/sportmessage.h>
 #include "sportmessage_p.h"
 
 #include <QDebug>

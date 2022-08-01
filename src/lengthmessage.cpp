@@ -27,7 +27,7 @@
  * Defines the LengthMessage, and LengthMessagePrivate classes.
  */
 
-#include "lengthmessage.h"
+#include <qtfit/lengthmessage.h>
 #include "lengthmessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the EventMessage, and EventMessagePrivate classes.
  */
 
-#include "eventmessage.h"
+#include <qtfit/eventmessage.h>
 #include "eventmessage_p.h"
 
 #include <QDebug>

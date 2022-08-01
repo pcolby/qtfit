@@ -27,7 +27,7 @@
  * Defines the CameraEventMessage, and CameraEventMessagePrivate classes.
  */
 
-#include "cameraeventmessage.h"
+#include <qtfit/cameraeventmessage.h>
 #include "cameraeventmessage_p.h"
 
 #include <QDebug>

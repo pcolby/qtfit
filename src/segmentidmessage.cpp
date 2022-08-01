@@ -27,7 +27,7 @@
  * Defines the SegmentIdMessage, and SegmentIdMessagePrivate classes.
  */
 
-#include "segmentidmessage.h"
+#include <qtfit/segmentidmessage.h>
 #include "segmentidmessage_p.h"
 
 #include <QDebug>

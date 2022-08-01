@@ -27,7 +27,7 @@
  * Defines the ExerciseTitleMessage, and ExerciseTitleMessagePrivate classes.
  */
 
-#include "exercisetitlemessage.h"
+#include <qtfit/exercisetitlemessage.h>
 #include "exercisetitlemessage_p.h"
 
 #include <QDebug>

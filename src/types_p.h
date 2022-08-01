@@ -25,7 +25,7 @@
 #ifndef QTFIT_TYPES_P_H
 #define QTFIT_TYPES_P_H
 
-#include "types.h"
+#include <qtfit/types.h>
 
 #include <QList>
 

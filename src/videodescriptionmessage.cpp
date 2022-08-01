@@ -27,7 +27,7 @@
  * Defines the VideoDescriptionMessage, and VideoDescriptionMessagePrivate classes.
  */
 
-#include "videodescriptionmessage.h"
+#include <qtfit/videodescriptionmessage.h>
 #include "videodescriptionmessage_p.h"
 
 #include <QDebug>

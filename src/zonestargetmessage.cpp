@@ -27,7 +27,7 @@
  * Defines the ZonesTargetMessage, and ZonesTargetMessagePrivate classes.
  */
 
-#include "zonestargetmessage.h"
+#include <qtfit/zonestargetmessage.h>
 #include "zonestargetmessage_p.h"
 
 #include <QDebug>

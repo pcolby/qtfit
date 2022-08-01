@@ -27,7 +27,7 @@
  * Defines the ConnectivityMessage, and ConnectivityMessagePrivate classes.
  */
 
-#include "connectivitymessage.h"
+#include <qtfit/connectivitymessage.h>
 #include "connectivitymessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the SessionMessage, and SessionMessagePrivate classes.
  */
 
-#include "sessionmessage.h"
+#include <qtfit/sessionmessage.h>
 #include "sessionmessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the PowerZoneMessage, and PowerZoneMessagePrivate classes.
  */
 
-#include "powerzonemessage.h"
+#include <qtfit/powerzonemessage.h>
 #include "powerzonemessage_p.h"
 
 #include <QDebug>

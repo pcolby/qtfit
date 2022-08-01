@@ -27,7 +27,7 @@
  * Defines the ScheduleMessage, and ScheduleMessagePrivate classes.
  */
 
-#include "schedulemessage.h"
+#include <qtfit/schedulemessage.h>
 #include "schedulemessage_p.h"
 
 #include <QDebug>

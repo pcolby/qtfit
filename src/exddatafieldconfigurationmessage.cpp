@@ -27,7 +27,7 @@
  * Defines the ExdDataFieldConfigurationMessage, and ExdDataFieldConfigurationMessagePrivate classes.
  */
 
-#include "exddatafieldconfigurationmessage.h"
+#include <qtfit/exddatafieldconfigurationmessage.h>
 #include "exddatafieldconfigurationmessage_p.h"
 
 #include <QDebug>

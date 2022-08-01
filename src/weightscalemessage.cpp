@@ -27,7 +27,7 @@
  * Defines the WeightScaleMessage, and WeightScaleMessagePrivate classes.
  */
 
-#include "weightscalemessage.h"
+#include <qtfit/weightscalemessage.h>
 #include "weightscalemessage_p.h"
 
 #include <QDebug>

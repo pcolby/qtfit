@@ -27,7 +27,7 @@
  * Defines the MesgCapabilitiesMessage, and MesgCapabilitiesMessagePrivate classes.
  */
 
-#include "mesgcapabilitiesmessage.h"
+#include <qtfit/mesgcapabilitiesmessage.h>
 #include "mesgcapabilitiesmessage_p.h"
 
 #include <QDebug>

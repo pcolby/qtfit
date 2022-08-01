@@ -27,7 +27,7 @@
  * Defines the VideoFrameMessage, and VideoFrameMessagePrivate classes.
  */
 
-#include "videoframemessage.h"
+#include <qtfit/videoframemessage.h>
 #include "videoframemessage_p.h"
 
 #include <QDebug>

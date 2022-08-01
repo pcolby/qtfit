@@ -27,7 +27,7 @@
  * Defines the CadenceZoneMessage, and CadenceZoneMessagePrivate classes.
  */
 
-#include "cadencezonemessage.h"
+#include <qtfit/cadencezonemessage.h>
 #include "cadencezonemessage_p.h"
 
 #include <QDebug>

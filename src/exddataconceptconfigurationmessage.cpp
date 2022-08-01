@@ -27,7 +27,7 @@
  * Defines the ExdDataConceptConfigurationMessage, and ExdDataConceptConfigurationMessagePrivate classes.
  */
 
-#include "exddataconceptconfigurationmessage.h"
+#include <qtfit/exddataconceptconfigurationmessage.h>
 #include "exddataconceptconfigurationmessage_p.h"
 
 #include <QDebug>

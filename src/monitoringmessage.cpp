@@ -27,7 +27,7 @@
  * Defines the MonitoringMessage, and MonitoringMessagePrivate classes.
  */
 
-#include "monitoringmessage.h"
+#include <qtfit/monitoringmessage.h>
 #include "monitoringmessage_p.h"
 
 #include <QDebug>

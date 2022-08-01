@@ -27,7 +27,7 @@
  * Defines the WatchfaceSettingsMessage, and WatchfaceSettingsMessagePrivate classes.
  */
 
-#include "watchfacesettingsmessage.h"
+#include <qtfit/watchfacesettingsmessage.h>
 #include "watchfacesettingsmessage_p.h"
 
 #include <QDebug>

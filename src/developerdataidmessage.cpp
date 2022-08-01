@@ -27,7 +27,7 @@
  * Defines the DeveloperDataIdMessage, and DeveloperDataIdMessagePrivate classes.
  */
 
-#include "developerdataidmessage.h"
+#include <qtfit/developerdataidmessage.h>
 #include "developerdataidmessage_p.h"
 
 #include <QDebug>

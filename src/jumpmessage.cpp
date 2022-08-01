@@ -27,7 +27,7 @@
  * Defines the JumpMessage, and JumpMessagePrivate classes.
  */
 
-#include "jumpmessage.h"
+#include <qtfit/jumpmessage.h>
 #include "jumpmessage_p.h"
 
 #include <QDebug>

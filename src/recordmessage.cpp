@@ -27,7 +27,7 @@
  * Defines the RecordMessage, and RecordMessagePrivate classes.
  */
 
-#include "recordmessage.h"
+#include <qtfit/recordmessage.h>
 #include "recordmessage_p.h"
 
 #include <QDebug>

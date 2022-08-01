@@ -27,7 +27,7 @@
  * Defines the AntTxMessage, and AntTxMessagePrivate classes.
  */
 
-#include "anttxmessage.h"
+#include <qtfit/anttxmessage.h>
 #include "anttxmessage_p.h"
 
 #include <QDebug>

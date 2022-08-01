@@ -27,7 +27,7 @@
  * Defines the ObdiiDataMessage, and ObdiiDataMessagePrivate classes.
  */
 
-#include "obdiidatamessage.h"
+#include <qtfit/obdiidatamessage.h>
 #include "obdiidatamessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the SoftwareMessage, and SoftwareMessagePrivate classes.
  */
 
-#include "softwaremessage.h"
+#include <qtfit/softwaremessage.h>
 #include "softwaremessage_p.h"
 
 #include <QDebug>

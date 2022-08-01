@@ -27,7 +27,7 @@
  * Defines the MetZoneMessage, and MetZoneMessagePrivate classes.
  */
 
-#include "metzonemessage.h"
+#include <qtfit/metzonemessage.h>
 #include "metzonemessage_p.h"
 
 #include <QDebug>

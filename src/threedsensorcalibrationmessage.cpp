@@ -27,7 +27,7 @@
  * Defines the ThreeDSensorCalibrationMessage, and ThreeDSensorCalibrationMessagePrivate classes.
  */
 
-#include "threedsensorcalibrationmessage.h"
+#include <qtfit/threedsensorcalibrationmessage.h>
 #include "threedsensorcalibrationmessage_p.h"
 
 #include <QDebug>

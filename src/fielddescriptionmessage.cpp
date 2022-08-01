@@ -27,7 +27,7 @@
  * Defines the FieldDescriptionMessage, and FieldDescriptionMessagePrivate classes.
  */
 
-#include "fielddescriptionmessage.h"
+#include <qtfit/fielddescriptionmessage.h>
 #include "fielddescriptionmessage_p.h"
 
 #include <QDebug>

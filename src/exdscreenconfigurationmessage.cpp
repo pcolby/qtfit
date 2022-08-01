@@ -27,7 +27,7 @@
  * Defines the ExdScreenConfigurationMessage, and ExdScreenConfigurationMessagePrivate classes.
  */
 
-#include "exdscreenconfigurationmessage.h"
+#include <qtfit/exdscreenconfigurationmessage.h>
 #include "exdscreenconfigurationmessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the DiveGasMessage, and DiveGasMessagePrivate classes.
  */
 
-#include "divegasmessage.h"
+#include <qtfit/divegasmessage.h>
 #include "divegasmessage_p.h"
 
 #include <QDebug>

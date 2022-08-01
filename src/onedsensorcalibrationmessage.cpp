@@ -27,7 +27,7 @@
  * Defines the OneDSensorCalibrationMessage, and OneDSensorCalibrationMessagePrivate classes.
  */
 
-#include "onedsensorcalibrationmessage.h"
+#include <qtfit/onedsensorcalibrationmessage.h>
 #include "onedsensorcalibrationmessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the OhrSettingsMessage, and OhrSettingsMessagePrivate classes.
  */
 
-#include "ohrsettingsmessage.h"
+#include <qtfit/ohrsettingsmessage.h>
 #include "ohrsettingsmessage_p.h"
 
 #include <QDebug>

@@ -39,9 +39,6 @@ protected:
     bool render(const QString &templateName, Grantlee::Context &context,
                 const QString &outputDirName, const QString &outputFileName) const;
 
-    bool renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
-                          const QString &outputPathName, const QString className);
-
     static int baseTypeSize(const QString &fitBaseType);
     static QString endianAbility(const QString &fitBaseType);
     static QString invalidValue(const QString &type);

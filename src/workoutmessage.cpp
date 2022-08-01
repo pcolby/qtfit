@@ -27,7 +27,7 @@
  * Defines the WorkoutMessage, and WorkoutMessagePrivate classes.
  */
 
-#include "workoutmessage.h"
+#include <qtfit/workoutmessage.h>
 #include "workoutmessage_p.h"
 
 #include <QDebug>

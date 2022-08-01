@@ -27,7 +27,7 @@
  * Defines the SetMessage, and SetMessagePrivate classes.
  */
 
-#include "setmessage.h"
+#include <qtfit/setmessage.h>
 #include "setmessage_p.h"
 
 #include <QDebug>

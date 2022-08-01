@@ -19,8 +19,8 @@
 
 #include "testfitstreamreader.h"
 
-#include "fitstreamreader.h"
-#include "fitstreamreader_p.h"
+#include <qtfit/fitstreamreader.h>
+//#include "fitstreamreader_p.h"
 
 //void TestFitStreamReader::parseFitFile_data()
 //{

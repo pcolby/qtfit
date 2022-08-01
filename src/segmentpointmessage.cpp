@@ -27,7 +27,7 @@
  * Defines the SegmentPointMessage, and SegmentPointMessagePrivate classes.
  */
 
-#include "segmentpointmessage.h"
+#include <qtfit/segmentpointmessage.h>
 #include "segmentpointmessage_p.h"
 
 #include <QDebug>

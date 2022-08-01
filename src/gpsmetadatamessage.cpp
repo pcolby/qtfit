@@ -27,7 +27,7 @@
  * Defines the GpsMetadataMessage, and GpsMetadataMessagePrivate classes.
  */
 
-#include "gpsmetadatamessage.h"
+#include <qtfit/gpsmetadatamessage.h>
 #include "gpsmetadatamessage_p.h"
 
 #include <QDebug>

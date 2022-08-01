@@ -27,7 +27,7 @@
  * Defines the FieldCapabilitiesMessage, and FieldCapabilitiesMessagePrivate classes.
  */
 
-#include "fieldcapabilitiesmessage.h"
+#include <qtfit/fieldcapabilitiesmessage.h>
 #include "fieldcapabilitiesmessage_p.h"
 
 #include <QDebug>

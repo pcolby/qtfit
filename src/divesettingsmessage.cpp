@@ -27,7 +27,7 @@
  * Defines the DiveSettingsMessage, and DiveSettingsMessagePrivate classes.
  */
 
-#include "divesettingsmessage.h"
+#include <qtfit/divesettingsmessage.h>
 #include "divesettingsmessage_p.h"
 
 #include <QDebug>

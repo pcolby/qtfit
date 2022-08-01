@@ -27,7 +27,7 @@
  * Defines the WeatherAlertMessage, and WeatherAlertMessagePrivate classes.
  */
 
-#include "weatheralertmessage.h"
+#include <qtfit/weatheralertmessage.h>
 #include "weatheralertmessage_p.h"
 
 #include <QDebug>

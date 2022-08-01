@@ -27,7 +27,7 @@
  * Defines the FileCreatorMessage, and FileCreatorMessagePrivate classes.
  */
 
-#include "filecreatormessage.h"
+#include <qtfit/filecreatormessage.h>
 #include "filecreatormessage_p.h"
 
 #include <QDebug>

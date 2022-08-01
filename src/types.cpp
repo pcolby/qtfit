@@ -33,7 +33,7 @@
  * \sa [QDebug - Writing Custom Types to a Stream (Qt6)](https://doc.qt.io/qt-6/qdebug.html#writing-custom-types-to-a-stream)
  */
 
-#include "types.h"
+#include <qtfit/types.h>
 
 QTFIT_BEGIN_NAMESPACE
 

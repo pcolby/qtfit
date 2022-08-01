@@ -27,7 +27,7 @@
  * Defines the WeatherConditionsMessage, and WeatherConditionsMessagePrivate classes.
  */
 
-#include "weatherconditionsmessage.h"
+#include <qtfit/weatherconditionsmessage.h>
 #include "weatherconditionsmessage_p.h"
 
 #include <QDebug>

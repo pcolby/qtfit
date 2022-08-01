@@ -27,7 +27,7 @@
  * Defines the GyroscopeDataMessage, and GyroscopeDataMessagePrivate classes.
  */
 
-#include "gyroscopedatamessage.h"
+#include <qtfit/gyroscopedatamessage.h>
 #include "gyroscopedatamessage_p.h"
 
 #include <QDebug>

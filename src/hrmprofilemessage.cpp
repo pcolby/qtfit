@@ -27,7 +27,7 @@
  * Defines the HrmProfileMessage, and HrmProfileMessagePrivate classes.
  */
 
-#include "hrmprofilemessage.h"
+#include <qtfit/hrmprofilemessage.h>
 #include "hrmprofilemessage_p.h"
 
 #include <QDebug>

@@ -10,13 +10,13 @@
  * descendants.
  */
 
-#include "abstractdatamessage.h"
+#include <qtfit/abstractdatamessage.h>
 #include "abstractdatamessage_p.h"
 
 {% for enum in types %}
 {% if enum.typeName == "MesgNum" %}
 {% for value in enum.values|dictsort:"valueName" %}
-{% if value.valueName == "Pad" or value.valueName == "MfgRangeMin" or value.valueName == "MfgRangeMax" %}//{% endif %}#include "{{value.valueName|lower}}message.h"
+{% if value.valueName == "Pad" or value.valueName == "MfgRangeMin" or value.valueName == "MfgRangeMax" %}//{% endif %}#include <qtfit/{{value.valueName|lower}}message.h>
 {% endfor %}
 {% endif %}
 {% endfor %}

@@ -27,7 +27,7 @@
  * Defines the DeviceInfoMessage, and DeviceInfoMessagePrivate classes.
  */
 
-#include "deviceinfomessage.h"
+#include <qtfit/deviceinfomessage.h>
 #include "deviceinfomessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the GoalMessage, and GoalMessagePrivate classes.
  */
 
-#include "goalmessage.h"
+#include <qtfit/goalmessage.h>
 #include "goalmessage_p.h"
 
 #include <QDebug>

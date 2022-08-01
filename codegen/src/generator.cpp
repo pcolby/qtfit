@@ -100,8 +100,17 @@ int Generator::processMessages(Grantlee::Context &context)
             context.insert(QSL("messageName"), messageName);
             context.insert(QSL("fields"), fields);
             context.insert(QSL("MesgNumLabel"), toCamelCase(messageName));
-            const bool result = renderClassFiles(QSL("src/datamessage"), context,
-                                                 outputDir.absoluteFilePath(QSL("src")), className);
+            context.insert(QSL("ClassName"), className);
+            bool result = render(QSL("include/qtfit/datamessage.h"), context,
+                                 outputDir.absoluteFilePath(QSL("include/qtfit")),
+                                 className.toLower() + QSL(".h"));
+            foreach (const QString &extension, QStringList() << QSL(".cpp") << QSL("_p.h")) {
+                if (!render(QSL("src/datamessage") + extension, context,
+                            outputDir.absoluteFilePath(QSL("src")),
+                            className.toLower() + extension)) {
+                    result = false;
+                }
+            }
             context.pop();
             messageName.clear();
             fields.clear();
@@ -255,7 +264,8 @@ int Generator::processTypes(Grantlee::Context &context)
     context.insert(QSL("types"), types);
     const QStringList fileNames { QSL("fitdatamessages.cpp"), QSL("types.cpp"), QSL("types.h")};
     for (const QString &fileName: fileNames) {
-        if (!render(QSL("src/") + fileName, context, outputDir.absoluteFilePath(QSL("src/") + fileName)))
+        const QString dirName = (fileName == QSL("types.h")) ? QSL("include/qtfit/") : QSL("src/");
+        if (!render(dirName + fileName, context, outputDir.absoluteFilePath(dirName + fileName)))
             return -1;
     }
     return fileNames.size();
@@ -304,20 +314,6 @@ bool Generator::render(const QString &templateName, Grantlee::Context &context,
                        const QString &outputDirName, const QString &outputFileName) const
 {
     return render(templateName, context, outputDirName + QLatin1Char('/') + outputFileName);
-}
-
-bool Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
-                                 const QString &outputPathName, const QString className)
-{
-    context.push();
-    context.insert(QSL("ClassName"), className);
-    foreach (const QString &extension, QStringList() << QSL(".cpp") << QSL(".h") << QSL("_p.h")) {
-        if (!render(templateBaseName + extension, context, outputPathName, className.toLower() + extension)) {
-            return false;
-        }
-    }
-    context.pop();
-    return true;
 }
 
 // See FIT SDK Table 7. FIT Base Types and Invalid Values

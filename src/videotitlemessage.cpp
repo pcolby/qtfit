@@ -27,7 +27,7 @@
  * Defines the VideoTitleMessage, and VideoTitleMessagePrivate classes.
  */
 
-#include "videotitlemessage.h"
+#include <qtfit/videotitlemessage.h>
 #include "videotitlemessage_p.h"
 
 #include <QDebug>

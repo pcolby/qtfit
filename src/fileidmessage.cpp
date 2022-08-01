@@ -27,7 +27,7 @@
  * Defines the FileIdMessage, and FileIdMessagePrivate classes.
  */
 
-#include "fileidmessage.h"
+#include <qtfit/fileidmessage.h>
 #include "fileidmessage_p.h"
 
 #include <QDebug>

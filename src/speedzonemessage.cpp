@@ -27,7 +27,7 @@
  * Defines the SpeedZoneMessage, and SpeedZoneMessagePrivate classes.
  */
 
-#include "speedzonemessage.h"
+#include <qtfit/speedzonemessage.h>
 #include "speedzonemessage_p.h"
 
 #include <QDebug>

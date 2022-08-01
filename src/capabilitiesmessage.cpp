@@ -27,7 +27,7 @@
  * Defines the CapabilitiesMessage, and CapabilitiesMessagePrivate classes.
  */
 
-#include "capabilitiesmessage.h"
+#include <qtfit/capabilitiesmessage.h>
 #include "capabilitiesmessage_p.h"
 
 #include <QDebug>

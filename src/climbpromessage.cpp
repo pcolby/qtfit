@@ -27,7 +27,7 @@
  * Defines the ClimbProMessage, and ClimbProMessagePrivate classes.
  */
 
-#include "climbpromessage.h"
+#include <qtfit/climbpromessage.h>
 #include "climbpromessage_p.h"
 
 #include <QDebug>

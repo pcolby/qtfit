@@ -27,7 +27,7 @@
  * Defines the SegmentFileMessage, and SegmentFileMessagePrivate classes.
  */
 
-#include "segmentfilemessage.h"
+#include <qtfit/segmentfilemessage.h>
 #include "segmentfilemessage_p.h"
 
 #include <QDebug>

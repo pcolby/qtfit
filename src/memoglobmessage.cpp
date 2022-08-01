@@ -27,7 +27,7 @@
  * Defines the MemoGlobMessage, and MemoGlobMessagePrivate classes.
  */
 
-#include "memoglobmessage.h"
+#include <qtfit/memoglobmessage.h>
 #include "memoglobmessage_p.h"
 
 #include <QDebug>

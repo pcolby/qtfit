@@ -27,7 +27,7 @@
  * Defines the SegmentLeaderboardEntryMessage, and SegmentLeaderboardEntryMessagePrivate classes.
  */
 
-#include "segmentleaderboardentrymessage.h"
+#include <qtfit/segmentleaderboardentrymessage.h>
 #include "segmentleaderboardentrymessage_p.h"
 
 #include <QDebug>

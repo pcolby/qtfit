@@ -27,7 +27,7 @@
  * Defines the SdmProfileMessage, and SdmProfileMessagePrivate classes.
  */
 
-#include "sdmprofilemessage.h"
+#include <qtfit/sdmprofilemessage.h>
 #include "sdmprofilemessage_p.h"
 
 #include <QDebug>

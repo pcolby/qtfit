@@ -27,7 +27,7 @@
  * Defines the AccelerometerDataMessage, and AccelerometerDataMessagePrivate classes.
  */
 
-#include "accelerometerdatamessage.h"
+#include <qtfit/accelerometerdatamessage.h>
 #include "accelerometerdatamessage_p.h"
 
 #include <QDebug>

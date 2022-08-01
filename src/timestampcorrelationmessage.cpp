@@ -27,7 +27,7 @@
  * Defines the TimestampCorrelationMessage, and TimestampCorrelationMessagePrivate classes.
  */
 
-#include "timestampcorrelationmessage.h"
+#include <qtfit/timestampcorrelationmessage.h>
 #include "timestampcorrelationmessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the FileCapabilitiesMessage, and FileCapabilitiesMessagePrivate classes.
  */
 
-#include "filecapabilitiesmessage.h"
+#include <qtfit/filecapabilitiesmessage.h>
 #include "filecapabilitiesmessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the ActivityMessage, and ActivityMessagePrivate classes.
  */
 
-#include "activitymessage.h"
+#include <qtfit/activitymessage.h>
 #include "activitymessage_p.h"
 
 #include <QDebug>

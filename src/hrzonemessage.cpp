@@ -27,7 +27,7 @@
  * Defines the HrZoneMessage, and HrZoneMessagePrivate classes.
  */
 
-#include "hrzonemessage.h"
+#include <qtfit/hrzonemessage.h>
 #include "hrzonemessage_p.h"
 
 #include <QDebug>

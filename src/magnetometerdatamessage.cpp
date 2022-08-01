@@ -27,7 +27,7 @@
  * Defines the MagnetometerDataMessage, and MagnetometerDataMessagePrivate classes.
  */
 
-#include "magnetometerdatamessage.h"
+#include <qtfit/magnetometerdatamessage.h>
 #include "magnetometerdatamessage_p.h"
 
 #include <QDebug>

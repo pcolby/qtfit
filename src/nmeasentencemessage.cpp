@@ -27,7 +27,7 @@
  * Defines the NmeaSentenceMessage, and NmeaSentenceMessagePrivate classes.
  */
 
-#include "nmeasentencemessage.h"
+#include <qtfit/nmeasentencemessage.h>
 #include "nmeasentencemessage_p.h"
 
 #include <QDebug>

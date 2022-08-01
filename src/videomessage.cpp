@@ -27,7 +27,7 @@
  * Defines the VideoMessage, and VideoMessagePrivate classes.
  */
 
-#include "videomessage.h"
+#include <qtfit/videomessage.h>
 #include "videomessage_p.h"
 
 #include <QDebug>

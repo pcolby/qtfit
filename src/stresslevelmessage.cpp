@@ -27,7 +27,7 @@
  * Defines the StressLevelMessage, and StressLevelMessagePrivate classes.
  */
 
-#include "stresslevelmessage.h"
+#include <qtfit/stresslevelmessage.h>
 #include "stresslevelmessage_p.h"
 
 #include <QDebug>

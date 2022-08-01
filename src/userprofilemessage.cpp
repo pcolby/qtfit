@@ -27,7 +27,7 @@
  * Defines the UserProfileMessage, and UserProfileMessagePrivate classes.
  */
 
-#include "userprofilemessage.h"
+#include <qtfit/userprofilemessage.h>
 #include "userprofilemessage_p.h"
 
 #include <QDebug>

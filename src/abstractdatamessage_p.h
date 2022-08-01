@@ -25,8 +25,8 @@
 #ifndef QTFIT_ABSTRACTDATAMESSAGE_P_H
 #define QTFIT_ABSTRACTDATAMESSAGE_P_H
 
-#include "QtFit_global.h"
-#include "types.h"
+#include <qtfit/QtFit_global.h>
+#include <qtfit/types.h>
 #include "types_p.h"
 
 QTFIT_BEGIN_NAMESPACE

@@ -27,7 +27,7 @@
  * Defines the CoursePointMessage, and CoursePointMessagePrivate classes.
  */
 
-#include "coursepointmessage.h"
+#include <qtfit/coursepointmessage.h>
 #include "coursepointmessage_p.h"
 
 #include <QDebug>

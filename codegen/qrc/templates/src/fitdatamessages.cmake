@@ -2,7 +2,7 @@
 cmake_policy(SET CMP0076 NEW)
 target_sources({{TargetName}}
 {% for name in classNames %}
-  PUBLIC  {{name|lower}}.h
+  PUBLIC ${CMAKE_SOURCE_DIR}/include/qtfit/{{name|lower}}.h
 {% endfor %}
 {% for name in classNames %}
   PRIVATE {{name|lower}}.cpp

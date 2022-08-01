@@ -27,7 +27,7 @@
  * Defines the BloodPressureMessage, and BloodPressureMessagePrivate classes.
  */
 
-#include "bloodpressuremessage.h"
+#include <qtfit/bloodpressuremessage.h>
 #include "bloodpressuremessage_p.h"
 
 #include <QDebug>

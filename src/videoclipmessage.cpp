@@ -27,7 +27,7 @@
  * Defines the VideoClipMessage, and VideoClipMessagePrivate classes.
  */
 
-#include "videoclipmessage.h"
+#include <qtfit/videoclipmessage.h>
 #include "videoclipmessage_p.h"
 
 #include <QDebug>

@@ -27,7 +27,7 @@
  * Defines the BarometerDataMessage, and BarometerDataMessagePrivate classes.
  */
 
-#include "barometerdatamessage.h"
+#include <qtfit/barometerdatamessage.h>
 #include "barometerdatamessage_p.h"
 
 #include <QDebug>

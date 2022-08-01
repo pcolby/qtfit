@@ -27,7 +27,7 @@
  * Defines the LapMessage, and LapMessagePrivate classes.
  */
 
-#include "lapmessage.h"
+#include <qtfit/lapmessage.h>
 #include "lapmessage_p.h"
 
 #include <QDebug>

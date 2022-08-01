@@ -22,7 +22,7 @@
  * Defines the AbstractDataMessage, and AbstractDataMessagePrivate classes.
  */
 
-#include "abstractdatamessage.h"
+#include <qtfit/abstractdatamessage.h>
 #include "abstractdatamessage_p.h"
 
 #include <QDebug>

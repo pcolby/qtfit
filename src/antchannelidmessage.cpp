@@ -27,7 +27,7 @@
  * Defines the AntChannelIdMessage, and AntChannelIdMessagePrivate classes.
  */
 
-#include "antchannelidmessage.h"
+#include <qtfit/antchannelidmessage.h>
 #include "antchannelidmessage_p.h"
 
 #include <QDebug>

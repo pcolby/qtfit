@@ -27,7 +27,7 @@
  * Defines the WorkoutSessionMessage, and WorkoutSessionMessagePrivate classes.
  */
 
-#include "workoutsessionmessage.h"
+#include <qtfit/workoutsessionmessage.h>
 #include "workoutsessionmessage_p.h"
 
 #include <QDebug>
